@@ -1,0 +1,212 @@
+gpm_archaeologist = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 5
+			engineering_research = 5
+			society_research = 7
+		}
+		upkeep = {
+			consumer_goods = 3
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_research_modifier|JOB|gpm_archaeologist|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = gpm_archaeologist
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+}
+gpm_archaeologist_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_research_lab_1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 5
+			engineering_research = 5
+			society_research = 7
+		}
+		upkeep = {
+			energy = 5
+		}		
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|gpm_archaeologist_drone|
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+}
+gpm_precursor_archaeologist = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+			minor_artifacts = 0.5
+		}
+		produces = {
+			trigger = {
+				planet = { is_planet_class = pc_gpm_precursor_tomb }
+			}
+			minor_artifacts = 0.5
+		}
+		upkeep = {
+			consumer_goods = 6
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_research_modifier|JOB|gpm_precursor_archaeologist|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = gpm_precursor_archaeologist
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+}
+gpm_precursor_archaeologist_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_research_lab_1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+			minor_artifacts = 0.5
+		}
+		produces = {
+			trigger = {
+				planet = { is_planet_class = pc_gpm_precursor_tomb }
+			}
+			minor_artifacts = 0.5
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|gpm_precursor_archaeologist_drone|
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+}

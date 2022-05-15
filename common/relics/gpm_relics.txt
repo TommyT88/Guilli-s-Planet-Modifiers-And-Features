@@ -1,0 +1,474 @@
+@activation_cost_influence = 150
+@activation_cost = 3000
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+@triumph_duration_veryshort = 900
+
+# Sounds #
+# relic_activation_ether_drake_trophy
+# relic_activation_khans_throne
+# relic_activation_scales_of_the_worm
+# relic_activation_the_rubricator
+# relic_activation_miniature_galaxy
+# relic_activation_the_omnicodex
+# relic_activation_the_surveyor
+# relic_activation_the_galatron
+# relic_activation_blade_of_the_huntress
+# relic_activation_head_of_zarqlan
+# relic_activation_prethoryn_blood_queen
+# relic_activation_extradimensional_warlock
+# relic_activation_isolated_contingency_core
+
+
+# Relics that have active bonus modifier
+# r_dragon_trophy
+# r_khans_throne
+# r_worm_scales
+# r_ancient_sword
+# r_unbidden_warlock
+# r_contingency_core
+# r_the_defragmentor
+# r_pox_sample
+# r_cryo_core
+# r_war_forge
+
+
+# gpm_r_time_displacer
+# gpm_r_alien_eggs
+# gpm_r_machine_world_core
+
+
+# time displacer
+gpm_r_time_displacer = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_gpm_time_displacer"
+	sound = "relic_activation_miniature_galaxy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 2000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			years_passed < 10
+		}
+		country_base_physics_research_produces_add = 5
+		country_base_society_research_produces_add = 5
+		country_base_engineering_research_produces_add = 5
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 10
+			years_passed < 20
+		}
+		country_base_physics_research_produces_add = 10
+		country_base_society_research_produces_add = 10
+		country_base_engineering_research_produces_add = 10
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 20
+			years_passed < 30
+		}
+		country_base_physics_research_produces_add = 15
+		country_base_society_research_produces_add = 15
+		country_base_engineering_research_produces_add = 15
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 30
+			years_passed < 40
+		}
+		country_base_physics_research_produces_add = 20
+		country_base_society_research_produces_add = 20
+		country_base_engineering_research_produces_add = 20
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 40
+			years_passed < 50
+		}
+		country_base_physics_research_produces_add = 25
+		country_base_society_research_produces_add = 25
+		country_base_engineering_research_produces_add = 25
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 50
+			years_passed < 60
+		}
+		country_base_physics_research_produces_add = 30
+		country_base_society_research_produces_add = 30
+		country_base_engineering_research_produces_add = 30
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 60
+			years_passed < 70
+		}
+		country_base_physics_research_produces_add = 35
+		country_base_society_research_produces_add = 35
+		country_base_engineering_research_produces_add = 35
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 70
+			years_passed < 80
+		}
+		country_base_physics_research_produces_add = 40
+		country_base_society_research_produces_add = 40
+		country_base_engineering_research_produces_add = 40
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 80
+			years_passed < 90
+		}
+		country_base_physics_research_produces_add = 45
+		country_base_society_research_produces_add = 45
+		country_base_engineering_research_produces_add = 45
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 90
+			years_passed < 100
+		}
+		country_base_physics_research_produces_add = 50
+		country_base_society_research_produces_add = 50
+		country_base_engineering_research_produces_add = 50
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 100
+			years_passed < 110
+		}
+		country_base_physics_research_produces_add = 55
+		country_base_society_research_produces_add = 55
+		country_base_engineering_research_produces_add = 55
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 110
+			years_passed < 120
+		}
+		country_base_physics_research_produces_add = 60
+		country_base_society_research_produces_add = 60
+		country_base_engineering_research_produces_add = 60
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 120
+			years_passed < 130
+		}
+		country_base_physics_research_produces_add = 65
+		country_base_society_research_produces_add = 65
+		country_base_engineering_research_produces_add = 65
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 130
+			years_passed < 140
+		}
+		country_base_physics_research_produces_add = 70
+		country_base_society_research_produces_add = 70
+		country_base_engineering_research_produces_add = 70
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 140
+			years_passed < 150
+		}
+		country_base_physics_research_produces_add = 75
+		country_base_society_research_produces_add = 75
+		country_base_engineering_research_produces_add = 75
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 150
+			years_passed < 160
+		}
+		country_base_physics_research_produces_add = 80
+		country_base_society_research_produces_add = 80
+		country_base_engineering_research_produces_add = 80
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 160
+			years_passed < 170
+		}
+		country_base_physics_research_produces_add = 85
+		country_base_society_research_produces_add = 85
+		country_base_engineering_research_produces_add = 85
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 170
+			years_passed < 180
+		}
+		country_base_physics_research_produces_add = 90
+		country_base_society_research_produces_add = 90
+		country_base_engineering_research_produces_add = 90
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 180
+			years_passed < 190
+		}
+		country_base_physics_research_produces_add = 95
+		country_base_society_research_produces_add = 95
+		country_base_engineering_research_produces_add = 95
+		custom_tooltip = gpm_relic_time_displacer_sci_effectTT
+		show_only_custom_tooltip = no
+	}
+	triggered_country_modifier = {
+		potential = {
+			years_passed >= 190
+		}
+		country_base_physics_research_produces_add = 100
+		country_base_society_research_produces_add = 100
+		country_base_engineering_research_produces_add = 100
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_time_displacer_relic_bonus" 
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+# Alien Queen
+gpm_r_alien_eggs = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_alien_queen"
+	sound = "relic_activation_yuht_cryo_core"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			trigger = {
+				is_robot_empire = no
+			}
+			food = 4000
+		}
+		cost = {
+			trigger = {
+				is_robot_empire = yes
+			}
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		army_morale_damage_mult = 1.00
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_alien_eggs_active_effect
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+			capital_scope = {
+				create_fleet = {
+					name = "NAME_xenomorph_fleet"
+					effect = {
+						set_owner = root
+						while = {
+							count = 8
+							create_army_transport = {
+								ship_name = "NAME_xenomorph_ship"
+								army_name = "NAME_xenomorph"
+								army_type = gpm_xenomorph_army_no_upkeep
+							}
+						}
+						set_location = {
+							target = prev
+							distance = 5
+							angle = random 
+						}
+					}
+					settings = {
+						can_change_leader = yes
+						uses_naval_capacity = no
+						spawn_debris = no
+					}
+				}
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+# makes machine world
+gpm_r_machine_world_core = {
+	activation_duration = 1
+	portrait = "GFX_gpm_r_machine_world_core"
+	sound = "relic_activation_isolated_contingency_core"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 20000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_robotic_produces_mult = 0.05
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_machine_world_core_active_tooltip
+		remove_relic = gpm_r_machine_world_core
+		# custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			set_country_flag = relic_machine_world_core_activated
+			# add_modifier = {
+				# modifier = "relic_activation_cooldown" 
+				# days = @triumph_duration
+			# }			
+		}
+		
+	}
+
+	# Possible check for activation
+	possible = {
+		# custom_tooltip = {
+			# fail_text = "requires_relic_no_cooldown"
+			# NOT = { has_modifier = relic_activation_cooldown }
+		# }
+	}
+}
+# mars rover
+gpm_r_mars_rover = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_mars_rover"
+	sound = "relic_activation_the_surveyor"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 10
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_base_unity_produces_add = 25
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_mars_rover_active_tooltip
+		# hidden_effect = {
+			# add_modifier = {
+				# modifier = "relic_activation_cooldown" 
+				# days = @triumph_duration
+			# }		
+		# }
+	}
+
+	# Possible check for activation
+	possible = {
+		# custom_tooltip = {
+			# fail_text = "requires_relic_no_cooldown"
+			# NOT = { has_modifier = relic_activation_cooldown }
+		# }
+	}
+}

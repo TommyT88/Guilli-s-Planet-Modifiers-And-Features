@@ -1,0 +1,209 @@
+##########################################################################
+# edicts
+##########################################################################
+@arcanetechcost = 50
+
+@ambitionCost = 75
+@ambitionUpkeep = 75
+@ambitionDuration = -1
+
+gpm_edict_pop_assembly  = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = @arcanetechcost
+		}
+
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_technology = tech_ascension_theory
+		OR = {
+			is_machine_empire = yes
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+
+	modifier = {
+		planet_pop_assembly_mult = 0.33
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops > 500
+		}
+	}
+}
+gpm_edict_terraform_speed  = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = @arcanetechcost
+		}
+
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_technology = tech_ascension_theory
+	}
+
+	modifier = {
+		terraform_speed_mult = 1.00
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = no
+		}
+	}
+}
+gpm_edict_armor_regen  = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = @arcanetechcost
+		}
+
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_technology = tech_ascension_theory
+	}
+
+	modifier = {
+		#ship_armor_regen_add_perc = 100.00
+		ship_hull_regen_add_perc = 5.0
+		ship_armor_regen_add_perc = 5.0
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 2
+			is_at_war = yes
+		}
+	}
+}
+gpm_edict_shield_regen  = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = @arcanetechcost
+		}
+
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_technology = tech_ascension_theory
+	}
+
+	modifier = {
+		ship_shield_regen_add_perc = 5.0
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 2
+			is_at_war = yes
+		}
+	}
+}
+gpm_edict_ship_bombard_dmg  = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = @arcanetechcost
+		}
+
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_technology = tech_ascension_theory
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 1.00
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = yes
+		}
+	}
+}
+gpm_edict_army_boost  = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = @arcanetechcost
+		}
+
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_technology = tech_ascension_theory
+	}
+
+	modifier = {
+		army_defense_damage_mult = 0.50
+        army_attack_damage_mult = 0.50
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			is_at_war = yes
+		}
+	}
+}

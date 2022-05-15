@@ -1,0 +1,38 @@
+# Lets do this trough a special planet class where the habitable section is shielded.
+
+entity = {
+	name = "gpm_ringworld_section_shield"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -11 100 } rotation = { 0 0 0 }}
+	locator = { name = "loc2" position = { 70.7 -11 70.7 } rotation = { 45 0 0 }}
+	locator = { name = "loc3" position = { 100 -11 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc4" position = { 70.7 -11 -70.7 } rotation = { 135 0 0 }}
+	locator = { name = "loc5" position = { 0 -11 -100 } rotation = { 180 0 0 }}
+	locator = { name = "loc6" position = { -70.7 -11 -70.7 } rotation = { 225 0 0 }}
+	locator = { name = "loc7" position = { -100 -11 0 } rotation = { 270 0 0 }}
+	locator = { name = "loc8" position = { -70.7 -11 70.7 } rotation = { 315 0 0 }}
+	attach = { "loc1" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc2" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc3" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc4" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc5" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc6" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc7" = "gpm_ringworld_section_shield_entity"}
+	attach = { "loc8" = "gpm_ringworld_section_shield_entity"}
+	scale = 14
+}
+
+
+entity = {
+	name = "gpm_ringworld_section_shield_entity"
+	pdxmesh = "gpm_ringworld_section_shield_ambient_mesh"
+	
+	game_data = {
+		bloom_factor = 1
+		uv_animation_speed = 0.65
+		uv_animation_direction 	= { 0.0 0.25 }
+	}
+	
+	
+	scale = 0.35
+}

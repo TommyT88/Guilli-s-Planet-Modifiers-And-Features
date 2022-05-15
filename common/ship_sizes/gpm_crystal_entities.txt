@@ -1,0 +1,112 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@corvette_evasion = 60
+@corvette_hp = 300
+
+@destroyer_evasion = 35
+@destroyer_hp = 650
+
+@cruiser_evasion = 15
+@cruiser_hp = 1400
+
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+@build_block_radius_civilian = 20
+
+####################
+#     CRYSTALS     #
+####################
+
+# Large Crystal Ship - Blue - ELITE
+gpm_crystal_ship_large_blue_elite = {
+	entity = crystal_ship_large_blue_elite_entity
+	graphical_culture = no
+	can_be_inspected = no
+	is_space_object = yes
+	max_speed = @speed_very_slow
+	rotation_speed = 0.01
+	acceleration = 0.3
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+	}
+	max_hitpoints = 40000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	class = shipclass_military
+	is_designable = no
+}
+
+# Large Crystal Ship - Green - ELITE
+gpm_crystal_ship_large_green_elite = {
+	entity = crystal_ship_large_green_elite_entity
+	graphical_culture = no
+	can_be_inspected = no
+	is_space_object = yes
+	max_speed = @speed_very_slow
+	rotation_speed = 0.01
+	acceleration = 0.3
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+	}
+	max_hitpoints = 40000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	class = shipclass_military
+	is_designable = no
+}
+
+# Large Crystal Ship - Yellow - ELITE
+gpm_crystal_ship_large_yellow_elite = {
+	entity = crystal_ship_large_yellow_elite_entity
+	graphical_culture = no
+	can_be_inspected = no
+	is_space_object = yes
+	max_speed = @speed_very_slow
+	rotation_speed = 0.01
+	acceleration = 0.3
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+	}
+	max_hitpoints = 40000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	class = shipclass_military
+	is_designable = no
+}
+
+# Large Crystal Ship - Red - ELITE
+gpm_crystal_ship_large_red_elite = {
+	entity = crystal_ship_large_red_elite_entity
+	graphical_culture = no
+	can_be_inspected = no
+	is_space_object = yes
+	max_speed = @speed_very_slow
+	rotation_speed = 0.01
+	acceleration = 0.3
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+	}
+	max_hitpoints = 40000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	class = shipclass_military
+	is_designable = no
+}
+

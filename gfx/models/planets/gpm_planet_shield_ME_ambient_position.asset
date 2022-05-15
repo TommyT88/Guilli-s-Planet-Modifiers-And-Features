@@ -1,0 +1,8 @@
+entity = {
+	name = "gpm_planet_shield_30_machine_entity"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -150 0 } rotation = { 0 0 0 }}
+	attach = { "loc1" = "gpm_planet_shield_scaling_30_machine_ambient_entity"}
+	#attach = { "loc1" = "gpm_planet_shield_cover_scaling_30_ambient_entity"}
+	scale = 1.0	
+}

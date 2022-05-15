@@ -1,0 +1,634 @@
+megastructures = {
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+		consumer_goods
+	}
+	parent = country
+	
+	generate_mult_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+}
+
+ship_components = {
+	parent = ships
+	
+	generate_mult_modifiers = {
+		cost
+        produces
+        upkeep
+	}
+	
+	generate_add_modifiers = {
+		cost
+        produces
+        upkeep
+	}
+}
+
+ship_sections = {
+	parent = ships
+	
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+ship_upgrades = {
+	parent = ships
+	use_for_ai_budget = yes
+	
+	generate_mult_modifiers = {
+		cost
+	}
+}
+
+stations = {
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+	}
+
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		cost
+	}
+	
+	generate_add_modifiers = {
+		produces
+		upkeep
+		cost
+	}
+
+	parent = country
+}
+
+planets = {
+	parent = country
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+	}
+	
+	generate_mult_modifiers = {
+		produces
+	}
+	
+	generate_add_modifiers = {
+		produces
+	}
+
+	hidden = yes
+}
+
+planet_districts = {
+	parent = planet_structures
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+planet_structures = {
+	parent = planets
+	hidden = yes
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+planet_buildings = {
+	parent = planet_structures
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+planet_buildings_strongholds = {
+	parent = planet_buildings
+	
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+colonies = {
+	parent = ships
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+	}
+
+	triggered_cost_modifier = {
+		key = ship_colonizer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_colonizer
+		}
+	}
+	
+	generate_mult_modifiers = {
+		produces
+	}
+	
+	generate_add_modifiers = {
+		produces
+	}
+}
+
+station_gatherers = {
+	parent = stations
+
+	generate_mult_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+}
+
+station_researchers = {
+	parent = stations
+
+	generate_mult_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+}
+
+station_observers = {
+	parent = stations
+	
+	generate_mult_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+}
+
+station_observer_missions = {
+	parent = station_observers
+	
+	generate_mult_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		cost
+		upkeep
+	}
+}
+
+starbase_stations = {
+	parent = starbases
+
+	triggered_cost_modifier = {
+		key = starbase_outpost
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			OR = {
+				is_ship_size = starbase_outpost
+				is_ship_size = orbital_ring_tier_1 #TODOJM: Remove?
+			}
+		}
+	}
+}
+
+starbases = {
+	use_for_ai_budget = yes
+
+	generate_mult_modifiers = {
+		upkeep
+		cost
+	}
+	generate_add_modifiers = {
+		upkeep
+		cost
+	}
+	ai_use_parent_for_resources_upkeep = {
+		energy
+	}
+
+	parent = country
+}
+
+
+
+starbase_buildings = {
+	parent = starbase_constructions
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+starbase_modules = {
+	parent = starbase_constructions
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+}
+
+planet_pop_assemblers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_farmers = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_miners = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_livestock = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_technician = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_executives = {
+	parent = planet_politicians
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_managers = {
+	parent = planet_administrators
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_administrators = {
+	icon = "job_bureaucrat"
+	parent = planet_jobs_productive	
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_researchers = {
+	icon = "job_researcher"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_metallurgists = {
+	icon = "job_foundry"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_culture_workers = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_evaluators = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_synapse_drones = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_nobles = {
+	parent = planet_politicians
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_necro_apprentices = {
+	parent = planet_pop_assemblers
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_merchants = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_entertainers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_soldiers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_necromancers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_priests = {
+	parent = planet_administrators
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_enforcers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_telepaths = {
+	parent = planet_administrators
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_doctors = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_refiners = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_translucers = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_chemists = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_artisans = {
+	icon = "job_artisan"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}

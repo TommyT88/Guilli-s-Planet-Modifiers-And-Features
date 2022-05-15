@@ -1,0 +1,950 @@
+
+gpm_remove_negative_modifiers = {
+	if = {
+		limit = { has_modifier = gpm_frequent_thunderstorms }
+		remove_modifier = gpm_frequent_thunderstorms
+	}
+	if = {
+		limit = { has_modifier = gpm_global_thunderstorms }
+		remove_modifier = gpm_global_thunderstorms
+	}
+	if = {
+		limit = { has_modifier = gpm_thin_atmospheres }
+		remove_modifier = gpm_thin_atmospheres
+	}
+	if = {
+		limit = { has_modifier = gpm_strong_volcanism }
+		remove_modifier = gpm_strong_volcanism
+	}
+	if = {
+		limit = { has_modifier = gpm_weak_magnetic_field_2 }
+		remove_modifier = gpm_weak_magnetic_field_2
+	}
+	if = {
+		limit = { has_modifier = gpm_unstable_tectonics_2 }
+		remove_modifier = gpm_unstable_tectonics_2
+	}
+	if = {
+		limit = { has_modifier = gpm_asteroid_impacts_2 }
+		remove_modifier = gpm_asteroid_impacts_2
+	}
+	if = {
+		limit = { has_modifier = gpm_hostile_flora }
+		remove_modifier = gpm_hostile_flora
+	}
+	if = {
+		limit = { has_modifier = gpm_magma_ocean }
+		remove_modifier = gpm_magma_ocean
+	}
+	if = {
+		limit = { has_modifier = gpm_toxic_gas }
+		remove_modifier = gpm_toxic_gas
+	}
+	if = {
+		limit = { has_modifier = gpm_titanic_predators }
+		remove_modifier = gpm_titanic_predators
+	}
+	if = {
+		limit = { has_modifier = gpm_unusual_seasons }
+		remove_modifier = gpm_unusual_seasons
+	}
+	if = {
+		limit = { has_modifier = gpm_living_planet }
+		remove_modifier = gpm_living_planet
+	}
+	if = {
+		limit = { has_modifier = gpm_artificial_water }
+		remove_modifier = gpm_artificial_water
+	}
+	if = {
+		limit = { has_modifier = gpm_windy }
+		remove_modifier = gpm_windy
+	}
+	if = {
+		limit = { has_modifier = gpm_simple_organisms }
+		remove_modifier = gpm_simple_organisms
+	}
+	if = {
+		limit = { has_modifier = gpm_unusual_formations }
+		remove_modifier = gpm_unusual_formations
+	}
+	if = {
+		limit = { has_modifier = gpm_rugged_terrain }
+		remove_modifier = gpm_rugged_terrain
+	}
+	if = {
+		limit = { has_modifier = gpm_ice_age }
+		remove_modifier = gpm_ice_age
+	}
+	if = {
+		limit = { has_modifier = gpm_locust_plagues }
+		remove_modifier = gpm_locust_plagues
+	}
+	if = {
+		limit = { has_modifier = gpm_acidic_seas }
+		remove_modifier = gpm_acidic_seas
+	}
+	if = {
+		limit = { has_modifier = gpm_seasonal_flooding }
+		remove_modifier = gpm_seasonal_flooding
+	}
+	if = {
+		limit = { has_modifier = gpm_lingering_pollution }
+		remove_modifier = gpm_lingering_pollution
+	}
+	if = {
+		limit = { has_modifier = gpm_thin_ozone_layer }
+		remove_modifier = gpm_thin_ozone_layer
+	}
+	if = {
+		limit = { has_modifier = gpm_quicksand }
+		remove_modifier = gpm_quicksand
+	}
+	if = {
+		limit = { has_modifier = gpm_abominable_predators }
+		remove_modifier = gpm_abominable_predators
+	}
+	if = {
+		limit = { has_modifier = gpm_carnivorous_flies }
+		remove_modifier = gpm_carnivorous_flies
+	}
+	if = {
+		limit = { has_modifier = gpm_torrential_rainstorms }
+		remove_modifier = gpm_torrential_rainstorms
+	}
+	if = {
+		limit = { has_modifier = gpm_massive_waves }
+		remove_modifier = gpm_massive_waves
+	}
+	if = {
+		limit = { has_modifier = hazardous_weather }
+		remove_modifier = hazardous_weather
+	}
+	if = {
+		limit = { has_modifier = dangerous_wildlife }
+		remove_modifier = dangerous_wildlife
+	}
+	if = {
+		limit = { has_modifier = weak_magnetic_field }
+		remove_modifier = weak_magnetic_field
+	}
+	if = {
+		limit = { has_modifier = unstable_tectonics }
+		remove_modifier = unstable_tectonics
+	}
+	if = {
+		limit = { has_modifier = asteroid_impacts }
+		remove_modifier = asteroid_impacts
+	}
+	if = {
+		limit = { has_modifier = wild_storms }
+		remove_modifier = wild_storms
+	}
+	if = {
+		limit = { has_modifier = mineral_poor }
+		remove_modifier = mineral_poor
+	}
+	if = {
+		limit = { has_modifier = bleak_planet }
+		remove_modifier = bleak_planet
+	}
+	if = {
+		limit = { has_modifier = irradiated_planet }
+		remove_modifier = irradiated_planet
+	}
+	if = {
+		limit = { has_modifier = abandoned_terraforming }
+		remove_modifier = abandoned_terraforming
+	}
+	if = {
+		limit = { has_modifier = gpm_death_world }
+		remove_modifier = gpm_death_world
+	}
+	if = {
+		limit = { has_modifier = gpm_giant_scorpioids }
+		remove_modifier = gpm_giant_scorpioids
+	}
+}
+gpm_remove_neutral_modifiers = {
+	if = {
+		limit = {
+			gpm_is_planet_class_city = yes
+		}
+		if = {
+			limit = { has_modifier = gpm_salt_flats }
+			remove_modifier = gpm_salt_flats
+		}
+	}
+	if = {
+		limit = {
+			gpm_is_planet_water = no
+		}
+		if = {
+			limit = { has_modifier = gpm_giant_ocean_snakes }
+			remove_modifier = gpm_giant_ocean_snakes
+		}
+		if = {
+			limit = { has_modifier = gpm_ocean_trenches }
+			remove_modifier = gpm_ocean_trenches
+		}
+	}
+	if = {
+		limit = {
+			gpm_is_planet_water = no
+		}
+		if = {
+			limit = { has_modifier = gpm_small_islands }
+			remove_modifier = gpm_small_islands
+		}
+		if = {
+			limit = { has_modifier = gpm_ocean_forests }
+			remove_modifier = gpm_ocean_forests
+		}
+		if = {
+			limit = { has_modifier = gpm_unique_marine_habitats }
+			remove_modifier = gpm_unique_marine_habitats
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				gpm_is_planet_wet_hot = no
+				gpm_is_planet_wet_cold = no
+			}
+		}
+		if = {
+			limit = { has_modifier = gpm_proto_forests }
+			remove_modifier = gpm_proto_forests
+		}
+		if = {
+			limit = { has_modifier = gpm_dense_forests }
+			remove_modifier = gpm_dense_forests
+		}
+		if = {
+			limit = { has_modifier = gpm_planetwide_forest }
+			remove_modifier = gpm_planetwide_forest
+		}
+		#if = {
+		#	limit = { has_modifier = gpm_arachnophobia }
+		#	remove_modifier = gpm_arachnophobia
+		#}
+		if = {
+			limit = { has_modifier = gpm_otherworldly_colours }
+			remove_modifier = gpm_otherworldly_colours
+		}
+		if = {
+			limit = { has_modifier = gpm_misty }
+			remove_modifier = gpm_misty
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				gpm_is_planet_wet_cold = no
+				gpm_is_planet_dry_cold = no
+			}			
+		}
+		if = {
+			limit = { has_modifier = gpm_hot_geysers }
+			remove_modifier = gpm_hot_geysers
+		}
+		if = {
+			limit = { has_modifier = gpm_spirals_of_ice }
+			remove_modifier = gpm_spirals_of_ice
+		}
+		if = {
+			limit = { has_modifier = gpm_furry_packs }
+			remove_modifier = gpm_furry_packs
+		}
+		if = {
+			limit = { has_modifier = gpm_blizzards }
+			remove_modifier = gpm_blizzards
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				gpm_is_planet_dry_hot = no
+				gpm_is_planet_dry_cold = no
+			}	
+		}
+		if = {
+			limit = { has_modifier = gpm_dunes }
+			remove_modifier = gpm_dunes
+		}
+		if = {
+			limit = { has_modifier = gpm_giant_worm }
+			remove_modifier = gpm_giant_worm
+		}
+		if = {
+			limit = { has_modifier = gpm_sandstorms }
+			remove_modifier = gpm_sandstorms
+		}
+		if = {
+			limit = { has_modifier = gpm_sand_tornadoes }
+			remove_modifier = gpm_sand_tornadoes
+		}
+		if = {
+			limit = { has_modifier = gpm_silicon_crystals }
+			remove_modifier = gpm_silicon_crystals
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_great_temperature_variation }
+		remove_modifier = gpm_great_temperature_variation
+	}
+	if = {
+		limit = { has_modifier = gpm_cryogeysers }
+		remove_modifier = gpm_cryogeysers
+	}
+	if = {
+		limit = { has_modifier = gpm_solidified_core }
+		remove_modifier = gpm_solidified_core
+	}
+	remove_modifier = gpm_decaying_structures
+	remove_modifier = gpm_toxic_flora_fauna
+	remove_modifier = gpm_lava_geysers
+	remove_modifier = gpm_hydrogen_mist
+	remove_modifier = gpm_corrosive_atmosphere
+	remove_modifier = gpm_toxic_garbage
+	remove_modifier = gpm_hydrogen_ice
+	remove_modifier = gpm_nitrogen_ice
+	remove_modifier = gpm_cracking_surface
+	remove_modifier = gpm_chlorine_planet
+	remove_modifier = gpm_phosphorus_planet
+	remove_modifier = gpm_sulfur_planet
+	remove_modifier = gpm_stellar_irradiation
+}
+gpm_remove_positive_modifiers = {
+	if = {
+		limit = {
+			gpm_is_planet_water = no
+		}
+		if = {
+			limit = { has_modifier = gpm_endless_fish }
+			remove_modifier = gpm_endless_fish
+		}
+		if = {
+			limit = { has_modifier = gpm_juggernaut_manta_rays }
+			remove_modifier = gpm_juggernaut_manta_rays
+		}
+		if = {
+			limit = { has_modifier = gpm_extensive_reef_systems }
+			remove_modifier = gpm_extensive_reef_systems
+		}
+		if = {
+			limit = { has_modifier = gpm_algae_boom }
+			remove_modifier = gpm_algae_boom
+		}
+		if = {
+			limit = { has_modifier = gpm_ocean_currents }
+			remove_modifier = gpm_ocean_currents
+		}
+		if = {
+			limit = { has_modifier = gpm_giant_ocean_snakes }
+			remove_modifier = gpm_giant_ocean_snakes
+		}
+		if = {
+			limit = { has_modifier = gpm_iron_oceans }
+			remove_modifier = gpm_iron_oceans
+		}
+		if = {
+			limit = { has_modifier = gpm_tidally_active }
+			remove_modifier = gpm_tidally_active
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				gpm_is_planet_wet_hot = no
+				gpm_is_planet_wet_cold = no
+			}
+		}
+		if = {
+			limit = { has_modifier = gpm_heart_of_the_forest }
+			remove_modifier = gpm_heart_of_the_forest
+		}
+	}	
+	if = {
+		limit = {
+			AND = { 
+				gpm_is_planet_water = no
+				gpm_is_planet_wet_hot = no
+				gpm_is_planet_wet_cold = no
+			}
+		}
+		if = {
+			limit = { has_modifier = gpm_beautiful_lakes }
+			remove_modifier = gpm_beautiful_lakes
+		}
+		if = {
+			limit = { has_modifier = gpm_warm_water_lakes }
+			remove_modifier = gpm_warm_water_lakes
+		}
+		if = {
+			limit = { has_modifier = gpm_steam_vents }
+			remove_modifier = gpm_steam_vents
+		}
+		if = {
+			limit = { has_modifier = gpm_mineral_pools }
+			remove_modifier = gpm_mineral_pools
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				gpm_is_planet_wet_cold = no
+				gpm_is_planet_dry_cold = no
+			}	
+		}
+		if = {
+			limit = { has_modifier = gpm_ice_flora }
+			remove_modifier = gpm_ice_flora
+		}
+		if = {
+			limit = { has_modifier = gpm_strange_ice_river }
+			remove_modifier = gpm_strange_ice_river
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_flat_terrain }
+		remove_modifier = gpm_flat_terrain
+	}
+	if = {
+		limit = {
+			OR = { 
+				gpm_is_planet_class_machine = yes
+				is_planet_class = pc_hive
+				gpm_is_planet_class_city = yes
+				is_planet_class = pc_gaia
+			}
+			has_modifier = gpm_terraforming_world_engineering
+		}
+		remove_modifier = gpm_terraforming_world_engineering
+	}
+	if = {
+		limit = {
+			OR = { 
+				gpm_is_planet_class_machine = yes
+				is_planet_class = pc_hive
+				gpm_is_planet_class_city = yes
+				NOT = { is_planet_class = pc_gaia }
+			}
+			has_modifier = gpm_terraforming_world_engineering_shaper_mastery
+		}
+		remove_modifier = gpm_terraforming_world_engineering_shaper_mastery
+	}
+	remove_modifier = gpm_melted_ice_caps
+}
+gpm_remove_precursor_modifiers = {
+	remove_modifier = gpm_precursor_remnants
+	remove_modifier = gpm_precursor_energy_grid
+	remove_modifier = gpm_precursor_satalite_grid
+	remove_modifier = gpm_precursor_city
+	remove_modifier = gpm_precursor_shipyards
+	remove_modifier = gpm_precursor_shipyards_fed
+	remove_modifier = gpm_precursor_planetary_gun
+	remove_modifier = gpm_precursor_bunker_grid
+	remove_modifier = gpm_precursor_mechs
+	if = {
+		limit = {
+			has_modifier = gpm_precursor_planetary_shield
+		}
+		remove_modifier = gpm_precursor_planetary_shield
+		gpm_remove_precursor_shields = yes
+	}
+	# remove_modifier = gpm_precursor_planetary_shield_on
+	remove_modifier = gpm_precursor_floating_city
+	remove_modifier = gpm_precursor_capital_complex
+	remove_modifier = gpm_precursor_communication_hub
+	remove_modifier = gpm_precursor_singularity_drive
+	remove_modifier = gpm_precursor_eternal_fortress
+	remove_modifier = gpm_precursor_prison_planet
+	remove_modifier = gpm_precursor_mines
+	remove_modifier = gpm_precursor_manufactorium
+	remove_modifier = gpm_precursor_vaults
+	remove_modifier = gpm_precursor_crashed_spacestation
+	remove_modifier = gpm_precursor_battleground_ruins
+	remove_modifier = gpm_precursor_outpost_ruins
+	remove_modifier = gpm_precursor_harbor_ruins
+	remove_modifier = gpm_precursor_ruins
+	remove_modifier = gpm_precursor_obelisks
+}
+gpm_remove_fallen_empire_modifiers = {
+	remove_modifier = gpm_utopian_world
+	remove_modifier = gpm_utopian_services
+	remove_modifier = gpm_primitive_reserve
+	remove_modifier = gpm_unified_processing
+	if = {
+		limit = {
+			has_modifier = gpm_planetary_shielding_FE
+		}
+		remove_modifier = gpm_planetary_shielding_FE
+		gpm_remove_fallen_empire_shields = yes
+	}
+	remove_modifier = gpm_living_infrastructure
+	remove_modifier = gpm_galactic_databanks
+	remove_modifier = gpm_monument_to_the_fallen
+	remove_modifier = gpm_longevity
+	remove_modifier = gpm_culture_of_games
+	remove_modifier = gpm_weather_control
+	remove_modifier = gpm_subterranean_paradise
+	remove_modifier = gpm_space_elevators
+	remove_modifier = gpm_artificial_landscaping
+	remove_modifier = gpm_teleportation_systems
+}
+gpm_remove_machine_world_modifiers = {
+	remove_modifier = gpm_ghost_in_the_machine
+	remove_modifier = gpm_framework
+	remove_modifier = gpm_giant_transmitter
+	remove_modifier = gpm_pleasure_planet
+	remove_modifier = gpm_holographic_combat_simulators
+	remove_modifier = gpm_living_knowledge_base
+	remove_modifier = gpm_rogue_programming
+	remove_modifier = gpm_magnetic_wave_defence
+	remove_modifier = gpm_hollow_planet
+	remove_modifier = gpm_true_randomness_unit
+	remove_modifier = gpm_organic_infestation
+	remove_modifier = gpm_labyrinth_world
+	remove_modifier = gpm_contingency_em_shielding
+	remove_modifier = gpm_nanite_infrastructure
+	remove_modifier = gpm_planetary_databases
+	remove_modifier = gpm_artificial_atmosphere
+	remove_modifier = gpm_space_elevators_machine
+	remove_modifier = gpm_quantum_information_network
+	remove_modifier = gpm_planetwide_printing
+	remove_modifier = gpm_liquid_cooling
+	remove_modifier = gpm_robotic_pests
+	remove_modifier = gpm_crystal_farms
+	remove_modifier = gpm_smooth_architecture
+	remove_modifier = gpm_sharp_architecture
+}
+gpm_purge_all_planetary_modifiers = {
+	# Vanilla Modifiers 
+	remove_modifier = hazardous_weather
+	remove_modifier = eat_the_titans
+	remove_modifier = lush_planet
+	
+	# Special Terraform Modifiers
+	remove_modifier = gpm_extinct_species
+	remove_modifier = gpm_terraforming_world_engineering_shaper
+	remove_modifier = gpm_terraforming_world_engineering_mastery
+	remove_modifier = gpm_terraforming_world_engineering
+	remove_modifier = gpm_terraforming_world_engineering_shaper_mastery
+	remove_modifier = gpm_thin_ozone_layer_fixed
+	
+	# Precursor Modifiers
+	if = {
+		limit = { is_planet_class = pc_broken }
+	
+		remove_modifier = gpm_precursor_remnants
+		remove_modifier = gpm_precursor_energy_grid
+		remove_modifier = gpm_precursor_satalite_grid
+		remove_modifier = gpm_precursor_city
+		remove_modifier = gpm_precursor_shipyards
+		remove_modifier = gpm_precursor_shipyards_fed
+		remove_modifier = gpm_precursor_planetary_gun
+		remove_modifier = gpm_precursor_bunker_grid
+		remove_modifier = gpm_precursor_mechs
+		if = {
+			limit = {
+				has_modifier = gpm_precursor_planetary_shield
+			}
+			remove_modifier = gpm_precursor_planetary_shield
+			gpm_remove_precursor_shields = yes
+		}
+		remove_modifier = gpm_precursor_floating_city
+		remove_modifier = gpm_precursor_capital_complex
+		remove_modifier = gpm_precursor_communication_hub
+		remove_modifier = gpm_precursor_singularity_drive
+		remove_modifier = gpm_precursor_eternal_fortress
+		remove_modifier = gpm_precursor_prison_planet
+		remove_modifier = gpm_precursor_mines
+		remove_modifier = gpm_precursor_manufactorium
+		remove_modifier = gpm_precursor_vaults
+		remove_modifier = gpm_precursor_crashed_spacestation
+		remove_modifier = gpm_precursor_battleground_ruins
+		remove_modifier = gpm_precursor_outpost_ruins
+		remove_modifier = gpm_precursor_harbor_ruins
+		remove_modifier = gpm_precursor_ruins
+		remove_modifier = gpm_precursor_obelisks
+	}
+	
+	# Megastructure Modifiers
+	remove_modifier = gpm_ringworld_engineering_mastery
+	remove_modifier = gpm_ringworld_engineering_voidborn
+	remove_modifier = gpm_ringworld_engineering_voidborn_mastery
+	remove_modifier = gpm_ringworld_breath_taking_view
+	remove_modifier = gpm_ringworld_neural_nexus
+	remove_modifier = gpm_ringworld_idyllic_gardens
+	remove_modifier = gpm_ringworld_xeno_zoo
+	remove_modifier = gpm_ringworld_badlands
+	remove_modifier = gpm_ringworld_battle_simulators
+	remove_modifier = gpm_ringworld_endless_ocean
+	remove_modifier = gpm_ringworld_mass_transit_systems
+
+	remove_modifier = gpm_habitat_engineering
+	remove_modifier = gpm_habitat_engineering_mastery
+	remove_modifier = gpm_habitat_engineering_void_mastery
+	remove_modifier = gpm_habitat_stadium
+	remove_modifier = gpm_habitat_trade_docks
+	remove_modifier = gpm_habitat_holonet_entertainment_systems
+	remove_modifier = gpm_habitat_replicator_systems
+	remove_modifier = gpm_habitat_spaceroute_hub
+	remove_modifier = gpm_habitat_extensive_moon_mining 
+	remove_modifier = gpm_habitat_asteroid_belt_mining
+	remove_modifier = gpm_habitat_frequent_thunderstorms_research 
+	remove_modifier = gpm_habitat_radioactive_mantle_mining 
+	remove_modifier = gpm_habitat_frequent_asteroid_flybys 
+	remove_modifier = gpm_habitat_highly_charged_particle_collection 
+	remove_modifier = gpm_habitat_ancient_temple_expeditions
+	remove_modifier = gpm_habitat_experimental_food_recycling
+	remove_modifier = gpm_habitat_time_displaced_planet_research
+	remove_modifier = gpm_habitat_surface_mining
+	remove_modifier = gpm_habitat_surface_expeditions
+	remove_modifier = gpm_habitat_android_pleasure_palace_tourism
+	remove_modifier = gpm_habitat_delicious_ingredients_trade
+	remove_modifier = gpm_habitat_flat_terrain_racing
+	remove_modifier = gpm_habitat_strange_alien_eggs_restriction
+	remove_modifier = gpm_habitat_hydrogen_extraction
+	remove_modifier = gpm_habitat_nitrogen_extraction
+	remove_modifier = gpm_habitat_chlorine_extraction
+	remove_modifier = gpm_habitat_phosphorus_extraction
+	remove_modifier = gpm_habitat_sulfur_extraction
+	remove_modifier = gpm_habitat_iron_extraction
+	
+	# Machine World Modifiers
+	remove_modifier = gpm_ghost_in_the_machine
+	remove_modifier = gpm_framework
+	remove_modifier = gpm_giant_transmitter
+	remove_modifier = gpm_pleasure_planet
+	remove_modifier = gpm_holographic_combat_simulators
+	remove_modifier = gpm_living_knowledge_base
+	remove_modifier = gpm_rogue_programming
+	remove_modifier = gpm_magnetic_wave_defence
+	remove_modifier = gpm_hollow_planet
+	remove_modifier = gpm_true_randomness_unit
+	remove_modifier = gpm_organic_infestation
+	remove_modifier = gpm_labyrinth_world
+	remove_modifier = gpm_contingency_em_shielding
+	remove_modifier = gpm_nanite_infrastructure
+	remove_modifier = gpm_planetary_databases
+	remove_modifier = gpm_artificial_atmosphere
+	remove_modifier = gpm_space_elevators_machine
+	remove_modifier = gpm_quantum_information_network
+	remove_modifier = gpm_planetwide_printing
+	remove_modifier = gpm_liquid_cooling
+	remove_modifier = gpm_robotic_pests
+	remove_modifier = gpm_crystal_farms
+	remove_modifier = gpm_smooth_architecture
+	remove_modifier = gpm_sharp_architecture
+	
+	# Fallen Empire Modidifers
+	remove_modifier = gpm_utopian_world
+	remove_modifier = gpm_utopian_services
+	remove_modifier = gpm_primitive_reserve
+	remove_modifier = gpm_unified_processing
+	if = {
+		limit = {
+			has_modifier = gpm_planetary_shielding_FE
+		}
+		remove_modifier = gpm_planetary_shielding_FE
+		gpm_remove_fallen_empire_shields = yes
+	}
+	remove_modifier = gpm_living_infrastructure
+	remove_modifier = gpm_galactic_databanks
+	remove_modifier = gpm_monument_to_the_fallen
+	remove_modifier = gpm_longevity
+	remove_modifier = gpm_culture_of_games
+	remove_modifier = gpm_weather_control
+	remove_modifier = gpm_subterranean_paradise
+	remove_modifier = gpm_space_elevators
+	remove_modifier = gpm_artificial_landscaping
+	remove_modifier = gpm_teleportation_systems
+	
+	# Planet Rings
+	remove_modifier = gpm_metallic_ring
+	remove_modifier = gpm_ice_ring
+	
+	# Event Placed Modifiers
+	remove_modifier = gpm_compact_star
+	remove_modifier = gpm_pulsar_clock
+	remove_modifier = gpm_stellar_spectacle
+	remove_modifier = gpm_planet_wonder_discovered
+	remove_modifier = gpm_planet_wonder_ruined
+	remove_modifier = gpm_protomolecule_infected_station
+	remove_modifier = gpm_wretched_abyss
+	remove_modifier = gpm_resonant_twins
+
+	# Asteroids
+	remove_modifier = gpm_large_asteroid
+	remove_modifier = gpm_asteroid_moon
+	remove_modifier = gpm_metal_asteroid
+	remove_modifier = gpm_dense_core
+	remove_modifier = gpm_hollow_structure
+	remove_modifier = gpm_crystallized_structure
+	remove_modifier = gpm_abandoned_mining_platforms
+	remove_modifier = gpm_spherical_asteroid
+	remove_modifier = gpm_binary_asteroids
+	remove_modifier = gpm_trojan_asteroid
+	remove_modifier = gpm_c_type_asteroid
+	remove_modifier = gpm_s_type_asteroid
+	remove_modifier = gpm_m_type_asteroid
+	remove_modifier = gpm_v_type_asteroid
+
+	# Barren Worlds
+	remove_modifier = gpm_oppertunity
+	remove_modifier = gpm_hydrogen_mist
+	remove_modifier = gpm_iron_planet
+	remove_modifier = gpm_carbon_planet
+	remove_modifier = gpm_stellar_irradiation
+	remove_modifier = gpm_salt_flats
+
+	# City Worlds
+	remove_modifier = gpm_relic_factories
+	remove_modifier = gpm_relic_generators
+	remove_modifier = gpm_relic_laboratories
+	remove_modifier = gpm_relic_lower_levels
+
+	# Frozen Worlds
+	remove_modifier = gpm_water_pockets
+	remove_modifier = gpm_hydrogen_ice
+	remove_modifier = gpm_nitrogen_ice
+	remove_modifier = gpm_cracking_surface
+	remove_modifier = gpm_deep_aquifer
+
+	# Gas Giants
+	remove_modifier = gpm_supersonic_winds
+	remove_modifier = gpm_geometrical_polar_storm
+	remove_modifier = gpm_floating_forest
+	remove_modifier = gpm_viscous_gas_layer
+	remove_modifier = gpm_everlasting_tornadoes
+	remove_modifier = gpm_shrinking_giant
+	remove_modifier = gpm_charged_atmosphere
+	remove_modifier = gpm_aeroplankton_clouds
+	remove_modifier = gpm_radiation_storms
+	remove_modifier = gpm_beautiful_storms
+	remove_modifier = gpm_abandoned_refineries
+	remove_modifier = gpm_floating_kelp
+	remove_modifier = gpm_thin_atmospheres_gas_giant
+	remove_modifier = gpm_global_thunderstorms_gas_giant
+	remove_modifier = gpm_weak_magnetic_field_gas_giant
+	remove_modifier = gpm_strong_magnetic_field_gas_giant
+	remove_modifier = gpm_super_heated_atmosphere
+	remove_modifier = gpm_floatig_behemothaurs
+
+	# Molten Worlds
+	remove_modifier = gpm_magma_ocean
+	remove_modifier = gpm_silicon_crystals
+	remove_modifier = gpm_lava_geysers
+	remove_modifier = gpm_thin_planetary_crust
+	remove_modifier = gpm_heavy_elements
+	remove_modifier = gpm_rare_metals
+	remove_modifier = gpm_crystaline_deposits
+	remove_modifier = gpm_searing_fumes
+	remove_modifier = gpm_stable_geodes
+	remove_modifier = gpm_proto_planet
+	remove_modifier = gpm_mercury_atmosphere
+
+	# Stars
+	remove_modifier = gpm_unusual_sun_spots
+	remove_modifier = gpm_unusual_bright_sun
+	remove_modifier = gpm_low_metallicity
+	remove_modifier = gpm_high_metallicity
+	remove_modifier = gpm_plasmoid_life
+	remove_modifier = gpm_plasma_tornadoes
+	remove_modifier = gpm_singing_star
+	remove_modifier = gpm_precursor_star_filter
+	remove_modifier = gpm_violent_sun
+
+	# Nuked wWorlds
+	remove_modifier = gpm_ruined_battlefield
+	remove_modifier = gpm_spaceship_graveyard
+	remove_modifier = gpm_recent_mass_extinction
+	remove_modifier = gpm_lingering_pollution
+	remove_modifier = gpm_surface_of_bones
+	remove_modifier = gpm_decaying_structures
+
+	# Toxic Worlds
+	remove_modifier = gpm_heavy_metal_coral
+	remove_modifier = gpm_diamond_rain
+	remove_modifier = gpm_radioactive_biome
+	remove_modifier = gpm_decomposing_leviathan
+	remove_modifier = gpm_mushroom_forest_toxic_world
+	remove_modifier = gpm_giant_mold_blobs
+	remove_modifier = gpm_toxic_garbage
+	remove_modifier = gpm_corrosive_atmosphere
+	remove_modifier = gpm_chlorine_planet
+	remove_modifier = gpm_phosphorus_planet
+	remove_modifier = gpm_sulfur_planet
+	remove_modifier = gpm_acid_rain
+	remove_modifier = gpm_garbage_dump
+	remove_modifier = gpm_toxic_flora_fauna
+
+	# Global Uninhabitable Worlds
+	remove_modifier = gpm_fast_rotation
+	remove_modifier = weak_magnetic_field
+	remove_modifier = strong_magnetic_field
+	remove_modifier = asteroid_impacts
+	remove_modifier = mineral_rich
+	remove_modifier = ultra_rich
+	remove_modifier = low_gravity
+	remove_modifier = high_gravity
+	remove_modifier = gpm_flat_terrain
+	remove_modifier = gpm_rugged_terrain
+	remove_modifier = gpm_radioactive_mantle
+	remove_modifier = gpm_old_world
+	remove_modifier = gpm_hot_geysers
+	remove_modifier = gpm_cryogeysers
+	remove_modifier = gpm_very_hot_core
+	remove_modifier = gpm_solidified_core
+	remove_modifier = gpm_hiveworld
+	remove_modifier = gpm_periodic_meteor_showers
+	remove_modifier = gpm_lunar_dance
+	remove_modifier = gpm_subterranean_eco_system
+	remove_modifier = gpm_abundant_natural_radioactivity
+
+	# Global Habitable Worlds
+	remove_modifier = gpm_frequent_thunderstorms
+	remove_modifier = gpm_global_thunderstorms
+	remove_modifier = gpm_highly_charged_air_particles
+	remove_modifier = gpm_time_displaced_planet
+	remove_modifier = gpm_single_biome
+	remove_modifier = gpm_hyper_complex_biome
+	remove_modifier = gpm_thin_atmospheres
+	remove_modifier = gpm_dense_atmospheres
+	remove_modifier = gpm_strong_volcanism
+	remove_modifier = gpm_weak_magnetic_field_2
+	remove_modifier = gpm_strong_magnetic_field_2
+	remove_modifier = gpm_unstable_tectonics_2
+	remove_modifier = gpm_asteroid_impacts_2
+	remove_modifier = gpm_mineral_rich_2
+	remove_modifier = gpm_ultra_rich_2
+	remove_modifier = gpm_low_gravity_2
+	remove_modifier = gpm_high_gravity_2
+	remove_modifier = gpm_floating_islands
+	remove_modifier = gpm_hostile_flora
+	remove_modifier = gpm_toxic_gas
+	remove_modifier = gpm_extensive_cavern_system
+	remove_modifier = gpm_titanic_predators
+	remove_modifier = gpm_unnatural_world
+	remove_modifier = gpm_atmospheric_stimulant
+	remove_modifier = gpm_unusual_seasons
+	remove_modifier = gpm_perfect_seasons
+	remove_modifier = gpm_living_planet
+	remove_modifier = gpm_gemstones
+	remove_modifier = gpm_ideal_for_life
+	remove_modifier = gpm_endless_fish
+	remove_modifier = gpm_artificial_water
+	remove_modifier = gpm_clear_skies
+	remove_modifier = gpm_android_pleasure_palace
+	remove_modifier = gpm_melted_ice_caps
+	remove_modifier = gpm_small_islands
+	remove_modifier = gpm_windy
+	remove_modifier = gpm_simple_organisms
+	remove_modifier = gpm_newly_evolved_complex_organisms
+	remove_modifier = gpm_delicious_ingredients
+	remove_modifier = gpm_friendly_wildlife
+	remove_modifier = gpm_pleasant_weather
+	remove_modifier = gpm_unusual_formations
+	remove_modifier = gpm_flat_terrain
+	remove_modifier = gpm_rugged_terrain
+	remove_modifier = gpm_many_extremophiles
+	remove_modifier = gpm_great_temperature_variation
+	remove_modifier = gpm_gorgeous_sky
+	remove_modifier = gpm_ice_age
+	remove_modifier = gpm_ancient_temple
+	remove_modifier = gpm_tilted_axis
+	remove_modifier = gpm_perpendicular_axis
+	remove_modifier = gpm_radioactive_mantle
+	remove_modifier = gpm_locust_plagues
+	remove_modifier = gpm_acidic_seas
+	remove_modifier = gpm_empathic_life
+	remove_modifier = gpm_seasonal_flooding
+	remove_modifier = gpm_thin_ozone_layer
+	remove_modifier = gpm_symbiotic_life
+	remove_modifier = gpm_resilent_parasites
+	remove_modifier = gpm_ice_flora
+	remove_modifier = gpm_strange_ice_river
+	remove_modifier = gpm_juggernaut_manta_rays
+	remove_modifier = gpm_black_oily_stone
+	remove_modifier = gpm_crystal_moon_palace
+	remove_modifier = gpm_cities_in_the_sky
+	remove_modifier = gpm_old_world
+	remove_modifier = gpm_dunes
+	remove_modifier = gpm_extensive_reef_systems
+	remove_modifier = gpm_trubbles
+	remove_modifier = gpm_strange_voices
+	remove_modifier = gpm_temple_of_the_ancient_one
+	remove_modifier = gpm_beautiful_lakes
+	remove_modifier = gpm_proto_forests
+	remove_modifier = gpm_dense_forests
+	remove_modifier = gpm_planetwide_forest
+	remove_modifier = gpm_inspirational
+	remove_modifier = gpm_hiveworld
+	remove_modifier = gpm_periodic_meteor_showers
+	remove_modifier = gpm_arachnophobia
+	remove_modifier = gpm_giant_worm
+	remove_modifier = gpm_artificial_core
+	remove_modifier = gpm_exotic_spices
+	remove_modifier = gpm_sandstorms
+	remove_modifier = gpm_sand_tornadoes
+	remove_modifier = gpm_quicksand
+	remove_modifier = gpm_never_ending_aurora
+	remove_modifier = gpm_spirals_of_ice
+	remove_modifier = gpm_furry_packs
+	remove_modifier = gpm_blizzards
+	remove_modifier = gpm_abominable_predators
+	remove_modifier = gpm_rich_soil
+	remove_modifier = gpm_otherworldly_colours
+	remove_modifier = gpm_misty
+	remove_modifier = gpm_ecological_nervous_system
+	remove_modifier = gpm_carnivorous_flies
+	remove_modifier = gpm_algae_boom
+	remove_modifier = gpm_ocean_forests
+	remove_modifier = gpm_warm_water_lakes
+	remove_modifier = gpm_torrential_rainstorms
+	remove_modifier = gpm_ocean_currents
+	remove_modifier = gpm_giant_ocean_snakes
+	remove_modifier = gpm_ocean_trenches
+	remove_modifier = gpm_unique_marine_habitats
+	remove_modifier = gpm_massive_waves
+	remove_modifier = gpm_ghost_ships
+	remove_modifier = gpm_omnious_fog
+	remove_modifier = gpm_beautiful_planet_rings
+	remove_modifier = gpm_blood_moon
+	remove_modifier = gpm_solar_eclipse
+	remove_modifier = gpm_dark_skies
+	remove_modifier = gpm_musical_creatures
+	remove_modifier = gpm_odd_cloud_shapes
+	remove_modifier = gpm_colossal_cliffs
+	remove_modifier = gpm_massive_waterfalls
+	remove_modifier = gpm_strange_alien_eggs
+	remove_modifier = gpm_mushroom_forest
+	remove_modifier = gpm_cursed_world
+	remove_modifier = gpm_sunken_cities
+	remove_modifier = gpm_titanic_geo_form	
+}
+gpm_purge_all_core_modifiers = {
+	remove_modifier = ultra_rich
+	remove_modifier = gpm_ultra_rich_2
+	remove_modifier = carbon_world
+	remove_modifier = mineral_poor
+	remove_modifier = low_gravity
+	remove_modifier = gpm_low_gravity_2
+	remove_modifier = high_gravity
+	remove_modifier = gpm_high_gravity_2
+}
+gpm_purge_ringworld_modifiers = {
+	remove_modifier = gpm_ringworld_engineering_mastery
+	remove_modifier = gpm_ringworld_engineering_voidborn
+	remove_modifier = gpm_ringworld_engineering_voidborn_mastery
+	remove_modifier = gpm_ringworld_breath_taking_view
+	remove_modifier = gpm_ringworld_neural_nexus
+	remove_modifier = gpm_ringworld_idyllic_gardens
+	remove_modifier = gpm_ringworld_xeno_zoo
+	remove_modifier = gpm_ringworld_badlands
+	remove_modifier = gpm_ringworld_battle_simulators
+	remove_modifier = gpm_ringworld_endless_ocean
+	remove_modifier = gpm_ringworld_mass_transit_systems
+}

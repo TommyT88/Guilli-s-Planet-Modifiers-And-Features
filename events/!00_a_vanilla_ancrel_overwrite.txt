@@ -1,0 +1,374 @@
+namespace = ancrel
+
+# Arcane Deciphering Events
+country_event = {
+	id = ancrel.10001
+	title = "ancrel.10001.name"
+	desc = "ancrel.10001.desc"
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "FASCINATING"
+		locked_random_list = {
+			# Offensive Repeatable Techs
+			10 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+				locked_random_list = {
+					10 = {
+						add_research_option = tech_repeatable_improved_military_station_damage
+						add_tech_progress = { tech = tech_repeatable_improved_military_station_damage progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_explosive_damage
+						add_tech_progress = { tech = tech_repeatable_weapon_type_explosive_damage progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_explosive_fire_rate
+						add_tech_progress = { tech = tech_repeatable_weapon_type_explosive_fire_rate progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_kinetic_damage
+						add_tech_progress = { tech = tech_repeatable_weapon_type_kinetic_damage progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_kinetic_fire_rate
+						add_tech_progress = { tech = tech_repeatable_weapon_type_kinetic_fire_rate progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_strike_craft_fire_damage
+						add_tech_progress = { tech = tech_repeatable_weapon_type_strike_craft_fire_damage progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_strike_craft_fire_rate
+						add_tech_progress = { tech = tech_repeatable_weapon_type_strike_craft_fire_rate progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_energy_damage
+						add_tech_progress = { tech = tech_repeatable_weapon_type_energy_damage progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_weapon_type_energy_fire_rate
+						add_tech_progress = { tech = tech_repeatable_weapon_type_energy_fire_rate progress = 0.80 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_army_damage
+						add_tech_progress = { tech = tech_repeatable_improved_army_damage progress = 0.80 }
+					}
+				}
+			}
+			# Defensive Repeatable Techs
+			10 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+				locked_random_list = {
+					
+					10 = {
+						add_research_option = tech_repeatable_improved_shield_output
+						add_tech_progress = { tech = tech_repeatable_improved_shield_output progress = 0.90 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_armor_output
+						add_tech_progress = { tech = tech_repeatable_improved_armor_output progress = 0.90 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_army_health
+						add_tech_progress = { tech = tech_repeatable_improved_army_health progress = 0.90 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_military_station_health
+						add_tech_progress = { tech = tech_repeatable_improved_military_station_health progress = 0.90 }
+					}
+				}
+			}
+			# Economy/Empire Repeatable Techs
+			10 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+				locked_random_list = {
+					10 = {
+						add_research_option = tech_repeatable_improved_tile_mineral_output
+						add_tech_progress = { tech = tech_repeatable_improved_tile_mineral_output progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_tile_energy_output
+						add_tech_progress = { tech = tech_repeatable_improved_tile_energy_output progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_tile_food_output
+						add_tech_progress = { tech = tech_repeatable_improved_tile_food_output progress = 0.85 }
+						modifier = { factor = 0 is_machine_empire = yes }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_core_system_cap
+						add_tech_progress = { tech = tech_repeatable_improved_core_system_cap progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_leader_life_span
+						add_tech_progress = { tech = tech_repeatable_improved_leader_life_span progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_naval_cap
+						add_tech_progress = { tech = tech_repeatable_naval_cap progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_command_limit
+						add_tech_progress = { tech = tech_repeatable_command_limit progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_improved_starbase_capacity
+						add_tech_progress = { tech = tech_repeatable_improved_starbase_capacity progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_reduced_building_cost
+						add_tech_progress = { tech = tech_repeatable_reduced_building_cost progress = 0.85 }
+					}
+					10 = {
+						add_research_option = tech_repeatable_reduced_building_time
+						add_tech_progress = { tech = tech_repeatable_reduced_building_time progress = 0.85 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ancrel.10002
+	title = "ancrel.10002.name"
+	desc = "ancrel.10002.desc"
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "FASCINATING"
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
+		}
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
+		}
+		add_modifier = {
+			modifier = "arcane_insight"
+			days = 1800
+		}
+	}
+}
+
+country_event = {
+	id = ancrel.10003
+	title = "ancrel.10003.name"
+	desc = "ancrel.10003.desc"
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "FASCINATING"
+		add_random_research_option = {
+			add_progress = 0.90
+			area = engineering
+			ignore_prereqs = no
+			fail_effects = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+		add_random_research_option = {
+			add_progress = 0.90
+			area = physics
+			ignore_prereqs = no
+			fail_effects = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+		add_random_research_option = {
+			add_progress = 0.90
+			area = society
+			ignore_prereqs = no
+			fail_effects = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+# Special Project Complete
+ship_event = {
+	id = ancrel.4011
+	title = ancrel.4011.name
+	desc = ancrel.4011.desc
+	picture = GFX_evt_space_debris
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = ancrel.4011.a
+		begin_event_chain = {
+			event_chain = "rubricator_chain"
+			target = this.owner
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = root
+							min_jumps = 2
+							max_jumps = 4
+						}
+						has_access_fleet = root.owner
+						has_owner = no
+						NOT = {
+							any_fleet_in_system = {
+								owner = { 
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+				}
+				closest_system = {
+					min_steps = 2
+					max_steps = 4
+					limit = {
+						has_access_fleet = root.owner
+						has_owner = no
+						NOT = {
+							any_fleet_in_system = {
+								owner = { 
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+					spawn_system = {
+						min_distance >= 29
+						max_distance <= 31
+						min_orientation_angle = 24
+						max_orientation_angle = 66
+						initializer = rubricator_system
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = root
+							min_jumps = 2
+							max_jumps = 4
+						}
+						has_access_fleet = root.owner
+						NOT = {
+							any_fleet_in_system = {
+								owner = { 
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+				}
+				closest_system = {
+					min_steps = 2
+					max_steps = 4
+					limit = {
+						has_access_fleet = root.owner
+						NOT = {
+							any_fleet_in_system = {
+								owner = { 
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+					spawn_system = {
+						min_distance >= 29
+						max_distance <= 31
+						min_orientation_angle = 24
+						max_orientation_angle = 66
+						initializer = rubricator_system
+					}
+				}
+			}
+			else = {
+				closest_system = {
+					min_steps = 2
+					max_steps = 4
+					spawn_system = {
+						min_distance >= 29
+						max_distance <= 31
+						min_orientation_angle = 24
+						max_orientation_angle = 66
+						initializer = rubricator_system
+					}
+				}
+			}
+			add_extra_hyperlane_to_spawned_system_effect = yes
+			# Guilli Overwrite to spawn modifiers on this event spawned system
+			random_system = {
+				limit = { has_star_flag = rubricator_system }
+				every_system_planet = {
+					planet_event = {
+						id = gpm_engine.1
+					}
+				}
+			}
+			# end guilli
+			create_point_of_interest = {
+				id = hidden_planet
+				name = "rubricator_coordinates_poi"
+				desc = rubricator_coordinates_desc
+				event_chain = rubricator_chain
+				location = event_target:rubricator_planet
+			}
+		}	
+	}
+	option = {
+		name = ancrel.4011.b
+	}
+}

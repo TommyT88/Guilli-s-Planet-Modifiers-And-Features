@@ -1,0 +1,504 @@
+gpm_d_planetary_shield_array = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 10
+		}
+	}	
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_planetary_shield = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 20
+		}
+	}
+
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		NOT = { has_modifier = gpm_precursor_manufactorium }
+	# 	}
+	# 	modifier = {
+	# 		district_gpm_precursor_science_standard_max = 4
+	# 	}
+	# }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_capital_complex = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+
+	# resources = {
+		# category = planet_deposits
+		# produces = {
+			# society_research = 10
+		# }
+	# }
+	
+	country_modifier = {
+		envoys_add = 2
+	}
+	
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		NOT = { has_modifier = gpm_precursor_manufactorium }
+	# 	}
+	# 	modifier = {
+	# 		district_gpm_precursor_science_standard_max = 4
+	# 	}
+	# }
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_1 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		# district_gpm_precursor_manufactorium_max = 3
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			alloys = 10
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_2 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+
+	planet_modifier = {
+		# district_gpm_precursor_science_standard_max = 2
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_3 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		# district_gpm_precursor_science_standard_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_4 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	# planet_modifier = {
+	# 	district_gpm_precursor_science_standard_max = 1
+	# }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_5 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+
+	planet_modifier = {
+		district_generator_max = 4
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 15
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_6 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	# planet_modifier = {
+	# 	district_gpm_precursor_science_standard_max = 1
+	# }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_7 = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	# planet_modifier = {
+	# 	district_gpm_precursor_science_standard_max = 1
+	# }
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_1_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_max_buildings_add = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_2_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+
+	planet_modifier = {
+		planet_max_buildings_add = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_3_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_4_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_5_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		district_Generator_max = 4
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_6_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_precursor_ruins_7_distr = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+# gpm_d_precursor_ruins_1_planet = {
+# 	is_for_colonizable = yes
+# 	category = gpm_deposit_cat_special
+	
+# 	planet_modifier = {
+# 		district_gpm_precursor_manufactorium_max = 5
+# 		district_gpm_precursor_science_standard_max = 5
+# 		planet_max_districts_add = 5
+# 	}
+
+# 	# weight 0: event added
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }

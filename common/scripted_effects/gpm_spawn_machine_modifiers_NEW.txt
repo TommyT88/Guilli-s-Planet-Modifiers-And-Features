@@ -1,0 +1,276 @@
+# ME_gpm_ghost_in_the_machine
+# ME_gpm_framework
+# ME_gpm_giant_transmitter
+# ME_gpm_pleasure_planet
+# ME_gpm_holographic_combat_simulators
+# ME_gpm_living_knowledge_base
+# ME_gpm_rogue_programming
+# ME_gpm_magnetic_wave_defence
+# ME_gpm_hollow_planet
+# ME_gpm_true_randomness_unit
+# ME_gpm_organic_infestation
+# ME_gpm_labyrinth_world
+# ME_gpm_contingency_em_shielding
+# ME_gpm_nanite_infrastructure
+# ME_gpm_planetary_databases
+# ME_gpm_artificial_atmosphere
+# ME_gpm_space_elevators
+# ME_gpm_quantum_information_network
+# ME_gpm_planetwide_printing
+# ME_gpm_liquid_cooling
+# ME_gpm_robotic_pests
+# ME_gpm_crystal_farms
+# ME_gpm_smooth_architecture
+# ME_gpm_sharp_architecture
+
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+gpm_spawn_contingency_world_modifier = {
+	random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_giant_transmitter }
+			modifier = { factor = 0 has_modifier = gpm_giant_transmitter } 
+			modifier = { factor = 0 NOT = { is_planet_class = pc_ai } }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_holographic_combat_simulators }
+			modifier = { factor = 0 has_modifier = gpm_holographic_combat_simulators }
+			modifier = { factor = 0 NOT = { is_planet_class = pc_ai } } 
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_magnetic_wave_defence }
+			modifier = { factor = 0 has_modifier = gpm_magnetic_wave_defence } 
+			modifier = { factor = 0 NOT = { is_planet_class = pc_ai } }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_labyrinth_world }
+			modifier = { factor = 0 has_modifier = gpm_labyrinth_world } 
+			modifier = { factor = 0 has_modifier = gpm_hollow_planet } 
+			modifier = { factor = 0 NOT = { is_planet_class = pc_ai } }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_organic_infestation }
+			modifier = { factor = 0 has_modifier = gpm_organic_infestation } 
+			modifier = { factor = 0 is_planet_class = pc_machine }
+			modifier = { factor = 0 is_planet_class = pc_ai }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_hollow_planet }
+			modifier = { factor = 0 has_modifier = gpm_hollow_planet } 
+			modifier = { factor = 0 has_modifier = gpm_labyrinth_world } 
+			modifier = { factor = 0 NOT = { is_planet_class = pc_ai } }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_sharp_architecture }
+			modifier = { factor = 0 has_modifier = gpm_sharp_architecture } 
+			modifier = { factor = 0 NOT = { is_planet_class = pc_ai } }
+		}
+	}
+}
+
+gpm_spawn_machine_world_random_modifier = {
+	random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_ghost_in_the_machine }
+			modifier = { factor = 0 has_modifier = gpm_ghost_in_the_machine }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_rogue_programming }
+			modifier = { factor = 0 has_modifier = gpm_rogue_programming }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_hollow_planet }
+			modifier = { factor = 0 has_modifier = gpm_hollow_planet }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_nanite_infrastructure }
+			modifier = { factor = 0 has_modifier = gpm_nanite_infrastructure }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_smooth_architecture }
+			modifier = { factor = 0 has_modifier = gpm_smooth_architecture }
+			modifier = { factor = 0 has_modifier = gpm_sharp_architecture }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_sharp_architecture }
+			modifier = { factor = 0 has_modifier = gpm_sharp_architecture }
+			modifier = { factor = 0 has_modifier = gpm_smooth_architecture }
+		}
+	}
+}
+
+
+gpm_spawn_machine_world_science_modifier = {
+	locked_random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_living_knowledge_base }
+			modifier = { factor = 0 has_modifier = gpm_living_knowledge_base }
+			modifier = { factor = 0 exists = owner owner = { NOT = { has_civic = civic_machine_assimilator } } }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_true_randomness_unit }
+			modifier = { factor = 0 has_modifier = gpm_true_randomness_unit }
+		}		
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_planetary_databases }
+			modifier = { factor = 0 has_modifier = gpm_planetary_databases }
+		}
+	}
+}
+gpm_spawn_machine_world_energy_modifier = {
+	locked_random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_framework }
+			modifier = { factor = 0 has_modifier = gpm_framework }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_quantum_information_network }
+			modifier = { factor = 0 has_modifier = gpm_quantum_information_network }
+		}
+	}
+}
+gpm_spawn_machine_world_minerals_modifier = {
+	locked_random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_space_elevators_machine }
+			modifier = { factor = 0 has_modifier = gpm_space_elevators_machine }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_robotic_pests }
+			modifier = { factor = 0 has_modifier = gpm_robotic_pests }
+		}
+	}
+}
+gpm_spawn_machine_world_alloys_modifier = {
+	add_modifier = { days = -1 modifier = gpm_planetwide_printing }
+}
+gpm_spawn_machine_world_rare_resources_modifier = {
+	locked_random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_artificial_atmosphere }
+			modifier = { factor = 0 has_modifier = gpm_artificial_atmosphere }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_liquid_cooling }
+			modifier = { factor = 0 has_modifier = gpm_liquid_cooling }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_crystal_farms }
+			modifier = { factor = 0 has_modifier = gpm_crystal_farms }
+		}
+	}
+}
+gpm_spawn_machine_empire_rogue_servitor_modifiers = {
+	locked_random_list = {
+		10 = {}
+		1 = {
+			add_modifier = { days = -1 modifier = gpm_pleasure_planet }
+			modifier = { factor = 0 has_modifier = gpm_pleasure_planet }
+			modifier = { factor = 0 exists = owner owner = { NOT = { has_civic = civic_machine_servitor } } }
+		}
+	}
+}
+
+# Random ones, other ones are through event gpm_terraform.1
+gpm_roll_machine_world_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			random_list = {
+				50 = { }
+				50 = { gpm_spawn_machine_world_random_modifier = yes }
+			}
+		}
+		gpm_modifier_amount_low = {
+			random_list = {
+				50 = { }
+				25 = { gpm_spawn_machine_world_random_modifier = yes }
+			}
+		}
+		gpm_modifier_amount_normal = {
+			random_list = {
+				50 = { }
+				50 = { gpm_spawn_machine_world_random_modifier = yes }
+			}
+		}
+		gpm_modifier_amount_high = {
+			random_list = {
+				25 = { }
+				75 = { gpm_spawn_machine_world_random_modifier = yes }
+			}
+		}
+		default = { }
+	}
+}
+
+# gpm_roll_machine_world_modifiers = {
+# 	switch = {
+# 		trigger = has_global_flag
+# 		gpm_modifier_amount_max_one = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				random_list = {
+# 					50 = { }
+# 					50 = { gpm_spawn_machine_world_modifier = yes }
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_low = {
+# 			while = {
+# 				count = 2
+# 				if = {
+# 					limit = { num_modifiers < 2 }
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_machine_world_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_normal = {
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = { num_modifiers < 3 }
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_machine_world_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_high = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				gpm_spawn_machine_world_modifier = yes
+# 			}
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = { num_modifiers < 3 }
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_machine_world_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		default = { }
+# 	}
+# }

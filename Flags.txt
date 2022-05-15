@@ -1,0 +1,225 @@
+### Global Flags
+################
+guillis_planet_modifiers_active			#set on gamestart
+has_guillis_planet_modifiers_mod		#set on gamestart
+
+gpm_initialisation_menu					#set on gamestart
+gpm_modifier_amount_max_one				#set on menu
+gpm_modifier_amount_low					#set on menu
+gpm_modifier_amount_normal				#set on menu
+gpm_modifier_amount_high				#set on menu
+
+gpm_galaxy_age_young					#set on menu
+gpm_galaxy_age_default					#set on menu
+gpm_galaxy_age_old						#set on menu
+
+gpm_modifiers_fallen_empire_disabled	#set on menu
+gpm_planetary_rings_disabled			#set on menu
+gpm_planet_wonders_disabled				#set on menu
+gpm_modifiers_homeworld_enabled			#set on menu
+gpm_modifiers_precursor_disabled		#set on menu
+gpm_station_extra_cost_disabled			#set on menu
+gpm_multiplayer_fun_enabled				#set on menu
+
+forbid_guillis_planet_modifiers			#dont run engine on this
+forbid_guillis_precursor_modifiers      #dont run precursor spawn scripts on this
+
+
+gpm_r_time_displacer_found					#Relic found, cant be found again
+gpm_r_alien_eggs_found						#Relic found, cant be found again
+gpm_r_machine_world_core_found				#Relic found, cant be found again
+gpm_r_encyclopedia_galactica_found			#Relic found, cant be found again
+gpm_r_zero_energy_generator_found			#Relic found, cant be found again
+gpm_r_quantum_sphere_found					#Relic found, cant be found again
+gpm_r_ai_architect_found					#Relic found, cant be found again
+gpm_r_encrypted_sct_found					#Relic found, cant be found again
+gpm_r_experimental_weapon_found				#Relic found, cant be found again
+gpm_r_fallout_emergency_replicator_found	#Relic found, cant be found again
+gpm_r_power_core_found						#Relic found, cant be found again
+gpm_r_mysterious_shield_generator_found		#Relic found, cant be found again
+gpm_r_gravity_engine_found					#Relic found, cant be found again
+gpm_r_codex_administratum_found				#Relic found, cant be found again
+gpm_r_enigmatic_advisor_found				#Relic found, cant be found again
+gpm_r_positronic_microchip_found			#Relic found, cant be found again
+gpm_r_venerable_dreadnaught_found			#Relic found, cant be found again
+gpm_r_sentinel_queen_found					#Relic found, cant be found again
+gpm_r_earthquake_engine_found				#Relic found, cant be found again
+gpm_r_manufactorium_ship_found				#Relic found, cant be found again
+gpm_r_datacube_found						#Relic found, cant be found again
+gpm_r_self_assembly_hub_found				#Relic found, cant be found again
+gpm_r_banner_of_the_fallen_found			#Relic found, cant be found again
+gpm_r_cloaking_device_found					#Relic found, cant be found again
+gpm_r_q_storage_compressor_found			#Relic found, cant be found again
+gpm_r_soul_gem_found						#Relic found, cant be found again
+gpm_r_self_repairing_obelisk_found			#Relic found, cant be found again
+
+
+### Country Flags
+#################
+
+# Relic country flags indicating A empire knows about B empire's relic, also unlocks the wargoal/casus-belli
+gpm_has_r_dragon_trophy@root.owner
+gpm_has_r_khans_throne@root.owner
+gpm_has_r_worm_scales@root.owner
+gpm_has_r_rubricator@root.owner
+gpm_has_r_galaxy@root.owner
+gpm_has_r_omnicodex@root.owner
+gpm_has_r_surveyor@root.owner
+gpm_has_r_galatron@root.owner
+gpm_has_r_ancient_sword@root.owner
+gpm_has_r_severed_head@root.owner
+gpm_has_r_prethoryn_queen@root.owner
+gpm_has_r_unbidden_warlock@root.owner
+gpm_has_r_contingency_core@root.owner
+gpm_has_r_zro_crystal@root.owner
+gpm_has_r_the_last_baol@root.owner
+gpm_has_r_the_defragmentor@root.owner
+gpm_has_r_reality_perforator@root.owner
+gpm_has_r_pox_sample@root.owner
+gpm_has_r_cryo_core@root.owner
+gpm_has_r_war_forge@root.owner
+gpm_has_r_ai_architect@root.owner
+gpm_has_r_banner_of_the_fallen@root.owner
+gpm_has_r_cloaking_device@root.owner
+gpm_has_r_codex_administratum@root.owner
+gpm_has_r_datacube@root.owner
+gpm_has_r_earthquake_engine@root.owner
+gpm_has_r_encrypted_sct@root.owner
+gpm_has_r_encyclopedia_galactica@root.owner
+gpm_has_r_enigmatic_advisor@root.owner
+gpm_has_r_experimental_weapon@root.owner
+gpm_has_r_fallout_emergency_replicator@root.owner
+gpm_has_r_gravity_engine@root.owner
+gpm_has_r_manufactorium_ship@root.owner
+gpm_has_r_mysterious_shield_generator@root.owner
+gpm_has_r_positronic_microchip@root.owner
+gpm_has_r_power_core@root.owner
+gpm_has_r_q_storage_compressor@root.owner
+gpm_has_r_quantum_sphere@root.owner
+gpm_has_r_self_assembly_hub@root.owner
+gpm_has_r_self_repairing_obelisk@root.owner
+gpm_has_r_sentinel_queen@root.owner
+gpm_has_r_soul_gem@root.owner
+gpm_has_r_venerable_dreadnaught@root.owner
+gpm_has_r_zero_energy_generator@root.owner
+gpm_has_r_time_displacer@root.owner
+gpm_has_r_alien_eggs@root.owner
+gpm_has_r_machine_world_core@root.owner
+
+# When discovering a precursor modifier
+gpm_discover_precursor_remnants
+gpm_discover_precursor_energy_grid
+gpm_discover_precursor_satelite_grid
+gpm_discover_precursor_city
+gpm_discover_precursor_shipyards
+gpm_discover_precursor_planetary_gun
+gpm_discover_precursor_bunker_grid
+gpm_discover_precursor_mechs
+gpm_discover_precursor_planetary_shield
+gpm_discover_precursor_floating_city
+gpm_discover_precursor_capital_complex
+gpm_discover_precursor_communication_hub
+gpm_discover_precursor_singularity_drive
+gpm_discover_precursor_eternal_fortress
+gpm_discover_precursor_prison_planet
+gpm_discover_precursor_mines
+gpm_discover_precursor_manufactorium
+gpm_discover_precursor_vaults
+gpm_discover_precursor_crashed_spacestation
+gpm_discover_precursor_battleground_ruins
+gpm_discover_precursor_outpost_ruins
+gpm_discover_precursor_harbor_ruins
+gpm_discover_precursor_generic_ruins
+gpm_discover_precursor_obelisks
+gpm_discover_planet_wonder
+
+# Relic related flags
+relic_machine_world_core_activated			# activated machine core relic and can now do planet decision
+
+# Unlocks
+gpm_artifact_research_centre_unlocked		# allowed to build arcane research center
+gpm_personal_mech_trait_rewarded			# unlocks general trait
+gpm_historian_trait_rewarded				# unlocks leader trait
+gpm_fallen_heraldry_trait_rewarded			# unlocks admiral trait
+gpm_battle_standards_trait_rewarded			# unlocks general trait
+gpm_core_prison_rewarded					# unlocks subsurface prison building
+gpm_exotic_park_rewarded					# unlocks exotic park building
+gpm_precursor_expert_trait_rewarded			# unlocks precursor expert trait
+
+# Event related flags
+gpm_xeno_army_fire_event					# from the X xeno armies every Y years
+gpm_ego_country								# ego/xandar country flag
+gpm_ego_first_meet							# ego/xandar country flag
+gpm_ego_friendly_reward						# ego/xandar country flag
+gpm_ego_first_fleet_destroyed				# ego/xandar country flag
+
+# mini megastructures found
+gpm_found_ruined_refinery
+gpm_found_ruined_mining_facility
+gpm_found_ruined_station
+gpm_found_ruined_silo
+
+### Solar System Flags
+######################
+gpm_guardians_ego_system
+gpm_precursor_machine_system
+gpm_machine_system_machine_world
+gpm_machine_system_moon
+gpm_precursor_gaia_system
+gpm_gaia_system_gaia_world
+gpm_has_james_web_flag
+
+
+
+### Planet Flags
+################
+gpm_is_precursor_world  				#set on gamestart
+gpm_is_precursor_system					# used to scope systems with precursor modifiers in
+gpm_is_wondrous_world					#set on gamestart
+is_event_spawned_planet					#planet is created after gamestart (event). Runs gpm_engine.1 on_survey
+has_gpm_d_relic_tank_factory
+has_gpm_d_relic_mech_factory
+has_gpm_d_relic_power_armor_factory
+has_gpm_d_relic_ship_factory
+has_gpm_d_relic_reactor_factory
+
+gpm_is_precursor_orbiting_habitat
+gpm_is_extensive_moon_mining_habitat
+gpm_is_frequent_thunderstorms_research_habitat
+gpm_is_radioactive_mantle_mining_habitat
+gpm_is_frequent_asteroid_flybys_habitat
+gpm_is_ancient_temple_expeditions_habitat
+gpm_is_highly_charged_particle_collection_habitat
+gpm_is_time_displaced_planet_research_habitat
+gpm_is_surface_mining_habitat
+gpm_is_surface_expeditions_habitat
+gpm_is_android_pleasure_palace_tourism_habitat
+gpm_is_delicious_ingredients_trade_habitat
+gpm_is_flat_terrain_racing_habitat
+gpm_is_strange_alien_eggs_restriction_habitat
+gpm_is_hydrogen_extraction_habitat
+gpm_is_nitrogen_extraction_habitat
+gpm_is_chlorine_extraction_habitat
+gpm_is_phosphorus_extraction_habitat
+gpm_is_sulfur_extraction_habitat
+
+gpm_has_RES								# has a planetary ring mining site
+gpm_solidified_planet_core				# used to prevent terraforming stuff
+gpm_is_upgraded_machine_world			# machine world has been upgraded with the decision
+
+has_gpm_ruined_mining_facility			# Star & planet flag ;has ruined mini megastructure
+has_gpm_ruined_refinery					# Star & planet flag ;has ruined mini megastructure
+has_gpm_ruined_observation_station		# Star & planet flag ;has ruined mini megastructure
+has_gpm_ruined_silo						# Star flag ;has ruined mini megastructure
+
+### Ambient Flags
+#################
+
+
+
+
+
+### Other mod global flags to check for
+#######################################
+planetarydiversity						# planetady diversity game start flag
+giga_game_started						# giga structures after manu flag (?)

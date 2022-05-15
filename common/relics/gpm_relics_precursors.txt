@@ -1,0 +1,1436 @@
+@activation_cost_influence = 150
+@activation_cost = 3000
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+@triumph_duration_veryshort = 900
+
+# Sounds #
+# relic_activation_ether_drake_trophy
+# relic_activation_khans_throne
+# relic_activation_scales_of_the_worm
+# relic_activation_the_rubricator
+# relic_activation_miniature_galaxy
+# relic_activation_the_omnicodex
+# relic_activation_the_surveyor
+# relic_activation_the_galatron
+# relic_activation_blade_of_the_huntress
+# relic_activation_head_of_zarqlan
+# relic_activation_prethoryn_blood_queen
+# relic_activation_extradimensional_warlock
+# relic_activation_isolated_contingency_core
+
+# gpm_r_encyclopedia_galactica
+# gpm_r_zero_energy_generator
+# gpm_r_quantum_sphere
+# gpm_r_ai_architect
+# gpm_r_encrypted_sct
+# gpm_r_experimental_weapon
+# gpm_r_fallout_emergency_replicator
+# gpm_r_power_core
+# gpm_r_mysterious_shield_generator
+# gpm_r_gravity_engine
+# gpm_r_codex_administratum
+# gpm_r_enigmatic_advisor
+# gpm_r_positronic_microchip
+# gpm_r_venerable_dreadnaught
+# gpm_r_sentinel_queen
+# gpm_r_earthquake_engine
+# gpm_r_manufactorium_ship
+# gpm_r_datacube
+# gpm_r_self_assembly_hub
+# gpm_r_banner_of_the_fallen
+# gpm_r_cloaking_device
+# gpm_r_q_storage_compressor
+# gpm_r_soul_gem
+# gpm_r_self_repairing_obelisk
+
+
+
+
+### Precursor Remnants
+gpm_r_encyclopedia_galactica = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_encyclopedia_galactica"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		num_tech_alternatives_add = 4
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_encyclopedia_galactica_active_effect_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_intellectual_promise
+				}
+			}
+		}
+		
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Energy Grid
+gpm_r_zero_energy_generator = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_zero_energy_generator"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		starbases_energy_upkeep_mult = -0.5
+		stations_energy_upkeep_mult = -0.5
+		
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = gpm_r_zero_energy_generator_active_effect 
+			days = @triumph_duration 
+		}
+		
+		custom_tooltip = "relic_triumph_cooldown"
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Satellite Grid
+gpm_r_quantum_sphere = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_quantum_sphere"
+	sound = "relic_activation_extradimensional_warlock"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		intel_encryption_add = 5
+		intel_decryption_add = 5
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_quantum_sphere_active_effect"
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor City
+gpm_r_ai_architect = {
+	activation_duration = @triumph_duration_short
+	portrait = "GFX_gpm_r_ai_architect"
+	sound = "relic_activation_the_omnicodex"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 5000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_housing_mult = 0.15
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_ai_architect_active_effect" 
+			days = @triumph_duration_short
+		}
+		custom_tooltip = relic_triumph_cooldown_short
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_short
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Shipyards
+gpm_r_encrypted_sct = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_gpm_r_encrypted_sct"
+	sound = "relic_activation_the_omnicodex"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		starbase_shipyard_build_speed_mult = 0.20
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_encrypted_sct_active_effect" 
+			days = @triumph_duration_veryshort
+		}
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_veryshort
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Planetary Gun
+gpm_r_experimental_weapon = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_gpm_r_experimental_weapon"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 10000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		ship_weapon_range_mult = 0.20
+		ship_engagement_range_mult = 0.20
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_experimental_weapon_active_effect" 
+			days = @triumph_duration_veryshort
+		}
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_veryshort
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Bunkergrid
+gpm_r_fallout_emergency_replicator = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_gpm_r_fallout_emergency_replicator"
+	sound = "relic_activation_the_galatron"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 10000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		country_base_minerals_produces_add = 50
+		country_base_food_produces_add = 50
+		country_base_alloys_produces_add = 20
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		country_base_minerals_produces_add = 50
+		country_base_food_produces_add = 50
+		country_base_alloys_produces_add = 10
+		country_base_consumer_goods_produces_add = 10
+	}
+
+	score = 1000
+
+	active_effect = {
+		if = { 
+			limit = { is_gestalt = yes }
+			add_resource = { minerals = 4000 }
+			add_resource = { food = 4000 }
+			add_resource = { alloys = 2000 }
+		}
+		else_if = { 
+			limit = { is_gestalt = no }
+			add_resource = { minerals = 3000 }
+			add_resource = { food = 3000 }
+			add_resource = { alloys = 1500 }
+			add_resource = { consumer_goods = 1500 }
+		}
+
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_veryshort
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Mechs
+gpm_r_power_core = {
+	activation_duration = @triumph_duration_short
+	portrait = "GFX_gpm_r_power_core"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		station_gatherers_energy_produces_mult = 1.0
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_power_core_active_effect" 
+			days = @triumph_duration_short
+		}
+		custom_tooltip = relic_triumph_cooldown_short
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_short
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Shield Generator
+gpm_r_mysterious_shield_generator = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_mysterious_shield_generator"
+	sound = "relic_activation_scales_of_the_worm"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			alloys = 2000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		ship_shield_mult = 0.20
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_mysterious_shield_generator_active_effect_tooltip
+		hidden_effect = { change_variable = { which = gpm_shield_generator_decision_count value = 1 } }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Floating City
+gpm_r_gravity_engine = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_gravity_engine"
+	sound = "relic_activation_scales_of_the_worm"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 5000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_max_buildings_add = 3
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_gravity_engine_active_effect_tooltip
+		hidden_effect = { change_variable = { which = gpm_r_gravity_engine_decision_count value = 1 } }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Capital Complex
+gpm_r_codex_administratum = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_codex_administratum"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_government_civic_points_add = 2
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_codex_administratum_active_effect" 
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Communication Hub
+gpm_r_enigmatic_advisor = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_gpm_r_enigmatic_advisor"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		envoys_add = 3
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_enigmatic_advisor_active_effect" 
+			days = @triumph_duration_veryshort
+		}
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_veryshort
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Singularity Drive
+gpm_r_positronic_microchip = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_gpm_r_positronic_microchip"
+	sound = "relic_activation_the_omnicodex"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			is_machine_empire = yes
+		}
+		MACHINE_species_trait_points_add = 3
+		MACHINE_species_trait_picks_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_hive_empire = yes
+		}
+		BIOLOGICAL_species_trait_points_add = 2
+		BIOLOGICAL_species_trait_picks_add = 1
+		LITHOID_species_trait_points_add = 2
+		LITHOID_species_trait_picks_add = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+		ROBOT_species_trait_points_add = 2
+		ROBOT_species_trait_picks_add = 1
+		BIOLOGICAL_species_trait_points_add = 2
+		BIOLOGICAL_species_trait_picks_add = 1
+		LITHOID_species_trait_points_add = 2
+		LITHOID_species_trait_picks_add = 1
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_positronic_nervious_system_active_effect" 
+			days = @triumph_duration_veryshort
+		}
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_veryshort
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Eternal Fortress
+gpm_r_venerable_dreadnaught = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_venerable_dreadnaught"
+	sound = "relic_activation_khans_throne"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		army_defense_health_mult = 0.50		
+		show_only_custom_tooltip = no
+		custom_tooltip = "gpm_r_venerable_dreadnaught_passive_effect_tooltip"
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = "gpm_r_venerable_dreadnaught_active_effect_tooltip"
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "NAME_venerable_dreadnaught_fleet"
+					effect = {
+						set_owner = root
+						create_army_transport = {
+							ship_name = "NAME_venerable_dreadnaught_ship"
+							army_name = "NAME_venerable_dreadnaught"
+							army_type = gpm_venerable_dreadnaught_army
+						}
+						set_location = {
+							target = prev
+							distance = 5
+							angle = random 
+						}
+					}
+					settings = {
+						can_change_leader = yes
+						uses_naval_capacity = no
+						spawn_debris = no
+					}
+				}
+			}
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Prison Planet
+gpm_r_sentinel_queen = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_sentinel_queen"
+	sound = "relic_activation_isolated_contingency_core"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_crime_mult = -0.25
+		country_counter_espionage_mult = 0.25
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_sentinel_queen_active_effect" 
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Mines
+gpm_r_earthquake_engine = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_earthquake_engine"
+	sound = "relic_activation_cybrex_war_forge"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 5000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_non_artificial_max_districts_add = 2
+		district_mining_max = 4
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_resource = { minerals = 20000 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Manufactorium
+gpm_r_manufactorium_ship = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_manufactorium_ship"
+	sound = "relic_activation_vultaum_real_perforator"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			unity = @activation_cost
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
+			minor_artifacts = 50
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		planet_jobs_consumer_goods_produces_mult = 0.10
+		planet_jobs_alloys_produces_mult = 0.10
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		planet_jobs_alloys_produces_mult = 0.20
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_resource = { rare_crystals = 2000 }
+		add_resource = { volatile_motes = 2000 }
+		add_resource = { exotic_gases = 2000 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Vaults
+gpm_r_datacube = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_datacube"
+	sound = "relic_activation_vultaum_real_perforator"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			unity = @activation_cost
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
+			minor_artifacts = 50
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		all_technology_research_speed = 0.10
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = gpm_r_datacube_active_effect_tooltip
+		hidden_effect = {
+			while = {
+				count = 5
+				random_list = {
+					10 = {
+						add_random_research_option = {
+							add_progress = 0.50
+							area = engineering
+							ignore_prereqs = no
+							fail_effects = {
+								add_monthly_resource_mult = {
+									resource = engineering_research
+									value = @tier5researchreward
+									min = @tier5researchmin
+									max = @tier5researchmax
+								}
+							}
+						}
+					}
+					10 = {
+						add_random_research_option = {
+							add_progress = 0.50
+							area = physics
+							ignore_prereqs = no
+							fail_effects = {
+								add_monthly_resource_mult = {
+									resource = physics_research
+									value = @tier5researchreward
+									min = @tier5researchmin
+									max = @tier5researchmax
+								}
+							}
+						}
+					}
+					10 = {
+						add_random_research_option = {
+							add_progress = 0.50
+							area = society
+							ignore_prereqs = no
+							fail_effects = {
+								add_monthly_resource_mult = {
+									resource = society_research
+									value = @tier5researchreward
+									min = @tier5researchmin
+									max = @tier5researchmax
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Crashed Spacestation
+gpm_r_self_assembly_hub = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_self_assembly_hub"
+	sound = "relic_activation_cybrex_war_forge"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 20000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_megastructure_build_cap_add = 1
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_self_assembly_hub_active_effect" 
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Battleground Ruins
+gpm_r_banner_of_the_fallen = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_banner_of_the_fallen"
+	sound = "relic_activation_khans_throne"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_war_exhaustion_mult = -0.10
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_banner_of_the_fallen_active_effect" 
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Outpost Ruins
+gpm_r_cloaking_device = {
+	activation_duration = @triumph_duration_short
+	portrait = "GFX_gpm_r_cloaking_device"
+	sound = "relic_activation_isolated_contingency_core"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		add_base_country_intel = 30
+		show_only_custom_tooltip = no
+		custom_tooltip = "gpm_r_cloaking_device_passive_effect_tooltip"
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_cloaking_device_active_effect" 
+			days = @triumph_duration_short
+		}
+		custom_tooltip = relic_triumph_cooldown_short
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration_short
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Harbor Ruins
+gpm_r_q_storage_compressor = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_q_storage_compressor"
+	sound = "relic_activation_vultaum_real_perforator"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 10000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_resource_max_add = 50000
+	}
+
+	score = 1000
+
+	active_effect = {
+		random_list = {
+			10 = { add_resource = { minerals = 10000 } }
+			10 = { 
+				add_resource = { consumer_goods = 5000 }
+				modifier = { factor = 0 is_machine_empire = yes }
+			}
+			10 = { add_resource = { alloys = 5000 } }
+			10 = { add_resource = { rare_crystals = 1000 } }
+			10 = { add_resource = { volatile_motes = 1000 } }
+			10 = { add_resource = { exotic_gases = 1000 } }
+			10 = { add_resource = { sr_living_metal = 200 } }
+			10 = { add_resource = { sr_zro = 200 } }
+			10 = { add_resource = { sr_dark_matter = 200 } }
+			10 = { add_resource = { nanites = 200 } }
+			10 = { add_resource = { minor_artifacts = 200 } }
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Ruins
+gpm_r_soul_gem = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_r_soul_gem"
+	sound = "relic_activation_intact_zro_soulstone"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_age = 100
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = "gpm_r_soul_gem_active_effect"
+		hidden_effect = {
+			random_list = {
+				10 = {
+					create_leader = {
+						class = admiral
+						species = owner_main_species
+						skill = 5
+						name = random
+						traits = {
+							trait = leader_trait_gpm_shared_soul
+						}
+					}
+				}
+				10 = {
+					create_leader = {
+						class = general
+						species = owner_main_species
+						skill = 5
+						name = random
+						traits = {
+							trait = leader_trait_gpm_shared_soul
+						}
+					}
+				}
+				10 = {
+					create_leader = {
+						class = governor
+						species = owner_main_species
+						skill = 5
+						name = random
+						traits = {
+							trait = leader_trait_gpm_shared_soul
+						}
+					}
+				}
+				10 = {
+					create_leader = {
+						class = scientist
+						species = owner_main_species
+						skill = 5
+						name = random
+						traits = {
+							trait = leader_trait_gpm_shared_soul
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+		}
+	}
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+### Precursor Obelisks
+gpm_r_self_repairing_obelisk = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_gpm_precursor_obelisks"
+	sound = "relic_activation_the_galatron"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_districts_cost_mult = -0.35
+		planet_buildings_cost_mult = -0.35
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "gpm_r_self_repairing_obelisk_active_effect" 
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

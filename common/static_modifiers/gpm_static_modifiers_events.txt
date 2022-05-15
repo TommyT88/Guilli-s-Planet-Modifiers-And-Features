@@ -1,0 +1,155 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Event Modifiers
+##########################################################################
+gpm_work_camps = {
+	planet_stability_add = 10
+	planet_jobs_consumer_goods_produces_mult = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_work_camps.dds"
+	icon_frame = 6
+}
+gpm_galactic_equality = {
+	planet_immigration_pull_mult = 0.50
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_galactic_eqality.dds"
+	icon_frame = 6
+}
+gpm_augment_integrated_systems = {
+	planet_jobs_physics_research_produces_mult = 0.10
+	planet_jobs_society_research_produces_mult = 0.10
+	planet_jobs_engineering_research_produces_mult = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_augment_integrated_systems.dds"
+	icon_frame = 6
+}
+gpm_mysterious_force = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_mysterious_force.dds"
+	icon_frame = 6
+}
+gpm_mandatory_military_service = {
+	planet_army_build_speed_mult = 0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_mandatory_military_service.dds"
+	icon_frame = 6
+}
+gpm_monument_to_the_stars = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_monument_to_the_stars.dds"
+	icon_frame = 6
+}
+gpm_ministery_of_the_hunt = {
+	planet_jobs_minerals_produces_mult = 0.10
+	planet_jobs_energy_produces_mult = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ministery_of_the_hunt.dds"
+	icon_frame = 6
+}
+gpm_galactic_outreach_program = {
+	planet_sensor_range_add = 1
+	planet_immigration_pull_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_galactic_outreach_program.dds"
+	icon_frame = 6
+}
+gpm_synopsys_nodes = {
+	planet_jobs_produces_mult = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_synopsys_nodes.dds"
+	icon_frame = 6
+}
+gpm_rapid_assembly_systems = {
+	planet_jobs_produces_mult = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_rapid_assembly_systems.dds"
+	icon_frame = 6
+}
+gpm_combat_simulator_systems = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_combat_simulator_systems.dds"
+	icon_frame = 6
+}
+gpm_planitary_defenses = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planitary_defenses.dds"
+	icon_frame = 6
+}
+gpm_oppressive_laws = {
+	planet_crime_add = 20
+	pop_happiness = -0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+	icon_frame = 3
+}
+gpm_rights_movement = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+	icon_frame = 1
+}
+gpm_cybernetic_breaktroughs = {
+	planet_jobs_physics_research_produces_mult = 0.10
+	planet_jobs_society_research_produces_mult = 0.10
+	planet_jobs_engineering_research_produces_mult = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_cybernetic_breaktroughs.dds"
+	icon_frame = 1
+}
+gpm_tranquility = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_tranquility.dds"
+	icon_frame = 1
+}
+gpm_recruitment_drive = {
+	planet_army_build_speed_mult = 0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_assist_research.dds"
+	icon_frame = 1
+}
+gpm_stargazing = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+}
+gpm_bounty_hunting = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+}
+gpm_diversity_holiday = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	icon_frame = 1
+}
+gpm_synopsys_overload = {
+	planet_jobs_produces_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/pm_assist_research.dds"
+	icon_frame = 3
+}
+gpm_falling_behind = {
+	planet_jobs_produces_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 3
+}
+gpm_death_world = {
+	planet_immigration_pull_mult = -1.00
+	icon = "gfx/interface/icons/planet_modifiers/gpm_death_world.dds"
+	icon_frame = 6
+}
+gpm_holy_planet_redeemed = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_inspirational.dds"
+	icon_frame = 1
+}
+gpm_recent_archeological_expedition = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_recent_archeological_expeditionTT
+	icon = "gfx/interface/icons/planet_modifiers/gpm_work_camps.dds"
+	icon_frame = 2
+}
+gpm_tiyanki_feeding_grounds = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_tiyanki_feeding_grounds.dds"
+	icon_frame = 4
+}

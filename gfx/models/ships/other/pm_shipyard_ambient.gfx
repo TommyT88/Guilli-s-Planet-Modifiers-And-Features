@@ -1,0 +1,18 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "gpm_precursor_shipyards_mesh"
+		file = "gfx/models/ships/other/gpm_precursor_shipyards.mesh"
+		# animation = { id = "idle" type = "shielded_planet_idle" }
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurface1444862Shape"
+			index = 0
+			texture_diffuse = "pm_station_diffuse.dds"
+			texture_normal = "pm_station_normal.dds"
+			texture_specular = "pm_station_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}		
+}

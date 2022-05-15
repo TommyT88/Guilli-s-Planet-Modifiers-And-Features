@@ -1,0 +1,317 @@
+# Check what planet type the purged world turns into and apply modifiers
+gpm_random_modifier_crisis_purge = {
+	if = {
+		limit = { is_planet_class = pc_barren_cold }
+		if = {
+			limit = { gpm_has_required_terraform_modifier = no }
+			add_modifier = { modifier = terraforming_candidate days = -1 } 
+		}
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_recent_mass_extinction } }
+					add_modifier = { modifier = gpm_recent_mass_extinction days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unusual_formations } }
+					add_modifier = { modifier = gpm_unusual_formations days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_rugged_terrain } }
+					add_modifier = { modifier = gpm_rugged_terrain days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_old_world } }
+					add_modifier = { modifier = gpm_old_world days = -1 } 
+				}
+			}
+			30 = { }
+		}		
+	}
+	if = {
+		limit = { is_planet_class = pc_barren }
+		if = {
+			limit = { gpm_has_required_terraform_modifier = no }
+			add_modifier = { modifier = terraforming_candidate days = -1 } 
+		}
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_recent_mass_extinction } }
+					add_modifier = { modifier = gpm_recent_mass_extinction days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unusual_formations } }
+					add_modifier = { modifier = gpm_unusual_formations days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_rugged_terrain } }
+					add_modifier = { modifier = gpm_rugged_terrain days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_old_world } }
+					add_modifier = { modifier = gpm_old_world days = -1 } 
+				}
+			}
+			30 = { }
+		}		
+	}
+	if = {
+		limit = { is_planet_class = pc_molten }
+		if = {
+			limit = { gpm_has_required_terraform_modifier = no }
+			add_modifier = { modifier = terraforming_candidate days = -1 } 
+		}
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_magma_ocean } }
+					add_modifier = { modifier = gpm_magma_ocean days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_recent_mass_extinction } }
+					add_modifier = { modifier = gpm_recent_mass_extinction days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unusual_formations } }
+					add_modifier = { modifier = gpm_unusual_formations days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_rugged_terrain } }
+					add_modifier = { modifier = gpm_rugged_terrain days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unstable_tectonics_2 } }
+					add_modifier = { modifier = gpm_unstable_tectonics_2 days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_lava_geysers } }
+					add_modifier = { modifier = gpm_lava_geysers days = -1 } 
+				}
+			}
+			30 = { }
+		}		
+	}
+	if = {
+		limit = { is_planet_class = pc_frozen }
+		if = {
+			limit = { gpm_has_required_terraform_modifier = no }
+			add_modifier = { modifier = terraforming_candidate days = -1 } 
+		}
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_recent_mass_extinction } }
+					add_modifier = { modifier = gpm_recent_mass_extinction days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unusual_formations } }
+					add_modifier = { modifier = gpm_unusual_formations days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_rugged_terrain } }
+					add_modifier = { modifier = gpm_rugged_terrain days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_old_world } }
+					add_modifier = { modifier = gpm_old_world days = -1 } 
+				}
+			}
+			30 = { }
+		}		
+	}
+	if = {
+		limit = { is_planet_class = pc_nuked }
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_global_thunderstorms } }
+					add_modifier = { modifier = gpm_global_thunderstorms days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_toxic_gas } }
+					add_modifier = { modifier = gpm_toxic_gas days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_ruined_battlefield } }
+					add_modifier = { modifier = gpm_ruined_battlefield days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unusual_formations } }
+					add_modifier = { modifier = gpm_unusual_formations days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_rugged_terrain } }
+					add_modifier = { modifier = gpm_rugged_terrain days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_old_world } }
+					add_modifier = { modifier = gpm_old_world days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_surface_of_bones } }
+					add_modifier = { modifier = gpm_surface_of_bones days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_dark_skies } }
+					add_modifier = { modifier = gpm_dark_skies days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_decaying_structures } }
+					add_modifier = { modifier = gpm_decaying_structures days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_corrosive_atmosphere } }
+					add_modifier = { modifier = gpm_corrosive_atmosphere days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_acid_rain } }
+					add_modifier = { modifier = gpm_acid_rain days = -1 } 
+				}
+			}
+			30 = { }
+		}		
+	}
+	if = {
+		limit = { is_planet_class = pc_infested }
+		if = {
+			limit = { has_modifier = terraforming_candidate }
+			remove_modifier = terraforming_candidate
+		}
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_toxic_gas } }
+					add_modifier = { modifier = gpm_toxic_gas days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_ruined_battlefield } }
+					add_modifier = { modifier = gpm_ruined_battlefield days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_unusual_formations } }
+					add_modifier = { modifier = gpm_unusual_formations days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_titanic_predators } }
+					add_modifier = { modifier = gpm_titanic_predators days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_living_planet } }
+					add_modifier = { modifier = gpm_living_planet days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_resilent_parasites } }
+					add_modifier = { modifier = gpm_resilent_parasites days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_ecological_nervous_system } }
+					add_modifier = { modifier = gpm_ecological_nervous_system days = -1 } 
+				}
+			}
+			5 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_strange_alien_eggs } }
+					add_modifier = { modifier = gpm_strange_alien_eggs days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_toxic_flora_fauna } }
+					add_modifier = { modifier = gpm_toxic_flora_fauna days = -1 } 
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_corrosive_atmosphere } }
+					add_modifier = { modifier = gpm_corrosive_atmosphere days = -1 } 
+				}
+			}
+			30 = { }
+		}		
+	}
+}

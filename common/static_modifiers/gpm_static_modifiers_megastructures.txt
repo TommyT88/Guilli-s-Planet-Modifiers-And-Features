@@ -1,0 +1,324 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+# gpm_ringworld_engineering_mastery
+# gpm_ringworld_engineering_voidborn
+# gpm_ringworld_engineering_voidborn_mastery
+# gpm_ringworld_breath_taking_view
+# gpm_ringworld_neural_nexus
+# gpm_ringworld_idyllic_gardens
+# gpm_ringworld_xeno_zoo
+# gpm_ringworld_badlands
+# gpm_ringworld_battle_simulators
+# gpm_ringworld_endless_ocean
+# gpm_ringworld_mass_transit_systems
+
+# gpm_habitat_engineering
+# gpm_habitat_engineering_mastery
+# gpm_habitat_engineering_void_mastery
+# gpm_habitat_stadium
+# gpm_habitat_trade_docks
+# gpm_habitat_holonet_entertainment_systems
+# gpm_habitat_replicator_systems
+# gpm_habitat_spaceroute_hub
+# gpm_habitat_extensive_moon_mining 
+# gpm_habitat_asteroid_belt_mining
+# gpm_habitat_frequent_thunderstorms_research 
+# gpm_habitat_radioactive_mantle_mining 
+# gpm_habitat_frequent_asteroid_flybys 
+# gpm_habitat_highly_charged_particle_collection 
+# gpm_habitat_ancient_temple_expeditions
+# gpm_habitat_experimental_food_recycling
+# gpm_habitat_time_displaced_planet_research
+# gpm_habitat_surface_mining
+# gpm_habitat_surface_expeditions
+# gpm_habitat_android_pleasure_palace_tourism
+# gpm_habitat_delicious_ingredients_trade (spice must flow!)
+# gpm_habitat_flat_terrain_racing (chance based)
+# gpm_habitat_strange_alien_eggs_restriction
+# gpm_habitat_hydrogen_extraction
+# gpm_habitat_nitrogen_extraction
+# gpm_habitat_chlorine_extraction
+# gpm_habitat_phosphorus_extraction
+# gpm_habitat_sulfur_extraction
+# gpm_habitat_iron_extraction
+
+# Tiers
+# Ringworld Tiers
+gpm_ringworld_engineering_mastery = {
+	pop_amenities_usage_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_engineering.dds"
+	icon_frame = 11
+}
+gpm_ringworld_engineering_voidborn = {
+	planet_districts_cost_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_engineering.dds"
+	icon_frame = 11
+}
+gpm_ringworld_engineering_voidborn_mastery = {
+	planet_districts_cost_mult = -0.15
+	pop_amenities_usage_mult = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_engineering.dds"
+	icon_frame = 11
+}
+
+# standard
+gpm_habitat_engineering = {	
+	planet_districts_cost_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_engineering.dds"
+	icon_frame = 11
+}
+# master builders
+gpm_habitat_engineering_mastery = {
+	planet_districts_cost_mult = -0.20
+	planet_max_districts_add = 1
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_engineering.dds"
+	icon_frame = 11
+}
+# voidborn and master builders
+gpm_habitat_engineering_void_mastery = {
+	planet_districts_cost_mult = -0.30
+	planet_max_districts_add = 3
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_engineering.dds"
+	icon_frame = 11
+}
+
+##########################################################################
+# RINGWORLDS
+##########################################################################
+
+gpm_ringworld_breath_taking_view = {
+	pop_happiness = 0.10
+	planet_orbital_bombardment_damage = -0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_breath_taking_view.dds"
+	icon_frame = 11
+}
+
+gpm_ringworld_neural_nexus = {
+	planet_jobs_physics_research_produces_mult = 0.25
+	planet_jobs_society_research_produces_mult = 0.25
+	planet_jobs_engineering_research_produces_mult = 0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_neural_nexus.dds"
+	icon_frame = 11
+}
+gpm_ringworld_idyllic_gardens = {
+	planet_jobs_unity_produces_mult = 0.50
+	pop_amenities_usage_mult = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_idyllic_gardens.dds"
+	icon_frame = 11
+}
+gpm_ringworld_xeno_zoo = {
+	building_xeno_zoo_max = 5
+	planet_culture_workers_produces_mult = 1.00
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_xeno_zoo.dds"
+	icon_frame = 11
+}
+gpm_ringworld_badlands = {
+	pop_amenities_usage_mult = -0.15
+	planet_pops_upkeep_mult = -0.15
+	job_merchant_per_pop = 0.1
+	job_criminal_per_pop = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_badlands.dds"
+	icon_frame = 11
+}
+gpm_ringworld_battle_simulators = {
+	planet_army_build_speed_mult = 1.00
+	army_starting_experience_add = 500
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_battle_simulators.dds"
+	icon_frame = 11
+}
+gpm_ringworld_endless_ocean = {
+	planet_farmers_food_produces_mult = 0.20
+	planet_farmers_unity_produces_add = 1
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_endless_ocean.dds"
+	icon_frame = 11
+}
+gpm_ringworld_mass_transit_systems = {
+	planet_pops_upkeep_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_mass_transit_systems.dds"
+	icon_frame = 11
+}
+
+##########################################################################
+# HABITATS
+##########################################################################
+
+gpm_habitat_stadium = {
+	pop_happiness = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_stadium.dds"
+	icon_frame = 11
+}
+gpm_habitat_trade_docks = {
+	trade_value_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_trade_docks.dds"
+	icon_frame = 11
+}
+gpm_habitat_holonet_entertainment_systems = {
+	pop_amenities_usage_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_holonet_entertainment_systems.dds"
+	icon_frame = 11
+}
+gpm_habitat_replicator_systems = {
+	planet_pops_consumer_goods_upkeep_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_replicator_systems.dds"
+	icon_frame = 11
+}
+gpm_habitat_spaceroute_hub = {
+	trade_value_mult = 0.15
+	job_merchant_per_pop = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_spaceroute_hub.dds"
+	icon_frame = 11
+}
+gpm_habitat_extensive_moon_mining = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_moon_mining_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_extensive_moon_mining.dds"
+	icon_frame = 11
+}
+gpm_habitat_asteroid_belt_mining = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_asteroid_mining_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_asteroid_belt_mining.dds"
+	icon_frame = 11
+}
+gpm_habitat_frequent_thunderstorms_research = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_orbital_research_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_frequent_thunderstorms_research.dds"
+	icon_frame = 11
+}
+gpm_habitat_radioactive_mantle_mining = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_alloy_mining_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_radioactive_mantle_mining.dds"
+	icon_frame = 11
+}
+gpm_habitat_frequent_asteroid_flybys = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_asteroid_mining_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_frequent_asteroid_flybys.dds"
+	icon_frame = 11
+}
+gpm_habitat_highly_charged_particle_collection = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_particle_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_highly_charged_particle_collection.dds"
+	icon_frame = 11
+}
+gpm_habitat_ancient_temple_expeditions = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_archeology_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_ancient_temple_expeditions.dds"
+	icon_frame = 11
+}
+gpm_habitat_experimental_food_recycling = {
+	planet_pops_food_upkeep_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_experimental_food_recycling.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_time_displaced_planet_research = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_time_research_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_time_displaced_planet_research.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_surface_mining = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_mineral_mining_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_surface_mining.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_surface_expeditions = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_archeology_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_surface_expeditions.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_android_pleasure_palace_tourism = {
+	planet_amenities_add = 40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_android_pleasure_palace_tourism.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_delicious_ingredients_trade = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_spice_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_delicious_ingredients_trade.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_flat_terrain_racing = {
+	job_entertainer_per_pop = 0.1
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_flat_terrain_racing.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_strange_alien_eggs_restriction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_alien_egg_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_strange_alien_eggs_restriction.dds"
+	icon_frame = 4
+}
+
+gpm_habitat_hydrogen_extraction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_particle_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_hydrogen_extraction.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_nitrogen_extraction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_particle_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_nitrogen_extraction.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_chlorine_extraction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_particle_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_chlorine_extraction.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_phosphorus_extraction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_particle_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_phosphorus_extraction.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_sulfur_extraction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_particle_collecting_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_sulfur_extraction.dds"
+	icon_frame = 11
+}
+
+gpm_habitat_iron_extraction = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_add_mineral_mining_infrastructure
+	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_iron_extraction.dds"
+	icon_frame = 11
+}
+

@@ -1,0 +1,518 @@
+
+namespace = gpm_anomaly
+
+# ROOT = ship scope
+# FROM = planet scope
+
+### Black Hole gpm_inspirational
+ship_event = {
+	id = gpm_anomaly.78877
+	title = "gpm_anomaly.78877.name"
+	desc = {
+		trigger = {
+			owner = { 
+				NOR = { 
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				} 
+			}
+		}
+		text = gpm_anomaly.78877.desc
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = gpm_anomaly.78877.desc.hive
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = gpm_anomaly.78877.desc.mach
+	}
+	picture = GFX_evt_gpm_black_hole
+	show_sound = event_ship_bridge
+	location = FROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { country_event = { id = story.2 days = 30 } }
+	}
+	
+	option = {
+		trigger = { owner = { NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence 
+			} } }
+		name = MARVELOUS
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_inspirational"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_inspirational
+		}
+		owner = {
+			add_research_option = tech_mine_dark_matter
+			add_tech_progress = {
+				tech = tech_mine_dark_matter
+				progress = 0.25
+			}
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_hive_mind } }
+		name = INTRIGUING
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_inspirational"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_inspirational
+		}
+		owner = {
+			add_tech_progress = {
+				tech = tech_mine_dark_matter
+				progress = 0.25
+			}
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_machine_intelligence } }
+		name = syndaw.502.a
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_inspirational"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_inspirational
+		}
+		owner = {
+			add_tech_progress = {
+				tech = tech_mine_dark_matter
+				progress = 0.25
+			}
+		}
+	}
+}
+
+### Star Very Bright
+ship_event = {
+	id = gpm_anomaly.78878
+	title = "gpm_anomaly.78878.name"
+	desc = {
+		trigger = {
+			owner = { 
+				NOR = { 
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				} 
+			}
+		}
+		text = gpm_anomaly.78878.desc
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = gpm_anomaly.78878.desc.hive
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = gpm_anomaly.78878.desc.mach
+	}
+	picture = GFX_evt_gpm_bright_sun
+	show_sound = event_ship_bridge
+	location = FROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		# log = "---- Fired Event gpm_anomaly.78878 "
+		from = { clear_deposits = yes }
+		owner = { country_event = { id = story.2 days = 30 } }
+	}
+	
+	option = {
+		trigger = { owner = { NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence 
+			} } }
+		name = FASCINATING
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_unusual_bright_sun"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_sun_energy_deposit
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_hive_mind } }
+		name = EXCELLENT
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_unusual_bright_sun"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_sun_energy_deposit
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_machine_intelligence } }
+		name = GOOD
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_unusual_bright_sun"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_sun_energy_deposit
+		}
+	}
+}
+
+### Time-Displaced
+ship_event = {
+	id = gpm_anomaly.78879
+	title = "gpm_anomaly.78879.name"
+	desc = {
+		trigger = {
+			owner = { 
+				NOR = { 
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				} 
+			}
+		}
+		text = gpm_anomaly.78879.desc
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = gpm_anomaly.78879.desc.hive
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = gpm_anomaly.78879.desc.mach
+	}
+	picture = GFX_evt_gpm_time_displaced
+	show_sound = event_ship_bridge
+	location = FROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		# log = "---- Fired Event gpm_anomaly.78879 "
+		# from = { clear_deposits = yes }
+		from = { set_name = Guillifrey }		
+		owner = { country_event = { id = story.2 days = 30 } }
+		FROM = {
+			if = {
+				limit = {
+					gpm_is_planet_class_normal_habitable = no
+					has_deposit = yes
+				}
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	option = {
+		trigger = { owner = { NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence 
+			} } }
+		name = ASTOUNDING
+		custom_tooltip = gpm_anomaly.78879.TT
+		hidden_effect = {
+			FROM = {
+				add_modifier = { modifier = "gpm_time_displaced_planet" days = -1 }
+				if = {
+					limit = { 
+						NOR = {
+							has_modifier = terraforming_candidate
+							gpm_is_planet_class_normal_habitable = yes
+						}
+					}
+					add_modifier = { modifier = terraforming_candidate }
+					root.owner = {
+						create_message = {
+							type = GPM_MESSAGE_VALUABLE_WORLD
+							localization = GPM_MESSAGE_VALUABLE_WORLD_DESC
+							days = 30
+							target = FROM
+							variable = {
+								type = name
+								localization = PLANET
+								scope = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			add_deposit = gpm_d_time_displaced_planet
+			create_archaeological_site = gpm_time_lost_digsite
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_hive_mind } }
+		name = INTRIGUING
+		hidden_effect = {
+			FROM = {
+				add_modifier = { modifier = "gpm_time_displaced_planet" days = -1 }
+				if = {
+					limit = { 
+						NOR = { 
+							has_modifier = terraforming_candidate
+							gpm_is_planet_class_normal_habitable = yes
+						}
+					}
+					add_modifier = { modifier = terraforming_candidate }
+					root.owner = {
+						create_message = {
+							type = GPM_MESSAGE_VALUABLE_WORLD
+							localization = GPM_MESSAGE_VALUABLE_WORLD_DESC
+							days = 30
+							target = FROM
+							variable = {
+								type = name
+								localization = PLANET
+								scope = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_time_displaced_planet
+			create_archaeological_site = gpm_time_lost_digsite
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_machine_intelligence } }
+		name = syndaw.501.b.tooltip
+		hidden_effect = {
+			FROM = {
+				add_modifier = { modifier = "gpm_time_displaced_planet" days = -1 }
+				if = {
+					limit = { 
+						NOR = { 
+							has_modifier = terraforming_candidate
+							gpm_is_planet_class_normal_habitable = yes
+						}
+					}
+					add_modifier = { modifier = terraforming_candidate }
+					root.owner = {
+						create_message = {
+							type = GPM_MESSAGE_VALUABLE_WORLD
+							localization = GPM_MESSAGE_VALUABLE_WORLD_DESC
+							days = 30
+							target = FROM
+							variable = {
+								type = name
+								localization = PLANET
+								scope = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_time_displaced_planet
+			create_archaeological_site = gpm_time_lost_digsite
+		}
+	}
+}
+
+### protomolecule
+ship_event = {
+	id = gpm_anomaly.78880
+	title = "gpm_anomaly.78880.name"
+	desc = {
+		trigger = {
+			owner = { 
+				NOR = { 
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				} 
+			}
+		}
+		text = gpm_anomaly.78880.desc
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = gpm_anomaly.78880.desc.hive
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = gpm_anomaly.78880.desc.mach
+	}
+	picture = GFX_evt_gpm_proto_molecule
+	show_sound = event_ship_bridge
+	location = FROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		# log = "---- Fired Event gpm_anomaly.78880 "
+		from = { clear_deposits = yes }
+		owner = { country_event = { id = story.2 days = 30 } }
+	}
+	
+	option = {
+		trigger = { owner = { NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence 
+			} } }
+		name = WORRYING
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_protomolecule_infected_station"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_proto_molecule_deposit
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_hive_mind } }
+		name = FASCINATING
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_protomolecule_infected_station"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_proto_molecule_deposit
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_machine_intelligence } }
+		name = syndaw.501.b
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_protomolecule_infected_station"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_proto_molecule_deposit
+		}
+	}
+}
+
+### Pulsar Clock
+ship_event = {
+	id = gpm_anomaly.78881
+	title = "gpm_anomaly.78881.name"
+	desc = {
+		trigger = {
+			owner = { 
+				NOR = { 
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				} 
+			}
+		}
+		text = gpm_anomaly.78881.desc
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = gpm_anomaly.78881.desc.hive
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = gpm_anomaly.78881.desc.mach
+	}
+	picture = GFX_evt_gpm_pulsar_clock
+	show_sound = event_ship_bridge
+	location = FROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		# log = "---- Fired Event gpm_anomaly.78881 "
+		from = { clear_deposits = yes }
+		owner = { country_event = { id = story.2 days = 30 } }
+	}
+	
+	option = {
+		trigger = { owner = { NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence 
+			} } }
+		name = FASCINATING
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_pulsar_clock"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_pulsar_clock
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_hive_mind } }
+		name = AMAZING
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_pulsar_clock"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_pulsar_clock
+		}
+	}
+	option = {
+		trigger = { owner = { has_authority = auth_machine_intelligence } }
+		name = story.215.b.mater
+		hidden_effect = {
+			FROM = {
+				add_modifier = {
+					modifier = "gpm_pulsar_clock"
+					days = -1
+				}
+			}
+		}
+		FROM = { 
+			add_deposit = gpm_d_pulsar_clock
+		}
+	}
+}

@@ -1,0 +1,343 @@
+
+namespace = gpm_iddqd
+
+# test event, gives you all modded stuff
+event = { 
+	id = gpm_iddqd.1
+	hide_window = yes 
+	is_triggered_only = yes
+	immediate = {
+		owner = {
+			
+			# give relics
+			add_relic = gpm_r_encyclopedia_galactica
+			add_relic = gpm_r_zero_energy_generator
+			add_relic = gpm_r_quantum_sphere
+			add_relic = gpm_r_ai_architect
+			add_relic = gpm_r_encrypted_sct
+			add_relic = gpm_r_experimental_weapon
+			add_relic = gpm_r_fallout_emergency_replicator
+			add_relic = gpm_r_power_core
+			add_relic = gpm_r_mysterious_shield_generator
+			add_relic = gpm_r_gravity_engine
+			add_relic = gpm_r_codex_administratum
+			add_relic = gpm_r_enigmatic_advisor
+			add_relic = gpm_r_positronic_microchip
+			add_relic = gpm_r_venerable_dreadnaught
+			add_relic = gpm_r_sentinel_queen
+			add_relic = gpm_r_earthquake_engine
+			add_relic = gpm_r_manufactorium_ship
+			add_relic = gpm_r_datacube
+			add_relic = gpm_r_self_assembly_hub
+			add_relic = gpm_r_banner_of_the_fallen
+			hidden_effect = { country_event = { id = gpm_relics.20 } } # adds trait to admirals
+			add_relic = gpm_r_cloaking_device
+			hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
+			add_relic = gpm_r_q_storage_compressor
+			add_relic = gpm_r_soul_gem
+			add_relic = gpm_r_self_repairing_obelisk
+			add_relic = gpm_r_time_displacer
+			add_relic = gpm_r_alien_eggs
+			add_relic = gpm_r_machine_world_core
+			add_relic = gpm_r_mars_rover
+
+			# give country modifiers
+			add_modifier = { modifier = gpm_precursor_remnants_discovery }
+			add_modifier = { modifier = gpm_precursor_remnants_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_energy_grid_discovery }
+			add_modifier = { modifier = gpm_precursor_energy_grid_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_satellite_grid_discovery }
+			add_modifier = { modifier = gpm_precursor_satellite_grid_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_city_discovery }
+			add_modifier = { modifier = gpm_precursor_city_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_shipyards_discovery }
+			add_modifier = { modifier = gpm_precursor_shipyards_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_planetary_gun_discovery }
+			add_modifier = { modifier = gpm_precursor_planetary_gun_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_bunker_grid_discovery }
+			add_modifier = { modifier = gpm_precursor_bunker_grid_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_mechs_discovery }
+			add_modifier = { modifier = gpm_precursor_mechs_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_planetary_shield_discovery }
+			add_modifier = { modifier = gpm_precursor_planetary_shield_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_floating_city_discovery }
+			add_modifier = { modifier = gpm_precursor_floating_city_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_capital_complex_discovery }
+			add_modifier = { modifier = gpm_precursor_capital_complex_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_communication_hub_discovery }
+			add_modifier = { modifier = gpm_precursor_communication_hub_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_singularity_drive_discovery }
+			add_modifier = { modifier = gpm_precursor_singularity_drive_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery }
+			add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_prison_planet_discovery }
+			add_modifier = { modifier = gpm_precursor_prison_planet_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_mines_discovery }
+			add_modifier = { modifier = gpm_precursor_mines_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_manufactorium_discovery }
+			add_modifier = { modifier = gpm_precursor_manufactorium_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_vaults_discovery }
+			add_modifier = { modifier = gpm_precursor_vaults_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery }
+			add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery }
+			add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery }
+			add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery }
+			add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_ruins_discovery }
+			add_modifier = { modifier = gpm_precursor_ruins_discovery_2 }
+			add_modifier = { modifier = gpm_precursor_obelisks_discovery }
+			add_modifier = { modifier = gpm_precursor_obelisks_discovery_2 }
+			add_modifier = { modifier = gpm_very_hot_core_discovery }
+			add_modifier = { modifier = gpm_very_hot_core_discovery_2 }
+			add_modifier = { modifier = gpm_gaia_world_discovery }
+			add_modifier = { modifier = gpm_gaia_world_discovery_2 }
+			add_modifier = { modifier = gpm_holy_world_discovery }
+			add_modifier = { modifier = gpm_holy_world_discovery_2 }
+			add_modifier = { modifier = gpm_floating_islands_discovery }
+			add_modifier = { modifier = gpm_floating_islands_discovery_2 }
+			add_modifier = { modifier = gpm_ruined_battlefield_discovery }
+			add_modifier = { modifier = gpm_ruined_battlefield_discovery_2 }
+			add_modifier = { modifier = gpm_spaceship_graveyard_discovery }
+			add_modifier = { modifier = gpm_spaceship_graveyard_discovery_2 }
+			add_modifier = { modifier = gpm_artificial_water_discovery }
+			add_modifier = { modifier = gpm_artificial_water_discovery_2 }
+			add_modifier = { modifier = gpm_android_pleasure_palace_discovery }
+			add_modifier = { modifier = gpm_android_pleasure_palace_discovery_2 }
+			add_modifier = { modifier = gpm_ancient_temple_discovery }
+			add_modifier = { modifier = gpm_ancient_temple_discovery_2 }
+			add_modifier = { modifier = gpm_crystal_moon_palace_discovery }
+			add_modifier = { modifier = gpm_crystal_moon_palace_discovery_2 }
+			add_modifier = { modifier = gpm_plasmoid_life_discovery }
+			add_modifier = { modifier = gpm_plasmoid_life_discovery_2 }
+			add_modifier = { modifier = gpm_temple_of_the_ancient_one_discovery }
+			add_modifier = { modifier = gpm_temple_of_the_ancient_one_discovery_2 }
+			add_modifier = { modifier = gpm_proto_forests_discovery }
+			add_modifier = { modifier = gpm_proto_forests_discovery_2 }
+			add_modifier = { modifier = gpm_hiveworld_discovery }
+			add_modifier = { modifier = gpm_hiveworld_discovery_2 }
+			add_modifier = { modifier = gpm_arachnophobia_discovery }
+			add_modifier = { modifier = gpm_arachnophobia_discovery_2 }
+			add_modifier = { modifier = gpm_giant_worm_discovery }
+			add_modifier = { modifier = gpm_giant_worm_discovery_2 }
+			add_modifier = { modifier = gpm_artificial_core_discovery }
+			add_modifier = { modifier = gpm_artificial_core_discovery_2 }
+			add_modifier = { modifier = gpm_surface_of_bones_discovery }
+			add_modifier = { modifier = gpm_surface_of_bones_discovery_2 }
+			add_modifier = { modifier = gpm_strange_alien_eggs_discovery }
+			add_modifier = { modifier = gpm_strange_alien_eggs_discovery_2 }
+			add_modifier = { modifier = gpm_mushroom_forest_discovery }
+			add_modifier = { modifier = gpm_mushroom_forest_discovery_2 }
+			
+			# give techs
+			give_technology = { tech = tech_gpm_tb_seasonal_flooding }
+			give_technology = { tech = tech_gpm_tb_locust_plagues }
+			give_technology = { tech = tech_gpm_tb_toxic_gas }
+			give_technology = { tech = gpm_tech_arcane_research }
+			give_technology = { tech = tech_gpm_precursor_remnants_discovery }
+			give_technology = { tech = tech_gpm_precursor_remnants_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_energy_grid_discovery }
+			give_technology = { tech = tech_gpm_precursor_energy_grid_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_satellite_grid_discovery }
+			give_technology = { tech = tech_gpm_precursor_satellite_grid_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_city_discovery }
+			give_technology = { tech = tech_gpm_precursor_city_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_shipyards_discovery }
+			give_technology = { tech = tech_gpm_precursor_shipyards_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_planetary_gun_discovery }
+			give_technology = { tech = tech_gpm_precursor_planetary_gun_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_bunker_grid_discovery }
+			give_technology = { tech = tech_gpm_precursor_bunker_grid_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_mechs_discovery }
+			give_technology = { tech = tech_gpm_precursor_mechs_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_planetary_shield_discovery }
+			give_technology = { tech = tech_gpm_precursor_planetary_shield_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_floating_city_discovery }
+			give_technology = { tech = tech_gpm_precursor_floating_city_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_capital_complex_discovery }
+			give_technology = { tech = tech_gpm_precursor_capital_complex_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_communication_hub_discovery }
+			give_technology = { tech = tech_gpm_precursor_communication_hub_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_singularity_drive_discovery }
+			give_technology = { tech = tech_gpm_precursor_singularity_drive_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_eternal_fortress_discovery }
+			give_technology = { tech = tech_gpm_precursor_eternal_fortress_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_prison_planet_discovery }
+			give_technology = { tech = tech_gpm_precursor_prison_planet_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_mines_discovery }
+			give_technology = { tech = tech_gpm_precursor_mines_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_manufactorium_discovery }
+			give_technology = { tech = tech_gpm_precursor_manufactorium_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_vaults_discovery }
+			give_technology = { tech = tech_gpm_precursor_vaults_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_crashed_spacestation_discovery }
+			give_technology = { tech = tech_gpm_precursor_crashed_spacestation_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_battleground_ruins_discovery }
+			give_technology = { tech = tech_gpm_precursor_battleground_ruins_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_outpost_ruins_discovery }
+			give_technology = { tech = tech_gpm_precursor_outpost_ruins_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_harbor_ruins_discovery }
+			give_technology = { tech = tech_gpm_precursor_harbor_ruins_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_ruins_discovery }
+			give_technology = { tech = tech_gpm_precursor_ruins_discovery_2 }
+			give_technology = { tech = tech_gpm_precursor_obelisks_discovery }
+			give_technology = { tech = tech_gpm_precursor_obelisks_discovery_2 }
+			give_technology = { tech = tech_gpm_very_hot_core_discovery }
+			give_technology = { tech = tech_gpm_very_hot_core_discovery_2 }
+			give_technology = { tech = tech_gpm_gaia_world_discovery }
+			give_technology = { tech = tech_gpm_gaia_world_discovery_2 }
+			give_technology = { tech = tech_gpm_holy_world_discovery }
+			give_technology = { tech = tech_gpm_holy_world_discovery_2 }
+			give_technology = { tech = tech_gpm_floating_islands_discovery }
+			give_technology = { tech = tech_gpm_floating_islands_discovery_2 }
+			give_technology = { tech = tech_gpm_ruined_battlefield_discovery }
+			give_technology = { tech = tech_gpm_ruined_battlefield_discovery_2 }
+			give_technology = { tech = tech_gpm_spaceship_graveyard_discovery }
+			give_technology = { tech = tech_gpm_spaceship_graveyard_discovery_2 }
+			give_technology = { tech = tech_gpm_artificial_water_discovery }
+			give_technology = { tech = tech_gpm_artificial_water_discovery_2 }
+			give_technology = { tech = tech_gpm_android_pleasure_palace_discovery }
+			give_technology = { tech = tech_gpm_android_pleasure_palace_discovery_2 }
+			give_technology = { tech = tech_gpm_ancient_temple_discovery }
+			give_technology = { tech = tech_gpm_ancient_temple_discovery_2 }
+			give_technology = { tech = tech_gpm_crystal_moon_palace_discovery }
+			give_technology = { tech = tech_gpm_crystal_moon_palace_discovery_2 }
+			give_technology = { tech = tech_gpm_plasmoid_life_discovery }
+			give_technology = { tech = tech_gpm_plasmoid_life_discovery_2 }
+			give_technology = { tech = tech_gpm_temple_of_the_ancient_one_discovery }
+			give_technology = { tech = tech_gpm_temple_of_the_ancient_one_discovery_2 }
+			give_technology = { tech = tech_gpm_proto_forests_discovery }
+			give_technology = { tech = tech_gpm_proto_forests_discovery_2 }
+			give_technology = { tech = tech_gpm_hiveworld_discovery }
+			give_technology = { tech = tech_gpm_hiveworld_discovery_2 }
+			give_technology = { tech = tech_gpm_arachnophobia_discovery }
+			give_technology = { tech = tech_gpm_arachnophobia_discovery_2 }
+			give_technology = { tech = tech_gpm_giant_worm_discovery }
+			give_technology = { tech = tech_gpm_giant_worm_discovery_2 }
+			give_technology = { tech = tech_gpm_surface_of_bones_discovery }
+			give_technology = { tech = tech_gpm_surface_of_bones_discovery_2 }
+			give_technology = { tech = tech_gpm_strange_alien_eggs_discovery }
+			give_technology = { tech = tech_gpm_strange_alien_eggs_discovery_2 }
+			give_technology = { tech = tech_gpm_mushroom_forest_discovery }
+			give_technology = { tech = tech_gpm_mushroom_forest_discovery_2 }
+			give_technology = { tech = tech_gpm_supermaterials_precursor }
+			give_technology = { tech = tech_gpm_manufactory_hub }
+			give_technology = { tech = tech_gpm_enigmatic_power_relays }
+			give_technology = { tech = tech_gpm_singularity_matrix }
+			
+			# spawn event ships
+			random_owned_planet = {
+				save_event_target_as = gpm_capital_test
+			}			
+			create_fleet = {
+				name = "NAME_manufactorium_fleet"
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = root
+					create_ship_design = {
+						design = "NAME_gpm_manufactorium_ship"
+					}
+					create_ship = {
+						name = "NAME_manufactorium_ship_name"
+						design = last_created_design
+						prefix = no
+						upgradable = no
+					}
+					set_location = event_target:gpm_capital_test
+				}
+			}
+			create_fleet = {
+				name = "NAME_precursor_fleet"
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = root
+					create_ship_design = {
+						design = "NAME_gpm_precursor_ship"
+					}
+					create_ship = {
+						name = "NAME_precursor_ship_name"
+						design = last_created_design
+						prefix = no
+						upgradable = no
+					}
+					set_location = event_target:gpm_capital_test
+				}
+			}
+			
+			
+			# give guilli leader
+			random_country = {
+				limit = { is_country_type = default }
+				owner_species = { save_event_target_as = gpm_random_species }
+			}
+			create_leader = {
+				class = scientist
+				species = event_target:gpm_random_species
+				name = "NAME_Guilli"
+				skill = 10
+				event_leader = yes
+				traits = {
+					trait = leader_trait_gpm_guilli
+				}
+			}
+			last_created_leader = {
+				set_age = 9732
+			}
+
+			# spawn traits
+			hidden_effect = { country_event = { id = gpm_relics.20 } } # unlock event for trait fallen heralrdy
+			hidden_effect = { country_event = { id = gpm_relics.30 } } # unlock event for trait historian
+			hidden_effect = { country_event = { id = gpm_relics.40 } } # unlock event for trait battle standards
+			hidden_effect = { country_event = { id = gpm_relics.50 } } # unlock event for trait personal mech
+			every_owned_leader = {
+				if = {
+					limit = {
+						leader_class = scientist
+						NOT= { has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+					add_trait = leader_trait_gpm_precursor_expert
+				}
+			}
+			
+			# Country flags unlocks
+			set_country_flag = gpm_exotic_park_rewarded
+			set_country_flag = gpm_core_prison_rewarded
+		}
+	}
+}
+
+planet_event = { id = gpm_iddqd.2 hide_window = yes is_triggered_only = yes
+	immediate = {
+		add_modifier = { days = -1 modifier = gpm_precursor_remnants }
+		add_modifier = { days = -1 modifier = gpm_precursor_energy_grid }
+		add_modifier = { days = -1 modifier = gpm_precursor_satalite_grid }
+		add_modifier = { days = -1 modifier = gpm_precursor_city }
+		add_modifier = { days = -1 modifier = gpm_precursor_shipyards }
+		add_modifier = { days = -1 modifier = gpm_precursor_planetary_gun }
+		add_modifier = { days = -1 modifier = gpm_precursor_bunker_grid }
+		add_modifier = { days = -1 modifier = gpm_precursor_mechs }
+		add_modifier = { days = -1 modifier = gpm_precursor_planetary_shield }
+		add_modifier = { days = -1 modifier = gpm_precursor_floating_city }
+		add_modifier = { days = -1 modifier = gpm_precursor_capital_complex }
+		add_modifier = { days = -1 modifier = gpm_precursor_communication_hub }
+		add_modifier = { days = -1 modifier = gpm_precursor_singularity_drive }
+		add_modifier = { days = -1 modifier = gpm_precursor_eternal_fortress }
+		add_modifier = { days = -1 modifier = gpm_precursor_prison_planet }
+		add_modifier = { days = -1 modifier = gpm_precursor_mines }
+		add_modifier = { days = -1 modifier = gpm_precursor_manufactorium }
+		add_modifier = { days = -1 modifier = gpm_precursor_vaults }
+		add_modifier = { days = -1 modifier = gpm_precursor_crashed_spacestation }
+		add_modifier = { days = -1 modifier = gpm_precursor_battleground_ruins }
+		add_modifier = { days = -1 modifier = gpm_precursor_outpost_ruins }
+		add_modifier = { days = -1 modifier = gpm_precursor_harbor_ruins }
+		add_modifier = { days = -1 modifier = gpm_precursor_ruins }
+		add_modifier = { days = -1 modifier = gpm_precursor_obelisks }
+	}
+}

@@ -1,0 +1,42 @@
+# Base AI economic plans
+
+@minor_artifacts_target = 1
+@scaling_minor_artifacts_target = 1
+
+gpm_added_economy_plan = {
+	income = {
+		minor_artifacts = @minor_artifacts_target
+	}
+
+	subplan = {
+		set_name = "base minor artifacts"
+		potential = {
+			always = yes
+		}
+
+		income = {
+			minor_artifacts = @minor_artifacts_target
+		}
+	}
+
+	#### SCALING SUBPLANS HERE ####
+	# Values in the scaling subplans are added to the base plan each time the AI reaches the target
+	# If base alloys = 10 and the AI reaches +12 per month, and it says alloys = 20 in the scaling subplan, the next target becomes alloys = 30
+	# All scaling subplans are cumulative
+
+	subplan = {
+		scaling = yes
+		set_name = "general minor artifacts scaling"
+		potential = {
+			has_monthly_income = { resource = minor_artifacts value > @minor_artifacts_target }
+		}
+
+		income = {
+			minor_artifacts = @scaling_minor_artifacts_target
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

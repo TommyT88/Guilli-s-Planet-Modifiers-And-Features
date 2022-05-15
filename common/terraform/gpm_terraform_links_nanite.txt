@@ -1,0 +1,71 @@
+@lClusterCost = 1000
+
+terraform_link = {
+	from = pc_gray_goo
+	to = pc_gaia
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @lClusterCost
+		}
+	}
+	duration = 360
+	potential = { 
+		from = { has_modifier = terraforming_candidate }
+		has_ascension_perk = "ap_world_shaper"	
+	}
+	effect = { from = { remove_modifier = terraforming_candidate } }
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+
+terraform_link = {
+	from = pc_gray_goo
+	to = pc_machine
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @lClusterCost
+		}
+	}
+	duration = 360
+	potential = { 
+		from = { has_modifier = terraforming_candidate }
+		has_ascension_perk = ap_machine_worlds	
+	}
+	effect = { from = { remove_modifier = terraforming_candidate } }
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+terraform_link = {
+	from = pc_gray_goo
+	to = pc_hive
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @lClusterCost
+		}
+	}
+	duration = 360
+	potential = { 
+		from = { has_modifier = terraforming_candidate }
+		has_ascension_perk = ap_hive_worlds
+	}
+	effect = { from = { remove_modifier = terraforming_candidate } }
+
+	ai_weight = {
+		weight = 10
+	}
+}

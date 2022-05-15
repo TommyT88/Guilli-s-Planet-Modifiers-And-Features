@@ -1,0 +1,712 @@
+
+## Base Relic Wars ##
+war_name_parts_list = {
+	key = "gpm_relic_war_dragon"
+	parts = {
+		"gpm_war_of_the_dragon" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_throne"
+	parts = {
+		"gpm_war_of_the_throne" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_worm"
+	parts = {
+		"gpm_war_of_the_worm" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_rubricator"
+	parts = {
+		"gpm_war_of_the_rubricator" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_galaxy"
+	parts = {
+		"gpm_war_of_the_galaxy" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_omnicodex"
+	parts = {
+		"gpm_war_of_the_omnicodex" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_surveyor"
+	parts = {
+		"gpm_war_of_the_surveyor" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_sword"
+	parts = {
+		"gpm_war_of_the_ancient_sword" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_head"
+	parts = {
+		"gpm_war_of_the_severed_head" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_prethoryn_queen"
+	parts = {
+		"gpm_war_of_the_prethoryn_queen" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_warlock"
+	parts = {
+		"gpm_war_of_the_unbidden_warlock" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_core"
+	parts = {
+		"gpm_war_of_the_contingency_core" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_zro"
+	parts = {
+		"gpm_war_of_the_zro_crystal" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_baol"
+	parts = {
+		"gpm_war_of_the_last_baol" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_defragmentor"
+	parts = {
+		"gpm_war_of_the_defragmentor" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_reality"
+	parts = {
+		"gpm_war_of_the_reality_perforator" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_pox"
+	parts = {
+		"gpm_war_of_the_pox_sample" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_cryo"
+	parts = {
+		"gpm_war_of_the_cryo_core" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_forge"
+	parts = {
+		"gpm_war_of_the_war_forge" = 1
+	}
+}
+
+# wg_gpm_r_dragon_trophy
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_dragon_trophy
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_dragon>"
+}
+# wg_gpm_r_khans_throne
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_khans_throne
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_throne>"
+}
+# wg_gpm_r_worm_scales
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_worm_scales
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_worm>"
+}
+# wg_gpm_r_rubricator
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_rubricator
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_rubricator>"
+}
+# wg_gpm_r_galaxy
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_galaxy
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_galaxy>"
+}
+# wg_gpm_r_omnicodex
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_omnicodex
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_omnicodex>"
+}
+# wg_gpm_r_surveyor
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_surveyor
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_surveyor>"
+}
+# wg_gpm_r_ancient_sword
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_ancient_sword
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_sword>"
+}
+# wg_gpm_r_severed_head
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_severed_head
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_head>"
+}
+# wg_gpm_r_prethoryn_queen
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_prethoryn_queen
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_prethoryn_queen>"
+}
+# wg_gpm_r_unbidden_warlock
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_unbidden_warlock
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_warlock>"
+}
+# wg_gpm_r_contingency_core
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_contingency_core
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_core>"
+}
+# wg_gpm_r_zro_crystal
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_zro_crystal
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_zro>"
+}
+# wg_gpm_r_the_last_baol
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_the_last_baol
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_baol>"
+}
+# wg_gpm_r_the_defragmentor
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_the_defragmentor
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_defragmentor>"
+}
+# wg_gpm_r_reality_perforator
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_reality_perforator
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_reality>"
+}
+# wg_gpm_r_pox_sample
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_pox_sample
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_pox>"
+}
+# wg_gpm_r_cryo_core
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_cryo_core
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_cryo>"
+}
+# wg_gpm_r_war_forge
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_war_forge
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_forge>"
+}
+
+
+## GPM Relic Wars ##
+war_name_parts_list = {
+	key = "gpm_relic_war_time"
+	parts = {
+		"gpm_war_of_time" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_xenos"
+	parts = {
+		"gpm_war_of_the_xenos" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_machine"
+	parts = {
+		"gpm_war_of_the_machine" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_knowledge"
+	parts = {
+		"gpm_war_of_knowledge" = 1
+	}
+}war_name_parts_list = {
+	key = "gpm_relic_war_power"
+	parts = {
+		"gpm_war_of_power" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_sphere"
+	parts = {
+		"gpm_war_of_the_sphere" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_architect"
+	parts = {
+		"gpm_war_of_the_architect" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_STC"
+	parts = {
+		"gpm_war_of_the_stc" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_codex"
+	parts = {
+		"gpm_war_of_the_codex" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_soul"
+	parts = {
+		"gpm_war_of_the_soul" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_queen"
+	parts = {
+		"gpm_war_of_the_queen" = 1
+	}
+}
+war_name_parts_list = {
+	key = "gpm_relic_war_fallen"
+	parts = {
+		"gpm_war_of_the_fallen" = 1
+	}
+}
+
+# wg_gpm_r_time_displacer
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_time_displacer
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_time>"
+}
+# wg_gpm_r_alien_eggs
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_alien_eggs
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_xenos>"
+}
+# wg_gpm_r_machine_world_core
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_machine_world_core
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_machine>"
+}
+# wg_gpm_r_encyclopedia_galactica
+# wg_gpm_r_experimental_weapon
+# wg_gpm_r_fallout_emergency_replicator
+# wg_gpm_r_mysterious_shield_generator
+# wg_gpm_r_enigmatic_advisor
+# wg_gpm_r_positronic_microchip
+# wg_gpm_r_earthquake_engine
+# wg_gpm_r_manufactorium_ship
+# wg_gpm_r_datacube
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			OR = {
+				using_war_goal = {
+					type = wg_gpm_r_encyclopedia_galactica
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_experimental_weapon
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_fallout_emergency_replicator
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_mysterious_shield_generator
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_enigmatic_advisor
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_positronic_microchip
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_earthquake_engine
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_manufactorium_ship
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_datacube
+					owner = attacker
+				}
+			}
+		}
+	}
+	format = "<gpm_relic_war_knowledge>"
+}
+# wg_gpm_r_zero_energy_generator
+# wg_gpm_r_power_core
+# wg_gpm_r_gravity_engine
+# wg_gpm_r_cloaking_device
+# wg_gpm_r_q_storage_compressor
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			OR = {
+				using_war_goal = {
+					type = wg_gpm_r_zero_energy_generator
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_power_core
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_gravity_engine
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_cloaking_device
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_q_storage_compressor
+					owner = attacker
+				}
+			}
+		}
+	}
+	format = "<gpm_relic_war_power>"
+}
+# wg_gpm_r_quantum_sphere
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_quantum_sphere
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_sphere>"
+}
+# wg_gpm_r_ai_architect
+# wg_gpm_r_self_assembly_hub
+# wg_gpm_r_self_repairing_obelisk
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			OR = {
+				using_war_goal = {
+					type = wg_gpm_r_ai_architect
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_self_assembly_hub
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_self_repairing_obelisk
+					owner = attacker
+				}
+			}
+		}
+	}
+	format = "<gpm_relic_war_architect>"
+}
+# wg_gpm_r_encrypted_sct
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_encrypted_sct
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_STC>"
+}
+
+# wg_gpm_r_codex_administratum
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_codex_administratum
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_codex>"
+}
+
+# wg_gpm_r_venerable_dreadnaught
+# wg_gpm_r_soul_gem
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			OR = {
+				using_war_goal = {
+					type = wg_gpm_r_venerable_dreadnaught
+					owner = attacker
+				}
+				using_war_goal = {
+					type = wg_gpm_r_soul_gem
+					owner = attacker
+				}
+			}
+		}
+	}
+	format = "<gpm_relic_war_soul>"
+}
+# wg_gpm_r_sentinel_queen
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_sentinel_queen
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_queen>"
+}
+
+# wg_gpm_r_banner_of_the_fallen
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_gpm_r_banner_of_the_fallen
+                owner = attacker
+            }
+		}
+	}
+	format = "<gpm_relic_war_fallen>"
+}

@@ -1,0 +1,144 @@
+		# 100 = {
+			# add_modifier = { modifier = "0000000000000" }
+			# Not with these modifiers
+			# modifier = { factor = 0 has_modifier = "0000000000000" }
+			# (Not) on these planets
+			# Tweaks
+			# Weight Factor
+			# modifier = { factor = @default }
+		# }
+
+# Total modifiers: x
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
+
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+# Planetary Ring Adjuster
+@ringfactor = 1.35
+
+gpm_spawn_hive_world_modifier = {
+	random_list = {
+		100 = {}
+		1 = {
+			add_modifier = { modifier = "gpm_metallic_ring" }
+			gpm_set_planetary_rings = yes
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_metallic_ring" }
+			modifier = { factor = 0 has_modifier = "gpm_ice_ring" }
+			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
+			# (Not) on these planets
+			modifier = { factor = 0 is_moon = yes }
+			# Never in these systems
+			# Tweaks
+			# modifier = { factor = 0
+			# 	distance = {
+			# 		source = solar_system.star
+			# 		max_distance <= 25
+			# 		min_distance >= 1
+			# 	}
+			# }
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		1 = {
+			add_modifier = { modifier = "gpm_ice_ring" }
+			gpm_set_planetary_rings = yes
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_metallic_ring" }
+			modifier = { factor = 0 has_modifier = "gpm_ice_ring" }
+			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
+			# (Not) on these planets
+			modifier = { factor = 0 is_moon = yes }
+			# Never in these systems
+			# Tweaks
+			# modifier = { factor = 0
+			# 	distance = {
+			# 		source = solar_system.star
+			# 		max_distance <= 25
+			# 		min_distance >= 1
+			# 	}
+			# }
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+	}
+}
+
+gpm_roll_hive_world_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			if = {
+				limit = { num_modifiers = 0 }
+				random_list = {
+					50 = { }
+					50 = { gpm_spawn_hive_world_modifier = yes }
+				}
+			}
+		}
+		gpm_modifier_amount_low = {
+			while = {
+				count = 2
+				if = {
+					limit = { num_modifiers < 2 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_hive_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_normal = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_hive_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			if = {
+				limit = { num_modifiers = 0 }
+				gpm_spawn_hive_world_modifier = yes
+			}
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_hive_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		default = { }
+	}
+}

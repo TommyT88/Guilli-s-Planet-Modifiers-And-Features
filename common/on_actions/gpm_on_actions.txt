@@ -1,0 +1,609 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		gpm_flag.1 						# sets global flags
+		gpm_flag.2 						# sets global flags
+	}
+	random_events = {
+		50 = 0
+		10 = gpm_colony.4000 			# Capital Event - ethos unique modifier spawning list
+	}
+}
+
+on_game_start_country = {
+	events = {
+		gpm_game_start.0				# Initialiser mod menu
+		gpm_game_start.1				# Death World origin Start
+		gpm_game_start.2				# Precursor origin Start
+		gpm_game_start.3				# Fallen Empire origin Start
+		gpm_game_start.4				# scion origin start
+	}
+}
+
+on_survey = {
+	events = {
+		gpm_survey_precursors.1			# Precursor Dig Site
+		gpm_survey_precursors.10		# gpm_precursor_remnants
+		gpm_survey_precursors.20		# gpm_precursor_energy_grid
+		gpm_survey_precursors.30		# Precursor_Satellite_Grid
+		gpm_survey_precursors.40		# gpm_precursor_city
+		gpm_survey_precursors.50		# gpm_precursor_shipyards
+		gpm_survey_precursors.60		# gpm_precursor_planetary_gun
+		gpm_survey_precursors.70		# gpm_precursor_bunker_grid
+		gpm_survey_precursors.80		# gpm_precursor_mechs
+		gpm_survey_precursors.90		# gpm_precursor_planetary_shield
+		gpm_survey_precursors.100		# gpm_precursor_floating_city
+		gpm_survey_precursors.110		# gpm_precursor_capital_complex
+		gpm_survey_precursors.120		# gpm_precursor_communication_hub
+		gpm_survey_precursors.130		# gpm_precursor_singularity_drive
+		gpm_survey_precursors.140		# gpm_precursor_eternal_fortress
+		gpm_survey_precursors.150		# gpm_precursor_prison_planet
+		gpm_survey_precursors.160		# gpm_precursor_mines
+		gpm_survey_precursors.170		# gpm_precursor_manufactorium
+		gpm_survey_precursors.180		# gpm_precursor_vaults discovery
+		gpm_survey_precursors.190		# gpm_precursor_crashed_spacestation
+		gpm_survey_precursors.200		# gpm_precursor_battleground_ruins
+		gpm_survey_precursors.210		# gpm_precursor_outpost_ruins
+		gpm_survey_precursors.220		# gpm_precursor_harbor_ruins
+		gpm_survey_precursors.230		# gpm_precursor_ruins
+		gpm_survey_precursors.240		# gpm_precursor_obelisks
+		
+		gpm_survey.1					# find hot core -> give bonus to terraforming. First find
+		gpm_survey.18					# gaia_world
+		gpm_survey.19					# holy_planet
+		gpm_survey.20					# gpm_floating_islands
+		gpm_survey.21					# gpm_ruined_battlefield
+		gpm_survey.22					# gpm_spaceship_graveyard
+		gpm_survey.23					# gpm_artificial_water
+		gpm_survey.24					# gpm_android_pleasure_palace
+		gpm_survey.25					# gpm_ancient_temple
+		gpm_survey.26					# gpm_crystal_moon_palace
+		gpm_survey.27					# gpm_plasmoid_life
+		gpm_survey.28					# gpm_temple_of_the_ancient_one
+		gpm_survey.29					# gpm_proto_forests
+		gpm_survey.30					# gpm_hiveworld
+		gpm_survey.31					# gpm_arachnophobia
+		gpm_survey.32					# gpm_giant_worm
+		# gpm_survey.33					# gpm_artificial_core
+		gpm_survey.34					# gpm_surface_of_bones
+		gpm_survey.35					# gpm_strange_alien_eggs
+		gpm_survey.36					# gpm_mushroom_forest
+		
+		gpm_survey.37					# planet ring survey rename event
+		gpm_survey.700					# wondroud world First Discovery
+		gpm_survey.701					# wondroud world subsequent Discoveries
+		gpm_survey.702					# Survey Message Event Valuable World
+		gpm_survey.2000					# discovery of alien life vanilla integration
+		gpm_survey.2001					# give tech_mine_betharian if found on mod modifiers/deposits
+
+		gpm_survey_minor.1
+		gpm_survey_minor.5
+		gpm_survey_minor.10
+		gpm_survey_minor.15
+		gpm_survey_minor.20
+		gpm_survey_minor.25
+		gpm_survey_minor.30
+		gpm_survey_minor.35
+		gpm_survey_minor.40
+		gpm_survey_minor.45
+		gpm_survey_minor.50
+		gpm_survey_minor.55
+		gpm_survey_minor.60
+		gpm_survey_minor.65
+		gpm_survey_minor.70
+		gpm_survey_minor.75
+		gpm_survey_minor.80
+		gpm_survey_minor.85
+		gpm_survey_minor.90
+		gpm_survey_minor.95
+		gpm_survey_minor.100
+		# gpm_survey_minor.105
+		gpm_survey_minor.110
+		gpm_survey_minor.115
+		gpm_survey_minor.120
+		gpm_survey_minor.125
+		gpm_survey_minor.130
+		gpm_survey_minor.135
+		gpm_survey_minor.140
+		gpm_survey_minor.145
+		gpm_survey_minor.150
+		gpm_survey_minor.155
+		gpm_survey_minor.160
+		gpm_survey_minor.165
+	}
+}
+
+# X years has passed since a planet was colonized (won't trigger on empire homeworld)
+on_colony_1_year_old = {
+	random_events = {
+		20 = 0
+		2 = gpm_colony.30 				# Upgrade Mineral Poor to Mineral Rich
+		2 = gpm_colony.40 				# Upgrade Mineral Rich to Mineral Ultra Rick
+		2 = gpm_colony.50 				# Upgrade Seasonal Flooding to Beautiful Lakes 
+		2 = gpm_colony.60				# Remove Locust Plagues
+		2 = gpm_colony.70				# Remove Acidic Seas
+		2 = gpm_colony.80				# Remove Carnivorous Flies
+		2 = gpm_colony.90				# Remove Lingering Pollution
+		2 = gpm_colony.100				# Remove Resilient Parasites
+		2 = gpm_colony.130				# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		2 = gpm_colony.140				# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		2 = gpm_colony.150				# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		2 = gpm_colony.160				# gpm_hostile_flora pop killed
+		2 = gpm_colony.170				# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		2 = gpm_colony.180				# gpm_endless_fish flat food bonus if not food capped
+		2 = gpm_colony.210				# gpm_windy building destroyed but energy bonus
+		2 = gpm_colony.220				# gpm_radioactive_mantle baerton stone discovered up to 3x
+		2 = gpm_colony.230				# gpm_locust_plagues farms destroyed
+		2 = gpm_colony.240				# gpm_trubbles food eaten from stockpile (not much)
+		2 = gpm_colony.260				# gpm_planetwide_forest new forest blocker (if empty space)
+		2 = gpm_colony.290				# gpm_giant_worm building destroyed
+		2 = gpm_colony.300				# gpm_carnivorous_flies pop eaten
+		2 = gpm_colony.310				# gpm_mushroom_forest fill every empty tile with mushroom 
+		2 = gpm_colony.320				# gpm_proto_forests gpm_dense_forests forest fire
+		# 2 = gpm_colony.360				# The Crystal Beasts 1 - Crystalline Cave
+	}
+}
+
+# X years has passed since a planet was colonized (won't trigger on empire homeworld)
+on_colony_2_years_old = {
+	random_events = {
+		20 = 0
+		1 = gpm_colony.3 				# Ship graveyard expedition
+		5 = gpm_colony.20 				# Alien eggs
+		5 = gpm_colony.30 				# Upgrade Mineral Poor to Mineral Rich
+		5 = gpm_colony.40 				# Upgrade Mineral Rich to Mineral Ultra Rick
+		5 = gpm_colony.50 				# Upgrade Seasonal Flooding to Beautiful Lakes 
+		5 = gpm_colony.60				# Remove Locust Plagues
+		5 = gpm_colony.70				# Remove Acidic Seas
+		5 = gpm_colony.80				# Remove Carnivorous Flies
+		5 = gpm_colony.90				# Remove Lingering Pollution
+		5 = gpm_colony.100				# Remove Resilient Parasites
+		5 = gpm_colony.110				# gpm_frequent_thunderstorms or gpm_global_thunderstorms)
+		5 = gpm_colony.120				# gpm_highly_charged_air_particles flat physics bonus
+		5 = gpm_colony.130				# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		5 = gpm_colony.140				# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		5 = gpm_colony.150				# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		5 = gpm_colony.160				# gpm_hostile_flora pop killed
+		5 = gpm_colony.170				# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		5 = gpm_colony.180				# gpm_endless_fish flat food bonus if not food capped
+		5 = gpm_colony.190				# gpm_gemstones flat energy & mineral bonus
+		5 = gpm_colony.200				# gpm_android_pleasure_palace +1 droid pop -> fell in love with a pop
+		5 = gpm_colony.210				# gpm_windy building destroyed but energy bonus
+		5 = gpm_colony.220				# gpm_radioactive_mantle baerton stone discovered up to 3x
+		5 = gpm_colony.230				# gpm_locust_plagues farms destroyed
+		5 = gpm_colony.240				# gpm_trubbles food eaten from stockpile (not much)
+		1 = gpm_colony.250				# gpm_strange_voices rebellion army
+		1 = gpm_colony.260				# gpm_planetwide_forest new forest blocker (if empty space)
+		1 = gpm_colony.280				# gpm_arachnophobia enemy spider armies invade
+		5 = gpm_colony.290				# gpm_giant_worm building destroyed
+		5 = gpm_colony.300				# gpm_carnivorous_flies pop eaten
+		5 = gpm_colony.310				# gpm_mushroom_forest fill every empty tile with mushroom 
+		5 = gpm_colony.320				# gpm_proto_forests gpm_dense_forests forest fire
+		5 = gpm_colony.330				# gpm_planetwide_forest forest fire
+		# 5 = gpm_colony.360				# The Crystal Beasts 1 - Crystalline Cave
+	}
+}
+
+on_colony_3_years_old = {
+	random_events = {
+		20 = 0
+		1 = gpm_colony.3 				# Ship graveyard expedition
+		5 = gpm_colony.20 				# Alien eggs
+		5 = gpm_colony.30 				# Upgrade Mineral Poor to Mineral Rich
+		5 = gpm_colony.40 				# Upgrade Mineral Rich to Mineral Ultra Rick
+		5 = gpm_colony.50 				# Upgrade Seasonal Flooding to Beautiful Lakes 
+		5 = gpm_colony.60				# Remove Locust Plagues
+		5 = gpm_colony.70				# Remove Acidic Seas
+		5 = gpm_colony.80				# Remove Carnivorous Flies
+		5 = gpm_colony.90				# Remove Lingering Pollution
+		5 = gpm_colony.100				# Remove Resilient Parasites
+		5 = gpm_colony.110				# gpm_frequent_thunderstorms or gpm_global_thunderstorms)
+		5 = gpm_colony.120				# gpm_highly_charged_air_particles flat physics bonus
+		5 = gpm_colony.130				# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		5 = gpm_colony.140				# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		5 = gpm_colony.150				# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		5 = gpm_colony.160				# gpm_hostile_flora pop killed
+		5 = gpm_colony.170				# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		5 = gpm_colony.180				# gpm_endless_fish flat food bonus if not food capped
+		5 = gpm_colony.190				# gpm_gemstones flat energy & mineral bonus
+		5 = gpm_colony.200				# gpm_android_pleasure_palace +1 droid pop -> fell in love with a pop
+		5 = gpm_colony.210				# gpm_windy building destroyed but energy bonus
+		5 = gpm_colony.220				# gpm_radioactive_mantle baerton stone discovered up to 3x
+		5 = gpm_colony.230				# gpm_locust_plagues farms destroyed
+		5 = gpm_colony.240				# gpm_trubbles food eaten from stockpile (not much)
+		1 = gpm_colony.250				# gpm_strange_voices rebellion army
+		1 = gpm_colony.260				# gpm_planetwide_forest new forest blocker (if empty space)
+		1 = gpm_colony.280				# gpm_arachnophobia enemy spider armies invade
+		5 = gpm_colony.290				# gpm_giant_worm building destroyed
+		5 = gpm_colony.300				# gpm_carnivorous_flies pop eaten
+		5 = gpm_colony.310				# gpm_mushroom_forest fill every empty tile with mushroom 
+		5 = gpm_colony.320				# gpm_proto_forests gpm_dense_forests forest fire
+		5 = gpm_colony.330				# gpm_planetwide_forest forest fire		
+		# 5 = gpm_colony.360				# The Crystal Beasts 1 - Crystalline Cave
+	}
+}
+on_colony_4_years_old = {
+	random_events = {
+		20 = 0
+		2 = gpm_colony.3 				# Ship graveyard expedition
+		7 = gpm_colony.20 				# Alien eggs
+		7 = gpm_colony.30 				# Upgrade Mineral Poor to Mineral Rich
+		7 = gpm_colony.40 				# Upgrade Mineral Rich to Mineral Ultra Rick
+		7 = gpm_colony.50 				# Upgrade Seasonal Flooding to Beautiful Lakes 
+		7 = gpm_colony.60				# Remove Locust Plagues
+		7 = gpm_colony.70				# Remove Acidic Seas
+		7 = gpm_colony.80				# Remove Carnivorous Flies
+		7 = gpm_colony.90				# Remove Lingering Pollution
+		7 = gpm_colony.100				# Remove Resilient Parasites
+		7 = gpm_colony.110				# gpm_frequent_thunderstorms or gpm_global_thunderstorms)
+		7 = gpm_colony.120				# gpm_highly_charged_air_particles flat physics bonus
+		7 = gpm_colony.130				# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		7 = gpm_colony.140				# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		7 = gpm_colony.150				# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		7 = gpm_colony.160				# gpm_hostile_flora pop killed
+		7 = gpm_colony.170				# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		7 = gpm_colony.180				# gpm_endless_fish flat food bonus if not food capped
+		7 = gpm_colony.190				# gpm_gemstones flat energy & mineral bonus
+		7 = gpm_colony.200				# gpm_android_pleasure_palace +1 droid pop -> fell in love with a pop
+		7 = gpm_colony.210				# gpm_windy building destroyed but energy bonus
+		7 = gpm_colony.230				# gpm_locust_plagues farms destroyed
+		7 = gpm_colony.240				# gpm_trubbles food eaten from stockpile (not much)
+		2 = gpm_colony.250				# gpm_strange_voices rebellion army
+		2 = gpm_colony.260				# gpm_planetwide_forest new forest blocker (if empty space)
+		2 = gpm_colony.280				# gpm_arachnophobia enemy spider armies invade
+		7 = gpm_colony.290				# gpm_giant_worm building destroyed
+		7 = gpm_colony.300				# gpm_carnivorous_flies pop eaten
+		7 = gpm_colony.310				# gpm_mushroom_forest fill every empty tile with mushroom 
+		7 = gpm_colony.320				# gpm_proto_forests gpm_dense_forests forest fire
+		7 = gpm_colony.330				# gpm_planetwide_forest forest fire		
+		# 7 = gpm_colony.360				# The Crystal Beasts 1 - Crystalline Cave
+	}
+}
+on_colony_5_years_old = {
+	random_events = {
+		20 = 0
+		3 = gpm_colony.3 				# Ship graveyard expedition
+		10 = gpm_colony.20 			# Alien eggs
+		10 = gpm_colony.30 			# Upgrade Mineral Poor to Mineral Rich
+		10 = gpm_colony.40 			# Upgrade Mineral Rich to Mineral Ultra Rick
+		10 = gpm_colony.50 			# Upgrade Seasonal Flooding to Beautiful Lakes 
+		10 = gpm_colony.60				# Remove Locust Plagues
+		10 = gpm_colony.70				# Remove Acidic Seas
+		10 = gpm_colony.80				# Remove Carnivorous Flies
+		10 = gpm_colony.90				# Remove Lingering Pollution
+		10 = gpm_colony.100			# Remove Resilient Parasites
+		10 = gpm_colony.110			# gpm_frequent_thunderstorms or gpm_global_thunderstorms)
+		10 = gpm_colony.120			# gpm_highly_charged_air_particles flat physics bonus
+		10 = gpm_colony.130			# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		10 = gpm_colony.140			# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		10 = gpm_colony.150			# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		10 = gpm_colony.160			# gpm_hostile_flora pop killed
+		10 = gpm_colony.170			# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		10 = gpm_colony.180			# gpm_endless_fish flat food bonus if not food capped
+		10 = gpm_colony.190			# gpm_gemstones flat energy & mineral bonus
+		10 = gpm_colony.200			# gpm_android_pleasure_palace +1 droid pop -> fell in love with a pop
+		10 = gpm_colony.210			# gpm_windy building destroyed but energy bonus
+		10 = gpm_colony.230			# gpm_locust_plagues farms destroyed
+		10 = gpm_colony.240			# gpm_trubbles food eaten from stockpile (not much)
+		3 = gpm_colony.250				# gpm_strange_voices rebellion army
+		3 = gpm_colony.260				# gpm_planetwide_forest new forest blocker (if empty space)
+		3 = gpm_colony.270				# gpm_hiveworld spawn friendly queen
+		3 = gpm_colony.280				# gpm_arachnophobia enemy spider armies invade
+		10 = gpm_colony.290			# gpm_giant_worm building destroyed
+		10 = gpm_colony.300			# gpm_carnivorous_flies pop eaten
+		10 = gpm_colony.310			# gpm_mushroom_forest fill every empty tile with mushroom 
+		10 = gpm_colony.320			# gpm_proto_forests gpm_dense_forests forest fire
+		10 = gpm_colony.330			# gpm_planetwide_forest forest fire
+		# 10 = gpm_colony.360				# The Crystal Beasts 1 - Crystalline Cave		
+	}
+}
+
+# on_colony_6_years_old = {
+# }
+
+on_colony_7_years_old = {
+	random_events = {
+		20 = 0
+		5 = gpm_colony.3 				# Ship graveyard expedition
+		10 = gpm_colony.20 			# Alien eggs
+		10 = gpm_colony.30 			# Upgrade Mineral Poor to Mineral Rich
+		10 = gpm_colony.40 			# Upgrade Mineral Rich to Mineral Ultra Rick
+		10 = gpm_colony.50 			# Upgrade Seasonal Flooding to Beautiful Lakes 
+		10 = gpm_colony.60				# Remove Locust Plagues
+		10 = gpm_colony.70				# Remove Acidic Seas
+		10 = gpm_colony.80				# Remove Carnivorous Flies
+		10 = gpm_colony.90				# Remove Lingering Pollution
+		10 = gpm_colony.100			# Remove Resilient Parasites
+		10 = gpm_colony.110			# gpm_frequent_thunderstorms or gpm_global_thunderstorms)
+		10 = gpm_colony.120			# gpm_highly_charged_air_particles flat physics bonus
+		10 = gpm_colony.130			# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		10 = gpm_colony.140			# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		10 = gpm_colony.150			# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		10 = gpm_colony.160			# gpm_hostile_flora pop killed
+		10 = gpm_colony.170			# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		10 = gpm_colony.180			# gpm_endless_fish flat food bonus if not food capped
+		10 = gpm_colony.190			# gpm_gemstones flat energy & mineral bonus
+		10 = gpm_colony.200			# gpm_android_pleasure_palace +1 droid pop -> fell in love with a pop
+		10 = gpm_colony.210			# gpm_windy building destroyed but energy bonus
+		10 = gpm_colony.230			# gpm_locust_plagues farms destroyed
+		10 = gpm_colony.240			# gpm_trubbles food eaten from stockpile (not much)
+		5 = gpm_colony.250				# gpm_strange_voices rebellion army
+		5 = gpm_colony.260				# gpm_planetwide_forest new forest blocker (if empty space)
+		5 = gpm_colony.270				# gpm_hiveworld spawn friendly queen
+		5 = gpm_colony.280				# gpm_arachnophobia enemy spider armies invade
+		10 = gpm_colony.290			# gpm_giant_worm building destroyed
+		10 = gpm_colony.300			# gpm_carnivorous_flies pop eaten
+		10 = gpm_colony.310			# gpm_mushroom_forest fill every empty tile with mushroom 
+		10 = gpm_colony.320			# gpm_proto_forests gpm_dense_forests forest fire
+		10 = gpm_colony.330			# gpm_planetwide_forest forest fire
+	}
+}
+
+# on_colony_8_years_old = {
+# }
+
+on_colony_9_years_old = {
+	random_events = {
+		20 = 0
+		5 = gpm_colony.3 				# Ship graveyard expedition
+		10 = gpm_colony.20 			# Alien eggs
+		10 = gpm_colony.30 			# Upgrade Mineral Poor to Mineral Rich
+		10 = gpm_colony.40 			# Upgrade Mineral Rich to Mineral Ultra Rick
+		10 = gpm_colony.50 			# Upgrade Seasonal Flooding to Beautiful Lakes 
+		10 = gpm_colony.60				# Remove Locust Plagues
+		10 = gpm_colony.70				# Remove Acidic Seas
+		10 = gpm_colony.80				# Remove Carnivorous Flies
+		10 = gpm_colony.90				# Remove Lingering Pollution
+		10 = gpm_colony.100			# Remove Resilient Parasites
+		10 = gpm_colony.110			# gpm_frequent_thunderstorms or gpm_global_thunderstorms)
+		10 = gpm_colony.120			# gpm_highly_charged_air_particles flat physics bonus
+		10 = gpm_colony.130			# gpm_unstable_tectonics_2 earthquacke event, damaged buildings
+		10 = gpm_colony.140			# gpm_asteroid_impacts_2 random building destroyed, pop killed
+		10 = gpm_colony.150			# gpm_mineral_rich (and ultra rich and poor) flat mineral bonus
+		10 = gpm_colony.160			# gpm_hostile_flora pop killed
+		10 = gpm_colony.170			# gpm_titanic_predators or gpm_abominable_predators pop killed, building 
+		10 = gpm_colony.180			# gpm_endless_fish flat food bonus if not food capped
+		10 = gpm_colony.190			# gpm_gemstones flat energy & mineral bonus
+		10 = gpm_colony.200			# gpm_android_pleasure_palace +1 droid pop -> fell in love with a pop
+		10 = gpm_colony.210			# gpm_windy building destroyed but energy bonus
+		10 = gpm_colony.230			# gpm_locust_plagues farms destroyed
+		10 = gpm_colony.240			# gpm_trubbles food eaten from stockpile (not much)
+		5 = gpm_colony.250				# gpm_strange_voices rebellion army
+		5 = gpm_colony.260			# gpm_planetwide_forest new forest blocker (if empty space)
+		5 = gpm_colony.270				# gpm_hiveworld spawn friendly queen
+		5 = gpm_colony.280				# gpm_arachnophobia enemy spider armies invade
+		10 = gpm_colony.290			# gpm_giant_worm building destroyed
+		10 = gpm_colony.300			# gpm_carnivorous_flies pop eaten
+		10 = gpm_colony.310			# gpm_mushroom_forest fill every empty tile with mushroom 
+		10 = gpm_colony.320			# gpm_proto_forests gpm_dense_forests forest fire
+		10 = gpm_colony.330			# gpm_planetwide_forest forest fire
+	}
+}
+
+# on_colony_10_years_old = {
+	# events = {
+	# }
+# }
+
+# this = country
+# on_five_year_pulse_country = {
+# 	events = {
+# 		# gpm_decisions.1 				# go over all AI colonies and trigger deposit "decision" 
+# 	}
+# }
+
+
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+		gpm_habitat.1					# Habitat start script
+	}
+}
+
+
+# A Megastructure has been upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# on_megastructure_upgraded = {
+# 	events = {
+# 		gpm_ringworld.78872 			# remove planetary rings from solar system
+# 	}
+# }
+
+# Planet has been terraformed
+# This = Planet
+# From = Terraformer
+on_terraforming_complete = {
+    events = {
+		gpm_terraform.78871
+    }
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+		gpm_colony.9000			# spawn one xenomorph every X years from discovery
+	}
+}
+
+on_colonized = {
+	events = {
+		gpm_colony.7000 				# Fallen Empire Colony development Start event. Fires 7100 after 2 years
+		gpm_colony.8000 				# Gives special modifiers to non-machine worlds for machine empires.
+		gpm_on_colonize.2				# spawns 4 more pops on colonisation (work around for modifier not working in planet modifier)
+	}
+}
+on_colonization_started = {
+	events = {
+		gpm_colony.1 					# set planet colour again if needed
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		gpm_guardian.2					# Ego dies, spawn gaia world
+		gpm_guardian.162				# Ego dies, final message
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		gpm_guardian.161				# Ego destroys fleet
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+# on_planet_transfer = {
+# 	events = {
+# 		# gpm_colony.7000					# Fallen Empire Colony development Start event. Fires 7100 after 2 years
+# 	}
+# }
+
+# Executed right after country has established communications with another country
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+		gpm_com.1							# Meet fallen empire as lost FE colony civic start
+		gpm_com.2							# message event to let empires know the other party has a relic
+	}
+}
+
+# This = construction ship
+# From = planet it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_mining_station = {
+	events = {
+		gpm_space_building.1
+	}
+}
+# Triggers event when ship enters a system
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+		gpm_guardian.100		# ego encounter
+		gpm_mega.1				# encounter broken refinery
+		gpm_mega.2				# encounter broken mining facility
+		gpm_mega.3				# encounter broken station
+		gpm_mega.4				# encounter broken silo
+
+	}
+}
+
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_planet_attackers_win = {
+	events = {
+		gpm_colony.8100					# contingency conqueres a planet
+	}
+}
+
+# This = Country
+# on_relic_activated = {
+	# events = {
+		
+	# }
+# }
+
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		gpm_relics.2 					# New Admirals Get Stealth Tactician Trait
+		# gpm_relics.12 					# New Leaders Get Shared Soul Trait
+		gpm_relics.21 					# New Admirals Get fallen heralrdy
+		gpm_relics.31					# New Ruler Gets historian trait
+		gpm_relics.41 					# New Generals Get battle standards
+		gpm_relics.51 					# New Generals Get personal mech
+	}
+}
+
+# A war has ended
+# Root = Loser
+# From = Main Winner
+# on_war_ended = {
+# 	events = {
+		
+# 	}
+# }
+
+# A war has been won
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+# on_war_won = {
+# 	events = {
+		
+# 	}
+# }
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		gpm_relics.1000				# Gain all relics at end of country-desroying war
+	}
+}
+
+# This = subject
+# From = subject's overlord
+# on_becoming_subject = {
+	# events = {
+		# gpm_relics.1100				# Gain all relics from your new subject
+	# }
+# }
+
+# fires when a country finishes being integrated
+# This = overlord
+# From = subject
+# on_subject_integrated = {
+# 	events = {
+# 		gpm_relics.1200 			# Gain all relics after integrating empire
+# 	}
+# }
+
+
+#A district construction has been completed.
+# This = Planet
+on_district_complete = {
+	events = {
+		gpm_on_action.1 # Archaeopolis archaeology district build
+	}
+}
+
+# A district construction has demolished.
+# This = Planet
+on_district_demolished = {
+	events = {
+		gpm_on_action.2 # Archaeopolis archaeology district removed
+	}
+}

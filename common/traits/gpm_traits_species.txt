@@ -1,0 +1,32 @@
+
+trait_gpm_enigmatic_update = {
+	cost = 0
+	initial = no	
+	randomized = no
+	
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.02
+		planet_pop_assembly_mult = 0.02
+		pop_housing_usage_mult = -0.02
+		pop_amenities_usage_mult = -0.02
+		army_health = 0.02
+		army_damage_mult = 0.02
+		species_leader_exp_gain = 0.02
+		leader_skill_levels = 1
+		species_empire_size_mult = -0.02
+		planet_pops_robotics_upkeep_mult = -0.02
+	}
+
+}

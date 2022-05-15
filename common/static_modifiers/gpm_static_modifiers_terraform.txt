@@ -1,0 +1,61 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+# gpm_extinct_species
+# gpm_terraforming_world_engineering_shaper
+# gpm_terraforming_world_engineering_mastery
+# gpm_terraforming_world_engineering
+# gpm_terraforming_world_engineering_shaper_mastery
+
+
+gpm_extinct_species= {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_extinct_species.dds"
+	planet_immigration_pull_mult = 1.00
+	icon_frame = 7
+}
+gpm_terraforming_world_engineering = {
+	district_generator_max = 2
+	district_mining_max = 2
+	district_farming_max = 2
+	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
+	icon_frame = 7
+}
+gpm_terraforming_world_engineering_shaper= {
+	planet_max_districts_add = 1
+	district_generator_max = 2
+	district_mining_max = 2
+	district_farming_max = 2
+	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
+	icon_frame = 7
+}
+gpm_terraforming_world_engineering_mastery= {
+	district_generator_max = 3
+	district_mining_max = 3
+	district_farming_max = 3
+	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
+	icon_frame = 7
+}
+gpm_terraforming_world_engineering_shaper_mastery = {
+	planet_max_districts_add = 1
+	district_generator_max = 3
+	district_mining_max = 3
+	district_farming_max = 3
+	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
+	icon_frame = 7
+}

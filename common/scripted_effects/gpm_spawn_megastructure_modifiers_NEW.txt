@@ -1,0 +1,1266 @@
+# Construction tier rarities:
+# Tier 1 = the worst
+# Tier 2 = average
+# Tier 3 = the best
+
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+gpm_spawn_constructed_ringworld_modifier = {
+	random_list = {
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_warm_water_lakes" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_warm_water_lakes" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_hyper_complex_biome" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_hyper_complex_biome" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_beautiful_lakes" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_beautiful_lakes" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_perfect_seasons" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_perfect_seasons" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_clear_skies" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_clear_skies" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_pleasant_weather" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_pleasant_weather" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_gorgeous_sky" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_gorgeous_sky" }
+		}
+		# 100 = {
+			# add_modifier = { days = -1 modifier = "gpm_dense_forests" }
+			# modifier = { factor = @default }
+			# # TWeaks #
+			# # Not with these modifiers #
+			# modifier = { factor = 0 has_modifier = "gpm_dense_forests" }
+		# }
+		# 100 = {
+			# add_modifier = { days = -1 modifier = "gpm_planetwide_forest" }
+			# modifier = { factor = @default }
+			# # TWeaks #
+			# # Not with these modifiers #
+			# modifier = { factor = 0 has_modifier = "gpm_planetwide_forest" }
+		# }
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_breath_taking_view" }
+			modifier = { factor = @default }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_breath_taking_view" }
+			}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_neural_nexus" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_neural_nexus" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_idyllic_gardens" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_idyllic_gardens" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_xeno_zoo" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_xeno_zoo" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_badlands" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_badlands" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_battle_simulators" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_battle_simulators" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_endless_ocean" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_endless_ocean" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_ringworld_mass_transit_systems" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_ringworld_mass_transit_systems" }
+		}
+		# 100 = {
+			# add_modifier = { days = -1 modifier = "gpm_extensive_cavern_system" }
+			# modifier = { factor = @uncommon }
+			# # TWeaks #
+			# # Not with these modifiers #
+			# modifier = { factor = 0 has_modifier = "gpm_extensive_cavern_system" }
+		# }
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_friendly_wildlife" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_friendly_wildlife" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_empathic_life" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_empathic_life" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_exotic_spices" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_exotic_spices" }
+		}
+		# 100 = {
+			# add_modifier = { days = -1 modifier = "gpm_rich_soil" }
+			# modifier = { factor = @uncommon }
+			# # TWeaks #
+			# # Not with these modifiers #
+			# modifier = { factor = 0 has_modifier = "gpm_rich_soil" }
+		# }
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_otherworldly_colours" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_otherworldly_colours" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_musical_creatures" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_musical_creatures" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_subterranean_eco_system" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_subterranean_eco_system" }
+		}
+		# 100 = {
+			# add_modifier = { days = -1 modifier = "gpm_colossal_cliffs" }
+			# modifier = { factor = @uncommon }
+			# # TWeaks #
+			# # Not with these modifiers #
+			# modifier = { factor = 0 has_modifier = "gpm_colossal_cliffs" }
+		# }
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_massive_waterfalls" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_massive_waterfalls" }
+		}
+	}
+}
+gpm_spawn_ringworld_modifier = {
+
+}
+
+gpm_spawn_ringworld_tier_modifier = {
+	# gpm_ringworld_engineering_mastery
+	# gpm_ringworld_engineering_voidborn
+	# gpm_ringworld_engineering_voidborn_mastery
+
+
+
+	if = {
+		limit = {
+			gpm_is_planet_class_ringworld = yes
+		}
+		# Standard, has no APs
+		# if = {
+		# 	limit = {
+		# 		NOR = {
+		# 			has_ascension_perk = ap_galactic_wonders_utopia
+		# 			has_ascension_perk = ap_master_builders
+		# 		}
+		# 	}
+		# 	add_modifier = { modifier = 00000000000 }
+		# }
+
+		# Has AP voidborn
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						has_ascension_perk = ap_voidborn
+						NOT = { has_ascension_perk = ap_master_builders }
+					}
+				}
+				NOT = { has_modifier = gpm_ringworld_engineering_voidborn }
+			}
+			remove_modifier = gpm_ringworld_engineering_mastery
+			remove_modifier = gpm_ringworld_engineering_voidborn_mastery
+			add_modifier = { modifier = gpm_ringworld_engineering_voidborn }			
+		}
+		# Has AP master builders
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						has_ascension_perk = ap_master_builders
+						NOT = { has_ascension_perk = ap_galactic_wonders_utopia }
+					}
+				}
+				NOT = { has_modifier = gpm_ringworld_engineering_mastery }
+			}
+			remove_modifier = gpm_ringworld_engineering_voidborn
+			remove_modifier = gpm_ringworld_engineering_voidborn_mastery
+			add_modifier = { modifier = gpm_ringworld_engineering_mastery }			
+		}
+		# Has Both AP voidborn and master builders
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						has_ascension_perk = ap_voidborn
+						has_ascension_perk = ap_master_builders
+					}
+				}
+				NOT = { has_modifier = gpm_ringworld_engineering_voidborn_mastery }
+			}
+			remove_modifier = gpm_ringworld_engineering_mastery
+			remove_modifier = gpm_ringworld_engineering_voidborn
+			add_modifier = { modifier = gpm_ringworld_engineering_voidborn_mastery }			
+		}
+	}
+}
+
+gpm_spawn_habitat_tier_modifier = {
+	# gpm_habitat_engineering (base)
+	# master_builders_habitats  (voidborn)
+	# gpm_habitat_engineering_mastery (master builders AP)
+	# gpm_habitat_engineering_void_mastery (Master builders and Voidborn)
+
+	if = {
+		limit = {
+			gpm_is_planet_class_habitat = yes
+		}
+		# Standard, has no APs
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						NAND = {
+							has_ascension_perk = ap_voidborn
+							has_ascension_perk = ap_master_builders
+						}
+					}
+				}
+				NOT = { has_modifier = gpm_habitat_engineering }
+			}
+			remove_modifier = master_builders_habitats
+			remove_modifier = gpm_habitat_engineering_mastery
+			remove_modifier = gpm_habitat_engineering_void_mastery
+			add_modifier = { modifier = gpm_habitat_engineering }
+		}
+
+		# Has AP voidborn
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						has_ascension_perk = ap_voidborn
+						NOT = { has_ascension_perk = ap_master_builders }
+					}
+				}
+				NOT = { has_modifier = master_builders_habitats }
+			}		
+			remove_modifier = gpm_habitat_engineering
+			remove_modifier = gpm_habitat_engineering_mastery
+			remove_modifier = gpm_habitat_engineering_void_mastery
+			add_modifier = { modifier = master_builders_habitats }
+		}
+		# Has AP master builders
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						has_ascension_perk = ap_master_builders
+						NOT = { has_ascension_perk = ap_voidborn }
+					}
+				}
+				NOT = { has_modifier = gpm_habitat_engineering_mastery }
+			}
+			remove_modifier = gpm_habitat_engineering
+			remove_modifier = master_builders_habitats
+			remove_modifier = gpm_habitat_engineering_void_mastery
+			add_modifier = { modifier = gpm_habitat_engineering_mastery }
+		}
+		# Has Both AP voidborn and master builders
+		if = {
+			limit = {
+				solar_system = {
+					owner = {
+						has_ascension_perk = ap_voidborn
+						has_ascension_perk = ap_master_builders
+					}
+				}
+				NOT = { has_modifier = gpm_habitat_engineering_void_mastery }
+			}
+			remove_modifier = gpm_habitat_engineering
+			remove_modifier = master_builders_habitats
+			remove_modifier = gpm_habitat_engineering_mastery
+			add_modifier = { modifier = gpm_habitat_engineering_void_mastery }
+		}
+	}
+}
+
+gpm_spawn_constructed_habitat_modifier = {
+	random_list = {
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_habitat_trade_docks" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			modifier = { factor = 0 owner = { is_gestalt = yes } }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_habitat_trade_docks" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_habitat_stadium" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			modifier = { factor = 0 owner = { is_gestalt = yes } }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_habitat_stadium" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_habitat_holonet_entertainment_systems" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			modifier = { factor = 0 owner = { is_machine_empire = yes } }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_habitat_holonet_entertainment_systems" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_habitat_replicator_systems" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			modifier = { factor = 0 owner = { is_gestalt = yes } }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_habitat_replicator_systems" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_habitat_spaceroute_hub" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			modifier = { factor = 0 has_planet_flag = gpm_is_galaxy_generated_habitat }
+			modifier = { factor = 0 owner = { is_gestalt = yes } }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_habitat_spaceroute_hub" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_habitat_experimental_food_recycling" }
+			modifier = { factor = @uncommon }
+			# TWeaks #
+			modifier = { factor = 0 owner = { is_machine_empire = yes } }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_habitat_experimental_food_recycling" }
+		}
+	}
+}
+
+gpm_spawn_habitat_modifier = {
+	# this will be used for voidborn and abandoned habitat modifiers in the future
+}
+
+gpm_spawn_habitat_infrastructure = {
+	if = {
+		limit = { has_modifier = extensive_moon_system }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_moon_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_periodic_meteor_showers }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_asteroid_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_frequent_thunderstorms }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_global_thunderstorms }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { gpm_has_precursor_modifiers = yes has_ancrel = yes }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_precursor_infrastructure"
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = gpm_global_thunderstorms_gas_giant }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_crystal_moon_palace }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_temple_of_the_ancient_one }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_ancient_temple }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_time_displaced_planet }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_time_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_ruined_battlefield }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_spaceship_graveyard }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_old_world }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_hiveworld }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_surface_of_bones }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_floating_islands }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_sunken_cities }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_archeology_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_radioactive_mantle }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_alloy_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_heavy_elements }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_alloy_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_rare_metals }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_alloy_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_ultra_rich_2 }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_mineral_rich_2 }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = ultra_rich }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = mineral_rich }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_extensive_cavern_system }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_iron_planet }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_mercury_atmosphere }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_mineral_mining_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_hydrogen_mist }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_hydrogen_ice }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_nitrogen_ice }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_chlorine_planet }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_phosphorus_planet }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_sulfur_planet }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_delicious_ingredients }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_spice_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_exotic_spices }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_spice_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_strange_alien_eggs }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_alien_egg_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_subterranean_eco_system }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_floating_forest }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_charged_atmosphere }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_aeroplankton_clouds }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_radiation_storms }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_abandoned_refineries }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_particle_collecting_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_floating_kelp }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_floatig_behemothaurs }
+		event_target:gpm_new_constructed_habitat = {
+			add_deposit = "gpm_d_orbital_research_infrastructure"
+		}
+	}
+}
+
+# gpm_roll_constructed_habitat_modifiers = {
+# 	switch = {
+# 		trigger = has_global_flag
+# 		gpm_modifier_amount_max_one = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				random_list = {
+# 					50 = { }
+# 					50 = { gpm_spawn_constructed_habitat_modifier = yes }
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_low = {
+# 			while = {
+# 				count = 2
+# 				if = {
+# 					limit = { num_modifiers < 2 }
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_constructed_habitat_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_normal = {
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = { num_modifiers < 3 }
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_constructed_habitat_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_high = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				gpm_spawn_constructed_habitat_modifier = yes
+# 			}
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = { num_modifiers < 3 }
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_constructed_habitat_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		default = { }
+# 	}
+# }
+
+# doesnt always work, need to redo creatively for voidborn?
+gpm_add_habitat_infrastructure = {
+	save_event_target_as = gpm_new_constructed_habitat
+	from.planet = {
+		gpm_spawn_habitat_infrastructure = yes
+		every_moon = {
+			gpm_spawn_habitat_infrastructure = yes
+		}
+	}
+	event_target:gpm_new_constructed_habitat = {
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = extensive_moon_system
+						any_moon = {
+							has_modifier = extensive_moon_system
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_extensive_moon_mining days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_frequent_thunderstorms
+						has_modifier = gpm_global_thunderstorms
+						has_modifier = gpm_global_thunderstorms_gas_giant
+						any_moon = {
+							OR = {
+								has_modifier = gpm_frequent_thunderstorms 
+								has_modifier = gpm_global_thunderstorms
+								has_modifier = gpm_global_thunderstorms_gas_giant
+							}
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_frequent_thunderstorms_research days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_radioactive_mantle
+						any_moon = {
+							has_modifier = gpm_radioactive_mantle
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_radioactive_mantle_mining days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_periodic_meteor_showers
+						any_moon = {
+							has_modifier = gpm_periodic_meteor_showers
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_frequent_asteroid_flybys days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_crystal_moon_palace 
+						has_modifier = gpm_temple_of_the_ancient_one 
+						has_modifier = gpm_ancient_temple 
+						any_moon = {
+							OR = {
+								has_modifier = gpm_crystal_moon_palace 
+								has_modifier = gpm_temple_of_the_ancient_one 
+								has_modifier = gpm_ancient_temple 
+							}
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_ancient_temple_expeditions days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_highly_charged_air_particles
+						any_moon = {
+							has_modifier = gpm_highly_charged_air_particles
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_highly_charged_particle_collection days = -1 } 
+				}
+			}
+		}
+		
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_time_displaced_planet
+						any_moon = {
+							has_modifier = gpm_time_displaced_planet
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_time_displaced_planet_research days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_ultra_rich_2
+						has_modifier = gpm_mineral_rich_2
+						has_modifier = ultra_rich
+						has_modifier = mineral_rich
+						has_modifier = gpm_extensive_cavern_system
+						any_moon = {
+							OR = {
+								has_modifier = gpm_ultra_rich_2
+								has_modifier = gpm_mineral_rich_2
+								has_modifier = ultra_rich
+								has_modifier = mineral_rich
+								has_modifier = gpm_extensive_cavern_system
+							}
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_surface_mining days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_ruined_battlefield 
+						has_modifier = gpm_spaceship_graveyard 
+						has_modifier = gpm_old_world
+						has_modifier = gpm_hiveworld
+						has_modifier = gpm_surface_of_bones
+						has_modifier = gpm_floating_islands
+						has_modifier = gpm_sunken_cities
+						gpm_has_precursor_modifiers = yes
+						any_moon = {
+							OR = {
+								has_modifier = gpm_ruined_battlefield 
+								has_modifier = gpm_spaceship_graveyard 
+								has_modifier = gpm_old_world
+								has_modifier = gpm_hiveworld
+								has_modifier = gpm_surface_of_bones
+								has_modifier = gpm_floating_islands
+								has_modifier = gpm_sunken_cities
+								gpm_has_precursor_modifiers = yes
+							}
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_surface_expeditions days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_android_pleasure_palace
+						any_moon = {
+							has_modifier = gpm_android_pleasure_palace
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_android_pleasure_palace_tourism days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_delicious_ingredients
+						has_modifier = gpm_exotic_spices
+						any_moon = {
+							OR = {
+								has_modifier = gpm_delicious_ingredients
+								has_modifier = gpm_exotic_spices
+							}
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_delicious_ingredients_trade days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_flat_terrain
+						any_moon = {
+							has_modifier = gpm_flat_terrain
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				random_list = {
+					50 = {
+						event_target:gpm_new_constructed_habitat = {
+							add_modifier = { modifier = gpm_habitat_flat_terrain_racing days = -1 } 
+						}
+					}
+					500 = {}
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_strange_alien_eggs
+						any_moon = {
+							has_modifier = gpm_strange_alien_eggs
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_strange_alien_eggs_restriction days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_hydrogen_mist
+						has_modifier = gpm_hydrogen_ice
+						any_moon = {
+							OR = {
+								has_modifier = gpm_hydrogen_mist
+								has_modifier = gpm_hydrogen_ice
+							}
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_hydrogen_extraction days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_nitrogen_ice
+						any_moon = {
+							has_modifier = gpm_nitrogen_ice
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_nitrogen_extraction days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_chlorine_planet
+						any_moon = {
+							has_modifier = gpm_chlorine_planet
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_chlorine_extraction days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_phosphorus_planet
+						any_moon = {
+							has_modifier = gpm_phosphorus_planet
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_phosphorus_extraction days = -1 } 
+				}
+			}
+		}
+		# check if parent planet has X modifier:
+		from.planet = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = gpm_sulfur_planet
+						any_moon = {
+							has_modifier = gpm_sulfur_planet
+						}
+					}
+				}
+				# spawn matching X habitat modifier
+				event_target:gpm_new_constructed_habitat = {
+					add_modifier = { modifier = gpm_habitat_sulfur_extraction days = -1 } 
+				}
+			}
+		}				
+	}
+}
+
+gpm_roll_habitat_modifiers = {
+	if = {
+		limit = { 
+			has_planet_flag = gpm_is_galaxy_generated_habitat
+		}
+		# gpm_add_habitat_infrastructure = yes
+		switch = {
+			trigger = has_global_flag
+			gpm_modifier_amount_max_one = {
+				gpm_spawn_constructed_habitat_modifier = yes
+			}
+			gpm_modifier_amount_low = {
+				gpm_spawn_constructed_habitat_modifier = yes
+				while = {
+					count = 1
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							25 = { }
+							75 = { 
+								gpm_spawn_constructed_habitat_modifier = yes
+								modifier = { factor = 0.5 num_modifiers > 1 }
+							}
+						}
+					}
+				}
+			}
+			gpm_modifier_amount_normal = {
+				gpm_spawn_constructed_habitat_modifier = yes
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { }
+							75 = { 
+								gpm_spawn_constructed_habitat_modifier = yes
+								modifier = { factor = 0.5 num_modifiers > 1 }
+								modifier = { factor = 0.25 num_modifiers > 2 }
+							}
+						}
+					}
+				}
+			}
+			gpm_modifier_amount_high = {
+				gpm_spawn_constructed_habitat_modifier = yes
+				if = {
+					limit = { num_modifiers = 0 }
+					gpm_spawn_constructed_habitat_modifier = yes
+				}
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { }
+							75 = { 
+								gpm_spawn_constructed_habitat_modifier = yes
+								modifier = { factor = 0.5 num_modifiers > 1 }
+								modifier = { factor = 0.25 num_modifiers > 2 }
+							}
+						}
+					}
+				}
+			}
+			default = { }
+		}
+	}
+}
+
+gpm_roll_constructed_ringworld_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			if = {
+				limit = { num_modifiers = 0 }
+				random_list = {
+					50 = { }
+					50 = { gpm_spawn_constructed_ringworld_modifier = yes }
+				}
+			}
+		}
+		gpm_modifier_amount_low = {
+			while = {
+				count = 2
+				if = {
+					limit = { num_modifiers < 2 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_constructed_ringworld_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_normal = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_constructed_ringworld_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			if = {
+				limit = { num_modifiers = 0 }
+				gpm_spawn_constructed_ringworld_modifier = yes
+			}
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_constructed_ringworld_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		default = { }
+	}
+}
+
+gpm_roll_ringworld_modifiers = {
+	
+}
+
+
+

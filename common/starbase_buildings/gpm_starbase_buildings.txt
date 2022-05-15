@@ -1,0 +1,65 @@
+gpm_precursor_shipyards_uplink = {
+	icon = "GFX_gpm_spaceport_module_precursor_shipyard_uplink" #sb_precursor_shipyard_uplink
+	construction_days = 360
+	
+	potential = {
+		solar_system = {
+			OR = {
+				has_star_flag = gpm_precursor_shipyards_star
+				any_system_planet = {
+					has_modifier = gpm_precursor_shipyards
+				}
+			}
+		}
+	}
+	
+	possible = {
+		solar_system = {
+			OR = {
+				has_star_flag = gpm_precursor_shipyards_star
+				any_system_planet = {
+					has_modifier = gpm_precursor_shipyards
+				}
+			}
+		}
+	}
+	
+	initial = yes
+	resources = {
+		category = starbase_buildings
+		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 1000
+			
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
+			alloys = 1000
+			minor_artifacts = 25
+		}
+
+		upkeep = {
+			energy = 20
+			alloys = 5
+		}
+	}
+	
+	station_modifier = {
+		starbase_shipyard_capacity_add = 10
+	}
+
+	country_modifier = {
+		starbase_shipyard_build_cost_mult = -0.05
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 1000
+	}
+}
+

@@ -1,0 +1,195 @@
+# gpm_utopian_world
+# gpm_utopian_services
+# gpm_primitive_reserve
+# gpm_unified_processing
+# gpm_planetary_shielding_FE
+# gpm_living_infrastructure
+# gpm_galactic_databanks
+# gpm_monument_to_the_fallen
+# gpm_longevity
+# gpm_culture_of_games
+# gpm_weather_control
+# gpm_subterranean_paradise
+# gpm_space_elevators
+# gpm_artificial_landscaping
+# gpm_teleportation_systems
+
+# Total modifiers: 8
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 12.5
+# Abundancy Settings and factors used for tweaking
+@rare = 0.1
+@uncommon = 0.5
+@default = 1
+@plenty = 2
+@everywhere = 3
+
+
+gpm_spawn_fallen_empire_world_modifier = {	
+	if = {
+		limit = {
+			NOT = { has_modifier = gpm_planetary_shielding_FE }
+			exists = owner
+			owner = {
+				has_ai_personality = fallen_empire_xenophobe
+			}
+		}
+		add_modifier = { days = -1 modifier = gpm_planetary_shielding_FE }
+		if = {
+			limit = {
+				OR = {
+					gpm_is_planet_class_city = yes
+					gpm_is_planet_class_normal_habitable = yes
+					gpm_is_planet_class_nuked = yes
+				}
+			}
+			gpm_set_fallen_empire_planetary_shields = yes
+		}
+	}
+	random_list = {
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_utopian_world multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_utopian_world } 
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_utopian_services multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_utopian_services } 
+		}
+		25 = {
+			add_modifier = { days = -1 modifier = gpm_primitive_reserve multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_primitive_reserve } 
+		}
+		125 = {
+			add_modifier = { days = -1 modifier = gpm_unified_processing multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_unified_processing } 
+		}
+		125 = {
+			add_modifier = { days = -1 modifier = gpm_planetary_shielding_FE multiplier = gpm_planet_size_multiplier }
+			if = {
+				limit = {
+					OR = {
+						gpm_is_planet_class_city = yes
+						gpm_is_planet_class_normal_habitable = yes
+						gpm_is_planet_class_nuked = yes
+					}
+				}
+				gpm_set_fallen_empire_planetary_shields = yes
+			}
+			modifier = { factor = 0 has_modifier = gpm_planetary_shielding_FE }
+			modifier = { factor = 3 is_capital = yes}
+			modifier = { factor = 0 gpm_is_planet_class_ringworld = yes }
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_living_infrastructure multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_living_infrastructure } 
+			modifier = { factor = 0 has_modifier = gpm_artificial_landscaping }
+			modifier = { factor = 0 gpm_is_planet_class_ringworld = yes }
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_galactic_databanks multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_galactic_databanks } 
+		}
+		25 = {
+			add_modifier = { days = -1 modifier = gpm_monument_to_the_fallen multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_monument_to_the_fallen } 
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_longevity multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_longevity } 
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_culture_of_games multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_culture_of_games } 
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_weather_control multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_weather_control } 
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_subterranean_paradise multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_subterranean_paradise } 
+			modifier = { factor = 0 gpm_is_planet_class_ringworld = yes }
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_space_elevators multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_space_elevators } 
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_artificial_landscaping multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_artificial_landscaping }
+			modifier = { factor = 0 has_modifier = gpm_living_infrastructure }
+			modifier = { factor = 0 gpm_is_planet_class_ringworld = yes }
+		}
+		175 = {
+			add_modifier = { days = -1 modifier = gpm_teleportation_systems multiplier = gpm_planet_size_multiplier }
+			modifier = { factor = 0 has_modifier = gpm_teleportation_systems } 
+		}
+	}
+}
+
+gpm_roll_fallen_empire_world_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			if = {
+				limit = { num_modifiers = 0 }
+				random_list = {
+					50 = { }
+					50 = { gpm_spawn_fallen_empire_world_modifier = yes }
+				}
+			}
+		}
+		gpm_modifier_amount_low = {
+			while = {
+				count = 2
+				if = {
+					limit = { num_modifiers < 2 }
+					random_list = {
+						25 = { }
+						75 = { 
+							gpm_spawn_fallen_empire_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_normal = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						25 = { }
+						75 = { 
+							gpm_spawn_fallen_empire_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			if = {
+				limit = { num_modifiers = 0 }
+				gpm_spawn_fallen_empire_world_modifier = yes
+			}
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						25 = { }
+						75 = { 
+							gpm_spawn_fallen_empire_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		default = { }
+	}
+}

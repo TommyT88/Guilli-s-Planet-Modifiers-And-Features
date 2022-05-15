@@ -1,0 +1,173 @@
+# namespace = gpm_system_mining
+
+# MINERALS MOON
+# ship_event = {
+# 	id = gpm_system_mining.1
+# 	title = "PROJECT_COMPLETE"
+# 	desc = "gpm_system_mining.1.desc"
+# 	picture = GFX_evt_ruined_system
+# 	location = FROMFROM
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		FROMFROM = {
+# 			remove_planet_flag = gpm_has_special_project
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = gpm_system_mining.1.moonminerals
+# 		FROMFROM = {
+# 			locked_random_list = {
+# 				16 = {
+# 					add_deposit = d_minerals_1
+# 					modifier = { factor = 0 root.owner = { has_technology = gpm_tech_automated_launch_sites } }
+# 				}
+# 				4 = { add_deposit = d_minerals_2 }
+# 				1 = { add_deposit = d_minerals_3 }
+# 			}
+# 			locked_random_list = {
+# 				1 = { add_resource = { minerals = 55 } }
+# 				2 = { add_resource = { minerals = 65 } }
+# 				4 = { add_resource = { minerals = 75 } }
+# 				2 = { add_resource = { minerals = 85 } }
+# 				1 = { add_resource = { minerals = 95 } }
+# 			}
+# 			if = {
+# 				limit = {
+# 					root.owner = { has_technology = gpm_tech_automated_launch_sites }
+# 				}
+# 				create_mining_station = {
+# 					owner = root.owner
+# 				}
+# 			}
+# 		}
+# 	}	
+# }
+
+# ENERGY MOON
+# ship_event = {
+# 	id = gpm_system_mining.2
+# 	title = "PROJECT_COMPLETE"
+# 	desc = "gpm_system_mining.2.desc"
+# 	picture = GFX_evt_ruined_system
+# 	location = FROMFROM
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		FROMFROM = {
+# 			remove_planet_flag = gpm_has_special_project
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = gpm_system_mining.2.moonenergy
+# 		FROMFROM = {
+# 			locked_random_list = {
+# 				16 = {
+# 					add_deposit = d_energy_1
+# 					modifier = { factor = 0 root.owner = { has_technology = gpm_tech_automated_launch_sites } }
+# 				}
+# 				4 = { add_deposit = d_energy_2 }
+# 				1 = { add_deposit = d_energy_3 }
+# 			}
+# 			if = {
+# 				limit = {
+# 					root.owner = { has_technology = gpm_tech_automated_launch_sites }
+# 				}
+# 				create_mining_station = {
+# 					owner = root.owner
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# MINERALS PLANET
+# ship_event = {
+# 	id = gpm_system_mining.3
+# 	title = "PROJECT_COMPLETE"
+# 	desc = "gpm_system_mining.3.desc"
+# 	picture = GFX_evt_ruined_system
+# 	location = FROMFROM
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		FROMFROM = {
+# 			remove_planet_flag = gpm_has_special_project
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = gpm_system_mining.3.planetminerals
+# 		FROMFROM = {
+# 			locked_random_list = {
+# 				24 = {
+# 					add_deposit = d_minerals_1
+# 					modifier = { factor = 0 root.owner = { has_technology = gpm_tech_automated_launch_sites } }
+# 				}
+# 				6 = { add_deposit = d_minerals_2 }
+# 				2 = { add_deposit = d_minerals_3 }
+# 				1 = { add_deposit = d_minerals_4 }
+# 			}
+# 			locked_random_list = {
+# 				1 = { add_resource = { minerals = 55 } }
+# 				2 = { add_resource = { minerals = 65 } }
+# 				4 = { add_resource = { minerals = 75 } }
+# 				2 = { add_resource = { minerals = 85 } }
+# 				1 = { add_resource = { minerals = 95 } }
+# 			}
+# 			if = {
+# 				limit = {
+# 					root.owner = { has_technology = gpm_tech_automated_launch_sites }
+# 				}
+# 				create_mining_station = {
+# 					owner = root.owner
+# 				}
+# 			}
+# 		}
+# 	}	
+# }
+
+# ENERGY PLANET
+# ship_event = {
+# 	id = gpm_system_mining.4
+# 	title = "PROJECT_COMPLETE"
+# 	desc = "gpm_system_mining.4.desc"
+# 	picture = GFX_evt_ruined_system
+# 	location = FROMFROM
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		FROMFROM = {
+# 			remove_planet_flag = gpm_has_special_project
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = gpm_system_mining.4.planetenergy
+# 		FROMFROM = {
+# 			locked_random_list = {
+# 				24 = {
+# 					add_deposit = d_energy_1
+# 					modifier = { factor = 0 root.owner = { has_technology = gpm_tech_automated_launch_sites } }
+# 				}
+# 				6 = { add_deposit = d_energy_2 }
+# 				2 = { add_deposit = d_energy_3 }
+# 				1 = { add_deposit = d_energy_3 }
+# 			}
+# 			if = {
+# 				limit = {
+# 					root.owner = { has_technology = gpm_tech_automated_launch_sites }
+# 				}
+# 				create_mining_station = {
+# 					owner = root.owner
+# 				}
+# 			}
+# 		}
+# 	}
+# }

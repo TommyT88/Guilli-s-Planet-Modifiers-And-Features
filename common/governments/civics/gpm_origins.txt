@@ -1,0 +1,89 @@
+
+origin_gpm_death_world = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_gpm_death_world.dds"
+	picture = GFX_origin_gpm_death_world
+	
+	possible = {
+		authority = { NOT = { value = auth_machine_intelligence } }
+	}
+	
+	description = "origin_tooltip_gpm_death_world_effects"
+	
+	flags = { gpm_death_world_start }
+	
+	advanced_start = yes
+	
+	random_weight = {
+		base = 5
+	}
+
+	traits = {
+		trait = trait_gpm_mega_adaptive
+	}
+}
+origin_gpm_precursor_world = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_gpm_precursor_world.dds"
+	picture = GFX_origin_gpm_precursor_world
+	max_once_global = yes
+	
+	# TEMPORARY DISABLED UNTIL REWORK
+	# playable = {
+	# 	always = no # Non-player origin
+	# }
+	
+	# possible = {
+	# 	authority = { NOT = { value = auth_machine_intelligence } }
+	# }
+	
+	description = "origin_tooltip_gpm_precursor_world_effects"
+	
+	flags = { gpm_precursor_world_start }
+	
+	advanced_start = yes
+	
+	random_weight = {
+		base = 5
+	}
+
+	traits = {
+		trait = trait_gpm_forgotten_species
+	}
+}
+
+origin_gpm_fallen_empire_colony = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_gpm_fallen_empire_colony.dds"
+	picture = GFX_origin_gpm_fallen_empire_colony
+	max_once_global = yes
+	
+	# starting_colony = pc_gaia
+	
+	# TEMPORARY DISABLED UNTIL REWORK
+	# playable = {
+	# 	always = no # Non-player origin
+	# }
+	
+	# possible = {
+    #     ethics = {
+    #         NOT = {
+    #             value = ethic_gestalt_consciousness
+    #         }
+    #     }
+    # }
+	
+	description = "origin_tooltip_gpm_fallen_empire_colony_effects"
+	
+	flags = { gpm_fallen_empire_colony }
+	
+	advanced_start = yes
+	
+	random_weight = {
+		base = 5
+	}
+
+	traits = {
+		trait = trait_gpm_high_status
+	}
+}

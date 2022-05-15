@@ -1,0 +1,3358 @@
+namespace = gpm_dig_site
+
+# Time lost planet 1
+fleet_event = {
+	id = gpm_dig_site.10
+	title = gpm_dig_site.10.name
+	desc = gpm_dig_site.10.desc
+	picture = GFX_evt_gpm_time_lost
+	show_sound = event_scanner
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = CURIOUS
+		owner = { 
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+# Time lost planet 2
+fleet_event = {
+	id = gpm_dig_site.11
+	title = gpm_dig_site.11.name
+	desc = gpm_dig_site.11.desc
+	picture = GFX_evt_gpm_time_lost
+	show_sound = event_sensor_ping
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = EXCELLENT
+		owner = { 
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+# Time lost planet 3
+fleet_event = {
+	id = gpm_dig_site.12
+	title = gpm_dig_site.12.name
+	desc = gpm_dig_site.12.desc
+	picture = GFX_evt_gpm_time_lost_relic
+	show_sound = event_mystic_reveal
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = FASCINATING
+		owner = { 
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
+		}
+		owner = { add_relic = gpm_r_time_displacer }
+		owner = {
+			every_relation = {
+				limit = {
+					is_country_type = default
+				}
+				create_message = {
+					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+					localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+					days = 30
+					target = root.owner.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = root.owner
+					}
+				}
+			}
+		}
+	}
+}
+
+# PrecDig 1 - Setting up camp
+fleet_event = {
+	id = gpm_dig_site.100
+	title = gpm_dig_site.100.name
+	desc = gpm_dig_site.100.desc
+	picture = GFX_evt_gpm_PrecDig_Camp
+	show_sound = event_dig_site
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.100.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+# PrecDig 2 - sending out teams
+fleet_event = {
+	id = gpm_dig_site.110
+	title = gpm_dig_site.110.name
+	desc = gpm_dig_site.110.desc
+	picture = GFX_evt_gpm_PrecDig_Teams
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = CURIOUS
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		small_artifact_reward = yes
+	}
+}
+# PrecDig 3 - sample analysis
+fleet_event = {
+	id = gpm_dig_site.120
+	title = gpm_dig_site.120.name
+	desc = gpm_dig_site.120.desc
+	picture = GFX_evt_gpm_PrecDig_Sample
+	show_sound = event_laboratory_sound
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.120.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		medium_artifact_reward = yes
+		gpm_random_precursor_empire_dig_site_bonus = yes
+	}
+}
+# PrecDig 4 - secondary team
+fleet_event = {
+	id = gpm_dig_site.130
+	title = gpm_dig_site.130.name
+	desc = gpm_dig_site.130.desc
+	picture = GFX_evt_gpm_PrecDig_Teams_02
+	show_sound = event_wind_ruins
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.130.a
+		owner = { 
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		small_artifact_reward = yes
+	}
+}
+# PrecDig 5 -locked door
+fleet_event = {
+	id = gpm_dig_site.140
+	title = gpm_dig_site.140.name
+	desc = gpm_dig_site.140.desc
+	picture = GFX_evt_gpm_PrecDig_Door
+	show_sound = event_drilling
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		fromfrom.planet = { set_planet_flag = gpm_has_precursor_digsite_progress }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.140.a
+		owner = { 
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		small_artifact_reward = yes
+	}
+}
+
+# PrecDig 6 - Random Event List Master Event
+# Random Outcome
+fleet_event = {
+	id = gpm_dig_site.9000
+	hide_window = yes
+	
+	archaeology = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list	= {
+			10 = {
+				# default
+				fleet_event = { id = gpm_dig_site.150 }
+				# log = "Digsite 6 - spawn a default precursor dig site"
+				modifier = { factor = 0
+					fromfrom.planet = {
+						NOR = { 
+							has_modifier = gpm_precursor_remnants
+							has_modifier = gpm_precursor_satalite_grid
+							has_modifier = gpm_precursor_city
+							has_modifier = gpm_precursor_ruins
+							has_modifier = gpm_precursor_obelisks
+						}
+					}
+				}
+			}
+			10 = {
+				# power array
+				fleet_event = { id = gpm_dig_site.151 }
+				# log = "Digsite 6 - spawn a gpm_precursor_energy_grid or gpm_precursor_planetary_shieldprecursor dig site"
+				modifier = { factor = 0
+					fromfrom.planet = {
+						NOR = { 
+							has_modifier = gpm_precursor_energy_grid
+							has_modifier = gpm_precursor_planetary_shield
+						}
+					}
+				}
+			}
+			0 = {
+				# ship design facility
+				fleet_event = { id = gpm_dig_site.152 }
+				# log = "Digsite 6 - spawn a gpm_precursor_shipyards precursor dig site"
+				modifier = {
+					add = 10
+					fromfrom = {
+						solar_system = {
+							any_system_planet = {
+								has_modifier = gpm_precursor_shipyards
+							}
+						}
+					}
+				}
+			}
+			10 = {
+				# orbital monitoring station
+				fleet_event = { id = gpm_dig_site.153 }
+				# log = "Digsite 6 - spawn a gpm_precursor_planetary_gun precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_gun } } }
+			}
+			10 = {
+				# bunker
+				fleet_event = { id = gpm_dig_site.154 }
+				# log = "Digsite 6 - spawn a gpm_precursor_bunker_grid or gpm_precursor_battleground_ruins precursor dig site"
+				modifier = { factor = 0
+					fromfrom.planet = {
+						NOR = { 
+							has_modifier = gpm_precursor_bunker_grid
+							has_modifier = gpm_precursor_battleground_ruins
+						}
+					}
+				}
+			}
+			10 = {
+				# command center
+				fleet_event = { id = gpm_dig_site.155 }
+				# log = "Digsite 6 - spawn a gpm_precursor_mechs precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_mechs } } }
+			}
+			10 = {
+				# crashed floating city
+				fleet_event = { id = gpm_dig_site.156 }
+				# log = "Digsite 6 - spawn a gpm_precursor_floating_city precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_floating_city } } }
+			}
+			10 = {
+				# adminstrative hub
+				fleet_event = { id = gpm_dig_site.157 }
+				# log = "Digsite 6 - spawn a gpm_precursor_capital_complex precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_capital_complex } } }
+			}
+			10 = {
+				# communication tower
+				fleet_event = { id = gpm_dig_site.158 }
+				# log = "Digsite 6 - spawn a gpm_precursor_communication_hub precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_communication_hub } } }
+			}
+			10 = {
+				# quantum databanks
+				fleet_event = { id = gpm_dig_site.159 }
+				# log = "Digsite 6 - spawn a gpm_precursor_singularity_drive precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_singularity_drive } } }
+			}
+			10 = {
+				# abadonded fortress
+				fleet_event = { id = gpm_dig_site.160 }
+				# log = "Digsite 6 - spawn a gpm_precursor_eternal_fortress precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_eternal_fortress } } }
+			}
+			10 = {
+				# escapee hideout
+				fleet_event = { id = gpm_dig_site.161 }
+				# log = "Digsite 6 - spawn a gpm_precursor_prison_planet precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_prison_planet } } }
+			}
+			10 = {
+				# mining unit storage
+				fleet_event = { id = gpm_dig_site.162 }
+				# log = "Digsite 6 - spawn a gpm_precursor_mines precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_mines } } }
+			}
+			10 = {
+				# weapons manufactory
+				fleet_event = { id = gpm_dig_site.163 }
+				# log = "Digsite 6 - spawn a gpm_precursor_manufactorium precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_manufactorium } } }
+			}
+			10 = {
+				# vaults
+				fleet_event = { id = gpm_dig_site.164 }
+				# log = "Digsite 6 - spawn a gpm_precursor_vaults precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_vaults } } }
+			}
+			10 = {
+				# burried crashed orbital
+				fleet_event = { id = gpm_dig_site.165 }
+				# log = "Digsite 6 - spawn a gpm_precursor_crashed_spacestation precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_crashed_spacestation } } }
+			}
+			10 = {
+				# outpost ruins
+				fleet_event = { id = gpm_dig_site.166 }
+				# log = "Digsite 6 - spawn a gpm_precursor_outpost_ruins precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_outpost_ruins } } }
+			}
+			10 = {
+				# harbor warehouse
+				fleet_event = { id = gpm_dig_site.167 }
+				# log = "Digsite 6 - spawn a gpm_precursor_harbor_ruins precursor dig site"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_harbor_ruins } } }
+			}
+		}
+	}
+
+	after = { 
+		from = { expire_site_event = gpm_dig_site.9000 } 
+	}
+}
+
+# PrecDig 6 -Default
+fleet_event = {
+	id = gpm_dig_site.150
+	title = gpm_dig_site.150.name
+	desc = gpm_dig_site.150.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.150.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			20 = { 
+				# log = "dig site relic no reward"
+			}
+			10 = {
+				owner = { add_relic = gpm_r_encyclopedia_galactica }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_encyclopedia_galactica_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_encyclopedia_galactica } }
+				modifier = { factor = 0 has_global_flag = gpm_r_encyclopedia_galactica_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			10 = {
+				owner = { add_relic = gpm_r_quantum_sphere }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_quantum_sphere_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_quantum_sphere } }
+				modifier = { factor = 0 has_global_flag = gpm_r_quantum_sphere_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			10 = {
+				owner = { add_relic = gpm_r_ai_architect }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_ai_architect_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_ai_architect } }
+				modifier = { factor = 0 has_global_flag = gpm_r_ai_architect_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			10 = {
+				owner = { add_relic = gpm_r_soul_gem }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_soul_gem_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_soul_gem } }
+				modifier = { factor = 0 has_global_flag = gpm_r_soul_gem_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			10 = {
+				owner = { add_relic = gpm_r_self_repairing_obelisk }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_self_repairing_obelisk_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_self_repairing_obelisk } }
+				modifier = { factor = 0 has_global_flag = gpm_r_self_repairing_obelisk_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_remnants_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_remnants_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_remnants_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_remnants_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_remnants_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_remnants_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_satellite_grid_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_satellite_grid_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_satellite_grid_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_satellite_grid_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_satellite_grid_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_satellite_grid_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_city_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_city_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_city_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_city } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_city_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_city_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_city_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_city } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_supermaterials_precursor
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_supermaterials_precursor progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_supermaterials_precursor } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_city } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_ruins_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_ruins_discovery progress = 0.33 } }
+					
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_ruins_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_ruins_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_ruins_discovery_2 progress = 0.33 } }
+					
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_ruins_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_obelisks_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_obelisks_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_obelisks_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_obelisks_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				leader = { add_trait = leader_trait_scientist_psionic }
+				modifier = { factor = 0 leader = { has_trait = leader_trait_scientist_psionic } }
+				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
+				# log = "gpm_random_reward_precursor_obelisks : leader_trait_scientist_psionic"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.150.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				leader = { add_trait = leader_trait_scientist_psionic }
+				modifier = { factor = 0 leader = { has_trait = leader_trait_scientist_psionic } }
+				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
+				# log = "gpm_random_reward_precursor_obelisks : leader_trait_scientist_psionic"
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+			}
+		}
+	}
+}
+# PrecDig 6 -power array
+fleet_event = {
+	id = gpm_dig_site.151
+	title = gpm_dig_site.151.name
+	desc = gpm_dig_site.151.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.151.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		
+		# root.prev = { from = { add_modifier = { modifier = gpm_precursor_planetary_shield } } }
+		
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			10 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_zero_energy_generator }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_zero_energy_generator_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_zero_energy_generator } }
+				modifier = { factor = 0 has_global_flag = gpm_r_zero_energy_generator_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+
+				#check for modifier
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
+			}
+			15 = {
+				owner = { add_relic = gpm_r_mysterious_shield_generator }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_mysterious_shield_generator_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_mysterious_shield_generator } }
+				modifier = { factor = 0 has_global_flag = gpm_r_mysterious_shield_generator_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+
+				#check for modifier
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_energy_grid_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_energy_grid_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_energy_grid_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_energy_grid_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_energy_grid_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_energy_grid_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_planetary_shield_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_planetary_shield_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_shield_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_planetary_shield_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_planetary_shield_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_shield_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_enigmatic_power_relays
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_enigmatic_power_relays progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_enigmatic_power_relays } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.151.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+	}
+}
+# PrecDig 6 -ship disign facilicy
+fleet_event = {
+	id = gpm_dig_site.152
+	title = gpm_dig_site.152.name
+	desc = gpm_dig_site.152.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.152.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_encrypted_sct }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_encrypted_sct_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_encrypted_sct } }
+				modifier = { factor = 0 has_global_flag = gpm_r_encrypted_sct_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_shipyards_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_shipyards_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_shipyards_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_shipyards_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_shipyards_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_shipyards_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				custom_tooltip = gpm_reward_precursor_ship
+				from = {
+					create_fleet = {
+						name = "NAME_precursor_fleet"
+						settings = {
+							spawn_debris = no
+						}
+						effect = {
+							set_owner = root.owner
+							create_ship_design = {
+								design = "NAME_gpm_precursor_ship"
+							}
+							create_ship = {
+								name = "NAME_precursor_ship_name"
+								design = last_created_design
+								prefix = no
+								upgradable = no
+							}
+							set_location = fromfrom.planet
+						}
+					}
+				}
+				# log = "gpm_random_reward_precursor_shipyards : gpm_reward_precursor_ship"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.152.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}		
+	}
+}
+# PrecDig 6 -orbital monitoring station
+fleet_event = {
+	id = gpm_dig_site.153
+	title = gpm_dig_site.153.name
+	desc = gpm_dig_site.153.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.153.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_experimental_weapon }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_experimental_weapon_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_experimental_weapon } }
+				modifier = { factor = 0 has_global_flag = gpm_r_experimental_weapon_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_planetary_gun_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_planetary_gun_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_gun_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_planetary_gun_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_planetary_gun_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_gun_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		
+		locked_random_list = {
+			5 = { owner = { gpm_random_reward_precursor_planetary_gun = yes } }
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.153.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+	}
+}
+# PrecDig 6 -bunker
+fleet_event = {
+	id = gpm_dig_site.154
+	title = gpm_dig_site.154.name
+	desc = gpm_dig_site.154.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.154.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			10 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_fallout_emergency_replicator }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_fallout_emergency_replicator_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_fallout_emergency_replicator } }
+				modifier = { factor = 0 has_global_flag = gpm_r_fallout_emergency_replicator_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+
+				#check for modifier
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+			}
+			15 = {
+				owner = {
+					add_relic = gpm_r_banner_of_the_fallen
+					hidden_effect = { country_event = { id = gpm_relics.20 } } # adds trait to admirals
+				}
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_banner_of_the_fallen_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_banner_of_the_fallen } }
+				modifier = { factor = 0 has_global_flag = gpm_r_banner_of_the_fallen_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+
+				#check for modifier
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_bunker_grid_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_bunker_grid_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_bunker_grid_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_bunker_grid_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_bunker_grid_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_bunker_grid_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_battleground_ruins_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_battleground_ruins_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_battleground_ruins_discovery } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_battleground_ruins_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_battleground_ruins_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_battleground_ruins_discovery_2 } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_fallen_heraldry_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.20 } } } # adds trait to admirals
+				}
+				custom_tooltip = gpm_fallen_heraldry_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_fallen_heraldry_trait_rewarded } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			1 = {
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_battle_standards_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.40 } } } # adds trait to generals
+				}
+				custom_tooltip = gpm_battle_standards_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_battle_standards_trait_rewarded } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.154.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_fallen_heraldry_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.20 } } } # adds trait to admirals
+				}
+				custom_tooltip = gpm_fallen_heraldry_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_fallen_heraldry_trait_rewarded } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			1 = {
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_battle_standards_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.40 } } } # adds trait to generals
+				}
+				custom_tooltip = gpm_battle_standards_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_battle_standards_trait_rewarded } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+# PrecDig 6 -command center
+fleet_event = {
+	id = gpm_dig_site.155
+	title = gpm_dig_site.155.name
+	desc = gpm_dig_site.155.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.155.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_power_core }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_power_core_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_power_core } }
+				modifier = { factor = 0 has_global_flag = gpm_r_power_core_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_mechs_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_mechs_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mechs_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_mechs_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_mechs_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mechs_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_personal_mech_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.50 } } } # adds trait to generals
+				}
+				custom_tooltip = gpm_personal_mech_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_personal_mech_trait_rewarded } }
+				# log = "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.155.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_personal_mech_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.50 } } } # adds trait to generals
+				}
+				custom_tooltip = gpm_personal_mech_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_personal_mech_trait_rewarded } }
+				# log = "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+# PrecDig 6 -crashed floating city
+fleet_event = {
+	id = gpm_dig_site.156
+	title = gpm_dig_site.156.name
+	desc = gpm_dig_site.156.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.156.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_gravity_engine }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_gravity_engine_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_gravity_engine } }
+				modifier = { factor = 0 has_global_flag = gpm_r_gravity_engine_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_floating_city_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_floating_city_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_floating_city_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_floating_city_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_floating_city_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_floating_city_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.156.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -administrative hub
+fleet_event = {
+	id = gpm_dig_site.157
+	title = gpm_dig_site.157.name
+	desc = gpm_dig_site.157.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.157.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_codex_administratum }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_codex_administratum_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_codex_administratum } }
+				modifier = { factor = 0 has_global_flag = gpm_r_codex_administratum_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_capital_complex_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_capital_complex_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_capital_complex_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_capital_complex_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_capital_complex_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_capital_complex_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				leader = { add_trait = trait_gpm_historian }
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_historian_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.30 } } } # adds trait to ruler
+				}
+				custom_tooltip = gpm_historian_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_historian_trait_rewarded } }
+				modifier = { factor = 0 owner = { is_hive_empire = yes } }
+				# log = "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.157.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				leader = { add_trait = trait_gpm_historian }
+				hidden_effect = { 
+					owner = { set_country_flag = gpm_historian_trait_rewarded }
+					hidden_effect = { owner = { country_event = { id = gpm_relics.30 } } } # adds trait to ruler
+				}
+				custom_tooltip = gpm_historian_trait_rewarded_tooltip
+				modifier = { factor = 0 owner = { has_country_flag = gpm_historian_trait_rewarded } }
+				modifier = { factor = 0 owner = { is_hive_empire = yes } }
+				# log = "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+# PrecDig 6 -communication tower
+fleet_event = {
+	id = gpm_dig_site.158
+	title = gpm_dig_site.158.name
+	desc = gpm_dig_site.158.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.158.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_enigmatic_advisor }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_enigmatic_advisor_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_enigmatic_advisor } }
+				modifier = { factor = 0 has_global_flag = gpm_r_enigmatic_advisor_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_communication_hub_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_communication_hub_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_communication_hub_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_communication_hub_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_communication_hub_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_communication_hub_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.158.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -quantum databanks
+fleet_event = {
+	id = gpm_dig_site.159
+	title = gpm_dig_site.159.name
+	desc = gpm_dig_site.159.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.159.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_positronic_microchip }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_positronic_microchip_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_positronic_microchip } }
+				modifier = { factor = 0 has_global_flag = gpm_r_positronic_microchip_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_singularity_drive_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_singularity_drive_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_singularity_drive_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_singularity_drive_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_singularity_drive_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_singularity_drive_discovery_2 } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_singularity_matrix
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_singularity_matrix progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_singularity_matrix } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				hidden_effect = {
+					set_global_flag = gpm_enigmatic_hack_happened
+					owner = { 
+						every_owned_pop = {
+							limit = {
+								is_robot_pop = yes
+							}
+							modify_species = {
+								species = this
+								add_trait = trait_gpm_enigmatic_update
+							}
+						}
+					}
+				}
+				custom_tooltip = gpm_enigmatic_update_rewarded
+				modifier = { factor = 0 has_global_flag = gpm_enigmatic_hack_happened }
+				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
+				# log = "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.159.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				hidden_effect = {
+					set_global_flag = gpm_enigmatic_hack_happened
+					owner = { 
+						every_owned_pop = {
+							limit = {
+								is_robot_pop = yes
+							}
+							modify_species = {
+								species = this
+								add_trait = trait_gpm_enigmatic_update
+							}
+						}
+					}
+				}
+				custom_tooltip = gpm_enigmatic_update_rewarded
+				modifier = { factor = 0 has_global_flag = gpm_enigmatic_hack_happened }
+				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
+				# log = "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+# PrecDig 6 -abandoned fortress
+fleet_event = {
+	id = gpm_dig_site.160
+	title = gpm_dig_site.160.name
+	desc = gpm_dig_site.160.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.160.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_venerable_dreadnaught }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_venerable_dreadnaught_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_venerable_dreadnaught } }
+				modifier = { factor = 0 has_global_flag = gpm_r_venerable_dreadnaught_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_eternal_fortress_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_eternal_fortress_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_eternal_fortress_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_eternal_fortress_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_eternal_fortress_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_eternal_fortress_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.160.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -escapee hideout
+fleet_event = {
+	id = gpm_dig_site.161
+	title = gpm_dig_site.161.name
+	desc = gpm_dig_site.161.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.161.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_sentinel_queen }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_sentinel_queen_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_sentinel_queen } }
+				modifier = { factor = 0 has_global_flag = gpm_r_sentinel_queen_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_prison_planet_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_prison_planet_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_prison_planet_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_prison_planet_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_prison_planet_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_prison_planet_discovery_2 } }
+				modifier = { factor = 0 owner = { is_gestalt = yes } }
+			}
+			10 = {
+				owner = {
+					hidden_effect = { set_country_flag = gpm_core_prison_rewarded }
+					custom_tooltip = gpm_core_prison_rewarded_tt
+				}
+				modifier = { factor = 0 owner = { has_country_flag = gpm_core_prison_rewarded } }
+				# log = "gpm_random_reward_precursor_prison_planet : gpm_core_prison_rewarded"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.161.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -mining unit storage
+fleet_event = {
+	id = gpm_dig_site.162
+	title = gpm_dig_site.162.name
+	desc = gpm_dig_site.162.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.162.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_earthquake_engine }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_earthquake_engine_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_earthquake_engine } }
+				modifier = { factor = 0 has_global_flag = gpm_r_earthquake_engine_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_mines_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_mines_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mines_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_mines_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_mines_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mines_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.162.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -weapons manufactory
+fleet_event = {
+	id = gpm_dig_site.163
+	title = gpm_dig_site.163.name
+	desc = gpm_dig_site.163.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.163.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward" 
+			}
+			15 = {
+				owner = { add_relic = gpm_r_manufactorium_ship }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_manufactorium_ship_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_manufactorium_ship } }
+				modifier = { factor = 0 has_global_flag = gpm_r_manufactorium_ship_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_manufactorium_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_manufactorium_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_manufactorium_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_manufactorium_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_manufactorium_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_manufactorium_discovery_2 } }
+				modifier = { factor = 0 owner = { is_gestalt = yes } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_manufactory_hub
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_manufactory_hub progress = 0.33 } }
+					# log = "gpm_random_reward_precursor_manufactorium : tech_gpm_manufactory_hub"
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_manufactory_hub } }
+				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			10 = {
+				owner = {
+					locked_random_list = {
+						10 = { add_resource = { consumer_goods = 2500 } }
+						10 = { add_resource = { consumer_goods = 3000 } }
+						10 = { add_resource = { consumer_goods = 3500 } }
+						10 = { add_resource = { consumer_goods = 4000 } }
+						10 = { add_resource = { consumer_goods = 4500 } }
+						10 = { add_resource = { consumer_goods = 5000 } }
+					}
+					# log = "gpm_random_reward_precursor_manufactorium : consumer_goods"
+				}
+				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				custom_tooltip = gpm_reward_manufactorium_ship
+				fromfrom.planet = {
+					create_fleet = {
+						name = "NAME_manufactorium_fleet"
+						settings = {
+							spawn_debris = no
+						}
+						effect = {
+							set_owner = root.owner
+							create_ship_design = {
+								design = "NAME_gpm_manufactorium_ship"
+							}
+							create_ship = {
+								name = "NAME_manufactorium_ship_name"
+								design = last_created_design
+								prefix = no
+								upgradable = no
+							}
+							set_location = fromfrom.planet
+						}
+					}
+				}
+				# log = "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.163.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				custom_tooltip = gpm_reward_manufactorium_ship
+				fromfrom.planet = {
+					create_fleet = {
+						name = "NAME_manufactorium_fleet"
+						settings = {
+							spawn_debris = no
+						}
+						effect = {
+							set_owner = root.owner
+							create_ship_design = {
+								design = "NAME_gpm_manufactorium_ship"
+							}
+							create_ship = {
+								name = "NAME_manufactorium_ship_name"
+								design = last_created_design
+								prefix = no
+								upgradable = no
+							}
+							set_location = fromfrom.planet
+							owner = { add_intel = { amount = 100 who = root.owner } }
+						}
+					}
+				}
+				# log = "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+# PrecDig 6 -vaults
+fleet_event = {
+	id = gpm_dig_site.164
+	title = gpm_dig_site.164.name
+	desc = gpm_dig_site.164.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.164.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward" 
+			}
+			15 = {
+				owner = { add_relic = gpm_r_datacube }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_datacube_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_datacube } }
+				modifier = { factor = 0 has_global_flag = gpm_r_datacube_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_vaults_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_vaults_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_vaults_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_vaults_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_vaults_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_vaults_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				leader = { add_trait = leader_trait_scientist_brainslug }
+				modifier = { factor = 0 leader = { has_trait = leader_trait_scientist_brainslug } }
+				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
+				# log = "gpm_random_reward_precursor_vaults : leader_trait_scientist_brainslug"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			1 = {
+				leader = { add_trait = leader_trait_cataloger }
+				modifier = { factor = 0 leader = { has_trait = leader_trait_cataloger } }
+				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
+				# log = "gpm_random_reward_precursor_vaults : leader_trait_cataloger"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.164.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+		locked_random_list = {
+			5 = { }
+			1 = {
+				leader = { add_trait = leader_trait_scientist_brainslug }
+				modifier = { factor = 0 leader = { has_trait = leader_trait_scientist_brainslug } }
+				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
+				# log = "gpm_random_reward_precursor_vaults : leader_trait_scientist_brainslug"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+			1 = {
+				leader = { add_trait = leader_trait_cataloger }
+				modifier = { factor = 0 leader = { has_trait = leader_trait_cataloger } }
+				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
+				# log = "gpm_random_reward_precursor_vaults : leader_trait_cataloger"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+# PrecDig 6 -burries crashed orbital
+fleet_event = {
+	id = gpm_dig_site.165
+	title = gpm_dig_site.165.name
+	desc = gpm_dig_site.165.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.165.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_self_assembly_hub }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_self_assembly_hub_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_self_assembly_hub } }
+				modifier = { factor = 0 has_global_flag = gpm_r_self_assembly_hub_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_crashed_spacestation_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_crashed_spacestation_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_crashed_spacestation_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_crashed_spacestation_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_crashed_spacestation_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_crashed_spacestation_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.165.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -outpost ruins
+fleet_event = {
+	id = gpm_dig_site.166
+	title = gpm_dig_site.166.name
+	desc = gpm_dig_site.166.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.166.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = { 
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { 
+					add_relic = gpm_r_cloaking_device
+					hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
+				}
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_cloaking_device_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_cloaking_device } }
+				modifier = { factor = 0 has_global_flag = gpm_r_cloaking_device_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_outpost_ruins_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_outpost_ruins_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_outpost_ruins_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_outpost_ruins_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_outpost_ruins_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_outpost_ruins_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.166.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}
+# PrecDig 6 -harbor warehouse
+fleet_event = {
+	id = gpm_dig_site.167
+	title = gpm_dig_site.167.name
+	desc = gpm_dig_site.167.desc
+	picture = GFX_evt_gpm_PrecDig_Reward
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+
+	option = {
+		name = gpm_dig_site.167.a
+		custom_tooltip = gpm_survey_reward_empire
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4unityreward
+				min = @tier4materialmin
+				max = @tier4materialmax
+			}
+		}
+		# custom_tooltip = gpm_survey_reward_new_line
+		owner = { gpm_random_precursor_tech_reward = yes }
+		## Minor Relics Reward ##
+		owner = { gpm_random_minor_artifacts_precursor_big = yes }
+		## Relic Drop Chance ##
+		locked_random_list = {
+			5 = {
+				# log = "dig site relic no reward"
+			}
+			15 = {
+				owner = { add_relic = gpm_r_q_storage_compressor }
+				owner = {
+					every_relation = {
+						limit = {
+							is_country_type = default
+						}
+						create_message = {
+							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							days = 30
+							target = root.owner.capital_scope
+							variable = {
+								type = name
+								localization = COUNTRY
+								scope = root.owner
+							}
+						}
+					}
+				}
+				set_global_flag = gpm_r_q_storage_compressor_found
+				modifier = { factor = 0 owner = { has_relic = gpm_r_q_storage_compressor } }
+				modifier = { factor = 0 has_global_flag = gpm_r_q_storage_compressor_found }
+				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
+				# modifier = { factor = 2 owner = { is_ai = yes } }
+				
+				# prevent from appearing if the relics are disabled
+				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Guaranteed Rewards ##
+		locked_random_list = {
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_harbor_ruins_discovery
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_harbor_ruins_discovery progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_harbor_ruins_discovery } }
+			}
+			10 = {
+				owner = {
+					add_research_option = tech_gpm_precursor_harbor_ruins_discovery_2
+					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_harbor_ruins_discovery_2 progress = 0.33 } }
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_harbor_ruins_discovery_2 } }
+			}
+			1 = {
+				gpm_random_precursor_building_reward = yes
+				# log = "gpm_random_precursor_building_reward"
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+	# Megacorp option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+		
+		name = gpm_dig_site.167.MEGACORP
+		custom_tooltip = gpm_survey_reward_empire
+		owner = { add_resource = { influence = 200 } }
+		owner = { gpm_random_precursor_tech_reward = yes }
+		custom_tooltip = gpm_dig_site_black_market
+		owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 10000 } }
+				22 = { add_resource = { energy = 12500 } }
+				33 = { add_resource = { energy = 13750 } }
+				44 = { add_resource = { energy = 15000 } }
+				33 = { add_resource = { energy = 16250 } }
+				22 = { add_resource = { energy = 17500 } }
+				11 = { add_resource = { energy = 20000 } }
+			}
+		}
+		## Bonus Possible Rewards ##
+	}
+}

@@ -1,0 +1,240 @@
+		# 100 = {
+			# add_modifier = { modifier = "0000000000000" }
+			# Not with these modifiers
+			# modifier = { factor = 0 has_modifier = "0000000000000" }
+			# Not on these planets
+			# Tweaks
+			# Weight Factor
+			# modifier = { factor = @default }
+		# }
+
+# Total modifiers: x
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
+
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+# Planetary Ring Adjuster
+@ringfactor = 1.35
+
+gpm_spawn_frozen_world_modifier = {
+	random_list = {
+		100 = {
+			add_modifier = { modifier = "gpm_cryogeysers" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_cryogeysers" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			modifier = { factor = 2 is_moon = yes }
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @plenty }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_hot_geysers" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_hot_geysers" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			modifier = { factor = 2 is_moon = yes }
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_subterranean_eco_system" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_subterranean_eco_system" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			modifier = { factor = 2 is_moon = yes }
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_solidified_core" }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_solidified_core"
+					has_modifier = "gpm_very_hot_core"
+					has_modifier = "gpm_strong_volcanism"
+					has_modifier = "gpm_strong_magnetic_field_2"
+					has_modifier = "gpm_weak_magnetic_field_2"
+					has_modifier = "gpm_unstable_tectonics_2"
+					has_modifier = "weak_magnetic_field"
+					has_modifier = "strong_magnetic_field"
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			modifier = { factor = 2 is_moon = yes }
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @plenty }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_cracking_surface" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_cracking_surface" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_water_pockets" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_water_pockets" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_hydrogen_mist" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_hydrogen_mist" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_hydrogen_ice" }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_hydrogen_ice"
+					has_modifier = "gpm_nitrogen_ice"
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_nitrogen_ice" }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_hydrogen_ice"
+					has_modifier = "gpm_nitrogen_ice"
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+	}
+}
+
+gpm_roll_frozen_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			if = {
+				limit = { num_modifiers = 0 }
+				random_list = {
+					80 = { }
+					10 = { gpm_spawn_normal_uninhabitabe_world_modifier = yes }
+					10 = { gpm_spawn_frozen_world_modifier = yes }
+				}
+			}
+		}
+		gpm_modifier_amount_low = {
+			while = {
+				count = 2
+				if = {
+					limit = { num_modifiers < 2 }
+					random_list = {
+						80 = { }
+						10 = { 
+							gpm_spawn_normal_uninhabitabe_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+						10 = { 
+							gpm_spawn_frozen_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_normal = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						70 = { }
+						15 = { 
+							gpm_spawn_normal_uninhabitabe_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+						15 = { 
+							gpm_spawn_frozen_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			if = {
+				limit = { num_modifiers = 0 }
+				gpm_spawn_frozen_world_modifier = yes
+			}
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						60 = { }
+						20 = { 
+							gpm_spawn_normal_uninhabitabe_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+						20 = { 
+							gpm_spawn_frozen_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		default = { }
+	}
+}

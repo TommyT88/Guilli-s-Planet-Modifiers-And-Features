@@ -1,0 +1,193 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+gpm_exploration_policy = {
+	potential = {
+		
+	}
+
+	option = {
+		name = "gpm_scientific_curiosity"
+		
+		policy_flags = {
+			gpm_more_discovery_rewards
+		}
+
+		modifier = {
+			science_ship_survey_speed = -0.30
+			ship_anomaly_generation_chance_mult = 0.05
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 3
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 6
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 4
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 2
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 2
+				has_ascension_perk = ap_technological_ascendancy
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality_behaviour = isolationist
+			}
+			modifier = {
+				factor = 1.5
+				is_megacorp = yes 
+			}
+		}
+	}
+
+	option = {
+		name = "gpm_to_boldly_go"
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0.25
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 1.5
+				has_ascension_perk = ap_technological_ascendancy
+			}
+			modifier = {
+				factor = 1.25
+				has_ai_personality_behaviour = multispecies
+				has_country_flag = has_encountered_other_empire
+			}
+			modifier = {
+				factor = 1.5
+				has_ai_personality = federation_builders
+				has_country_flag = has_encountered_other_empire
+			}
+			modifier = {
+				factor = 1.25
+				is_megacorp = yes 
+			}
+		}
+	}
+
+	option = {
+		name = "gpm_long_range_scans"
+		
+		# TO DO change this to "less rewards", no rewards isn't fun
+		policy_flags = {
+			gpm_no_discovery_rewards
+		}
+
+		modifier = {
+			science_ship_survey_speed = 0.50
+		}
+
+		AI_weight = {
+			factor = 5
+			modifier = {
+				factor = 0.1
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+			modifier = {
+				factor = 6
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 4
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 4
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 3
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 3
+				is_hive_empire = yes
+			}
+			modifier = {
+				factor = 2
+				has_ascension_perk = ap_galactic_force_projection
+			}
+			modifier = {
+				factor = 1.5
+				has_ascension_perk = ap_interstellar_dominion
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = fanatic_befrienders
+				has_country_flag = has_encountered_other_empire
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality_behaviour = conqueror
+				has_country_flag = has_encountered_other_empire
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality_behaviour = subjugator
+				has_country_flag = has_encountered_other_empire
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_valid_civic = "civic_fanatic_purifiers"
+					has_valid_civic = "civic_hive_devouring_swarm"
+					has_valid_civic = "civic_machine_terminator"
+				}
+				has_country_flag = has_encountered_other_empire
+			}
+			modifier = {
+				factor = 1.5
+				is_at_war = yes
+			}
+		}
+	}
+}
+

@@ -1,0 +1,617 @@
+##########################################################################
+# Decisions
+##########################################################################
+# decision_gpm_ringworld_ = {
+	# owned_planets_only = yes
+	# sound = event_administrative_work
+	# icon = decision_gpm_seasonal_flooding
+	# enactment_time = 270
+
+	# resources = {
+		# category = decisions
+		# cost = {
+			# minerals = 2000
+		# }
+	# }
+
+	# potential = {
+		# owner = { is_regular_empire = yes }
+		# NOT = { has_modifier = 000000000000000 }
+		# gpm_is_planet_class_ringworld = yes
+	# }
+	
+	# allow = {
+		# NOT = { has_modifier = 000000000000000 }
+	# }
+
+	# effect = {
+		# add_modifier = { modifier = 000000000000000 }
+	# }
+	
+	# ai_weight = {
+		# weight = 10
+	# }
+# }
+
+decision_gpm_ringworld_parabolic_forcefield = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_parabolic_forcefield
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			sr_zro = 500
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_breath_taking_view }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_parabolic_forcefield }
+	}
+	
+	allow = {
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_breath_taking_view }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 550
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 1000
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 5
+			num_pops > 20
+		}
+		modifier = {
+			factor = 20
+			num_pops > 50
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+	}
+}
+
+decision_gpm_ringworld_neural_nexus = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_neural_nexus
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			alloys = 5000
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_neural_nexus }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_neural_nexus }
+	}
+	
+	allow = {
+		NOT = { has_modifier = gpm_ringworld_badlands }
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_neural_nexus }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 6000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 10000
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 5
+			num_pops > 20
+		}
+		modifier = {
+			factor = 20
+			num_pops > 50
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_gpm_ringworld_idyllic_gardens = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_idyllic_gardens
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			alloys = 2000
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_idyllic_gardens }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_idyllic_gardens }
+	}
+	
+	allow = {
+		num_pops > 50
+		NOT = { has_modifier = gpm_ringworld_badlands }
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_idyllic_gardens }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 6000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 10000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			num_pops > 75
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_gpm_ringworld_xeno_zoo = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_xeno_zoo
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			alloys = 2000
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_xeno_zoo }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_xeno_zoo }
+	}
+	
+	allow = {
+		NOT = { has_modifier = gpm_ringworld_badlands }
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_xeno_zoo }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 6000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 10000
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 5
+			num_pops > 20
+		}
+		modifier = {
+			factor = 20
+			num_pops > 50
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_gpm_ringworld_badlands = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_badlands
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			alloys = 2000
+		}
+	}
+
+	potential = {
+		owner = { is_gestalt = no }
+		owner = {
+			OR = {
+				has_authority = auth_corporate
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		NOT = { has_modifier = gpm_ringworld_badlands }
+		gpm_is_planet_class_ringworld = yes
+	}
+	
+	allow = {
+		NOR = {
+			has_modifier = gpm_ringworld_xeno_zoo
+			has_modifier = gpm_ringworld_idyllic_gardens
+			has_modifier = gpm_ringworld_neural_nexus
+			has_modifier = gpm_ringworld_mass_transit_systems
+			has_modifier = gpm_ringworld_endless_ocean
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_badlands }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 6000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 10000
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 5
+			num_pops > 20
+		}
+		modifier = {
+			factor = 20
+			num_pops > 50
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_gpm_ringworld_simulators = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_simulators
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			alloys = 5000
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_battle_simulators }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_simulators }
+	}
+	
+	allow = {
+		
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_battle_simulators }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 6000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 10000
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 5
+			num_pops > 20
+		}
+		modifier = {
+			factor = 20
+			num_pops > 50
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_gpm_ringworld_endless_oceans = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_endless_oceans
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			minerals =  10000
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_endless_ocean }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_endless_oceans }
+	}
+	
+	allow = {
+		NOT = { has_modifier = gpm_ringworld_badlands }
+		owner = {
+			any_owned_planet = {
+				is_planet_class = pc_ocean
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_endless_ocean }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 15000
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 20000
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_pops < 10
+		}
+		modifier = {
+			factor = 5
+			num_pops > 20
+		}
+		modifier = {
+			factor = 20
+			num_pops > 50
+		}
+		modifier = {
+			factor = 100
+			num_pops > 100
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_gpm_ringworld_mass_transit = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_gpm_ringworld_mass_transit
+	enactment_time = 720
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 300
+			alloys = 5000
+		}
+	}
+
+	potential = {
+		# owner = { is_regular_empire = yes }
+		NOT = { has_modifier = gpm_ringworld_mass_transit_systems }
+		gpm_is_planet_class_ringworld = yes
+		owner = { has_technology = gpm_tech_ringworld_mass_transit }
+	}
+	
+	allow = {
+		num_pops > 100
+	}
+
+	effect = {
+		add_modifier = { modifier = gpm_ringworld_mass_transit_systems }
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 10
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 7500
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			from = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= 15000
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			num_pops > 125
+		}
+		modifier = {
+			factor = 25
+			num_pops > 150
+		}
+		modifier = {
+			factor = 50
+			num_pops > 175
+		}
+		modifier = {
+			factor = 100
+			num_pops > 200
+		}
+		modifier = {
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}

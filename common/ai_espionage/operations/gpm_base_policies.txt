@@ -1,0 +1,41 @@
+gpm_spy_policy_gather_relic_information = {
+	weight = {
+		base = 10000
+	}
+}
+
+gpm_spy_policy_steal_relic = {
+	weight = {
+		base = 0
+		modifier = {
+			owner = {
+				or = {
+					opinion_level = {
+						who = root.target
+						level < neutral
+					}
+					has_rival = root.target
+				}
+			}
+			weight = 2000
+		}
+	}
+}
+
+gpm_spy_policy_rival = {
+	weight = {
+		base = 0
+		modifier = {
+			owner = {
+				or = {
+					opinion_level = {
+						who = root.target
+						level < neutral
+					}
+					has_rival = root.target
+				}
+			}
+			weight = 200
+		}
+	}
+}

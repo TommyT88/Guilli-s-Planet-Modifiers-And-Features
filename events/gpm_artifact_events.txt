@@ -1,0 +1,328 @@
+namespace = gpm_artifact
+
+
+### 
+country_event = {
+	id = gpm_artifact.1
+	title = "gpm_artifact.1.name"
+	desc = "gpm_artifact.1.desc"
+	picture = GFX_evt_gpm_artifact_precursor_deciphering
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "FASCINATING"
+		locked_random_list = {
+			# rare special techs; alternative way of getting them
+			1 = {
+				add_research_option = tech_extradimensional_weapon_1
+				add_tech_progress = { tech = tech_extradimensional_weapon_1 progress = 0.05 }
+				modifier = { factor = 0 has_technology = tech_extradimensional_weapon_1 }
+				modifier = { factor = 0
+					OR = {
+						has_technology = tech_plasma_3
+						has_technology = tech_disruptors_3
+						has_technology = tech_energy_torpedoes_2
+						has_technology = tech_lasers_5
+						has_technology = tech_shields_5
+						has_technology = tech_zero_point_power
+					}
+				}
+				modifier = { factor = 10 is_ai = yes }
+			}
+			1 = {
+				add_research_option = null_void_beam
+				add_tech_progress = { tech = null_void_beam progress = 0.05 }
+				modifier = { factor = 0 has_technology = null_void_beam }
+				modifier = { factor = 0
+					OR = {
+						has_technology = tech_plasma_2
+						has_technology = tech_disruptors_2
+						has_technology = tech_energy_torpedoes_1
+						has_technology = tech_lasers_3
+						has_technology = tech_shields_3
+						has_technology = tech_cold_fusion_power
+					}
+				}
+				modifier = { factor = 10 is_ai = yes }
+			}
+			1 = {
+				add_research_option = tech_space_cloud_weapon_1
+				add_tech_progress = { tech = tech_space_cloud_weapon_1 progress = 0.05 }
+				modifier = { factor = 0 has_technology = tech_space_cloud_weapon_1 }
+				modifier = { factor = 0
+					OR = {
+						has_technology = tech_plasma_2
+						has_technology = tech_disruptors_2
+						has_technology = tech_energy_torpedoes_1
+						has_technology = tech_lasers_3
+						has_technology = tech_shields_3
+						has_technology = tech_cold_fusion_power
+					}
+				}
+				modifier = { factor = 10 is_ai = yes }
+			}
+			# precursor tech
+			97 = {
+				locked_random_list = {
+					10 = {
+						add_research_option = tech_gpm_precursor_remnants_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_remnants_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_remnants_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_remnants_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_remnants_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_remnants_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_energy_grid_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_energy_grid_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_energy_grid_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_energy_grid_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_energy_grid_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_energy_grid_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_satellite_grid_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_satellite_grid_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_satellite_grid_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_satellite_grid_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_satellite_grid_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_satellite_grid_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_city_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_city_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_city_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_city_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_city_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_city_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_shipyards_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_shipyards_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_shipyards_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_shipyards_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_shipyards_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_shipyards_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_planetary_gun_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_planetary_gun_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_planetary_gun_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_planetary_gun_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_planetary_gun_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_planetary_gun_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_bunker_grid_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_bunker_grid_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_bunker_grid_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_bunker_grid_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_bunker_grid_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_bunker_grid_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_mechs_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_mechs_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_mechs_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_mechs_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_mechs_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_mechs_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_planetary_shield_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_planetary_shield_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_planetary_shield_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_planetary_shield_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_planetary_shield_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_planetary_shield_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_floating_city_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_floating_city_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_floating_city_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_floating_city_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_floating_city_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_floating_city_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_capital_complex_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_capital_complex_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_capital_complex_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_capital_complex_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_capital_complex_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_capital_complex_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_communication_hub_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_communication_hub_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_communication_hub_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_communication_hub_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_communication_hub_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_communication_hub_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_singularity_drive_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_singularity_drive_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_singularity_drive_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_singularity_drive_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_singularity_drive_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_singularity_drive_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_eternal_fortress_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_eternal_fortress_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_eternal_fortress_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_eternal_fortress_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_eternal_fortress_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_eternal_fortress_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_prison_planet_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_prison_planet_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_prison_planet_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_prison_planet_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_prison_planet_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_prison_planet_discovery_2 }
+						modifier = { factor = 0 is_hive_empire = yes }
+						modifier = { factor = 0 is_machine_empire = yes }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_mines_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_mines_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_mines_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_mines_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_mines_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_mines_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_manufactorium_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_manufactorium_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_manufactorium_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_manufactorium_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_manufactorium_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_manufactorium_discovery_2 }
+						modifier = { factor = 0 is_gestalt = yes }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_vaults_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_vaults_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_vaults_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_vaults_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_vaults_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_vaults_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_crashed_spacestation_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_crashed_spacestation_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_crashed_spacestation_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_crashed_spacestation_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_crashed_spacestation_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_crashed_spacestation_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_battleground_ruins_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_battleground_ruins_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_battleground_ruins_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_battleground_ruins_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_battleground_ruins_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_battleground_ruins_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_outpost_ruins_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_outpost_ruins_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_outpost_ruins_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_outpost_ruins_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_outpost_ruins_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_outpost_ruins_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_harbor_ruins_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_harbor_ruins_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_harbor_ruins_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_harbor_ruins_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_harbor_ruins_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_harbor_ruins_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_ruins_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_ruins_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_ruins_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_ruins_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_ruins_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_ruins_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_obelisks_discovery
+						add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_obelisks_discovery }
+					}
+					10 = {
+						add_research_option = tech_gpm_precursor_obelisks_discovery_2
+						add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery_2 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_precursor_obelisks_discovery_2 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gpm_artifact.2
+	title = "gpm_artifact.2.name"
+	desc = "gpm_artifact.2.desc"
+	picture = GFX_evt_analyzing_artifacts
+	
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+    }
+}

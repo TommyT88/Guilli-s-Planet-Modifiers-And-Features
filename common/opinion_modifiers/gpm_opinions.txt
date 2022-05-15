@@ -1,0 +1,127 @@
+# Respected Species: From Fallen Empire Colony Start
+opinion_respected_species = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = 40
+			FROM = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				exists = ruler
+				ruler = {
+					species = {
+						has_trait = "trait_gpm_high_status"
+					}
+					NOT = { is_same_species = root }
+				}	
+			}
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+			NOT = {
+				exists = ruler
+				ruler = {
+					species = {
+						has_trait = "trait_gpm_high_status"
+					}
+					NOT = { is_same_species = root }
+				}
+			}
+		}
+	}
+}
+
+opinion_intellectual_promise = {
+	opinion = {
+		base = 100
+	}
+	unique = yes
+
+	decay = {
+		base = 7
+		modifier = {
+			add = -1
+			has_ethic = "ethic_xenophile"
+		}
+
+		modifier = {
+			add = -2
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+
+		modifier = {
+			add = -3
+			has_ethic = "ethic_materialist"
+		}
+
+		modifier = {
+			add = -4
+			has_ethic = "ethic_fanatic_materialist"
+		}
+
+		modifier = {
+			add = 2
+			has_ethic = "ethic_xenophobe"
+		}
+
+		modifier = {
+			add = 4
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+	}
+}
+
+# Spy Operation Steal Relic opinion result
+opinion_gpm_stolen_relic = {
+	opinion = {
+		base = -2000
+	}
+
+	decay = {
+		base = 10
+		modifier = {
+			add = -2
+			has_ethic = "ethic_militarist"
+		}
+
+		modifier = {
+			add = -4
+			has_ethic = "ethic_fanatic_militarist"
+		}
+
+		modifier = {
+			add = -5
+			has_ethic = "ethic_xenophobe"
+		}
+
+		modifier = {
+			add = -10
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+
+		modifier = {
+			add = 5
+			has_ethic = "ethic_pacifist"
+		}
+
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+
+		modifier = {
+			add = 2
+			has_ethic = "ethic_xenophile"
+		}
+
+		modifier = {
+			add = 4
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+	}
+}

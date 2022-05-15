@@ -1,0 +1,40 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "gpm_refinery_damaged_mesh"
+		file = "gfx/models/ships/guardians/drone_homebase/drone_homebase.mesh"
+		
+		animation = { id = "idle"			type = "drone_homebase_idle_animation" }
+		animation = { id = "death"			type = "drone_homebase_death_animation" }
+		
+		meshsettings = {
+			name = "pCube92Shape"
+			index = 0
+			texture_diffuse = "gpm_refinery_damaged_diffuse.dds"
+			texture_normal = "drone_homebase_normal.dds"
+			texture_specular = "drone_homebase_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		scale = 0.2
+	}
+	
+	pdxmesh = {
+		name = "gpm_refinery_mesh"
+		file = "gfx/models/ships/guardians/drone_homebase/drone_homebase.mesh"
+		
+		animation = { id = "idle"			type = "drone_homebase_idle_animation" }
+		animation = { id = "death"			type = "drone_homebase_death_animation" }
+		
+		meshsettings = {
+			name = "pCube92Shape"
+			index = 0
+			texture_diffuse = "gpm_refinery_diffuse.dds"
+			texture_normal = "drone_homebase_normal.dds"
+			texture_specular = "drone_homebase_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		scale = 0.2
+	}
+}

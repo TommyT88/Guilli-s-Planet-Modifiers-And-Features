@@ -1,0 +1,107 @@
+@shield_hp_multi_1 = 0.10 #vanilla
+@shield_hp_multi_2 = 0.15
+@shield_hp_multi_3 = 0.20
+
+@cost1 = 10 #vanilla
+@cost2 = 30
+@cost3 = 90
+
+@power1 = -20 #vanilla
+@power2 = -60
+@power3 = -120
+
+
+####################
+# Shield Recharger #
+####################
+
+utility_component_template = {
+	key = "GPM_ENIGMATIC_POWER_RELAY"
+	size = aux
+	icon = "GFX_GPM_ENIGMATIC_POWER_RELAY"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+			exotic_gases = 2
+		}
+	}
+	
+	prerequisites = { "tech_gpm_enigmatic_power_relays" }
+	component_set = "GPM_ENIGMATIC_POWER_RELAY"
+	
+	modifier = {
+		ship_shield_regen_add_perc = 5
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GPM_SINGULARITY_MATRIX"
+	size = aux
+	icon = "GFX_GPM_SINGULARITY_MATRIX"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			energy = 30
+		}
+		produces = {
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	prerequisites = { "tech_gpm_singularity_matrix" }
+	component_set = "GPM_SINGULARITY_MATRIX"
+	
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		custom_tooltip = gpm_singularity_matrix_tt
+		show_only_custom_tooltip = no
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+utility_component_template = {
+	key = "GPM_ORBITAL_FABRICATOR"
+	size = aux
+	icon = "GFX_GPM_ORBITAL_FABRICATOR"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		produces = {
+			alloys = 2
+		}
+	}
+	hidden = yes
+	
+	component_set = "GPM_ORBITAL_FABRICATOR"
+	
+	modifier = {
+		custom_tooltip = gpm_orbital_fabricator_tt
+		show_only_custom_tooltip = no
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,216 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+
+# gpm_ghost_in_the_machine
+# gpm_framework
+# gpm_giant_transmitter
+# gpm_pleasure_planet
+# gpm_holographic_combat_simulators
+# gpm_living_knowledge_base
+# gpm_rogue_programming
+# gpm_magnetic_wave_defence
+# gpm_hollow_planet
+# gpm_true_randomness_unit
+# gpm_organic_infestation
+# gpm_labyrinth_world
+# gpm_contingency_em_shielding
+# gpm_nanite_infrastructure
+# gpm_planetary_databases
+# gpm_artificial_atmosphere
+# gpm_space_elevators_machine
+# gpm_quantum_information_network
+# gpm_planetwide_printing
+# gpm_liquid_cooling
+# gpm_robotic_pests
+# gpm_crystal_farms
+# gpm_smooth_architecture
+# gpm_sharp_architecture
+
+
+# Contingency 
+#############
+gpm_giant_transmitter = {	
+	planet_sensor_range_add = 10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_giant_transmitter.dds"
+	icon_frame = 8
+}
+gpm_holographic_combat_simulators = {
+	planet_army_build_speed_mult = 1.00
+	icon = "gfx/interface/icons/planet_modifiers/gpm_holographic_combat_simulators.dds"
+	icon_frame = 8
+}
+gpm_magnetic_wave_defence = {
+	planet_orbital_bombardment_damage = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_magnetic_wave_defence.dds"
+	icon_frame = 8
+}
+gpm_organic_infestation = {
+	planet_orbital_bombardment_damage = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_organic_infestation.dds"
+	icon_frame = 8
+}
+gpm_labyrinth_world = {
+	planet_orbital_bombardment_damage = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_labyrinth_world.dds"
+	icon_frame = 8
+}
+gpm_contingency_em_shielding = {
+	planet_orbital_bombardment_damage = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_contingency_em_shielding.dds"
+	icon_frame = 8
+}
+
+# science option
+gpm_living_knowledge_base = {
+	planet_jobs_physics_research_produces_mult = 0.30
+	planet_jobs_society_research_produces_mult = 0.30
+	planet_jobs_engineering_research_produces_mult = 0.30
+	icon = "gfx/interface/icons/planet_modifiers/gpm_living_knowledge_base.dds"
+	icon_frame = 8
+}
+gpm_true_randomness_unit = {
+	planet_researchers_physics_research_produces_add = 4
+	planet_researchers_society_research_produces_add = 4
+	planet_researchers_engineering_research_produces_add = 4
+	icon = "gfx/interface/icons/planet_modifiers/gpm_culture_of_games.dds"
+	icon_frame = 8
+}
+gpm_planetary_databases = {
+	planet_jobs_physics_research_produces_mult = 0.20
+	planet_jobs_society_research_produces_mult = 0.20
+	planet_jobs_engineering_research_produces_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_galactic_databanks.dds"
+	icon_frame = 8
+}
+
+# energy option
+gpm_quantum_information_network = {
+	planet_technician_energy_produces_mult = 0.40
+	planet_district_generator_uncapped_build_speed_mult = 0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_quantum_information_network.dds"
+	icon_frame = 8
+}
+gpm_framework = {
+	planet_technician_energy_produces_add = 4
+	planet_district_generator_uncapped_build_speed_mult = 0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_framework.dds"
+	icon_frame = 8
+}
+
+# minerals option
+gpm_space_elevators_machine = {
+	planet_miners_minerals_produces_mult = 0.40
+	planet_district_mining_uncapped_build_speed_mult = 0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_space_elevators.dds"
+	icon_frame = 8
+}
+gpm_robotic_pests = {
+	planet_miners_minerals_produces_add = 4
+	planet_district_mining_uncapped_build_speed_mult = 0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_robotic_pests.dds"
+	icon_frame = 8
+}
+
+# alloy option
+gpm_planetwide_printing = {
+	planet_metallurgists_alloys_produces_mult = 0.30
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planetwide_printing.dds"
+	icon_frame = 8
+}
+
+# rare resources option
+gpm_artificial_atmosphere = {
+	planet_jobs_volatile_motes_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_artificial_atmosphere.dds"
+	icon_frame = 8
+}
+gpm_liquid_cooling = {
+	planet_jobs_exotic_gases_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_liquid_cooling.dds"
+	icon_frame = 8
+}
+gpm_crystal_farms = {
+	planet_jobs_rare_crystals_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_crystal_farms.dds"
+	icon_frame = 8
+}
+
+# random modifiers
+gpm_ghost_in_the_machine = {
+	planet_pop_assembly_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ghost_in_the_machine.dds"
+	icon_frame = 8
+}
+gpm_rogue_programming = {
+	planet_jobs_simple_drone_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_rogue_programming.dds"
+	icon_frame = 8
+}
+gpm_hollow_planet = {
+	planet_max_districts_add = 4
+	icon = "gfx/interface/icons/planet_modifiers/gpm_hollow_planet.dds"
+	icon_frame = 8
+}
+gpm_nanite_infrastructure = {
+	planet_building_build_speed_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_nanite_infrastructure.dds"
+	icon_frame = 8
+}
+gpm_smooth_architecture = {
+	planet_buildings_minerals_cost_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_smooth_architecture.dds"
+	icon_frame = 8
+}
+gpm_sharp_architecture = {
+	planet_buildings_minerals_cost_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_sharp_architecture.dds"
+	icon_frame = 8
+}
+
+
+# rogue servitors habitable worlds
+gpm_pleasure_planet = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/gpm_pleasure_planet.dds"
+	icon_frame = 8
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

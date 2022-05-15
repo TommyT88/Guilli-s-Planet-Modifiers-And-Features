@@ -1,0 +1,35 @@
+namespace = gpm_on_action
+
+# District built
+planet_event = {
+	id = gpm_on_action.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		is_planet_class = pc_gpm_precursor_tomb
+		last_district_changed = district_gpm_precursor_science
+	}
+
+	immediate = {
+		add_deposit = d_archaeological_site
+	}
+}
+
+# District demolished
+planet_event = {
+	id = gpm_on_action.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		is_planet_class = pc_gpm_precursor_tomb
+		last_district_changed = district_gpm_precursor_science
+	}
+
+	immediate = {
+		remove_deposit = d_archaeological_site
+	}
+}

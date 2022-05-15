@@ -1,0 +1,985 @@
+spriteTypes = {
+	# The Time Displacer
+	SpriteType = {
+		name = "GFX_relic_gpm_time_displacer"
+		texturefile = "gfx/interface/icons/relics/gpm_r_time_displacer.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_time_displacer_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_time_displacer_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# machine world core
+	SpriteType = {
+		name = "GFX_gpm_r_machine_world_core"
+		texturefile = "gfx/interface/icons/relics/gpm_r_machine_world_core.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_machine_world_core_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.5				# in seconds
+			animationdelay = 5				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_machine_world_core_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 14				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# xenomorph queen
+	SpriteType = {
+		name = "GFX_gpm_r_alien_queen"
+		texturefile = "gfx/interface/icons/relics/gpm_r_alien_queen.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_alien_queen_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 22				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	# mars rover
+	SpriteType = {
+		name = "GFX_gpm_r_mars_rover"
+		texturefile = "gfx/interface/icons/relics/gpm_r_mars_rover.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_mars_rover_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_mars_rover_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_remnants
+	SpriteType = {
+		name = "GFX_gpm_r_encyclopedia_galactica"
+		texturefile = "gfx/interface/icons/relics/gpm_r_encyclopedia_galactica.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_encyclopedia_galactica_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_encyclopedia_galactica_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 14				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_energy_grid
+	SpriteType = {
+		name = "GFX_gpm_r_zero_energy_generator"
+		texturefile = "gfx/interface/icons/relics/gpm_r_zero_energy_generator.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_zero_energy_generator_shine_inner.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 30.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.5				# in seconds
+			animationdelay = 0.3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_zero_energy_generator_shine_2.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.5				# in seconds
+			animationdelay = 8			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_zero_energy_generator_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+	}
+	# gpm_precursor_satalite_grid
+	SpriteType = {
+		name = "GFX_gpm_r_quantum_sphere"
+		texturefile = "gfx/interface/icons/relics/gpm_r_quantum_sphere.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_quantum_sphere.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2				# in seconds
+			animationdelay = 2			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_quantum_sphere_shine_2.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 3				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_quantum_sphere_shine_1.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_city
+	SpriteType = {
+		name = "GFX_gpm_r_ai_architect"
+		texturefile = "gfx/interface/icons/relics/gpm_r_ai_architect.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_ai_architect_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 16				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_ai_architect_shine_2.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 18				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_shipyards
+	SpriteType = {
+		name = "GFX_gpm_r_encrypted_sct"
+		texturefile = "gfx/interface/icons/relics/gpm_r_encrypted_sct.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_encrypted_sct_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_encrypted_sct_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_planetary_gun
+	SpriteType = {
+		name = "GFX_gpm_r_experimental_weapon"
+		texturefile = "gfx/interface/icons/relics/gpm_r_experimental_weapon.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_experimental_weapon_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 10				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_experimental_weapon_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 16				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_bunker_grid
+	SpriteType = {
+		name = "GFX_gpm_r_fallout_emergency_replicator"
+		texturefile = "gfx/interface/icons/relics/gpm_r_fallout_emergency_replicator.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_fallout_emergency_replicator_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_fallout_emergency_replicator_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_mechs
+	SpriteType = {
+		name = "GFX_gpm_r_venerable_dreadnaught"
+		texturefile = "gfx/interface/icons/relics/gpm_r_venerable_dreadnaught.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_venerable_dreadnaught_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.5				# in seconds
+			animationdelay = 5				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_venerable_dreadnaught_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 14				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_planetary_shield
+	SpriteType = {
+		name = "GFX_gpm_r_mysterious_shield_generator"
+		texturefile = "gfx/interface/icons/relics/gpm_r_mysterious_shield_generator.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_mysterious_shield_generator_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.5				# in seconds
+			animationdelay = 5				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_mysterious_shield_generator_shine_bottom.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 16				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_mysterious_shield_generator_shine_bottom.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 6				# in seconds
+			animationdelay = 4			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_floating_city
+	SpriteType = {
+		name = "GFX_gpm_r_gravity_engine"
+		texturefile = "gfx/interface/icons/relics/gpm_r_gravity_engine.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_gravity_engine_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_gravity_engine_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 4				# in seconds
+			animationdelay = 4			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_capital_complex
+	SpriteType = {
+		name = "GFX_gpm_r_codex_administratum"
+		texturefile = "gfx/interface/icons/relics/gpm_r_codex_administratum.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_codex_administratum_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 6.8			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_codex_administratum_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 18				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_communication_hub
+	SpriteType = {
+		name = "GFX_gpm_r_enigmatic_advisor"
+		texturefile = "gfx/interface/icons/relics/gpm_r_enigmatic_advisor.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_enigmatic_advisor_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 8				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_enigmatic_advisor_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 20				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_enigmatic_advisor_shine_2.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 5				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "multiply"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_singularity_drive
+	SpriteType = {
+		name = "GFX_gpm_r_positronic_microchip"
+		texturefile = "gfx/interface/icons/relics/gpm_r_positronic_microchip.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_positronic_microchip_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 180.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 8				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_positronic_microchip.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 15				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_eternal_fortress
+	SpriteType = {
+		name = "GFX_gpm_r_power_core"
+		texturefile = "gfx/interface/icons/relics/gpm_r_power_core.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_power_core_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 0.1			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_power_core_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_prison_planet
+	SpriteType = {
+		name = "GFX_gpm_r_sentinel_queen"
+		texturefile = "gfx/interface/icons/relics/gpm_r_sentinel_queen.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_sentinel_queen_shine_eyes.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_sentinel_queen_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 18				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_mines
+	SpriteType = {
+		name = "GFX_gpm_r_earthquake_engine"
+		texturefile = "gfx/interface/icons/relics/gpm_r_earthquake_engine.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_earthquake_engine_shine_1.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 8				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_earthquake_engine_shine_2.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 8				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_earthquake_engine_shine_1.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2				# in seconds
+			animationdelay = 2			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_manufactorium
+	SpriteType = {
+		name = "GFX_gpm_r_manufactorium_ship"
+		texturefile = "gfx/interface/icons/relics/gpm_r_manufactorium_ship.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_manufactorium_ship_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 14				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_vaults
+	SpriteType = {
+		name = "GFX_gpm_r_datacube"
+		texturefile = "gfx/interface/icons/relics/gpm_r_datacube.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_datacube_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_datacube_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_crashed_spacestation
+	SpriteType = {
+		name = "GFX_gpm_r_self_assembly_hub"
+		texturefile = "gfx/interface/icons/relics/gpm_r_self_assembly_hub.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_self_assembly_hub_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 4				# in seconds
+			animationdelay = 5				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_self_assembly_hub_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 14				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_battleground_ruins
+	SpriteType = {
+		name = "GFX_gpm_r_banner_of_the_fallen"
+		texturefile = "gfx/interface/icons/relics/gpm_r_banner_of_the_fallen.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_banner_of_the_fallen_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 10				# in seconds
+			animationdelay = 5			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_banner_of_the_fallen_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 16				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_outpost_ruins
+	SpriteType = {
+		name = "GFX_gpm_r_cloaking_device"
+		texturefile = "gfx/interface/icons/relics/gpm_r_cloaking_device.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_cloaking_device_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -120.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 30				# in seconds
+			animationdelay = 0				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_cloaking_device_shine_stealth.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = -45.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 12				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_cloaking_device_shine_stealth_pulse.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 12				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_harbor_ruins
+	SpriteType = {
+		name = "GFX_gpm_r_q_storage_compressor"
+		texturefile = "gfx/interface/icons/relics/gpm_r_q_storage_compressor.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_q_storage_compressor_pulse.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -60.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_q_storage_compressor_glow.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 16				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_ruins
+	SpriteType = {
+		name = "GFX_gpm_r_soul_gem"
+		texturefile = "gfx/interface/icons/relics/gpm_r_soul_gem.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_soul_gem_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 180.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 4				# in seconds
+			animationdelay = 10				# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_r_soul_gem_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 30				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# gpm_precursor_obelisks
+	SpriteType = {
+		name = "GFX_gpm_precursor_obelisks"
+		texturefile = "gfx/interface/icons/relics/gpm_precursor_obelisks.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_precursor_obelisks_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 16				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/gpm_precursor_obelisks_shine_2.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 18				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,53 @@
+#######################
+## Medium Ring Sizes ##
+#######################
+
+# Metallic Rings
+entity = {
+	name = "gpm_rings_metallic_medium"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -150 0 } rotation = { 0 0 3 }}
+	attach = { "loc1" = "gpm_rings_metallic_medium_attach"}
+}
+
+entity = {
+	name = "gpm_rings_metallic_medium_attach"
+	pdxmesh = "gpm_rings_metallic_medium_mesh"
+	scale = 10.0
+}
+
+# Ice Rings
+entity = {
+	name = "gpm_rings_ice_medium"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -150 0 } rotation = { 0 0 3 }}
+	attach = { "loc1" = "gpm_rings_ice_medium_attach"}
+}
+
+entity = {
+	name = "gpm_rings_ice_medium_attach"
+	pdxmesh = "gpm_rings_ice_medium_mesh"
+	scale = 10.0
+}
+
+######################
+## Real Space Sizes ##
+######################
+
+# Metallic Rings
+entity = {
+	name = "gpm_rings_RS_metallic_medium"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -165 0 } rotation = { 0 0 3 }} # was 0 -75 0
+	attach = { "loc1" = "gpm_rings_metallic_medium_attach"}
+	scale = 2.0
+}
+
+# Ice Rings
+entity = {
+	name = "gpm_rings_RS_ice_medium"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -165 0 } rotation = { 0 0 3 }} # was 0 -75 0
+	attach = { "loc1" = "gpm_rings_ice_medium_attach"}
+	scale = 2.0
+}

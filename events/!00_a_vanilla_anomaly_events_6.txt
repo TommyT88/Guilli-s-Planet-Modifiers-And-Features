@@ -1,0 +1,104 @@
+#################################
+#
+# Anomaly Events 
+#
+#################################
+
+namespace = anomaly
+
+
+# add deposits for mineral modifiers
+ship_event = {
+	id = anomaly.6662
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_colonizable = no
+			gpm_has_precursor_modifiers = no
+			has_deposit = no
+			OR = { 
+				has_modifier = chthonian_planet
+				# has_modifier = extensive_moon_system
+				# has_modifier = unstable_tectonics
+				has_modifier = ultra_rich
+				has_modifier = gpm_ultra_rich_2
+				has_modifier = ultra_rich
+				has_modifier = mineral_rich
+				has_modifier = gpm_mineral_rich_2
+				has_modifier = mineral_rich
+				has_modifier = asteroid_impacts
+				has_modifier = gpm_asteroid_impacts_2
+				has_modifier = asteroid_impacts
+				has_modifier = carbon_world
+				# has_modifier = asteroid_belt
+			}
+			NOR = { 
+				has_deposit = d_minerals_7
+				has_deposit = d_minerals_8
+				has_deposit = d_minerals_9
+				has_deposit = d_minerals_10
+				has_deposit = d_guardian_dragon_hoard
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			random_list = {
+				80 = { add_deposit = d_minerals_2 }
+				60 = { add_deposit = d_minerals_3 }
+				40 = { add_deposit = d_minerals_4 }
+				20 = { add_deposit = d_minerals_5 }
+				10 = { add_deposit = d_minerals_6 }
+			}
+		}
+	}
+}
+
+# add deposits for energy modifiers
+ship_event = {
+	id = anomaly.6663
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_colonizable = no
+			gpm_has_precursor_modifiers = no
+			has_deposit = no
+			OR = { 
+				# has_modifier = hazardous_weather
+				has_modifier = strong_magnetic_field
+				has_modifier = gpm_strong_magnetic_field_2
+				has_modifier = gpm_strong_magnetic_field_gas_giant
+				has_modifier = strong_magnetic_field
+				# has_modifier = unstable_tectonics
+				# has_modifier = ultra_rich
+				# has_modifier = mineral_rich
+				# has_modifier = asteroid_impacts
+			}
+			NOR = { 
+				has_deposit = d_energy_7
+				has_deposit = d_energy_8
+				has_deposit = d_energy_9
+				has_deposit = d_energy_10
+				has_deposit = d_guardian_dragon_hoard
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_energy_4
+		}
+	}
+}
+

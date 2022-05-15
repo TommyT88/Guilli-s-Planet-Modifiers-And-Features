@@ -1,0 +1,88 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+# gpm_compact_star
+# gpm_pulsar_clock
+# gpm_stellar_spectacle
+# gpm_planet_wonder_discovered
+# gpm_planet_wonder_ruined
+# gpm_metallic_ring
+# gpm_ice_ring
+# gpm_protomolecule_infected_station
+# gpm_wretched_abyss
+# gpm_resonant_twins
+# artifact_sell_collector_cooldown
+
+# AI SPY OPERATIONS DEBUG
+gpm_debug_envoys = {
+	hide_from_country_list = yes
+	envoys_add = 2
+}
+
+gpm_compact_star = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_compact_star.dds"
+	icon_frame = 4
+}
+gpm_pulsar_clock = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_pulsar_clock.dds"
+	icon_frame = 6
+}
+gpm_stellar_spectacle = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_stellar_spectacle.dds"
+	icon_frame = 4
+}
+gpm_planet_wonder_discovered = {
+	pop_happiness = 0.10
+	planet_immigration_pull_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_planet_wonder_ruined = {
+	pop_happiness = -0.05
+	planet_immigration_pull_mult = -0.10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 1
+}
+gpm_metallic_ring = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_beautiful_planet_rings.dds"
+	icon_frame = 4
+}
+gpm_ice_ring = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_beautiful_planet_rings.dds"
+	icon_frame = 4
+}
+
+gpm_protomolecule_infected_station = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_protomolecule_infected_station.dds"
+	icon_frame = 6
+}
+gpm_wretched_abyss = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_wretched_abyss.dds"
+	icon_frame = 4
+}
+gpm_resonant_twins = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_resonant_twins.dds"
+	icon_frame = 4
+}
+artifact_sell_collector_cooldown = {
+}
+gpm_massive_world = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_massive_world.dds"
+	icon_frame = 4
+}

@@ -1,0 +1,58 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# City World Planet Modifiers
+##########################################################################
+
+# gpm_relic_factories
+# gpm_relic_generators
+# gpm_relic_laboratories
+# gpm_relic_lower_levels
+
+
+
+gpm_relic_factories = {
+	planet_metallurgists_alloys_produces_add = 1
+	planet_artisans_consumer_goods_produces_add = 1
+	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_factories.dds"
+	icon_frame = 1
+}
+gpm_relic_generators = {
+	planet_technician_energy_produces_add = 3
+	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_generators.dds"
+	icon_frame = 1
+}
+gpm_relic_laboratories = {
+	planet_jobs_physics_research_produces_mult = 0.20
+	planet_jobs_society_research_produces_mult = 0.20
+	planet_jobs_engineering_research_produces_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_laboratories.dds"
+	icon_frame = 1
+}
+gpm_relic_lower_levels = {
+	planet_max_districts_add = 4
+	planet_max_buildings_add = 2
+	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_lower_levels.dds"
+	icon_frame = 1
+}
+
+
+
+
+
+
+

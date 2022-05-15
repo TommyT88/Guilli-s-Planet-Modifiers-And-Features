@@ -1,0 +1,388 @@
+
+# planet scope
+gpm_run_origin_death_world_planet_gen = {
+	# owner = { add_modifier = { modifier = gpm_origin_death_world_mod } }
+	clear_deposits = yes
+
+	add_deposit = d_tempestous_mountain
+	add_deposit = gpm_d_super_volcano
+	add_deposit = d_ore_rich_caverns
+	add_deposit = gpm_d_giant_skeleton
+	add_deposit = d_rich_mountain
+	add_deposit = gpm_d_small_wildlife
+	add_deposit = gpm_d_massive_wildlife
+	add_deposit = d_fungal_forest
+	add_deposit = d_fungal_caves
+	
+
+	add_modifier = { modifier = "gpm_death_world" days = -1	}
+
+	while = {
+		count < 3
+		random_list = {
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_titanic_predators" }
+				modifier = { factor = 0 has_modifier = "gpm_titanic_predators" }
+			}
+			10 = {
+				add_modifier = { days = -1 modifier = "gpm_arachnophobia" }
+				add_deposit = gpm_d_arachnophobia
+				modifier = { factor = 0 has_modifier = "gpm_arachnophobia" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_giant_worm" multiplier = 1.5 }
+				modifier = { factor = 0 has_modifier = "gpm_giant_worm" }
+				modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_abominable_predators" }
+				modifier = { factor = 0 has_modifier = "gpm_abominable_predators" }
+				modifier = { factor = 0
+					NOR = {
+						gpm_is_planet_dry_cold = yes
+						gpm_is_planet_wet_cold = yes
+					}
+				}
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_giant_scorpioids" multiplier = 2 }
+				modifier = { factor = 0 has_modifier = "gpm_giant_scorpioids" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_unstable_tectonics_2" }
+				modifier = { factor = 0 has_modifier = "gpm_unstable_tectonics_2" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_hostile_flora" }
+				modifier = { factor = 0 has_modifier = "gpm_hostile_flora" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_toxic_gas" }
+				modifier = { factor = 0 has_modifier = "gpm_toxic_gas" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_unusual_seasons" }
+				modifier = { factor = 0 has_modifier = "gpm_unusual_seasons" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_living_planet" }
+				modifier = { factor = 0 has_modifier = "gpm_living_planet" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_unusual_formations" multiplier = 1.5 }
+				modifier = { factor = 0 has_modifier = "gpm_unusual_formations" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_great_temperature_variation" }
+				modifier = { factor = 0 has_modifier = "gpm_great_temperature_variation" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_locust_plagues" }
+				modifier = { factor = 0 has_modifier = "gpm_locust_plagues" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_acidic_seas" }
+				modifier = { factor = 0 has_modifier = "gpm_acidic_seas" }
+				modifier = { factor = 0
+					NOR = {
+						gpm_is_planet_wet_hot = yes
+						gpm_is_planet_wet_cold = yes
+					}
+				}
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_resilent_parasites" }
+				modifier = { factor = 0 has_modifier = "gpm_resilent_parasites" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_sandstorms" }
+				modifier = { factor = 0 has_modifier = "gpm_sandstorms" }
+				modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_blizzards" }
+				modifier = { factor = 0 has_modifier = "gpm_blizzards" }
+				modifier = { factor = 0
+					NOR = {
+						gpm_is_planet_dry_cold = yes
+						gpm_is_planet_wet_cold = yes
+					}
+				}
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_carnivorous_flies" }
+				modifier = { factor = 0 has_modifier = "gpm_carnivorous_flies" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_torrential_rainstorms" multiplier = 2 }
+				modifier = { factor = 0 has_modifier = "gpm_torrential_rainstorms" }
+				modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_giant_ocean_snakes" }
+				modifier = { factor = 0 has_modifier = "gpm_giant_ocean_snakes" }
+				modifier = { factor = 0
+					NOR = {
+						gpm_is_planet_wet_hot = yes
+						gpm_is_planet_wet_cold = yes
+					}
+				}
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_strange_alien_eggs" }
+				modifier = { factor = 0 has_modifier = "gpm_strange_alien_eggs" }
+			}
+			10 = { 
+				add_modifier = { days = -1 modifier = "gpm_cursed_world" multiplier = 2 }
+				modifier = { factor = 0 has_modifier = "gpm_cursed_world" }
+			}
+			# 10 = { add_modifier = { days = -1 modifier = "gpm_siren_song" } }
+			# 10 = { add_modifier = { days = -1 modifier = "gpm_manifest_dreams" } }
+		}
+	}
+	
+	while = {
+		count < 3
+		gpm_roll_planetary_blockers_normal_habitable = yes
+	}
+	add_deposit = d_mountain_range
+	add_deposit = d_dangerous_wildlife_blocker
+	add_deposit = d_dangerous_wildlife_blocker
+	add_deposit = d_dangerous_wildlife_blocker
+	add_deposit = d_dangerous_wildlife_blocker
+}
+
+# planet scope
+gpm_run_origin_precursor_world_planet_gen = {
+	owner = { add_modifier = { modifier = gpm_origin_precursor_world_mod } }
+	clear_blockers = yes
+
+	set_planet_flag = gpm_is_precursor_world
+	solar_system = { set_star_flag = gpm_is_precursor_system }
+
+	# Cryotube deposit
+	add_deposit = gpm_d_precursor_ruins_4
+	add_deposit = gpm_d_sprawling_prestine_ruins
+	add_deposit = gpm_d_skyscraper_village
+
+	# energy +2 
+	random_list = {
+		10 = { add_deposit = gpm_d_precursor_ruins_3_distr }
+		10 = { add_deposit = gpm_d_precursor_ruins_5_distr }
+		10 = { add_deposit = gpm_d_precursor_ruins_6_distr }
+	}
+	# food +2 
+	random_list = {
+		10 = { add_deposit = gpm_d_precursor_ruins_2_distr }
+		10 = { add_deposit = gpm_d_precursor_ruins_7_distr }
+	}
+	add_deposit = gpm_tb_lethal_overgrowth_resources
+	add_deposit = gpm_tb_lethal_overgrowth_resources
+	add_deposit = gpm_tb_lethal_overgrowth_resources
+	add_deposit = gpm_tb_lethal_overgrowth_resources
+	add_deposit = gpm_tb_lethal_overgrowth_resources
+
+	# Blockers
+
+	# gpm_precursor_remnants
+	# gpm_precursor_energy_grid
+	# gpm_precursor_satalite_grid
+	# gpm_precursor_city
+	# gpm_precursor_shipyards
+	# gpm_precursor_planetary_gun
+	# gpm_precursor_bunker_grid
+	# gpm_precursor_mechs
+	# gpm_precursor_planetary_shield
+	# gpm_precursor_floating_city
+	# gpm_precursor_capital_complex
+	# gpm_precursor_communication_hub
+	# gpm_precursor_singularity_drive
+	# gpm_precursor_eternal_fortress
+	# gpm_precursor_prison_planet
+	# gpm_precursor_mines
+	# gpm_precursor_manufactorium
+	# gpm_precursor_vaults
+	# gpm_precursor_crashed_spacestation
+	# gpm_precursor_battleground_ruins
+	# gpm_precursor_outpost_ruins
+	# gpm_precursor_harbor_ruins
+	# gpm_precursor_ruins
+	# gpm_precursor_obelisks
+
+	# one permanent shield modifier
+	add_modifier = { modifier = gpm_precursor_planetary_shield multiplier = 0.5 }
+	gpm_set_precursor_planetary_shields = yes
+
+	# two random ones
+	while = {
+		count = 2
+		random_list = {
+			10 = {
+				add_modifier = { modifier = gpm_precursor_remnants multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_remnants }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_energy_grid multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_energy_grid }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_satalite_grid multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_satalite_grid }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_city multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_city }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_planetary_gun multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_planetary_gun }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_mechs multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_mechs }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_floating_city multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_floating_city }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_communication_hub multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_communication_hub }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_singularity_drive multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_singularity_drive }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_eternal_fortress multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_eternal_fortress }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_prison_planet multiplier = 0.5 } # not gestalts
+				modifier = { factor = 0 has_modifier = gpm_precursor_prison_planet }
+				modifier = { factor = 0 owner = { is_gestalt = yes } }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_mines multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_mines }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_manufactorium multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_manufactorium }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_vaults multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_vaults }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_crashed_spacestation multiplier = 1 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_crashed_spacestation }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_battleground_ruins multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_battleground_ruins }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_harbor_ruins multiplier = 0.5 } # only on wet planets
+				modifier = { factor = 0 has_modifier = gpm_precursor_harbor_ruins }
+				modifier = { factor = 0 NOR = { gpm_is_planet_water = yes } }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_precursor_obelisks multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_precursor_obelisks }
+			}
+		}
+	}
+}
+
+# planet scope
+gpm_run_origin_fallen_empire_planet_gen = {
+	owner = { add_modifier = { modifier = gpm_origin_fallen_empire_colony_mod } }
+	# clear_deposits = yes
+	clear_blockers = yes
+
+	# add_deposit = d_buzzing_plains
+	# add_deposit = d_mineral_striations
+	# add_deposit = d_rushing_waterfalls
+	# add_deposit = d_underwater_vent
+	# add_deposit = d_natural_farmland
+	# add_deposit = gpm_d_colossal_coral_life
+	# add_deposit = gpm_d_grand_reef
+	# add_deposit = gpm_d_colossal_fish
+	# add_deposit = gpm_d_dense_metal_veins
+	# add_deposit = gpm_d_magnetic_mountains
+	# add_deposit = gpm_d_planetwide_forest
+	# add_deposit = gpm_d_floating_rocks
+	# add_deposit = gpm_d_floating_islands_housing
+	# add_deposit = gpm_d_sprawling_archipelago
+
+	# three random ones
+	while = {
+		count = 3
+		random_list = {
+			10 = {
+				add_modifier = { modifier = gpm_utopian_world multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_utopian_world }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_utopian_services multiplier = 0.5 } # not for machines 0.5
+				modifier = { factor = 0 has_modifier = gpm_utopian_services }
+				modifier = { factor = 0 has_modifier = gpm_culture_of_games }
+				modifier = { factor = 0 owner = { is_machine_empire = yes } }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_primitive_reserve multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_primitive_reserve }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_unified_processing multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_unified_processing }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_planetary_shielding_FE multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_planetary_shielding_FE }
+				gpm_set_fallen_empire_planetary_shields = yes
+			}
+			10 = {
+				add_modifier = { modifier = gpm_living_infrastructure multiplier = 0.3 }
+				modifier = { factor = 0 has_modifier = gpm_living_infrastructure }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_galactic_databanks multiplier = 0.2 }
+				modifier = { factor = 0 has_modifier = gpm_galactic_databanks }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_monument_to_the_fallen multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_monument_to_the_fallen }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_longevity multiplier = 0.5 } # not gestalts
+				modifier = { factor = 0 has_modifier = gpm_longevity }
+				modifier = { factor = 0 owner = { is_gestalt = yes } }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_culture_of_games multiplier = 0.5 }
+				modifier = { factor = 0 has_modifier = gpm_culture_of_games }
+				modifier = { factor = 0 has_modifier = gpm_utopian_services }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_subterranean_paradise multiplier = 0.3 }
+				modifier = { factor = 0 has_modifier = gpm_subterranean_paradise }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_space_elevators multiplier = 0.3 } # not gestalts
+				modifier = { factor = 0 has_modifier = gpm_space_elevators }
+				modifier = { factor = 0 owner = { is_gestalt = yes } }
+			}
+			10 = {
+				add_modifier = { modifier = gpm_teleportation_systems multiplier = 0.2 }
+				modifier = { factor = 0 has_modifier = gpm_teleportation_systems }
+			}
+		}
+	}
+}
+
+gpm_run_scion_planet_gen = {
+	add_modifier = { days = -1 modifier = "gpm_planetary_shielding_FE" }
+	gpm_set_fallen_empire_planetary_shields = yes
+}

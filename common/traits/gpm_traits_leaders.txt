@@ -1,0 +1,147 @@
+leader_trait_gpm_guilli = {
+	cost = 0
+	initial = no
+	randomized = no
+		
+	leader_potential_add = {
+		always = no
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_gpm_guilli.dds"
+	immortal_leaders = yes
+	modifier = {
+		all_technology_research_speed = 0.15
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+}
+
+leader_trait_gpm_shared_soul = {
+	cost = 0
+	initial = no
+	randomized = no
+	
+	leader_potential_add = {
+		always = no
+	}
+	
+	icon = "gfx/interface/icons/traits/leader_trait_gpm_shared_soul.dds"
+	immortal_leaders = yes
+	leader_trait =  { scientist admiral general governor}
+	leader_class = { scientist admiral general governor}
+}
+
+leader_trait_gpm_stealth_tactician = {
+	cost = 0
+	initial = no
+	randomized = no
+	
+	leader_potential_add = {
+		always = no
+	}
+	
+	icon = "gfx/interface/icons/traits/leader_trait_gpm_stealth_tactician.dds"
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	leader_trait =  { admiral }
+	leader_class = { admiral }
+}
+
+leader_trait_gpm_precursor_expert = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_gpm_precursor_expert.dds"
+
+	leader_potential_add = {
+		from = { has_country_flag = gpm_precursor_expert_trait_rewarded }
+	}
+	
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.35
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+
+	ai_categories = {
+		survey
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+leader_trait_gpm_fallen_heraldry = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_gpm_fallen_heraldry.dds"
+	
+	initial = no
+	randomized = no
+	
+	leader_potential_add = {
+		always = no
+	}
+	
+	
+	# leader_potential_add = {
+	# 	from = { has_country_flag = gpm_fallen_heraldry_trait_rewarded }
+	# }
+	
+	modifier = {
+		ship_experience_gain_mult = 1.00
+		ship_weapon_damage = 0.05
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_gpm_personal_mech = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_gpm_personal_mech.dds"
+	
+	initial = no
+	randomized = no
+	
+	leader_potential_add = {
+		always = no
+	}
+	
+	modifier = {	
+		army_morale_damage_mult = 0.25
+		army_collateral_damage_mult = 0.25
+	}
+	# leader_potential_add = {
+	# 	from = { has_country_flag = gpm_personal_mech_trait_rewarded }
+	# }
+	leader_trait = { general }
+	leader_class = { general }
+}
+
+leader_trait_gpm_battle_standards = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_gpm_battle_standards.dds"
+	
+	initial = no
+	randomized = no
+	
+	leader_potential_add = {
+		always = no
+	}
+	
+	modifier = {	
+		army_morale = 0.30
+		army_damage_mult = 0.15
+	}
+	# leader_potential_add = {
+	# 	from = { has_country_flag = gpm_battle_standards_trait_rewarded }
+	# }
+	leader_trait = { general }
+	leader_class = { general }
+}

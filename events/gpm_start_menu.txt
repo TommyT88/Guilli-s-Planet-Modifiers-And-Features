@@ -1,0 +1,506 @@
+namespace = gpm_start_menu
+
+### Menu with options:
+# low amount of modifiers
+# normal amount of modifiers (recomended)
+# high amount of modifiers
+
+country_event = {
+	id = gpm_start_menu.1
+	title = gpm_start_menu.1.name
+	desc = gpm_start_menu.1.desc
+	picture = GFX_evt_gpm_guillis_planet_modifiers
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+
+	##############################################
+	###### Number of Modifiers Per Planet ########
+	##############################################
+
+	# gpm_modifier_amount_max_one
+	# gpm_modifier_amount_low
+	# gpm_modifier_amount_normal
+	# gpm_modifier_amount_high
+
+	# Cycle amount of modifiers setting
+	# Max 1 modifier
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifier_amount_max_one
+		}
+		name = gpm_start_menu.1.max_one
+		custom_tooltip = gpm_start_menu.1.max_oneTT
+		set_global_flag = gpm_modifier_amount_low		
+		remove_global_flag = gpm_modifier_amount_max_one
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+
+	# low amount of modifiers
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifier_amount_low
+		}
+		name = gpm_start_menu.1.low
+		custom_tooltip = gpm_start_menu.1.lowTT
+		set_global_flag = gpm_modifier_amount_normal
+		remove_global_flag = gpm_modifier_amount_low
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+	
+	# normal amount of modifiers (recomended)
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifier_amount_normal
+		}
+		name = gpm_start_menu.1.normal
+		custom_tooltip = gpm_start_menu.1.normalTT
+		set_global_flag = gpm_modifier_amount_high
+		remove_global_flag = gpm_modifier_amount_normal
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+	
+	# high amount of modifiers
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifier_amount_high
+		}
+		name = gpm_start_menu.1.high
+		custom_tooltip = gpm_start_menu.1.highTT
+		set_global_flag = gpm_modifier_amount_max_one
+		remove_global_flag = gpm_modifier_amount_high
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+
+
+	##############################################
+	################ Galaxy Age ##################
+	##############################################
+
+	# gpm_galaxy_age_young
+	# gpm_galaxy_age_default
+	# gpm_galaxy_age_old
+
+	# Cycle galaxy age
+	# young galaxy
+	option = {
+		trigger = {
+			has_global_flag = gpm_galaxy_age_young
+		}
+		name = gpm_start_menu.1.young_galaxy_age
+		custom_tooltip = gpm_start_menu.1.young_galaxy_ageTT
+		set_global_flag = gpm_galaxy_age_default
+		remove_global_flag = gpm_galaxy_age_young
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+	
+	# default galaxy age
+	option = {
+		trigger = {
+			has_global_flag = gpm_galaxy_age_default
+		}
+		name = gpm_start_menu.1.default_galaxy_age
+		custom_tooltip = gpm_start_menu.1.default_galaxy_ageTT
+		set_global_flag = gpm_galaxy_age_old
+		remove_global_flag = gpm_galaxy_age_default
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+	
+	# old galaxy
+	option = {
+		trigger = {
+			has_global_flag = gpm_galaxy_age_old
+		}
+		name = gpm_start_menu.1.old_galaxy_age
+		custom_tooltip = gpm_start_menu.1.old_galaxy_ageTT
+		set_global_flag = gpm_galaxy_age_young
+		remove_global_flag = gpm_galaxy_age_old
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+
+
+	##############################################
+	############## Scaling Settings ##############
+	##############################################
+	
+
+	# Scaling on (default)
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_scaling_multiplier_disabled }
+		}
+		name = gpm_start_menu.1.default_scaling
+		custom_tooltip = gpm_start_menu.1.default_scalingTT
+		set_global_flag = gpm_scaling_multiplier_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+	
+	# scaling off
+	option = {
+		trigger = {
+			has_global_flag = gpm_scaling_multiplier_disabled
+		}
+		name = gpm_start_menu.1.scaling_off
+		custom_tooltip = gpm_start_menu.1.scaling_offTT
+		remove_global_flag = gpm_scaling_multiplier_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+
+
+	##############################################
+	############# Extra Options ##################
+	##############################################
+
+
+	# additional options menu
+	option = {
+		name = gpm_start_menu.1.options
+		custom_tooltip = gpm_start_menu.1.optionsTT
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+
+	##############################################
+	############# GSC MOD Options ################
+	##############################################
+
+
+	# options menu GSC Weapons
+	option = {
+		trigger = { has_global_flag = has_crystallis_component_mod }
+		name = gpm_start_menu.1.GSC_weapons
+		custom_tooltip = gsc_start_menu.1.desc
+		hidden_effect = {
+			country_event = { id = gsc_start_menu.2  }
+		}
+	}
+	# options menu GSC Non-Weapons
+	option = {
+		trigger = { has_global_flag = has_crystallis_component_mod }
+		name = gpm_start_menu.1.GSC_non_weapons
+		custom_tooltip = gsc_start_menu.1.desc
+		hidden_effect = {
+			country_event = { id = gsc_start_menu.3  }
+		}
+	}
+
+
+	##############################################
+	############### START THE GAME ###############
+	##############################################
+
+	# start the game
+	option = {
+		name = gpm_start_menu.1.START
+		custom_tooltip = gpm_start_menu.1.STARTTT
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = gpm_modifier_amount_max_one
+					has_global_flag = gpm_modifier_amount_low
+					has_global_flag = gpm_modifier_amount_normal
+					has_global_flag = gpm_modifier_amount_high
+				}
+			}
+			set_global_flag = gpm_modifier_amount_normal
+		}
+		hidden_effect = {
+			country_event = { id = gpm_engine.0 days = 1 }
+		}
+	}
+	
+	##TEST OPTION##
+	# option = {
+		# name = gpm_start_menu.1.TEST
+		# hidden_effect = {
+			# set_global_flag = gpm_enigmatic_hack_happened
+			# every_owned_pop = {
+				# limit = {
+					# is_robot_pop = yes
+				# }
+				# modify_species = {
+					# species = this
+					# add_trait = trait_gpm_enigmatic_update
+				# }
+			# }
+		# }
+		# custom_tooltip = gpm_enigmatic_update_rewarded
+	# }
+}
+
+
+# Extra options menu
+country_event = {
+	id = gpm_start_menu.2
+	title = gpm_start_menu.1.name
+	desc = gpm_start_menu.1.desc
+	picture = GFX_evt_gpm_guillis_planet_modifiers
+	
+	is_triggered_only = yes
+	
+	
+	trigger = {
+		# is_multiplayer = no
+		# is_country = 00
+	}
+	
+	
+	immediate = {
+
+	}
+
+	
+	
+	##############################################
+	############ Home World Modifiers ############
+	##############################################
+
+	# Enable homeworld modifiers
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_modifiers_homeworld_enabled }
+		}
+		name = gpm_start_menu.2.enabled_homeworld
+		custom_tooltip = gpm_start_menu.2.enabled_homeworldTT
+		set_global_flag = gpm_modifiers_homeworld_enabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# Disable homeworld modifiers
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifiers_homeworld_enabled
+		}
+		name = gpm_start_menu.2.disable_homeworld
+		custom_tooltip = gpm_start_menu.2.disable_homeworldTT
+		remove_global_flag = gpm_modifiers_homeworld_enabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+	
+	###########################################################
+	############ Mining and Research station costs ############
+	###########################################################
+
+	# Disable extra station cost
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_station_extra_cost_disabled }
+		}
+		name = gpm_start_menu.2.disable_stationcost
+		custom_tooltip = gpm_start_menu.2.disable_stationcostTT
+		set_global_flag = gpm_station_extra_cost_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# Enable extra station cost
+	option = {
+		trigger = {
+			has_global_flag = gpm_station_extra_cost_disabled
+		}
+		name = gpm_start_menu.2.enabled_stationcost
+		custom_tooltip = gpm_start_menu.2.enabled_stationcostTT
+		remove_global_flag = gpm_station_extra_cost_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	
+
+	##############################################
+	############ Precursor Modifiers #############
+	##############################################
+
+	# Disable precursor modifiers and relics
+	option = {
+		trigger = {
+			NAND = {
+				has_global_flag = gpm_modifiers_precursor_disabled
+				has_global_flag = gpm_relic_drops_disabled
+			}
+		}
+		name = gpm_start_menu.2.disable_precursor
+		custom_tooltip = gpm_start_menu.2.disable_precursorTT
+		set_global_flag = gpm_modifiers_precursor_disabled
+		set_global_flag = gpm_relic_drops_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# Enable precursor modifiers
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifiers_precursor_disabled
+			has_global_flag = gpm_relic_drops_disabled
+		}
+		name = gpm_start_menu.2.enable_precursor
+		custom_tooltip = gpm_start_menu.2.enable_precursorTT
+		remove_global_flag = gpm_modifiers_precursor_disabled
+		remove_global_flag = gpm_relic_drops_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+
+	##############################################
+	############ Fallen Empire Modifiers #########
+	##############################################
+
+	# Disable fallen empire modifiers
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_modifiers_fallen_empire_disabled }
+		}
+		name = gpm_start_menu.2.disable_fallen_empire
+		custom_tooltip = gpm_start_menu.2.disable_fallen_empireTT
+		set_global_flag = gpm_modifiers_fallen_empire_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# enable fallen empire modifiers
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifiers_fallen_empire_disabled
+		}
+		name = gpm_start_menu.2.enable_fallen_empire
+		custom_tooltip = gpm_start_menu.2.enable_fallen_empireTT
+		remove_global_flag = gpm_modifiers_fallen_empire_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+	##############################################
+	################ Planet Wonders ##############
+	##############################################
+
+	# Disable planet wonders 
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_planet_wonders_disabled }
+		}
+		name = gpm_start_menu.2.disable_wonders
+		custom_tooltip = gpm_start_menu.2.disable_wondersTT
+		set_global_flag = gpm_planet_wonders_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# enable planet wonders 
+	option = {
+		trigger = {
+			has_global_flag = gpm_planet_wonders_disabled
+		}
+		name = gpm_start_menu.2.enable_wonders
+		custom_tooltip = gpm_start_menu.2.enable_wondersTT
+		remove_global_flag = gpm_planet_wonders_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+	##############################################
+	############### Planet Rings #################
+	##############################################
+
+	# Disable planetary rings 
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_planetary_rings_disabled }
+		}
+		name = gpm_start_menu.2.disable_planetary_rings
+		custom_tooltip = gpm_start_menu.2.disable_planetary_ringsTT
+		set_global_flag = gpm_planetary_rings_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# enable planetary rings 
+	option = {
+		trigger = {
+			has_global_flag = gpm_planetary_rings_disabled
+		}
+		name = gpm_start_menu.2.enable_planetary_rings
+		custom_tooltip = gpm_start_menu.2.enable_planetary_ringsTT
+		remove_global_flag = gpm_planetary_rings_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+
+
+	##############################################
+	############ Extra Fun Option ############
+	##############################################
+
+	# Enable Extra Fun Option
+	# Greatly increases relic drop chance
+	# Greatly increases precursor dig site chance
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_multiplayer_fun_enabled }
+		}
+		name = gpm_start_menu.2.enabled_mp_fun
+		custom_tooltip = gpm_start_menu.2.enabled_mp_funTT
+		set_global_flag = gpm_multiplayer_fun_enabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# Disable Extra Fun Option
+	option = {
+		trigger = {
+			has_global_flag = gpm_multiplayer_fun_enabled
+		}
+		name = gpm_start_menu.2.disable_mp_fun
+		custom_tooltip = gpm_start_menu.2.disable_mp_funTT
+		remove_global_flag = gpm_multiplayer_fun_enabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
+
+	##############################################
+	############ BACK TO MAIN MENU ###############
+	##############################################
+
+	# back button 
+	option = {
+		name = gpm_start_menu.2.back
+		custom_tooltip = gpm_start_menu.2.backTT
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+}

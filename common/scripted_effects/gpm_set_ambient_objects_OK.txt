@@ -1,0 +1,4489 @@
+# scope = planet
+gpm_set_shipyards_objects = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = "has_system_scale_mod" }
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_precursor_shipyards
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+					is_star = yes
+				}
+				NOT = { has_planet_flag = gpm_precursor_shipyards_ambient }
+			}
+			save_event_target_as = gpm_orbit_shipyards
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size > 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size > 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_30
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_25
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 24
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 28
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_24
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 23
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 27
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_23
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 22
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 26
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_22
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 21
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 25
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_21
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 20
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 24
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_20
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 19
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 23
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_19
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 18
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 22
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_18
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 17
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 21
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_17
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 16
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 20
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_16
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 15
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 19
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_15
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 14
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 18
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_14
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 13
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_13
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 12
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 16
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_12
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 11
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 15
+						}
+					}
+				}
+
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_11
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 10
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 14
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_10
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 9
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 13
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_9
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 8
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size < 14
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_8
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						planet_size < 8
+						is_moon = no
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_7
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+								
+			set_planet_flag = gpm_precursor_shipyards_ambient
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				has_global_flag = "has_system_scale_mod"
+				NOT = { has_global_flag = "has_real_space_mc_mod" }
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_precursor_shipyards
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+					is_star = yes
+				}
+				NOT = { has_planet_flag = gpm_precursor_shipyards_ambient }
+			}
+			save_event_target_as = gpm_orbit_shipyards
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size > 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size > 32
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_30
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 32
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_25
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 24
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 31
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_24
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 23
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 30
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_23
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 22
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_22
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 21
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 28
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_21
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 20
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 27
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_20
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 19
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 26
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_19
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 18
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 25
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_18
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 17
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 24
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_17
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+			   limit = {
+					OR = {
+						AND = {
+							planet_size = 16
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 23
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_16
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 15
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 22
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_15
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 14
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 21
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_14
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 13
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 20
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_13
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 12
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 19
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_12
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 11
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 18
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_11
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 10
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_10
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 9
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 16
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_9
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 8
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size < 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_8
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						planet_size < 8
+						is_moon = no
+					}
+				}
+				create_ambient_object = {
+					type = gpm_precursor_shipyards_RS_7
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_orbit_shipyards
+					}
+					set_ambient_object_flag = gpm_precursor_shipyard_flag
+				}
+			}
+
+			set_planet_flag = gpm_precursor_shipyards_ambient
+		}
+	}
+}
+
+# scope = planet
+gpm_set_precursor_planetary_shields_machines = {
+	if = {
+		limit = { 
+			NOT = { has_global_flag = "has_system_scale_mod" } 
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_precursor_planetary_shield
+					has_deposit = gpm_d_planetary_shield_array
+				}				
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+				}
+				NOT = { has_planet_flag = gpm_precursor_shield_ambient }
+			}
+			save_event_target_as = gpm_precursor_shield_location
+
+			create_ambient_object = {
+				type = gpm_planetary_shield_30_machine
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = event_target:gpm_precursor_shield_location
+				}
+				set_ambient_object_flag = gpm_precursor_shield_flag
+			}
+			set_planet_flag = gpm_precursor_shield_ambient
+		}
+	}
+	if = {
+		limit = { 
+			AND = {
+				has_global_flag = "has_system_scale_mod"
+				NOT = { has_global_flag = "has_real_space_mc_mod" }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_precursor_planetary_shield
+					has_deposit = gpm_d_planetary_shield_array
+				}
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+				}
+				NOT = { has_planet_flag = gpm_precursor_shipyards_ambient }
+			}
+			save_event_target_as = gpm_precursor_shield_location
+			
+			create_ambient_object = {
+				type = gpm_planetary_shield_RS_30_machine
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = event_target:gpm_precursor_shield_location
+				}
+				set_ambient_object_flag = gpm_precursor_shield_flag
+			}
+			set_planet_flag = gpm_precursor_shield_ambient
+		}
+	}
+}
+
+# scope = planet
+gpm_set_precursor_planetary_shields = {
+	if = {
+		limit = { 
+			NOT = { has_global_flag = "has_system_scale_mod" } 
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_precursor_planetary_shield
+					has_deposit = gpm_d_planetary_shield_array
+				}
+				
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+				}
+				NOT = { has_planet_flag = gpm_precursor_shield_ambient }
+			}
+			save_event_target_as = gpm_precursor_shield_location
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size > 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size > 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_30
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_25
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 24
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 28
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_24
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 23
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 27
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_23
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 22
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 26
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_22
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 21
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 25
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_21
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 20
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 24
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_20
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 19
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 23
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_19
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 18
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 22
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_18
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 17
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 21
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_17
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 16
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 20
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_16
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 15
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 19
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_15
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 14
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 18
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_14
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 13
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_13
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 12
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 16
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_12
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 11
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 15
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_11
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 10
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 14
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_10
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 9
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 13
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_09
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 8
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size < 14
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_08
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						planet_size < 8
+						is_moon = no
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_07
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			set_planet_flag = gpm_precursor_shield_ambient
+		}
+	}
+	if = {
+		limit = { 
+			AND = {
+				has_global_flag = "has_system_scale_mod"
+				NOT = { has_global_flag = "has_real_space_mc_mod" }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_precursor_planetary_shield
+					has_deposit = gpm_d_planetary_shield_array
+				}
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+				}
+				NOT = { has_planet_flag = gpm_precursor_shipyards_ambient }
+			}
+			save_event_target_as = gpm_precursor_shield_location
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size > 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size > 32
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_30
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+		
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 32
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_25
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 24
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 31
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_24
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 23
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 30
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_23
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 22
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_22
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 21
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 28
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_21
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 20
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 27
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_20
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 19
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 26
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_19
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 18
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 25
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_18
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 17
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 24
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_17
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 16
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 23
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_16
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 15
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 22
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_15
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 14
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 21
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_14
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 13
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 20
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_13
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 12
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 19
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_12
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 11
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 18
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_11
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 10
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_10
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 9
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 16
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_09
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 8
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size < 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_08
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						planet_size < 8
+						is_moon = no
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_RS_07
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_precursor_shield_location
+					}
+					set_ambient_object_flag = gpm_precursor_shield_flag
+				}
+			}
+			set_planet_flag = gpm_precursor_shield_ambient
+		}
+	}
+}
+# scope = planet
+gpm_set_fallen_empire_planetary_shields = {
+	if = {
+		limit = { 
+			NOT = { has_global_flag = "has_system_scale_mod" } 
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_planetary_shielding_FE
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+				}
+				NOT = { has_planet_flag = gpm_fallen_empire_shield_ambient }
+			}
+			save_event_target_as = gpm_FE_shield_location
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size > 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size > 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_30
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+		
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_25
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 24
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 28
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_24
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 23
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 27
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_23
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 22
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 26
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_22
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 21
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 25
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_21
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 20
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 24
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_20
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 19
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 23
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_19
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 18
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 22
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_18
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 17
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 21
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_17
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 16
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 20
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_16
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 15
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 19
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_15
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 14
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 18
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_14
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 13
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_13
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 12
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 16
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_12
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 11
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 15
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_11
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 10
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 14
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_10
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 9
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 13
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_09
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 8
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size < 14
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_08
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						planet_size < 8
+						is_moon = no
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_07
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			set_planet_flag = gpm_fallen_empire_shield_ambient
+		}
+	}
+	if = {
+		limit = { 
+			AND = {
+				has_global_flag = "has_system_scale_mod"
+				NOT = { has_global_flag = "has_real_space_mc_mod" }
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_planetary_shielding_FE
+				NOR = {
+					gpm_is_planet_class_ringworld = yes
+					gpm_is_planet_class_habitat = yes
+				}
+				NOT = { has_planet_flag = gpm_fallen_empire_shield_ambient }
+			}
+			save_event_target_as = gpm_FE_shield_location
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size > 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size > 32
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_30
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+		
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 25
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 32
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_25
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 24
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 31
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_24
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 23
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 30
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_23
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 22
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 29
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_22
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 21
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 28
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_21
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 20
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 27
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_20
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 19
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 26
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_19
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 18
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 25
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_18
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 17
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 24
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_17
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 16
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 23
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_16
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 15
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 22
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_15
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 14
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 21
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_14
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 13
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 20
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_13
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 12
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 19
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_12
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 11
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 18
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_11
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 10
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_10
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 9
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size = 16
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_09
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							planet_size = 8
+							is_moon = no
+						}
+						AND = {
+							is_moon = yes
+							planet_size < 17
+						}
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_08
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						planet_size < 8
+						is_moon = no
+					}
+				}
+				create_ambient_object = {
+					type = gpm_planetary_shield_FE_RS_07
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = event_target:gpm_FE_shield_location
+					}
+					set_ambient_object_flag = gpm_fallen_empire_shield_flag
+				}
+			}
+			set_planet_flag = gpm_fallen_empire_shield_ambient
+		}
+	}
+}
+
+gpm_set_precursor_energy_grid = {
+	if = {
+		limit = { is_planet_class = pc_continental }
+		set_planet_entity = { entity = "gpm_continental_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_gaia }
+		set_planet_entity = { entity = "gpm_gaia_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_arctic }
+		set_planet_entity = { entity = "gpm_arctic_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_alpine }
+		set_planet_entity = { entity = "gpm_alpine_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_savannah }
+		set_planet_entity = { entity = "gpm_savannah_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_arid }
+		set_planet_entity = { entity = "gpm_arid_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_barren }
+		set_planet_entity = { entity = "gpm_barren_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_barren_cold }
+		set_planet_entity = { entity = "gpm_cold_barren_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_desert }
+		set_planet_entity = { entity = "gpm_desert_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_frozen }
+		set_planet_entity = { entity = "gpm_frozen_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_molten }
+		set_planet_entity = { entity = "gpm_molten_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_ocean }
+		set_planet_entity = { entity = "gpm_ocean_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_toxic }
+		set_planet_entity = { entity = "gpm_toxic_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_tropical }
+		set_planet_entity = { entity = "gpm_tropical_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_tundra }
+		set_planet_entity = { entity = "gpm_tundra_planet_energy_grid_entity" }
+	}
+	if = {
+		limit = { is_planet_class = pc_nuked }
+		set_planet_entity = { entity = "gpm_nuked_planet_energy_grid_entity" }
+	}
+}
+
+# Duplicate asteroid 
+# scope = planet
+gpm_set_binary_asteroid = {
+	save_event_target_as = gpm_double_asteroid
+	solar_system = {
+		spawn_planet = {
+			class = "pc_asteroid"
+			location = event_target:gpm_double_asteroid
+			orbit_location = no
+			orbit_angle_offset = 5
+			orbit_distance_offset = -4.0
+			size = 20
+			has_ring = no
+			
+			init_effect = {
+				set_name = gpm_binary_asteroids
+				set_planet_entity = {
+					entity = "asteroid_entity"
+				}
+				set_surveyed = { surveyed = no surveyor = event_target:gpm_host_country_event_target }
+				reroll_planet = yes
+				set_planet_flag = gpm_binary_asteroid
+				if = {
+					limit= { NOT = { has_modifier = gpm_binary_asteroids } }
+					add_modifier = { modifier = gpm_binary_asteroids days = -1 }
+				}
+			}
+		}
+	}
+}
+
+# gpm_metallic_ring
+# gpm_ice_ring
+
+# Planet flag = gpm_has_planet_rings
+# Ambient object flag = gpm_ambient_ring
+
+gpm_set_planetary_rings = {
+	if = {
+		limit = { has_ring = yes }
+		set_ring = no
+	}
+	## Metallic Rings ##
+	if = {
+		limit = { 
+			AND = {
+				has_modifier = gpm_metallic_ring
+				NOT = { has_planet_flag = gpm_has_planet_rings }
+			}
+		}
+		set_planet_flag = gpm_has_planet_rings
+		save_event_target_as = planet_location_rings
+		if = {
+			limit = {
+				AND = {
+					has_global_flag = "has_system_scale_mod"
+					NOT = { has_global_flag = "has_real_space_mc_mod" }
+				}
+			}
+			random_list = {
+				8 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_metallic_small
+						location = this
+					}
+					set_planet_flag = gpm_rings_small
+				}
+				4 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_metallic_medium
+						location = this
+					}
+					set_planet_flag = gpm_rings_medium
+				}
+				2 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_metallic_large
+						location = this
+					}
+					set_planet_flag = gpm_rings_large
+				}
+				1 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_metallic_huge
+						location = this
+					}
+					set_planet_flag = gpm_rings_huge
+				}
+			}
+			
+		}
+		else = {
+			random_list = {
+				8 = {
+					create_ambient_object = {
+						type = gpm_rings_metallic_small
+						location = this
+					}
+					set_planet_flag = gpm_rings_small
+				}
+				4 = {
+					create_ambient_object = {
+						type = gpm_rings_metallic_medium
+						location = this
+					}
+					set_planet_flag = gpm_rings_medium
+				}
+				2 = {
+					create_ambient_object = {
+						type = gpm_rings_metallic_large
+						location = this
+					}
+					set_planet_flag = gpm_rings_large
+				}
+				1 = {
+					create_ambient_object = {
+						type = gpm_rings_metallic_huge
+						location = this
+					}
+					set_planet_flag = gpm_rings_huge
+				}
+			}
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = event_target:planet_location_rings
+			}
+			set_ambient_object_flag = gpm_ambient_ring
+		}
+	}
+	## Ice Rings ##
+	if = {
+		limit = { 
+			AND = {
+				has_modifier = gpm_ice_ring
+				NOT = { has_planet_flag = gpm_has_planet_rings }
+			}
+		}
+		set_planet_flag = gpm_has_planet_rings
+		save_event_target_as = planet_location_rings
+		if = {
+			limit = {
+				AND = {
+					has_global_flag = "has_system_scale_mod"
+					NOT = { has_global_flag = "has_real_space_mc_mod" }
+				}
+			}
+			random_list = {
+				8 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_ice_small
+						location = this
+					}
+					set_planet_flag = gpm_rings_small
+				}
+				4 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_ice_medium
+						location = this
+					}
+					set_planet_flag = gpm_rings_medium
+				}
+				2 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_ice_large
+						location = this
+					}
+					set_planet_flag = gpm_rings_large
+				}
+				1 = {
+					create_ambient_object = {
+						type = gpm_rings_RS_ice_huge
+						location = this
+					}
+					set_planet_flag = gpm_rings_huge
+				}
+			}
+			
+		}
+		else = {
+			random_list = {
+				8 = {
+					create_ambient_object = {
+						type = gpm_rings_ice_small
+						location = this
+					}
+					set_planet_flag = gpm_rings_small
+				}
+				4 = {
+					create_ambient_object = {
+						type = gpm_rings_ice_medium
+						location = this
+					}
+					set_planet_flag = gpm_rings_medium
+				}
+				2 = {
+					create_ambient_object = {
+						type = gpm_rings_ice_large
+						location = this
+					}
+					set_planet_flag = gpm_rings_large
+				}
+				1 = {
+					create_ambient_object = {
+						type = gpm_rings_ice_huge
+						location = this
+					}
+					set_planet_flag = gpm_rings_huge
+				}
+			}
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = event_target:planet_location_rings
+			}
+			set_ambient_object_flag = gpm_ambient_ring
+		}
+	}
+}
+
+# Set minor ambient objects in or around planets
+# planet scope
+gpm_set_space_ship_graveyard_ambient_objects = {
+	if = {
+		limit = {
+			has_modifier = gpm_spaceship_graveyard
+			NOT = { has_planet_flag = has_spaceship_graveyard_ambient_objects }
+		}
+		set_planet_flag = has_spaceship_graveyard_ambient_objects
+
+		create_ambient_object = {
+			type = "ancient_battlefield_object"
+			entity_offset_height = { min = -5 max = -5 }
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_02_object"
+			entity_offset_height = { min = -20 max = -20 }
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+		while = {
+			count = 5
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -10 max = -20 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		while = {
+			count = 5
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -10 max = -20 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		while = {
+			count = 30
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -10 max = -20 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+	}
+}
+
+# Ambient object list for precursor planets/systems. Bringing some (dead) life to the worlds!
+# planet scope
+# this = planet
+gpm_precursor_ambient_object_generator = {
+	solar_system = {
+		random_system_planet = {
+			limit = {
+				gpm_is_planet_class_star = yes
+			}
+			# small chance of broken star station around a star
+			random_list = {
+				90 = { }
+				10 = {
+					# small ring of debris
+					while = {
+						count = 15
+						create_ambient_object = {
+							type = "large_debris_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 66
+								angle = random
+							}
+						}
+					}
+					while = {
+						count = 20
+						create_ambient_object = {
+							type = "medium_debris_01_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 66
+								angle = random
+							}
+						}
+					}
+					while = {
+						count = 20
+						create_ambient_object = {
+							type = "medium_debris_02_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 66
+								angle = random
+							}
+						}
+					}
+					while = {
+						count = 25
+						create_ambient_object = {
+							type = "small_debris_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 66
+								angle = random
+							}
+						}
+					}
+				}
+				10 = {
+					# large ring of debris
+					while = {
+						count = 30
+						create_ambient_object = {
+							type = "large_debris_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 187
+								angle = random
+							}
+						}
+					}
+					while = {
+						count = 40
+						create_ambient_object = {
+							type = "medium_debris_01_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 187
+								angle = random
+							}
+						}
+					}
+					while = {
+						count = 40
+						create_ambient_object = {
+							type = "medium_debris_02_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 187
+								angle = random
+							}
+						}
+					}
+					while = {
+						count = 50
+						create_ambient_object = {
+							type = "small_debris_object"
+							entity_offset_height = { min = -10 max = -20 }
+							location = this
+						}
+						last_created_ambient_object = {
+							set_location = {
+								target = prev
+								distance = 187
+								angle = random
+							}
+						}
+					}
+				}
+				10 = {
+					# star lifter
+					create_ambient_object = {
+						type = broken_star_lifting_platform
+						location = this
+					}
+					
+					create_ambient_object = {
+						type = small_debris_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 1
+							angle = 0
+						}
+					}
+					create_ambient_object = {
+						type = small_debris_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 1
+							angle = 90
+						}
+					}
+					create_ambient_object = {
+						type = small_debris_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 1
+							angle = 180
+						}
+					}
+					create_ambient_object = {
+						type = small_debris_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 1
+							angle = 270
+						}
+					}
+					create_ambient_object = {
+						type = medium_debris_02_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 3
+							angle = 5
+						}
+					}
+					create_ambient_object = {
+						type = medium_debris_02_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 9
+							angle = 120
+						}
+					}
+					create_ambient_object = {
+						type = medium_debris_01_object
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = this
+							distance = 6
+							angle = 240
+						}
+					}
+				}
+			}
+		}
+		every_system_planet = {
+			limit = {
+				NOR = {
+					gpm_is_planet_class_star = yes
+					gpm_is_planet_class_asteroid = yes
+					gpm_is_a_precursor_world = yes
+				}
+			}
+			random_list = {
+				60 = { }
+				40 = {
+					random_list = {
+						10 = {
+							create_ambient_object = {
+								type = "medium_debris_01_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 7
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "medium_debris_02_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 14
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "medium_debris_01_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 17
+									angle = random
+								}
+							}
+						}
+						10 = {
+							create_ambient_object = {
+								type = "medium_debris_01_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 5
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "medium_debris_02_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 7
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "medium_debris_01_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 10
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "medium_debris_02_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 15
+									angle = random
+								}
+							}
+						}
+						10 = {
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 7
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 15
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 5
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 12
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 20
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 25
+									angle = random
+								}
+							}
+						}
+						10 = {
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 5
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 8
+									angle = random
+								}
+							}
+						}
+						10 = {
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 5
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 8
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+								}
+								last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 12
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 12
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+							}
+							last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 12
+									angle = random
+								}
+							}
+							create_ambient_object = {
+								type = "small_debris_object"
+								location = this
+								}
+								last_created_ambient_object = {
+								set_location = {
+									target = this
+									distance = 15
+									angle = random
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	random_list = {
+		10 = {
+			create_ambient_object = {
+				type = "gpm_broken_wormhole_ring"
+				location = this
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = abandoned_observation_outpost
+				location = this
+			}
+			
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 0
+				}
+			}
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 90
+				}
+			}
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 180
+				}
+			}
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 270
+				}
+			}
+			create_ambient_object = {
+				type = medium_debris_02_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 3
+					angle = 5
+				}
+			}
+			create_ambient_object = {
+				type = medium_debris_02_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 9
+					angle = 120
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = derelict_particle_accelerator
+				location = this
+			}
+			
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 0
+				}
+			}
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 90
+				}
+			}
+			create_ambient_object = {
+				type = small_debris_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 1
+					angle = 270
+				}
+			}
+			create_ambient_object = {
+				type = medium_debris_02_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 3
+					angle = 5
+				}
+			}
+			create_ambient_object = {
+				type = medium_debris_02_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 9
+					angle = 120
+				}
+			}
+			create_ambient_object = {
+				type = medium_debris_01_object
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 6
+					angle = 240
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "ancient_battlefield_object"
+				location = this
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "derelict_ship_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 5
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 10
+					angle = random
+				}
+			}
+			
+		}
+		10 = {
+			create_ambient_object = {
+				type = "gpm_abandoned_starbase_01_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "ancient_battlefield_02_object"
+				location = this
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "gpm_abandoned_station_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "gpm_mysterious_space_station_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 15
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "gpm_abandoned_ship_2_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 5
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 0
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 3
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 7
+					angle = random
+				}
+			}
+		}
+		10 = {
+			create_ambient_object = {
+				type = "derelict_ship_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 5
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 7
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = this
+					distance = 3
+					angle = random
+				}
+			}
+		}
+	}
+}

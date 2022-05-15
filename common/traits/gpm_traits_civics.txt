@@ -1,0 +1,67 @@
+trait_gpm_forgotten_species = {
+	cost = 0
+	initial = no
+	randomized = no
+	
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	modifier = {
+		species_leader_exp_gain = 0.5
+		pop_amenities_usage_mult = 0.25
+	}
+	#custom_tooltip = TRAIT_GPM_FORGOTTEN_SPECIES_EFFECT
+}
+trait_gpm_mega_adaptive = {
+	cost = 0
+	initial = no
+	randomized = no
+		
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	
+	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_extremely_adaptive" }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	modifier = {
+		pop_environment_tolerance = 0.10
+		planet_jobs_minerals_produces_mult = 0.20
+		planet_jobs_food_produces_mult = 0.20
+	}
+	#custom_tooltip = TRAIT_GPM_MEGA_ADAPTIVE_EFFECT
+}
+trait_gpm_high_status = {
+	cost = 0
+	initial = no
+	randomized = no
+		
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	custom_tooltip = TRAIT_GPM_HIGH_STATUS_EFFECT
+}

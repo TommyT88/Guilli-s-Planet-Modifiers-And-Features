@@ -1,0 +1,16 @@
+entity = {
+	name = "gpm_ME_space_storm_2_entity"
+	locator = { name = "core" position = { 0 -15 0 }}
+	scale = 8
+
+	default_state = "idle"
+	state = { name = "idle" 		state_time = 5
+		event = { time = 0 node = "core" particle = "space_storm_2_effect" keep_particle = yes trigger_once = yes }
+		start_event = { 
+			trigger_once = yes 
+			sound = { soundeffect = "sfx_amb_space_storm_2" } 
+            }
+        }
+	
+	cull_radius = 20000
+}

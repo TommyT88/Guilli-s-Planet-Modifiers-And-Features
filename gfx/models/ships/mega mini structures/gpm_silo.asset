@@ -1,0 +1,50 @@
+entity = {
+	name = "gpm_silo_damaged_entity"
+	
+	locator = { name = "north" position = { 0 0 0 } rotation = { 0 180 0 }}
+	attach = { "north" = "gpm_silo_damaged_north_entity"}
+	
+	default_state = "idle"
+
+}
+
+entity = {
+	name = "gpm_silo_damaged_north_entity"
+	pdxmesh = "gpm_silo_damaged_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 
+	#	start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } 
+	}
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 0.0 node = "explosion_01" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 1.0 node = "explosion_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+	}
+
+}
+
+
+entity = {
+	name = "gpm_silo_entity"
+	
+	locator = { name = "north" position = { 0 0 0 } rotation = { 0 180 0 }}
+	attach = { "north" = "gpm_silo_north_entity"}
+	
+	default_state = "idle"
+
+}
+
+entity = {
+	name = "gpm_silo_north_entity"
+	pdxmesh = "gpm_silo_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 
+	#	start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } 
+	}
+	state = { name = "death" state_time = 5 looping = no
+		event = { time = 0.0 node = "explosion_01" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 1.0 node = "explosion_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+	}
+
+}

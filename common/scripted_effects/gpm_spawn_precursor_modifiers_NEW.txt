@@ -1,0 +1,898 @@
+
+# Total modifiers: 8
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 12.5
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+gpm_spawn_precursor_modifier = {
+	if = {
+		limit = { NOT = { has_planet_flag = gpm_is_precursor_world } }
+		set_planet_flag = gpm_is_precursor_world
+	}
+
+	random_list = {
+		140 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_remnants" multiplier = gpm_planet_size_multiplier_precursor }
+			
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_remnants" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_energy_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			gpm_set_precursor_energy_grid = yes
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_energy_grid" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_satalite_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_satalite_grid" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_city" }
+		}
+		60 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_shipyards" }
+			gpm_set_shipyards_objects = yes
+			# modifier = { factor = 0 host_has_dlc = Federations }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 1.5 is_planet_class = pc_gpm_precursor_tomb }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_shipyards" }
+			solar_system = { set_star_flag = gpm_precursor_shipyards_star }
+		}		
+		# 60 = {
+		# 	add_modifier = { days = -1 modifier = "gpm_precursor_shipyards_fed" }
+		# 	solar_system = {
+		# 		spawn_megastructure = {
+		# 			type = "gpm_mega_shipyard_ruined_precursor"
+		# 			planet = star
+
+		# 			init_effect = {
+		# 				create_ambient_object = {
+		# 					type = "large_debris_object"
+		# 					location = this
+		# 				}
+		# 				last_created_ambient_object = {
+		# 					target = prev
+		# 					set_location = {
+		# 						distance = 20
+		# 						angle = 20
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	modifier = { factor = 0 NOT = { host_has_dlc = Federations } }
+		# 	modifier = { factor = @rare }
+		# 	# On these planets #
+		# 	modifier = { factor = 0 is_planet_class = pc_archive }
+		# 	# TWeaks #
+		# 	modifier = { factor = 0.5
+		# 		OR = {
+		# 			gpm_is_planet_class_barren = yes
+		# 			gpm_is_planet_class_molten = yes
+		# 			gpm_is_planet_class_frozen = yes
+		# 		}
+		# 	}
+		# 	# Galaxy age setting modifier
+		# 	modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+		# 	modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+		# 	# Not with these modifiers #
+		# 	modifier = { factor = 0 has_modifier = "gpm_precursor_shipyards_fed" }
+		# 	solar_system = { set_star_flag = gpm_precursor_shipyards_star }
+		# }
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 2 solar_system = { is_bottleneck_system = yes } }
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_gun" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_bunker_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 2 solar_system = { is_bottleneck_system = yes } }
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_bunker_grid" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_mechs" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_mechs" }
+		}
+		100 = {
+			modifier = { factor = @rare }
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" multiplier = gpm_planet_size_multiplier_precursor }
+			gpm_set_precursor_planetary_shields = yes	
+			# if = {
+				# limit = { NOT = {	is_capital =  yes } }
+				# random_list = {
+					# # Standard random planet
+					# 10 = { 
+						# add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" }
+						# gpm_roll_planetary_features = yes
+						# gpm_set_precursor_planetary_shields = yes	
+					# }
+					# # Special Gaia World
+					# 10 = {
+						# change_pc = pc_gaia
+						# reroll_planet = yes
+						# add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" }
+						# gpm_roll_planetary_features = yes						
+						# clear_blockers = yes
+						# gpm_set_precursor_planetary_shields = yes	
+						# while = {
+							# count < 10
+							# random_list = {
+								# 25 = { }
+								# 75 = { add_deposit = gpm_tb_xenomorph_blocker }
+							# }
+						# }	
+					# }
+					# # Special Relic World
+					# 8 = {
+						# change_pc = pc_relic
+						# clear_deposits = yes
+						# clear_blockers = yes
+						# gpm_purge_all_planetary_modifiers = yes
+						# relic_world_deposits = yes
+						# add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" }
+						# gpm_roll_planetary_features = yes
+						# gpm_set_precursor_planetary_shields = yes	
+						# while = {
+							# count < 10
+							# random_list = {
+								# 25 = { }
+								# 75 = { add_deposit = gpm_tb_automated_turrets }
+							# }
+						# }	
+					# }
+					# # Special Machine world
+					# 6 = {
+						# change_pc = pc_machine
+						# clear_blockers = yes
+						# clear_deposits = yes
+						# gpm_purge_all_planetary_modifiers = yes
+						# add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" }
+						# gpm_set_precursor_planetary_shields = yes	
+						# while = {
+							# count < 10
+							# random_list = {
+								# 25 = { }
+								# 75 = { add_deposit = gpm_tb_automated_turrets }
+							# }
+							# random_list = {
+								# 80 = { }
+								# 20 = { add_deposit = gpm_d_relic_roaming_killbots }
+							# }
+						# }
+					# }
+				# }
+			# }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 4 solar_system = { is_bottleneck_system = yes } }
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_shield" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_floating_city" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_floating_city" }
+		}
+		60 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_capital_complex" }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			# TWeaks #
+			modifier = { factor = 0 solar_system = { is_bottleneck_system = yes } }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_capital_complex" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_communication_hub" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_communication_hub" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_singularity_drive" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 10 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_singularity_drive" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_eternal_fortress" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 4 solar_system = { is_bottleneck_system = yes } }
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_eternal_fortress" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_prison_planet" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_mines" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_mines" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_manufactorium" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 0.1
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			modifier = { factor = 1.5
+				gpm_is_planet_class_normal_habitable = yes
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_manufactorium" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_vaults" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 3 is_planet_class = pc_archive }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_vaults" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_crashed_spacestation" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_crashed_spacestation" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_battleground_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_battleground_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_outpost_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_harbor_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 is_planet_class = pc_archive }
+			modifier = { factor = 0 NOR = { gpm_is_planet_water = yes } }
+			# TWeaks #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_harbor_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_ruins" }
+			modifier = { factor = @rare }
+			# On these planets #
+			modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
+			# TWeaks #
+			modifier = { factor = 1.5 is_planet_class = pc_gpm_precursor_tomb }
+			modifier = { factor = 0 NOT = { planet_size < 15 } }
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_obelisks" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @rare }
+			# On these planets #
+			# TWeaks #
+			modifier = { factor = 0.5
+				OR = {
+					gpm_is_planet_class_barren = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_obelisks" }
+		}
+	}
+}
+
+
+# used for specific events. Needed because they cant have any restrictions
+gpm_random_precursor_modifier = {
+
+	if = {
+		limit = { 
+			NAND = {
+				# has_planet_flag = has_precursor_planet_modifier
+				gpm_has_precursor_modifiers = yes
+				gpm_is_planet_class_normal_habitable = yes
+			}
+		}
+		# set_planet_flag = has_precursor_planet_modifier
+	}
+	random_list = {
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_remnants" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_remnants" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_energy_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			gpm_set_precursor_energy_grid = yes
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_energy_grid" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_satalite_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_satalite_grid" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_city" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_shipyards" }
+			gpm_set_shipyards_objects = yes
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_shipyards" }
+			modifier = { factor = 0 has_planet_flag = gpm_is_precursor_homeworld_system }
+			solar_system = {
+				set_star_flag = gpm_precursor_shipyards_star
+			}
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_gun" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_bunker_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_bunker_grid" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_mechs" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_mechs" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			modifier = { 
+				factor = 0 
+				solar_system = {
+					any_system_planet = {
+						has_modifier = "gpm_precursor_planetary_shield"
+					}
+				}
+			}
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_shield" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_floating_city" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_floating_city" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_capital_complex" }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_planet_flag = gpm_is_precursor_homeworld_system }
+			modifier = { factor = 0 has_modifier = "gpm_precursor_capital_complex" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_communication_hub" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_communication_hub" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_singularity_drive" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_singularity_drive" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_eternal_fortress" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_eternal_fortress" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_prison_planet" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_mines" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_mines" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_manufactorium" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_manufactorium" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_vaults" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_vaults" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_crashed_spacestation" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_crashed_spacestation" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_battleground_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_battleground_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_outpost_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_harbor_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_harbor_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_ruins" }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_ruins" }
+		}
+		100 = {
+			add_modifier = { days = -1 modifier = "gpm_precursor_obelisks" multiplier = gpm_planet_size_multiplier_precursor }
+			modifier = { factor = @default }
+			# On these planets #
+			# TWeaks #
+			# Not with these modifiers #
+			modifier = { factor = 0 has_modifier = "gpm_precursor_obelisks" }
+		}
+
+	}
+}
+
+# this always spaws precursor modifiers (designated precursor world). How many is determined by the options menu setting. 
+gpm_roll_precursor_modifiers = {
+	gpm_precursor_ambient_object_generator = yes
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			gpm_spawn_precursor_modifier = yes
+		}
+		gpm_modifier_amount_low = {
+			gpm_spawn_precursor_modifier = yes
+			random_list = {
+				95 = { }
+				5 = {
+					gpm_spawn_precursor_modifier = yes
+					modifier = { factor = 1.5 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 2 gpm_is_planet_class_nuked = yes }
+					modifier = { factor = 3 is_planet_class = pc_gpm_precursor_tomb }
+				}
+			}
+			# precursor worlds are juicy
+			if = {
+				limit = { is_planet_class = pc_gpm_precursor_tomb }
+				gpm_spawn_precursor_modifier = yes
+				## SPAGHETTI CODE ## normal done in engine
+				# spawn precursor features 
+				gpm_spawn_precursor_features = yes
+			}
+		}
+		gpm_modifier_amount_normal = {
+			gpm_spawn_precursor_modifier = yes
+			random_list = {
+				90 = { }
+				10 = {
+					gpm_spawn_precursor_modifier = yes
+					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
+					modifier = { factor = 6 is_planet_class = pc_gpm_precursor_tomb }
+				}
+			}
+			# precursor worlds are juicy
+			if = {
+				limit = { is_planet_class = pc_gpm_precursor_tomb }
+				gpm_spawn_precursor_modifier = yes
+				## SPAGHETTI CODE ## normal done in engine
+				# spawn precursor features 
+				gpm_spawn_precursor_features = yes
+			}
+		}
+		gpm_modifier_amount_high = {
+			gpm_spawn_precursor_modifier = yes
+			random_list = {
+				88 = { }
+				12 = {
+					gpm_spawn_precursor_modifier = yes
+					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
+					modifier = { factor = 6 is_planet_class = pc_gpm_precursor_tomb }
+				}
+			}
+			# precursor worlds are juicy
+			if = {
+				limit = { is_planet_class = pc_gpm_precursor_tomb }
+				gpm_spawn_precursor_modifier = yes
+				## SPAGHETTI CODE ## normal done in engine
+				# spawn precursor features 
+				gpm_spawn_precursor_features = yes
+			}
+		}
+		default = { }
+	}
+
+	# adds terraforming candidate modifier on uninhabitable worlds with precursor modifiers
+	if = {
+		limit = {
+			gpm_is_planet_class_normal_uninhabitable = yes
+			gpm_has_required_terraform_modifier = no
+		}
+		add_modifier = { modifier = terraforming_candidate }
+	}
+}

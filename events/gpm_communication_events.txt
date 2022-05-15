@@ -1,0 +1,128 @@
+namespace = gpm_com
+
+
+# Triggered when two empires discover each other
+# This = Empire 1
+# From = Empire 2
+# Fromfromfrom = System where contact occurred
+
+
+### Meet fallen empire as lost FE colony civic start
+country_event = {
+	id = gpm_com.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			is_country_type = default
+			exists = ruler
+			ruler = {
+				species = {
+					has_trait = "trait_gpm_high_status"
+				}
+			}
+		}
+		
+		OR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+
+	immediate = {
+		add_opinion_modifier = {
+			who = from
+			modifier = opinion_respected_species
+		}
+	}
+}
+
+# message event to let empires know the other party has a relic - Empire 1
+country_event = {
+	id = gpm_com.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			FROM = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				OR = {
+					gpm_has_vanilla_precursor_relic = yes
+					gpm_has_modded_precursor_relic = yes
+					gpm_has_modded_non_precursor_relic = yes
+				}
+			}
+			THIS = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				OR = {
+					gpm_has_vanilla_precursor_relic = yes
+					gpm_has_modded_precursor_relic = yes
+					gpm_has_modded_non_precursor_relic = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						gpm_has_vanilla_precursor_relic = yes
+						gpm_has_modded_precursor_relic = yes
+						gpm_has_modded_non_precursor_relic = yes
+					}
+				}
+			}
+			root = {
+				create_message = {
+					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+					localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+					days = 30
+					target = FROM.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = FROM
+					}
+				}
+				# log = "create message on communication established [from.GetName] has relic, letting [root.GetName] know"
+			}
+		}
+		if = {
+			limit = {
+				root = {
+					OR = {
+						gpm_has_vanilla_precursor_relic = yes
+						gpm_has_modded_precursor_relic = yes
+						gpm_has_modded_non_precursor_relic = yes
+					}
+				}
+			}
+			FROM = {
+				create_message = {
+					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+					localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+					days = 30
+					target = root.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = root
+					}
+				}
+				# log = "create message on communication established [root.GetName] has relic, letting [from.GetName] know"
+			}
+		}
+	}
+}

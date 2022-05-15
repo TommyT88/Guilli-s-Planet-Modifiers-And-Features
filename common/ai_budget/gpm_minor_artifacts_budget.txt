@@ -1,0 +1,106 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+
+minor_artifacts_expenditure_planets = {
+	resource = minor_artifacts
+	type = expenditure
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.2
+	}
+}
+
+minor_artifacts_expenditure_ships = {
+	resource = minor_artifacts
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.2
+	}
+}
+
+minor_artifacts_expenditure_upgrade = {
+	resource = minor_artifacts
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		base = 0.1
+	}
+}
+
+minor_artifacts_expenditure_trade = {
+	resource = minor_artifacts
+	type = expenditure
+	category = trade
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.1
+	}
+}
+
+# Upkeep ----------------------------------------------------------
+
+minor_artifacts_upkeep_planets = {
+	resource = minor_artifacts
+	type = upkeep
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.9
+	}
+}
+
+minor_artifacts_upkeep_ships = {
+	resource = minor_artifacts
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.1
+	}
+}
+
+minor_artifacts_upkeep_edicts = {
+	resource = minor_artifacts
+	type = upkeep
+	category = edicts
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		base = 0.25
+	}
+}

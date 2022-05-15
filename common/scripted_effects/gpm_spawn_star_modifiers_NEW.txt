@@ -1,0 +1,161 @@
+
+# Total modifiers: 8
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 12.5
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+gpm_spawn_star_modifier = {
+	random_list = {
+		100 = {
+			add_modifier = { modifier = "gpm_unusual_sun_spots" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_unusual_sun_spots" }
+			# Not on these planets
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_low_metallicity" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_low_metallicity" }
+			modifier = { factor = 0 has_modifier = "gpm_high_metallicity" }
+			# Not on these planets
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_high_metallicity" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_high_metallicity" }
+			modifier = { factor = 0 has_modifier = "gpm_low_metallicity" }
+			# Not on these planets
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_plasmoid_life" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_plasmoid_life" }
+			# Not on these planets
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_plasma_tornadoes" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_plasma_tornadoes" }
+			# Not on these planets
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_singing_star" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_singing_star" }
+			# Not on these planets
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_precursor_star_filter" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_precursor_star_filter" }
+			# Not on these planets
+			# Tweaks
+			modifier = { factor = 0 gpm_are_precursors_enabled = yes }
+			# Galaxy age setting modifier
+			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+	}
+}
+
+gpm_roll_star_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			if = {
+				limit = { num_modifiers = 0 }
+				random_list = {
+					95 = { }
+					5 = { gpm_spawn_star_modifier = yes }
+				}
+			}
+		}
+		gpm_modifier_amount_low = {
+			while = {
+				count = 2
+				if = {
+					limit = { num_modifiers < 2 }
+					random_list = {
+						95 = { }
+						5 = { 
+							gpm_spawn_star_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_normal = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						85 = { }
+						15 = { 
+							gpm_spawn_star_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						75 = { }
+						25 = { 
+							gpm_spawn_star_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		default = { }
+	}
+}

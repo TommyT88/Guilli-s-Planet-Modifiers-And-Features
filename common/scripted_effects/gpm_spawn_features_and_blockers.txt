@@ -1,0 +1,1290 @@
+@planetary_feature_repeat = 3
+@planetary_blocker_repeat = 6
+
+
+gpm_roll_planetary_features = {
+	# set unique features
+	if = {
+		limit = {
+			OR = { 
+				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_nuked = yes
+				gpm_is_planet_class_city = yes
+				gpm_is_planet_class_machine = yes
+				gpm_is_planet_class_hive = yes
+			}
+		}
+		gpm_roll_planetary_features_unique = yes
+	}
+	# roll normal habitable features and blockers
+	if = {
+		limit = {
+			OR = {
+				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_nuked = yes
+			}
+			NOT = { gpm_is_planet_fallen_empire = yes }
+		}
+		# features
+		if = {
+			limit = { planet_size < 16 }
+			gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			while = {
+				count = 1
+				random_list = {
+					50 = {}
+					50 = { gpm_roll_planetary_features_normal_habitable = yes }
+				}
+			}
+		}
+		if = {
+			limit = { planet_size > 15 planet_size < 21 }
+			gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			while = {
+				count = 2
+				random_list = {
+					50 = {}
+					50 = { gpm_roll_planetary_features_normal_habitable = yes }
+				}
+			}
+		}
+		if = {
+			limit = { planet_size > 20 planet_size < 24 }
+			gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			while = {
+				count = 3
+				random_list = {
+					50 = {}
+					50 = { gpm_roll_planetary_features_normal_habitable = yes }
+				}
+			}
+		}
+		if = {
+			limit = { planet_size > 23 }
+			gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			# gpm_roll_planetary_features_normal_habitable = yes
+			while = {
+				count = 4
+				random_list = {
+					50 = {}
+					50 = { gpm_roll_planetary_features_normal_habitable = yes }
+				}
+			}
+		}
+		# roll blockers
+		gpm_roll_planetary_blockers = yes
+	}
+	# roll city features
+	if = {
+		limit = {
+			gpm_is_planet_class_city = yes
+			NOT = { has_planet_flag = gpm_is_new_ecumenopolis }
+		}
+		while = {
+			count = 3
+			random_list = {
+				25 = {}
+				100 = { gpm_roll_planetary_features_city = yes }
+			}
+		}
+	}
+	# roll hive features
+	if = {
+		limit = {
+			gpm_is_planet_class_hive = yes
+		}
+		gpm_roll_planetary_features_hive = yes
+	}
+	# roll machine world features
+	if = {
+		limit = {
+			gpm_is_planet_class_machine = yes
+		}
+		gpm_roll_planetary_features_machine = yes
+	}
+	# roll habitat features
+	if = {
+		limit = {
+			gpm_is_planet_class_habitat = yes
+		}
+		gpm_roll_planetary_features_habitat = yes
+	}
+	# roll ringworld features
+	if = {
+		limit = {
+			gpm_is_planet_class_ringworld = yes
+		}
+		gpm_roll_planetary_features_ringworld = yes
+	}
+}
+
+gpm_roll_planetary_blockers = {
+	# blockers
+	if = {
+		limit = {
+			NOR = {
+				is_capital = yes
+				has_planet_flag = gpm_is_terraformed_world
+			}
+		}
+		if = {
+			limit = {
+				planet_size < 11
+				free_district_slots >= 2
+			}
+			while = {
+				limit = { free_district_slots >= 4 }
+				count = 2
+				random_list = {
+					20 = {}
+					80 = { gpm_roll_planetary_blockers_normal_habitable = yes }
+				}
+			}
+		}
+		if = {
+			limit = {
+				planet_size > 10 
+				planet_size < 16
+				free_district_slots >= 3
+			}
+			while = {
+				limit = { free_district_slots >= 5 }
+				count = 2
+				random_list = {
+					20 = {}
+					80 = { gpm_roll_planetary_blockers_normal_habitable = yes }
+				}
+			}
+		}
+		if = {
+			limit = {
+				planet_size > 15
+				planet_size < 21
+				free_district_slots >= 4
+			}
+			while = {
+				limit = { free_district_slots >= 6 }
+				count = 3
+				random_list = {
+					20 = {}
+					80 = { gpm_roll_planetary_blockers_normal_habitable = yes }
+				}
+			}
+		}
+		if = {
+			limit = {
+				planet_size > 20
+				free_district_slots >= 5
+			}
+			while = {
+				limit = { free_district_slots >= 7 }
+				count = 4
+				random_list = {
+					20 = {}
+					80 = { gpm_roll_planetary_blockers_normal_habitable = yes }
+				}
+			}
+		}
+	}
+}
+
+
+# set unique features
+gpm_roll_planetary_features_unique = {
+	if = {
+		limit = {
+			AND = {
+				has_modifier = gpm_android_pleasure_palace 
+				NOT = { has_deposit = gpm_d_android_pleasure_palace }
+			}
+		}
+		add_deposit = "gpm_d_android_pleasure_palace"
+	}
+	if = {
+		limit = {
+			AND = {
+				has_modifier = gpm_precursor_planetary_shield 
+				NOT = { has_deposit = gpm_d_precursor_planetary_shield }
+			}
+		}
+		add_deposit = "gpm_d_precursor_planetary_shield"
+	}
+	if = {
+		limit = {
+			AND = {
+				has_modifier = gpm_precursor_capital_complex 
+				NOT = { has_deposit = gpm_d_precursor_capital_complex }
+			}
+		}
+		add_deposit = "gpm_d_precursor_capital_complex"
+	}
+	if = {
+		limit = {
+			AND = {
+				has_modifier = gpm_temple_of_the_ancient_one 
+				NOT = { has_deposit = gpm_d_temple_of_the_ancient_one }
+			}
+		}
+		add_deposit = "gpm_d_temple_of_the_ancient_one"
+	}
+}
+
+# roll normal habitable features
+gpm_roll_planetary_features_normal_habitable = {
+	random_list = {
+		10 = {
+			add_deposit = gpm_d_ruined_battlefield
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ruined_battlefield } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_ruined_battlefield count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_spaceship_graveyard
+			modifier = { factor = 0 NOT = { has_modifier = gpm_spaceship_graveyard } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_spaceship_graveyard count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_unusual_formations
+			modifier = { factor = 0 NOT = { has_modifier = gpm_unusual_formations } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_unusual_formations count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_ice_flora
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ice_flora } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_ice_flora count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_planetwide_forest
+			modifier = { factor = 0 NOT = { has_modifier = gpm_planetwide_forest } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_planetwide_forest count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_dense_forests
+			modifier = { factor = 0 NOT = { has_modifier = gpm_dense_forests } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_dense_forests count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_proto_forests
+			modifier = { factor = 0 NOT = { has_modifier = gpm_proto_forests } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_proto_forests count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_temple_of_the_ancient_one
+			modifier = { factor = 0 NOT = { has_modifier = gpm_temple_of_the_ancient_one } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_temple_of_the_ancient_one count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_arachnophobia
+			modifier = { factor = 0 NOT = { has_modifier = gpm_arachnophobia } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_arachnophobia count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_dunes
+			modifier = { factor = 0 NOT = { has_modifier = gpm_dunes } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_dunes count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_mushroom_forest
+			modifier = { factor = 0 NOT = { has_modifier = gpm_mushroom_forest } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_mushroom_forest count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_floating_rocks
+			modifier = { factor = 0 NOT = { has_modifier = gpm_floating_islands } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_floating_rocks count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_ancient_temple
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ancient_temple } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_ancient_temple count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_small_wildlife
+			modifier = { factor = 0 NOT = { has_modifier = gpm_friendly_wildlife } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_small_wildlife count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_massive_wildlife
+			modifier = { factor = 0 NOT = { has_modifier = gpm_friendly_wildlife } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_massive_wildlife count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_super_volcano
+			modifier = { factor = 0 NOT = { has_modifier = gpm_strong_volcanism } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_super_volcano count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_obsidian_fields
+			modifier = { factor = 0 NOT = { has_modifier = gpm_strong_volcanism } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_obsidian_fields count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_magnetic_mountains
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = strong_magnetic_field
+					has_modifier = gpm_strong_magnetic_field_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_magnetic_mountains count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_magnetic_fields
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = strong_magnetic_field
+					has_modifier = gpm_strong_magnetic_field_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_magnetic_fields count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_rich_crater
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = asteroid_impacts
+					has_modifier = gpm_asteroid_impacts_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_rich_crater count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_surface_mineral_veins
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = mineral_rich
+					has_modifier = gpm_mineral_rich_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_surface_mineral_veins count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_dense_metal_veins
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = ultra_rich
+					has_modifier = gpm_ultra_rich_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_dense_metal_veins count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_iron_mountain
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = ultra_rich
+					has_modifier = gpm_ultra_rich_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_iron_mountain count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_floating_island
+			modifier = { factor = 0 NOT = { has_modifier = gpm_floating_islands } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_floating_island count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_floating_mountain
+			modifier = { factor = 0 NOT = { has_modifier = gpm_floating_islands } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_floating_mountain count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_carnivorous_jungle
+			modifier = { factor = 0 NOT = { has_modifier = gpm_hostile_flora } }
+			modifier = { factor = 0 gpm_is_planet_wet_hot = no }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_carnivorous_jungle count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_carnivorous_forest
+			modifier = { factor = 0 NOT = { has_modifier = gpm_hostile_flora } }
+			modifier = { factor = 0 gpm_is_planet_water = no }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_carnivorous_forest count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_carnivorous_kelp
+			modifier = { factor = 0 NOT = { has_modifier = gpm_hostile_flora } }
+			modifier = { factor = 0 gpm_is_planet_water = no }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_carnivorous_kelp count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_magma_ocean
+			modifier = { factor = 0 
+				NOR = { 
+					has_modifier = gpm_magma_ocean
+					has_modifier = unstable_tectonics
+					has_modifier = gpm_unstable_tectonics_2
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_magma_ocean count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_toxic_vent
+			modifier = { factor = 0 
+				NOR = { 
+					has_modifier = gpm_toxic_gas
+					has_modifier = gpm_magma_ocean
+					has_modifier = unstable_tectonics
+					has_modifier = gpm_unstable_tectonics_2
+					has_modifier = gpm_strong_volcanism
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_toxic_vent count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_colossal_subterranean_cavern
+			modifier = { factor = 0 
+				NOR = { 
+					has_modifier = gpm_subterranean_eco_system
+					has_modifier = gpm_extensive_cavern_system
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_colossal_subterranean_cavern count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_titanic_hunting_ground
+			modifier = { factor = 0 NOT = { has_modifier = gpm_titanic_predators } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_titanic_hunting_ground count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_unnatural_crystals
+			modifier = { factor = 0 NOT = { has_modifier = gpm_unnatural_world } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_unnatural_crystals count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_ancient_battlefield
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ruined_battlefield } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_ancient_battlefield count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_buried_remains
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ruined_battlefield } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_buried_remains count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_crashed_fighter
+			modifier = { factor = 0 NOT = { has_modifier = gpm_spaceship_graveyard } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_crashed_fighter count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_crashed_destroyer
+			modifier = { factor = 0 NOT = { has_modifier = gpm_spaceship_graveyard } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_crashed_destroyer count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_crashed_battleship
+			modifier = { factor = 0 NOT = { has_modifier = gpm_spaceship_graveyard } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_crashed_battleship count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_crashed_capital_ship
+			modifier = { factor = 0 NOT = { has_modifier = gpm_spaceship_graveyard } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_crashed_capital_ship count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_crystal_hills
+			modifier = { factor = 0 NOT = { has_modifier = gpm_gemstones } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_crystal_hills count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_colossal_fish
+			modifier = { factor = 0 NOT = { has_modifier = gpm_endless_fish } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_colossal_fish count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_sprawling_archipelago
+			modifier = { factor = 0 NOT = { has_modifier = gpm_small_islands } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_sprawling_archipelago count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_spice_fields
+			modifier = { factor = 0 NOT = { has_modifier = gpm_delicious_ingredients } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_spice_fields count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_spice_fields
+			modifier = { factor = 0 NOT = { has_modifier = gpm_exotic_spices } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_spice_fields count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_geometric_oddities
+			modifier = { factor = 0 NOT = { has_modifier = gpm_unusual_formations } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_geometric_oddities count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_garbage_patch
+			modifier = { factor = 0 NOT = { has_modifier = gpm_lingering_pollution } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_garbage_patch count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_industrial_ruins
+			modifier = { factor = 0 NOT = { has_modifier = gpm_lingering_pollution } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_industrial_ruins count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_radioactive_dump
+			modifier = { factor = 0 NOT = { has_modifier = gpm_lingering_pollution } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_radioactive_dump count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_ice_flower_field
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ice_flora } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_ice_flower_field count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_white_forest
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ice_flora } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_white_forest count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_strange_ice_river
+			modifier = { factor = 0 NOT = { has_modifier = gpm_strange_ice_river } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_strange_ice_river count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_massive_ray_school
+			modifier = { factor = 0 NOT = { has_modifier = gpm_juggernaut_manta_rays } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_massive_ray_school count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_the_black_stone
+			modifier = { factor = 0 NOT = { has_modifier = gpm_black_oily_stone } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_the_black_stone count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_sprawling_prestine_ruins
+			modifier = { factor = 0 NOT = { has_modifier = gpm_cities_in_the_sky } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_sprawling_prestine_ruins count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_skyscraper_village
+			modifier = { factor = 0 NOT = { has_modifier = gpm_cities_in_the_sky } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_skyscraper_village count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_sandworm_pit
+			modifier = { factor = 0 
+				NAND = { 
+					has_modifier = gpm_dunes
+					gpm_is_planet_dry_hot = yes
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_sandworm_pit count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_grand_reef
+			modifier = { factor = 0 NOT = { has_modifier = gpm_extensive_reef_systems } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_grand_reef count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_glistening_lake
+			modifier = { factor = 0 
+				NOR = { 
+					has_modifier = gpm_beautiful_lakes 
+					has_modifier = gpm_warm_water_lakes
+				}
+			}
+			modifier = { factor = 0 count_deposits = { type = gpm_d_glistening_lake count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_fossilized_egg_sacks
+			modifier = { factor = 0 NOT = { has_modifier = gpm_hiveworld } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_fossilized_egg_sacks count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_fossilized_structures
+			modifier = { factor = 0 NOT = { has_modifier = gpm_hiveworld } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_fossilized_structures count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_fossilized_creep
+			modifier = { factor = 0 NOT = { has_modifier = gpm_hiveworld } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_fossilized_creep count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_giant_skeleton
+			modifier = { factor = 0 NOT = { has_modifier = gpm_giant_worm } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_giant_skeleton count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_resonating_ice
+			modifier = { factor = 0 NOT = { has_modifier = gpm_spirals_of_ice } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_resonating_ice count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_tiny_herds
+			modifier = { factor = 0 NOT = { has_modifier = gpm_musical_creatures } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_tiny_herds count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_fertile_field
+			modifier = { factor = 0 NOT = { has_modifier = gpm_rich_soil } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_fertile_field count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_ecological_brain
+			modifier = { factor = 0 NOT = { has_modifier = gpm_ecological_nervous_system } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_ecological_brain count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_hot_springs
+			modifier = { factor = 0 NOT = { has_modifier = gpm_warm_water_lakes } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_hot_springs count >=1 } }
+		}
+		10 = {
+			add_deposit = gpm_d_colossal_coral_life
+			modifier = { factor = 0 NOT = { has_modifier = gpm_extensive_reef_systems } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_colossal_coral_life count >=3 } }
+		}
+		10 = {
+			add_deposit = gpm_d_salt_flats
+			modifier = { factor = 0 NOT = { has_modifier = gpm_salt_flats } }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_salt_flats count >=3 } }
+		}
+	}
+	random_list = {
+		50 = { }
+		10 = {
+			add_deposit = gpm_d_oasis
+			modifier = { factor = 0 gpm_is_planet_dry_hot = no }
+			modifier = { factor = 0 count_deposits = { type = gpm_d_oasis count >= 1 } }			# max 1
+		}
+	}
+}
+# roll normal habitable blockers
+gpm_roll_planetary_blockers_normal_habitable = {
+	if = {
+		limit = { has_modifier = gpm_toxic_gas }
+		add_deposit = gpm_tb_toxic_gas
+	}
+	if = {
+		limit = { has_modifier = gpm_locust_plagues }
+		add_deposit = gpm_tb_locust_plagues
+	}
+	if = {
+		limit = { has_modifier = gpm_seasonal_flooding }
+		add_deposit = gpm_tb_seasonal_flooding
+	}
+	if = {
+		limit = { has_modifier = gpm_strange_alien_eggs }
+		add_deposit = gpm_tb_xenomorph_blocker
+		add_deposit = gpm_tb_xenomorph_blocker
+	}
+	if = {
+		limit = { gpm_is_planet_class_ringworld = yes }
+		add_deposit = gpm_tb_ringworld_blocker
+	}
+	if = {
+		limit = { has_modifier = gpm_extensive_cavern_system }
+		add_deposit = gpm_tb_deep_caverns
+	}
+	if = {
+		limit = { has_modifier = gpm_cities_in_the_sky }
+		add_deposit = gpm_tb_deprecated_infrastructure
+	}
+	if = {
+		limit = { has_modifier = gpm_hostile_flora }
+		random_list = {
+			33 = { add_deposit = gpm_tb_volatile_gasses }
+			33 = { add_deposit = gpm_tb_volatile_motes }
+			33 = { add_deposit = gpm_tb_volatile_crystals }
+		}
+	}
+	if = {
+		limit = {
+			gpm_is_planet_wet_cold = yes
+			NOT = { is_planet_class = pc_ocean }
+		}
+		add_deposit = gpm_tb_forest_resources
+	}
+	if = {
+		limit = {
+			gpm_is_planet_wet_hot = yes
+			NOT = { is_planet_class = pc_ocean }
+		}
+		add_deposit = gpm_tb_swamp_resources
+	}
+	if = {
+		limit = {
+			gpm_is_planet_dry_cold = yes
+		}
+		add_deposit = gpm_tb_crystal_growth_resources
+	}
+	if = {
+		limit = {
+			gpm_is_planet_dry_hot = yes
+		}
+		add_deposit = gpm_tb_lethal_overgrowth_resources
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_modifier = gpm_ruined_battlefield
+				has_modifier = gpm_spaceship_graveyard
+				gpm_is_planet_class_nuked = yes
+			}
+		}
+		add_deposit = gpm_tb_automated_turrets
+	}
+	if = {
+		limit = { gpm_is_planet_water = yes }
+		random_list = {
+			80 = { }			
+			20 = { add_deposit = gpm_tb_ocean_resources }
+		}
+	}
+	random_list =  {
+		40 = { }
+		5 = {
+			random_list = {
+				33 = { add_deposit = gpm_tb_volatile_gasses }
+				33 = { add_deposit = gpm_tb_volatile_motes }
+				33 = { add_deposit = gpm_tb_volatile_crystals }
+			}
+		}
+		5 = {
+			add_deposit =  d_mountain_range
+			modifier = { factor = 0 planet_size < 10 }
+		}
+		5 = { 
+			add_deposit =  d_active_volcano
+			modifier = { factor = 0 planet_size < 10 }
+		}
+		5 = {
+			add_deposit =  d_dangerous_wildlife_blocker
+		}
+		5 = { 
+			add_deposit =  d_dense_jungle
+			modifier = { factor = 0 gpm_is_planet_wet_hot = no }
+		}
+		5 = { 
+			add_deposit =  d_toxic_kelp
+			modifier = { factor = 0 gpm_is_planet_water = no }
+		}
+		5 = { 
+			add_deposit =  d_deep_sinkhole
+			modifier = { factor = 0 gpm_is_planet_dry_hot = no }
+		}
+		10 = { 
+			add_deposit =  d_quicksand_basin
+			modifier = { factor = 0 gpm_is_planet_dry_hot = no }
+		}
+		5 = { 
+			add_deposit =  d_noxious_swamp
+			modifier = { factor = 0 gpm_is_planet_wet_hot = no }
+		}
+		5 = { 
+			add_deposit =  d_massive_glacier
+			modifier = { factor = 0 gpm_is_planet_wet_cold = no }
+		}
+		5 = { 
+			add_deposit =  d_radioactive_wasteland
+			modifier = { factor = 0 gpm_is_planet_class_nuked = no }
+		}
+		5 = { 
+			add_deposit =  d_city_ruins
+			modifier = { factor = 0 gpm_is_planet_class_nuked = no }
+		}
+		5 = { 
+			add_deposit =  d_bomb_crater
+			modifier = { factor = 0 gpm_is_planet_class_nuked = no }
+			modifier = { factor = 2 has_modifier = gpm_ruined_battlefield }
+		}
+		5 = { 
+			add_deposit =  d_infestation
+			modifier = { factor = 0 gpm_is_planet_class_nuked = no }
+		}
+		5 = {
+			add_deposit =  d_crater
+			modifier = { factor = 0 
+				NOR = {
+					has_modifier = asteroid_impacts
+					has_modifier = gpm_asteroid_impacts_2
+					has_modifier = gpm_spaceship_graveyard
+				}
+			}
+		}
+	}
+}
+
+# roll normal habitable features
+
+
+
+
+# roll city features
+gpm_roll_planetary_features_city = {
+	random_list = {
+		10 = {
+			add_deposit =  gpm_d_relic_tank_factory
+			modifier = { factor = 0 NOT = { has_ancrel = yes } }
+			modifier = { factor = 0
+				AND = {
+					has_planet_flag = gpm_is_new_ecumenopolis
+					NOT = { has_planet_flag = has_gpm_d_relic_tank_factory }
+				}
+			}
+			modifier = { factor = 0
+				OR = {
+					has_deposit = gpm_d_relic_tank_factory
+					has_deposit = gpm_d_relic_mech_factory
+					has_deposit = gpm_d_relic_power_armor_factory
+					has_deposit = gpm_d_relic_ship_factory
+				}
+			}
+			set_planet_flag = has_gpm_d_relic_tank_factory
+		}
+		10 = {
+			add_deposit =  gpm_d_relic_mech_factory
+			modifier = { factor = 0 NOT = { has_ancrel = yes } }
+			modifier = { factor = 0
+				AND = {
+					has_planet_flag = gpm_is_new_ecumenopolis
+					NOT = { has_planet_flag = has_gpm_d_relic_mech_factory }
+				}
+			}
+			modifier = { factor = 0
+				OR = {
+					has_deposit = gpm_d_relic_tank_factory
+					has_deposit = gpm_d_relic_mech_factory
+					has_deposit = gpm_d_relic_power_armor_factory
+					has_deposit = gpm_d_relic_ship_factory
+				}
+			}
+			set_planet_flag = has_gpm_d_relic_mech_factory
+		}
+		10 = {
+			add_deposit =  gpm_d_relic_power_armor_factory
+			modifier = { factor = 0 NOT = { has_ancrel = yes } }
+			modifier = { factor = 0
+				AND = {
+					has_planet_flag = gpm_is_new_ecumenopolis
+					NOT = { has_planet_flag = has_gpm_d_relic_power_armor_factory }
+				}
+			}
+			modifier = { factor = 0
+				OR = {
+					has_deposit = gpm_d_relic_tank_factory
+					has_deposit = gpm_d_relic_mech_factory
+					has_deposit = gpm_d_relic_power_armor_factory
+					has_deposit = gpm_d_relic_ship_factory
+				}
+			}
+			set_planet_flag = has_gpm_d_relic_power_armor_factory
+		}
+		10 = {
+			add_deposit =  gpm_d_relic_ship_factory
+			modifier = { factor = 0 NOT = { has_ancrel = yes } }
+			modifier = { factor = 0
+				AND = {
+					has_planet_flag = gpm_is_new_ecumenopolis
+					NOT = { has_planet_flag = has_gpm_d_relic_ship_factory }
+				}
+			}
+			modifier = { factor = 0
+				OR = {
+					has_deposit = gpm_d_relic_tank_factory
+					has_deposit = gpm_d_relic_mech_factory
+					has_deposit = gpm_d_relic_power_armor_factory
+					has_deposit = gpm_d_relic_ship_factory
+				}
+			}
+			set_planet_flag = has_gpm_d_relic_ship_factory
+		}
+		10 = {
+			add_deposit =  gpm_d_relic_reactor_factory
+			modifier = { factor = 0
+				AND = {
+					has_planet_flag = gpm_is_new_ecumenopolis
+					NOT = { has_planet_flag = has_gpm_d_relic_reactor_factory }
+				}
+			}
+			modifier = { factor = 0 has_deposit = gpm_d_relic_reactor_factory }
+			set_planet_flag = has_gpm_d_relic_reactor_factory
+		}
+		10 = {
+			while = {
+				count = 6
+				random_list = {
+					75 = { }
+					25 = { add_deposit =  gpm_d_relic_roaming_killbots }
+				}
+			}				
+			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
+		}		
+		10 = {
+			add_deposit =  gpm_d_relic_post_apocalyptic_housing
+			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
+			# modifier = { factor = 0 has_owner = no }
+		}		
+		10 = {
+			add_deposit =  gpm_d_relic_post_apocalyptic_scrapyards
+			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
+			# modifier = { factor = 0 has_owner = no }
+		}
+	}
+}	
+
+# roll hive features
+gpm_roll_planetary_features_hive = {
+	# NOT = { has_planet_flag = gpm_is_terraformed_world }
+	random_list = {
+		10 = { }
+		10 = { }
+	}	
+}
+
+# roll machine world features
+gpm_roll_planetary_features_machine = {
+	# NOT = { has_planet_flag = gpm_is_terraformed_world }
+	random_list = {
+		10 = { }
+		10 = { }
+	}	
+}
+
+# roll habitat features
+gpm_roll_planetary_features_habitat = {
+	random_list = {
+		10 = { }
+		10 = { }
+	}	
+}
+
+# roll ringworld features
+gpm_roll_planetary_features_ringworld = {
+	random_list = {
+		10 = { }
+		10 = { }
+	}	
+}
+
+
+# spaws 1 - 3 random precursor features
+gpm_spawn_precursor_features = {
+	if = {
+		limit = {
+			OR = { 
+				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_nuked = yes
+				gpm_is_planet_class_city = yes
+				gpm_is_planet_class_machine = yes
+				gpm_is_planet_class_hive = yes			
+			}
+		}
+		if = {
+			limit = { has_modifier = gpm_precursor_manufactorium }
+			random_list = {
+				10 = { add_deposit = gpm_d_precursor_ruins_1 }
+				10 = { add_deposit = gpm_d_precursor_ruins_1_distr }
+			}
+			while = {
+				count = 2
+				random_list = {
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_2
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_2 }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_3
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_3 }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_4
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_4 }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_5
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_5 }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_6
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_6 }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_7
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_7 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = gpm_precursor_manufactorium } }
+			random_list = {
+				10 = { add_deposit = gpm_d_precursor_ruins_2 }
+				10 = { add_deposit = gpm_d_precursor_ruins_3 }
+				10 = { add_deposit = gpm_d_precursor_ruins_4 }
+				10 = { add_deposit = gpm_d_precursor_ruins_5 }
+				10 = { add_deposit = gpm_d_precursor_ruins_6 }
+				10 = { add_deposit = gpm_d_precursor_ruins_7 }
+			}
+			while = {
+				count = 2
+				random_list = {
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_2_distr
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_2_distr }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_3_distr
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_3_distr }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_4_distr
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_4_distr }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_5_distr
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_5_distr }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_6_distr
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_6_distr }
+					}
+					10 = {
+						add_deposit = gpm_d_precursor_ruins_7_distr
+						modifier = { factor = 0 has_deposit = gpm_d_precursor_ruins_7_distr }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# planet wonders
+gpm_spawn_planet_wonders_desert = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_gargantuan_sinkhole" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_arid = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_discharging_field" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_savannah = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_giant_trees" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_tropical = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_crystal_jungle" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_continental = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_floating_islands" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_ocean = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_amoeba_sea" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_arctic = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_glass_towers" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_alpine = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_howling_peaks" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_tundra = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_mega_fungi" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_gaia = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_energy_storm" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_nuked = {
+	random_list = {
+		16 = { add_deposit = "gpm_d_forgotten_deposit" }
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		1 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+gpm_spawn_planet_wonders_any = {
+	random_list = {
+		2 = { add_deposit = "gpm_d_titanic_cave" }
+		2 = { add_deposit = "gpm_d_abandoned_stargate" }
+		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
+		2 = { add_deposit = "gpm_d_land_reefs" }
+		2 = { add_deposit = "gpm_d_lava_lake" }
+		2 = { add_deposit = "gpm_d_Collapsed_habitat" }
+		2 = { add_deposit = "gpm_d_ruined_arcology" }
+	}
+}
+
+gpm_spawn_planet_ring_modifier = {
+	random_list = {
+		# 0 to catch exceptions
+		0 = { }
+		12 = {
+			add_modifier = { modifier = "gpm_metallic_ring" }
+			gpm_set_planetary_rings = yes
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_metallic_ring"
+					has_modifier = "gpm_ice_ring"
+					has_modifier = "gpm_massive_world"
+					has_modifier = "gpm_tidally_active"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0 is_moon = yes }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
+			# Tweaks
+			# modifier = { factor = 0
+			# 	distance = {
+			# 		source = solar_system.star
+			# 		max_distance <= 25
+			# 		min_distance >= 1
+			# 	}
+			# }
+			modifier = { factor = 1.2 planet_size > 15 }
+			modifier = { factor = 1.4 planet_size > 20 }
+			modifier = { factor = 2 planet_size > 25 }
+			modifier = { factor = 0 num_moons > 1 }
+			modifier = { factor = 0.4 num_moons = 1 }
+			modifier = { factor = 1.5 num_moons = 0 }
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+		}
+		5 = {
+			add_modifier = { modifier = "gpm_ice_ring" }
+			gpm_set_planetary_rings = yes
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_metallic_ring"
+					has_modifier = "gpm_ice_ring"
+					has_modifier = "gpm_massive_world"
+					has_modifier = "gpm_tidally_active"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0 is_moon = yes }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
+			# Tweaks
+			modifier = { factor = 10 gpm_is_planet_class_gas_giant = yes }
+			# modifier = { factor = 0
+			# 	distance = {
+			# 		source = solar_system.star
+			# 		max_distance <= 25
+			# 		min_distance >= 1
+			# 	}
+			# }
+			modifier = { factor = 1.2 planet_size > 15 }
+			modifier = { factor = 1.4 planet_size > 20 }
+			modifier = { factor = 2 planet_size > 25 }
+			modifier = { factor = 0 num_moons > 1 }
+			modifier = { factor = 0.4 num_moons = 1 }
+			modifier = { factor = 1.5 num_moons = 0 }
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

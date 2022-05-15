@@ -1,0 +1,252 @@
+namespace = distar
+
+# spawn l-cluster
+country_event = {
+	id = distar.11000
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		set_spawn_system_batch = begin
+		# batch-processes the spawn_system effects between "begin" and "end",
+		# so caches are recalculated only once rather than for every system spawned
+		# can also be used when removing and adding hyperlanes
+		no_scope = {
+			# makes system positions originate from galactic core
+			spawn_system = {
+				min_distance >= 550
+				max_distance <= 560
+				min_orientation_angle = 44
+				max_orientation_angle = 46
+				initializer = distantstars_init_01
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = lcluster1
+					# GUILLI
+					every_system_planet = {
+						planet_event = {
+							id = gpm_engine.1
+						}
+					}
+					# GUILLI END
+				}
+			}
+			event_target:lcluster1 = {
+				spawn_system = {
+					min_distance >= 29
+					max_distance <= 31
+					min_orientation_angle = 24
+					max_orientation_angle = 66
+					initializer = distantstars_init_02
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster2
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+				spawn_system = {
+					min_distance >= 29
+					max_distance <= 31
+					min_orientation_angle = 114
+					max_orientation_angle = 156
+					initializer = distantstars_init_03
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster3
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+				spawn_system = {
+					min_distance >= 30
+					max_distance <= 60
+					min_orientation_angle = 340
+					max_orientation_angle = 20
+					initializer = distantstars_init_01b
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster1b
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+			}
+			event_target:lcluster2 = {
+				spawn_system = {
+					min_distance >= 30
+					max_distance <= 60
+					min_orientation_angle = 0
+					max_orientation_angle = 40
+					initializer = distantstars_init_02b
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster2b
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+			}
+			event_target:lcluster3 = {
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 24
+					max_orientation_angle = 66
+					initializer = distantstars_init_04
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster4
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+				spawn_system = {
+					min_distance >= 10
+					max_distance <= 50
+					min_orientation_angle = 250
+					max_orientation_angle = 290
+					initializer = distantstars_init_03b
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster3b
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+			}
+			event_target:lcluster4 = {
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 10
+					min_orientation_angle = 250
+					max_orientation_angle = 290
+					initializer = distantstars_init_05
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster5
+						save_global_event_target_as = graygoo_factory_system
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+				spawn_system = {
+					min_distance >= 30
+					max_distance <= 60
+					min_orientation_angle = 20
+					max_orientation_angle = 160
+					initializer = distantstars_init_04b
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = lcluster4b
+						# GUILLI
+						every_system_planet = {
+							planet_event = {
+								id = gpm_engine.1
+							}
+						}
+						# GUILLI END
+					}
+				}
+			}
+		}
+
+		# add hyperlanes
+		event_target:lcluster5 = {
+			add_hyperlane = {
+				from = event_target:lcluster5
+				to = event_target:lcluster4
+			}
+		}
+		event_target:lcluster4 = {
+			add_hyperlane = {
+				from = event_target:lcluster4
+				to = event_target:lcluster3
+			}
+			add_hyperlane = {
+				from = event_target:lcluster4
+				to = event_target:lcluster2
+			}
+			add_hyperlane = {
+				from = event_target:lcluster4
+				to = event_target:lcluster4b
+			}
+		}
+		event_target:lcluster3 = {
+			add_hyperlane = {
+				from = event_target:lcluster3
+				to = event_target:lcluster1
+			}
+			add_hyperlane = {
+				from = event_target:lcluster3
+				to = event_target:lcluster3b
+			}
+		}
+		event_target:lcluster2 = {
+			add_hyperlane = {
+				from = event_target:lcluster2
+				to = event_target:lcluster1
+			}
+			add_hyperlane = {
+				from = event_target:lcluster2
+				to = event_target:lcluster3
+			}
+			add_hyperlane = {
+				from = event_target:lcluster2
+				to = event_target:lcluster2b
+			}
+		}
+
+		event_target:lcluster1 = {
+			add_hyperlane = {
+				from = event_target:lcluster1
+				to = event_target:lcluster1b
+			}
+		}
+		event_target:lcluster1b = {
+			add_hyperlane = {
+				from = event_target:lcluster1b
+				to = event_target:lcluster2b
+			}
+		}
+		set_spawn_system_batch = end
+	}
+}

@@ -1,0 +1,121 @@
+# manufactorium ship
+ship_design = {
+	name = "NAME_gpm_manufactorium_ship"
+	ship_size = gpm_manufactorium_ship
+	is_event_design = yes
+	
+	section = {
+		template = "gpm_manufactorium_ship_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_ARMOR_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_ARMOR_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}	
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}	
+		component = {
+			slot = "AUX_UTILITY_5"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_6"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}	
+		
+	}
+	required_component = "JUMP_DRIVE_1"
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "CORVETTE_FISSION_REACTOR"
+}
+# precursor ship
+ship_design = {
+	name = "NAME_gpm_precursor_ship"
+	ship_size = gpm_precursor_destroyer
+	is_event_design = yes
+	section = {
+		template = "gpm_precursor_destroyer_section"
+		slot = "mid"
+		
+		component = {
+			slot = "TITANIC_01"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_PLASMA_3"
+		}		
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_PLASMA_3"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_DISRUPTOR_3"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_DISRUPTOR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "GPM_SINGULARITY_MATRIX"
+		}	
+	}
+	required_component="SENSOR_4"
+	required_component="JUMP_DRIVE_1"
+	required_component="TITAN_DARK_MATTER_REACTOR"
+	required_component="TITAN_DARK_MATTER_REACTOR"
+	required_component="COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	required_component="TITAN_SHIP_THRUSTER_5"
+}

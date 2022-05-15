@@ -1,0 +1,534 @@
+﻿l_english:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+# l_russian:
+# l_braz_por:
+# l_simp_chinese:
+# l_korean:
+# l_japanese:
+ 
+ #### In this file localisation for ####
+ # Vanilla Missing Localisation
+ # Habitat Infrastructure
+ # Ringworld Infrastructure
+ # Blockers
+ # Space Deposits
+ # Planet Wonders
+ # Features Events & Relics
+ # Features Habitable Worlds
+ # Features Relic and Ecu worlds
+ # Features Machine Worlds
+ # Features Hive Worlds
+ # Features Precursor Worlds
+ #######################################
+ 
+ gpm_d_mineral_1p5:0 "£minerals£ §Y+1.5§!"
+ gpm_d_triple_science:0 "£physics_research §Y+2§! £society_research §Y+2§! £engineering_research §Y+2§!"
+ gpm_d_double_science_phy_soc:0 "£physics_research §Y+3§! £society_research §Y+2§!"
+ gpm_d_double_science_soc_phy:0 "£physics_research §Y+2§! £society_research §Y+3§!"
+ gpm_d_double_science_phy_eng:0 "£physics_research §Y+3§! £engineering_research §Y+2§!"
+ gpm_d_double_science_eng_phy:0 "£physics_research §Y+2§! £engineering_research §Y+3§!"
+ gpm_d_double_science_soc_eng:0 "£society_research §Y+3§! £engineering_research §Y+2§!"
+ gpm_d_double_science_eng_soc:0 "£society_research §Y+2§! £engineering_research §Y+3§!"
+ gpm_d_food_4:0 "£food£ +4"
+ gpm_d_food_5:0 "£food£ +5"
+ gpm_d_food_6:0 "£food£ +6"
+ gpm_d_food_7:0 "£food£ +7"
+ gpm_d_food_8:0 "£food£ +8"
+ gpm_d_food_9:0 "£food£ +9"
+ gpm_d_food_10:0 "£food£ +10"
+ gpm_d_food_15:0 "£food£ +15"
+ 
+ #######################################
+ #### Vanilla Missing Localisation
+ #######################################
+ d_infestation:0 "Infested Area"
+ d_infestation_desc:0 "A large area, infested by various rapid growing tentacles and some kind of slimy moss. It seems to eat anything it comes in contact with. "
+ 
+ #######################################
+ #### Habitat Infrastructure
+ #######################################
+ gpm_d_moon_mining_infrastructure:0 "Moon Mining Infrastructure"
+ gpm_d_moon_mining_infrastructure_desc:0 "Specialised habitat infrastructure to support mining on nearby moons."
+
+ gpm_d_asteroid_mining_infrastructure:0 "Asteroid Mining Infrastructure"
+ gpm_d_asteroid_mining_infrastructure_desc:0 "Specialised habitat infrastructure to support  mining from towed asteroids." 
+
+ gpm_d_orbital_research_infrastructure:0 "Orbital Research Infrastructure"
+ gpm_d_orbital_research_infrastructure_desc:0 "Specialised habitat infrastructure to support scientific expeditions to the planet below."
+ 
+ gpm_d_archeology_infrastructure:0 "Archeology Infrastructure"
+ gpm_d_archeology_infrastructure_desc:0 "Specialised habitat infrastructure to support archeological expeditions to the planet below."
+ 
+ gpm_d_archeology_precursor_infrastructure:0 "Precursor Archeology Infrastructure"
+ gpm_d_archeology_precursor_infrastructure_desc:0 "Specialised habitat infrastructure to support archeological expeditions to the planet below."
+ 
+ gpm_d_time_research_infrastructure:0 "Chroniton Research Infrastructure"
+ gpm_d_time_research_infrastructure_desc:0 "Specialised habitat infrastructure to conduct chronitor particle research."
+
+ gpm_d_alloy_mining_infrastructure:0 "Alloy Mining Infrastructure"
+ gpm_d_alloy_mining_infrastructure_desc:0 "Specialised habitat infrastructure to support the extraction of very rare alloys from the planet below."
+
+ gpm_d_mineral_mining_infrastructure:0 "Mineral Mining Infrastructure"
+ gpm_d_mineral_mining_infrastructure_desc:0 "Specialised habitat infrastructure to support extensive planetary mining."
+
+ gpm_d_particle_collecting_infrastructure:0 "Particle Collecting Infrastructure"
+ gpm_d_particle_collecting_infrastructure_desc:0 "Specialised habitat infrastructure to support the collection of gasses and particles."
+
+ gpm_d_spice_collecting_infrastructure:0 "Spice Collecting Infrastructure"
+ gpm_d_spice_collecting_infrastructure_desc:0 "Specialised habitat infrastructure to support the collection of spice from the planet below."
+
+ gpm_d_alien_egg_infrastructure:0 "Alien Eggs Containment Infrastructure"
+ gpm_d_alien_egg_infrastructure_desc:0 "Specialised habitat infrastructure to contain the alien lifeforms found on the planet below."
+ 
+ gpm_add_moon_mining_infrastructure:0 "Planetary Feature: §H$gpm_d_moon_mining_infrastructure$§!"
+ gpm_add_asteroid_mining_infrastructure:0 "Planetary Feature: §H$gpm_d_asteroid_mining_infrastructure$§!"
+ gpm_add_orbital_research_infrastructure:0 "Planetary Feature: §H$gpm_d_orbital_research_infrastructure$§!"
+ gpm_add_archeology_infrastructure:0 "Planetary Feature: §H$gpm_d_archeology_infrastructure$§!"
+ gpm_add_archeology_precursor_infrastructure:0 "Planetary Feature: §H$gpm_d_archeology_precursor_infrastructure$§!"
+ gpm_add_time_research_infrastructure:0 "Planetary Feature: §H$gpm_d_time_research_infrastructure$§!"
+ gpm_add_alloy_mining_infrastructure:0 "Planetary Feature: §H$gpm_d_alloy_mining_infrastructure$§!"
+ gpm_add_mineral_mining_infrastructure:0 "Planetary Feature: §H$gpm_d_mineral_mining_infrastructure$§!"
+ gpm_add_particle_collecting_infrastructure:0 "Planetary Feature: §H$gpm_d_particle_collecting_infrastructure$§!"
+ gpm_add_spice_collecting_infrastructure:0 "Planetary Feature: §H$gpm_d_spice_collecting_infrastructure$§!"
+ gpm_add_alien_egg_infrastructure:0 "Planetary Feature: §H$gpm_d_alien_egg_infrastructure$§!"
+ 
+ #######################################
+ #### Ringworld Infrastructure
+ #######################################
+ 
+ #######################################
+ #### Blockers
+ #######################################
+ gpm_tb_toxic_gas:0 "£blocker£ Toxic Gas"
+ gpm_tb_toxic_gas_desc:0 "Giant clouds of heavy toxic gas, gently floating in this area. Building here would be suicide."
+
+ gpm_tb_locust_plagues:0 "£blocker£ Ravaging Insects"
+ gpm_tb_locust_plagues_desc:0 "Not only look these creatures infinitely worse and scary than any other insect species observed, they seem to have an endless appetite for anything with leaves. It will take more than fire to get rid of these! And rid of these is preferable."
+ 
+ gpm_tb_seasonal_flooding:0 "£blocker£ Floodplains"
+ gpm_tb_seasonal_flooding_desc:0 "These lands periodically flood to the extent that it is unwise to even settle here. It is highly recommended to develop the land and adjoining rivers and provide flood banks and walls to stop the water from flooding everything."
+
+ gpm_tb_xenomorph_blocker:0 "£blocker£ Roaming Xenomorphs"
+ gpm_tb_xenomorph_blocker_desc:0 "Ravenous hordes of bio-engineered horrors made up of little more than teeth, claws and an instinctive urge to kill."
+
+ gpm_tb_ringworld_blocker:0 "£blocker£ Destroyed Infrastructure"
+ gpm_tb_ringworld_blocker_desc:0 "$d_tomb_world_wasteland_desc$"
+
+ gpm_tb_deep_caverns:0 "£blocker£ Deep Fissure"
+ gpm_tb_deep_caverns_desc:0 "A thin snaking fissure stretching for miles and so deep it's impossible to see the bottom."
+
+ gpm_tb_deprecated_infrastructure:0 "£blocker£ Deprecated Infrastructure"
+ gpm_tb_deprecated_infrastructure_desc:0 "Abandoned buildings, bridges, roads and tunnes long forgotten and unrepairable."
+
+ gpm_tb_volatile_gasses:0 "£blocker£ Gaseous Flora"
+ gpm_tb_volatile_gasses_desc:0 "Exotic plantlife that emites deadly toxic and poisenous gasses as a byproduct of their lifecycle. "
+
+ gpm_tb_volatile_motes:0 "£blocker£ Volatile Flora"
+ gpm_tb_volatile_motes_desc:0 "Highly flamable and explosive plantlife that seems to be able to grow anywhere."
+
+ gpm_tb_volatile_crystals:0 "£blocker£ Crystalizing Flora"
+ gpm_tb_volatile_crystals_desc:0 "Unique plantlife that turns the soil it grows on into crystals."
+
+ gpm_tb_swamp_resources:0 "£blocker£ Sticky Swamps"
+ gpm_tb_swamp_resources_desc:0 "Stinky sticky swamps covering a wide area with unpredictable sinkholes filled with water"
+
+ gpm_tb_ocean_resources:0 "£blocker£ Deep Ocean Riches"
+ gpm_tb_ocean_resources_desc:0 "Deep clusters of minerals just beneath the ocean floor."
+
+ gpm_tb_forest_resources:0 "£blocker£ Dense Humid Forests"
+ gpm_tb_forest_resources_desc:0 "A dense forest covering precious minerals and materials."
+
+ gpm_tb_automated_turrets:0 "£blocker£ Automated Gun Turrets"
+ gpm_tb_automated_turrets_desc:0 "Deadly autnomous turrets that shoot everything that moves."
+ 
+ gpm_tb_crystal_growth_resources:0 "£blocker£ Colossal Crystals"
+ gpm_tb_crystal_growth_resources_desc:0 "Colossal Crystals covering a vast mineral rich area."
+ 
+ gpm_tb_lethal_overgrowth_resources:0 "£blocker£ Lethal Overgrowth"
+ gpm_tb_lethal_overgrowth_resources_desc:0 "Razor sharp brambles and leaves covering a wide area."
+ 
+ gpm_tb_xenomorph_blocker_empty:1 "£blocker£ Xenomorph Colony"
+ gpm_tb_xenomorph_blocker_empty_desc:1 "Ravenous hordes of bio-engineered horrors made up of little more than teeth, claws and an instinctive urge to kill."
+ 
+ gpm_tb_automated_turrets_empty:1 "£blocker£ Autonomous Arc Turrets"
+ gpm_tb_automated_turrets_empty_desc:1 "Deadly autnomous turrets that shoot everything that moves."
+ 
+ #######################################
+ #### Space Deposits
+ #######################################
+ gpm_d_unity_deposit:0 "Ancient Ruins"
+ gpm_d_unity_deposit_desc:0 "Deprecated ruins from a civilisation long gone."
+ 
+ #######################################
+ #### Planet Wonders
+ #######################################
+ gpm_d_gargantuan_sinkhole:0 "£gpm_planet_wonder  §EGargantuan Sinkhole§!"
+ gpm_d_gargantuan_sinkhole_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nA huge sinkhole extending to the very depths of the planet, though it's size remains uncertain. This mysterious structure seems to be sturdy and intact despite it's age. Our scientists are eager to study its composition and mineral arrangement. Initial readings point to a substantial network of tunnels on the surroundings, suitable for mining activity."
+
+ gpm_d_discharging_field:0 "£gpm_planet_wonder  §EDischarging Field§!"
+ gpm_d_discharging_field_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nStrange stone structures cover large portions of this land, erratically releasing hazardous charges of electricity. Whatever generates such discharges is beyond our theoretical knowledge, as well as the conductive materials these stones could be made of. Also, the constantly changing magnetic fields seem to excite most electronic devices."
+
+ gpm_d_giant_trees:0 "£gpm_planet_wonder  §EGiant Trees§!"
+ gpm_d_giant_trees_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nWith trunks as thick as mountains and a complex grid of underground roots, each of these huge specimens can hold entire ecosystems within. No small specimens were found, albeit surface scanning data indicated a wide planetary distribution of this species in the past. Our scientists were unable to estimate the age of the remaining subjects. Tissue samples are of great interest for undergoing study, as well as the behavior of the creatures thriving within. Scattered traces of chemical compounds similar to pitharan dust can be found in the surrounding furtile soils."
+
+ gpm_d_crystal_jungle:0 "£gpm_planet_wonder  §ECrystal Jungle§!"
+ gpm_d_crystal_jungle_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nHigh quality minerals can be found in these dense forests, protruding from the vegetation as if it was a mere waste. Initial research endorses that the crystals act as means of attracting creatures that help the vegetation spread, and different crystals appear to attract different species. Expert engineers have predicted many applications for the biological mechanisms of mineral extraction and crystal generation. Layers and layers of mineral deposits can be found in the surroundings, left by generations of these curious plants."
+
+ gpm_d_floating_islands:0 "£gpm_planet_wonder  §EFloating Continent§!"
+ gpm_d_floating_islands_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nSmall static continents float in thin air, suspended by yet unknown forces. Gravity readings are stable, although some materials have anomalous behavior in the vicinity of the continents. With just a few large stabalizing thrusters these floating continents will make excellent foundations for new infrastructure."
+
+ gpm_d_amoeba_sea:0 "£gpm_planet_wonder  §EAmoeba Sea§!"
+ gpm_d_amoeba_sea_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nLarge patches of thick purple sea cover the world's hydrosphere, what happens to be colonies of billions of microorganisms working together to feed and reproduce. Sea water is imprisoned in dynamic cell structures, vast and complex nutrient networks are formed inside the colony, and interactions with other oceanic life range from mutualism to predatism. Closer study is highly advised. Survey of surrounding islands soil samples supports the abundance of unique and highly fertile biochemical compounds, reportedly a byproduct of the amoeba colony metabolism."
+
+ gpm_d_glass_towers:0 "£gpm_planet_wonder  §EGlass Towers§!"
+ gpm_d_glass_towers_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nMonumental crystalline structures reaching far high in the sky, covering the landscape in multicolored light beams during the day and holding an ominous bright during the night. External structure is highly impervious, and little is known of it's origins. Not a single collapsed glass was found, even though violent snowstorms constantly ravage this landscape. Whatever compounds generated these highly armoured towers, allegedly related to neutronium, are much likely to provide a leaping progress in the fields of engineering. Mineral evaluation in the surroundings indicate similar compounds deep beneath the glacial ice."
+
+ gpm_d_howling_peaks:0 "£gpm_planet_wonder  §EHowling Peaks§!"
+ gpm_d_howling_peaks_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nHollow, bored mountains that reverberate and howl as the constant strong winds goes by. Low pitch sounds can be heard from miles away, and if one goes closer, the high pitch sounds can be deafening. These reverberations also generate electromagnetic and gravitational waves, what is even more intriguing. How this phenomenon can create space-time distortions remains to be studied. Furthermore the strange shapes and craveses in these mountains provide easier access to the mountain's rich mineral veins."
+
+ gpm_d_mega_fungi:0 "£gpm_planet_wonder  §EMega Fungi§!"
+ gpm_d_mega_fungi_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nSpreading over vast regions of the planet is a colossal organism, growing multiple spore-bearing projections, with these branches being capable of limited and slow movement. Strange behaviors were observed in expeditions, as it seems to retract it's branches in a matter of hours if any part of it is violated, and actively seeking the food left by our scientists, though very slowly. Traces of net neural activity are scarce but currently not discarded. During expeditions, the Mega-Fungi has also proved to be an excellent source of re-growing, edible food."
+
+ gpm_d_energy_storm:0 "£gpm_planet_wonder  §EEnergy Storm§!"
+ gpm_d_energy_storm_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nChaotic energy storms punish large regions of this idyllic world, spinning and roaring in a vicious cycle of bursts. Their position is well known, and for the planet's sake it doesn't appear to migrate around the globe like regular storms, there is strong evidence that these anomalies have been stationary for uncountable ages. Mildly radioactive, all kinds of energy patterns seem to come out of it, defying even the most audacious scientific models. One of the greatest phenomena our scientists ever encountered, the academy is stunned and impatiently asking for closer investigation. According to preliminary study, the strange energy waves seem to power most the our electronics."
+
+ gpm_d_titanic_cave:0 "£gpm_planet_wonder  §ETitanic Caves§!"
+ gpm_d_titanic_cave_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nThese marvelous caves provide an excellent path for exploration of inner planet activity and rare mineral structures only found in these depths, greatly increasing our understanding of rocky celestial bodies. The sheer size of these caves means we can fit entire cities in them and greatly increase the pottential for expansion on this world."
+
+ gpm_d_abandoned_stargate:0 "£gpm_planet_wonder  §EAbandoned Stargate§!"
+ gpm_d_abandoned_stargate_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nA mysterious structure built with unknown technology. Though not functional, anomalous spatial distortions seem to randomly occur in the vicinity, making the region hazardous and unsuitable for construction. At a safe distance these anomalies could be studied for considerable progress in our scientific understanding."
+
+ gpm_d_bioluminescent_forest:0 "£gpm_planet_wonder  §EBioluminescent Forest§!"
+ gpm_d_bioluminescent_forest_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nA plain, quiet forest during daytime. When sunlight fades, the forest becomes a fantastic display of colorful lights, from vegetation to animals. Bioluminescent tissue samples from this forest demonstrate unique compounds unlike that of any other known bioluminescent creatures, and some animals seem to have developed complex light-based communication with timed flashes and colors."
+
+ gpm_d_land_reefs:0 "£gpm_planet_wonder  §ELand Reefs§!"
+ gpm_d_land_reefs_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nEver growing mineral formations, covered with unusual microorganisms. The stones act as structures for these colonies, and strong winds seem to carry and provide the required elements for the structure assembly. Controlled mining of these sturdy stones could provide a renewable source of minerals."
+
+ gpm_d_lava_lake:0 "£gpm_planet_wonder  §ELava Lake§!"
+ gpm_d_lava_lake_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nUnusually large volumes of molten lava emerge and gurgle toxic fumes across large regions of the planet, forming these lava lakes. Geothermal activity in the surroundings is intense, making these areas proper for gas generation facilities."
+
+ gpm_d_Collapsed_habitat:0 "£gpm_planet_wonder  §ECollapsed Habitat§!"
+ gpm_d_Collapsed_habitat_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nLarge wreckages cover extensive regions of the planet. Formerly a xeno habitat, it's origins are unknown and it's technology, unlike any feasible habitat project. Regions surrounding the most significant debris locations have a significant spread of a strange liquid metal."
+
+ gpm_d_dangerous_hives:0 "£gpm_planet_wonder  §EDangerous Hives§!"
+ gpm_d_dangerous_hives_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nSwarms of vicious creatures are housed inside these rudimentary structures. These colonies managed to cover most regions of the globe with vast hive networks. Orbital bombardment is highly advised before landing troops."
+
+ gpm_d_forgotten_deposit:0 "£gpm_planet_wonder  §EForgotten Deposit§!"
+ gpm_d_forgotten_deposit_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nInitially described as nuclear shelters, these enormous facilities are indeed long forgotten deposits. No traces of the previous owners were found, though most of these automated facilities remains operational. It contains considerable amounts of ultra-heavy chemical elements, preserved in large tanks of a strange technology, almost as if frozen in time. Sadly, a few damaged sections seem to have been leaking highly radioactive content for hundreds of years. The preserved elements bear uncalculable rarity, and synthesization is extremely difficult. Also, present containment technology could barely slow the decay outside the tanks."
+
+ gpm_d_ruined_arcology:0 "£gpm_planet_wonder  §ERuined Arcology§!"
+ gpm_d_ruined_arcology_desc:0 "§HPlanetary Wonders§!£gpm_planet_wonder  are unique rare planetary features that provide powerful bonuses.\n\nAn once thriving acropolis, these colossal ruins represent the pinnacle of sustainable architecture. All kinds of activities were developed at forgotten times in different sectors of the arcology, from mining in the very depths to power generation in the core and layered agriculture on upper levels. Remnant preserved facilities could be repaired to aid production efforts in the vicinities."
+
+ #######################################
+ #### Features Events & Relics
+ #######################################
+ gpm_d_floating_islands_housing:0 "Colossal Floating Cities"
+ gpm_d_floating_islands_housing_desc:0 "Huge flat artificially constructed floating islands covered in city infrastructure."
+
+ gpm_d_restored_infrastructure:0 "Restored Infrastructure"
+ gpm_d_restored_infrastructure_desc:0 "Ancient infrastructure that has been restored to it's former glory."
+ 
+ gpm_d_time_displaced_planet:0 "Time Displacing Zone"
+ gpm_d_time_displaced_planet_desc:0 "A large area on this world is frequently jumping forwards and backwards in time. Animals, and plants in the zone appear old, then young, then old again. It is unsure what the long lasting effects are on living things duo to this rapid time shifting."
+ 
+ gpm_d_planetary_shield_array:0 "Advanced Shield Arrays"
+ gpm_d_planetary_shield_array_desc:0 "A series of powerful shield arrays producing a fully encompass planetary shield." 
+ 
+ #######################################
+ #### Features Habitable Worlds
+ #######################################
+ gpm_d_ruined_battlefield:0 "Battlefield Ruins"
+ gpm_d_ruined_battlefield_desc:0 "Endless remains dot the surface. Banners, flags, primitive and none-primitive weapons as well. These remains show a vicious bloody war with casualties on every side. It seems impossible to tell who won. Maybe it is best to give all of them a proper burial."
+ 
+ gpm_d_spaceship_graveyard:0 "Crashed Spaceship"
+ gpm_d_spaceship_graveyard_desc:0 "A giant spaceship hull, half imbedded in the land covers most of the land. It seem to have crashed here centuries, if not millennia ago. Most of the tech has been degraded and destroyed by the elements, but perhaps there is still something to learn."
+ 
+ gpm_d_android_pleasure_palace:0 "Android Pleasure Palace"
+ gpm_d_android_pleasure_palace_desc:0 "A fairly well maintained, but old building stands here. It seems to be active and some say they can see all sorts of robotic humanoids inside doing strange things to each other. "
+  
+ gpm_d_unusual_formations:0 "Unusual Formations"
+ gpm_d_unusual_formations_desc:0 "Giant and numerous amounts of odd but nevertheless natural geological shapes can be found here. Size and shape of these formations seems to be fairly consistent in some areas."
+  
+ gpm_d_ice_flora:0 "Ice Flora"
+ gpm_d_ice_flora_desc:0 "Gentle blue-white coloured flowers and trees dot the landscape. It is surprising how they can survive such cold, yet here they are. The leaves seem to have a semi-crystalline structure which refracts the sunlight ever so gently, projecting a fantastic beautiful display of colours on the surface."
+ 
+ gpm_d_planetwide_forest:0 "Endless Forests"
+ gpm_d_planetwide_forest_desc:0 "Massive forest area as far as the eye can see. Stretching and growing over everything, including rivers and mountains. Probably very easy to get lost in.."
+ 
+ gpm_d_dense_forests:0 "Dense Forests"
+ gpm_d_dense_forests_desc:0 "Dense, towering trees with canopy's that block the entire sky. protected, an unusual large amount of diverse flora and fauna can be found beneath these trees covering the surface."
+ 
+ gpm_d_proto_forests:0 "Proto Forests"
+ gpm_d_proto_forests_desc:0 "Small early evolutionary form of frees spread the landscape. It is a weird sight but somehow very peaceful."
+ 
+ gpm_d_temple_of_the_ancient_one:0 "Temple of the Ancient One"
+ gpm_d_temple_of_the_ancient_one_desc:0 "A giant rock-hewn temple stands here. Abandoned and overgrown it somehow still has light inside coming from a fire or brazier or something like that. Who knows who or what this temple was for."
+ 
+ gpm_d_arachnophobia:0 "Giant Arachnids"
+ gpm_d_arachnophobia_desc:0 "Assume for a moment a world very much like our own. Except for the fact that spiders can grow to 12 feet in length, breed prodigiously, are expert at hiding and often attack in swarms. \n-L.L."
+ 
+ gpm_d_dunes:0 "Dunes"
+ gpm_d_dunes_desc:0 "Sand. Even more sand. Sand everywhere. These sand dunes stretch out as far as the eye can see, and tower quite high in the sky. It will take some effort to stabilize these areas of the world before we can use it to settle on."
+ 
+ gpm_d_mushroom_forest:0 "Mushroom Forest"
+ gpm_d_mushroom_forest_desc:0 "Large forests of giant mushrooms cover the surface. They're relatively soft and should take no time to remove. Their giant mushroom tops do provide a nice bit of shade though."
+ 
+ gpm_d_oasis:0 "Oasis"
+ gpm_d_oasis_desc:0 "This isolated area, surounded by a warm spring water source, is home to a lush and sprawling ecosystem."
+ 
+ gpm_d_floating_rocks:0 "Floating Islands"
+ gpm_d_floating_rocks_desc:0 "Some mineral or substance on this world causes large rocks to float through the air, forming floating islands that hover dozens to sometimes hundreds of feet off the ground."
+  
+ gpm_d_ancient_temple:0 "Ancient Temple"
+ gpm_d_ancient_temple_desc:0 "An ancient temple dedicated to an age long gone."
+
+ gpm_d_small_wildlife:0 "Small Wildlife Herd"
+ gpm_d_small_wildlife_desc:0 "A roaming herd of small wildlife."
+
+ gpm_d_massive_wildlife:0 "Massive Wildlife Herd"
+ gpm_d_massive_wildlife_desc:0 "A roaming herd of very massive wildlife."
+
+ gpm_d_super_volcano:0 "Super Volcano"
+ gpm_d_super_volcano_desc:0 "Thermally active volcano mostly hidden beneath layers upon layers of materials from its last eruptions."
+
+ gpm_d_obsidian_fields:0 "Obsidian Field"
+ gpm_d_obsidian_fields_desc:0 "A large field littered with strange obsidian formations."
+
+ gpm_d_magnetic_mountains:0 "Magnetic Mountain"
+ gpm_d_magnetic_mountains_desc:0 "Dense minerals in this mountain have caused it to behave super magnetically."
+
+ gpm_d_magnetic_fields:0 "Magnetic Rupture"
+ gpm_d_magnetic_fields_desc:0 "A localized highly magnetic field generated from the exotic minerals in the ground."
+
+ gpm_d_rich_crater:0 "Rich Crater"
+ gpm_d_rich_crater_desc:0 "Remains of a very mineral rich asteroid are buried in this crater."
+
+ gpm_d_surface_mineral_veins:0 "Surface Mineral Veins"
+ gpm_d_surface_mineral_veins_desc:0 "Large veins of minerals have surfaced here duo to geological activity."
+
+ gpm_d_dense_metal_veins:0 "Dense Metal Veins"
+ gpm_d_dense_metal_veins_desc:0 "Metal veins from deep beneath the surface have surfaced here over millions of years."
+
+ gpm_d_iron_mountain:0 "Iron Mountain"
+ gpm_d_iron_mountain_desc:0 "A fragment from the planet core has pushed through the surface and formed a mountain, a process that took most of the planet's lifespan."
+
+ gpm_d_floating_island:0 "Floating Island"
+ gpm_d_floating_island_desc:0 "Unusual gravitational anomalies are keeping this part of the surface suspended in the air."
+
+ gpm_d_floating_mountain:0 "Floating Mountain"
+ gpm_d_floating_mountain_desc:0 "Strange magnetic and gravitational interactions with the mountains minerals have caused it to float above the surface of the planet."
+
+ gpm_d_carnivorous_jungle:0 "Carnivorous Jungle"
+ gpm_d_carnivorous_jungle_desc:0 "Most of the plant life in this jungle have a taste for meat."
+
+ gpm_d_carnivorous_forest:0 "Carnivorous Forest"
+ gpm_d_carnivorous_forest_desc:0 " Most of the plant life in this forest have a taste for meat."
+
+ gpm_d_carnivorous_kelp:0 "Carnivorous Kelp"
+ gpm_d_carnivorous_kelp_desc:0 "Strange kelp that quickly wraps around it's pray and eats it alive."
+
+ gpm_d_magma_ocean:0 "Magma Ocean"
+ gpm_d_magma_ocean_desc:0 "A large opening in the planet's crust has formed a permanent ocean of magma."
+
+ gpm_d_toxic_vent:0 "Toxic Vent"
+ gpm_d_toxic_vent_desc:0 "Surface vents spewing out toxic fumes."
+
+ gpm_d_colossal_subterranean_cavern:0 "Colossal Subterranean Cavern"
+ gpm_d_colossal_subterranean_cavern_desc:0 "Super dense rock has allowed a massive cavern to form under the surface without it collapsing."
+
+ gpm_d_titanic_hunting_ground:0 "Titanic Hunting Ground"
+ gpm_d_titanic_hunting_ground_desc:0 "Herds of massive creatures roam the land."
+
+ gpm_d_unnatural_crystals:0 "Unnatural Crystals"
+ gpm_d_unnatural_crystals_desc:0 "Strange multi-coloured crystals have formed on locations without minerals present to form them."
+
+ gpm_d_ancient_battlefield:0 "Ancient Battlefield"
+ gpm_d_ancient_battlefield_desc:0 "Remains of a battle that happened long ago."
+
+ gpm_d_buried_remains:0 "Buried Remains"
+ gpm_d_buried_remains_desc:0 "The buried remains of a titanic battle."
+
+ gpm_d_crashed_fighter:0 "Crashed Fighter"
+ gpm_d_crashed_fighter_desc:0 "Remains of a crashed fighter type ship."
+
+ gpm_d_crashed_destroyer:0 "Crashed Destroyer"
+ gpm_d_crashed_destroyer_desc:0 "Wreckage from a crashed destroyer sized ship."
+
+ gpm_d_crashed_battleship:0 "Crashed Battleship"
+ gpm_d_crashed_battleship_desc:0 "Massive crashed battleship has been resting here for hundreds of years."
+
+ gpm_d_crashed_capital_ship:0 "Crashed Capital Ship"
+ gpm_d_crashed_capital_ship_desc:0 "A colossal capital ship crashed down here long ago."
+
+ gpm_d_crystal_hills:0 "Crystal Hills"
+ gpm_d_crystal_hills_desc:0 "Rolling hills covered in crystal formations."
+
+ gpm_d_colossal_fish:0 "Colossal Fish"
+ gpm_d_colossal_fish_desc:0 "Colossal schools of large fish."
+
+ gpm_d_sprawling_archipelago:0 "Sprawling Archipelago"
+ gpm_d_sprawling_archipelago_desc:0 "Several small islands clustered together."
+
+ gpm_d_spice_fields:0 "Spice Field"
+ gpm_d_spice_fields_desc:0 "Sprawling field of luxurious spice."
+
+ gpm_d_geometric_oddities:0 "Geometric Oddities"
+ gpm_d_geometric_oddities_desc:0 "Sudden geological activity has morphed some of the terrain in strange formations."
+
+ gpm_d_garbage_patch:0 "Garbage Patch"
+ gpm_d_garbage_patch_desc:0 "Large unprocessed garbage dump left behind by an extinct civilisation."
+
+ gpm_d_industrial_ruins:0 "Industrial Ruins"
+ gpm_d_industrial_ruins_desc:0 "Large valley full of deprecated industrial ruins."
+
+ gpm_d_radioactive_dump:0 "Radioactive Dump"
+ gpm_d_radioactive_dump_desc:0 "An industrial facility sits here filled to the brim with radioactive waste."
+
+ gpm_d_ice_flower_field:0 "Ice Flower Field"
+ gpm_d_ice_flower_field_desc:0 "The strange biochemistry of these flowers allow them to grow at sub-zero temperatures while still keeping their internal temperature at just above the freezing point."
+
+ gpm_d_white_forest:0 "White Forest"
+ gpm_d_white_forest_desc:0 "These trees produce a strange bark-like lubricant that covers them completely giving them their unusually bright white appearance. This allows them to survive the cold harsh temperatures of this planet."
+
+ gpm_d_strange_ice_river:0 "Strange Ice River"
+ gpm_d_strange_ice_river_desc:0 "A river of flowing ice."
+
+ gpm_d_massive_ray_school:0 "Massive Ray School"
+ gpm_d_massive_ray_school_desc:0 "Giant school of ray-like fish."
+
+ gpm_d_the_black_stone:0 "The Black Stone"
+ gpm_d_the_black_stone_desc:0 "A strange black stone in the middle of the jungle."
+
+ gpm_d_sprawling_prestine_ruins:0 "Sprawling Pristine Ruins"
+ gpm_d_sprawling_prestine_ruins_desc:0 "Ancient ruins untouched by the elements and time."
+
+ gpm_d_skyscraper_village:0 "Skyscraper Village"
+ gpm_d_skyscraper_village_desc:0 "The remains of a small village from an ancient civilisation, filled with tall skyscrapers."
+
+ gpm_d_sandworm_pit:0 "Sandworm Pit"
+ gpm_d_sandworm_pit_desc:0 "A single vile smelling creature lives in this pit with sharp teeth pertruding from the walls and tentacles from the center."
+
+ gpm_d_grand_reef:0 "Grand Reef"
+ gpm_d_grand_reef_desc:0 "An increadably large reef sits just below the surface filled with all kinds of exotic coral."
+
+ gpm_d_glistening_lake:0 "Glistening Lake"
+ gpm_d_glistening_lake_desc:0 "The glistening surface of this lake is uniquely beautiful as the sun rises in the morning."
+
+ gpm_d_fossilized_egg_sacks:0 "Fossilized Egg Sacks"
+ gpm_d_fossilized_egg_sacks_desc:0 "The fossilized remains of giant egg sacks are lumpt together in a massive canyon. Their biological structure has fossilised over the past millions of years."
+
+ gpm_d_fossilized_structures:0 "Fossilized Structures"
+ gpm_d_fossilized_structures_desc:0 "Massive fossilized structure dot the landscape. These structures used to be made out of biological material and have since been fossilized over millions of years."
+
+ gpm_d_fossilized_creep:0 "Fossilized Creep"
+ gpm_d_fossilized_creep_desc:0 "A thick and crunchy fossilized layer covers large swathes of land. The remains of a biological layer that has fossilized over millions of years."
+
+ gpm_d_giant_skeleton:0 "Giant Skeleton"
+ gpm_d_giant_skeleton_desc:0 "The skeleton remains of a massive sandworm."
+
+ gpm_d_resonating_ice:0 "Resonating Ice"
+ gpm_d_resonating_ice_desc:0 "Unique configuration of spirals and the magnetic metals in the surface is causing the ice to be highly resonant and create powerful magnetic fields."
+
+ gpm_d_tiny_herds:0 "Tiny Herd"
+ gpm_d_tiny_herds_desc:0 "Herd of tiny fluffy creatures."
+
+ gpm_d_fertile_field:0 "Fertile Field"
+ gpm_d_fertile_field_desc:0 "Extremely fertile field rich in nurtrients and water."
+ 
+ gpm_d_ecological_brain:0 "Ecological Brain"
+ gpm_d_ecological_brain_desc:0 "A cluster of ecological nervous paths that clump toghether forming a brain-like structure."
+
+ gpm_d_hot_springs:0 "Hot Springs"
+ gpm_d_hot_springs_desc:0 "Bubbling Springs filled with hot fresh water."
+
+ gpm_d_colossal_coral_life:0 "Colossal Coral Life"
+ gpm_d_colossal_coral_life_desc:0 "Huge banks of coral that house a wide variety of colossal sea life."
+
+ gpm_d_salt_flats:0 "Massive Salt Flats"
+ gpm_d_salt_flats_desc:0 "Huge flat terrain covered in a dense layer of salt deposited by an evaporated ocean."
+ 
+ #######################################
+ #### Features Relic and Ecu worlds
+ #######################################
+ gpm_d_relic_tank_factory:0 "Archaeotech Tank Fabricator"
+ gpm_d_relic_tank_factory_desc:0 "Ancient tank assembly platforms capable of producing small, lean, fast but heavily armored tanks."
+ gpm_d_relic_tank_factoryTT:0 "Unlocks §HTank Battalion§!"
+
+ gpm_d_relic_mech_factory:0 "Archaeotech Mech Factory"
+ gpm_d_relic_mech_factory_desc:0 "Autonomous mech assembly capable of producing several giant mechs."
+ gpm_d_relic_mech_factoryTT:0 "Unlocks §HMechwarriors§!"
+
+ gpm_d_relic_power_armor_factory:0 "Archaeotech Power Armor Assembly"
+ gpm_d_relic_power_armor_factory_desc:0 "Ancient power armor factory. With little resources this can be put to work once again."
+ gpm_d_relic_power_armor_factoryTT:0 "Unlocks §HPower Armored Army§!"
+
+ gpm_d_relic_ship_factory:0 "Broken Archaeotech Shipyard"
+ gpm_d_relic_ship_factory_desc:0 "Ancient autonomous shipyards capable of constructing small attack craft."
+ gpm_d_relic_ship_factoryTT:0 "Unlocks §HFighter Squadron§!"
+
+ gpm_d_relic_reactor_factory:0 "Archaeotech Reactor Assembly"
+ gpm_d_relic_reactor_factory_desc:0 "An ancient reactor barely held together. It still produces power but best not to mess with it."
+
+ gpm_d_relic_roaming_killbots:0 "Roaming Killbots"
+ gpm_d_relic_roaming_killbots_desc:0 "Deadly and stealthy autonomous robots roam the land. They hunt anything that they perceive as a threat. And everything they perceive is a threat."
+
+ gpm_d_relic_post_apocalyptic_housing:0 "Scrap Housing"
+ gpm_d_relic_post_apocalyptic_housing_desc:0 "Shoddy put together housing made from metal plates, cables and various repurpose materials."
+
+ gpm_d_relic_post_apocalyptic_scrapyards:0 "Giant Scrapyards"
+ gpm_d_relic_post_apocalyptic_scrapyards_desc:0 "Colossal dumps of abandoned vehicles and electronic devices."
+ 
+ #######################################
+ #### Features Machine Worlds
+ #######################################
+ 
+ #######################################
+ #### Features Hive Worlds
+ #######################################
+ 
+ #######################################
+ #### Features Precursor Worlds
+ #######################################
+ gpm_d_precursor_planetary_shield:0 "Enigmatic Planetary Shield"
+ gpm_d_precursor_planetary_shield_desc:0 "A giant self-maintaining and self-powering shield array stands here. Its shield spread across the entire world surface. "
+ 
+ gpm_d_precursor_capital_complex:0 "Ancient Megalopolis"
+ gpm_d_precursor_capital_complex_desc:0 "A giant precursor city with a massive towering structure in the middle. Most of the infrastructure appears to be usable."
+
+ gpm_d_precursor_ruins_1:0 "Ancient Industrial Infrastructure"
+ gpm_d_precursor_ruins_1_desc:0 "Deprecated industrial ruins from a civilisation long gone."
+ gpm_d_precursor_ruins_1_distr:0 "Ancient Industrial Ruins"
+ gpm_d_precursor_ruins_1_distr_desc:0 "$gpm_d_precursor_ruins_1_desc$"
+
+ gpm_d_precursor_ruins_2:0 "Ancient City Infrastructure"
+ gpm_d_precursor_ruins_2_desc:0 "Deprecated city ruins from a civilisation long gone."
+ gpm_d_precursor_ruins_2_distr:0 "Ancient City Ruins"
+ gpm_d_precursor_ruins_2_distr_desc:0 "$gpm_d_precursor_ruins_2_desc$"
+
+ gpm_d_precursor_ruins_3:0 "Buried Precursor Architecture"
+ gpm_d_precursor_ruins_3_desc:0 "Buried ruins from a civilisation long gone."
+ gpm_d_precursor_ruins_3_distr:0 "Buried Ancient Ruins"
+ gpm_d_precursor_ruins_3_distr_desc:0 "$gpm_d_precursor_ruins_3_desc$"
+
+ gpm_d_precursor_ruins_4:0 "Ancient Cryotubes"
+ gpm_d_precursor_ruins_4_desc:0 "Fragmented remnants from a civilisation long gone dot the landscape."
+ gpm_d_precursor_ruins_4_distr:0 "Ancient Remnants"
+ gpm_d_precursor_ruins_4_distr_desc:0 "$gpm_d_precursor_ruins_4_desc$"
+
+ gpm_d_precursor_ruins_5:0 "Ancient Generator Infrastructure"
+ gpm_d_precursor_ruins_5_desc:0 "Deprecated generators from a civilisation long gone."
+ gpm_d_precursor_ruins_5_distr:0 "Ancient Generator Ruins"
+ gpm_d_precursor_ruins_5_distr_desc:0 "$gpm_d_precursor_ruins_5_desc$"
+
+ gpm_d_precursor_ruins_6:0 "Ancient Battlefield"
+ gpm_d_precursor_ruins_6_desc:0 "Ancient battlefield remnants from a civilisation long gone."
+ gpm_d_precursor_ruins_6_distr:0 "Deprecated Ruins"
+ gpm_d_precursor_ruins_6_distr_desc:0 "$gpm_d_precursor_ruins_6_desc$"
+
+ gpm_d_precursor_ruins_7:0 "Ancient Wreckage"
+ gpm_d_precursor_ruins_7_desc:0 "Numerous battlefield wreckage from a civilisation long gone."
+ gpm_d_precursor_ruins_7_distr:0 "Ancient Debris"
+ gpm_d_precursor_ruins_7_distr_desc:0 "$gpm_d_precursor_ruins_7_desc$"

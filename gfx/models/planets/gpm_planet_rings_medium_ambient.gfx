@@ -1,0 +1,42 @@
+#######################
+## Medium Ring Sizes ##
+#######################
+
+# Metallic Rings
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_rings_metallic_medium_mesh"
+		file = "gfx/models/planets/gpm_gas_giant_rings_medium.mesh"
+		scale = 1.2
+		cull_distance = 99999999.0f
+		
+		meshsettings = {
+			name = "patternShape"
+			index = 0
+			texture_diffuse = "gpm_metallic_ring_medium_tiling_diffuse.dds"
+			texture_normal = "gpm_metallic_ring_medium_tiling_normal.dds"
+			texture_specular = "gpm_metallic_ring_medium_tiling_specular.dds"
+			shader = "PdxMeshPlanetRings"
+		}
+
+	}
+}
+# Ice Rings
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_rings_ice_medium_mesh"
+		file = "gfx/models/planets/gpm_gas_giant_rings_medium.mesh"
+		scale = 1.2
+		cull_distance = 99999999.0f
+		
+		meshsettings = {
+			name = "patternShape"
+			index = 0
+			texture_diffuse = "gpm_ice_ring_medium_tiling_diffuse.dds"
+			texture_normal = "gpm_ice_ring_medium_tiling_normal.dds"
+			texture_specular = "gpm_ice_ring_medium_tiling_specular.dds"
+			shader = "PdxMeshPlanetRings"
+		}
+
+	}
+}

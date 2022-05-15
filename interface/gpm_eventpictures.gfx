@@ -1,0 +1,903 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_evt_gpm_artifact_precursor_deciphering"
+		texturefile = "gfx/event_pictures/gpm_artifact_precursor_deciphering.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_black_hole"
+		texturefile = "gfx/event_pictures/gpm_black_hole.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_bright_sun"
+		texturefile = "gfx/event_pictures/gpm_bright_sun.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_time_displaced"
+		texturefile = "gfx/event_pictures/gpm_time_displaced.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_proto_molecule"
+		texturefile = "gfx/event_pictures/gpm_proto_molecule.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_pulsar_clock"
+		texturefile = "gfx/event_pictures/gpm_pulsar_clock.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_spaceship_graveyard"
+		texturefile = "gfx/event_pictures/gpm_spaceship_graveyard.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_salvaged_spaceship"
+		texturefile = "gfx/event_pictures/gpm_salvaged_spaceship.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_pirate_cruiser"
+		texturefile = "gfx/event_pictures/gpm_pirate_cruiser.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ancient_frigates"
+		texturefile = "gfx/event_pictures/gpm_ancient_frigates.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ancient_battlecruisers"
+		texturefile = "gfx/event_pictures/gpm_ancient_battlecruisers.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ancient_titan"
+		texturefile = "gfx/event_pictures/gpm_ancient_titan.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_xenomorph_infestation"
+		texturefile = "gfx/event_pictures/gpm_xenomorph_infestation.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_hot_core"
+		texturefile = "gfx/event_pictures/gpm_hot_core.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_remnants"
+		texturefile = "gfx/event_pictures/gpm_precursor_remnants.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_energy_grid"
+		texturefile = "gfx/event_pictures/gpm_precursor_energy_grid.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_satelite_grid"
+		texturefile = "gfx/event_pictures/gpm_precursor_satelite_grid.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_city"
+		texturefile = "gfx/event_pictures/gpm_precursor_city.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_shipyards"
+		texturefile = "gfx/event_pictures/gpm_precursor_shipyards.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_planetary_gun"
+		texturefile = "gfx/event_pictures/gpm_precursor_planetary_gun.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_bunker_grid"
+		texturefile = "gfx/event_pictures/gpm_precursor_bunker_grid.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_mechs"
+		texturefile = "gfx/event_pictures/gpm_precursor_mechs.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_planetary_shield"
+		texturefile = "gfx/event_pictures/gpm_precursor_planetary_shield.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_floating_city"
+		texturefile = "gfx/event_pictures/gpm_precursor_floating_city.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_capital_complex"
+		texturefile = "gfx/event_pictures/gpm_precursor_capital_complex.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_communication_hub"
+		texturefile = "gfx/event_pictures/gpm_precursor_communication_hub.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_singularity_drive"
+		texturefile = "gfx/event_pictures/gpm_precursor_singularity_drive.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_eternal_fortress"
+		texturefile = "gfx/event_pictures/gpm_precursor_eternal_fortress.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_prison_planet"
+		texturefile = "gfx/event_pictures/gpm_precursor_prison_planet.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+
+	
+	
+	
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_mines"
+		texturefile = "gfx/event_pictures/gpm_precursor_mines.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_manufactorium"
+		texturefile = "gfx/event_pictures/gpm_precursor_manufactorium.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_vaults"
+		texturefile = "gfx/event_pictures/gpm_precursor_vaults.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_crashed_spacestation"
+		texturefile = "gfx/event_pictures/gpm_precursor_crashed_spacestation.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_battleground_ruins"
+		texturefile = "gfx/event_pictures/gpm_precursor_battleground_ruins.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_outpost_ruins"
+		texturefile = "gfx/event_pictures/gpm_precursor_outpost_ruins.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_harbor_ruins"
+		texturefile = "gfx/event_pictures/gpm_precursor_harbor_ruins.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_ruins"
+		texturefile = "gfx/event_pictures/gpm_precursor_ruins.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_obelisks"
+		texturefile = "gfx/event_pictures/gpm_precursor_obelisks.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_gaia_world"
+		texturefile = "gfx/event_pictures/gpm_gaia_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_holy_world"
+		texturefile = "gfx/event_pictures/gpm_holy_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_floating_islands"
+		texturefile = "gfx/event_pictures/gpm_floating_islands.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ruined_battlefield"
+		texturefile = "gfx/event_pictures/gpm_ruined_battlefield.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_spaceship_graveyard2"
+		texturefile = "gfx/event_pictures/gpm_spaceship_graveyard2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_artificial_water"
+		texturefile = "gfx/event_pictures/gpm_artificial_water.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_pleasure_palace"
+		texturefile = "gfx/event_pictures/gpm_pleasure_palace.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ancient_temple"
+		texturefile = "gfx/event_pictures/gpm_ancient_temple.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_moon_palace"
+		texturefile = "gfx/event_pictures/gpm_moon_palace.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_plasmoid_life"
+		texturefile = "gfx/event_pictures/gpm_plasmoid_life.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ancient_one"
+		texturefile = "gfx/event_pictures/gpm_ancient_one.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_proto_forest"
+		texturefile = "gfx/event_pictures/gpm_proto_forest.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_hive_world"
+		texturefile = "gfx/event_pictures/gpm_hive_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_spiders"
+		texturefile = "gfx/event_pictures/gpm_spiders.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_giant_worm"
+		texturefile = "gfx/event_pictures/gpm_giant_worm.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_artificial_core"
+		texturefile = "gfx/event_pictures/gpm_artificial_core.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_surface_of_bones"
+		texturefile = "gfx/event_pictures/gpm_surface_of_bones.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_alien_eggs"
+		texturefile = "gfx/event_pictures/gpm_alien_eggs.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_mushroom_forest"
+		texturefile = "gfx/event_pictures/gpm_mushroom_forest.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_mining_upgrade"
+		texturefile = "gfx/event_pictures/gpm_mining_upgrade.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_flooding_lake"
+		texturefile = "gfx/event_pictures/gpm_flooding_lake.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_locust"
+		texturefile = "gfx/event_pictures/gpm_locust.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_acidic_seas"
+		texturefile = "gfx/event_pictures/gpm_acidic_seas.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_carnivorous_flies"
+		texturefile = "gfx/event_pictures/gpm_carnivorous_flies.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_polution"
+		texturefile = "gfx/event_pictures/gpm_polution.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_resilient_parasites"
+		texturefile = "gfx/event_pictures/gpm_resilient_parasites.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_thunderstorms"
+		texturefile = "gfx/event_pictures/gpm_thunderstorms.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_charged_air_particles"
+		texturefile = "gfx/event_pictures/gpm_charged_air_particles.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_earthquacke"
+		texturefile = "gfx/event_pictures/gpm_earthquacke.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_asteroid_impact"
+		texturefile = "gfx/event_pictures/gpm_asteroid_impact.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_mineral_haul"
+		texturefile = "gfx/event_pictures/gpm_mineral_haul.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_hostile_flora"
+		texturefile = "gfx/event_pictures/gpm_hostile_flora.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_predator_attack"
+		texturefile = "gfx/event_pictures/gpm_predator_attack.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_endless_fish"
+		texturefile = "gfx/event_pictures/gpm_endless_fish.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_gemstones_sale"
+		texturefile = "gfx/event_pictures/gpm_gemstones_sale.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_robot_love"
+		texturefile = "gfx/event_pictures/gpm_robot_love.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_windy"
+		texturefile = "gfx/event_pictures/gpm_windy.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_betharian_stone"
+		texturefile = "gfx/event_pictures/gpm_betharian_stone.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_farm_locust"
+		texturefile = "gfx/event_pictures/gpm_farm_locust.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_trubble_feast"
+		texturefile = "gfx/event_pictures/gpm_trubble_feast.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_call_of_cthulhu"
+		texturefile = "gfx/event_pictures/gpm_call_of_cthulhu.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_forest_growth"
+		texturefile = "gfx/event_pictures/gpm_forest_growth.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_hive_queen"
+		texturefile = "gfx/event_pictures/gpm_hive_queen.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_arachnophobia_accident"
+		texturefile = "gfx/event_pictures/gpm_arachnophobia_accident.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_worm_attack"
+		texturefile = "gfx/event_pictures/gpm_worm_attack.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_swarm_eating"
+		texturefile = "gfx/event_pictures/gpm_swarm_eating.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_mushroom_growth"
+		texturefile = "gfx/event_pictures/gpm_mushroom_growth.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_forest_fire"
+		texturefile = "gfx/event_pictures/gpm_forest_fire.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_forest_inferno"
+		texturefile = "gfx/event_pictures/gpm_forest_inferno.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_wondrous_world"
+		texturefile = "gfx/event_pictures/gpm_wondrous_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_work_camp"
+		texturefile = "gfx/event_pictures/gpm_work_camp.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_galactic_equality"
+		texturefile = "gfx/event_pictures/gpm_galactic_equality.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_augment_integrated_systems"
+		texturefile = "gfx/event_pictures/gpm_augment_integrated_systems.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_mysterious_force"
+		texturefile = "gfx/event_pictures/gpm_mysterious_force.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_mandatory_military_service"
+		texturefile = "gfx/event_pictures/gpm_mandatory_military_service.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_monument_to_the_stars"
+		texturefile = "gfx/event_pictures/gpm_monument_to_the_stars.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_ministery_of_the_hunt"
+		texturefile = "gfx/event_pictures/gpm_ministery_of_the_hunt.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_galactic_outreach_program"
+		texturefile = "gfx/event_pictures/gpm_galactic_outreach_program.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_synopsys_nodes"
+		texturefile = "gfx/event_pictures/gpm_synopsys_nodes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_rapid_assembly_systems"
+		texturefile = "gfx/event_pictures/gpm_rapid_assembly_systems.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_guillis_planet_modifiers"
+		texturefile = "gfx/event_pictures/gpm_guillis_planet_modifiers.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_artifact_discovery"
+		texturefile = "gfx/event_pictures/gpm_precursor_artifact.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_time_lost"
+		texturefile = "gfx/event_pictures/gpm_time_lost.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_time_lost_relic"
+		texturefile = "gfx/event_pictures/gpm_time_lost_relic.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_space_exploitation_01"
+		texturefile = "gfx/event_pictures/gpm_space_exploitation_01.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+
+	
+	spriteType = {
+		name = "GFX_evt_gpm_hollow_structure"
+		texturefile = "gfx/event_pictures/gpm_hollow_structure.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_crystallized_structure"
+		texturefile = "gfx/event_pictures/gpm_crystallized_structure.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_abandoned_mining_platforms"
+		texturefile = "gfx/event_pictures/gpm_abandoned_mining_platforms.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_hydrogen_mist"
+		texturefile = "gfx/event_pictures/gpm_hydrogen_mist.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_salt_flats"
+		texturefile = "gfx/event_pictures/gpm_salt_flats.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_relic_lower_levels"
+		texturefile = "gfx/event_pictures/gpm_relic_lower_levels.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_water_pockets"
+		texturefile = "gfx/event_pictures/gpm_water_pockets.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_geometrical_polar_storm"
+		texturefile = "gfx/event_pictures/gpm_geometrical_polar_storm.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_floating_forest"
+		texturefile = "gfx/event_pictures/gpm_floating_forest.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_viscous_gas_layer"
+		texturefile = "gfx/event_pictures/gpm_viscous_gas_layer.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_everlasting_tornadoes"
+		texturefile = "gfx/event_pictures/gpm_everlasting_tornadoes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_shrinking_giant"
+		texturefile = "gfx/event_pictures/gpm_shrinking_giant.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_aeroplankton_clouds"
+		texturefile = "gfx/event_pictures/gpm_aeroplankton_clouds.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_abandoned_refineries"
+		texturefile = "gfx/event_pictures/gpm_abandoned_refineries.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_floating_kelp"
+		texturefile = "gfx/event_pictures/gpm_floating_kelp.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_super_heated_atmosphere"
+		texturefile = "gfx/event_pictures/gpm_super_heated_atmosphere.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_floatig_behemothaurs"
+		texturefile = "gfx/event_pictures/gpm_floatig_behemothaurs.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_magma_ocean"
+		texturefile = "gfx/event_pictures/gpm_magma_ocean.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_heavy_elements"
+		texturefile = "gfx/event_pictures/gpm_heavy_elements.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_rare_metals"
+		texturefile = "gfx/event_pictures/gpm_rare_metals.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_proto_planet"
+		texturefile = "gfx/event_pictures/gpm_proto_planet.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	# spriteType = {
+	# 	name = "GFX_evt_gpm_flat_terrain"
+	# 	texturefile = "gfx/event_pictures/gpm_flat_terrain.dds"
+	# 	masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	# 	alwaystransparent = yes	
+	# }
+	spriteType = {
+		name = "GFX_evt_gpm_old_world"
+		texturefile = "gfx/event_pictures/gpm_old_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_solidified_core"
+		texturefile = "gfx/event_pictures/gpm_solidified_core.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_subterranean_eco_system"
+		texturefile = "gfx/event_pictures/gpm_subterranean_eco_system.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_plasma_tornadoes"
+		texturefile = "gfx/event_pictures/gpm_plasma_tornadoes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_singing_star"
+		texturefile = "gfx/event_pictures/gpm_singing_star.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_precursor_star_filter"
+		texturefile = "gfx/event_pictures/gpm_precursor_star_filter.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_lingering_pollution"
+		texturefile = "gfx/event_pictures/gpm_lingering_pollution.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_decaying_structures"
+		texturefile = "gfx/event_pictures/gpm_decaying_structures.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_heavy_metal_coral"
+		texturefile = "gfx/event_pictures/gpm_heavy_metal_coral.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_decomposing_leviathan"
+		texturefile = "gfx/event_pictures/gpm_decomposing_leviathan.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_giant_mold_blobs"
+		texturefile = "gfx/event_pictures/gpm_giant_mold_blobs.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_toxic_garbage"
+		texturefile = "gfx/event_pictures/gpm_toxic_garbage.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_PrecDig_Camp"
+		texturefile = "gfx/event_pictures/gpm_PrecDig_Camp.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_PrecDig_Teams"
+		texturefile = "gfx/event_pictures/gpm_PrecDig_Teams.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_PrecDig_Sample"
+		texturefile = "gfx/event_pictures/gpm_PrecDig_Sample.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_PrecDig_Teams_02"
+		texturefile = "gfx/event_pictures/gpm_PrecDig_Teams_02.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_PrecDig_Door"
+		texturefile = "gfx/event_pictures/gpm_PrecDig_Door.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_PrecDig_Reward"
+		texturefile = "gfx/event_pictures/gpm_PrecDig_Reward.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_artifact_collection"
+		texturefile = "gfx/event_pictures/gpm_artifact_collection.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_gpm_machine_world_terraforming"
+		texturefile = "gfx/event_pictures/gpm_machine_world_terraforming.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_evt_ruined_silo_encountered"
+		texturefile = "gfx/event_pictures/gpm_ruined_silo_encountered.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ruined_station_encountered"
+		texturefile = "gfx/event_pictures/gpm_ruined_station_encountered.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ruined_mining_facility_encountered"
+		texturefile = "gfx/event_pictures/gpm_ruined_mining_facility_encountered.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ruined_refinery_encountered"
+		texturefile = "gfx/event_pictures/gpm_ruined_refinery_encountered.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}

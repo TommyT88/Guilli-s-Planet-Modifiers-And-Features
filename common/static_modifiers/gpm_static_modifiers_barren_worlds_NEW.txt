@@ -1,0 +1,68 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Barren World Planet Modifiers
+##########################################################################
+# gpm_oppertunity
+# gpm_hydrogen_mist
+# gpm_iron_planet
+# gpm_carbon_planet
+# gpm_stellar_irradiation
+# gpm_salt_flats
+
+
+
+gpm_oppertunity = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_tidal_locked.dds"
+	icon_frame = 4
+}
+gpm_hydrogen_mist = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_hydrogen_mist.dds"
+	planet_jobs_energy_produces_mult = 0.20
+	icon_frame = 1
+}
+gpm_iron_planet = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_iron_planet.dds"
+	district_mining_max = 6
+	icon_frame = 1
+}
+gpm_carbon_planet = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_carbon_planet.dds"
+	district_mining_max = 4
+	icon_frame = 1
+}
+gpm_stellar_irradiation = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_stellar_irradiation.dds"
+	icon_frame = 4
+}
+gpm_salt_flats = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_salt_flats.dds"
+	district_mining_max = 2
+	icon_frame = 1
+}
+gpm_dust_storms = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_dust_storms.dds"
+	icon_frame = 4
+}
+gpm_diamond_planet = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_diamond_planet.dds"
+	icon_frame = 4
+}
+gpm_red_planet = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_red_planet.dds"
+	icon_frame = 4
+}

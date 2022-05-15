@@ -1,0 +1,49 @@
+# Types of Shaders
+
+# "AlphaBlend_00"
+# "AlphaBlendNoDepth"
+# "PdxMeshAlphaBlend"
+# "PdxMeshAtmosphere"
+# "PdxMeshAtmosphereStar"
+# "PdxMeshAlphaAdditive"
+# "PdxMeshAlphaAdditiveAnimateUVAlphaOverride"
+# "PdxMeshAlphaAdditiveAnimateUVNoDissolve"
+# "PdxMeshAlphaAdditiveAnimateUV"
+# "PdxMeshBlackHole"
+# "PdxMeshBlackHoleBillboard"
+# "PdxMeshCircleGradient"
+# "PdxMeshClouds"
+# "PdxMeshDimensionalPortal"
+# "PdxMeshExtraDimensionalShip"
+# "PdxMeshFrontendBackground"
+# "ParticleAdditive"
+# "ParticleAlphaBlend"
+# "PdxMeshPlanetEmissive"
+# "PdxMeshShip"
+# "PdxMeshTerra"
+# "PdxMeshTerraAlphaBlend"
+
+#############
+## Special ##
+#############
+
+
+# Special Rings
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_rings_special_large_mesh"
+		file = "gfx/models/planets/gpm_gas_giant_rings_medium.mesh"
+		scale = 1.0
+		cull_distance = 99999999.0f
+		
+		meshsettings = {
+			name = "patternShape"
+			index = 0
+			texture_diffuse = "gpm_special_planet_ring.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+	}
+}

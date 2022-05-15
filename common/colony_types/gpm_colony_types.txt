@@ -1,0 +1,245 @@
+#root = planet
+
+@small_planet_threshold = 18
+@free_districts_verylow_threshold = 3
+@free_districts_low_threshold = 5
+@free_districts_medium_threshold = 10
+@free_districts_high_threshold = 15
+@built_districts_low_threshold = 1
+@built_districts_medium_threshold = 2
+@built_districts_high_threshold = 4
+
+# megalopolis
+gpm_col_megalopolis_mix = {
+	icon = GFX_colony_type_urban
+
+	potential = {
+		uses_district_set = gpm_precursor
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.25
+		trade_value_mult = 0.20
+	}
+
+	weight_modifier = {
+		base = 400
+	}
+}
+# megalopolis Industrial
+gpm_col_megalopolis_industrial = {
+	icon = GFX_colony_type_industrial
+
+	potential = {
+		exists = owner
+		owner = { country_uses_consumer_goods = yes }
+		uses_district_set = gpm_precursor
+	}
+
+	planet_modifier = {
+		planet_district_gpm_precursor_manufactorium_build_speed_mult = 0.25
+		planet_artisans_upkeep_mult = -0.10
+		planet_metallurgists_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {	
+		modifier = {
+			add = 400
+			owner = { has_monthly_income = { resource = alloys value < 1000 } }
+		}
+		modifier = {
+			add = 50
+			has_designation = gpm_col_megalopolis_industrial
+		}
+		modifier = {
+			add = 200
+			num_districts = { type = district_gpm_precursor_manufactorium value >= @built_districts_low_threshold }
+		}
+		modifier = {
+			add = 200
+			num_districts = { type = district_gpm_precursor_manufactorium value >= @built_districts_medium_threshold }
+		}
+		modifier = {
+			add = 100
+			AND = {
+				OR = {
+					has_building = building_factory_1
+					has_building = building_factory_2
+					has_building = building_factory_3
+				}
+				OR = {
+					has_building = building_foundry_1
+					has_building = building_foundry_2
+					has_building = building_foundry_3
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_gpm_precursor_manufactorium value = 0 }
+		}
+	}
+}
+
+# megalopolis Research
+gpm_col_megalopolis_research = {
+	icon = GFX_colony_type_research
+
+	potential = {
+		uses_district_set = gpm_precursor
+	}
+
+
+	planet_modifier = {
+		planet_district_gpm_precursor_science_build_speed_mult = 0.25
+		planet_researchers_upkeep_mult = -0.2
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 300
+			owner = { has_monthly_income = { resource = physics_research value < 1000 } }
+			owner = { has_monthly_income = { resource = society_research value < 1000 } }
+			owner = { has_monthly_income = { resource = engineering_research value < 1000 } }
+		}
+		modifier = {
+			add = 50
+			has_designation = gpm_col_megalopolis_research
+		}
+		modifier = {
+			add = 10
+			num_buildings = { type = building_research_lab_1 value >= 2 }
+		}
+		modifier = {
+			add = 20
+			num_buildings = { type = building_research_lab_1 value >= 3 }
+		}
+		modifier = {
+			add = 30
+			num_buildings = { type = building_research_lab_1 value >= 4 }
+		}
+		modifier = {
+			add = 40
+			num_buildings = { type = building_research_lab_1 value >= 5 }
+		}
+		modifier = {
+			add = 30
+			num_buildings = { type = building_research_lab_2 value >= 1 }
+		}
+		modifier = {
+			add = 40
+			num_buildings = { type = building_research_lab_2 value >= 2 }
+		}
+		modifier = {
+			add = 50
+			num_buildings = { type = building_research_lab_3 value >= 1 }
+		}		
+		modifier = {
+			add = 200
+			num_districts = { type = district_gpm_precursor_science value >= @built_districts_low_threshold }
+		}
+		modifier = {
+			add = 200
+			num_districts = { type = district_gpm_precursor_science value >= @built_districts_medium_threshold }
+		}
+	}
+}
+
+# megalopolis Generator
+gpm_col_megalopolis_generator = {
+	icon = GFX_colony_type_generator
+
+	potential = {
+		uses_district_set = gpm_precursor
+	}
+
+	planet_modifier = {
+		planet_district_gpm_precursor_power_plant_build_speed_mult = 0.25
+		planet_technician_produces_mult = 0.50
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {	
+		modifier = {
+			add = 1000
+			owner = { has_monthly_income = { resource = energy value < 100 } }
+		}
+		modifier = {
+			add = 200
+			num_free_districts = { type = district_gpm_precursor_power_plant value >= @built_districts_low_threshold }
+		}
+		modifier = {
+			add = 200
+			num_free_districts = { type = district_gpm_precursor_power_plant value >= @built_districts_medium_threshold }
+		}
+		modifier = {
+			add = 20
+			has_designation = gpm_col_megalopolis_generator
+		}
+		modifier = {
+			add = 50
+			OR = {
+				has_modifier = hazardous_weather
+				has_modifier = strong_magnetic_field
+			}
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_gpm_precursor_power_plant value = 0 }
+		}
+	}
+}

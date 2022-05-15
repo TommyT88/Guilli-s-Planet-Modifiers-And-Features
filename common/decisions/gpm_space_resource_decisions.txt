@@ -1,0 +1,1126 @@
+# @t1_energy_cost = 100
+# @t2_energy_cost = 200
+# @t3_energy_cost = 300
+
+# @t1_mineral_cost = 100
+# @t2_mineral_cost = 200
+# @t3_mineral_cost = 300
+
+# @t1_alloy_cost = 10
+# @t2_alloy_cost = 25
+# @t3_alloy_cost = 50
+
+# @t1_influence_cost = 10
+# @t2_influence_cost = 25
+# @t3_influence_cost = 50
+
+# # gpm_frequent_thunderstorms 	-ok
+# # gpm_global_thunderstorms 	-ok
+# # gpm_highly_charged_air_particles 	-ok
+# # gpm_single_biome
+# # gpm_hyper_complex_biome
+# # gpm_thin_atmospheres
+# # gpm_dense_atmospheres
+# # gpm_strong_volcanism
+# # gpm_weak_magnetic_field_2
+# # gpm_strong_magnetic_field_2
+# # gpm_unstable_tectonics_2
+# # gpm_asteroid_impacts_2
+# # gpm_mineral_rich_2 	-ok
+# # gpm_ultra_rich_2 	-ok
+# # gpm_low_gravity_2
+# # gpm_high_gravity_2
+# # gpm_floating_islands
+# # gpm_hostile_flora
+# # gpm_magma_ocean
+# # gpm_toxic_gas
+# # gpm_extensive_cavern_system
+# # gpm_titanic_predators
+# # gpm_unnatural_world
+# # gpm_atmospheric_stimulant
+# # gpm_unusual_seasons
+# # gpm_perfect_seasons
+# # gpm_ruined_battlefield
+# # gpm_spaceship_graveyard
+# # gpm_living_planet
+# # gpm_gemstones
+# # gpm_ideal_for_life
+# # gpm_endless_fish
+# # gpm_artificial_water
+# # gpm_clear_skies
+# # gpm_android_pleasure_palace
+# # gpm_melted_ice_caps
+# # gpm_small_islands
+# # gpm_windy
+# # gpm_simple_organisms
+# # gpm_newly_evolved_complex_organisms
+# # gpm_delicious_ingredients
+# # gpm_recent_mass_extinction
+# # gpm_friendly_wildlife
+# # gpm_pleasant_weather
+# # gpm_unusual_formations
+# # gpm_flat_terrain
+# # gpm_rugged_terrain
+# # gpm_many_extremophiles
+# # gpm_great_temperature_variation
+# # gpm_gorgeous_sky
+# # gpm_large_asteroid
+# # gpm_asteroid_moon
+# # gpm_ice_age
+# # gpm_ancient_temple
+# # gpm_metal_asteroid
+# # gpm_dense_core
+# # gpm_unusual_sun_spots
+# # gpm_unusual_bright_sun
+# # gpm_tilted_axis
+# # gpm_perpendicular_axis
+# # gpm_radioactive_mantle
+# # gpm_locust_plagues
+# # gpm_acidic_seas
+# # gpm_empathic_life
+# # gpm_seasonal_flooding
+# # gpm_lingering_pollution
+# # gpm_thin_ozone_layer
+# # gpm_symbiotic_life
+# # gpm_resilent_parasites
+# # gpm_ice_flora
+# # gpm_strange_ice_river
+# # gpm_juggernaut_manta_rays
+# # gpm_black_oily_stone
+# # gpm_crystal_moon_palace
+# # gpm_cities_in_the_sky
+# # gpm_old_world
+# # gpm_dunes
+# # gpm_extensive_reef_systems
+# # gpm_protomolecule_infected_station
+# # gpm_trubbles
+# # gpm_strange_voices
+# # gpm_hot_geysers
+# # gpm_cryogeysers
+# # gpm_very_hot_core
+# # gpm_solidified_core
+# # gpm_temple_of_the_ancient_one
+# # gpm_hiveworld
+# # gpm_periodic_meteor_showers
+# # gpm_artificial_core
+# # gpm_exotic_spices
+# # gpm_sandstorms
+# # gpm_sand_tornadoes
+# # gpm_silicon_crystals
+# # gpm_quicksand
+# # gpm_never_ending_aurora
+# # gpm_spirals_of_ice
+# # gpm_subterranean_eco_system
+# # gpm_colossal_cliffs
+# # gpm_massive_waterfalls
+# # gpm_strange_alien_eggs
+# # gpm_mushroom_forest
+# # gpm_planet_wonder_discovered
+# # gpm_planet_wonder_ruined
+# # gpm_work_camps
+# # gpm_galactic_equality
+# # gpm_augment_integrated_systems
+# # gpm_mysterious_force
+# # gpm_mandatory_military_service
+# # gpm_monument_to_the_stars
+# # gpm_ministery_of_the_hunt
+# # gpm_galactic_outreach_program
+# # gpm_synopsys_nodes
+# # gpm_rapid_assembly_systems
+# # gpm_combat_simulator_systems
+# # gpm_planitary_defenses
+# # gpm_hollow_structure
+# # gpm_crystallized_structure
+# # gpm_abandoned_mining_platforms
+# # gpm_decaying_structures
+# # gpm_toxic_flora_fauna
+# # gpm_water_pockets
+# # gpm_lava_geysers
+# # gpm_thin_planetary_crust
+# # gpm_hydrogen_mist
+# # gpm_spherical_asteroid
+# # gpm_binary_asteroids
+# # gpm_trojan_asteroid 
+# # gpm_c_type_asteroid 
+# # gpm_s_type_asteroid 
+# # gpm_m_type_asteroid 
+# # gpm_v_type_asteroid 
+# # gpm_corrosive_atmosphere
+# # gpm_toxic_garbage
+# # gpm_hydrogen_ice 	-ok
+# # gpm_nitrogen_ice 	-ok
+# # gpm_cracking_surface 
+# # gpm_chlorine_planet 	-ok
+# # gpm_phosphorus_planet 	-ok
+# # gpm_sulfur_planet 	-ok
+# # gpm_deep_aquifer
+# # gpm_iron_planet 	-ok
+# # gpm_carbon_planet 	-ok
+# # gpm_stellar_irradiation
+# # gpm_iron_rich 	-ok
+# # gpm_titanium_rich 	-ok
+# # gpm_gold_rich 	-ok
+# # gpm_platinum_rich 	-ok
+# # gpm_mercury_atmosphere 	-ok
+# # gpm_cobalt_rich 	-ok
+# # gpm_lithium_rich 	-ok
+# # gpm_acid_rain
+# # gpm_salt_flats
+# # gpm_cursed_world
+# # gpm_garbage_dump
+# # gpm_abundant_natural_radioactivity
+# # gpm_proto_planet
+# # gpm_sunken_cities
+# # gpm_titanic_geo_form
+# # gpm_metallic_ring_small
+# # gpm_metallic_ring_medium
+# # gpm_metallic_ring_large
+# # gpm_metallic_ring_huge
+# # gpm_ice_ring_small
+# # gpm_ice_ring_medium
+# # gpm_ice_ring_large
+# # gpm_ice_ring_huge
+
+# gpm_decision_space_resources_colony = {
+# 	owned_planets_only = yes
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = 1000
+# 			influence = 50
+# 		}
+# 	}
+	
+# 	potential = {
+# 		solar_system = {
+#             any_system_planet = {
+#                 OR = {
+#                     has_modifier = gpm_frequent_thunderstorms 
+#                     has_modifier = gpm_global_thunderstorms
+#                     has_modifier = gpm_highly_charged_air_particles
+#                     has_modifier = gpm_hydrogen_mist
+#                     has_modifier = gpm_hydrogen_ice
+#                     has_modifier = gpm_nitrogen_ice
+#                     has_modifier = gpm_chlorine_planet
+#                     has_modifier = gpm_phosphorus_planet
+#                     has_modifier = gpm_sulfur_planet
+#                     has_modifier = gpm_iron_planet
+#                     has_modifier = gpm_carbon_planet
+#                     has_modifier = gpm_iron_rich
+#                     has_modifier = gpm_titanium_rich
+#                     has_modifier = gpm_gold_rich
+#                     has_modifier = gpm_platinum_rich
+#                     has_modifier = gpm_mercury_atmosphere
+#                     has_modifier = gpm_cobalt_rich
+#                     has_modifier = gpm_lithium_rich
+#                     has_modifier = mineral_rich
+#                     has_modifier = gpm_mineral_rich_2
+#                     has_modifier = ultra_rich
+#                     has_modifier = gpm_ultra_rich_2
+#                     has_modifier = gpm_periodic_meteor_showers
+#                     has_modifier = asteroid_impacts
+#                     has_modifier = gpm_asteroid_impacts_2
+#                     has_modifier = gpm_extensive_cavern_system
+#                 }
+#                 has_deposit = no
+#             }
+#         }
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		# custom_tooltip = {
+# 		# 	fail_text = gpm_decision_need_colony
+# 		# 	solar_system = {
+# 		# 		any_system_planet = { 
+# 		# 			is_colony = yes
+# 		# 			FROM = { is_primitive = no }
+# 		# 		}
+# 		# 	}
+# 		# }
+# 	}
+	
+# 	effect = {
+# 		solar_system = {
+#             every_system_planet = {
+# 				if = {
+# 					limit = { has_modifier = gpm_frequent_thunderstorms has_deposit = no }
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_physics_4
+# 					# random_list = {
+# 					# 	10 = { add_deposit = d_physics_4 }
+# 					# 	10 = { add_deposit = d_energy_3 }
+# 					# }
+# 				}
+# 				else_if = {
+# 					limit = { has_modifier = gpm_global_thunderstorms has_deposit = no }
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_physics_4
+# 					# random_list = {
+# 					# 	10 = { add_deposit = d_physics_4 }
+# 					# 	10 = { add_deposit = d_energy_5 }
+# 					# }
+# 				}
+# 				else_if = {
+# 					limit = { has_modifier = gpm_highly_charged_air_particles has_deposit = no }
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_physics_6
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						OR = {
+# 							has_modifier = gpm_hydrogen_mist
+# 							has_modifier = gpm_hydrogen_ice
+# 							has_modifier = gpm_nitrogen_ice
+# 							has_modifier = gpm_chlorine_planet
+# 							has_modifier = gpm_phosphorus_planet
+# 							has_modifier = gpm_sulfur_planet
+# 						}
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_energy_5
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						OR = {
+# 							has_modifier = gpm_iron_planet
+# 							has_modifier = gpm_carbon_planet
+# 							has_modifier = gpm_iron_rich
+# 							has_modifier = gpm_gold_rich
+# 							has_modifier = gpm_mercury_atmosphere
+# 						}
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_7
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						OR = {
+# 							has_modifier = gpm_titanium_rich
+# 							has_modifier = gpm_platinum_rich
+# 							has_modifier = gpm_cobalt_rich
+# 							has_modifier = gpm_lithium_rich
+# 						}
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_alloys_2
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_modifier = mineral_rich
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_4
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_modifier = gpm_mineral_rich_2
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_6
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_modifier = ultra_rich
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_8
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_modifier = gpm_ultra_rich_2
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_10
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_modifier = gpm_periodic_meteor_showers
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_3
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						OR = {
+# 							has_modifier = asteroid_impacts
+# 							has_modifier = gpm_asteroid_impacts_2
+# 						}
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_minerals_3
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_modifier = gpm_extensive_cavern_system
+# 						has_deposit = no
+# 					}
+# 					hidden_effect = { clear_deposits = yes }
+# 					add_deposit = d_rare_crystals_1
+# 				}
+# 			}
+#         }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 200
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+
+# gpm_decision_thunderstorms_research = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = gpm_frequent_thunderstorms
+# 			has_modifier = gpm_global_thunderstorms
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = { has_modifier = gpm_frequent_thunderstorms }
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_physics_4
+# 		}
+# 		else_if = {
+# 			limit = { has_modifier = gpm_global_thunderstorms }
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_physics_6
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_research_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_thunderstorms_energy = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = gpm_frequent_thunderstorms
+# 			has_modifier = gpm_global_thunderstorms
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = { has_modifier = gpm_frequent_thunderstorms }
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_energy_3
+# 		}
+# 		else_if = {
+# 			limit = { has_modifier = gpm_global_thunderstorms }
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_energy_5
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_gpm_highly_charged_air_particles_research = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		# owner = { is_regular_empire = yes }
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		from = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		has_modifier = gpm_highly_charged_air_particles
+
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = { has_modifier = gpm_highly_charged_air_particles }
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_physics_6
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_Gas_Harvesting_energy = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = gpm_hydrogen_mist
+# 			has_modifier = gpm_hydrogen_ice
+# 			has_modifier = gpm_nitrogen_ice
+# 			has_modifier = gpm_chlorine_planet
+# 			has_modifier = gpm_phosphorus_planet
+# 			has_modifier = gpm_sulfur_planet
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					has_modifier = gpm_hydrogen_mist
+# 					has_modifier = gpm_hydrogen_ice
+# 					has_modifier = gpm_nitrogen_ice
+# 					has_modifier = gpm_chlorine_planet
+# 					has_modifier = gpm_phosphorus_planet
+# 					has_modifier = gpm_sulfur_planet
+# 				}
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_energy_5
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_Metal_Extraction_Minerals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = gpm_iron_planet
+# 			has_modifier = gpm_carbon_planet
+# 			has_modifier = gpm_iron_rich
+# 			has_modifier = gpm_gold_rich
+# 			has_modifier = gpm_mercury_atmosphere
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					has_modifier = gpm_iron_planet
+# 					has_modifier = gpm_carbon_planet
+# 					has_modifier = gpm_iron_rich
+# 					has_modifier = gpm_gold_rich
+# 					has_modifier = gpm_mercury_atmosphere
+# 				}
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_7
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_Mineral_Extraction_Minerals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = mineral_rich
+# 			has_modifier = gpm_mineral_rich_2
+# 			has_modifier = ultra_rich
+# 			has_modifier = gpm_ultra_rich_2
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				has_modifier = mineral_rich
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_4
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_modifier = gpm_mineral_rich_2
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_6
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_modifier = ultra_rich
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_8
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_modifier = gpm_ultra_rich_2
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_10
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_Metal_Extraction_Alloys = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = gpm_titanium_rich
+# 			has_modifier = gpm_platinum_rich
+# 			has_modifier = gpm_cobalt_rich
+# 			has_modifier = gpm_lithium_rich
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		has_deposit = no
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+		
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					has_modifier = gpm_titanium_rich
+# 					has_modifier = gpm_platinum_rich
+# 					has_modifier = gpm_cobalt_rich
+# 					has_modifier = gpm_lithium_rich
+# 				}
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_alloys_2
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_Asteroid_Showers_Minerals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		has_modifier = gpm_periodic_meteor_showers
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				has_modifier = gpm_periodic_meteor_showers
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_3
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_Asteroid_Impacts_Minerals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		OR = {
+# 			has_modifier = asteroid_impacts
+# 			has_modifier = gpm_asteroid_impacts_2
+# 		}
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					has_modifier = asteroid_impacts
+# 					has_modifier = gpm_asteroid_impacts_2
+# 				}
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_minerals_3
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# gpm_decision_gpm_extensive_cavern_system_Crystals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			# minerals = @t1_mineral_cost
+# 			# alloys = @t1_alloy_cost
+# 			energy = @t1_energy_cost
+# 			influence = @t1_influence_cost
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		has_modifier = gpm_extensive_cavern_system
+# 		has_deposit = no
+# 	}
+	
+# 	allow = {
+# 		FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				has_modifier = gpm_extensive_cavern_system
+# 			}
+# 			hidden_effect = { clear_deposits = yes }
+# 			add_deposit = d_rare_crystals_1
+# 		}
+# 		custom_tooltip = gpm_decision_limit
+# 		# ROOT = {
+# 			# create_mining_station = {
+# 				# owner = FROM
+# 			# }
+# 		# }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = influence
+# 					value < 100
+					
+# 				}
+# 			}
+# 		}
+# 	}
+# }

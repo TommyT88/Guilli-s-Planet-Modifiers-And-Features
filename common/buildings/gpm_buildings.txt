@@ -1,0 +1,477 @@
+###############################
+###       Fortresses	    ###
+###############################
+gpm_building_stronghold = {
+	base_buildtime = 180
+	base_cap_amount = 1
+
+	category = army
+
+	planet_modifier = {
+		planet_housing_add = 2
+		planet_orbital_bombardment_damage = -0.5
+	}
+
+	# gestalts get bunker drones
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		modifier = {
+			job_gpm_bunker_drone_add = 2
+		}
+	}
+
+	# rest get bunker armies
+	triggered_planet_modifier = {
+		potential = {
+			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		modifier = {
+			job_gpm_bunker_army_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			alloys = 100
+		}		
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	potential = {
+		planet = {
+			has_modifier = "gpm_precursor_bunker_grid"
+		}	
+	}
+	
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+gpm_building_mining_nanite_nexus = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+
+		NOR = { # Ringworlds don't have mines
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+			is_planet_class = pc_city
+		}
+	}
+		
+	planet_modifier = {
+		planet_miners_minerals_produces_mult = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			district_mining_max = 3
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+			alloys = 100
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	prerequisites = {
+		tech_gpm_precursor_mines_discovery_2
+	}
+	
+	ai_weight = {
+		weight = 5000
+		# modifier = {
+		# 	factor = 0
+		# 	NOT = { free_district_slots = 0 }
+		# 	buildings_build_building = no
+		# }
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+gpm_precursor_research_center = {
+	base_buildtime = 480
+
+	empire_limit = {
+		base = 1
+	}
+
+	category = research
+
+	potential = {
+		owner = { has_country_flag = gpm_artifact_research_centre_unlocked }
+		has_ancrel = yes
+	}
+
+	prerequisites = {
+		gpm_tech_arcane_research
+	}
+
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minor_artifacts = 0.1
+		}
+		cost = {
+			minerals = 700
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			# job_gpm_precursor_archaeologist_add = 1
+			job_gpm_archaeologist_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner			
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			# job_gpm_precursor_archaeologist_drone_add = 1
+			job_gpm_archaeologist_drone_add = 3
+		}
+	}
+	
+	triggered_desc = {
+		# text = job_gpm_precursor_archaeologist_effect_desc
+		text = job_gpm_archaeologist_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		# text = job_gpm_precursor_archaeologist_drone_effect_desc
+		text = job_gpm_archaeologist_drone_effect_desc
+	}
+
+	
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+gpm_building_ascension_tower = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		NOT = { is_planet_class = pc_habitat }
+		exists = owner
+		# owner = { is_regular_empire = yes }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 200
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	prerequisites = {
+		tech_gpm_supermaterials_precursor
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000 #High weight to gurantee that if the below is true then the AI should build it
+			free_housing < 5 #Prevents the AI from running out of residences when nearly out of tiles
+			NOT = { is_planet_class = pc_habitat }
+		}
+	}
+}
+
+gpm_building_exotic_park = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		owner = { has_country_flag = gpm_exotic_park_rewarded }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 15
+		biological_pop_happiness = 0.05
+		lithoid_pop_happiness = 0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 450
+			food = 200
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000 #High weight to gurantee that if the below is true then the AI should build it
+			num_pops > 10 #Prevents the AI from hogging the first planet building slots
+		}
+	}
+}
+
+gpm_building_manufactory_hub = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = manufacturing
+
+	potential = {
+		exists = owner
+	}
+
+	# destroy_trigger = {
+		# OR = {
+			# has_modifier = resort_colony
+			# has_modifier = slave_colony
+
+			# AND = {
+				# owner = {
+					# is_ai = yes
+					# is_gestalt = yes
+					# NOT = { has_valid_civic = civic_machine_servitor }
+				# }
+			# }
+		# }
+	# }
+	
+	planet_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.15
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			alloys = 4
+		}
+	}
+
+	prerequisites = {
+		tech_gpm_manufactory_hub
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 250
+			OR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+			owner = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+			}
+		}
+		modifier = {
+			weight = 1000
+			jobs_work_minerals_goods = no
+			owner = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+			}
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 20
+				}
+				OR = {
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+					has_resource = {
+						type = food
+						amount > 0
+					}
+				}#Check to see if consumer goods shortage is being caused by a food shortage.
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+gpm_building_core_prison = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		owner = { has_country_flag = gpm_core_prison_rewarded }
+		NOT = { gpm_is_planet_class_habitat = yes }
+	}
+
+	planet_modifier = {
+		planet_crime_add = -40
+		planet_stability_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			weight = 50
+			planet_crime > 5
+		}
+		modifier = {
+			weight = 100
+			planet_crime > 10
+		}
+		modifier = {
+			weight = 150
+			planet_crime > 15
+		}
+		modifier = {
+			weight = 250
+			planet_crime > 25
+		}
+		modifier = {
+			weight = 500
+			planet_crime > 50
+		}
+		modifier = {
+			weight = 1000
+			has_modifier = crime_lord_deal
+		}
+	}
+}

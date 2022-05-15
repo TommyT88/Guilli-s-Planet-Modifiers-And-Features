@@ -1,0 +1,68 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Tomb World Planet Modifiers
+##########################################################################
+
+# gpm_ruined_battlefield
+# gpm_spaceship_graveyard
+# gpm_recent_mass_extinction
+# gpm_lingering_pollution
+# gpm_surface_of_bones
+# gpm_decaying_structures
+
+gpm_ruined_battlefield = {
+	planet_researchers_physics_research_produces_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_battlefield.dds"
+	icon_frame = 1
+}
+gpm_spaceship_graveyard = {
+	planet_jobs_alloys_produces_mult = 0.10
+	planet_jobs_engineering_research_produces_mult = 0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ship_graveyard.dds"
+	icon_frame = 1
+}
+gpm_recent_mass_extinction = {
+	planet_researchers_society_research_produces_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_recent_mass_extinction.dds"
+	icon_frame = 1
+}
+gpm_lingering_pollution = {
+	district_farming_max = -2
+	district_mining_max = -2
+	district_generator_max = -2
+	planet_jobs_physics_research_produces_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_lingering_pollution.dds"
+	icon_frame = 2
+}
+gpm_surface_of_bones = {
+	planet_jobs_society_research_produces_mult = 0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_surface_of_bones.dds"
+	icon_frame = 1
+}
+gpm_decaying_structures = {
+	planet_researchers_engineering_research_produces_mult = 0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_decaying_structures.dds"
+	icon_frame = 1
+}
+
+
+
+
+
+
+

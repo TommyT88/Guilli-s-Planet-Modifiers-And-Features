@@ -1,0 +1,21 @@
+namespace = gpm_on_colonize
+
+# Creates 4 pops for the precursor ruins planet modifier bonus
+planet_event = {
+	id = gpm_on_colonize.2
+	hide_window = yes
+	is_triggered_only = yes
+		
+	trigger = {
+		has_modifier = gpm_precursor_ruins
+	}
+	
+	
+	immediate = {
+		random_owned_pop = { species = { save_event_target_as = gpm_precursor_ruins_pop_species } }
+		create_pop = { species = event_target:gpm_precursor_ruins_pop_species }
+		create_pop = { species = event_target:gpm_precursor_ruins_pop_species }
+		create_pop = { species = event_target:gpm_precursor_ruins_pop_species }
+		create_pop = { species = event_target:gpm_precursor_ruins_pop_species }
+	}
+}

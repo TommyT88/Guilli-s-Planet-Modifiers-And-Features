@@ -1,0 +1,73 @@
+# manufactorium ship
+ship_section_template = {
+	key = "gpm_manufactorium_ship_section"
+	ship_size = gpm_manufactorium_ship
+	fits_on_slot = mid
+	entity = "empty_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	
+	small_utility_slots = 2
+	aux_utility_slots = 6
+}
+
+
+# precursor ship
+ship_section_template = {
+	key = "gpm_precursor_destroyer_section"
+	ship_size = gpm_precursor_destroyer
+	fits_on_slot = mid
+	entity = "empty_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+	
+	large_utility_slots = 4
+	aux_utility_slots = 2
+}

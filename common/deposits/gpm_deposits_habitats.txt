@@ -1,0 +1,473 @@
+gpm_d_moon_mining_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_moon_miner_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_moon_miner_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_asteroid_mining_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_asteroid_miner_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_asteroid_miner_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_orbital_research_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_orbital_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_orbital_researcher_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_archeology_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_archeology_precursor_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_precursor_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+			has_ancrel = yes
+		}
+		modifier = {
+			job_gpm_precursor_archaeologist_drone_add = 1
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_time_research_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 40
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_orbital_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_orbital_researcher_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_alloy_mining_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_orbital_alloy_miner_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_orbital_alloy_miner_drone_add = 2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_mineral_mining_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_orbital_mineral_miner_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_orbital_mineral_miner_drone_add = 3
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_particle_collecting_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_orbital_particle_collector_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_orbital_particle_collector_drone_add = 3
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_spice_collecting_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			# job_gpm_orbital_spicer_add = 5
+			job_gpm_orbital_spicer_per_pop = 0.2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			#job_gpm_orbital_spicer_drone_add = 2
+			job_gpm_orbital_spicer_drone_per_pop = 0.2
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_alien_egg_infrastructure = {
+	is_for_colonizable = yes
+	category = gpm_deposit_cat_special
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+		army_defense_damage_mult = 0.50
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_orbital_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_orbital_researcher_drone_add = 2
+		}
+	}
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}

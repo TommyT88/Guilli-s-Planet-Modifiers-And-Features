@@ -1,0 +1,302 @@
+		# 100 = {
+			# add_modifier = { modifier = "0000000000000" }
+			# Not with these modifiers
+			# modifier = { factor = 0 has_modifier = "0000000000000" }
+			# Not on these planets
+			# Tweaks
+			# Weight Factor
+			# modifier = { factor = @default }
+		# }
+
+# Total modifiers: x
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
+
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+# Planetary Ring Adjuster
+@ringfactor = 1.35
+
+gpm_spawn_molten_world_modifier = {
+	random_list = {
+		100 = {
+			add_modifier = { modifier = "gpm_magma_ocean" }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_magma_ocean"
+					has_modifier = "gpm_solidified_core"
+				}
+			}
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			add_deposit = d_exotic_gases_1
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_silicon_crystals" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_silicon_crystals" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks		
+			random_list = {
+				80 = { add_deposit = d_minerals_2 }
+				15 = { add_deposit = d_rare_crystals_1 }
+				5 = { add_deposit = d_rare_crystals_2 }
+			}
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_lava_geysers" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_lava_geysers" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_thin_planetary_crust" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_thin_planetary_crust" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_heavy_elements" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_heavy_elements" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			add_deposit = d_minerals_3
+			# Weight Factor
+			modifier = { factor = @plenty }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_rare_metals" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_rare_metals" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			add_deposit = d_alloys_1
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_crystaline_deposits" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_crystaline_deposits" }
+			modifier = { factor = 0 has_modifier = "gpm_searing_fumes" }
+			modifier = { factor = 0 has_modifier = "gpm_stable_geodes" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			add_deposit = d_minerals_4
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_searing_fumes" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_searing_fumes" }
+			modifier = { factor = 0 has_modifier = "gpm_crystaline_deposits" }
+			modifier = { factor = 0 has_modifier = "gpm_stable_geodes" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			add_deposit = d_minerals_5
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_stable_geodes" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_stable_geodes" }
+			modifier = { factor = 0 has_modifier = "gpm_searing_fumes" }
+			modifier = { factor = 0 has_modifier = "gpm_crystaline_deposits" }
+			# Not on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			add_deposit = d_alloys_2
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_fast_rotation" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_fast_rotation" }
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_tidallylocked }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_lava_geysers" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_lava_geysers" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @plenty }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_thin_planetary_crust" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_thin_planetary_crust" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_mercury_atmosphere" }
+			# Not with these modifiers
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_proto_planet" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_proto_planet" }
+			# (Not) on these planets
+			modifier = { factor = 0 is_moon = yes }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}		
+		100 = {
+			add_modifier = { modifier = "gpm_very_hot_core" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_very_hot_core" }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+	}
+}
+
+gpm_roll_molten_modifiers = {
+	switch = {
+		trigger = has_global_flag
+		gpm_modifier_amount_max_one = {
+			if = {
+				limit = { num_modifiers = 0 }
+				random_list = {
+					80 = { }
+					10 = { gpm_spawn_normal_uninhabitabe_world_modifier = yes }
+					10 = { gpm_spawn_molten_world_modifier = yes }
+				}
+			}
+		}
+		gpm_modifier_amount_low = {
+			while = {
+				count = 2
+				if = {
+					limit = { num_modifiers < 2 }
+					random_list = {
+						80 = { }
+						10 = { 
+							gpm_spawn_normal_uninhabitabe_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+						10 = { 
+							gpm_spawn_molten_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_normal = {
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						70 = { }
+						15 = { 
+							gpm_spawn_normal_uninhabitabe_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+						15 = { 
+							gpm_spawn_molten_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			if = {
+				limit = { num_modifiers = 0 }
+				gpm_spawn_molten_world_modifier = yes
+			}
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						60 = { }
+						20 = { 
+							gpm_spawn_normal_uninhabitabe_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+						20 = { 
+							gpm_spawn_molten_world_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		default = { }
+	}
+}

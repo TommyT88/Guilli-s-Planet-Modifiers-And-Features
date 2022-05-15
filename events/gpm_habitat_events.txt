@@ -1,0 +1,539 @@
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+
+namespace = gpm_habitat
+
+country_event = {
+	id = gpm_habitat.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		# from.solar_system = {
+			# any_system_planet = {
+				# gpm_is_planet_class_habitat = yes
+			# }
+		# }
+		from = {
+			is_megastructure_type = habitat_0
+		}
+	}
+	
+	immediate = {
+		# log = "000000000 run event gpm_habitat.2 in 1 day"
+		country_event = { id = gpm_habitat.2 days = 1 }
+	}
+}
+
+# Runs seperate delayed event to account for issues issues
+country_event = {
+	id = gpm_habitat.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+	
+	immediate = {
+		# log = "000000000 from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
+		fromfrom.solar_system = {
+			every_system_planet = {
+				limit = {
+					NOR = {
+						has_planet_flag = gpm_constructed_habitat_event_complete
+						has_planet_flag = gpm_is_galaxy_generated_habitat
+					}
+					gpm_is_planet_class_habitat = yes
+				}
+				# log = "000000000 SAVING event_target_as = gpm_new_constructed_habitat"
+				save_event_target_as = gpm_new_constructed_habitat
+				# Set new_habitat_flag and lock out this event in the future for this habitat.
+				set_planet_flag = gpm_constructed_habitat_event_complete
+			}
+		}
+
+		
+		
+		# event_target:gpm_new_constructed_habitat = {
+		# 	# construction bonus based on:
+		# 	#	- has_civic master builders  	+3 districts (total)
+		# 	# 	- is void species (origin)		+5 districts (total)
+		# 	gpm_spawn_habitat_tier_modifier = yes
+
+		# 	# roll constructed habitat modifiers
+		# 	gpm_roll_constructed_habitat_modifiers = yes
+
+		# 	# add features based on parent planet and parent moons
+			
+		# 	from.planet = {
+		# 		planet_event = {
+		# 			id = gpm_habitat.2
+		# 			days = 1
+		# 		}
+		# 		# gpm_spawn_habitat_infrastructure = yes
+		# 		# every_moon = {						
+		# 		# 	gpm_spawn_habitat_infrastructure = yes
+		# 		# }
+		# 	}
+
+		# }
+
+		# gpm_habitat_asteroid_belt_mining
+		# gpm_habitat_extensive_moon_mining
+		# gpm_habitat_frequent_thunderstorms_research 
+		# gpm_habitat_radioactive_mantle_mining 
+		# gpm_habitat_frequent_asteroid_flybys 
+		# gpm_habitat_highly_charged_particle_collection 
+		# gpm_habitat_ancient_temple_expeditions
+		# gpm_habitat_time_displaced_planet_research
+		# gpm_habitat_surface_mining
+		# gpm_habitat_surface_expeditions
+		# gpm_habitat_android_pleasure_palace_tourism
+		# gpm_habitat_delicious_ingredients_trade (spice must flow!)
+		# gpm_habitat_flat_terrain_racing (chance based)
+		# gpm_habitat_strange_alien_eggs_restriction
+		# gpm_habitat_hydrogen_extraction
+		# gpm_habitat_nitrogen_extraction
+		# gpm_habitat_chlorine_extraction
+		# gpm_habitat_phosphorus_extraction
+		# gpm_habitat_sulfur_extraction
+		# gpm_habitat_iron_extraction
+		# if specific asteroid variabe > 2 we add asteroid mining bonus to habitat
+		# if = {
+		# 	limit = {
+		# 		check_variable = {
+		# 			which = "gpm_number_rich_asteroids" 
+		# 			value > 2
+		# 		}
+		# 	}
+		# 	event_target:gpm_new_constructed_habitat = {
+		# 		add_modifier = { modifier = gpm_habitat_asteroid_belt_mining days = -1 }
+		# 		#planet_resource_minerals_add = 20  #check at 2.0 update to make it work
+		# 		add_deposit = "gpm_d_moon_mining_infrastructure"
+				
+		# 	}
+		# }
+		event_target:gpm_new_constructed_habitat = {
+			# log = "000000000 RUNNING event_target_as = gpm_new_constructed_habitat code"
+			# log = "000000000 gpm_new_constructed_habitat scopes from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
+			# set special flag if orbiting precursor worlds
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							gpm_has_precursor_modifiers = yes 
+							any_moon = {
+								gpm_has_precursor_modifiers = yes 
+							}
+						}
+					}
+					event_target:gpm_new_constructed_habitat = { 
+						set_planet_flag = gpm_is_precursor_orbiting_habitat
+						remove_planet_flag = commercial_habitat
+						remove_planet_flag = energy_habitat
+						remove_planet_flag = mining_habitat
+						if = {
+							limit = {
+								NOT = { has_planet_flag = research_habitat }
+							}
+							set_planet_flag = research_habitat
+						}
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = extensive_moon_system
+							any_moon = {
+								has_modifier = extensive_moon_system
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_extensive_moon_mining days = -1 }
+						set_planet_flag = gpm_is_extensive_moon_mining_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_frequent_thunderstorms
+							has_modifier = gpm_global_thunderstorms
+							has_modifier = gpm_global_thunderstorms_gas_giant
+							any_moon = {
+								OR = {
+									has_modifier = gpm_frequent_thunderstorms 
+									has_modifier = gpm_global_thunderstorms
+									has_modifier = gpm_global_thunderstorms_gas_giant
+								}
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_frequent_thunderstorms_research days = -1 }
+						set_planet_flag = gpm_is_frequent_thunderstorms_research_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_radioactive_mantle
+							any_moon = {
+								has_modifier = gpm_radioactive_mantle
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_radioactive_mantle_mining days = -1 } 
+						set_planet_flag = gpm_is_radioactive_mantle_mining_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_periodic_meteor_showers
+							any_moon = {
+								has_modifier = gpm_periodic_meteor_showers
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_frequent_asteroid_flybys days = -1 } 
+						set_planet_flag = gpm_is_frequent_asteroid_flybys_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_crystal_moon_palace 
+							has_modifier = gpm_temple_of_the_ancient_one 
+							has_modifier = gpm_ancient_temple 
+							any_moon = {
+								OR = {
+									has_modifier = gpm_crystal_moon_palace 
+									has_modifier = gpm_temple_of_the_ancient_one 
+									has_modifier = gpm_ancient_temple 
+								}
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_ancient_temple_expeditions days = -1 } 
+						set_planet_flag = gpm_is_ancient_temple_expeditions_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_highly_charged_air_particles
+							any_moon = {
+								has_modifier = gpm_highly_charged_air_particles
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_highly_charged_particle_collection days = -1 } 
+						set_planet_flag = gpm_is_highly_charged_particle_collection_habitat
+					}
+				}
+			}
+			
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_time_displaced_planet
+							any_moon = {
+								has_modifier = gpm_time_displaced_planet
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_time_displaced_planet_research days = -1 } 
+						set_planet_flag = gpm_is_time_displaced_planet_research_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_ultra_rich_2
+							has_modifier = gpm_mineral_rich_2
+							has_modifier = ultra_rich
+							has_modifier = mineral_rich
+							has_modifier = gpm_extensive_cavern_system
+							any_moon = {
+								OR = {
+									has_modifier = gpm_ultra_rich_2
+									has_modifier = gpm_mineral_rich_2
+									has_modifier = ultra_rich
+									has_modifier = mineral_rich
+									has_modifier = gpm_extensive_cavern_system
+								}
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_surface_mining days = -1 }
+						set_planet_flag = gpm_is_surface_mining_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_iron_planet
+							any_moon = { has_modifier = gpm_iron_planet	}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_surface_mining days = -1 }
+						set_planet_flag = gpm_is_iron_mining_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_ruined_battlefield 
+							has_modifier = gpm_spaceship_graveyard 
+							has_modifier = gpm_old_world
+							has_modifier = gpm_hiveworld
+							has_modifier = gpm_surface_of_bones
+							has_modifier = gpm_floating_islands
+							has_modifier = gpm_sunken_cities
+							gpm_has_precursor_modifiers = yes
+							any_moon = {
+								OR = {
+									has_modifier = gpm_ruined_battlefield 
+									has_modifier = gpm_spaceship_graveyard 
+									has_modifier = gpm_old_world
+									has_modifier = gpm_hiveworld
+									has_modifier = gpm_surface_of_bones
+									has_modifier = gpm_floating_islands
+									has_modifier = gpm_sunken_cities
+									gpm_has_precursor_modifiers = yes
+								}
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_surface_expeditions days = -1 } 
+						set_planet_flag = gpm_is_surface_expeditions_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_android_pleasure_palace
+							any_moon = {
+								has_modifier = gpm_android_pleasure_palace
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_android_pleasure_palace_tourism days = -1 } 
+						set_planet_flag = gpm_is_android_pleasure_palace_tourism_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_delicious_ingredients
+							has_modifier = gpm_exotic_spices
+							any_moon = {
+								OR = {
+									has_modifier = gpm_delicious_ingredients
+									has_modifier = gpm_exotic_spices
+								}
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_delicious_ingredients_trade days = -1 }
+						set_planet_flag = gpm_is_delicious_ingredients_trade_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_flat_terrain
+							any_moon = {
+								has_modifier = gpm_flat_terrain
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_flat_terrain_racing days = -1 }
+						set_planet_flag = gpm_is_flat_terrain_racing_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_strange_alien_eggs
+							any_moon = {
+								has_modifier = gpm_strange_alien_eggs
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_strange_alien_eggs_restriction days = -1 }
+						set_planet_flag = gpm_is_strange_alien_eggs_restriction_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_hydrogen_mist
+							has_modifier = gpm_hydrogen_ice
+							any_moon = {
+								OR = {
+									has_modifier = gpm_hydrogen_mist
+									has_modifier = gpm_hydrogen_ice
+								}
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_hydrogen_extraction days = -1 }
+						set_planet_flag = gpm_is_hydrogen_extraction_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_nitrogen_ice
+							any_moon = {
+								has_modifier = gpm_nitrogen_ice
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_nitrogen_extraction days = -1 }
+						set_planet_flag = gpm_is_nitrogen_extraction_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_chlorine_planet
+							any_moon = {
+								has_modifier = gpm_chlorine_planet
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_chlorine_extraction days = -1 }
+						set_planet_flag = gpm_is_chlorine_extraction_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_phosphorus_planet
+							any_moon = {
+								has_modifier = gpm_phosphorus_planet
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_phosphorus_extraction days = -1 } 
+						set_planet_flag = gpm_is_phosphorus_extraction_habitat
+					}
+				}
+			}
+			# check if parent planet has X modifier:
+			fromfrom.planet = {
+				if = {
+					limit = {
+						OR = {
+							has_modifier = gpm_sulfur_planet
+							any_moon = {
+								has_modifier = gpm_sulfur_planet
+							}
+						}
+					}
+					# spawn matching X habitat modifier
+					event_target:gpm_new_constructed_habitat = {
+						# add_modifier = { modifier = gpm_habitat_sulfur_extraction days = -1 } 
+						set_planet_flag = gpm_is_sulfur_extraction_habitat
+					}
+				}
+			}
+		}
+	}
+}

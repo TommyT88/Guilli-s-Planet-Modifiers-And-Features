@@ -1,0 +1,611 @@
+##########################################################################
+# Decisions
+##########################################################################
+decision_gpm_seasonal_flooding = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_seasonal_flooding
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_seasonal_flooding
+	}
+	
+	allow = {
+		has_modifier = gpm_seasonal_flooding
+	}
+
+    effect = {
+		remove_modifier = gpm_seasonal_flooding
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_locust_plagues = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_locust_plagues
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_locust_plagues
+	}
+	
+	allow = {
+		has_modifier = gpm_locust_plagues
+	}
+
+    effect = {
+		remove_modifier = gpm_locust_plagues
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_acidic_seas = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_acidic_seas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_acidic_seas
+	}
+	
+	allow = {
+		has_modifier = gpm_acidic_seas
+	}
+
+    effect = {
+		remove_modifier = gpm_acidic_seas
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_carnivorous_flies = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_carnivorous_flies
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_carnivorous_flies
+	}
+	
+	allow = {
+		has_modifier = gpm_carnivorous_flies
+	}
+
+    effect = {
+		remove_modifier = gpm_carnivorous_flies
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_lingering_pollution = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_lingering_polution
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_lingering_pollution
+	}
+	
+	allow = {
+		has_modifier = gpm_lingering_pollution
+	}
+
+    effect = {
+		remove_modifier = gpm_lingering_pollution
+		add_deposit = d_black_soil
+		if = { limit = { has_deposit = gpm_d_garbage_patch }
+			remove_deposit = gpm_d_garbage_patch
+			add_deposit = gpm_d_surface_mineral_veins
+		}
+		if = { limit = { has_deposit = gpm_d_industrial_ruins }
+			remove_deposit = gpm_d_garbage_patch
+			add_deposit = d_underground_generator
+		}
+		if = { limit = { has_deposit = gpm_d_radioactive_dump }
+			remove_deposit = gpm_d_garbage_patch
+			add_deposit = d_organic_landfill
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_resilent_parasites = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_resilient_parasites
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops < 10
+			}
+			unity = 25
+			consumer_goods = 250
+		}
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 10
+				num_pops < 20
+			}
+			unity = 50
+			consumer_goods = 500
+		}
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 20
+				num_pops < 30
+			}
+			unity = 75
+			consumer_goods = 750
+		}	
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 30
+				num_pops < 40
+			}
+			unity = 100
+			consumer_goods = 1000
+		}	
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 40
+				num_pops < 50
+			}
+			unity = 125
+			consumer_goods = 1250
+		}			
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 50
+				num_pops < 60
+			}
+			unity = 150
+			consumer_goods = 1500
+		}
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 60
+				num_pops < 70
+			}
+			unity = 175
+			consumer_goods = 1750
+		}			
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 70
+				num_pops < 85
+			}
+			unity = 200
+			consumer_goods = 2000
+		}
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 85
+				num_pops < 100
+			}
+			unity = 225
+			consumer_goods = 2250
+		}
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = yes }
+				num_pops >= 100
+			}
+			unity = 250
+			consumer_goods = 2500
+		}
+		cost = {
+			trigger = {
+				owner = { is_regular_empire = no }
+			}
+			unity = 150
+			energy = 3000
+		}
+	}
+
+    potential = {
+		has_modifier = gpm_resilent_parasites
+	}
+	
+	allow = {
+		has_modifier = gpm_resilent_parasites
+	}
+
+    effect = {
+		remove_modifier = gpm_resilent_parasites
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_Unstable_Tectonics = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_unstable_tectonics
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		OR = {
+			has_modifier = unstable_tectonics
+			has_modifier = gpm_unstable_tectonics_2
+		}
+	}
+	
+	allow = {
+		OR = {
+			has_modifier = unstable_tectonics
+			has_modifier = gpm_unstable_tectonics_2
+		}
+	}
+
+    effect = {
+		remove_modifier = unstable_tectonics
+		remove_modifier = gpm_unstable_tectonics_2
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_hostile_flora = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_hostile_flora
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_hostile_flora
+	}
+	
+	allow = {
+		has_modifier = gpm_hostile_flora
+	}
+
+    effect = {
+		remove_modifier = gpm_hostile_flora
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_unusual_seasons = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_unusual_seasons
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_unusual_seasons
+	}
+	
+	allow = {
+		has_modifier = gpm_unusual_seasons
+	}
+
+    effect = {
+		remove_modifier = gpm_unusual_seasons
+		hidden_effect = {
+			random_list = {
+				50 = {}
+				7 = { 
+					add_modifier = { modifier = gpm_perfect_seasons }
+					modifier = { factor = 0 has_modifier = gpm_perfect_seasons }
+				}
+				17 = { 
+					add_modifier = { modifier = gpm_clear_skies }
+					modifier = { factor = 0 has_modifier = gpm_clear_skies }
+				}
+				12 = { 
+					add_modifier = { modifier = gpm_pleasant_weather } 
+					modifier = { factor = 0 has_modifier = gpm_pleasant_weather }
+				}
+				12 = { 
+					add_modifier = { modifier = gpm_gorgeous_sky }
+					modifier = { factor = 0 has_modifier = gpm_gorgeous_sky }
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_restore_oppertunity = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_restore_oppertunity
+	enactment_time = 120
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+    potential = {
+		has_modifier = gpm_oppertunity
+		NOT = { has_global_flag = gpm_r_mars_rover_found }
+		NOT = { has_global_flag = gpm_relic_drops_disabled }
+	}
+	
+	allow = {
+		has_modifier = gpm_oppertunity
+		NOT = { has_global_flag = gpm_r_mars_rover_found }
+	}
+
+    effect = {
+		remove_modifier = gpm_oppertunity
+		owner = { add_relic = gpm_r_mars_rover }
+		set_global_flag = gpm_r_mars_rover_found
+	}
+	
+	ai_weight = {
+		weight = 2000
+	}
+}
+
+decision_gpm_hunt_roaming_killbots = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = gpm_decision_gpm_hunt_roaming_killbots
+	enactment_time = 360
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 1000
+		}
+	}
+
+    potential = {
+		has_deposit = gpm_d_relic_roaming_killbots
+	}
+	
+	allow = {
+		has_deposit = gpm_d_relic_roaming_killbots
+		owner = { NOT = { has_special_project = GPM_HUNT_KILL_BOTS } }
+	}
+
+    effect = {
+		# hidden_effect = { set_planet_flag = gpm_special_project_hunt_killbots_in_progress }
+		enable_special_project = {
+			name = "GPM_HUNT_KILL_BOTS"
+			location = root
+			owner = root.owner
+		}
+	}
+	
+	ai_weight = {
+		weight = 2000
+	}
+}
+
+decision_gpm_fix_ozone_layer = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			exotic_gases = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_thin_ozone_layer
+	}
+	
+	allow = {
+		has_modifier = gpm_thin_ozone_layer
+	}
+
+    effect = {
+		hidden_effect = {
+			# Planet Modifier Scaling
+			if = {
+				limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+				gpm_scale_planet_modifiers = yes
+			}
+		}
+		if = {
+			limit = { has_modifier = gpm_thin_ozone_layer }
+			remove_modifier = gpm_thin_ozone_layer
+			add_modifier = { modifier = gpm_thin_ozone_layer_fixed multiplier = gpm_planet_size_multiplier }
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_clear_toxic_gas = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			minerals = 2000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_toxic_gas
+	}
+	
+	allow = {
+		has_modifier = gpm_toxic_gas
+		owner = { has_technology = tech_gpm_tb_toxic_gas }
+	}
+
+	effect = {
+		remove_modifier = gpm_toxic_gas
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+
+# Upgrade Machine World Decision
+decision_gpm_upgrade_machine_world = {
+    owned_planets_only = yes
+	icon = gpm_decision_upgrade_machine_world
+	enactment_time = 360
+
+    resources = {
+		category = decisions
+		cost = {
+			minor_artifacts = 100
+		}
+	}
+
+    potential = {
+		gpm_is_planet_class_machine = yes
+		NOT = { has_planet_flag = gpm_is_upgraded_machine_world }
+	}
+	
+	allow = {
+		owner = {
+			has_technology = tech_mega_engineering
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_gpm_upgrade_machine_world_TT
+		hidden_effect = {
+			planet_event = { id = gpm_terraform.1 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+
+
+

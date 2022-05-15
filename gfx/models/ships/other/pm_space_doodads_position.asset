@@ -1,0 +1,52 @@
+
+# Newly set precursor shipyards - One on each pole isntead of 8. 
+
+entity = {
+	name = "gpm_abandoned_wormhole_station_01_entity"
+	cull_radius = 2000
+	
+	locator = { name = "aa" position = { 100 -150 0 } rotation = { -45 0 0 } }
+	attach = { "aa" = "gpm_abandoned_wormhole_station_part_01_entity"}
+	
+	locator = { name = "bb" position = { 32 -150 95 } rotation = { -10 0 0 } }
+	attach = { "bb" = "gpm_abandoned_wormhole_station_part_01_entity"}
+	
+	locator = { name = "cc" position = { -81 -150 59 } rotation = { 0 0 0 } }
+	attach = { "cc" = "gpm_abandoned_wormhole_station_part_01_entity"}
+	
+	locator = { name = "dd" position = { -81 -150 -59 } rotation = { 0 0 0 } }
+	attach = { "dd" = "gpm_abandoned_wormhole_station_part_01_entity"}
+	
+	locator = { name = "ee" position = { 31 -150 -95 } rotation = { 0 0 0 } }
+	attach = { "ee" = "gpm_abandoned_wormhole_station_part_01_entity"}
+	
+	
+	
+	
+	
+	scale = 1
+}
+
+entity = {
+	name = "gpm_abandoned_wormhole_station_part_01_entity"
+	cull_radius = 2000
+	
+	locator = { name = "a" position = { 0 0 0 } rotation = { 0 0 0 }}
+	attach = { "a" = "abandoned_wormhole_station_01_entity"}
+	
+	locator = { name = "b" position = { 0 0 10 } rotation = { 0 0 0 }}
+	attach = { "b" = "abandoned_wormhole_station_01_entity"}
+	
+	locator = { name = "c" position = { 0 0 -10 } rotation = { 0 0 0 }}
+	attach = { "c" = "abandoned_wormhole_station_01_entity"}
+	
+	locator = { name = "d" position = { 0 0 20 } rotation = { 0 0 0 }}
+	attach = { "d" = "abandoned_wormhole_station_01_entity"}
+	
+	locator = { name = "e" position = { 0 0 -20 } rotation = { 0 0 0 }}
+	attach = { "e" = "abandoned_wormhole_station_01_entity"}
+	
+	
+	
+	scale = 0.65
+}

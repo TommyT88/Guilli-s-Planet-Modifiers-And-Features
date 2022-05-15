@@ -1,0 +1,149 @@
+namespace = gpm_mega
+
+#Ruined Refinery Restored Found
+ship_event = {
+	id = gpm_mega.1
+	title = "gpm_mega.1.name"
+	desc = "gpm_mega.1.desc"
+	picture = GFX_evt_ruined_refinery_encountered
+	show_sound = event_ship_bridge
+	location = FROM
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { NOT = { has_country_flag = gpm_found_ruined_refinery } }
+		FROM = {
+			any_system_megastructure = {
+				is_megastructure_type = gpm_refinery_ruined
+			}
+		}
+	}
+
+	immediate = {
+		owner = { set_country_flag = gpm_found_ruined_refinery }
+	}
+
+	option = {
+		name = EXCELLENT
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+}
+
+#Ruined Mining Facility Restored Found
+ship_event = {
+	id = gpm_mega.2
+	title = "gpm_mega.2.name"
+	desc = "gpm_mega.2.desc"
+	picture = GFX_evt_ruined_mining_facility_encountered
+	show_sound = event_ship_bridge
+	location = FROM
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { NOT = { has_country_flag = gpm_found_ruined_mining_facility } }
+		FROM = {
+			any_system_megastructure = { 
+				is_megastructure_type = gpm_mining_facility_ruined
+			}
+		}
+	}
+
+	immediate = {
+		owner = { set_country_flag = gpm_found_ruined_mining_facility }
+	}
+
+	option = {
+		name = EXCELLENT
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+}
+
+#Ruined Station Restored Found
+ship_event = {
+	id = gpm_mega.3
+	title = "gpm_mega.3.name"
+	desc = "gpm_mega.3.desc"
+	picture = GFX_evt_ruined_station_encountered
+	show_sound = event_ship_bridge
+	location = FROM
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { NOT = { has_country_flag = gpm_found_ruined_station } }
+		FROM = {
+			any_system_megastructure = { 
+				is_megastructure_type = gpm_observation_station_ruined
+			}
+		}
+	}
+
+	immediate = {
+		owner = { set_country_flag = gpm_found_ruined_station }
+	}
+
+	option = {
+		name = gpm_survey.UNBELIEVABLE
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+}
+
+#Ruined Silo Restored Found
+ship_event = {
+	id = gpm_mega.4
+	title = "gpm_mega.4.name"
+	desc = "gpm_mega.4.desc"
+	picture = GFX_evt_ruined_silo_encountered
+	show_sound = event_ship_bridge
+	location = FROM
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { NOT = { has_country_flag = gpm_found_ruined_silo } }
+		FROM = {
+			any_system_megastructure = { 
+				is_megastructure_type = gpm_silo_ruined
+			}
+		}
+	}
+
+	immediate = {
+		owner = { set_country_flag = gpm_found_ruined_silo }
+	}
+
+	option = {
+		name = EXCELLENT
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+}

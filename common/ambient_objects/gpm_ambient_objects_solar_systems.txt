@@ -1,0 +1,46 @@
+#############################
+### Precursor Shields
+
+# Standard Shield for standard size
+ambient_object = {
+	name = "gpm_planetary_shield_30_machine"
+	entity = "gpm_planet_shield_30_machine_entity"
+	selectable = no
+	show_name = no
+}
+#############################
+### Precursor shield_RSs
+
+# Standard shield_RS for standard size 25
+ambient_object = {
+	name = "gpm_planetary_shield_RS_30_machine"
+	entity = "gpm_planet_shield_RS_30_machine_entity"
+	selectable = no
+	show_name = no
+}
+
+# Space Storm 2
+ambient_object = {
+	name = "gpm_ME_space_storm_2"
+	entity = "gpm_ME_space_storm_2_entity"
+	selectable = no
+	show_name = no
+}
+
+# Gaia World Worlhomle Rings
+ambient_object = {
+	name = "gpm_lower_wormhole_station"
+	entity = "gpm_abandoned_wormhole_station_01_entity"
+	selectable = no
+	show_name = no
+}
+
+# james Webb Telescope
+ambient_object = {
+	name = "gpm_james_web"
+	entity = "gpm_james_web_entity"
+	selectable = yes
+	show_name = yes	
+	tooltip = "gpm_james_web_desc"
+	description = "gpm_james_web_desc"
+}

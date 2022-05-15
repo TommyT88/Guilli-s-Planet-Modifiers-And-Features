@@ -1,0 +1,223 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+# gpm_precursor_remnants
+# gpm_precursor_energy_grid
+# gpm_precursor_satalite_grid
+# gpm_precursor_city
+# gpm_precursor_shipyards
+# gpm_precursor_planetary_gun
+# gpm_precursor_bunker_grid
+# gpm_precursor_mechs
+# gpm_precursor_planetary_shield
+# gpm_precursor_floating_city
+# gpm_precursor_capital_complex
+# gpm_precursor_communication_hub
+# gpm_precursor_singularity_drive
+# gpm_precursor_eternal_fortress
+# gpm_precursor_prison_planet
+# gpm_precursor_mines
+# gpm_precursor_manufactorium
+# gpm_precursor_vaults
+# gpm_precursor_crashed_spacestation
+# gpm_precursor_battleground_ruins
+# gpm_precursor_outpost_ruins
+# gpm_precursor_harbor_ruins
+# gpm_precursor_ruins
+# gpm_precursor_obelisks
+
+# terraforming_candidate_precursor = {
+# 	show_only_custom_tooltip = yes
+# 	custom_tooltip = gpm_terraforming_candidate_precursorTT
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+# 	icon_frame = 6
+# 	important = yes			# if present on a planet, show the planet's nameplate
+# }
+gpm_precursor_remnants = {
+	planet_jobs_unity_produces_mult = 0.30
+	planet_researchers_society_research_produces_add = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_remnants.dds"
+	icon_frame = 5
+}
+gpm_precursor_energy_grid = {
+	planet_districts_energy_upkeep_mult = -0.50
+	planet_buildings_energy_upkeep_mult = -0.50
+	planet_jobs_energy_produces_mult = 0.50
+	district_generator_max = 8
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_energy_grid.dds"
+	icon_frame = 5
+}
+gpm_precursor_satalite_grid = {
+	planet_stability_add = 20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_satelites.dds"
+	icon_frame = 5
+}
+gpm_precursor_city = {
+	planet_housing_add = 20
+	planet_max_buildings_add = 4
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_city.dds"
+	icon_frame = 5
+}
+gpm_precursor_shipyards = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_precursor_shipyardsTT
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_shipyards.dds"
+	icon_frame = 5
+}
+
+gpm_precursor_shipyards_fed = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_shipyards.dds"
+	icon_frame = 5
+}
+gpm_precursor_planetary_gun = {
+	planet_orbital_bombardment_damage = -0.30
+	planet_chemists_volatile_motes_produces_add = 1.5
+	# Do something else here, possible with event to fleet (dmg?)
+	# army_defense_damage_mult = 0.30   # doesnt work
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_planet_gun.dds"
+	icon_frame = 5
+}
+gpm_precursor_bunker_grid = {
+	planet_orbital_bombardment_damage = -0.40
+	show_only_custom_tooltip = no
+	custom_tooltip = gpm_precursor_bunker_gridTT
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_bunkers.dds"
+	icon_frame = 5
+}
+gpm_precursor_mechs = {
+	show_only_custom_tooltip = no
+	custom_tooltip = gpm_precursor_mechsTT
+	planet_researchers_engineering_research_produces_add = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_mechs.dds"
+	icon_frame = 5
+}
+gpm_precursor_planetary_shield = {
+	planet_orbital_bombardment_damage = -0.50
+	pop_happiness = 0.10
+	# show_only_custom_tooltip = no
+	# custom_tooltip = gpm_precursor_planetary_shieldTT
+	#planet_orbital_bombardment_damage = -0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_shield.dds"
+	icon_frame = 5
+}
+gpm_precursor_planetary_shield_on = {
+	planet_orbital_bombardment_damage = -0.50
+	pop_happiness = 0.05
+	# custom_tooltip = gpm_precursor_planetary_shield_onTT
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_shield.dds"
+	icon_frame = 5
+}
+gpm_precursor_floating_city = {
+	planet_max_districts_add = 8
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_floating_city.dds"
+	icon_frame = 5
+}
+gpm_precursor_capital_complex = {
+	envoys_add = 2
+	planet_jobs_unity_produces_mult = 0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_capital_complex.dds"
+	icon_frame = 5
+}
+gpm_precursor_communication_hub = {
+	pop_government_ethic_attraction = 0.50
+	pop_amenities_usage_mult = -0.15
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_communication_hub.dds"
+	icon_frame = 5
+}
+gpm_precursor_singularity_drive = {
+	planet_jobs_society_research_produces_mult = 0.50
+	planet_jobs_engineering_research_produces_mult = 0.50
+	planet_jobs_physics_research_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_singularity_drive.dds"
+	icon_frame = 5
+}
+gpm_precursor_eternal_fortress = {
+	planet_soldiers_unity_produces_add = 2
+	planet_orbital_bombardment_damage = -0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_eternal_fortress.dds"
+	icon_frame = 5
+}
+gpm_precursor_prison_planet = {
+	planet_crime_mult = -0.45
+	planet_carry_cap_add = 20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_prison_planet.dds"
+	icon_frame = 5
+}
+gpm_precursor_mines = {
+	planet_district_mining_build_speed_mult = 0.50
+	planet_miners_minerals_produces_add = 1.5
+	district_mining_max = 10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_mines.dds"
+	icon_frame = 5
+}
+gpm_precursor_manufactorium = {
+	# district_gpm_precursor_manufactorium_max = 6
+	planet_metallurgists_alloys_produces_add = 1.5
+	planet_artisans_consumer_goods_produces_add = 1.5
+	planet_max_districts_add = 4
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_manufactorium.dds"
+	icon_frame = 5
+}
+gpm_precursor_vaults = {
+	building_mote_harvesters_max = 3
+	building_gas_extractors_max = 3
+	building_crystal_mines_max = 3
+	building_betharian_power_plant_max = 3
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_vaults.dds"
+	icon_frame = 5
+}
+gpm_precursor_crashed_spacestation = {	
+	planet_jobs_volatile_motes_produces_mult = 0.50
+	planet_jobs_exotic_gases_produces_mult = 0.50
+	planet_jobs_rare_crystals_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_crashed_spacestation.dds"
+	icon_frame = 5
+}
+gpm_precursor_battleground_ruins = {
+	country_unity_produces_mult = 0.35
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_battleground_ruins.dds"
+	icon_frame = 5
+}
+gpm_precursor_outpost_ruins = {
+	planet_sensor_range_add = 4
+	planet_researchers_physics_research_produces_add = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_outpost_ruins.dds"
+	icon_frame = 5
+}
+gpm_precursor_harbor_ruins = {
+	planet_farmers_food_produces_add = 1.5
+	district_farming_max = 8
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_harbor_ruins.dds"
+	icon_frame = 5
+}
+gpm_precursor_ruins = {
+	planet_buildings_minerals_cost_mult = -0.30
+	colony_start_num_pops_add = 4
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_ruins.dds"
+	icon_frame = 5
+}
+gpm_precursor_obelisks = {
+	planet_researchers_engineering_research_produces_add = 1.5
+	pop_growth_speed = 0.10
+	pop_assembly_speed = 0.10
+	# job_gpm_precursor_archaeologist_drone_add = 2
+	# megastructure_build_speed_mult = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_obelisks.dds"
+	icon_frame = 5
+}

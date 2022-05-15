@@ -1,0 +1,161 @@
+#message_type = {
+#	key = "CONSTRUCTION_MESSAGE_TYPE"				# Message key, used from code.
+#	icon = "GFX_message_other_construction"			# Sprite to use for gui item "message_icon_button"
+#	icon_frame = 1									# Frame index to use for gui item "message_frame"
+#
+#	name = "MESSAGE_DECLARE_WAR_TITLE"			# Localization key to use for title, if impty it will use "MESSAGE_<key>_TITLE instead.
+#	sound = "advisor_notification_construction_complete"	# Sound to play on message creation
+#
+#	sound_is_advisor = yes							# Depricated and does nothing.
+#	auto_opens = others								# Specifies if the message should be auto opened or not, valid: 'none', 'player', 'others' and 'all' (default: 'player). Some messages as events are ignoring this since thay have their own option.
+#	ping = "ping_notification_green"					# Ping map to use for map visualization.
+#}
+
+# Sounds:
+# advisor_notification_construction_complete
+# army_construction_done
+# advisor_notification_ships_upgraded
+# spaceport_complete_alert
+# advisor_notification_unidentified_object
+# discovery
+# ui_notification_leader_death
+# notification
+# survey_complete
+# diplomatic_notification
+# advisor_notification_research_complete
+# advisor_notification_debris_analysed
+# event_air_raid_siren
+
+
+# Neighbour empire has relic rumour
+message_type = {
+	key = "GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR"
+	icon = "GFX_message_event_neighbour_relic"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+# Valuable World Discovered
+message_type = {
+	key = "GPM_MESSAGE_VALUABLE_WORLD"
+	icon = "GFX_message_event_valuable_world"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_VALUABLE_WORLD_TITLE"
+	sound = "discovery"
+	ping = "ping_notification_green"
+	# auto_opens = none
+}
+
+# Wondrous World Discovered
+message_type = {
+	key = "GPM_MESSAGE_WONDROUS_WORLD"
+	icon = "GFX_message_event_wondrous_world"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_WONDROUS_WORLD_TITLE"
+	sound = "discovery"
+	ping = "ping_notification_green"
+	# auto_opens = none
+}
+
+# Finished Gathering Information About Empire's Relic Operation (target)  
+# "someone knows about our relic (if counter intel is high enough)"
+message_type = {
+	key = "GPM_MESSAGE_GATHER_INTELLIGENCE_RELIC_TARGET_MED"
+	icon = "GFX_message_event_relic_intelligence_orange"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_GATHER_INTELLIGENCE_RELIC_TARGET_MED_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	# auto_opens = none
+}
+
+# Finished Gathering Information About Empire's Relic Operation (target)  
+# "someone knows about our relic (if counter intel is high enough)"
+message_type = {
+	key = "GPM_MESSAGE_GATHER_INTELLIGENCE_RELIC_TARGET_HIGH"
+	icon = "GFX_message_event_relic_intelligence_red"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_GATHER_INTELLIGENCE_RELIC_TARGET_HIGH_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	# auto_opens = none
+}
+
+# An empire is attempting to steal our relic
+message_type = {
+	key = "GPM_MESSAGE_STEAL_RELIC_WARNING"
+	icon = "GFX_message_event_relic_stolen"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_STEAL_RELIC_WARNING_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = player
+}
+
+# EMPIRE has stolen TARGET's relic
+message_type = {
+	key = "GPM_MESSAGE_STEAL_RELIC_PUBLIC_NOTIFICATION"
+	icon = "GFX_message_event_relic_stolen"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_STEAL_RELIC_PUBLIC_NOTIFICATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = player
+}
+
+# Mini megastructure complete: refinery
+message_type = {
+	key = "GPM_MESSAGE_MINIMEGA_REFINERY_COMPLETE"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_MINIMEGA_REFINERY_COMPLETE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = player
+}
+
+# Mini megastructure complete: miningg facility
+message_type = {
+	key = "GPM_MESSAGE_MINIMEGA_MINING_FACILITY_COMPLETE"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_MINIMEGA_MINING_FACILITY_COMPLETE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = player
+}
+
+# Mini megastructure complete: station
+message_type = {
+	key = "GPM_MESSAGE_MINIMEGA_STATION_COMPLETE"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_MINIMEGA_STATION_COMPLETE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = player
+}
+
+# Mini megastructure complete: silo
+message_type = {
+	key = "GPM_MESSAGE_MINIMEGA_SILO_COMPLETE"
+	icon = "GFX_message_other_construction"
+	icon_frame = 1
+
+	name = "GPM_MESSAGE_MINIMEGA_SILO_COMPLETE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = player
+}

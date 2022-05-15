@@ -1,0 +1,200 @@
+@minor_artifact_decision_cost = 2
+@minor_artifact_decision_duration = 3600
+
+
+
+# vanilla overwrite else arcane deciphering is always the worst option.
+artifact_arcane_deciphering = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 50
+		}
+	}
+	
+	ai_weight = {
+		weight = 5000
+		modifier = {
+			factor = 0
+			has_resource = { type = minor_artifacts amount < 60 }
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_arcane_deciphering_no_cooldown"
+			NOT = { has_modifier = arcane_deciphering_cooldown }
+		}
+	}
+
+	effect = {
+		custom_tooltip = gpm_artifact_precursor_deciphering_effectTT
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+					NOT = { has_country_flag = arcana_achievement }
+				}
+				set_country_flag = arcana_achievement
+			}
+			add_modifier = {
+				modifier = "arcane_deciphering_cooldown" 
+				days = 3600
+			}
+			country_event = {
+				id = gpm_artifact.2 days = 3600
+			}
+			random_list = {
+				20 = {
+					owner = { 
+						country_event = { id = gpm_artifact.1 } # precursor techs
+					}
+					modifier = { factor = 10 owner = { is_ai = yes } }
+				}
+				10 = {
+					owner = {
+						country_event = { id = ancrel.10001 } # random repeatable
+					}
+				}
+				10 = {
+					owner = {
+						country_event = { id = ancrel.10002 } # monthly research x3 and arcane insight
+					}
+				}
+				10 = {
+					owner = {
+						country_event = { id = ancrel.10003 } # a random research x3
+					}
+				}
+				1 = {
+					owner = {
+						random_list = {
+							10 = { country_event = { id = ancrel.10004 } }
+							10 = { country_event = { id = ancrel.10005 } }
+							10 = { country_event = { id = ancrel.10006 } }
+							10 = { country_event = { id = ancrel.10007 } }
+							10 = { country_event = { id = ancrel.10008 } }
+							10 = { country_event = { id = ancrel.10009 } }
+						}
+					}
+					modifier = { factor = 10 owner = { is_ai = yes } }
+				}
+			}
+		}
+	}
+}
+
+GPM_unlock_artifact_research_centre = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 10
+		}
+	}
+	
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0
+			has_resource = { type = minor_artifacts amount < 25 }
+		}
+	}
+
+	potential = {
+		has_technology = tech_arcane_deciphering
+		has_ancrel = yes
+		NOT = { has_country_flag = gpm_artifact_research_centre_unlocked }
+	}
+
+	effect = {
+		add_research_option = gpm_tech_arcane_research
+		custom_tooltip = GPM_unlock_artifact_research_centre_TT
+		hidden_effect = {
+			set_country_flag = gpm_artifact_research_centre_unlocked
+			add_tech_progress = {
+				tech = gpm_tech_arcane_research
+				progress = 0.10
+			}
+		}
+	}
+}
+
+# overwrite to add cooldown
+artifact_sell_collector = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 10
+		}
+	}
+	
+	# set weight to 0 cous AI keept using it regardless of modifiers wasting all their minor artifacts..
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = { is_gestalt = no }
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_artifact_sell_collector_cooldown_no_cooldown"
+			NOT = { has_modifier = artifact_sell_collector_cooldown }
+		}
+	}	
+
+	effect = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = "artifact_sell_collector_cooldown" 
+				days = 360
+			}
+		}
+		add_monthly_resource_mult = {
+			resource = energy
+			value = @tier2materialreward
+			min = @tier2materialmin
+			max = @tier3materialmax
+		}
+		custom_tooltip = gpm_artifact_sell_collectorTT
+	}
+}
+
+artifact_celebrate_diversity = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = @minor_artifact_decision_cost
+		}
+	}
+	
+	# set weight to 0 cous AI keept using it regardless of modifiers wasting all their minor artifacts..
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		is_gestalt = no
+		is_xenophobe = no
+	}
+	
+	effect = {
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier1unityreward
+			min = @tier1unitymin
+			max = @tier1unitymax
+		}
+		add_modifier = {
+			modifier = "celebrate_diversity" 
+			days = @minor_artifact_decision_duration 
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = celebrate_diversity }
+	}
+}

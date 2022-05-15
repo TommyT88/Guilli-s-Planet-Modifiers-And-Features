@@ -1,0 +1,604 @@
+gpm_tb_toxic_gas = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 400
+		}
+	}
+	
+	planet_modifier = {
+		district_farming_max = -2
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = {
+				random_list = {
+					50 = { add_resource = { exotic_gases = 5 } }
+					40 = { add_resource = { exotic_gases = 10 } }
+					30 = { add_resource = { exotic_gases = 15 } }
+					20 = { add_resource = { exotic_gases = 20 } }
+					10 = { add_resource = { exotic_gases = 25 } }
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_gpm_tb_toxic_gas" }
+}
+gpm_tb_locust_plagues = {
+	time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 400
+		}
+	}
+	
+	planet_modifier = {
+		district_farming_max = -2
+	}
+
+	use_weights_for_blocker_swap_types = no
+	blocker_swap_types = {
+		d_lichen_fields
+		d_bountiful_plains
+		d_rugged_woods
+		d_green_hills
+		d_forgiving_tundra
+		d_boggy_fens
+		d_nutritious_mudland
+		d_fungal_caves
+		d_lush_jungle
+		d_fertile_lands
+		d_great_river
+		d_black_soil
+		d_marvelous_oasis
+		d_tropical_island
+		d_fungal_forest
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_gpm_tb_locust_plagues" }
+}
+gpm_tb_seasonal_flooding = {
+	time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 400
+		}
+	}
+	
+	planet_modifier = {
+		district_farming_max = -2
+	}
+
+	all_blocker_swap_types = yes
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+	
+	prerequisites = { "tech_gpm_tb_seasonal_flooding" }
+}
+# Xenomorphs
+gpm_tb_xenomorph_blocker = {	
+	time = 360
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+# ringworld blockers
+gpm_tb_ringworld_blocker = {	
+	time = 900
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			# energy = 1000
+			alloys = 1500
+		}
+	}
+
+	planet_modifier = { 
+		planet_max_districts_add = -5
+	}
+
+	all_blocker_swap_types = yes
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_tb_deep_caverns = {
+    time = 360
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 600
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	on_cleared = {
+		if = {
+			limit = { 
+				exists = owner
+				is_lithoid_empire = no
+			}
+			owner = {
+				random_list = {
+					10 = { add_resource = { minerals = 100 } }
+					10 = { add_resource = { minerals = 200 } }
+					10 = { add_resource = { minerals = 300 } }
+					10 = { add_resource = { minerals = 400 } }
+				}
+			}
+		}		
+		if = {
+			limit = { 
+				exists = owner
+				is_lithoid_empire = yes
+			}
+			owner = {
+				random_list = {
+					10 = { add_resource = { minerals = 400 } }
+					10 = { add_resource = { minerals = 500 } }
+					10 = { add_resource = { minerals = 600 } }
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_tb_deprecated_infrastructure = {
+    time = 500
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 600
+			minerals = 600
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	on_cleared = {
+		add_deposit = gpm_d_restored_infrastructure
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_tb_volatile_gasses = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = { add_resource = { exotic_gases = 10 } }
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mine_exotic_gases" }
+}
+
+gpm_tb_volatile_motes = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = { add_resource = { volatile_motes = 10 } }
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mine_volatile_motes" }
+}
+
+gpm_tb_volatile_crystals = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = { add_resource = { rare_crystals = 10 } }
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mine_rare_crystals" }
+}
+gpm_tb_swamp_resources = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 150
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = {
+				add_resource = {
+					minerals = 150
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_tb_ocean_resources = {
+    time = 360
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 200
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = {
+				add_resource = {
+					minerals = 200
+				}
+			}
+		}
+		if = {
+			limit = { 
+				exists = owner
+				space_owner = { has_trait = trait_aquatic }
+			}
+			owner = {
+				add_resource = {
+					food = 200
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_tb_forest_resources = {
+    time = 180
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 100
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = {
+				add_resource = {
+					minerals = 100
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_tb_automated_turrets = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 400
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+		planet_colony_development_speed_mult = -0.05
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = { add_resource = { alloys = 30 } }
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_tb_crystal_growth_resources = {
+    time = 360
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 300
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = {
+				add_resource = {
+					rare_crystals = 25
+					minerals = 100
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mine_rare_crystals" }
+}
+gpm_tb_lethal_overgrowth_resources = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 300
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = {
+				add_resource = {
+					food = 100
+				}
+			}
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_tb_xenomorph_blocker_empty = {	
+	time = 360
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 2000
+		}
+	}
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+
+	# all_blocker_swap_types = no
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_tb_automated_turrets_empty = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 2000
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	# all_blocker_swap_types = no
+
+	on_cleared = {
+		if = {
+			limit = { exists = owner }
+			owner = { add_resource = { minor_artifacts = 20 } }
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}

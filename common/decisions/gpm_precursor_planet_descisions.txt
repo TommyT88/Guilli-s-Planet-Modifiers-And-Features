@@ -1,0 +1,128 @@
+@t1_energy_cost = 100
+@t2_energy_cost = 200
+@t3_energy_cost = 300
+
+@t1_mineral_cost = 100
+@t2_mineral_cost = 200
+@t3_mineral_cost = 300
+
+@t1_alloy_cost = 10
+@t2_alloy_cost = 25
+@t3_alloy_cost = 50
+
+@t1_influence_cost = 10
+@t2_influence_cost = 25
+@t3_influence_cost = 50
+
+# gpm_decision_precursor_shield_on = {
+# 	owned_planets_only = yes
+# 	sound = event_administrative_work
+# 	icon = gpm_decision_precursor_shield_on
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			energy = 1000
+# 			minor_artifacts = 1
+# 		}
+# 	}
+	
+# 	potential = {
+# 		has_modifier = gpm_precursor_planetary_shield
+# 		# NOT = { has_modifier = gpm_precursor_planetary_shield_on }
+# 	}
+	
+# 	allow = {
+# 	}
+	
+# 	effect = {
+# 		gpm_set_precursor_planetary_shields = yes
+# 		add_modifier = { modifier = gpm_precursor_planetary_shield_on days = -1 }
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 10
+# 	}
+# }
+
+# gpm_decision_precursor_shield_off = {
+	# owned_planets_only = yes
+	# sound = event_administrative_work
+	# icon = decision_resources
+	
+	# resources = {
+		# category = decisions
+		# cost = {
+		# }
+	# }
+	
+	# potential = {
+		# has_modifier = gpm_precursor_planetary_shield
+		# has_planet_flag = gpm_precursor_shield_on
+	# }
+	
+	# allow = {
+	# }
+	
+	# effect = {
+		# remove_planet_flag = gpm_precursor_shield_on
+		# remove_modifier = gpm_precursor_planetary_shield_on
+		# solar_system = {
+			# random_system_ambient_object = {
+				# limit = { has_ambient_object_flag = gpm_precursor_shield_flag }
+				# destroy_ambient_object = this
+			# }
+		# }
+		# remove_planet_flag = gpm_precursor_shield_ambient
+	# }
+	
+	# ai_weight = {
+		# weight = 1
+	# }
+# }
+
+gpm_decision_dig_for_precursor_artifacts = {
+	owned_planets_only = no
+	sound = event_administrative_work
+	icon = gpm_decision_dig_for_artifacts
+	
+	resources = {
+		category = decisions
+		cost = {
+			unity = 3000
+		}
+	}
+	
+	potential = {
+		exists = space_owner
+		OR = {
+			has_planet_flag = gpm_is_precursor_world
+			gpm_has_precursor_modifiers = yes
+		}
+		FROM = {
+			OR = {
+				has_event_chain = "vultaum_chain"
+				has_event_chain = "yuht_chain"
+				has_event_chain = "first_league_chain"
+				has_event_chain = "irassian_chain"
+				has_event_chain = "cybrex_chain"
+			}
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = gpm_recent_archeological_expedition }
+	}
+	
+	effect = {
+		save_event_target_as = precursor_planet	# needed for event location trigger
+		hidden_effect = {
+			FROM = { country_event = { id = gpm_survey.9000 } }
+		}
+		add_modifier = { modifier = gpm_recent_archeological_expedition }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

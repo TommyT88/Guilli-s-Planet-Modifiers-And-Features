@@ -1,0 +1,3587 @@
+
+@lootboxInfluenceCost = 25
+@lootboxInfluenceCost_Add = -25
+@arcanetechnology = 100
+
+@tier1researchreward_half = 3
+@tier1researchmin_half = 30
+@tier1researchmax_half = 150
+
+@tier1unityreward_half = 50
+@tier1unitymin_half = 50
+@tier1unitymax_half = 500
+
+namespace = gpm_survey_precursors
+
+# ROOT = ship scope
+# FROM = planet scope
+
+
+#1 spawn precursor dig site
+ship_event = {
+	id = gpm_survey_precursors.1
+	hide_window = yes
+	is_triggered_only = yes
+	location = FROM
+	
+	trigger = {
+		FROM = {
+			gpm_has_precursor_modifiers = yes
+			NOT = { exists = archaeological_site }
+			NOT = { has_planet_flag = gpm_already_rolled_for_prec_dig_site }
+			NOT = { has_planet_flag = gpm_machine_system_moon }
+			NOT = { has_planet_flag = gpm_machine_system_machine_world }
+			NOR = {
+				gpm_is_planet_class_star = yes
+				gpm_is_planet_class_asteroid = yes
+				gpm_is_planet_class_gas_giant = yes
+			}
+		}
+	}
+
+	immediate = {
+		locked_random_list = {
+			15 = {
+				FROM = { set_planet_flag = gpm_already_rolled_for_prec_dig_site }
+				# modifier = { factor = 0 root.owner = { is_ai = yes } }
+			}
+			85 = {
+				FROM = {
+					create_archaeological_site = gpm_precursor_generic_digsite
+					set_planet_flag = gpm_already_rolled_for_prec_dig_site
+				}
+				# set by the "extra fun" game option. Mostly for multiplayer by request
+				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+			}
+		}
+	}
+}
+
+#10 gpm_precursor_remnants discovery
+ship_event = {
+	id = gpm_survey_precursors.10
+	title = "gpm_survey_precursors.10.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.10.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.10.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.10.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_remnants
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_remnants"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_remnants } } }
+			}
+		}
+	}
+
+	immediate = {
+		root = { owner = { set_country_flag = gpm_discover_precursor_remnants } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_remnants = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_remnants = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#20 gpm_precursor_energy_grid discovery
+ship_event = {
+	id = gpm_survey_precursors.20
+	title = "gpm_survey_precursors.20.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.20.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.20.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.20.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_energy_grid
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_energy_grid"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_energy_grid } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_energy_grid } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_remnants = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_remnants = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#30 Precursor_Satellite_Grid discovery
+ship_event = {
+	id = gpm_survey_precursors.30
+	title = "gpm_survey_precursors.30.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.30.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.30.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.30.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_satelite_grid
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_satalite_grid"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_satelite_grid } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_satelite_grid } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_satalite_grid = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_satalite_grid = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#40 gpm_precursor_city discovery
+ship_event = {
+	id = gpm_survey_precursors.40
+	title = "gpm_survey_precursors.40.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.40.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.40.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.40.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_city
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_city"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_city } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_city } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_city = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_city = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#50 gpm_precursor_shipyards discovery
+ship_event = {
+	id = gpm_survey_precursors.50
+	title = "gpm_survey_precursors.50.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.50.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.50.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.50.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_shipyards
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_shipyards"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_shipyards } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_shipyards } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_shipyards = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_shipyards = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#60 gpm_precursor_planetary_gun discovery
+ship_event = {
+	id = gpm_survey_precursors.60
+	title = "gpm_survey_precursors.60.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.60.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.60.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.60.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_planetary_gun
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_planetary_gun"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_planetary_gun } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_planetary_gun } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_planetary_gun = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_planetary_gun = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#70 gpm_precursor_bunker_grid discovery
+ship_event = {
+	id = gpm_survey_precursors.70
+	title = "gpm_survey_precursors.70.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.70.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.70.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.70.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_bunker_grid
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_bunker_grid"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_bunker_grid } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_bunker_grid } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_bunker_grid = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_bunker_grid = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#80 gpm_precursor_mechs discovery
+ship_event = {
+	id = gpm_survey_precursors.80
+	title = "gpm_survey_precursors.80.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.80.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.80.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.80.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_mechs
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_mechs"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_mechs } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_mechs } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_mechs = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_mechs = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#90 gpm_precursor_planetary_shield discovery
+ship_event = {
+	id = gpm_survey_precursors.90
+	title = "gpm_survey_precursors.90.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.90.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.90.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.90.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_planetary_shield
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_planetary_shield"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_planetary_shield } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_planetary_shield } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_planetary_shield = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_planetary_shield = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#100 gpm_precursor_floating_city discovery
+ship_event = {
+	id = gpm_survey_precursors.100
+	title = "gpm_survey_precursors.100.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.100.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.100.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.100.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_floating_city
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_floating_city"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_floating_city } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_floating_city } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_floating_city = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_floating_city = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#110 gpm_precursor_capital_complex discovery
+ship_event = {
+	id = gpm_survey_precursors.110
+	title = "gpm_survey_precursors.110.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.110.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.110.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.110.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_capital_complex
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_capital_complex"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_capital_complex } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_capital_complex } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_capital_complex = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_capital_complex = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#120 gpm_precursor_communication_hub discovery
+ship_event = {
+	id = gpm_survey_precursors.120
+	title = "gpm_survey_precursors.120.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.120.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.120.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.120.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_communication_hub
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_communication_hub"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_communication_hub } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_communication_hub } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_communication_hub = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_communication_hub = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#130 gpm_precursor_singularity_drive discovery
+ship_event = {
+	id = gpm_survey_precursors.130
+	title = "gpm_survey_precursors.130.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.130.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.130.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.130.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_singularity_drive
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_singularity_drive"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_singularity_drive } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_singularity_drive } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_singularity_drive = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_singularity_drive = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#140 gpm_precursor_eternal_fortress discovery
+ship_event = {
+	id = gpm_survey_precursors.140
+	title = "gpm_survey_precursors.140.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.140.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.140.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.140.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_eternal_fortress
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_eternal_fortress"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_eternal_fortress } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_eternal_fortress } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_eternal_fortress = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_eternal_fortress = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#150 gpm_precursor_prison_planet discovery
+ship_event = {
+	id = gpm_survey_precursors.150
+	title = "gpm_survey_precursors.150.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.150.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.150.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.150.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_prison_planet
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_prison_planet"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_prison_planet } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_prison_planet } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_prison_planet = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_prison_planet = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#160 gpm_precursor_mines discovery
+ship_event = {
+	id = gpm_survey_precursors.160
+	title = "gpm_survey_precursors.160.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.160.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.160.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.160.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_mines
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_mines"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_mines } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_mines } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_mines = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_mines = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#170 gpm_precursor_manufactorium discovery
+ship_event = {
+	id = gpm_survey_precursors.170
+	title = "gpm_survey_precursors.170.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.170.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.170.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.170.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_manufactorium
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_manufactorium"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_manufactorium } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_manufactorium } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_manufactorium = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_manufactorium = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#180 gpm_precursor_vaults discovery
+ship_event = {
+	id = gpm_survey_precursors.180
+	title = "gpm_survey_precursors.180.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.180.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.180.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.180.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_vaults
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_vaults"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_vaults	} }	}
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_vaults	} }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_vaults = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_vaults = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#190 gpm_precursor_crashed_spacestation discovery
+ship_event = {
+	id = gpm_survey_precursors.190
+	title = "gpm_survey_precursors.190.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.190.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.190.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.190.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_crashed_spacestation
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_crashed_spacestation"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_crashed_spacestation } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_crashed_spacestation } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_crashed_spacestation = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_crashed_spacestation = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#200 gpm_precursor_battleground_ruins discovery
+ship_event = {
+	id = gpm_survey_precursors.200
+	title = "gpm_survey_precursors.200.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.200.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.200.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.200.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_battleground_ruins
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_battleground_ruins"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_battleground_ruins } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_battleground_ruins } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_battleground_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_battleground_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#210 gpm_precursor_outpost_ruins discovery
+ship_event = {
+	id = gpm_survey_precursors.210
+	title = "gpm_survey_precursors.210.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.210.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.210.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.210.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_outpost_ruins
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_outpost_ruins"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_outpost_ruins } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_outpost_ruins } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_outpost_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_outpost_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#220 gpm_precursor_harbor_ruins discovery
+ship_event = {
+	id = gpm_survey_precursors.220
+	title = "gpm_survey_precursors.220.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.220.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.220.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.220.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_harbor_ruins
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_harbor_ruins"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_harbor_ruins } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_harbor_ruins } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_harbor_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_harbor_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#230 gpm_precursor_ruins discovery
+ship_event = {
+	id = gpm_survey_precursors.230
+	title = "gpm_survey_precursors.230.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.230.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.230.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.230.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_ruins
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_ruins"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_generic_ruins } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_generic_ruins } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_ruins = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}
+#240 gpm_precursor_obelisks discovery
+ship_event = {
+	id = gpm_survey_precursors.240
+	title = "gpm_survey_precursors.240.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		text = "gpm_survey_precursors.240.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_hive_mind } }
+		text = "gpm_survey_precursors.240.hive.desc"
+	}
+	desc = {
+		trigger = {	owner = { has_authority = auth_machine_intelligence } }
+		text = "gpm_survey_precursors.240.mach.desc"
+	}
+	picture = GFX_evt_gpm_precursor_obelisks
+	show_sound = event_scanner
+	location = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			AND = {
+				has_modifier = "gpm_precursor_obelisks"
+				root = { owner = { NOT = { has_country_flag = gpm_discover_precursor_obelisks } } }
+			}
+		}
+	}
+
+	immediate = {	
+		root = { owner = { set_country_flag = gpm_discover_precursor_obelisks } }
+		FROM = {
+			if = {
+				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
+				gpm_colour_planet_name = yes
+				set_planet_flag = "gpm_is_surveyed"
+			}
+			save_event_target_as = precursor_planet
+		}
+		root.leader = {
+			locked_random_list = {
+				5 = {
+					add_trait = leader_trait_gpm_precursor_expert
+					hidden_effect = { owner = { set_country_flag = gpm_precursor_expert_trait_rewarded } }
+					modifier = { factor = 0 has_trait = leader_trait_gpm_precursor_expert }
+				}
+				95 = { }
+			}
+		}
+	}
+
+	# Base Reward Option
+	option = {
+		# trigger = {
+		# 	root.owner = { NOT = { has_authority = 000000000000000000 }
+		# }
+
+		name = FASCINATING
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward_half
+				min = @tier1unitymin_half
+				max = @tier1unitymax_half
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_obelisks = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	# Megacorp Reward Option
+	option = {
+		trigger = {
+			root.owner = { has_authority = auth_corporate }
+		}
+
+		name = gpm_survey.MEGACORPSELL
+		# leader experience
+		# random big experience, double if exploraction policy = slow explore
+		custom_tooltip = gpm_survey_reward_leader_xp
+		root.leader = { gpm_random_experience_big = yes }
+
+		# planet deposit:
+		FROM = {
+			if = {
+				limit = { NOT = { has_deposit = d_trade_value_6 } }
+				custom_tooltip = gpm_survey_reward_deposit
+				add_deposit = d_trade_value_6
+			}
+		}
+		# resources
+		custom_tooltip = gpm_survey_reward_empire
+		custom_tooltip = gpm_survey_reward_energy_megacorp
+		root.owner = {
+			locked_random_list = {
+				11 = { add_resource = { energy = 200 } }
+				22 = { add_resource = { energy = 300 } }
+				33 = { add_resource = { energy = 350 } }
+				44 = { add_resource = { energy = 400 } }
+				33 = { add_resource = { energy = 450 } }
+				22 = { add_resource = { energy = 500 } }
+				11 = { add_resource = { energy = 600 } }
+			}
+		}
+
+		# random reward from reward list
+		root.owner = {
+			gpm_random_reward_precursor_obelisks = yes
+		}
+
+		# aditional reward from exploration policy
+		root.owner = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				custom_tooltip = gpm_survey_reward_bonus
+				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+}

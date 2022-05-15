@@ -1,0 +1,703 @@
+﻿l_japanese:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+# l_russian:
+# l_braz_por:
+# l_simp_chinese:
+# l_korean:
+# l_japanese:
+ 
+ #### In this file localisation for ####
+ # Naming & Tooltip Stuff
+ # Minor Survey Events
+ # Regular Survey Events
+ # Precursor Survey Events
+ #######################################
+ 
+ 
+ 
+ #######################################
+ #### Naming & Tooltip Stuff
+ #######################################
+ # unused #
+ # gpm_survey.INVESTIGATE.PRECURSOR_ARTIFACT:0 "Find §L[Root.Owner.gpm_precursor_empire_name]§! artifacts"
+ 
+ # tooltips
+ gpm_more_discovery_rewards_name:0 "NOT USED BUT REQUIRED"
+ gpm_no_discovery_rewards_name:0 "NOT USED BUT REQUIRED"
+ gpm_reward_manufactorium_ship:0 "Gain possesion of the ancient §Y$gpm_manufactorium_ship$§!.This ship passivly produces some §Hresources§! from it's internal components."
+ gpm_reward_precursor_ship:0 "Gain possesion of the ancient §Y$gpm_precursor_destroyer$§!.This ship passivly produces some §Hresearch§! from it's internal components."
+ gpm_exotic_park_rewarded_tt:0 "Unlocks the ability to build §Y$gpm_building_exotic_park$§!"
+ gpm_core_prison_rewarded_tt:0 "Unlocks the ability to build §Y$gpm_building_core_prison$§!"
+ gpm_historian_trait_rewarded_tooltip:0 "Unlocks the ruler trait §Y$trait_gpm_historian$§!"
+ gpm_fallen_heraldry_trait_rewarded_tooltip:0 "Unlocks the admiral trait §Y$leader_trait_gpm_fallen_heraldry$§!"
+ gpm_battle_standards_trait_rewarded_tooltip:0 "Unlocks the general trait §Y$leader_trait_gpm_battle_standards$§!"
+ gpm_personal_mech_trait_rewarded_tooltip:0 "Unlocks the general trait §Y$leader_trait_gpm_personal_mech$§!"
+ gpm_enigmatic_update_rewarded:0 "§R==ERROR==\n==Unautherised_Access==§!\n§HSpecies_Infection:§! §Y$trait_gpm_enigmatic_update$§!\n§R==ERROR==§!"
+
+ gpm_unlock_one_nano_forge_build_count:0 "We now have the ability to build §G1§! §Y$building_nano_forge$§! on one of our planets."
+ gpm_unlock_one_skydome_build_count:0 "We now have the ability to build §G1§! §Y$building_fe_dome$§! on one of our planets."
+ gpm_unlock_one_dimensional_fabricator_build_count:0 "We now have the ability to build §G1§! §Y$building_dimensional_fabricator$§! on one of our planets."
+ gpm_unlock_one_affluence_center_build_count:0 "We now have the ability to build §G1§! §Y$building_affluence_center$§! on one of our planets."
+ gpm_unlock_one_nourishment_center_build_count:0 "We now have the ability to build §G1§! §Y$building_nourishment_center$§! on one of our planets."
+ gpm_unlock_one_class_4_singularity_build_count:0 "We now have the ability to build §G1§! §Y$building_class_4_singularity$§! on one of our planets."
+
+
+
+ gpm_survey.SPACE:0 "\n--- Additionally: ---\n"
+ 
+ gpm_survey.EXPEDITION:0 "\nOur science specialist will lead a scientific expedition in hopes of making exciting discoveries or uncovering interesting mysteries.\n§EEffect:§!"
+ 
+ gpm_survey_reward_deposit_megacorp:0 "\n§HLicenced Discovery:§!\nSubsidiary corporations have bought licences to exploit §H[From.GetName]§! in the future."
+ gpm_survey_reward_deposit_science:0 "\n§HScientific Discovery:§!\nWe have marked several locations on §H[From.GetName]§! of great scientific importance."
+  
+ gpm_survey_reward_leader_xp:0 "§HScience Ship§! §Y[root.GetName]§!§H:§!"
+ gpm_survey_reward_empire:0 "\n§HEmpire:§!"
+ gpm_survey_reward_bonus:0 "\n§HAway Team Discovery:§!"
+ gpm_survey_reward_new_line:0 "\n§HDiscovery:§!"
+ gpm_survey_reward_deposit:0 "\n§HPlanet§! §Y[from.GetName]§!§H:§!"
+ gpm_survey_reward_energy_megacorp:0 "Valuable Goods Found:"
+ gpm_dig_site_black_market:0 "Black Market Gains:"
+ 
+ gpm_survey.MEGACORPSELL:0 "Sell what we find to the highest bidder!"
+ gpm_survey.UNBELIEVABLE:0 "Unbelievable."
+ gpm_survey.INSPIRING:0 "Truly Inspiring."
+ gpm_survey.BEAUTY:0 "Such beauty.."
+ gpm_survey.HORRIFYING:0 "Truly horrifying."
+ gpm_survey.OMEN:0 "A bad omen."
+ gpm_survey.HORROR:0 "Such horror.."
+ gpm_survey.MASSIVE:0 "They are massive.."
+ gpm_survey.NEAT:0 "Neat!"
+ gpm_survey.LEAVE:0 "We better leave.."
+ gpm_survey.HELL:0 "We better study this from a distance.."
+ gpm_survey.SEEN:0 "This seems oddly familiar.."
+ gpm_survey.INVESTIGATE.1:0 "Take a second look"
+ gpm_survey.INVESTIGATE.1_CORP:0 "Outsource an expedition!"
+ gpm_survey.INVESTIGATE.1_MACH:0 "Additional Observation is required"
+ gpm_survey.INVESTIGATE.2:0 "Study this further"
+ gpm_survey.INVESTIGATE.2_CORP:0 "Hire a science expedition!"
+ gpm_survey.INVESTIGATE.2_MACH:0 "Perform more tests"
+ gpm_survey.INVESTIGATE.3:0 "Perform additional surveys"
+ gpm_survey.INVESTIGATE.3_CORP:0 "Approve overtime pay!"
+ gpm_survey.INVESTIGATE.3_MACH:0 "We need more scans"
+ gpm_survey.INVESTIGATE.4:0 "Further investigation is required"
+ gpm_survey.INVESTIGATE.4_CORP:0 "There's money to be made, invest!"
+ gpm_survey.INVESTIGATE.4_MACH:0 "This has our attention"
+ gpm_survey.INVESTIGATE.5:0 "Do another expedition"
+ gpm_survey.INVESTIGATE.5_CORP:0 "Fund another expedition!"
+ gpm_survey.INVESTIGATE.5_MACH:0 "Send additional drones"
+ gpm_survey.INVESTIGATE.6:0 "We need more information"
+ gpm_survey.INVESTIGATE.6_CORP:0 "Information is power!"
+ gpm_survey.INVESTIGATE.6_MACH:0 "We require additional data"
+ gpm_survey.INVESTIGATE.7:0 "This world looks interesting"
+ gpm_survey.INVESTIGATE.7_CORP:0 "A world worthy of exploitation!"
+ gpm_survey.INVESTIGATE.7_MACH:0 "This world requires additional analysis"
+ gpm_survey.INVESTIGATE.8:0 "Perform a secondary analysis"
+ gpm_survey.INVESTIGATE.8_CORP:0 "I need another report!"
+ gpm_survey.INVESTIGATE.8_MACH:0 "Compute additional data points"
+ gpm_survey.LICENCE_MINING:0 "Sell the mining rights!"
+ gpm_survey.LICENCE_MINING_2:0 "Who says greed is't good?!"
+ gpm_survey.LICENCE_MINING_3:0 "The coffers will be full!"
+ gpm_survey.LICENCE_MINING_4:0 "Auction the planet!"
+ gpm_survey.LICENCE_MINING_5:0 "Sell the drilling rights!"
+ gpm_survey.LICENCE_MINING_6:0 "Auction the mining rights!"
+ gpm_survey.LICENCE_MINING_7:0 "Sell it to one of our own companies!"
+ gpm_survey.LICENCE_MINING_8:0 "Sell the exploitation rights!"
+ gpm_survey.LICENCE_MINING_9:0 "Auction the exploitation rights!"
+ gpm_survey.LICENCE_RESEARCH:0 "Sell the research rights!"
+ gpm_survey.LICENCE_RESEARCH_2:0 "Money Money Money!"
+ gpm_survey.LICENCE_RESEARCH_3:0 "Patent the research and profit!"
+ gpm_survey.LICENCE_RESEARCH_4:0 "Sell the research to the highest bidder!"
+ gpm_survey.LICENCE_RESEARCH_5:0 "Auction the discovery!"
+ gpm_survey.LICENCE_RESEARCH_6:0 "This will fetch a great price!"
+ gpm_survey.LICENCE_RESEARCH_7:0 "Auction the research rights!"
+ gpm_survey.LICENCE_RESEARCH_8:0 "Auction the exploitation rights!"
+ gpm_survey.LICENCE_RESEARCH_9:0 "Outsource the research!"
+ gpm_survey.LICENCE_RESEARCH_10:0 "Sell the exploitation rights!"
+ gpm_survey.RESEARCH_EMPIRE:0 "Knowledge is our priority"
+ gpm_survey.RESEARCH_EMPIRE_2:0 "Understanding is progress"
+ gpm_survey.RESEARCH_EMPIRE_3:0 "Discovery is meaning"
+ gpm_survey.RESEARCH_EMPIRE_4:0 "To learn is to grow"
+ gpm_survey.RESEARCH_EMPIRE_5:0 "Time will reveal it's secrets"
+ gpm_survey.RESEARCH_EMPIRE_6:0 "This research will aid us"
+ gpm_survey.RESEARCH_EMPIRE_7:0 "Science is our priority"
+ gpm_survey.RESEARCH_EMPIRE_8:0 "Understanding is just the start"
+ gpm_survey.RESEARCH_EMPIRE_9:0 "Experimentation requires sacrifice"
+ gpm_survey.RESEARCH_EMPIRE_10:0 "We must know"
+ gpm_survey.FOOD_1:0 "Space Food!"
+ gpm_survey.FOOD_2:0 "An excellent nutrient source"
+ gpm_survey.FOOD_3:0 "We can harvest these"
+ gpm_survey.FOOD_4:0 "They can feed us"
+ 
+ 
+ #######################################
+ #### Minor Survey Events
+ #######################################
+ # Hollow Asteroid gpm_hollow_structure
+ gpm_survey_minor.1.name:0 "Hollowed Asteroid"
+ gpm_survey_minor.1.desc:0 "Our science ship has found a strange asteroid during it's survey of the system §H[From.solar_system.GetName]§!. The asteroid, now named, §H[From.GetName]§! is hollow! Not only just that, it looks like it has a small hole on in it, as if something got in and hollowed it out. Or something got out that used to be inside.."
+ 
+ # Crystallized Asteroid gpm_crystallized_structure
+ gpm_survey_minor.5.name:0 "Crystallized Asteroid"
+ gpm_survey_minor.5.desc:0 "Unusual crystals appear to be protruding from the asteroid named §H[From.GetName]§! in the solar system §H[From.solar_system.GetName]§!. The science ship §H[root.GetName]§! has identified the crystals unusual, but natural forming. It is theorised this asteroid was part of a large moon at some point in it's life. The crystals are the result of intense heat and pressure from when this asteroid was still a deep part in this moon."
+ 
+ # Abandoned Mining Platforms gpm_abandoned_mining_platforms
+ gpm_survey_minor.10.name:0 "Derelict Platforms"
+ gpm_survey_minor.10.desc:0 "Several mining platforms are attached to the large asteroid §H[From.GetName]§! in the §H[From.solar_system.GetName]§! system. Held together by chains and hooks, these platforms have several drill arms that can be remotely operated. A small bay has already been carved out of the asteroid likely to be used as a storage area for newly mined minerals until they can be picked up. It looks like whoever started mining this asteroid left in a hurry, leaving the platforms surprisingly intact."
+ 
+ # gpm_hydrogen_mist
+ gpm_survey_minor.15.name:0 "Flowing Hydrogen Mist"
+ gpm_survey_minor.15.desc:0 "Thick rivers of dense hydrogen gas can be seen flowing over the surface of §H[From.GetName]§!. An unusual combination of low atmospheric pressure and static attraction from the world's surface rocks produce these elegent, slow moving, rivers of dense hydrogen gas."
+ 
+ # gpm_salt_flats
+ gpm_survey_minor.20.name:0 "Expansive Salt Flats"
+ gpm_survey_minor.20.desc:0 "Endlessly stretching plains of salt crystals have been spotted on §H[From.GetName]§!! The science ship §H[root.GetName]§! in the §H[From.solar_system.GetName]§! system speculates the world must have once been an ocean planet. A planet covered almost entirely in salt water. What happened to all this water is a mystery however. There is no natural phenomenon that can explain the disappearance of that much water. Something, or someone, must have remove all of it."
+ 
+ # gpm_relic_lower_levels
+ gpm_survey_minor.25.name:0 "Cities Build On Cities"
+ gpm_survey_minor.25.desc:0 "Part of the massive endless city that is §H[From.GetName]§! has collapsed revealing that the top layer of the city planet is build on an much older city. Instead of demolishing the original city, or converting the many buildings to more modern ones, they build a giant massive platform on top of it along with new cities on that! Preposterous and insane engineering to say the least."
+ 
+ # gpm_water_pockets
+ gpm_survey_minor.30.name:0 "There's life but not as we know it!"
+ gpm_survey_minor.30.desc:0 "§H[root.GetName]§! in the solar system of §H[From.solar_system.GetName]§! reports trace amounts of dung have been found in an underground cavern along with small streams of liquid water. It appears some form of life exists on this otherwise dead planet. What is living here has unspiritually thus far eluded us."
+ gpm_survey_minor.MEGACORPSELL_DUNG:0 "Sell the dung!"
+ 
+ # gpm_geometrical_polar_storm
+ gpm_survey_minor.35.name:0 "Edgy Storm"
+ gpm_survey_minor.35.desc:0 "Our exploration of §H[From.solar_system.GetName]§! system is going slower than anticipated duo to the discovery of a spectacular polar storm on §H[from.GetName]§!. The storm is perfectly shaped like a hexagon. A very unique pressure and wind process has shaped this near endlessly lasting storm into a perfect geometric shape."
+ 
+ # gpm_floating_forest
+ gpm_survey_minor.40.name:0 "Floating Trees"
+ gpm_survey_minor.40.desc:0 "A deep scan of the gas giant §H[From.GetName]§! has revealed a strange new undiscovered phenomenon. Spread out across the gas giants upper gas layer are small pockets of floating flora. Small islands of roots and vegetation, most in tree form. The leaves and branches are huge and extremely light and sway with every gust of wind. The flowers are shaped like giant, semi-transparent elongated balloons. They giant floaty leaves simultaneously absorb the little sunlight they get and the various base chemicals found in the gas giant."
+ 
+ # gpm_viscous_gas_layer
+ gpm_survey_minor.45.name:0 "Gas or Liquid?"
+ gpm_survey_minor.45.desc:0 "The atmosphere of §H[From.GetName]§! is so dense it mimics the flow of a liquid. While extremely improbable for a gas giant to have such dense gas it is not impossible. It is believed a combination of high gravity, and very fast planetary spin and extreme counter motion in the gas giants atmosphere is the reason for this unusual phenomenon."
+ 
+ # gpm_everlasting_tornadoes
+ gpm_survey_minor.50.name:0 "Eternal Tornadoes"
+ gpm_survey_minor.50.desc:0 "Deep within the atmosphere of the gas giant §H[From.GetName]§! in the §H[From.solar_system.GetName]§! system rage extremely longlasting tornadoes. These massive vortexes move in the other direction the planet is spinning at roughly the same speed making them look like they never move. On top of that, the science ship §H[root.GetName]§! has so far never seen a vortex like this disappear. It seems like they last forever too."
+ 
+ # gpm_shrinking_giant
+ gpm_survey_minor.55.name:0 "Tiny Giant"
+ gpm_survey_minor.55.desc:0 "§H[root.GetName]§! has discovered a unusual small gas giant. It appears the violent solar winds from the main star in §H[From.solar_system.GetName]§! are the cause of this strange tiny giant. These powerful solar winds have, over the course of millions of years, stripped most of the outer and middle layer of the gas giant's gaseous atmosphere."
+ 
+ # gpm_aeroplankton_clouds
+ gpm_survey_minor.60.name:0 "Clouds of Life"
+ gpm_survey_minor.60.desc:0 "Large green clouds can be seen from far away when looking at the gas giant §H[From.GetName]§!. It's vibrant green is in star contrast with the white-yellowish cloud layers and the dark brown bands of denser gas. Our science ship §H[root.GetName]§!, currently surveying the system of §H[From.solar_system.GetName]§!, has discovered these green clouds are actually a life form! Tiny plankton like lifeforms float across the upper layers of the gas giant, absorbing both the gasses and sunlight in order to grow, multiply and survive."
+ 
+ # gpm_abandoned_refineries
+ gpm_survey_minor.65.name:0 "Abandoned Cloud Refineries"
+ gpm_survey_minor.65.desc:0 "Deep-Echo scans from the science ship §H[root.GetName]§! have revealed various structures floating in the upper atmosphere of the gas giant §H[From.GetName]§!. These abandoned structures, presumably refineries, seem to be autonomously sucking in gas at the bottom and processing it into raw solid materials. After which it is storing the materials in giant hexacylinder tanks. Most of the tanks on the structures appear to be broken, burst from within, due to the pressure build up of excess of materials. We might be able to recover some of the resources in a few of the refineries."
+ 
+ # gpm_floating_kelp
+ gpm_survey_minor.70.name:0 "Floating Kelp"
+ gpm_survey_minor.70.desc:0 "The gas giant §H[From.GetName]§! seems to have colossal kelp-like flora floating in it's upper atmosphere. These floating kelp are hundreds of meters long and have giant leaves all tightly winded around a central tube filled with plant sap. These tubes seem to easily transport the absorbed gasses from the leaves up to the lengthy translucent roots where sunlight converts it into nutrients."
+ 
+ # gpm_super_heated_atmosphere
+ gpm_survey_minor.75.name:0 "Scorching Gasses"
+ gpm_survey_minor.75.desc:0 "The temperature of §H[From.GetName]§! is several magnitudes higher than what is expected for this type of gas giant. It appears an unusual dense core of an unknown material is producing a lot of heat. The atmosphere is so hot our probes are unable to reach the inner part of the gas giant to study what the core could be made out of. "
+ 
+ # gpm_floatig_behemothaurs
+ gpm_survey_minor.80.name:0 "Ancient Behemothaur"
+ gpm_survey_minor.80.desc:0 "Occasionally surfacing in the upper atmosphere of §H[From.GetName]§! in the §H[From.solar_system.GetName]§! are ancient Behemothaurs. These hyper intelligent creatures are several millions years old and are home to entire ecosystems of symbiotic fauna and flora. Some of these organisms are able to interface directly with their home Behemothaur in special chambers, in order to share information with their host. Certain animals are sometimes given the role of Interpreter, serving as liaisons between visiting sentient life and the Behemothaur itself."
+ 
+ # gpm_magma_ocean
+ gpm_survey_minor.85.name:0 "Magma Ocean"
+ gpm_survey_minor.85.desc:0 "The planet §H[From.GetName]§! deep within the §H[From.solar_system.GetName]§! solar system seems to have a giant ocean of magma. An endless stretch of liquid molten rock. Deep resonance scans indicate part of the core is fully exposed in this area which explains how the magma can stay so hot and liquid."
+ 
+ # gpm_heavy_elements
+ gpm_survey_minor.90.name:0 "Vital Elements"
+ gpm_survey_minor.90.desc:0 "A strange phenomenon deep in the core of §H[From.GetName]§! has resulted in a lot of minerals and chemicals fusing and reacting together to form very rare heavy elements. The constant tectonic activity has pushed most of those to the surface. With proper equipment this could provide a good addition to our mining efforts."
+ 
+ # gpm_rare_metals
+ gpm_survey_minor.95.name:0 "Precious Metals"
+ gpm_survey_minor.95.desc:0 "The solar system §H[From.solar_system.GetName]§! is home to a very tame and stable star. This was not the case billions of years ago, when another star had it's home here. With the death of this other star a lot of rare and precious metals were formed. These metals then started coalesce into small chunks, which then turned into bigger asteroids, until they eventually became a proto-planet. This planet is now called §H[From.GetName]§! and has a substantial amount of precious resources"
+ 
+ # gpm_proto_planet
+ gpm_survey_minor.100.name:0 "Proto Planet"
+ gpm_survey_minor.100.desc:0 "According to §H[root.leader.GetName]§! on the science ship §H[root.GetName]§! the planet of §H[From.GetName]§! is a proto-planet. A very young planet, barely a million years old. Much much younger than the other planets in this system. The exact nature of how this planet came to be so late is unknown and worthy of investigation."
+ 
+ # gpm_flat_terrain
+#  gpm_survey_minor.105.name:0 "Flatter Than Flat"
+#  gpm_survey_minor.105.desc:0 "captain we found cool space shit"
+ # gpm_old_world
+ gpm_survey_minor.110.name:0 "The Old World"
+ gpm_survey_minor.110.desc:0 "Home to buried, decrepit buildings, §H[From.GetName]§! use to be inhabited by a forgotten civilisation. It is unclear how far this civilisation advanced, though it is believed it has never gotten beyond the age of swords and spears. Large broken down stone buildings, half buried palaces and crumbling walls were found, but no sign of steel or any advanced building material. How the life of such a young civilisation was snuffed out is unclear."
+ 
+ # gpm_solidified_core
+ gpm_survey_minor.115.name:0 "Dead Planet"
+ gpm_survey_minor.115.desc:0 "When the science ship §H[root.GetName]§! tried to do a standard tectonic scan on the planet §H[From.GetName]§! as part of it's survey routine, it got no results. Most specifically, it got one result: this planet is dead. The core of this world has completely cooled and solidified into a single ball of dense iron and magnesium. It's theorised that, even with the most advanced of technologies, it would be impossible to make this world liveable by terraforming it."
+ 
+ # gpm_subterranean_eco_system
+ gpm_survey_minor.120.name:0 "Life, Uh.. Finds A Way"
+ gpm_survey_minor.120.desc:0 "A large, mostly sealed, cavern system has been found on §H[From.GetName]§!. A small drone of ours had penetrated the surface of this world to do a mineral and soil study and stumbled upon this cave system by accident. To all our surprise, it is filled with life! A sprawling self-sustaining eco-system has managed to survive here. This world must have supported a much wider variety of life at some point in it's life cycle."
+ 
+ # gpm_plasma_tornadoes
+ gpm_survey_minor.125.name:0 "Plasma Whirls"
+ gpm_survey_minor.125.desc:0 "The unusual active corona from the star §H[From.GetName]§! helps create large vortices whenever the star of the §H[From.solar_system.GetName]§! solar system ejects material through it's solar flares. Large local disruptions in the magnetosphere are causing particles and plasma to then return to the star in swirling patters, creating massive slow rotating plasma vortices."
+ 
+ # gpm_singing_star
+ gpm_survey_minor.130.name:0 "Star Of The Opera"
+ gpm_survey_minor.130.desc:0 "While scanning the star §H[From.GetName]§! our science ship's onboard computers quickly detected repeating patterns in the radio-frequency signals it emanates. An engineer recognised some of these patterns from a piece of music it once observed. This engineer proceeded to convert the patterns using a particular clear instrument and managed to produce quite a unique sound. A full recording of these patterns has produced quite a beautiful sounding piece of music. With the right equipment, you can practically hear this star sing!"
+ 
+ # gpm_precursor_star_filter
+ gpm_survey_minor.135.name:0 "Ancient Disco Star"
+ gpm_survey_minor.135.desc:0 "Millions of colossal transparent panels seem to be floating in hundreds of different orbits around the star §H[From.GetName]§!. Each series of panels in each orbit seem to block certain specific wave-lengths of the light causing the star to emit different coloured light into the §H[From.solar_system.GetName]§! system. A beautiful display and a spectacular feat of engineering. This can only be the work of a hyper-advanced alien civilisation."
+ 
+ # gpm_lingering_pollution
+ gpm_survey_minor.140.name:0 "Toxic Fumes"
+ gpm_survey_minor.140.desc:0 "The atmosphere of §H[From.GetName]§! is heavily polluted with various greenhouse gasses. Large abandoned facilities on the surface of this world appear to have been the cause of this pollution. Whatever civilisation left these structures behind has been really irresponsible with taking care of this world. For shame!"
+ 
+ # gpm_decaying_structures
+ gpm_survey_minor.145.name:0 "Forgotten Ruins"
+ gpm_survey_minor.145.desc:0 "Several ruins have been found on §H[From.GetName]§! in the §H[From.solar_system.GetName]§! system. Most of the ruins are buried and the ones that aren't have eroded so much they are barely recognizable. The ruins depict various pictures and writing, most of which is a record of their culture. There is a common theme in each of the different depictions, "remember us". It seems this culture knew they were fading away. All wanted was to be remembered. It looks like no one has for millions of years."
+ gpm_survey_minor.145.a:0 "We will remember"
+ 
+ # gpm_heavy_metal_coral
+ gpm_survey_minor.150.name:0 "Metal Coral"
+ gpm_survey_minor.150.desc:0 "Large reefs of metallic coral have been observed on §H[From.GetName]§!. A metal rich ocean floor has created a very vibrantly coloured coral that is extremely strong and able to withstand extreme pressure. Because of this, the metal coral can be observed on most of the ocean floor."
+ 
+ # gpm_decomposing_leviathan
+ gpm_survey_minor.155.name:0 "Final Resting Place"
+ gpm_survey_minor.155.desc:0 "A colossal leviathan lays dead. The world named §H[From.GetName]§! its final resting place. This magnificent, and probably dangerous, creature was attacked by what appears to have been a much larger monster. Large chunks were torn from the leviathans side and back. It must have tried to hide close to the atmosphere of this world, ultimately failing in its attempt."
+ 
+ # gpm_giant_mold_blobs
+ gpm_survey_minor.160.name:0 "Colossal Mold"
+ gpm_survey_minor.160.desc:0 "Colossal blobs of mold are seen growing on moist areas of the planet §H[From.GetName]§! in the solar system §H[From.solar_system.GetName]§!. These blobs have a light grey colour and seem to be consuming minerals and metals from the top layer of the soil. Every so often they burst open releasing trillions of spores into the atmosphere."
+ 
+ # gpm_toxic_garbage or gpm_garbage_dump
+ gpm_survey_minor.165.name:0 "Someone Else's Problem"
+ gpm_survey_minor.165.desc:0 "It looks like some uncaring civilisation has used §H[From.GetName]§! as a dumping ground for its toxic waste. Billions of tons of radioactive, caustic and toxic metals and chemicals have been dumped spread across the surface of this world. Most of the dumping must have been done from orbit for it to have been so spread out. Cleaning this up seems like an impossible task."
+ 
+ #######################################
+ #### Regular Survey Events
+ #######################################
+ gpm_survey.REWARDS.HOLYWORLD_TT:0 "After spending an extended time studying the remarkable features of the planet below our science team onboard the §H[Prev.GetName]§! are ready to report their findings.\n\nWhile exploring your scientists have stumbled upon a series of beacons that seem to be the origin of warnings telling people to stay away from this world.\nBefore your scientists had a chance to start examining these beacons more closely, one of your science members fell and knocked over a power relay short-circuiting the entire beacon array. Who knows what that did.."
+ gpm_survey.REWARDS.HIVESHIP_TT:0 "After spending an extended time studying the remarkable features of the planet below our science team onboard the §H[Prev.GetName]§! are ready to report their findings.\n\nDuring an expedition into one of the hives one of the expedition teams stumbled upon a living incubation chamber deep within. Initially they thought about studying it but that idea was short lived when one of the scientists touched the chamber. Several high-pitched roars echoed across the hive as the biological layer covering the incubation chamber ruptured and a thick, purple, ooze started leaking. Shortly afterwards the top of the hive started opening and several small creatures emerged from the chamber and flew straight towards the science team. It appears they are not hostile and seem to show an unselling attachment to the scientists."
+ gpm_survey.communicationTT:0 "We have successfully used the §EPrecursor Communication Hub§! to establish contact with a far away source. A truly momentous occasion!"
+ gpm_survey.randomdepositsTT:0 "Additional §Ydeposits§! have been found on this world."
+ gpm_survey.mechsTT:0 "§LWhile exploring an abandoned mech hangar your science expedition has accidentally activated two fully functioning mechs. They seem to be waiting for commands.§!\nGain two massive §EPrecursor Mechs§!"
+ gpm_survey.holyplanetTT:0 "§YHoly Planet§! modifier removed\n§YDesecrated Holy Planet§! modifier added"
+ gpm_survey.hiveshipTT:0 "Gain three §YBiological Ships§!"
+
+ # discovery reward BIOLOGICAL
+ gpm_survey.REWARD:0 "After spending an extended time studying the remarkable features of the planet below our science team onboard the §H[Prev.GetName]§! are ready to report their findings.\n\nScience officer §H[Prev.GetLeaderName]§! has reported the science team has made several additional discoveries studying this unique planet! This newfound knowledge greatly expands our understanding of the universe.\n"
+
+ # discovery reward MACHINE
+ gpm_survey.REWARD.mach:0 "After spending an extended time studying the remarkable features of the planet below our science matrix onboard the §H[Prev.GetName]§! is ready to report its findings.\n\nScience unit §H[Prev.GetLeaderName]§! has reported the science matrix has made several additional discoveries studying this planet! The additional data gathered here will greatly expand our simulational accuracy of the universe.\n"
+ 
+ # refers to the planet modifier: "Very Hot Core"
+ gpm_survey.2.name:0 "Discovery: Very Hot Planetary Core!"
+ gpm_survey.2.desc:0 "The science ship §H[From.GetName]§! has made a remarkable discovery. Sensors are detecting that the core of this world is incredibly hot. Scientist §H[From.GetLeaderName]§! also notes that the surface temperatures are higher than what one would expect from such world as a result of this. Further study would be required to better understand the geological interactions of planetary tectonics with its core."
+ # hive mind
+ gpm_survey.2.hive.desc:0 "The science ship §H[From.GetName]§! has made a remarkable discovery. Sensors are detecting that the core of this world is incredibly hot. Science drone §H[From.GetLeaderName]§! also notes that the surface temperatures are higher than what one would expect from such world as a result of this. Further study would be required to better understand the geological interactions of planetary tectonics with its core."
+ # machine empire
+ gpm_survey.2.mach.desc:0 "The science vessal §H[From.GetName]§! has made a statistically unlikely discovery. Sensors are detecting that the core of this world is hotter than simulations expect. Science unit §H[From.GetLeaderName]§! also notes that the surface temperatures are higher than what is expected from such a world as a result of this. Further study would be required to better understand the geological interactions of planetary tectonics with its core."
+ 
+ gpm_survey.2.c:0 "Do a more thorough investigation"
+ gpm_survey.2.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_TERRAFORM_1$"
+ 
+ gpm_survey.3.name:0 "Discovery: Better Understanding of the planetary core"
+ gpm_survey.3.desc:0 "Scientist §H[From.GetLeaderName]§! on board of the science vessel §H[From.GetName]§! has made another interesting discovery!\nAnother world with above average core temperature. The tectonic plates on this world seem very stable; this is probably thanks to a few very large volcanoes that regularly release pressure that builds up beneath the plates. Further study will be required to see how the liquid mantle in such hot core planets interacts with the dense metal centre."
+ 	# hive mind
+ gpm_survey.3.hive.desc:0 "Scientist §H[From.GetLeaderName]§! on board of the science vessel §H[From.GetName]§! has made another interesting discovery!\nAnother world with above average core temperature. The tectonic plates on this world seem very stable; this is probably thanks to a few very large volcanoes that regularly release pressure that builds up beneath the plates. Further study will be required to see how the liquid mantle in such hot core planets interacts with the dense metal centre."
+ 	# machine empire
+ gpm_survey.3.mach.desc:0 "Scientist §H[From.GetLeaderName]§! on board of the science vessel §H[From.GetName]§! has made another interesting discovery!\nAnother world with above average core temperature. The tectonic plates on this world seem very stable; this is probably thanks to a few very large volcanoes that regularly release pressure that builds up beneath the plates. Further study will be required to see how the liquid mantle in such hot core planets interacts with the dense metal centre."
+ 
+ gpm_survey.3.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_TERRAFORM_2$"
+ 
+ gpm_survey.4.name:0 "Discovery: Terraforming Dreams"
+ gpm_survey.4.desc:0 "Scientist §H[From.GetLeaderName]§! on board of the science vessel §H[From.GetName]§! has made another interesting discovery!\nEureka! This world has just the right tectonic density to peer through with our scanners. We have fully mapped out the fluid interactions of this world core.\nThe data suggest that around the dense metal core there is not one but two distinct layers of molten rock and minerals. The first, inner, layer seems to behave as normal, flowing against the dense metal core and producing it's magnetic field. The fluid inner layer seems to move at the speeds we expect it to move. The outer molten layer however seems to flow in the opposite direction of the inner layer at a much slower speed.\nThis creates unique convection currents that keep them from over pressuring the tectonic plates and turning this world into a geological unstable nightmare."
+ 	# hive mind
+ gpm_survey.4.hive.desc:0 "Scientist §H[From.GetLeaderName]§! on board of the science vessel §H[From.GetName]§! has made another interesting discovery!\nEureka! This world has just the right tectonic density to peer through with our scanners. We have fully mapped out the fluid interactions of this world core.\nThe data suggest that around the dense metal core there is not one but two distinct layers of molten rock and minerals. The first, inner, layer seems to behave as normal, flowing against the dense metal core and producing it's magnetic field. The fluid inner layer seems to move at the speeds we expect it to move. The outer molten layer however seems to flow in the opposite direction of the inner layer at a much slower speed.\nThis creates unique convection currents that keep them from over pressuring the tectonic plates and turning this world into a geological unstable nightmare."
+ 	# machine empire
+ gpm_survey.4.mach.desc:0 "Scientist §H[From.GetLeaderName]§! on board of the science vessel §H[From.GetName]§! has made another interesting discovery!\nEureka! This world has just the right tectonic density to peer through with our scanners. We have fully mapped out the fluid interactions of this world core.\nThe data suggest that around the dense metal core there is not one but two distinct layers of molten rock and minerals. The first, inner, layer seems to behave as normal, flowing against the dense metal core and producing it's magnetic field. The fluid inner layer seems to move at the speeds we expect it to move. The outer molten layer however seems to flow in the opposite direction of the inner layer at a much slower speed.\nThis creates unique convection currents that keep them from over pressuring the tectonic plates and turning this world into a geological unstable nightmare."
+ 
+ gpm_survey.4.a:0 "Eureka!"
+ gpm_survey.4.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_TERRAFORM_3$"
+ 
+ # gaia world
+ gpm_survey.18.name:0 "Discovery: Gaia World!"
+ gpm_survey.18.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a wonderful discovery on §H[From.GetName]§!\nThis world is an ideal, temperate planet with a nitrogen-oxygen atmosphere and a resilient ecosystem. It might offer optimal conditions at different latitudes thanks to its diverse terrain with biomes that are eminently suitable to most forms of life."
+ 	# hive mind
+ gpm_survey.18.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a wonderful discovery on §H[From.GetName]§!\nThis world is an ideal, temperate planet with a nitrogen-oxygen atmosphere and a resilient ecosystem. It might offer optimal conditions at different latitudes thanks to its diverse terrain with biomes that are eminently suitable to most forms of life."
+ 	# machine empire
+ gpm_survey.18.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a wonderful discovery on §H[From.GetName]§!\nThis world is an ideal, temperate planet with a nitrogen-oxygen atmosphere and a resilient ecosystem. It might offer optimal conditions at different latitudes thanks to its diverse terrain with biomes that are eminently suitable to most forms of life."
+ gpm_survey.18.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_GAIA$"
+ 
+ # holy planet
+ gpm_survey.19.name:0 "Discovery: Strange Planet!"
+ gpm_survey.19.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an unusual discovery on §H[From.GetName]§!\nThis world, while appearing to be quite normal in nature, has some unnatural elements to it. On the surface, spread out in interesting, non-random patterns, are strange stones of various sizes and shapes. They glow as if they are made of gems. Some of the crew wonder if these stones mean anything. Some wonder if they are a warning to stay away."
+ 	# hive mind
+ gpm_survey.19.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an unusual discovery on §H[From.GetName]§!\nThis world, while appearing to be quite normal in nature, has some unnatural elements to it. On the surface, spread out in interesting, non-random patterns, are strange stones of various sizes and shapes. They glow as if they are made of gems. Some of the crew wonder if these stones mean anything. Some wonder if they are a warning to stay away."
+ 	# machine empire
+ gpm_survey.19.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an unusual discovery on §H[From.GetName]§!\nThis world, while appearing to be quite normal in nature, has some unnatural elements to it. On the surface, spread out in interesting, non-random patterns, are strange stones of various sizes and shapes. They glow as if they are made of gems. Some of the crew wonder if these stones mean anything. Some wonder if they are a warning to stay away."
+ gpm_survey.19.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_HOLY_PLANET$"
+ 
+ # floating islands
+ gpm_survey.20.name:0 "Discovery: Floating Islands!"
+ gpm_survey.20.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an remarkable discovery on §H[From.GetName]§!\nWhile fascinating to look at, these islands are so unusual they defy conventional logic. It appears some mineral or substance on this world is causing large rocks to float through the air, forming floating islands that hover dozens to sometimes hundreds of feet off the ground."
+ 	# hive mind
+ gpm_survey.20.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an remarkable discovery on §H[From.GetName]§!\nWhile fascinating to look at, these islands are so unusual they defy conventional logic. It appears some mineral or substance on this world is causing large rocks to float through the air, forming floating islands that hover dozens to sometimes hundreds of feet off the ground."
+ 	# machine empire
+ gpm_survey.20.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an remarkable discovery on §H[From.GetName]§!\nWhile fascinating to look at, these islands are so unusual they defy conventional logic. It appears some mineral or substance on this world is causing large rocks to float through the air, forming floating islands that hover dozens to sometimes hundreds of feet off the ground."
+ gpm_survey.20.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_FLOATING_ISLANDS$"
+ 
+ # ruined battlefield
+ gpm_survey.21.name:0 "Discovery: Battlefield Ruins!"
+ gpm_survey.21.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a terrifying discovery on §H[From.GetName]§!\nThe ship's sensors are detecting various scarred terrains and ruins across this world. It seems a massive planetary-scale battle was waged here. The surface is permanently damaged by weapons which our civilization has deemed too destructive to ever use in planetary combat, and there are massive craters where it can only be assumed cities once stood. Among various ruins, weapons, and the rusted wrecks of aircraft, tanks, and mechs, our scientists have found untold millions of corpses. Billions must have lost their lives here upon this ravaged world."
+ 	# hive mind
+ gpm_survey.21.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a terrifying discovery on §H[From.GetName]§!\nThe ship's sensors are detecting various scarred terrains and ruins across this world. It seems a massive planetary-scale battle was waged here. The surface is permanently damaged by weapons which our civilization has deemed too destructive to ever use in planetary combat, and there are massive craters where it can only be assumed cities once stood. Among various ruins, weapons, and the rusted wrecks of aircraft, tanks, and mechs, our scientists have found untold millions of corpses. Billions must have lost their lives here upon this ravaged world."
+ 	# machine empire
+ gpm_survey.21.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a terrifying discovery on §H[From.GetName]§!\nThe ship's sensors are detecting various scarred terrains and ruins across this world. It seems a massive planetary-scale battle was waged here. The surface is permanently damaged by weapons which our civilization has deemed too destructive to ever use in planetary combat, and there are massive craters where it can only be assumed cities once stood. Among various ruins, weapons, and the rusted wrecks of aircraft, tanks, and mechs, our scientists have found untold millions of corpses. Billions must have lost their lives here upon this ravaged world."
+ gpm_survey.21.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_BATTLEFIELD$"
+ 
+ # spaceship graveyard
+ gpm_survey.22.name:0 "Discovery: Spaceship Graveyard!"
+ gpm_survey.22.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a fascinating discovery on §H[From.GetName]§!\nThe ship's scanners are detecting massive quantities of various alloys and chemicals spread across the surface of this world. Wrecks of ships can be seen from orbit and are truly huge in scale. A titanic battle must have once raged overhead, and the world is now littered with the rusted skeletons of craft that once ruled the skies. "
+ 	# hive mind
+ gpm_survey.22.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a fascinating discovery on §H[From.GetName]§!\nThe ship's scanners are detecting massive quantities of various alloys and chemicals spread across the surface of this world. Wrecks of ships can be seen from orbit and are truly huge in scale. A titanic battle must have once raged overhead, and the world is now littered with the rusted skeletons of craft that once ruled the skies. "
+ 	# machine empire
+ gpm_survey.22.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a fascinating discovery on §H[From.GetName]§!\nThe ship's scanners are detecting massive quantities of various alloys and chemicals spread across the surface of this world. Wrecks of ships can be seen from orbit and are truly huge in scale. A titanic battle must have once raged overhead, and the world is now littered with the rusted skeletons of craft that once ruled the skies. "
+ gpm_survey.22.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_SHIP_GRAVEYARD$"
+ 
+ # artificial water
+ gpm_survey.23.name:0 "Discovery: Artificial Water!"
+ gpm_survey.23.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nInitially, this world looked quite normal. On closer inspection, our scientists noticed that this world's water is not actually water comprised of oxygen and hydrogen! Instead, it is a weird nanite composite that behaves just like liquid water. \nOur scientists performed some tests and it seems that the only purpose of these nanites is to behave and act just like water in every way. For this reason, our scientists think it should be safe to drink."
+ 	# hive mind
+ gpm_survey.23.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nInitially, this world looked quite normal. On closer inspection, our scientists noticed that this world's water is not actually water comprised of oxygen and hydrogen! Instead, it is a weird nanite composite that behaves just like liquid water. \nOur scientists performed some tests and it seems that the only purpose of these nanites is to behave and act just like water in every way. For this reason, our scientists think it should be safe to drink."
+ 	# machine empire
+ gpm_survey.23.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nInitially, this world looked quite normal. On closer inspection, our scientists noticed that this world's water is not actually water comprised of oxygen and hydrogen! Instead, it is a weird nanite composite that behaves just like liquid water. \nOur scientists performed some tests and it seems that the only purpose of these nanites is to behave and act just like water in every way. For this reason, our scientists think it should be safe to drink."
+ gpm_survey.23.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_ARTIFICIAL_WATER$"
+ 
+ # android pleasure palace
+ gpm_survey.24.name:0 "Discovery: Android Pleasure Palace!"
+ gpm_survey.24.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a worrying discovery on §H[From.GetName]§!\nA strange structure seems to show signs of activity. Our scientists began an investigation and what they found was so out of this world they had to investigate further. This building is operated by various android machines, so lifelike the scientists at first thought they were sentient. They seem to maintain this place and offer various services to not only visitors, but each other as well. Some are inserting strange-looking devices that glow and shake into parts of another droid. Others are hanging a droid upside down from a wall and hitting it with a rope-like device. It is not clear who built this, but it sounds like it could be a fun place."
+ 	# hive mind
+ gpm_survey.24.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a worrying discovery on §H[From.GetName]§!\nA strange structure seems to show signs of activity. Our scientists began an investigation and what they found was so out of this world they had to investigate further. This building is operated by various android machines, so lifelike the scientists at first thought they were sentient. They seem to maintain this place and offer various services to not only visitors, but each other as well. Some are inserting strange-looking devices that glow and shake into parts of another droid. Others are hanging a droid upside down from a wall and hitting it with a rope-like device. It is not clear who built this, but it sounds like it could be a fun place."
+ 	# machine empire
+ gpm_survey.24.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a worrying discovery on §H[From.GetName]§!\nA strange structure seems to show signs of activity. Our scientists began an investigation and what they found was so out of this world they had to investigate further. This building is operated by various android machines, so lifelike the scientists at first thought they were sentient. They seem to maintain this place and offer various services to not only visitors, but each other as well. Some are inserting strange-looking devices that glow and shake into parts of another droid. Others are hanging a droid upside down from a wall and hitting it with a rope-like device. It is not clear who built this, but it sounds like it could be a fun place."
+ gpm_survey.24.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_PLEASURE_PALACE$"
+ 
+ # ancient temple
+ gpm_survey.25.name:0 "Discovery: Ancient Temple!"
+ gpm_survey.25.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a strange discovery on §H[From.GetName]§!\nAn ancient temple dedicated to an age long gone has been found on this world. Writings on the murals indicate it was a temple shared by many different alien species. The images on the walls depict the aliens as creatures with unusual powers moving objects with their mind, wielding glowing sticks, and participating in a lot of meditating. They appear to have been of a culture that embraced diversity and desired to protect everyone."
+ 	# hive mind
+ gpm_survey.25.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a strange discovery on §H[From.GetName]§!\nAn ancient temple dedicated to an age long gone has been found on this world. Writings on the murals indicate it was a temple shared by many different alien species. The images on the walls depict the aliens as creatures with unusual powers moving objects with their mind, wielding glowing sticks, and participating in a lot of meditating. They appear to have been of a culture that embraced diversity and desired to protect everyone."
+ 	# machine empire
+ gpm_survey.25.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a strange discovery on §H[From.GetName]§!\nAn ancient temple dedicated to an age long gone has been found on this world. Writings on the murals indicate it was a temple shared by many different alien species. The images on the walls depict the aliens as creatures with unusual powers moving objects with their mind, wielding glowing sticks, and participating in a lot of meditating. They appear to have been of a culture that embraced diversity and desired to protect everyone."
+ gpm_survey.25.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_ANCIENT_TEMPLE$" 
+ 
+ # crystal moon palace
+ gpm_survey.26.name:0 "Discovery: Crystal Palace!"
+ gpm_survey.26.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a strange discovery on §H[From.GetName]§!\nOur scientists discovered a beautiful palace made entirely out of crystal on the surface of this moon. The interior is full of strange runes and cryptic devices. It is not clear who built it, or what purpose it serves, but our scientists hope to learn more about it. "
+ 	# hive mind
+ gpm_survey.26.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a strange discovery on §H[From.GetName]§!\nOur scientists discovered a beautiful palace made entirely out of crystal on the surface of this moon. The interior is full of strange runes and cryptic devices. It is not clear who built it, or what purpose it serves, but our scientists hope to learn more about it. "
+ 	# machine empire
+ gpm_survey.26.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a strange discovery on §H[From.GetName]§!\nOur scientists discovered a beautiful palace made entirely out of crystal on the surface of this moon. The interior is full of strange runes and cryptic devices. It is not clear who built it, or what purpose it serves, but our scientists hope to learn more about it. "
+ gpm_survey.26.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_CRYSTAL_MOON_PALACE$"
+ 
+ # plasmoid life
+ gpm_survey.27.name:0 "Discovery: Plasmoid Life!"
+ gpm_survey.27.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a substantial discovery on §H[From.GetName]§!\nSomehow, life comprised entirely of plasma has managed to evolve on this star. Unfortunately, the ship cannot venture closer for a better scan as the sun's thermal radiation is proving too much for the ship's onboard sensors.\n"
+ 	# hive mind
+ gpm_survey.27.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a substantial discovery on §H[From.GetName]§!\nSomehow, life comprised entirely of plasma has managed to evolve on this star. Unfortunately, the ship cannot venture closer for a better scan as the sun's thermal radiation is proving too much for the ship's onboard sensors.\n"
+ 	# machine empire
+ gpm_survey.27.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a substantial discovery on §H[From.GetName]§!\nSomehow, life comprised entirely of plasma has managed to evolve on this star. Unfortunately, the ship cannot venture closer for a better scan as the sun's thermal radiation is proving too much for the ship's onboard sensors.\n"
+ 
+ gpm_survey.27.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_PLASMOID_LIFE$"
+ 
+ # temple of the ancient one
+ gpm_survey.28.name:0 "Discovery: Strange Temple!"
+ gpm_survey.28.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an Alluring discovery on §H[From.GetName]§!\nThe indescribable beauty of the mysterious, ruined rock-hewn temple would be breathtaking to any who were to spend time looking at it...if it was not for its dangerous allure. Stories are scribbled on the walls, warning of previous explorers who spent days in darkness as they wandered through the temple. In the end, they were no longer able to resist the powerful visions and auditory hallucinations, nor the madness-inspired impulse to enter the temple's inner sanctum. One of our scientists sent a brief report before the ship lost contact with them - the inner sanctum appears impossibly illuminated by what seems to be a flickering altar flame."
+ 	# hive mind
+ gpm_survey.28.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an Alluring discovery on §H[From.GetName]§!\nThe indescribable beauty of the mysterious, ruined rock-hewn temple would be breathtaking to any who were to spend time looking at it...if it was not for its dangerous allure. Stories are scribbled on the walls, warning of previous explorers who spent days in darkness as they wandered through the temple. In the end, they were no longer able to resist the powerful visions and auditory hallucinations, nor the madness-inspired impulse to enter the temple's inner sanctum. One of our scientists sent a brief report before the ship lost contact with them - the inner sanctum appears impossibly illuminated by what seems to be a flickering altar flame."
+ 	# machine empire
+ gpm_survey.28.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an Alluring discovery on §H[From.GetName]§!\nThe indescribable beauty of the mysterious, ruined rock-hewn temple would be breathtaking to any who were to spend time looking at it...if it was not for its dangerous allure. Stories are scribbled on the walls, warning of previous explorers who spent days in darkness as they wandered through the temple. In the end, they were no longer able to resist the powerful visions and auditory hallucinations, nor the madness-inspired impulse to enter the temple's inner sanctum. One of our scientists sent a brief report before the ship lost contact with them - the inner sanctum appears impossibly illuminated by what seems to be a flickering altar flame."
+ gpm_survey.28.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_TEMPLE_ANCIENT_ONE$"
+ 
+ # proto forest
+ gpm_survey.29.name:0 "Discovery: Proto Forests!"
+ gpm_survey.29.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a fascinating discovery on §H[From.GetName]§!\nLarge patches of relatively short sylvan flora have been discovered on this world. These proto-forests seem to be the earliest signs of forest-like life out there. We will add a detailed analysis to our databanks about this world for future study. "
+ 	# hive mind
+ gpm_survey.29.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a fascinating discovery on §H[From.GetName]§!\nLarge patches of relatively short sylvan flora have been discovered on this world. These proto-forests seem to be the earliest signs of forest-like life out there. We will add a detailed analysis to our databanks about this world for future study. "
+ 	# machine empire
+ gpm_survey.29.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a fascinating discovery on §H[From.GetName]§!\nLarge patches of relatively short sylvan flora have been discovered on this world. These proto-forests seem to be the earliest signs of forest-like life out there. We will add a detailed analysis to our databanks about this world for future study. "
+ gpm_survey.29.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_PROTO_FOREST$"
+ 
+ # hive world
+ gpm_survey.30.name:0 "Discovery: Hive Ruins!"
+ gpm_survey.30.desc:0 "Our scientist §H[Root.GetLeaderName]§!, on board the science vessel §H[Root.GetName]§!, has made a terrifying discovery on §H[From.GetName]§!\nAfter extensive analysis, we have discovered that the fossilized remnants of this world seem to have thousands of unusual synapse nodes spread upon them. These appear to serve as massive bio-factories that churn out the endless swarms of bioforms. These "Hive worlds," as we have named them, seem to have been living creatures in their own right, incorporating millions of bioengineered organisms. Each Hive world was a perfect biological factory capable of creating trillions of small and large organisms through gene replication and splicing that allowed them to adapt on every new world and environment they encountered. We can only hope these types of creatures no longer exist." 
+ 	# hive mind
+ gpm_survey.30.hive.desc:0 "Our scientist §H[Root.GetLeaderName]§!, on board the science vessel §H[Root.GetName]§!, has made a terrifying discovery on §H[From.GetName]§!\nAfter extensive analysis, we have discovered that the fossilized remnants of this world seem to have thousands of unusual synapse nodes spread upon them. These appear to serve as massive bio-factories that churn out the endless swarms of bioforms. These "Hive worlds," as we have named them, seem to have been living creatures in their own right, incorporating millions of bioengineered organisms. Each Hive world was a perfect biological factory capable of creating trillions of small and large organisms through gene replication and splicing that allowed them to adapt on every new world and environment they encountered. We can only hope these types of creatures no longer exist." 
+ 	# machine empire
+ gpm_survey.30.mach.desc:0 "Our scientist §H[Root.GetLeaderName]§!, on board the science vessel §H[Root.GetName]§!, has made a terrifying discovery on §H[From.GetName]§!\nAfter extensive analysis, we have discovered that the fossilized remnants of this world seem to have thousands of unusual synapse nodes spread upon them. These appear to serve as massive bio-factories that churn out the endless swarms of bioforms. These "Hive worlds," as we have named them, seem to have been living creatures in their own right, incorporating millions of bioengineered organisms. Each Hive world was a perfect biological factory capable of creating trillions of small and large organisms through gene replication and splicing that allowed them to adapt on every new world and environment they encountered. We can only hope these types of creatures no longer exist." 
+ gpm_survey.30.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_HIVE_WORLD$"
+ gpm_hive_ship_survey_reward:0 "Gain a §YBiological§! ship."
+
+ # arachnophobia
+ gpm_survey.31.name:0 "Discovery: Hell!"
+ gpm_survey.31.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a horrific discovery on §H[From.GetName]§!\nOf all the insufferable, undeniable, terrible, infested hellholes of planets, this world, so overrun by packs of giant arachnids, is the worst. THE WORST!\nIt seems like madness to even think of setting foot on this world. The officers heard nighttime hissing coming from the treetops and caverns, not to mention the endless thumping sounds as these giant arachnid creatures walked all over the ship. The scientists didn't care if the arachnids broke something; they ordered an immediate departure. This world should never be visited again. "
+ 	# hive mind
+ gpm_survey.31.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a horrific discovery on §H[From.GetName]§!\nOf all the insufferable, undeniable, terrible, infested hellholes of planets, this world, so overrun by packs of giant arachnids, is the worst. THE WORST!\nIt seems like madness to even think of setting foot on this world. The officers heard nighttime hissing coming from the treetops and caverns, not to mention the endless thumping sounds as these giant arachnid creatures walked all over the ship. The scientists didn't care if the arachnids broke something; they ordered an immediate departure. This world should never be visited again. "
+ 	# machine empire
+ gpm_survey.31.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a horrific discovery on §H[From.GetName]§!\nOf all the insufferable, undeniable, terrible, infested hellholes of planets, this world, so overrun by packs of giant arachnids, is the worst. THE WORST!\nIt seems like madness to even think of setting foot on this world. The officers heard nighttime hissing coming from the treetops and caverns, not to mention the endless thumping sounds as these giant arachnid creatures walked all over the ship. The scientists didn't care if the arachnids broke something; they ordered an immediate departure. This world should never be visited again. "
+ gpm_survey.31.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_ARACHNAPHOBIA$"
+
+ # giant worm
+ gpm_survey.32.name:0 "Discovery: Giant Worm!"
+ gpm_survey.32.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a large discovery on §H[From.GetName]§!\nThis world is occupied by colossal worms that live beneath the sand. They are easily attracted to rhythmic vibrations on the surface, and they will breach in pursuit of the origin of such vibrations almost immediately. This seems to be an effort to defend their territory, of which they seem to be highly protective. Thus, to see a worm, and live to tell about it, might be a rarity in itself. The sandworms are extremely territorial; as soon as two worms sense each other's presence, they let out chuffing roars of challenge, bellowing melange-scented exhaust from their cavernous throats."
+ 	# hive mind
+ gpm_survey.32.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a large discovery on §H[From.GetName]§!\nThis world is occupied by colossal worms that live beneath the sand. They are easily attracted to rhythmic vibrations on the surface, and they will breach in pursuit of the origin of such vibrations almost immediately. This seems to be an effort to defend their territory, of which they seem to be highly protective. Thus, to see a worm, and live to tell about it, might be a rarity in itself. The sandworms are extremely territorial; as soon as two worms sense each other's presence, they let out chuffing roars of challenge, bellowing melange-scented exhaust from their cavernous throats."
+ 	# machine empire
+ gpm_survey.32.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a large discovery on §H[From.GetName]§!\nThis world is occupied by colossal worms that live beneath the sand. They are easily attracted to rhythmic vibrations on the surface, and they will breach in pursuit of the origin of such vibrations almost immediately. This seems to be an effort to defend their territory, of which they seem to be highly protective. Thus, to see a worm, and live to tell about it, might be a rarity in itself. The sandworms are extremely territorial; as soon as two worms sense each other's presence, they let out chuffing roars of challenge, bellowing melange-scented exhaust from their cavernous throats."
+ gpm_survey.32.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_GIANT_WORM$"
+ 
+ # artificial core
+ gpm_survey.33.name:0 "Discovery: Artificial Core!"
+ gpm_survey.33.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an unbelievable discovery on §H[From.GetName]§!\nThis world should have died long ago after the core froze and the magnetic field died, but a massive installation in the planet's core, made by a particularly powerful ancient empire, somehow keeps the core spinning and the magnetic field active."
+ 	# hive mind
+ gpm_survey.33.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an unbelievable discovery on §H[From.GetName]§!\nThis world should have died long ago after the core froze and the magnetic field died, but a massive installation in the planet's core, made by a particularly powerful ancient empire, somehow keeps the core spinning and the magnetic field active."
+ 	# machine empire
+ gpm_survey.33.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an unbelievable discovery on §H[From.GetName]§!\nThis world should have died long ago after the core froze and the magnetic field died, but a massive installation in the planet's core, made by a particularly powerful ancient empire, somehow keeps the core spinning and the magnetic field active."
+ gpm_survey.33.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_ARTIFICIAL_CORE$"
+ 
+ # surface of bones
+ gpm_survey.34.name:0 "Discovery: Surface of Bones!"
+ gpm_survey.34.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a troublesome discovery on §H[From.GetName]§!\nBones, skulls, and corpses lay scattered as far as the eye can see. The entire surface of this world is covered in jumbled bones. A horrific sight. Whatever battle happened here, it occurred a long time ago. And it was brutal."
+ 	# hive mind
+ gpm_survey.34.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a troublesome discovery on §H[From.GetName]§!\nBones, skulls, and corpses lay scattered as far as the eye can see. The entire surface of this world is covered in jumbled bones. A horrific sight. Whatever battle happened here, it occurred a long time ago. And it was brutal."
+ 	# machine empire
+ gpm_survey.34.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made a troublesome discovery on §H[From.GetName]§!\nBones, skulls, and corpses lay scattered as far as the eye can see. The entire surface of this world is covered in jumbled bones. A horrific sight. Whatever battle happened here, it occurred a long time ago. And it was brutal."
+ gpm_survey.34.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_SURFACE_OF_BONES$"
+ 
+ # strange alien eggs
+ gpm_survey.35.name:0 "Discovery: Strange Eggs!"
+ gpm_survey.35.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nSeveral patches of mucus can be found on this world. Much like swamps, these are covered by a faint mist of vapour. Our scientists refused to wade through these thick, sticky, slimy areas, but some of our officers reported seeing strange eggs sticking out of the muck. One scientist noted in the ship's log that they would not be returning to investigate. That job falls to someone else."
+ 	# hive mind
+ gpm_survey.35.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nSeveral patches of mucus can be found on this world. Much like swamps, these are covered by a faint mist of vapour. Our scientists refused to wade through these thick, sticky, slimy areas, but some of our officers reported seeing strange eggs sticking out of the muck. One scientist noted in the ship's log that they would not be returning to investigate. That job falls to someone else."
+ 	# machine empire
+ gpm_survey.35.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nSeveral patches of mucus can be found on this world. Much like swamps, these are covered by a faint mist of vapour. Our scientists refused to wade through these thick, sticky, slimy areas, but some of our officers reported seeing strange eggs sticking out of the muck. One scientist noted in the ship's log that they would not be returning to investigate. That job falls to someone else."
+ gpm_survey.35.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_ALIEN_EGGS$"
+ gpm_r_alien_eggs_recoveryTT:0 "Barely surviving an ambush, our science team has managed to recovery a large live specimen believed to be the broodmother of the strange eggs.\n"
+ gpm_r_alien_eggs_fleetTT:0 "Gain a small xenomorph army fleet"
+ 
+ # mushroom forest
+ gpm_survey.36.name:0 "Discovery: Mushroom Forest!"
+ gpm_survey.36.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nMassive mushrooms dot the landscape of this world. These mushrooms forests are very strange looking and produce mists of spores every so often. They are quite soft so they should be very easy to clear. One of our officers joked and wondered what they would taste like."
+ 	# hive mind
+ gpm_survey.36.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nMassive mushrooms dot the landscape of this world. These mushrooms forests are very strange looking and produce mists of spores every so often. They are quite soft so they should be very easy to clear. One of our officers joked and wondered what they would taste like."
+ 	# machine empire
+ gpm_survey.36.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the science vessel §H[Root.GetName]§! has made an interesting discovery on §H[From.GetName]§!\nMassive mushrooms dot the landscape of this world. These mushrooms forests are very strange looking and produce mists of spores every so often. They are quite soft so they should be very easy to clear. One of our officers joked and wondered what they would taste like."
+ gpm_survey.36.spec_project:0 "§YIssue Special Project:§!\n    $GPM_DISCOVERY_MUSHROOM_FORESTS$"
+
+ # Planet Wonder
+ gpm_survey.700.name:0 "Discovery: Wondrous Planet!"
+ gpm_survey.700.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the §H[Root.GetName]§! has made a discovery!\nA very unusual feature was discovered on this world during one of the first scientific expeditions to the surface. Our scientists were awestruck by the significance it represents. Of all the theories, all the discoveries, all the worlds explored in the past, no one has seen something quite like this before. A true wonder of the galaxy..."
+ 	# hive mind
+ gpm_survey.700.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the §H[Root.GetName]§! has made a discovery!\nA very unique feature was discovered on this world during one of the first scientific expeditions to the surface. Our scientists were awestruck by the significance it represents. Of all the theories, all the discoveries, all the worlds explored in the past, no one has seen something quite like this before. A true wonder of the galaxy..."
+ 	# machine empire
+ gpm_survey.700.mach.desc:0 "Scientist §H[Root.GetLeaderName]§! on board the §H[Root.GetName]§! has made a discovery!\nA very unique feature was discovered on this world during one of the first scientific expeditions to the surface. Our scientists were awestruck by the significance it represents. Of all the theories, all the discoveries, all the worlds explored in the past, no one has seen something quite like this before. A true wonder of the galaxy..."
+ 
+ #######################################
+ #### Precursor Survey Events
+ ####################################### 
+ # dig site spawn event
+ gpm_precursor.9000.desc:0 "Our science vessal's prospectors are indicating that they have found something relating to an ancient Precursor civilization on §H[precursor_planet.GetName]§! and would like to further study these findings. This is a great oppertunity to search for ancient precursor artifacts."
+ gpm_precursor.9000.a:0 "A new archeological special project is availible on §H[precursor_planet.GetName]§!."
+ gpm_unknown_precursor_empire:0 "§LPrecursor§!"
+  
+ # gpm_precursor_remnants discovery
+ gpm_survey_precursors.10.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Remnants!"
+ gpm_survey_precursors.10.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThere is still a significant amount of infrastructure left on this world, built by the ancient, interstellar §L[this.owner.gpm_precursor_empire_name]§! empire."
+ 	# hive mind
+ gpm_survey_precursors.10.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThere is still a significant amount of infrastructure left on this world, built by the ancient, interstellar §L[this.owner.gpm_precursor_empire_name]§! empire."
+ 	# machine empire
+ gpm_survey_precursors.10.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThere is still a significant amount of infrastructure left on this world, built by the ancient, interstellar §L[this.owner.gpm_precursor_empire_name]§! empire."
+ 
+ # gpm_precursor_energy_grid discovery
+ gpm_survey_precursors.20.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Energy Grid!"
+ gpm_survey_precursors.20.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable! While they were already visible from space, these vast energy grids proved quite the mystery. Surrounding the massive energy networks are the ruins of crumbling buildings, broken roads, and not much else. It is clear a vast and powerful civilisation once resided on this world and used these energy networks not only to transfer power from one city to another, but also everything else, from street lamps to individual rooms. Due to this, the structures are visible even from orbit.\n\nOur scientists are unable to determine what materials comprise these grids, despite thorough investigation. It seems to be a combination of a translucent material core surrounded by a liquid layer of crystals with some form of super-resistant outer layer made from unknown components.\n\nInitial studies lead us to believe that these vast networks are powered by giant thermal plants deep within the planet's crust. Unfortunately, the vast thermal vents these networks eventually lead to are too deep and too hot to currently explore. Our scientists are certain that these networks should be compatible with our own energy systems with some minor modifications. "
+ 	# hive mind
+ gpm_survey_precursors.20.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable! While they were already visible from space, these vast energy grids proved quite the mystery. Surrounding the massive energy networks are the ruins of crumbling buildings, broken roads, and not much else. It is clear a vast and powerful civilisation once resided on this world and used these energy networks not only to transfer power from one city to another, but also everything else, from street lamps to individual rooms. Due to this, the structures are visible even from orbit.\n\nOur Science Drones are unable to determine what materials comprise these grids, despite thorough investigation. It seems to be a combination of a translucent material core surrounded by a liquid layer of crystals with some form of super-resistant outer layer made from unknown components.\n\nInitial studies lead us to believe that these vast networks are powered by giant thermal plants deep within the planet's crust. Unfortunately, the vast thermal vents these networks eventually lead to are too deep and too hot to currently explore. We are certain that these networks should be compatible with our own energy systems with some minor modifications."
+ 	# machine empire
+ gpm_survey_precursors.20.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable! While they were already visible from space, these vast energy grids proved quite the mystery. Surrounding the massive energy networks are the ruins of crumbling buildings, broken roads, and not much else. It is clear a vast and powerful civilisation once resided on this world and used these energy networks not only to transfer power from one city to another, but also everything else, from street lamps to individual rooms. Due to this, the structures are visible even from orbit.\n\nOur Science Officer was unable to determine what materials comprise these grids, despite thorough investigation. It seems to be a combination of a translucent material core surrounded by a liquid layer of crystals with some form of super-resistant outer layer made from unknown components.\n\nInitial studies lead us to believe that these vast networks are powered by giant thermal plants deep within the planet's crust. Unfortunately, the vast thermal vents these networks eventually lead to are too deep and too hot to currently explore. Our VI's are certain that these networks should be compatible with our own energy systems with some minor modifications."
+ 
+ # Precursor_Satellite_Grid discovery
+ gpm_survey_precursors.30.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Satellite Grid!"
+ gpm_survey_precursors.30.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThis world has hundreds of small §L[this.owner.gpm_precursor_empire_name]§! satellites and arrays in very efficient orbits. It is not clear if they were used for communication or monitoring, but our scientists agree a lot could be learned from studying them. "
+ 	# hive mind
+ gpm_survey_precursors.30.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThis world has hundreds of small §L[this.owner.gpm_precursor_empire_name]§! satellites and arrays in very efficient orbits. It is not clear if they were used for communication or monitoring, but our Science Drones agree a lot could be learned from studying them. "
+ 	# machine empire
+ gpm_survey_precursors.30.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThis world has hundreds of small §L[this.owner.gpm_precursor_empire_name]§! satellites and arrays in very efficient orbits. It is not clear if they were used for communication or monitoring, but our Science Officer agrees a lot could be learned from studying them."
+ 
+ # gpm_precursor_city discovery
+ gpm_survey_precursors.40.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! City!"
+ gpm_survey_precursors.40.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAncient city ruins belonging to the interstellar §L[this.owner.gpm_precursor_empire_name]§! empire can be found on this world. Most look strangely intact, despite our scientists' insistence that this city should have been ground to dust by time and weather long ago. Though the ruins remain, the people who lived here seem to have completely vanished. "
+ 	# hive mind
+ gpm_survey_precursors.40.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAncient city ruins belonging to the interstellar §L[this.owner.gpm_precursor_empire_name]§! empire can be found on this world. Most look strangely intact, despite our Science Drones' insistence that this city should have been ground to dust by time and weather long ago. Though the ruins remain, the people who lived here seem to have completely vanished. "
+ 	# machine empire
+ gpm_survey_precursors.40.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAncient city ruins belonging to the interstellar §L[this.owner.gpm_precursor_empire_name]§! empire can be found on this world. Most look strangely intact, despite our Science Officer's insistence that this city should have been ground to dust by time and weather long ago. Though the ruins remain, the organics who lived here seem to have completely vanished. "
+ 
+ # gpm_precursor_shipyards discovery
+ gpm_survey_precursors.50.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Shipyards!"
+ gpm_survey_precursors.50.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nSurrounding this world are several ancient and powerful §L[this.owner.gpm_precursor_empire_name]§! shipyards. Some appear to be quite damaged while others look like they might still be functional with some minor repairs. While no ships or resources can be detected onboard these stations, our engineering team thinks they might in fact be fully autonomous systems! There are areas designed specifically for offloading vast quantities of materials. Deep within each of these vast space stations rests a powerful graviton power core, a technology not fully understood but which appears to be the source of both the space stations' power and their ability to stay in orbit for so long. Perhaps, one day, we can claim it for our own."
+ 	# hive mind
+ gpm_survey_precursors.50.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nSurrounding this world are several ancient and powerful §L[this.owner.gpm_precursor_empire_name]§! shipyards. Some appear to be quite damaged while others look like they might still be functional with some minor repairs. While no ships or resources can be detected onboard these stations, our engineering team thinks they might in fact be fully autonomous systems! There are areas designed specifically for offloading vast quantities of materials. Deep within each of these vast space stations rests a powerful graviton power core, a technology not fully understood but which appears to be the source of both the space stations' power and their ability to stay in orbit for so long. Perhaps, one day, we can claim it for our own."
+ 	# machine empire
+ gpm_survey_precursors.50.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nSurrounding this world are several ancient and powerful §L[this.owner.gpm_precursor_empire_name]§! shipyards. Some appear to be quite damaged while others look like they might still be functional with some minor repairs. While no ships or resources can be detected onboard these stations, our engineering team thinks they might in fact be fully autonomous systems! There are areas designed specifically for offloading vast quantities of materials. Deep within each of these vast space stations rests a powerful graviton power core, a technology not fully understood but which appears to be the source of both the space stations' power and their ability to stay in orbit for so long. Perhaps, one day, we can claim it for our own."
+ 
+ # gpm_precursor_planetary_gun discovery
+ gpm_survey_precursors.60.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Planetary Guns!"
+ gpm_survey_precursors.60.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThere are massive weapons set up all over this world. They are capable of firing into orbit and were built millions of years ago. Our weapons technicians recommend further study of these technologies. In the meantime, taking control of them could provide ample defense of these spacelanes.\n\nFurther study by the Survey Team has revealed that this system was used strategically by its former occupants as both a defensive holdout as well as a launching point for patrol sorties. What they were defending against and looking for remains a mystery. "
+ 	# hive mind
+ gpm_survey_precursors.60.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThere are massive weapons set up all over this world. They are capable of firing into orbit and were built millions of years ago. Our weapons technicians recommend further study of these technologies. In the meantime, taking control of them could provide ample defense of these spacelanes.\n\nFurther study by the Survey Drone has revealed that this system was used strategically by its former occupants as both a defensive holdout as well as a launching point for patrol sorties. What they were defending against and looking for remains a mystery. "
+ 	# machine empire
+ gpm_survey_precursors.60.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThere are massive weapons set up all over this world. They are capable of firing into orbit and were built millions of years ago. Our weapons technicians recommend further study of these technologies. In the meantime, taking control of them could provide ample defense of these spacelanes.\n\nFurther study by the Survey VI has revealed that this system was used strategically by its former occupants as both a defensive holdout as well as a launching point for patrol sorties. What they were defending against and looking for remains a mystery. "
+ 
+ # gpm_precursor_bunker_grid discovery
+ gpm_survey_precursors.70.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Bunker Grid!"
+ gpm_survey_precursors.70.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA massive planet-wide bunker system is all that is left from this ancient precursor civilization. Our scientists surmise that they are the remnants of a galaxy-spanning conflict. Suffice to say, the inhabitants here were not the victors. "
+ 	# hive mind
+ gpm_survey_precursors.70.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA massive planet-wide bunker system is all that is left from this ancient precursor civilization. Our Science Drones surmise that they are the remnants of a galaxy-spanning conflict. Suffice to say, the inhabitants here were not the victors. "
+ 	# machine empire
+ gpm_survey_precursors.70.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA massive planet-wide bunker system is all that is left from this ancient precursor civilization. Our Science Officers surmise that they are the remnants of a galaxy-spanning conflict. Suffice to say, the inhabitants here were not the victors. "
+
+ # gpm_precursor_mechs discovery
+ gpm_survey_precursors.80.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Mechs!"
+ gpm_survey_precursors.80.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nLegions of abandoned titanic mechs stand across the surface of this world, waiting to be reactivated. Their thick armor and colossal bodies suggest they may have been meant primarily for defense. Despite their advanced age, there are relatively few signs of degradation or loss of function.\n\nAfter careful examination, our scientists have posited that these mechs may have been destined for some type of bunker world. Given their propensity for defensive function, they might have made a significant impact on any battle taking place there. "
+ 	# hive mind
+ gpm_survey_precursors.80.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nLegions of abandoned titanic mechs stand across the surface of this world, waiting to be reactivated. Their thick armor and colossal bodies suggest they may have been meant primarily for defense. Despite their advanced age, there are relatively few signs of degradation or loss of function.\n\nAfter careful examination, our Science Drones have posited that these mechs may have been destined for some type of bunker world. Given their propensity for defensive function, they might have made a significant impact on any battle taking place there. "
+ 	# machine empire
+ gpm_survey_precursors.80.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nLegions of abandoned titanic mechs stand across the surface of this world, waiting to be reactivated. Their thick armor and colossal bodies suggest they may have been meant primarily for defense. Despite their advanced age, there are relatively few signs of degradation or loss of function.\n\nAfter careful examination, our Science Officers have posited that these mechs may have been destined for some type of bunker world. Given their propensity for defensive function, they might have made a significant impact on any battle taking place there. "
+
+ # gpm_precursor_planetary_shield discovery
+ gpm_survey_precursors.90.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Planetary Shields!"
+ gpm_survey_precursors.90.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAn impressive array of shield systems is spread around this world. Though reactivating it will require large stores of energy, it could provide a haven for all. "
+ 	# hive mind
+ gpm_survey_precursors.90.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAn impressive array of shield systems is spread around this world. Though reactivating it will require large stores of energy, it could provide a haven for all. "
+ 	# machine empire
+ gpm_survey_precursors.90.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAn impressive array of shield systems is spread around this world. Though reactivating it will require large stores of energy, it could provide a haven for all. "
+
+ # gpm_precursor_floating_city discovery
+ gpm_survey_precursors.100.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Floating City!"
+ gpm_survey_precursors.100.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nSeveral self-sustaining cities float around this world. Despite some slight damage, they appear to function well. Scattered across the surface are the remains of other buildings and infrastructure. Whether they were precursors to the floating cities above or former ones themselves, we may never know. "
+ 	# hive mind
+ gpm_survey_precursors.100.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nSeveral self-sustaining cities float around this world. Despite some slight damage, they appear to function well. Scattered across the surface are the remains of other buildings and infrastructure. Whether they were precursors to the floating cities above or former ones themselves, we may never know. "
+ 	# machine empire
+ gpm_survey_precursors.100.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nSeveral self-sustaining cities float around this world. Despite some slight damage, they appear to function well. Scattered across the surface are the remains of other buildings and infrastructure. Whether they were precursors to the floating cities above or former ones themselves, we may never know. "
+
+ # gpm_precursor_capital_complex discovery
+ gpm_survey_precursors.110.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Capital Complex!"
+ gpm_survey_precursors.110.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThe ruins of an advanced §L[this.owner.gpm_precursor_empire_name]§! metropolis drape across this world. Dominating all around it, an enormous and once elaborate structure lies within, leading us to believe this was a capital to a long-lost culture, perhaps even an empire. "
+ 	# hive mind
+ gpm_survey_precursors.110.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThe ruins of an advanced §L[this.owner.gpm_precursor_empire_name]§! metropolis drape across this world. Dominating all around it, an enormous and once elaborate structure lies within, leading us to believe this was a capital to a long-lost culture, perhaps even an empire. "
+ 	# machine empire
+ gpm_survey_precursors.110.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThe ruins of an advanced §L[this.owner.gpm_precursor_empire_name]§! metropolis drape across this world. Dominating all around it, an enormous and once elaborate structure lies within, leading us to believe this was a capital to a long-lost culture, perhaps even an empire. "
+
+ # gpm_precursor_communication_hub discovery
+ gpm_survey_precursors.120.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Communication Hub!"
+ gpm_survey_precursors.120.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA single large spire is all that stands out among the ruins of this world. This tower still emits a strong beam of light that runs from the centre up into orbit. Remains of a satellite grid lead us to believe they were formerly linked. Mostly functional, we may be able to use it for communication or monitoring. "
+ 	# hive mind
+ gpm_survey_precursors.120.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA single large spire is all that stands out among the ruins of this world. This tower still emits a strong beam of light that runs from the centre up into orbit. Remains of a satellite grid lead us to believe they were formerly linked. Mostly functional, we may be able to use it for communication or monitoring. "
+ 	# machine empire
+ gpm_survey_precursors.120.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA single large spire is all that stands out among the ruins of this world. This tower still emits a strong beam of light that runs from the centre up into orbit. Remains of a satellite grid lead us to believe they were formerly linked. Mostly functional, we may be able to use it for communication or monitoring. "
+
+ # gpm_precursor_singularity_drive discovery
+ gpm_survey_precursors.130.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Singularity Drive!"
+ gpm_survey_precursors.130.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThis world appears to have underground regions resembling laboratories and experimentation facilities, leading to a central room containing an enormous singularity drive that resonates with energy. Automatons are scattered about the room, frequently taking each other apart and repairing one another with no discernible pattern.\n\nThe Science Team has succeeded in setting up an observation relay to monitor the singularity drive's effects and capabilities. Despite this, no indication of what this drive was previously used for was found. Until this can be discovered, they recommend caution when considering construction of such technology. "
+ 	# hive mind
+ gpm_survey_precursors.130.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThis world appears to have underground regions resembling laboratories and experimentation facilities, leading to a central room containing an enormous singularity drive that resonates with energy. Automatons are scattered about the room, frequently taking each other apart and repairing one another with no discernible pattern.\n\nThe Science Drone has succeeded in setting up an observation relay to monitor the singularity drive's effects and capabilities. Despite this, no indication of what this drive was previously used for was found. Until this can be discovered, they recommend caution when considering construction of such technology. "
+ 	# machine empire
+ gpm_survey_precursors.130.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThis world appears to have underground regions resembling laboratories and experimentation facilities, leading to a central room containing an enormous singularity drive that resonates with energy. Automatons are scattered about the room, frequently taking each other apart and repairing one another with no discernible pattern.\n\nThe Science Officer has succeeded in setting up an observation relay to monitor the singularity drive's effects and capabilities. Despite this, no indication of what this drive was previously used for was found. Until this can be discovered, they recommend caution when considering construction of such technology. "
+ 
+ # gpm_precursor_eternal_fortress discovery
+ gpm_survey_precursors.140.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Eternal Fortress"
+ gpm_survey_precursors.140.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found a lone fortress on this world. It appears long abandoned yet in remarkable prestine conditions. The area surrounding the fortress displays signs of heavy damage, yet the fortress seems untouched."
+ 	# hive mind
+ gpm_survey_precursors.140.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found a lone fortress on this world. It appears long abandoned yet in remarkable prestine conditions. The area surrounding the fortress displays signs of heavy damage, yet the fortress seems untouched."
+ 	# machine empire
+ gpm_survey_precursors.140.mach.desc:0 "The flight of science drones lead by sciencedrone §H[Root.GetLeaderName]§! from the exploration vessel §H[Root.GetName]§! has found a lone fortress on this world. It appears long abandoned yet in remarkable prestine conditions. The area surrounding the fortress displays signs of heavy damage, yet the fortress seems untouched."
+
+ # gpm_precursor_prison_planet discovery
+ gpm_survey_precursors.150.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Prison Planet"
+ gpm_survey_precursors.150.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThousands upon thousands of barracks-like buildings litter the surface of this world, while beneath lie the remains of a vast planet-wide prison system. Built within the very bedrock are cells and containment fields, their purpose clear.\n\nWith some effort, our engineers will be able to utilize these facilities for our own purposes. In the meantime, our Archaeology Team has begun a search for any information on the types of things formerly imprisoned here. The only thing worse than having to keep something locked in is having to keep them locked out. "
+ 	# hive mind
+ gpm_survey_precursors.150.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThousands upon thousands of barracks-like buildings litter the surface of this world, while beneath lie the remains of a vast planet-wide prison system. Built within the very bedrock are cells and containment fields, their purpose clear.\n\nWith some effort, our drones will be able to utilize these facilities for our own purposes. In the meantime, our Specialist Drone has begun a search for any information on the types of things formerly imprisoned here. The only thing worse than having to keep something locked in is having to keep them locked out. "
+ 	# machine empire
+ gpm_survey_precursors.150.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThousands upon thousands of barracks-like buildings litter the surface of this world, while beneath lie the remains of a vast planet-wide prison system. Built within the very bedrock are cells and containment fields, their purpose clear.\n\nWith some effort, our Architect VI will be able to utilize these facilities for our own purposes. In the meantime, our Archaeology VI has begun a search for any information on the types of things formerly imprisoned here. The only thing worse than having to keep something locked in is having to keep them locked out. "
+ 
+ # gpm_precursor_mines discovery
+ gpm_survey_precursors.160.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Mines"
+ gpm_survey_precursors.160.desc:0 "Scientist §H[Root.GetLeaderName]§! and his team aboard the science ship §H[Root.GetName]§! have stumbeled upon a massive network of ancient mines. These mines appear to have been fully automated and still show some signs of activity. These superstructures and their tunnels can only have been build by a much more advanced empire."
+ 	# hive mind
+ gpm_survey_precursors.160.hive.desc:0 "Scientist §H[Root.GetLeaderName]§! and his team aboard the science ship §H[Root.GetName]§! have stumbeled upon a massive network of ancient mines. These mines appear to have been fully automated and still show some signs of activity. These superstructures and their tunnels can only have been build by a much more advanced empire."
+ 	# machine empire
+ gpm_survey_precursors.160.mach.desc:0 "Sciencedrone §H[Root.GetLeaderName]§! aboard the exploration ship §H[Root.GetName]§! has observed a massive network of ancient mines. These mines appear to have been fully automated and still show some signs of activity. These superstructures and their tunnels can only have been build by a much more advanced empire."
+
+ # gpm_precursor_manufactorium discovery
+ gpm_survey_precursors.170.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Manufactorium"
+ gpm_survey_precursors.170.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nDeep scans of the planet's surface revealed a network of tunnels and vaults buried beneath. Access points on the surface eventually lead to a massive industrial complex surrounding the planet's core. Timeworn technology of an advanced civilization once allowed the complex to drain the core's energy to feed its massive production line.\n\nWhile the Engineering Team couldn't decipher what the facility was originally intended to manufacture, they have determined that it can be adapted to our needs. Thanks to the mechanical genius of the compound's creators, a catastrophic destabilization of the planet's core seems unlikely. Our engineers do note that stranger things have happened, however. "
+ 	# hive mind
+ gpm_survey_precursors.170.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nDeep scans of the planet's surface revealed a network of tunnels and vaults buried beneath. Access points on the surface eventually lead to a massive industrial complex surrounding the planet's core. Timeworn technology of an advanced civilization once allowed the complex to drain the core's energy to feed its massive production line.\n\nWhile the Engineering Drone couldn't decipher what the facility was originally intended to manufacture, it has determined that it can be adapted to our needs. Thanks to the mechanical genius of the compound's creators, a catastrophic destabilization of the planet's core seems unlikely. Our drone does note that stranger things have happened, however. "
+ 	# machine empire
+ gpm_survey_precursors.170.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nDeep scans of the planet's surface revealed a network of tunnels and vaults buried beneath. Access points on the surface eventually lead to a massive industrial complex surrounding the planet's core. Timeworn technology of an advanced civilization once allowed the complex to drain the core's energy to feed its massive production line.\n\nWhile the Architect VI couldn't decipher what the facility was originally intended to manufacture, it has determined that it can be adapted to our needs. Thanks to the mechanical genius of the compound's creators, a catastrophic destabilization of the planet's core seems unlikely. Our VI does note that stranger things have happened, however. "
+
+ # gpm_precursor_vaults discovery
+ gpm_survey_precursors.180.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Vaults"
+ gpm_survey_precursors.180.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nScattered across the mountains of this world are what appear to be small outposts. Further investigation reveals various hidden entrances into large storage facilities. Most lie empty, either looted in its ancient past or never filled to begin with. A few, however, contain untold treasures, both archaeological and technological in nature.\n\nThe Survey Team reports that the outposts outside the vaults are still functional and can be converted to our technology with minimal effort. Given further study, the vaults may yield additional scientific progress or secrets. "
+ 	# hive mind
+ gpm_survey_precursors.180.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nScattered across the mountains of this world are what appear to be small outposts. Further investigation reveals various hidden entrances into large storage facilities. Most lie empty, either looted in its ancient past or never filled to begin with. A few, however, contain untold treasures, both archaeological and technological in nature.\n\nThe Survey Drone reports that the outposts outside the vaults are still functional and can be converted to our technology with minimal effort. Given further study, the vaults may yield additional scientific progress or secrets. "
+ 	# machine empire
+ gpm_survey_precursors.180.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nScattered across the mountains of this world are what appear to be small outposts. Further investigation reveals various hidden entrances into large storage facilities. Most lie empty, either looted in its ancient past or never filled to begin with. A few, however, contain untold treasures, both archaeological and technological in nature.\n\nThe Analysis VI reports that the outposts outside the vaults are still functional and can be converted to our technology with minimal effort. Given further study, the vaults may yield additional scientific progress or secrets. "
+
+ # gpm_precursor_crashed_spacestation discovery
+ gpm_survey_precursors.190.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Crashed Orbital"
+ gpm_survey_precursors.190.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA colossal crater marks this otherwise unremarkable planet, containing the remains of an archaic space station. Due to the extensive damage, not much can be gleaned from examining the wreckage, though our scientists suspect it belonged to a time-lost empire.\n\nStudying the effects of the impact could garner additional understanding of velocity, physics, and the durability of massive constructs and planets. Engineers have set up a basic outpost for continued experiments. "
+ 	# hive mind
+ gpm_survey_precursors.190.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA colossal crater marks this otherwise unremarkable planet, containing the remains of an archaic space station. Due to the extensive damage, not much can be gleaned from examining the wreckage, though our scientists suspect it belonged to a time-lost empire.\n\nStudying the effects of the impact could garner additional understanding of velocity, physics, and the durability of massive constructs and planets. Drones have set up a basic outpost for continued experiments. "
+ 	# machine empire
+ gpm_survey_precursors.190.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nA colossal crater marks this otherwise unremarkable planet, containing the remains of an archaic space station. Due to the extensive damage, not much can be gleaned from examining the wreckage, though our scientists suspect it belonged to a time-lost empire.\n\nStudying the effects of the impact could garner additional understanding of velocity, physics, and the durability of massive constructs and planets. The Architect VI has set up a basic outpost for continued experiments. "
+
+ # gpm_precursor_battleground_ruins discovery
+ gpm_survey_precursors.200.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Battleground"
+ gpm_survey_precursors.200.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAfter planetfall, researchers and surveyors began thoroughly combing the surface.\n\nScorch marks, half-wrecked buildings, and the detritus of a thousand weapons are all that remains of this world. After careful examination, our surveyors have determined that a massive battle proved the end of whatever civilization once inhabited this place.\n\nWith this collection of millenia-old weaponry and battle data, our weapons specialists can continue to innovate exponentially upon our existing armaments. "
+ 	# hive mind
+ gpm_survey_precursors.200.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAfter planetfall, our drones began thoroughly combing the surface.\n\nScorch marks, half-wrecked buildings, and the detritus of a thousand weapons are all that remains of this world. After careful examination, our drones have determined that a massive battle proved the end of whatever civilization once inhabited this place.\n\nWith this collection of millenia-old weaponry and battle data, we can continue to innovate exponentially upon our existing armaments. "
+ 	# machine empire
+ gpm_survey_precursors.200.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nAfter planetfall, Vanguard Units began thoroughly combing the surface.\n\nScorch marks, half-wrecked buildings, and the detritus of a thousand weapons are all that remains of this world. After careful examination, our Analysis VI has determined that a massive battle proved the end of whatever civilization once inhabited this place.\n\nWith this collection of millenia-old weaponry and battle data, our Ordnance VI can continue to innovate exponentially upon our existing armaments. "
+
+ # gpm_precursor_outpost_ruins discovery
+ gpm_survey_precursors.210.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Outpost"
+ gpm_survey_precursors.210.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nUpon landing, we have discovered that this world is untouched, save for a lone structure lying in the heart of a forest. The building is still powered and contains only a few rooms. Strange markings not too dissimilar from runes skitter across the display surfaces. It is possible that this could be the remnants of an archaic language. Or the ramblings of a long-dead madman.\n\nLinguistics Experts assert that continued research of this runic language could lead to significant advances in understanding of alien social constructs and idioms. Even if those aliens vanished eons ago. "
+ 	# hive mind
+ gpm_survey_precursors.210.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nUpon landing, we have discovered that this world is untouched, save for a lone structure lying in the heart of a forest. The building is still powered and contains only a few rooms. Strange markings not too dissimilar from runes skitter across the display surfaces. It is possible that this could be the remnants of an archaic language. Or the ramblings of a long-dead madman.\n\nOur linguistics drone asserts that continued research of this runic language could lead to significant advances in understanding of alien social constructs and idioms. Even if those aliens vanished eons ago. "
+ 	# machine empire
+ gpm_survey_precursors.210.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nUpon landing, we have discovered that this world is untouched, save for a lone structure lying in the heart of a forest. The building is still powered and contains only a few rooms. Strange markings not too dissimilar from runes skitter across the display surfaces. It is possible that this could be the remnants of an archaic language. Or the ramblings of a long-dead madman.\n\nOur Syntax VI asserts that continued research of this runic language could lead to significant advances in understanding of alien social constructs and idioms. Even if those aliens vanished eons ago. "
+
+ # gpm_precursor_harbor_ruins discovery
+ gpm_survey_precursors.220.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Harbor Ruins"
+ gpm_survey_precursors.220.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nOn the many coasts of this world lie the remains of a sophisticated harbor system. Whomever occupied this planet eons ago utilized the bounty of this world to its maximum potential through efficient fishing and processing facilities.\n\nThe utilization of ‘farming' worlds is not uncommon in the galaxy, but our researchers are unconvinced that this is the limit of the harbor's use. Unfortunately, it may take hundreds of years before we can ascertain what further secrets it may hold. "
+ 	# hive mind
+ gpm_survey_precursors.220.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nOn the many coasts of this world lie the remains of a sophisticated harbor system. Whomever occupied this planet eons ago utilized the bounty of this world to its maximum potential through efficient fishing and processing facilities.\n\nThe utilization of ‘farming' worlds is not uncommon in the galaxy, but we are unconvinced that this is the limit of the harbor's use. Unfortunately, it may take hundreds of years before we can ascertain what further secrets it may hold. "
+ 	# machine empire
+ gpm_survey_precursors.220.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nOn the many coasts of this world lie the remains of a sophisticated harbor system. Whomever occupied this planet eons ago utilized the bounty of this world to its maximum potential through efficient fishing and processing facilities.\n\nThe utilization of ‘farming' worlds is not uncommon in the galaxy, but the Aquatics VI is unconvinced that this is the limit of the harbor's use. Unfortunately, it may take hundreds of years before we can ascertain what further secrets it may hold. "
+
+ # gpm_precursor_ruins discovery
+ gpm_survey_precursors.230.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Ruins"
+ gpm_survey_precursors.230.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nDesolate heat from above and infernal sands below make this world a living hell. Despite that, several abandoned and odd edifices mark the surface. Surveyors report a possible religious nature to these structures and posit that the inhabitants may have been originators of bio-technology.\n\nAfter examining one of these ‘temples' further, the Survey Team discovered evidence of evolution taking place. Whether it is the temple itself or its former inhabitants undergoing this process is not known at this time. "
+ 	# hive mind
+ gpm_survey_precursors.230.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nDesolate heat from above and infernal sands below make this world a living hell. Despite that, several abandoned and odd edifices mark the surface. Surveyors report a possible religious nature to these structures and posit that the inhabitants may have been originators of bio-technology.\n\nAfter examining one of these ‘temples' further, we have discovered evidence of evolution taking place. Whether it is the temple itself or its former inhabitants undergoing this process is not known at this time. "
+ 	# machine empire
+ gpm_survey_precursors.230.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nDesolate heat from above and infernal sands below make this world a living hell. Despite that, several abandoned and odd edifices mark the surface. Surveyors report a possible religious nature to these structures and posit that the inhabitants may have been originators of bio-technology.\n\nAfter examining one of these ‘temples' further, the Analysis VI discovered evidence of evolution taking place. Whether it is the temple itself or its former inhabitants undergoing this process is not known at this time. "
+
+ # gpm_precursor_obelisks discovery
+ gpm_survey_precursors.240.name:0 "Discovery: §L[this.owner.gpm_precursor_empire_name]§! Obelisks"
+ gpm_survey_precursors.240.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThree obelisks placed at specific corresponding geographic locations are all that remain of this world's occupants. As night falls, the obelisks glow with psi energy, illuminating the various markings engraved upon them. We theorize that these obelisks could be the key to understanding psionics and gateway technologies.\n\nResearch Teams have established science facilities at each obelisk and will continue to monitor and study them for any additional information. "
+ 	# hive mind
+ gpm_survey_precursors.240.hive.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThree obelisks placed at specific corresponding geographic locations are all that remain of this world's occupants. As night falls, the obelisks glow with psi energy, illuminating the various markings engraved upon them. We theorize that these obelisks could be the key to understanding psionics and gateway technologies.\n\nWe have established science facilities at each obelisk and will continue to monitor and study them for any additional information. "
+ 	# machine empire
+ gpm_survey_precursors.240.mach.desc:0 "The science expedition team led by §H[Root.GetLeaderName]§! from the science vessel §H[Root.GetName]§! has found something remarkable!\nThree obelisks placed at specific corresponding geographic locations are all that remain of this world's occupants. As night falls, the obelisks glow with psi energy, illuminating the various markings engraved upon them. We theorize that these obelisks could be the key to understanding psionics and gateway technologies.\n\nThe Inquisition VI has established science facilities at each obelisk and will continue to monitor and study them for any additional information. "

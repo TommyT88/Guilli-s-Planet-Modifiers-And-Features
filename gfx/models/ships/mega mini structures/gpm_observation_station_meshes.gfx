@@ -1,0 +1,30 @@
+objectTypes = {	
+	pdxmesh = {
+		name = "gpm_observation_station_damaged_mesh"
+		file = "gfx/models/ships/guardians/ancient_station/ancient_station_m_hull.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "polySurface1294Shape"
+			index = 0
+			texture_diffuse = "gpm_observation_station_damaged_diffuse.dds"
+			texture_normal = "ancient_space_station_normal.dds"
+			texture_specular = "ancient_space_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "gpm_observation_station_mesh"
+		file = "gfx/models/ships/guardians/ancient_station/ancient_station_m_hull.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "polySurface1294Shape"
+			index = 0
+			texture_diffuse = "gpm_observation_station_diffuse.dds"
+			texture_normal = "ancient_space_station_normal.dds"
+			texture_specular = "ancient_space_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

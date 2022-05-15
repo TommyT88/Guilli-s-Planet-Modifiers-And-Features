@@ -1,0 +1,35 @@
+namespace = gpm_decisions
+
+
+# hunt killbots decision finish
+ship_event = {
+	id = gpm_decisions.1
+	title = "gpm_decisions.1.name"
+	desc = "gpm_decisions.1.desc"
+	picture = GFX_evt_ground_combat
+	show_sound = event_screams
+	location = this
+
+	is_triggered_only = yes
+	
+	
+	trigger = {
+	
+	}
+	
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = gpm_decisions.option
+		FROMFROM = {
+			every_deposit = {
+				limit = { is_deposit_type = gpm_d_relic_roaming_killbots }
+				remove_deposit = gpm_d_relic_roaming_killbots
+				root.owner = { add_resource = { alloys = 50 } }
+			}
+		}
+	}
+}

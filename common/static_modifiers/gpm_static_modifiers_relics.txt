@@ -1,0 +1,72 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Relic Modifiers
+##########################################################################
+
+gpm_time_displacer_relic_bonus = {
+	ship_interstellar_speed_mult = 0.50
+	ship_jumpdrive_cooldown_mult = -0.50
+}
+gpm_r_zero_energy_generator_active_effect = {
+	country_energy_produces_mult = 0.40
+}
+gpm_r_quantum_sphere_active_effect = {
+	espionage_hostile_operation_difficulty_mult = 1.0
+	# spy stuff
+}
+gpm_r_ai_architect_active_effect = {
+	planet_building_build_speed_mult = 1.00
+	planet_buildings_cost_mult = -0.5
+}
+gpm_r_encrypted_sct_active_effect = {
+	country_ship_upgrade_cost_mult = -0.50
+}
+gpm_r_experimental_weapon_active_effect = {
+	ship_fire_rate_mult = 0.20
+}
+gpm_r_codex_administratum_active_effect = {
+	faction_approval = 0.25
+	planet_crime_mult = -0.25
+}
+gpm_r_enigmatic_advisor_active_effect = {
+	diplo_weight_mult = 0.50
+}
+gpm_r_positronic_nervious_system_active_effect = {
+	modify_species_cost_mult = -0.5
+}
+gpm_r_power_core_active_effect = {
+	ship_ftl_jumpdrive_range_mult = 2.00
+	ship_jumpdrive_cooldown_mult = -0.50
+}
+gpm_r_sentinel_queen_active_effect = {
+	pop_government_ethic_attraction = 2.00
+}
+gpm_r_self_assembly_hub_active_effect = {
+	megastructure_build_speed_mult = 1.00
+}
+gpm_r_banner_of_the_fallen_active_effect = {
+	country_claim_influence_cost_mult = -0.50
+}
+gpm_r_cloaking_device_active_effect = {
+	espionage_operation_difficulty_mult = -0.50
+}
+gpm_r_self_repairing_obelisk_active_effect = {
+	starbase_upgrade_speed_mult = 1.00
+	starbase_building_build_speed_mult = 1.00
+	starbase_module_build_speed_mult = 1.00
+}

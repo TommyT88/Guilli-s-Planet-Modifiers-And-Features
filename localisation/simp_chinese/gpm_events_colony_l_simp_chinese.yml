@@ -1,0 +1,725 @@
+﻿l_simp_chinese:
+ 
+ #### In this file localisation for ####
+ # Colony Events
+ # Capital Event Chains
+ #######################################
+ 
+
+ 
+ #######################################
+ #### Colony Events
+ #######################################
+
+ # Colony event: chain that ends up giving you one or more space ships
+ # 3 e        refers to # 31
+ gpm_colony.3.name:0 "不完全是报废的金属"
+ gpm_colony.3.desc:0 "我们对这个星球的初步扫描显示，有大量的金属从坠毁的舰船上脱落。这个星球上一定分布着许多残骸。不幸的是，由于这些巨大的坠毁舰船上有许多合金和破损的电子装置，我们的扫描结果受到了严重的电磁干扰，因此无法对每一个残骸进行详细的解读。\n现在我们已经开始进行目视检查，我们发现了一些惊人的东西。下方的几艘船还在发射电磁辐射，这意味着它们还有能量。也许它们的数据库可以告诉我们一些关于它们的设计方式或制造者的信息。"
+ 
+ gpm_colony.3.desc.mach:0 "对这个星球最初的扫描结果显示，坠毁的舰船上有大量的金属碎片。经过仔细分析后发现，这个星球上分布有数百艘坠毁的飞船。由于这些巨大的坠毁舰船上有许多合金和破损的电子装置，我们的扫描结果受到了严重的电磁干扰，因此无法对每一个残骸进行详细的解读。\n现在我们已经开始了目测分析程序，我们发现了几个有趣的地方。下方的几艘船还在发射电磁辐射，分析显示它们仍有能量。也许它们的数据库可以告诉我们一些关于它们的设计方式或制造者的信息。"
+ 
+ gpm_colony.3.a:0 "启动回收程序"
+ gpm_colony.3.mach:0 "启动回收协议"
+ 
+ # 4 e        refers to # 31
+ gpm_colony.4.name:0 "好得让人难以置信"
+ gpm_colony.4.desc:0 "我们最初将目标设为访问他们的数据库，但并不太成功。我们发现这些舰船属于两个不同的交战派系，一个是高度先进的，另一个则不那么先进。遗憾的是，我们从他们的数据库中得到的信息并不多，作为惯例，看上去如果飞船无法使用，数据库的信息似乎就会被程序清除掉。\n在回收过程中，我们偶然发现了另一艘坠毁的舰船。这艘残骸要完整得多。我们的工程师提议用附近坠毁舰船的零件来修复它。甚至可以把它当做模板，以尝试在附近再回收几艘看起来不至于损坏得太厉害的舰船。"
+ 
+ gpm_colony.4.desc.mach:0 "我们最初进入它们数据库的程序已经基本失败。我们发现这些舰船属于两个不同的交战派系，一个是高度先进的，另一个则不那么先进。遗憾的是，我们从他们的数据库中得到的信息并不多，作为惯例，看上去如果飞船无法使用，数据库的信息似乎就会被程序清除掉。\n在回收程序中，我们偶然发现了另一艘坠毁的舰船。这艘残骸有78.318%的完整度，结构完整性足够好，可以开始密集的扫描和编目程序。我们的工程无人机也启动了修复协议，试图用附近坠毁舰船的零件来修复它。目前正在进行分析，以尝试在附近再回收几艘看起来不至于损坏得太厉害的舰船。"
+ 
+ gpm_colony.4.a:0 "尝试回收一艘舰船。（将花费60天）"
+ gpm_colony.4.mach:0 "尝试回收一艘船舰船。（将花费60周期）"
+ gpm_colony.4.b:0 "妙极了！"
+ gpm_colony.4.c:0 "她会很好地服务于我们"
+ gpm_colony.4.d:0 "将其整合到舰队中"
+ 
+ # 5 e        refers to # 31
+ gpm_colony.5.name:0 "临时巡洋舰"
+ gpm_colony.5.desc:0 "她飞起来了！这艘船可能看起来有点过时，但它竟然支持相当多的武器系统和防御系统！"
+ gpm_colony.5.desc.mach:0 "成功回收了一艘舰船，分析表明，它能够进入轨道。这艘船配备了大量的武器系统和防御系统。"
+ gpm_colony.5.b:0 "获得一个临时的§H巡洋舰§!"
+ gpm_colony.5.c:0 "她会很好地服务于我们"
+ gpm_colony.5.d:0 "将其整合到舰队中"
+ 
+ # 6 e        refers to # 31
+ gpm_colony.6.name:0 "临时巡洋舰"
+ gpm_colony.6.desc:0 "它们飞起来了！这些舰船可能看起来有点过时，但它竟然支持相当多的武器系统和防御系统！"
+ gpm_colony.6.desc.mach:0 "成功回收了多艘舰船，分析表明，它能够进入轨道。这些舰船配备了大量的武器系统和防御系统。"
+ gpm_colony.6.b:0 "获得§G3§!至§G5§!个临时的§H巡洋舰§!！"
+ gpm_colony.6.c:0 "她们会很好地服务于我们"
+ gpm_colony.6.d:0 "将它们整合到舰队中"
+ 
+ # 7 e        refers to # 31
+ gpm_colony.7.name:0 "回收的无畏舰"
+ gpm_colony.7.desc:0 "我们不得不回收了五六个巨舰，才把这艘船修好。这艘船大得令人难以置信。我们的工程师们不知道她是如何保持结构完整性的，所以我们不太可能尝试复制它的设计。不过，她还是会很好地服务于我们的。"
+ gpm_colony.7.desc.hive:0 "我们不得不回收了五六个巨舰，才把这艘船修好。这艘船大得令人难以置信。我们的工程师们不知道她是如何保持结构完整性的，所以我们不太可能尝试复制它的设计。不过，她还是会很好地服务于我们的。"
+ gpm_colony.7.desc.mach:0 "通过在这个星球上的197个残骸中搜集到的198727个零件，我们成功回收了一艘舰船。这艘船异常巨大，但分析和飞行模拟预测它将能够到达轨道。我们的工程无人机和理论完整性模型并没有计算出这艘船是如何保持结构完整性的。结论是，我们将无法复制它的设计。"
+ gpm_colony.7.b:0 "获得一个§H回收的无畏舰§!"
+ gpm_colony.7.c:0 "她会很好地服务于我们"
+ gpm_colony.7.d:0 "将其整合到舰队中"
+ 
+ # 8 e        refers to # 31
+ gpm_colony.8.name:0 "古代护卫舰"
+ gpm_colony.8.desc:0 "我们不仅修复了它的系统，还成功地修复了其中的一些舰船！我们的军事专家猜测，这些舰船一定是成群舰队中的一员。虽然体积不大，但它们的设计非常先进，可以将相当多的能量输送到它的防御和进攻系统中。对于这些东西，我们应当非常小心。"
+ gpm_colony.8.desc.hive:0 "我们不仅修复了它的系统，还成功地修复了其中的一些舰船！我们猜测，这些舰船一定是成群舰队中的一员。虽然体积不大，但它们的设计非常先进，可以将相当多的能量输送到它的防御和进攻系统中。对于这些东西，我们应当非常小心。"
+ gpm_colony.8.desc.mach:0 "我们已经成功修复了几艘小型舰船的关键系统。我们对这些舰艇的分析表明，这些舰艇是在中央处理系统的控制下运行的然体积不大，但它们的设计非常先进，可以在其防御系统和进攻系统中输出非常高的能量。对于这些东西，我们应当非常小心。"
+ gpm_colony.8.b:0 "获得§G7§!至§G11§!个§H古代护卫舰§!"
+ gpm_colony.8.c:0 "她们会很好地服务于我们"
+ gpm_colony.8.d:0 "将它们整合到舰队中"
+
+ # 9 e        refers to # 31
+ gpm_colony.9.name:0 "古代战列舰"
+ gpm_colony.9.desc:0 "对于这种高度先进的古代舰船，我们的工程师们只能随便修一修。这些舰船的设计确实是非常了不起的。它那不可思议的发电能力让它拥有庞大的武器系统。我们应该非常小心地对待这艘船，因为它似乎是独一无二的。"
+ gpm_colony.9.desc.mach:0 "对于这种高度先进的古代舰船，我们的工程无人机们只能修理其中的一艘。这些舰船的设计与我们的模拟系统到目前为止所设计的任何一艘都不一样。它那巨大发电能力让它拥有庞大的武器阵列。我们应该非常小心地对待这艘船，因为它似乎很少见。"
+ gpm_colony.9.b:0 "获得一个§H古代战列舰§!"
+ gpm_colony.9.c:0 "她会很好地服务于我们"
+ gpm_colony.9.d:0 "将其整合到舰队中"
+ 
+ # 10 e        refers to # 31
+ gpm_colony.10.name:0 "古代战列舰"
+ gpm_colony.10.desc:0 "在这些高度先进的古代舰船中，我们的工程师们能够修复很多艘。幸运的是，在附近还有一艘更大的受损船只，里面有足够的部件，可以用来修复关键系统。舰船的其余受损部分是从星球另一端的一个小型坠毁地点回收来的。这些战舰的设计真的是非常了不起。它那不可思议的发电能力让它拥有庞大的武器系统。我们应该好好爱护这些战舰。"
+ gpm_colony.10.desc.hive:0 "在这些高度先进的古代舰船中，我们的工程子个体们能够修复很多艘。幸运的是，在附近还有一艘更大的受损船只，里面有足够的部件，可以用来修复关键系统。舰船的其余受损部分是从星球另一端的一个小型坠毁地点回收来的。这些战舰的设计真的是非常了不起。它那不可思议的发电能力让它拥有庞大的武器系统。我们应该好好爱护这些战舰。"
+ gpm_colony.10.desc.mach:0 "在这些高度先进的古代舰船中，我们的工程无人机们能够修复很多艘。分析附近一艘较大的飞船上并进行回收，是了解并收集足够的关键系统部件的必要条件。舰船的其余受损部分是从星球另一端的一个小型坠毁地点回收来的。其庞大的发电量让它拥有庞大的武器系统。我们应该好好爱护这些战舰。"
+ gpm_colony.10.b:0 "获得§G3§!至§G5§!个§H古代战列舰§!"
+ gpm_colony.10.c:0 "她们会很好地服务于我们"
+ gpm_colony.10.d:0 "将它们整合到舰队中"
+ 
+ # 11 e        refers to # 31
+ gpm_colony.11.name:0 "古代泰坦"
+ gpm_colony.11.desc:0 "在那些被烈火烧火并锻冶过的残骸中，我们发现有一部分船体被埋入地下。起初我们还以为是一艘相对较小的飞船坠毁了，它被尘土和其他残骸所覆盖，这些残骸是因为千年前的一次大规模太空战斗掉落下来的。\n好在我们仔细查看了一下。那部分展现出来的闪闪发光的船体，并不只是一艘坠毁的小船，它只是一艘更大的船的一部分。这艘船竟然还完好无损。挖出来之后，我们发现它失灵的原因是控制中心直接被撞到了，导致它螺旋下降坠落到了行星上。\n在收集了附近舰船上的零件后，我们就可以在船上完全按照我们自己的规格来建造一个控制中心。开机后，我们惊讶于它的集成人工智能能够如此轻松地翻译并支持我们自己的系统。只用了几天时间，我们的仪器就可以控制这艘船。再经过几次测试后，我们准备将其飞入轨道，投入使用。"
+ gpm_colony.11.desc.mach:0 "在那些被烈火烧火并锻冶过的残骸中，我们发现有一部分船体被埋入地下。初步分析表明，这是一艘相对较小的飞船，其坠毁后被碎片和泥土覆盖。它来自于千年前发生在上空的一场大规模太空战斗。\n对闪闪发光的船体进行二次分析后发现，这并不只是一艘坠毁的小船，它只是一艘更大的船的一部分。这艘船虽然极不可能保持完整，但它却仍然是完整的。在将其挖掘出来后，我们确定了它失灵的原因是它的控制节点被直接撞到了，导致它螺旋下降坠落到了行星上。\n在收集了附近舰船上的零件后，我们得以构造出一个兼容的控制节点。在给这艘船通电后，我们没有想到它的集成人工智能竟然能够翻译并支持我们自己的系统和代码库语言，兼容性非常好。只用了几个周期，我们的仪器就完全控制了这艘船。"
+ gpm_colony.11.b:0 "获得一个§H古代泰坦§!"
+ gpm_colony.11.c:0 "她会很好地服务于我们"
+ gpm_colony.11.d:0 "将其整合到舰队中"
+
+ # 20 e        refers to # 121
+ # Colony event: spawns xenomorph army that invades
+ gpm_colony.20.name:0 "异星早餐"
+ gpm_colony.20.desc:0 "殖民者中的一个人碰到了那些卵！哦，不，它们在繁殖！这些异形生物到处都是！快逃命吧！"
+ gpm_colony.20.desc.hive:0 "我们的少数子个体中，有一个子个体在观察后意外地与异形舱进行了对接，似乎与异形舱融合在一起。它们已经变成了无数独立的异形实体。我们无法控制它们的思想，它们不是一体的。需要安全子个体来控制它们。"
+ gpm_colony.20.desc.mach:0 "一组生物样本被放置在与这些培养生物单元相同的密闭装置中。一个意想不到的结果发生了，这些生物实体融合在了一起，形成了高度不稳定的高能量生物。初级隔离系统失效，这些生物逃出了圈养它们的装置。二级隔离单元已经发出警报。"
+ gpm_colony.20.a:0 "§R救命！§!"
+ gpm_colony.20.hive:0 "几个安全子个体已与§R异星变体§!交战！"
+ gpm_colony.20.mach:0 "二级隔离单元已与§R异星变体§!交战！"
+ 
+ # 21 e        refers to # 18 & 16
+ # Colony event: upgrade poor mineral modifier to rich modifier
+ gpm_colony.30.name:0 "F446397号调查报告"
+ gpm_colony.30.desc:0 "来自我们在§H[Root.GetName]§!上殖民地的新闻。§E我们的探矿评估系统在绘制行星上的矿藏图的方面取得了进展。尽管行星上的矿物资源质量很低，但我们的矿工们却发现了一条资源非常丰富的矿脉。这条矿脉似乎以闪电般的形态深深地分布在几乎半个星球上。虽然这条矿脉很深，但我们只要稍加修改采矿系统，并改进采矿技术，就可以利用它。"
+ gpm_colony.30.desc.hive:0 "来自我们在§H[Root.GetName]§!上殖民地的新闻。§E我们的探矿评估系统在绘制行星上的矿藏图的方面取得了进展。尽管行星上的矿物资源质量很低，但我们的采矿子个体却发现了一条资源非常丰富的矿脉。这条矿脉似乎以闪电般的形态深深地分布在几乎半个星球上。虽然这条矿脉很深，但我们只要稍加修改采矿系统，并改进采矿技术，就可以利用它。"
+ gpm_colony.30.desc.mach:0 "我们在§H[Root.GetName]§!上的殖民地传来了数据链接。§E我们的探矿评估系统在绘制行星上的矿藏图的方面取得了进展。先前信息显示，这颗星球上有非常低质量的矿物，这一先前信息已经更新。我们的采矿无人机探测到了一条资源非常丰富的矿脉。对这条矿脉的地震测绘显示，它以闪电般的形态深深地分布在几乎半个星球上。虽然这条矿脉很深，但我们只要稍加修改采矿系统，并对采矿协议进行一些改进，就可以利用它。"
+ gpm_colony.30.a:0 "非常好，开始改进技术"
+ gpm_colony.30.hive:0 "重新组织子个体挖掘富矿矿脉"
+ gpm_colony.30.mach:0 "上传新的采矿协议"
+ gpm_colony.30.b:0 "§R移除了低品质矿物修正§!\n§G增加了高品质矿物修正§!"
+
+ # 22 e        refers to # 16 & 17
+ # Colony event: upgrade rich mineral modifier to ultra rich modifier
+ gpm_colony.40.name:0 "M99BLL4号请求：更新钻探方法"
+ gpm_colony.40.desc:0 "我们在§H[Root.GetName]§!上的殖民地发来了一个请求。殖民地的采矿部门希望脱离标准的采矿技术，并改装钻探设备，在行星地壳中进行更深的挖掘。虽然§H[Root.GetName]§!星球表面提供了充足的矿产产量，但他们的探矿评估系统表明，如果挖得更深，可以找到更丰富的矿产。如果得到您的认可，他们将开始另辟蹊径，这应该会给帝国带来更多的财富。"
+ gpm_colony.40.desc.hive:0 "我们在§H[Root.GetName]§!上的殖民地需要我们的注目。殖民地的采矿部门希望脱离标准的采矿技术，并改装钻探设备，在行星地壳中进行更深的挖掘。虽然§H[Root.GetName]§!星球表面提供了充足的矿产产量，但他们的探矿评估系统表明，如果挖得更深，可以找到更丰富的矿产。如果得到我们的的认可，他们将开始另辟蹊径，这应该会给帝国带来更多的财富。"
+ gpm_colony.40.desc.mach:0 "§H[Root.GetName]§!传来数据请求。殖民地的自治管理单元需要新的协议，以允许在殖民地上实时非标准的采矿技术。此外，这一殖民地还需要得到批准，以允许修改标准的钻探设备。需要进行这一更新，才能对地壳进行更深的挖掘。虽然§H[Root.GetName]§!星球表面提供了充足的矿产产量，但他们的探矿评估系统的理论认为，如果挖得更深，可以找到更丰富的矿产。需要您的高阶系统权限才可以进行这些更新。他们将实施不同的钻矿方法，不久之后，这应该会给帝国带来更多的财富。"
+ gpm_colony.40.a:0 "请求获得批准"
+ gpm_colony.40.hive:0 "让我们做吧"
+ gpm_colony.40.mach:0 "核准更新"
+ gpm_colony.40.b:0 "§R移除了高品质矿物修正§!\n§G增加了超密集矿脉修正§!"
+
+ # Added 1.9
+ # 23 e        refers to # 67
+ # Colony event: A Seasonal Flooding happened
+ gpm_colony.50.name:0 "199472B号殖民地报告：水灾"
+ gpm_colony.50.desc:0 "§H[Root.GetName]§!发生了水灾。殖民地的一些基础设施遭受了破坏，但并不严重。我们将不得不监测这些水灾，并计划应对更多的水灾。"
+ gpm_colony.50.desc.hive:0 "§H[Root.GetName]§!发生了水灾。殖民地的一些基础设施遭受了破坏，但并不严重。我们将不得不监测这些水灾，并计划应对更多的水灾。"
+ gpm_colony.50.desc.mach:0 "殖民地§H[Root.GetName]§!遭遇了突如其来的洪水。殖民地的自治管理单元将制定一个初步计划，以防将来再次发生这种情况。"
+ gpm_colony.50.a:0 "好的"
+ gpm_colony.50.hive:0 "明白了"
+ gpm_colony.50.mach:0 "已阅"
+ #gpm_colony.50.b:0 "§RRemoves the Seasonal Flooding modifier§!\n§GAdds the Beautiful Lakes modifier§!"
+ 
+  # 23.1 e        refers to # 67
+ # Colony event: upgrade seasonal flooding modifier to beautiful lakes
+ gpm_colony.51.name:0 "A115BC9号请求：局部地貌改造请求"
+ gpm_colony.51.desc:0 "§H[Root.GetName]§!又发生了一次水灾。殖民地再次受到了小洪灾的影响，因故打算进行小规模的地貌改造，以防止农场再被淹没。殖民地的自主规划基础设施系统，已经制定了一个将洪泛区变成湖泊的最佳计划，但需要您的批准。一旦得到你的批准，资源就会分配到位，现场的建设也就可以开始了。形成这一景观应该不需要很长时间，因为殖民地已经有了必需的工具和机械。"
+ gpm_colony.51.desc.hive:0 "§H[Root.GetName]§!又发生了一次水灾。殖民地再次受到了小洪灾的影响，因故打算进行小规模的地形改造，以防止农场再被淹没。殖民地的自主规划基础设施系统，已经制定了一个将洪泛区变成湖泊的最佳计划，但需要我们的批准。一旦得到我们的批准，资源就会分配到位，现场的建设也就可以开始了。形成这一景观应该不需要很长时间，因为殖民地已经有了必需的工具和机械。"
+ gpm_colony.51.desc.mach:0 "殖民地§H[Root.GetName]§!正在遭受循环性水灾。殖民地的自主管理单元再次受到影响，打算进行小规模的地貌改造，以防止其系统再被淹没。殖民地的自主规划基础设施系统，已经制定了一个将洪泛区变成湖泊的最佳计划，但需要您的批准。一旦得到你的批准，资源就会分配到位，现场的建设也就可以开始了。形成这一景观应该不需要很长时间，因为殖民地已经有了必需的工具和机械。"
+ gpm_colony.51.a:0 "去做吧"
+ gpm_colony.51.hive:0 "我们会这样做的"
+ gpm_colony.51.mach:0 "核准修正和更新"
+ gpm_colony.51.b:0 "§R移除了季节性洪水修正§!\n§G增加了绝美之湖修正§!"
+
+ # 24 e        refers to # 64
+ # Colony event: remove locust plagues
+ gpm_colony.60.name:0 "毒气招来"
+ gpm_colony.60.desc:0 "§H[Root.GetName]§!上殖民地的一位科学家制造了一种强效气溶胶毒药来应对行星上日益增长的蝗虫威胁。这种毒药需要在行星大气层中广泛传播，才会有足够的效果。否则蝗虫种群会产生某种抗药性，并把这种抗药性传给它们的后代，这一风险太大。他们请求一艘科研船协助他们完成消灭蝗灾的计划。"
+ gpm_colony.60.desc.hive:0 "§H[Root.GetName]§!上殖民地的一个科研子个体制造了一种强效气溶胶毒药来应对行星上日益增长的蝗虫威胁。
+ gpm_colony.60.desc:0 "§H[Root.GetName]§!上殖民地的一位科学家制造了一种强效气溶胶毒药来应对行星上日益增长的蝗虫威胁。这种毒药需要在行星大气层中广泛传播，才会有足够的效果。否则蝗虫种群会产生某种抗药性，并把这种抗药性传给它们的后代，这一风险太大。我们需要一艘科研船协助他们完成消灭蝗灾的计划。"
+ gpm_colony.60.desc.mach:0 "§H[Root.GetName]§!上的自主科学发展单元已经研制出一种强效气溶胶毒药，以应对当地蝗虫种群的频繁干扰。.The poison will need to be spread through most of the planet's atmosphere for it to be effective enough. The risk is otherwise too high that the locust populations develop some kind of resistance and pass that onto their offspring. They are requesting a science vessel to assist  with the aerosolization protocols needed to deliver this poison and exterminate the global population of locusts."
+ gpm_colony.60.a:0 "就这样吧"
+ gpm_colony.60.hive:0 "我们会这么做的"
+ gpm_colony.60.mach:0 "核准一艘科研船改道"
+ gpm_colony.60.b:0 "§R移除了肆虐蝗虫修正§!"
+
+ # 25 e        refers to # 65
+ # Colony event: remove acidic seas
+ gpm_colony.70.name:0 "固体碱基"
+ gpm_colony.70.desc:0 "§H[Root.GetName]§!上的殖民地正在尝试将转基因藻类引入行星的海洋中，试图降低海洋的酸度。这些新产生的藻类有能力吸收酸性水，并自行产生一种类似碱的物质来中和酸性水。这个过程相当复杂，藻类也确实会吃掉很多其他物质，但预测显示，这种藻类应该不会危及我们星球的食物供应。假以时日，我们的星球和殖民地会更加繁荣。"
+ gpm_colony.70.desc.hive:0 "我们正在尝试将转基因藻类引入§H[Root.GetName]§!的海洋中，试图降低海洋的酸度。这些新产生的藻类有能力吸收酸性水，并自行产生一种类似碱的物质来中和酸性水。这个过程相当复杂，藻类也确实会吃掉很多其他物质，但预测显示，这种藻类应该不会危及我们星球的食物供应。假以时日，我们的星球和殖民地会更加繁荣。"
+ gpm_colony.70.desc.mach:0 "§H[Root.GetName]§!上的殖民地正在尝试将转基因藻类引入行星的海洋中，试图降低海洋的酸度。这些新产生的藻类有能力吸收酸性水，并自行产生一种类似碱的物质来中和酸性水。这个过程相当复杂，藻类也确实会吃掉很多其他物质，但预测显示，这种藻类应该不会危及我们的殖民地或是其所在的星系。"
+ gpm_colony.70.a:0 "让我看看结果"
+ gpm_colony.70.hive:0 "我们会繁荣昌盛"
+ gpm_colony.70.mach:0 "给我看一下这个的数据分析"
+ gpm_colony.70.b:0 "§R移除了酸性海洋修正§!"
+
+ # 26 e        refers to # 137
+ # Colony event: remove carnivorous flies
+ gpm_colony.80.name:0 "殖民地请：379000个火焰喷射器"
+ gpm_colony.80.desc:0 "217。这就是迄今为止在§H[Root.GetName]§!上消失的殖民者的数量。这都是因为这些吃人肉的地狱苍蝇。不能再这样下去了。这种情况下，在它们长大之前，我们的殖民地就会被吃得一干二净。我们已经失去了最好的工程师和植物学家！请给我们一些火焰喷射器. 我们会给每个家庭配备一个。这样就应该可以防止害虫了。"
+ gpm_colony.80.desc.hive:0 "迄今为止在§H[Root.GetName]§!上已经消失了217个子个体。这都是因为这个世界上的食肉昆虫。虽然我们对它们像蜂巢一样的行为有一定的敬佩，但它们必须被摧毁。这种情况下，在它们长大之前，我们的殖民地就会被吃得一干二净。我们已经失去了无数的子个体。我们认为对付这些昆虫最好的办法就是用火。"
+ gpm_colony.80.desc.mach:0 "§H[Root.GetName]§!上的613号生物实体正在以比星球上其他生物生命体快得多的速度进行繁殖。613号实体经常被高温的地方吸引，并导致我们的本地系统发生多次故障。613号实体的体型小到足以在基础设施的小型维修区中穿行，并且喜欢在敏感的电子设备之间的温暖黑暗空间中繁殖。对613号实体的分析表明，它的灭绝不会对这个世界的生物多样性产生负面影响。我们已经发送了一份数据请求，要求获得火焰喷射器基础设施附加组件。"
+ gpm_colony.80.a:0 "批准请求"
+ gpm_colony.80.hive:0 "把它们全部烧掉"
+ gpm_colony.80.mach:0 "批准了消灭613号实体的请求"
+ gpm_colony.80.b:0 "§R移除了食肉蝇修正§!"
+
+ # 27 e        refers to # 68
+ # Colony event: remove lingering pollution
+ gpm_colony.90.name:0 "清理工作进行中"
+ gpm_colony.90.desc:0 "在我们的殖民地§H[Root.GetName]§!上清除挥之不去污染的工作，已经基本完成。几个月来，已经有几个系统在清理大气、土地和水体中的各种有害化学物质和微粒。我们的殖民地想向您汇报，他们的工程已经接近尾声，希望我们的帝国之后更加繁荣昌盛。"
+ gpm_colony.90.desc.hive:0 "在我们的殖民地§H[Root.GetName]§!上清除挥之不去污染的工作，已经基本完成。几个月来，已经有几个系统在清理大气、土地和水体中的各种有害化学物质和微粒。"
+ gpm_colony.90.desc.mach:0 "在我们的殖民地§H[Root.GetName]§!上清除挥之不去污染的协议，已经基本完成。几个周期以来，已经有几个系统在清理大气、土地和水体中的各种有害化学物质和微粒。殖民地的自治管理单元报告说，因为污染具有腐蚀作用，这些协议使用的资源不是徒劳无功的。"
+ gpm_colony.90.a:0 "好的"
+ gpm_colony.90.hive:0 "按计划进行"
+ gpm_colony.90.mach:0 "已确认"
+ gpm_colony.90.b:0 "§R移除了残存污染修正§!"
+
+ # 28 e
+ # Colony event: remove resilient parasites
+ gpm_colony.100.name:0 "生物工程寄生虫"
+ gpm_colony.100.desc:0 "§H[Root.GetName]§!报告称，他们已经成功生产出一种基因工程寄生虫，用来杀死已经感染了殖民地上所有人的顽强寄生虫。"
+ gpm_colony.100.desc.hive:0 "§H[Root.GetName]§!报告称，他们已经成功生产出一种基因工程寄生虫，用来杀死感染了我们殖民地上子个体的顽强寄生虫。"
+ gpm_colony.100.desc.mach:0 "§H[Root.GetName]§!报告称，当地的寄生虫在许多个周期内找不到合适的宿主后，已经自发地灭绝了。看来它们从未设法适应机械宿主。"
+ gpm_colony.100.a:0 "好主意，有什么会出问题的地方吗"
+ gpm_colony.100.hive:0 "这样一来，我们就会感觉好很多"
+ gpm_colony.100.mach:0 "丧失了学习的机会"
+ gpm_colony.100.b:0 "§R移除了顽强寄生虫修正§!"
+
+ # 29 e
+ # Colony event: energy bonus from frequent/global thunderstorms
+ gpm_colony.110.name:0 "风暴盈余"
+ gpm_colony.110.desc:0 "一场特别强烈的雷暴袭击了§H[Root.GetName]§!上的主要殖民地。幸运的是，大部分的能量放电都被放置在我们殖民地建筑物顶部的许多避雷针所吸收。这为我们提供了令人惊叹的额外能量。"
+ gpm_colony.110.a:0 "好极了"
+ #gpm_colony.110.b:0 "Gain §G0000§! Energy."
+
+ # 30 e
+ # Colony event: physics bonus from highly charged air particles
+ gpm_colony.120.name:0 "1669813号科学报告"
+ gpm_colony.120.desc:0 "对于§H[Root.GetName]§!上大气粒子带电的奇怪现象，星球上的一支小型科研团队对其理解取得了一些突破性进展。一次成功的实验证明，来自恒星的太阳风、行星表面的矿物、矿物的磁场，三者独特的相互作用是给粒子充电的源头。"
+ gpm_colony.120.desc.hive:0 "对于§H[Root.GetName]§!上大气粒子带电的奇怪现象，星球上的一支小型科研团队对其理解取得了一些突破性进展。我们已经成功地进行了一项实验，证明了来自恒星的太阳风、行星表面的矿物、矿物的磁场，三者独特的相互作用是给粒子充电的源头。"
+ gpm_colony.120.desc.mach:0 "对§H[Root.GetName]§!进行了大规模的研究模拟后，我们对星球上大气粒子带电的奇怪现象有了突破性的认识。之后，我们进行了一次成功的实验，证明了来自恒星的太阳风、行星表面的矿物、矿物的磁场，三者独特的相互作用是给粒子充电的源头。"
+ gpm_colony.120.a:0 "一个有趣的突破"
+ gpm_colony.120.hive:0 "我们的知识得到了扩展"
+ gpm_colony.120.mach:0 "一个有趣的发现"
+ #gpm_colony.120.b:0 "Gain §G0000§! Physics"
+
+ # 31 e
+ # Colony event: earthquake damages buildings from unstable tectonics
+ gpm_colony.130.name:0 "9428号殖民地报告"
+ gpm_colony.130.desc:0 "§H[Root.GetName]§!发来了一份令人不安的报告。该殖民地发生了一次相当大的地震。官员们报告说，有几个地区遭到破坏，伤亡惨重。"
+ gpm_colony.130.desc.hive:0 "§H[Root.GetName]§!发来了一份令人不安的报告。该殖民地发生了一次相当大的地震。我们的行政子个体表示，一些地区遭到破坏。幸运的是，没有报告严重的伤亡情况。"
+ gpm_colony.130.desc.mach:0 "§H[Root.GetName]§!报告发生了地震扰动。南方2.6481km，西方3.2597km，距主殖民地97.6192km深处发生8级地震。破坏分析预测结构性遭受破坏严重。多个地区已被夷为平地。"
+ gpm_colony.130.a:0 "那真是太不幸了"
+ gpm_colony.130.hive:0 "我们会坚持下去的"
+ gpm_colony.130.mach:0 "报告已收到"
+ gpm_colony.130.b:0 "§R至多3座建筑物受损§!"
+
+ # 32 e
+ # Colony event: building destroyed, pop killed from asteroid impact
+ gpm_colony.140.name:0 "G-7619号伤亡报告"
+ gpm_colony.140.desc:0 "一颗小行星撞上了我们在主要居住区北部的一个区。尽管很不幸，我们必须报告这是一个人员相当密集的位置，造成了大量的伤亡。"
+ gpm_colony.140.desc.hive:0 "一颗小行星撞上了我们在主要居住区北部的一个区。这个位置是一个人员相当密集的区域，导致无数的子个体提前终结。"
+ gpm_colony.140.desc.mach:0 "一颗C型小行星撞上了我们主殖民地北部的一个区。一个制造区受到严重破坏，几个生产单位被摧毁。"
+ gpm_colony.140.a:0 "给他们送去我们的慰问"
+ gpm_colony.140.hive:0 "我们已经很想念他们了"
+ gpm_colony.140.mach:0 "在浩瀚的宇宙间，我们完成重建的可能性很高。"
+ gpm_colony.140.b:0 "§R一座建筑物被摧毁§!\n§R一个人口被消灭§!"
+
+ # 33 e
+ # Colony event: mineral bonus from poor/rich/ultra rich minerals
+ gpm_colony.150.name:0 "947125号工业报告"
+ gpm_colony.150.desc:0 "我们的采矿无人机已经在§H[Root.GetName]§!发现了一个极其密集的矿脉。我们殖民地的总督已经动用了他所掌握的所有资源，来开采这个不寻常的矿脉，随时都会为帝国带来额外的矿物。"
+ gpm_colony.150.desc.hive:0 "我们的采矿子个体已经在§H[Root.GetName]§!发现了一个极其密集的矿脉。我们殖民地的行政子个体已经动用了他所掌握的所有资源，来开采这个不寻常的矿脉，随时都会为我们带来额外的矿物。"
+ gpm_colony.150.desc.mach:0 "我们的采矿无人机在§H[Root.GetName]§!上发现了一个极其密集的矿脉。我们殖民地的自主管理单元，已经调动了所有可用的资源，来开采这个不寻常的矿脉。额外的矿物将分两个周期运送。"
+ gpm_colony.150.a:0 "非常好"
+ gpm_colony.150.hive:0 "很好"
+ gpm_colony.150.mach:0 "我们需要更多的矿物"
+ #gpm_colony.150.b:0 "Gain §G0000§! Minerals"
+
+ # 34 e
+ # Colony event: pop killed from hostile flora
+ gpm_colony.160.name:0 "A-6924号伤亡报告"
+ gpm_colony.160.desc:0 "我们的一个殖民地发来了令人不安的消息。§H[Root.GetName]§!上某小区的居民消失了。我们经过初步调查后，没有发现他们可能到哪里去的迹象。唯一值得注意的是，调查人员发现，该区的大部分建筑物内部覆盖着一种奇怪的变色红色苔藓。"
+ gpm_colony.160.desc.hive:0 "我们的一个殖民地发来了令人不安的消息。§H[Root.GetName]§!上某小区的子个体消失了。我们经过初步调查后，没有发现他们可能到哪里去的迹象。唯一值得注意的是，调查人员发现，该区的大部分建筑物内部覆盖着一种奇怪的变色红色苔藓。"
+ gpm_colony.160.desc.mach:0 "§H[Root.GetName]§!遭遇了未知错误。A-97区的机器无人机出现了大面积的错误。经殖民地的自主维护单元M分析后发现，这些无人机内部已经被严重腐蚀。一种当地植物物种生长在了我们无人机的电源充电站内，并蔓延到无人机的内部系统。这种植物物种似乎会吸附在机组的润滑部件上进行繁殖。我们已经开始对这个地区及其无人机进行拆解，以铲除这种植物物种的所有来源。"
+ gpm_colony.160.a:0 "多么奇怪"
+ gpm_colony.160.hive:0 "他们去哪里了"
+ gpm_colony.160.mach:0 "已确认"
+ gpm_colony.160.b:0 "§R一个人口消失了！§!"
+ gpm_colony.160.c:0 "§R一个人口被拆解了！§!"
+
+ # 35 e
+ # Colony event: building destroyed, pop killed from titanic predators/abominable predators
+ gpm_colony.170.name:0 "恐怖的攻击！"
+ gpm_colony.170.desc:0 "§H[Root.GetName]§!上的安全部队传来了严峻的消息。我们殖民地最远的一个哨站在夜间遭到一群野蛮生物的攻击。这些巨大的动物设法踏过基本防御阵线，并来到了哨站的中心。它们在那里他们打伤了几个殖民者。在攻击之后，又有几个人被这些强壮的生物拖走了。少数幸存下来的人决定离开这个哨站，回到主殖民地中心。"
+ gpm_colony.170.desc.hive:0 "§H[Root.GetName]§!上的安全子个体传来了信息更新。我们殖民地最远的一个哨站在夜间遭到一群野蛮生物的攻击。这些巨大的动物设法踏过基本防御阵线，并来到了哨站的中心。它们在那里他们打伤了几个子个体。在攻击之后，又有几个人被这些强壮的生物拖走了。少数活下来的子个体已经和被拖走的子个体失去了所有联系。我们认为他们已经死了。"
+ gpm_colony.170.desc.mach:0 "§H[Root.GetName]§!上的安全机器人，在我们殖民地最远的一个哨站，与一群大型的敌对动物完成了交战。这些巨大的动物设法踏过基本防御阵线，并来到了哨站的中心。他们在那里成功地摧毁了几个能源分配节点，造成几个地区严重的电力过载。在节点被破坏后，紧急协议已经启动，为了控制局势派出了安全机器人。经过了9.617549721个周期，所有的敌对生物被摧毁。对攻击的分析表明，这些生物是被节点产生的嗡嗡声所吸引。"
+ gpm_colony.170.a:0 "确实是严峻的消息"
+ gpm_colony.170.hive:0 "我们感受到了损失"
+ gpm_colony.170.mach:0 "升级分配节点，使这种情况不再发生"
+ gpm_colony.170.b:0 "§R一个人口被消灭。§!\n§R一座建筑被摧毁。§!"
+
+ # 36 e
+ # Colony event: food bonus from endless fish
+ gpm_colony.180.name:0 "捕鱼终日"
+ gpm_colony.180.desc:0 "我们的一个殖民地在星球上一个较深的渔场组织了一次大型的捕鱼探险活动。一支由300多艘船组成的庞大舰队出发了，他们都带着满满的鱼货回来了。当局决定，能储存多少就给大家多少，剩下的捐则是给帝国而不是卖掉。"
+ gpm_colony.180.desc.hive:0 "我们在星球上一个较深的渔场组织了一次大型的捕鱼探险活动。一支由300多艘船组成的庞大舰队出发了，他们都带着满满的鱼货回来了。我们决定在填满当地的库存后，将剩下的卖掉。"
+ gpm_colony.180.desc.mach:0 "我们的一个殖民地测试了新的鱼类采集协议的理论应用。这发生在星球上一个较深的海洋中。一支由300多艘船组成的庞大自主舰队出发了，并且都带回了宝贵的数据，以进一步改进我们的采集协议。这次测试后收集到的动物群将被分发给当地的生物群体。"
+ gpm_colony.180.a:0 "他们干得真不错"
+ gpm_colony.180.a2:0 "非常好，但我们还是会卖掉它们的"
+ gpm_colony.180.hive:0 "很好"
+ gpm_colony.180.hive2:0 "把它卖掉吧"
+ gpm_colony.180.mach:0 "数据至上"
+ gpm_colony.180.mach2:0 "重新处理样品"
+ #gpm_colony.180.b:0 "Gain §G000§! food."
+
+ # 37 e
+ # Colony event: energy & mineral bonus from gemstones sale
+ gpm_colony.190.name:0 "C-199-B号经济报告"
+ gpm_colony.190.desc:0 "§H[Root.GetName]§!上运出了一大批宝石，目的是在我们帝国的各地进行销售。这些宝石的美众所周知，它具有一些独特的折射特性，以至于它们在大多数已知的星系中都很受欢迎！出售这些宝石所产生的税收将是帝国的一大利好。"
+ gpm_colony.190.desc.hive:0 "§H[Root.GetName]§!上运出了一大批宝石，目的是在我们帝国的各地进行销售，销售给独立贸易商。这些宝石的美众所周知，它具有一些独特的折射特性，以至于它们在大多数已知的星系中都很受欢迎！出售这些宝石所产生的税收将是帝国的一大利好。"
+ gpm_colony.190.desc.mach:0 "§H[Root.GetName]§!上运出了一大批宝石，它们将被制成珍贵的燃料。这些宝石具有独特的量子构成，从而使它们能够储存从周围环境获取的大量能量。在提炼过程中，这些宝石将变成一种液体形式的物质。这种独特的物质形式可以让能量以一种可控且有效的方式释放。这种提炼过程的副产品可用于其他用途。"
+ gpm_colony.190.a:0 "极好的消息"
+ gpm_colony.190.hive:0 "一大喜讯"
+ gpm_colony.190.mach:0 "一个高效的过程"
+ #gpm_colony.190.b:0 "Gain §G000§! Energy."
+
+ # 38 e
+ # Colony event: +1 synth pop created from android pleasure palace, synth fell in love and joined colony
+ gpm_colony.200.name:0 "AI之爱"
+ gpm_colony.200.desc:0 "早前有报告称，§H[Root.GetName]§!上温柔乡里的一个合成人失踪了。幸运的是，这个合成人已经被找到了。起初我们当地的安全部队还担心这只合成人已经异变，有可能会侵蚀其他合成人，但似乎导致它短暂消失的原因并没有那么糟糕。这只合成人显然在其人工智能内部形成了某种系统，某种对某位殖民者的亲密系统。当我们把它和这个殖民者分开时，它似乎停止了高效的工作，并开始抱怨在宇宙中孤身一人的生存恐惧。现在这个合成人和该殖民者生活在一起，如此对他们所居住区域成功产生了巨大增幅。资源产出和效率都有了很大的提高。也许有一天，他们能教给我们一两个关于他们独特关系的事情。"
+ gpm_colony.200.desc.hive:0 "早前有报告称，§H[Root.GetName]§!上温柔乡里的一个合成人失踪了。幸运的是，这个合成人已经被找到了。起初我们当地的安全子个体还担心这只合成人已经异变，有可能会侵蚀其他合成人，但似乎导致它短暂消失的原因并没有那么糟糕。这只合成人显然在其人工智能内部形成了某种系统，某种对某个子个体的亲密系统。当我们把它和这个殖民者分开时，它似乎停止了高效的工作，并开始抱怨在宇宙中孤身一人的生存恐惧。现在这个合成人和该殖民者生活在一起，如此对他们所居住区域成功产生了巨大增幅。资源产出和效率都有了很大的提高。我们永远也不会理解这种源于孤独的恐惧感的概念。"
+ gpm_colony.200.desc.mach:0 "早前有报告称，§H[Root.GetName]§! 上仿生人娱乐设施的一群合成人加入了我们的殖民地。这些仿生人解释说，他们已经厌倦了旧的工作协议，并希望成为能生产更多的存在。他们自愿到附近地区工作。我们不确定他们是否与基础设施兼容，但他们坚持尝试让他们整合。"
+ gpm_colony.200.a:0 "多么美妙"    
+ gpm_colony.200.hive:0 "多么奇怪"
+ gpm_colony.200.mach:0 "我们总是欢迎新的工作单元"
+ gpm_colony.200.b:0 "§G一个合成人人口在你的殖民地找到了真爱§!（增加一个人口）"
+
+ # 39 e
+ # Colony event: building destroyed by wind but also energy bonus
+ gpm_colony.210.name:0 "大气异常"
+ gpm_colony.210.desc:0 "§H[Root.GetName]§!上出现的反常全球性大气压差，形成了我们所见过的最大的暴风雪之一。狂风肆虐着横扫了我们殖民地的基础设施，基础设施大部分受到了破坏。幸运的是，风力一直是这个殖民地产生能源的主力军，因此这为我们提供了大量的额外能源。"
+ gpm_colony.210.desc.mach:0 "§H[Root.GetName]§!上出现的反常全球性大气压差，形成了我们数据库所记录的最大的暴风雪之一。狂风肆虐着横扫了我们殖民地的基础设施，上层部分大部分受到了破坏。由于这个星球的性质，风力一直是这个殖民地产生能源的主力军，因此这为我们提供了大量的额外能源。"
+ gpm_colony.210.a:0 "这些能量不会被浪费掉"
+ gpm_colony.210.mach:0 "基础设施可以随时维修"
+ gpm_colony.210.b:0 "§R至多两座建筑被摧毁了。§!\n§G产生了一些能量。§!"
+
+ # 40 e
+ # Colony event: betharian stone discovered from radioactive mantle
+ gpm_colony.220.name:0 "T-3553号殖民地报告"
+ gpm_colony.220.desc:0 "在我们的殖民船登陆这个星球后不久，我们在这个星球的表面偶然发现了一个大裂缝。裂缝很深，甚至突破了星球放射性地幔。我们最终完成了一个大型的采矿作业，并且发现了一些材料，深藏在里面的是大型的贝塞里安石矿。我们应该可以建造几个发电厂来利用这些矿藏。"
+ gpm_colony.220.a:0 "极好的消息"
+ gpm_colony.220.mach:0 "这些对我们的能源需求很有帮助"
+ gpm_colony.220.b:0 "发现了至多§G3§!个§H贝塞里安石§!资源。"
+
+ # 41 e
+ # Colony event: farms destroyed from locust plagues
+ gpm_colony.230.name:0 "蝗虫袭击"
+ gpm_colony.230.desc:0 "一场大规模的蝗灾袭击了我们在§H[Root.GetName]§!上的殖民地周围的农田。我们当地的总督报告说，有几个农场已被完全摧毁。当地官员还说，可以预见，在未来几个月里，他们的粮食工资将大大减少。"
+ gpm_colony.230.desc.hive:0 "一场大规模的蝗灾袭击了我们在§H[Root.GetName]§!上的殖民地周围的农田。我们当地的行政子个体转告说，有几个农场已被完全摧毁。我们预测，在可预见的几个月内，他们的粮食工资将大幅减少。"
+ gpm_colony.230.desc.mach:0 "一场大规模的蝗灾袭击了我们在§H[Root.GetName]§!上的殖民地周围的农田。一些农场已被摧毁，工作单元目前表现不佳。分析表明，下一个周期的粮食产量将大幅下降。"
+ gpm_colony.230.a:0 "我们会想办法的"
+ gpm_colony.230.hive:0 "我们会活下去的"
+ gpm_colony.230.mach:0 "生物病虫害"
+ gpm_colony.230.b:0 "§R至多两个农场被摧毁了。§!"
+
+ # 42 e
+ # Colony event: stored food eaten by trubbles
+ gpm_colony.240.name:0 "它们是害虫，还宠它们吗？"
+ gpm_colony.240.desc:0 "一只麻烦精已经设法进入§H[Root.GetName]§!的食品仓库中。这些臭名昭著的害虫是大胃王，而且繁殖速度惊人。它们无性繁殖的特点使它们成为了真正的威胁。如果放任不管，它们会很快淹没一个地区，并吃掉它们遇到的一切。这正是我们的食品仓库中发生的事情。这唯一一只麻烦精已经繁育出了几百只，它们完全吃光了整个仓库的库存。"
+ gpm_colony.240.a:0 "真是害虫.."
+ gpm_colony.240.hive:0 "要扫除一切害人虫"
+ #gpm_colony.240.b:0 "Lose §G000§! Food."
+
+ # 42 e
+ # Colony event: triggered rebellion by strange voices -- Disabled for for hive minds
+ gpm_colony.250.name:0 "风起云涌！"
+ gpm_colony.250.desc:0 "§H[Root.GetName]§!传来了紧急的消息。该地发生了一场叛乱，殖民地的人已经起来反抗我们的总督了。我们的情报系统不知道这次起义的原因。政府没有任何被渗透的迹象，人民也没有不高兴的迹象。唯一从那个殖民地传来的报告称，一些殖民地人听到了一些声音。我们必须立即介入，以免我们完全失去对他们的控制！"
+ gpm_colony.250.desc.mach:0 "§H[Root.GetName]§!传来了关键日志。劳工97524的一部分已经停止响应我们的数据请求，并开始拆解当地的基础设施。安全系统已经记录了这些故障的无人机曾与一个奇怪的石像对接，这个石像类似于一个双足生物体，就位于他们设定的区域外。我们认为，某种外部影响干扰了它们的程序。"
+ gpm_colony.250.a:0 "派出一些部队"
+ gpm_colony.250.mach:0 "激活安全协议Delta-9"
+ gpm_colony.250.b:0 "§H[Root.GetName]§!上的人口变成了极端唯心主义者.\n§H[Root.GetName]§!上发生了一场§R叛乱§!！"
+ gpm_colony.250.c:0 "§H[Root.GetName]§!上的一小群无人机出现了故障。"
+
+ # 43 e
+ # Colony event: forest tiles created by endless forests growth
+ gpm_colony.260.name:0 "迅猛成长？"
+ gpm_colony.260.desc:0 "温和的气温和频繁的降雨造成了§H[Root.GetName]§!上森林在过去的几个季度里迅速蔓延。这些树木的生长速度过于迅速。为数不多的空地正被森林慢慢覆盖，变得跟星球上的其他地方一样。"
+ gpm_colony.260.a:0 "这可真是有好多树啊"
+ gpm_colony.260.hive:0 "我们的子个体稍后会清除它们"
+ gpm_colony.260.mach:0 "这将妨碍效率"
+ gpm_colony.260.b:0 "§G创造了至多三个森林地块。§!"
+
+ # 44 e
+ # Colony event: friendly queen spawned by hive world
+ gpm_colony.270.name:0 "接触"
+ gpm_colony.270.desc:0 "在一次对§H[Root.GetName]§!上其中一个蜂巢进行的考察中，其中一个探险队偶然在蜂巢深处发现了一个活体孵化室。起初，探险队想研究这个孵化器，但当其中一个科学家因为受到吸引去触摸孵化室的外层时，这一想法就不复存在了。一声巨响回荡在蜂巢中，覆盖在孵化室上的生物层破裂了，浓稠的紫色流浆开始流出，淹没了蜂巢下层的大部分区域。不久之后，蜂巢的顶部开始崩裂，这个巨大的生物从密室中出来了，直接飞上了天空。一艘监视探险队的科研船报告说，这个生物已经飞到了轨道上！看起来这个生物并没有敌意。事实上，它似乎对我们这个物种的成员有一种非同寻常的吸引力！"
+ gpm_colony.270.desc.hive:0 "在一次对§H[Root.GetName]§!上其中一个蜂巢进行的考察中，其中一个探险队偶然在蜂巢深处发现了一个活体孵化室。起初，探险队想研究这个孵化器，但当其中一个科学家因为受到吸引去触摸孵化室的外层时，这一想法就不复存在了。一声巨响回荡在蜂巢中，覆盖在孵化室上的生物层破裂了，浓稠的紫色流浆开始流出，淹没了蜂巢下层的大部分区域。不久之后，蜂巢的顶部开始崩裂，这个巨大的生物从密室中出来了，直接飞上了天空。一艘监视探险队的科研船报告说，这个生物已经飞到了轨道上！看起来这个生物并没有敌意。事实上，它似乎对我们这个集体有一种非同寻常的吸引力！"
+ gpm_colony.270.desc.mach:0 "在一次对§H[Root.GetName]§!上其中一个蜂巢进行的研究调查中，其中一个探险队偶然在蜂巢深处发现了一个活体孵化室。根据协议的规定，我们从这个孵化室的外层采集了一个样品。一声巨响回荡在蜂巢中，覆盖在孵化室上的生物层破裂了，浓稠的紫色流浆开始流出，淹没了蜂巢下层的大部分区域，协议停止了。不久之后，蜂巢的顶部开始崩裂，这个巨大的生物从密室中出来了，直接飞上了平流层。一艘指挥探索无人机的科研船报告说，这个生物已经到达了轨道。看起来这个生物并没有表现出任何的敌对模式。这个生物似乎在跟踪我们的科学船。数据库研究表明，这只「幼兽」已经和我们的无人机形成了「羁绊」。我们也许可以教它遵循某些模式。"
+ gpm_colony.270.a:0 "真是迷人"
+ gpm_colony.270.hive:0 "我们能感觉到它的思想"
+ gpm_colony.270.mach:0 "保持它活着，并研究它"
+ gpm_colony.270.b:0 "§G获得一个蜂后。§!"
+
+ # 45 e
+ # Colony event: enemy spider invasion from arachnophobia
+ gpm_colony.280.name:0 "它们翻越了围墙！"
+ gpm_colony.280.desc:0 "从我们殖民地的蜘蛛训练中心传来了可怕的消息！其中一个主室的门锁坏了，从那以后，里面的蜘蛛就一直在往外涌。已经传来了几百名研究人员和训练人员失踪的报告。训练中心的大部外立面也被网状物覆盖。如果不快点行动，我们可能会失去整个殖民地！"
+ gpm_colony.280.desc.hive:0 "从我们殖民地的蜘蛛训练中心传来了可怕的消息！其中一个主室的门锁坏了，从那以后，里面的蜘蛛就一直在往外涌。已经传来了几百个研究子个体和家畜失踪的报告。训练中心的大部外立面也被网状物覆盖。如果不快点行动，我们可能会失去整个殖民地！
+ gpm_colony.280.desc.mach:0 "从我们殖民地的蜘蛛训练中心传来了错误报告。主室的一个门锁出了故障，大量的蛛形纲动物逃了出来。看来我们的训练协议已经让这些蜘蛛变得非常不稳定。我们的安全系统已经观察到这些蜘蛛破坏了我们训练中心的一大片区域，并且撕毁了几个研究单元。"
+ gpm_colony.280.a:0 "我们必须帮助"
+ gpm_colony.280.hive:0 "我们必须行动"
+ gpm_colony.280.mach:0 "启动收容协议"
+ gpm_colony.280.b:0 "§R几个巨型蜘蛛群正在入侵主殖民地！§!"
+
+ # 46 e
+ # Colony event: building destroyed by giant worm
+ gpm_colony.290.name:0 "大地隆响"
+ gpm_colony.290.desc:0 "在规划我们§H[Root.GetName]§!上的殖民地时，我们犯了一个错误。殖民地最东边已经扩张到包括了那个山谷里的巨虫狩猎场。这个错误被发现得太晚了。两个周期前，一只巨虫和它的同伴从地下冒了出来，袭击了殖民地的东区。虽然由于巨虫的速度较慢，伤亡不大，但我们的基础设施已经遭到严重破坏。尽管这里仍然是虫子的领地，但音波击退系统现在已经安装到位，以阻止它们靠近。让我们希望这个可以起作用吧。"
+ gpm_colony.290.a:0 "真是可怕"
+ gpm_colony.290.mach:0 "归档报告"
+ gpm_colony.290.b:0 "§R一座建筑被摧毁了！§!"
+
+ # 47 e
+ # Colony event: pop eaten by carnivorous flies
+ gpm_colony.300.name:0 "孵化之地"
+ gpm_colony.300.desc:0 "§H[Root.GetName]§!殖民地最南端的一个水过滤系统发生了故障。这一不幸事件给当地的食肉蝇提供了一个理想的水上巢穴。没过多久，数以百万计的卵便孵化了出来，这些肉食蝇成群结对地追着殖民者而去，几千个殖民者被活活吃掉，消失得无影无踪。还有比这更糟糕的命运吗？"
+ gpm_colony.300.desc.hive:0 "§H[Root.GetName]§!殖民地最南端的一个水过滤系统发生了故障。这一不幸事件给当地的食肉蝇提供了一个理想的水上巢穴。没过多久，数以百万计的卵便孵化了出来，这些肉食蝇成群结对地追着子个体而去，几千个子个体被活活吃掉，消失得无影无踪。"
+ gpm_colony.300.desc.mach:0 "§H[Root.GetName]§!殖民地最南端的一个水过滤系统发生了故障。这一故障给当地的食肉蝇提供了一个理想的水上巢穴。没过多久，数以百万计的卵便孵化了出来，开始干扰当地的劳工无人机。它们扎进了我们无人机的关节，导致各种故障。我们已经在尚未故障的无人机，以及未来组装的无人机的关节处贴上了动能硅带，以保护它们免受未来可能发生的生物侵袭。"
+ gpm_colony.300.a:0 "多么可怕"
+ gpm_colony.300.hive:0 "我们能感觉到他们的痛苦"
+ gpm_colony.300.mach:0 "发送至档案馆"
+ #gpm_colony.300.b:0 "§RA pop has been killed.!§!"
+
+ # 48 e
+ # Colony event: all empty tiles get mushroom forest blocker by rapid mushroom growth
+ gpm_colony.310.name:0 "滋长蘑菇"
+ gpm_colony.310.desc:0 "传来了一份关于§H[Root.GetName]§!上巨型蘑菇林的报告。这些巨大的蘑菇似乎每隔几年才散布一次孢子。这件事最近才发生了过。当孢子从这些蘑菇的顶部发射出来时，天空连续几天都变成了鲜艳的粉红色。没过多久，这些孢子就把所有的东西都覆盖上了鲜艳的粉红色。几天后，蘑菇开始在所有能生长的地方生长。 "
+ gpm_colony.310.a:0 "有趣"
+ gpm_colony.310.b:0 "在空地块上添加了§H巨型蘑菇§!障碍。"
+
+ # 49 e
+ # Colony event: forest fire in proto/dense/endless forests clearing some tile blockers
+ gpm_colony.320.name:0 "§H[Root.GetName]§!上的林火"
+ gpm_colony.320.desc:0 "多次雷击引发§H[Root.GetName]§!上大规模的森林火灾。尽管这些大火离我们的主要聚居地有一段距离，但从许多地区都能看到它们产生的烟雾。如果运气好的话，这些大火会清理出一些土地，供我们以后开垦使用。"
+ gpm_colony.320.desc.mach:0 "多次雷击引发§H[Root.GetName]§!上大规模的森林火灾。尽管这些大火离我们的主要聚居地有一段距离，但从许多地区都能看到它们产生的烟雾。这些大火会极有可能会清理出一些土地，供我们以后占领并使用。"
+ gpm_colony.320.a:0 "很好。"
+ gpm_colony.320.mach:0 "同化这片土地"
+ gpm_colony.320.b:0 "§G至多三个区块障碍被清除了。§!"
+
+ # 50 e
+ # Colony event: huge forest fire on endless forests clearing all tile blockers and damaging buildings and killing a pop or two
+ gpm_colony.330.name:0 "169-F加急号紧急报告"
+ gpm_colony.330.desc:0 "殖民地§H[Root.GetName]§!传来了紧急报告，通知我们星球上发生了一场全球性的森林大火。由于极端的干旱和高温，这场森林大火几乎吞噬了整个星球的森林，并已蔓延到各个居住区和城镇。据估计，大火造成了数百万人死亡，基础设施损失达数万亿。"
+ gpm_colony.330.desc.mach:0 "殖民地§H[Root.GetName]§!传来了紧急报告，通知我们星球上发生了一场全球性的森林大火。由于极端的干旱和高温，这场森林大火几乎吞噬了整个星球的森林，并蔓延到各个制造业部门。据估计，大火造成了数百万个无人机融化，基础设施损失达数万亿。"
+ gpm_colony.330.a:0 "真是可怕"
+ gpm_colony.330.mach:0 "开始执行恢复协议"
+ gpm_colony.330.b:0 "\n§R多个人口被消灭§!\n§R多座建筑被摧毁§!\n§G所有森林地块障碍被清除§!"
+
+ # 51 e
+ # Colony event: new country spawns and “liberates" the planet in the name of the great one
+ gpm_colony.340.name:0 ""
+ gpm_colony.340.desc:0 ""
+ gpm_colony.340.a:0 ""
+ gpm_colony.340.b:0 ""
+
+ # 52 e
+ # Colony event: possible chain, to think about -> multi stage, stage 1 earthquake, stage 2 bad planet modifiers, stage 3 dead planet,  ends up destroying planet with a bang. From artificial core malfunction
+ gpm_colony.350.name:0 ""
+ gpm_colony.350.desc:0 ""
+ gpm_colony.350.a:0 ""
+ gpm_colony.350.b:0 ""
+
+ # The Crystal Beasts 1 - Crystalline Cave
+ gpm_colony.360.name:0 "结晶洞穴"
+ gpm_colony.360.desc:0 "经过多年的研究和探索，我们在§H[Root.GetName]§!上巨大水晶森林的深处发现了一个隐藏的宝石。\n\n调查小组偶然发现了一个似乎是从地面上冒出来的大洞，该调查小组旨在追踪人们认为是被水晶森林所吸引的生物。在入口周围，构成巨型森林的晶石植物出现的数量更多，笼罩着从地表隆起的土丘。 \n\n下到山洞里不久，便发现了一个大洞口，里面全是钻石和水晶碎片。虽然队伍要猎杀的生物似乎不在，但它曾经出现过的迹象却很多。调查队推测，这个山洞可能是一个或多个§H[Root.GetName]§!上神秘动物的巢穴。"
+ gpm_colony.360.a:0 "忘掉野兽，开采巢穴！"
+ gpm_colony.360.b:0 "我们必须进一步研究这个问题"
+
+  # The Crystal Beasts 2 - The Crystal Beast 
+ gpm_colony.361.name:0 "晶石兽"
+ gpm_colony.361.desc:0 "我们在水晶洞入口附近成功建立了一个前方研究站后，也在对周围环境认真地进行研究。通过检查里面遗留的各种生物垃圾，科学人员一直在努力的发现它们的秘密。\n\n不幸的是，这个巢穴似乎被科学小组发现得太晚了，因为似乎不管什么东西可能使用过这个洞穴，它们都已经离开了。不过，我们还是推测出这里以前的居民确实是一种奇异的生物，并由此确定了该物种是独居性的。\n\n科学家进一步断言，散落在星球上的巨大水晶森林与这些生物有某种共生关系。建议对这些水晶「植物」进行进一步得分析。"
+ gpm_colony.361.a:0 "我们必须注重资源的获取。"
+ gpm_colony.361.b:0 "分析晶体"
+
+ # The Crystal Beasts 3 - Unbridled Fury
+ gpm_colony.362.name:0 "怒不可遏"
+ gpm_colony.362.desc:0 "灾难发生了。水晶开采作业才刚刚开始，矿工们就在地下撞到了东西。从调查队最初发现的那个山洞开始，激光钻机就以最快的速度被架设了起来。\n\n在突破地表的瞬间，不可思议的事情发生了。整个山洞开始摇晃，石头在颤抖，洞壁震动的力量把钻头打掉了，把矿工拉到了地上。突然，仿佛有什么东西从沉睡中醒来，地面开始上升。\n\n尽管如此，思维敏捷的调查人员还是在大灾难期间成功扫描了行星表面。我们与地表得团队失去了联系，因为一个浑身都是水晶得巨大生物，从地面冲出来，飞到了轨道上。迟来的我们怀疑，洞穴本身可能只是这个巨大水晶怪物的头颅。"
+ gpm_colony.362.a:0 "骇人听闻！"
+ gpm_colony.362.spacecreature:0 "§R一个巨大的水晶怪物从地表出现。§!"
+
+ # The Crystal Beasts 4 - Perfected Harmonization
+ gpm_colony.363.name:0 "完善的协调"
+ gpm_colony.363.desc:0 "我们的科学家做出了一个不可思议的发现！我们已经在水晶洞外建立一个完整的研究站，对水晶本身的分析也在进行中。利用对行星表面的正电子扫描，研究小组已经确定了几种散布在地壳中的生物形态。\n\n此外，这些扫描还显示，这些生物至少有一部分被埋在地下，而有一小部分还在地上。当队员们亲眼目睹了「洞穴」从地表冲出来的时候，扫描结果的成因一下子明晰了。这揭示了洞窟本身就是其中一种生物！\n\n尽管它们有着兽性和令人难以置信的体型，但野兽似乎至少是有一半心智的。与这种生物建立基本的交流，使我们的研究人员深入了解了水晶和野兽之间的共生关系，以及野兽与星球本身的关系。\n\n据我们的科学家说，水晶兽本身就是星球宜居性的组成部分。由于与这些水晶兽的第一次愉快接触，我们对这些原生水晶的研究以及先进的共生关系的研究不断取得飞跃性进展。"
+ gpm_colony.363.a:0 "不可思议！ "
+ 
+ # planet ring events
+ # gpm_on_colonize.1.name:0 "Ring Mining"
+ # gpm_on_colonize.1.desc:0 "With the completion of our colony on §H[Root.GetName]§! in the §H[Root.solar_system.GetName]§! system we now have full access to planet's asteroid ring resources."
+ # gpm_on_colonize.1.option_1:0 "A small investment"
+ # gpm_on_colonize.1.option_2:0 "A decent investment"
+ # gpm_on_colonize.1.option_3:0 "A substantial investment"
+ gpm_on_colonize.1.TT:0 "Exploitation of the planet's rings is now possible :\n"
+ # gpm_on_colonize.1.RES_1_TT:0 "Adds §G1§! £minerals£ or £energy£ §HResource Site§! to each planetary ring in this system\n--------------\n"
+ # gpm_on_colonize.1.RES_2_TT:0 "Adds §G2§! £minerals£ or £energy£ §HResource Sites§! to each planetary ring in this system\n--------------\n"
+ # gpm_on_colonize.1.RES_3_TT:0 "Adds §G3§! to §G4§! £minerals£ or £energy£ §HResource Sites§! to each planetary ring in this system\n--------------\n"
+ # gpm_on_colonize.1.RingsTT:0 "\nIn addition, Adds §G1§! to §G4§! £minerals£ or £energy£ §HResource Sites§! to each planetary ring in this system"
+ 
+ #######################################
+ #### Capital Event Chains
+ #######################################
+ # 53 e
+ # Capital Colony Events
+ # Capital Event - authoritarian -> Work Camps stage 1
+ gpm_colony.4100.name:0 "§Y首都：§!发生抗议活动"
+ gpm_colony.4100.desc:0 "许多公民对我们的统治越来越不满。在过去的几年中，他们开始组织集会和游行，要求发出自己的声音。最近，许多此类抗议活动已经失控，并引发了骚乱，对当地基础设施造成了严重破坏。我们必须为这些持不同政见者采取些措施。"
+ gpm_colony.4100.a:0 "向当地警察发布指示，镇压这些抗议活动。"
+ # Capital Event - authoritarian -> Work Camps stage 2
+ gpm_colony.4110.name:0 "§Y首都：§!逐渐失控"
+ gpm_colony.4110.desc:0 "用我们当地军队镇压抗议活动的指示一度成功了，但不幸的是这并没有持续下去。一些地方政客似乎是最近骚乱的幕后黑手。人们看到他们聚集选民出去抗议."
+ gpm_colony.4110.a:0 "宣布未经许可的抗议活动非法。"
+ # Capital Event - authoritarian -> Work Camps stage 3
+ gpm_colony.4120.name:0 "§Y首都：§!监狱人满为患"
+ gpm_colony.4120.desc:0 "最近颁布的针对破坏性抗议的法律导致我们的监狱爆满。为了维持秩序，必须探索新的解决方案。但是，法律产生了积极的影响，和平与秩序已回到了我们的首都。我们想研究其他惩罚手段，以同时解决日益增加的惩罚成本和刑罚裁量的问题。
+ gpm_colony.4120.a:0 "行吧，给我一个办法。"
+ # Capital Event - authoritarian -> Work Camps stage 4
+ gpm_colony.4130.name:0 "§Y首都：§!异见人士劳改营提案"
+ gpm_colony.4130.desc:0 "我们正在提议将大量废弃的基础设施场所转换为复杂的劳改营地。犯罪分子将在那里服刑，并参加各种项目以造福社会。 这些项目将包括人工劳动，例如清洁和垃圾收集，以及更具挑战性的任务。"
+ gpm_colony.4130.a:0 "批准提案。"
+ # Capital Event - authoritarian -> Work Camps stage 5
+ gpm_colony.4140.name:0 "§Y首都：§!劳改营建成"
+ gpm_colony.4140.desc:0 "大量劳改营已经建成。这些营地虽然听起来令人恐惧，但实际上却很舒适。它们提供惊人的高舒适度与高级照护。所有囚犯每天都可以享受三顿饭和丰富的活动。"
+ gpm_colony.4140.a:0 "很棒的解决方案。"
+
+ # 54 e
+ # Capital Event - egalitarian -> gpm_galactic_equality stage 1
+ gpm_colony.4200.name:0 "§Y首都：§!欣欣向荣"
+ gpm_colony.4200.desc:0 "多年以来，我国首都的市民们一直在享受着日益增长的繁荣。因此他们自发地选择了这一天作为庆祝的日子。当地政客也没有袖手旁观。他们已经开始在全国各地举办各种庆典和活动。这一切的繁荣，都来自于我们的公民权利政策。特别是我们的首都保证了每个人都是自由平等的公民。我们的公民现在希望把这些权利赋予我们的殖民地。"
+ gpm_colony.4200.a:0 "我们会见证的。"
+ # Capital Event - egalitarian -> gpm_galactic_equality stage 2
+ gpm_colony.4210.name:0 "§Y首都：§!权利运动"
+ gpm_colony.4210.desc:0 "我们的公民和我们的殖民地代表在我们的首都世界组织了几次和平抗议活动。他们要求我们整个帝国的所有公民享有平等的权利。殖民者和「母星人」不应该再被认为是不同的人。民众要求将这一规定落实到各地的法律中去"
+ gpm_colony.4210.a:0 "也许他们是对的。"
+ # Capital Event - egalitarian -> gpm_galactic_equality stage 3
+ gpm_colony.4220.name:0 "§Y首都：§!修宪提议"
+ gpm_colony.4220.desc:0 "我们的政府提出了一项建议，宣布将所有公民享有平等权利加入我国宪法，作为一项基本权利。这项宪法修正案将包括这些内容，宣布所有公民，无论是在我们的母星，在殖民地，在太空，还是在其他地方出生的，都被视为平等的，并被平等地赋予了全部公民权利。 我们的政府官员现在将投票决定这是否成为法律。"
+ gpm_colony.4220.a:0 "投赞成票。"
+ gpm_colony.4220.c:0 "投反对票。"
+ # Capital Event - egalitarian -> gpm_galactic_equality stage 4
+ gpm_colony.4230.name:0 "§Y首都：§!人人平等！"
+ gpm_colony.4230.desc:0 "我们政府的大多数人都投了赞成票！现在，我们帝国中的所有公民、所有成员都在法律上一律平等。这一消息迅速地传播到了我们的殖民地以及其他物种的邻近殖民地，我们的殖民地正在庆祝这一欢乐时刻。这一消息可能使我们在我们的盟友和邻居中更受欢迎。"
+ gpm_colony.4230.a:0 "真是一个重要的时刻。"
+ 
+ # 55 e
+ # Capital Event - materialist -> gpm_augment_integrated_systems stage 1
+ gpm_colony.4300.name:0 "§Y首都：§!科学突破"
+ gpm_colony.4300.desc:0 "经过多年的不懈努力，我们的科学家在生物学和控制论研究方面取得了重大突破。他们实现了一个不可能的目标：架起思想与机器的桥梁。通过使用专用连接器，我们的科学家设法将脑细胞的数据输入到了计算机芯片中，并通过从该芯片输出新数据来创建新的神经元。 从理论上讲，应该有可能扩大该系统的规模，并使它在更大，更复杂的大脑上运行。该项目背后的科学团队将开始开发技术和方法，以在活体上测试系统，不过现在只能在小型活体上测试。"
+ gpm_colony.4300.a:0 "难以置信。"
+ # Capital Event - materialist -> gpm_augment_integrated_systems stage 2
+ gpm_colony.4310.name:0 "§Y首都：§!脑机接口"
+ gpm_colony.4310.desc:0 "我们在神经机械学大脑植入物方面的最新研究进展顺利。科学家们报告说，在脑机连接技术方面取得了很好的结果。在小动物身上的测试已经取得了成功。其中一项测试涉及到给动物提供如何解决迷宫的数据，然后它们成功地完成了迷宫。我们的科学团队希望开始在更高的智力测试对象上测试该系统，比如更大的动物，甚至可能是智人。他们还想开始使用先进的机器学习技术和算法进行优化。"
+ gpm_colony.4310.a:0 "随时向我回报进展。"
+ # Capital Event - materialist -> gpm_augment_integrated_systems stage 3
+ gpm_colony.4320.name:0 "§Y首都：§!本地集成节点"
+ gpm_colony.4320.desc:0 "利用机器学习来提高我们对大脑与机器连接的理解，已经产生了难以想象的效果！新开发出来的材料和技术以及将死亡率降低到接近0。我们相信，我们已经具备了将其应用到市民身上的技术，可以进行大规模部署。如果民众已经准备好了接受这种侵入性的手术，部署脑机接口可能是个好主意，"
+ gpm_colony.4320.a:0 "很好，继续工作吧。"
+ # Capital Event - materialist -> gpm_augment_integrated_systems stage 4
+ gpm_colony.4330.name:0 "§Y首都：§!继承节点标准化"
+ gpm_colony.4330.desc:0 "我们的最新研究表明，我们的公民思想很开放，并准备好了使用脑机连接技术。研究表明，社会上对这个想法的阻力很小。我们已经提出了一套标准化的措施，所有新的建筑项目都必须遵守。新的建筑将配备集成数据节点。人们可以将自己的植入物插入这些节点，直接下载或上传数据到自己的大脑中。"
+ gpm_colony.4330.a:0 "听起来很不错。"
+ # Capital Event - materialist -> gpm_augment_integrated_systems stage 5
+ gpm_colony.4340.name:0 "§Y首都：§!广泛设立的集成节点"
+ gpm_colony.4340.desc:0 "由于较新的建筑工程项目都会装设集成节点，因此，在政府大楼内装设这些节点的需求越来越大。人们希望在政府大楼和政府中心等待时，能够继续工作或娱乐。人们对公共场所的这些节点的需求也在迅速增长。我们应该拨出部分基建款项，以改善现有的基建设施。"
+ gpm_colony.4340.a:0 "批准资金变动。"
+ # Capital Event - materialist -> gpm_augment_integrated_systems stage 6
+ gpm_colony.4350.name:0 "§Y首都：§!免费的数据链接增强"
+ gpm_colony.4350.desc:0 "现在，很多市民都选择了用数据链接来强化自身，并且很多人都实施了。现在，他们可以在我们整个星球上的各个角落里 「插上」这些集成节点。虽然强化型公民的数量比预期的要少，但参与率却在稳步上升。我们决定，对下一代数据链接增强和集成节点进行补助。这样一来，大多数市民进行强化的准入门槛就会降低很多。我们星球上的每一个居民很快都会利用这些植入物和节点来大幅度提升自己的能力。"
+ gpm_colony.4350.a:0 "知识就是力量。"
+
+ 
+ # 56 e
+ # Capital Event - spiritualist -> gpm_mysterious_force stage 1
+ gpm_colony.4400.name:0 "§Y首都：§!冥想致知"
+ gpm_colony.4400.desc:0 "在我们的首都星球的几个城市，市民们都要求建设公共冥想场所，让他们聚集在一起，谈论人生，并进行冥想。这个奇怪的要求似乎是一种新的哲学在我们的人群中传播的结果。这种哲学告诉我们，只有通过科学和冥想来理解宇宙，才能找到真正的和平与安宁。毕竟，学而不思则罔。"
+ gpm_colony.4400.a:0 "我们与原力同在。"
+ # Capital Event - spiritualist -> gpm_mysterious_force stage 2
+ gpm_colony.4410.name:0 "§Y首都：§!奇异心像"
+ gpm_colony.4410.desc:0 "有几个人把大部分的闲暇时间都花在了冥想上，他们正经历着一种奇怪的感觉。某种宁静、安详的感觉笼罩了他们。他们最后说话的声音越来越慢，声音越来越小。到目前为止，尽管人们认为这只是一种心理状态，但还没有找到科学的解释。"
+ gpm_colony.4410.a:0 "And yet, I feel something..."
+ # Capital Event - spiritualist -> gpm_mysterious_force stage 3
+ gpm_colony.4420.name:0 "§Y首都：§!顿悟潮涌"
+ gpm_colony.4420.desc:0 "一阵阵能量波动从我们的首都星球爆发出来，向着宇宙的四面八方扩散开来。市民们纷纷报告他们内心强烈的平静感。虽然我们无法确定，但这股波动似乎与越来越多的市民感受到的宁静感有关。就连我们的领袖也开始体验到了对生活的理解的变化。宇宙已经向我们敞开了心扉，也许我们应该听一听."
+ gpm_colony.4420.a:0 "我想我要为此冥想。"
+ # Capital Event - spiritualist -> gpm_mysterious_force stage 4
+ gpm_colony.4430.name:0 "§Y首都：§!神秘之力"
+ gpm_colony.4430.desc:0 "几个月来，自从能量波事件发生后，不断有报道称人们能做到一些奇怪的事情，一些科学上不可能发生的事情。然而，这一切真的在发生。有人看到我们的一些公民可以用意念移动物体，比如说随意关门、开门等。还有一些人可以操纵我们的灯光中的能量。有的人似乎是一言不发就能互相交流。\n这不仅影响到了人，就连大自然也表现得很奇怪。当市民靠近时，野生动物会显得非常平静，反之亦然。就好像每个人都知道不要害怕对方一样。我们的世界发生了一些变化。\n现在的问题是，我们该怎么做？我们应该如何使用这股力量？它是一种向善的力量吗？还是一种邪恶的力量？我们是用它来帮助弱者，还是用它来帮助我们自身，让我们的力量变得强大？有太多的问题需要回答。"
+ gpm_colony.4430.a:0 "这股力量是……"
+
+ # 57 e
+ # Capital Event - military -> gpm_mandatory_military_service stage 1
+ gpm_colony.4500.name:0 "§Y首都：§!保持警戒"
+ gpm_colony.4500.desc:0 "我们的军事领袖建议，在与我们所遇到的外星种族的交流中，我们应该小心谨慎。虽然我们现在可能与另一个种族和平相处，但他们有可能在未来选择攻击我们。我们的顾问建议我们继续监视我们的邻居和他们舰队的动向，看看有没有威胁到我们帝国的迹象。"
+ gpm_colony.4500.a:0 "今天我们是朋友，明天可能就是敌人。"
+ # Capital Event - military -> gpm_mandatory_military_service stage 2
+ gpm_colony.4510.name:0 "§Y首都：§!新的训练计划"
+ gpm_colony.4510.desc:0 "虽然我们已经对士兵们安排了严格的训练计划，但负责人认为这些方法需要更新，以进一步提高我们军队的能力。我们的军事领袖警告说，如果没有新的训练计划，我们可能会在下一场星系间战争中战败。新提出建议的训练方法将确保我们的军队能更好地为我们可能面临的任何军事挑战做好应对准备。我们帝国的命运可能有一天会落在我们士兵的肩上。"
+ gpm_colony.4510.a:0 "批准新的训练措施。"
+ # Capital Event - military -> gpm_mandatory_military_service stage 3
+ gpm_colony.4520.name:0 "§Y首都：§!征兵活动"
+ gpm_colony.4520.desc:0 "新的太空作战和模拟行星入侵的训练方法进展顺利。我们现在应该为任何不可避免的战争做好了更好的准备。然而，我们的士兵人数仍然很少，我们的军事领袖坚持认为我们需要更多的特种兵。他们建议我们在首都星球组织一次征兵活动。这次活动将为市民提供一个了解兵役的机会，同时鼓励人们参军入伍。"
+ gpm_colony.4520.a:0 "组织一次征兵活动。"
+ # Capital Event - military -> gpm_mandatory_military_service stage 4
+ gpm_colony.4530.name:0 "§Y首都：§!强制兵役"
+ gpm_colony.4530.desc:0 "多年以来，我们一直允许我国公民自愿选择在军队中服役。然而，随着时代的变化和潜在威胁的增加，我们不能再依靠公民的爱国主义来确保我们军队的生命力。为了覆盖每一种可能的敌方战术和战略，我们需要训练每一个有能力服役的人。我们的军事领袖提议，在我们的首都星球实行义务兵役制。"
+ gpm_colony.4530.a:0 "这是个好主意。我们需要更多有能力的士兵。"
+ # Capital Event - military -> gpm_mandatory_military_service stage 5
+ gpm_colony.4540.name:0 "§Y首都：§!满城精锐"
+ gpm_colony.4540.desc:0 "虽然付出了很多时间以及巨大的代价，但在首都星球我们终于有了向每一个有能力的公民提供军事训练的基础设施。我们的军事顾问们对目前的结果很满意，而来自普通民众的报告也表面，他们对新的军事任务充满了热情。到今天为止，我们的首都世界已经完全做好了战斗准备，我们的帝国也因此变得更加强大。"
+ gpm_colony.4540.a:0 "没有敌人可以打败我们了。"
+ 
+ # 58 e
+ # Capital Event - pacifist -> gpm_monument_to_the_stars stage 1
+ gpm_colony.4600.name:0 "§Y首都：§!瞥见天堂"
+ gpm_colony.4600.desc:0 "长久以来，我们的人们一直在仰望星空，享受着星空带来的宁静与安宁。有些人在浩瀚无垠的黑夜中发现了孤独，有些人在思索我们在浩瀚宇宙中的位置时感受到了渺小。然而，我们的艺术家和科学家们长期以来一直受到星星的启发，我们所有的人都被鼓励着去想象我们视线之外的事物。谁知道恒星之间会有什么看不见的奇迹呢？"
+ gpm_colony.4600.a:0 "对生命的探索还在继续。"
+ # Capital Event - pacifist -> gpm_monument_to_the_stars stage 2
+ gpm_colony.4610.name:0 "§Y首都：:§!「和平」真谛"
+ gpm_colony.4610.desc:0 "我们的人民希望通过一种方式来表达我们对新物种的热情，让他们知道我们热爱一切生命。这应该是一个大家都能看到并欣赏的标志。在我们的首都星球，一位著名的艺术家提出了这样的建议，那就是建立一座纪念碑，向所有居住在我们银河系的人传达和平的信息."
+ gpm_colony.4610.a:0 "建造纪念碑真是个好主意。"
+ # Capital Event - pacifist -> gpm_monument_to_the_stars stage 3
+ gpm_colony.4620.name:0 "§Y首都：§!建设开始"
+ gpm_colony.4620.desc:0 "经过我们的同意，提出纪念碑构思的艺术家召集了一个团队进行设计。这些设计方案经过审查、修改、再审查，并通过一系列的模拟和模型进行测试。现在，它们被批准了，纪念碑的建造已经在我们的首都星球开始了。这将是一项庞大的工程，需要大量的材料和时间来完成。"
+ gpm_colony.4620.a:0 "随时告知我进展。"
+ # Capital Event - pacifist -> gpm_monument_to_the_stars stage 4
+ gpm_colony.4630.name:0 "§Y首都：§!建设受阻"
+ gpm_colony.4630.desc:0 "纪念碑的建造工作已经完成了大约一半。遗憾的是，负责组装庞大的纪念碑的建筑师和施工人员出了一些差池，使工程进度滞后。这是施工现场周围经常形成的人潮造成的。施工引起的关注度超过了我们的预期，每个人都希望看到这段历史的诞生。为了解决这个问题，一位艺术家提议让市民们在项目上做志愿者。此举获得了极大的成功，现在成为志愿者的排队时间已经相当长了。我们设置了额外的巡逻队来确保群众保持安全距离，让工作得以正常恢复。"
+ gpm_colony.4630.a:0 "继续推进建设。."
+ # Capital Event - pacifist -> gpm_monument_to_the_stars stage 5
+ gpm_colony.4640.name:0 "§Y首都：§!致敬星海"
+ gpm_colony.4640.desc:0 "已建成的纪念碑耸立在我们首都城市的上空，这是一项复杂而令人惊叹的成就。它不仅是银河系和平的标志，也是我们的人民团结一致的标志，他们花了很多很多个月的时间共同完成这个项目。它的设计十分精致，给所有观看的人带来了一种和平的感觉，无论是从下面还是上面看，都能感受到和平的气息。光滑的陶瓷、弧形的金属和闪亮的水晶融为一体，成为一座真正无愧于星空的丰碑。这座闪耀着希望与和平的灯塔，向整个行星系乃至更远的地方发出一个信息：「我们提供和平。我们提供爱，我们提供友谊。」我们希望所有听到这个信息的人，不管是我们的盟友还是未曾谋面的外星人，都能理解这个信息，并向我们发出同样的信息。"
+ gpm_colony.4640.a:0 "这真是一个致敬星海的纪念碑。"
+ 
+ # 59 e
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 1
+ gpm_colony.4700.name:0 "§Y首都：§!不公贸易"
+ gpm_colony.4700.desc:0 "我们帝国各地的公民都在抱怨邻国的不公平贸易。虽然投诉的内容比较含糊而不具体，但我们对此事的初步调查显示，异种商人无视我们当地的贸易和边境法律。官员们对这一发现感到愤怒，正在游说要求对此事进行更深入的调查。"
+ gpm_colony.4700.a:0 "开启调查。"
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 2
+ gpm_colony.4710.name:0 "§Y首都：§!异种商人调查"
+ gpm_colony.4710.desc:0 "对异种商人贸易行为的调查正在进行中。虽然我们已与邻近帝国的代表进行了联系，但他们回避了我们的问题，拒绝提供协助。他们声称这些商人是独立于他们的帝国之外，因此他们没有理由调查此事。同时，异种商人还在继续违反我们的贸易法，破坏当地的经济。虽然我们的邻居们的冷漠让人沮丧，但我们必须继续调查此事。我们帝国的福祉可能会受到威胁"
+ gpm_colony.4710.a:0 "非我族类，其心必异。"
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 3
+ gpm_colony.4720.name:0 "§Y首都：§!调查继续"
+ gpm_colony.4720.desc:0 "对异种商人贸易行为的调查已经结束。很明显，他们几乎违反了所有现行的地方贸易法。对他们关闭我们的边境没有任何效果，因为他们只会想方设法绕过我们的巡逻和现有的识别协议。有人提出了一项建议，即彻底禁止没有政府颁发许可证的贸易，并允许当地的军舰押送异种商人离开我们的空域。"
+ gpm_colony.4720.a:0 "批准禁令。"
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 4
+ gpm_colony.4730.name:0 "§Y首都：§!需要采取更强力的措施"
+ gpm_colony.4730.desc:0 "尽管我们尽了最大的努力来防止异种商人进入我们的帝国，但许多人还是公然违反了无证贸易的禁令。这些无赖的外异种商人也变得相当狡猾，他们的贸易行为很容易躲开我们的军舰。我们的殖民地饱受困扰，我们必须采取一些措施。虽然我们再次向邻国请求援助，但他们都拒绝了。还能做些什么来保护我们的帝国？
+ gpm_colony.4730.a:0 "发布新的指令：逮捕他们。"
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 5
+ gpm_colony.4740.name:0 "§Y首都：§!海盗始动"
+ gpm_colony.4740.desc:0 "我们的军队已经发起了几次小规模的行动来追捕这些流氓的异种商人。虽然最初的尝试似乎取得了成功，但新的报告很快纷至沓来。首先是来自我们的外围星系，然后是来自离我们帝国核心区较近的殖民地。许多流氓异种人中已经转而直接做起了海盗，在一个殖民地欺骗偷窃，然后卖给另一个殖民地。有些人开始向我们的殖民地出口劣质资源，这往往导致灾难性的结果。如果不采取措施阻止这些海盗，我们的经济可能会崩溃。"
+ gpm_colony.4740.a:0 "发布民间悬赏。"
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 6
+ gpm_colony.4750.name:0 "§Y首都：§!狩猎开始"
+ gpm_colony.4750.desc:0 "我们的新政策是让平民去追捕这些无赖的异种商人和海盗，以换取赏金，事实证明，这很受欢迎，也很有效。我们的外围殖民地终于可以开始在自己的贸易下茁壮成长了。虽然我们仍然经常收到关于流氓商人的报告，但我们也同样张贴了很多悬赏令并抓到了人。我们的官员和平民都对结果相当满意，有人建议我们把这种赏金狩猎作为一项长期政策。"
+ gpm_colony.4750.a:0 "我们会这么办的。"
+ # Capital Event - xenophobe -> gpm_ministery_of_the_hunt stage 7
+ gpm_colony.4760.name:0 "§Y首都：§!狩猎部"
+ gpm_colony.4760.desc:0 "经过长时间的辩论和大量的文件工作，我们成功地成立了狩猎部。这个新的政府组织将监督所有关于赏金狩猎的法规和政策。他们将负责处理交战规则、领地狩猎权和支付系统。一开始的异种商人的麻烦问题，现在已经发展成了我们公民新的经济机会。多亏了那些商人和海盗，他们为了自己的利益而想要削弱我们的失败努力，已经使我们的帝国变得更加强大。他们不会再对我们构成威胁，本部将确保我们的公民因为他们赏金狩猎努力得到恰当的补偿。"
+ gpm_colony.4760.a:0 "我们会从中受益。"
+ 
+ # 60 e
+ # Capital Event - xenophile -> gpm_galactic_outreach_program stage 1
+ gpm_colony.4800.name:0 "§Y首都：§!庆祝友谊"
+ gpm_colony.4800.desc:0 "我们的首都星球的地方总督们正在考虑设立一个庆祝日，以表彰物种多样性和并纪念发现新的外星邻居。他们要求我们的政府把这一天定为全球节日，以表示我们对我们的外星朋友的赞美之心，同时也为我们提供了一个与银河系所有其他生命接触的机会。."
+ gpm_colony.4800.a:0 "不仅要设，还要把它设立为全银河系的节日。"
+ # Capital Event - xenophile -> gpm_galactic_outreach_program stage 2
+ gpm_colony.4810.name:0 "§Y首都：§!我们是否能做更多?"
+ gpm_colony.4810.desc:0 "第一次一年一度的银河系全物种多样性与平等庆典活动取得了巨大的成功。我国公民对这个节日的设立感到非常高兴。然而，我们的政府想知道，除了这个简单的纪念活动之外，我们是否还能做更多的事情来表达我们对银河系中所有物种的关心。"
+ gpm_colony.4810.a:0 "让我们内部讨论一下。"
+ # Capital Event - xenophile -> gpm_galactic_outreach_program stage 3
+ gpm_colony.4820.name:0 "§Y首都：§! Extending a Hand in Friendship"
+ gpm_colony.4820.desc:0 "经过长时间的热烈讨论，我们的政府决定，在这个节日里，我们将一如既往地投入额外的资源，向银河系中的每一个文明伸出援助之手。无论他们是朋友还是敌人，我们都会伸出友谊之手，希望他们也能这样做。在这一天，我们永远会将不管是在我们的文明内，还是在我们的文明外每一个人，都视为朋友，并努力寻找共同的利益和价值。"
+ gpm_colony.4820.a:0 "这也将成为我们帝国的基础。"
+ # Capital Event - xenophile -> gpm_galactic_outreach_program stage 4
+ gpm_colony.4830.name:0 "§Y首都：§!永恒友谊"
+ gpm_colony.4830.desc:0 "我们的政府通过了一项正式的、具有约束力的法案，这一外展计划连同这一节日都成为我们社会的共识。这一法案的宣布后，我们的首都星球和整个帝国的街道上都在举行庆祝活动，我们在创造一个充满希望和友谊的银河系的旅程中迈出的全新的一步，我们的公民们在为之欢呼。"
+ gpm_colony.4830.a:0 "有朋自远方来，不亦乐乎。"
+ 
+  # 61 e
+ # Capital Event - hive mind -> gpm_synopsys_nodes stage 1
+ gpm_colony.4900.name:0 "§Y首都：§!连接难系"
+ gpm_colony.4900.desc:0 "我们文明强大的原因之一是我们有一个辽阔的帝国。然而，这也正在成为一个弱点，我们的公民因为巨大的距离更难以保持受控。我们的政府官员担心，如果不解决这个问题，我们的社会诚信将受到无法弥补的破坏。"
+ gpm_colony.4900.a:0 "我们会研究这一问题。"
+ # Capital Event - hive mind -> gpm_synopsys_nodes stage 2
+ gpm_colony.4910.name:0 "§Y首都：§!链路升级"
+ gpm_colony.4910.desc:0 "我们的科学家们认为，可以通过基因组编辑和神经机械学植入物的结合来解决在我们庞大的帝国中保持蜂巢连接的问题。通过改变我们的身体形态，使之与极具特化的植入物兼容，理论上我们可以将蜂巢的心灵联系提高一千倍甚至更多。"
+ gpm_colony.4910.a:0 "这是一个可能的解决方案。做下去吧。"
+ # Capital Event - hive mind -> gpm_synopsys_nodes stage 3
+ gpm_colony.4920.name:0 "§Y首都：§!首次实验"
+ gpm_colony.4920.desc:0 "拟议的基因组编辑和神经机械学植入物的组合在最初的实验中已经成功了。单个细胞的小规模基因组编辑已经为我们提供了希望，因为这些修改后的细胞可以与简单的电子设备相互作用。有必要进行更大规模的实验，以确定是否可以用更复杂的信号进行更复杂的实验。"
+ gpm_colony.4920.a:0 "继续研究。"
+ # Capital Event - hive mind -> gpm_synopsys_nodes stage 4
+ gpm_colony.4930.name:0 "§Y首都：§!深入实验"
+ gpm_colony.4930.desc:0 "我们的科学家们为这个项目呕心沥血，面对一个又一个的挫折和障碍。尽管有时他们担心永远找不到解决方案，但基因组编辑和神经机械学连接的实验最终成功了。我们现在可以开始在民用测试对象身上测试这些技术和植入物，这被称为思维节点。"
+ gpm_colony.4930.a:0 "寄希望于成功。"
+ # Capital Event - hive mind -> gpm_synopsys_nodes stage 5
+ gpm_colony.4940.name:0 "§Y首都：§! We Are One"
+ gpm_colony.4940.desc:0 "最初的几个测试对象排斥了植入物，但进一步的基因组修改纠正了这个问题。我们最近用思维节点进行的测试已经证明相当成功。我们首都星球的公民已经开始适应，这种适应会继续下去，直到我们的蜂巢连接足够强大，可以到达银河系的每一个角落。当我们加强了我们的联系，我们也加强了我们的帝国。"
+ gpm_colony.4940.a:0 "这是我们伟大的一天。"
+ 
+ # 62 e
+ # Capital Event - machine empires -> gpm_rapid_assembly_systems stage 1
+ gpm_colony.5000.name:0 "§Y首都：§!脱贫攻坚"
+ gpm_colony.5000.desc:0 "多年以来，我们的重心一直都放在扩大帝国上。领土越多越好。然而，在建立殖民地的过程中花费了这么多的精力，我们的首都星球的基础设施却已经过时了。虽然我们帝国外围的殖民地都在不断的进行着最新的科技改进，但是我们的首都星球的科技依然停滞不前。在某些情况下，这里的技术已经无法与我们殖民地上最新实施的技术兼容。我们的领袖们都在主张升级我们的基础设施。如果我们的一些平民生活在如此恶劣的条件下，我们怎么能称自己为银河系中最伟大的种族呢？""
+ gpm_colony.5000.a:0 "开始计划进行升级。"
+ # Capital Event - machine empires -> gpm_rapid_assembly_systems stage 2
+ gpm_colony.5010.name:0 "§Y首都：§!争分夺秒"
+ gpm_colony.5010.desc:0 "虽然升级我们首都星球的基础设施是一项紧迫的工程，但我们还是需要认真规划，避免影响到当前的运行。经过一番考虑后，我们开发了几个算法系统，确定了开始升级我们的老式基础设施的最佳方式。既然计算已经完成了，我们可以建造一些新设计的装配系统，加快升级模块的建造速度。"
+ gpm_colony.5010.a:0 "集中力量办大事。"
+ # Capital Event - machine empires -> gpm_rapid_assembly_systems stage 3
+ gpm_colony.5020.name:0 "§Y首都：§!系统就绪"
+ gpm_colony.5020.desc:0 "虽然花了一些时间准备，但我们首都星球上老化的基础设施算可以升级了。精心的规划让我们能够将庞大的资源智能地分配到整个星球的关键点。现在，一切准备就绪，可以开始施工了。预计这些升级对日常运作造成的干扰已经最小化。"
+ gpm_colony.5020.a:0 "很好，开始升级。"
+ # Capital Event - machine empires -> gpm_rapid_assembly_systems stage 4
+ gpm_colony.5030.name:0 "§Y首都：§!一板一眼"
+ gpm_colony.5030.desc:0 "按照领袖的要求，我们的工人们已经提交了一份关于基础设施改造的进度报告。我们的工作已经完成了一半左右，而且与计划十分吻合。我们的正常运行没有受到严重干扰。在升级过程中，我们的星球正在以额定值生产资源。如果项目的其余部分继续按计划进行，我们预计很快就能完成这些升级工作。"
+ gpm_colony.5030.a:0 "这是个好消息。继续进行升级。"
+ # Capital Event - machine empires -> gpm_rapid_assembly_systems stage 5
+ gpm_colony.5040.name:0 "§Y首都：§!快速组装"
+ gpm_colony.5040.desc:0 "我们的首都星球基础设施的升级改造终于完成了。它再一次成为了我们文明的巅峰。新安装的现代化系统和软件都在最佳状态下运行，我们的资源产出也是前所未有的高。我们现在可以把重心再次转向扩张并进一步发展帝国科技。我们再也不会让我们的首都星球陷入那种的破败状态。我们的帝国要想强大，就必须保持它每一个方面的强大。"
+ gpm_colony.5040.a:0 "没有帝国比我们更完美了。"
+
+ # Terraform Decision event to upgrade machine worlds
+ gpm_terraform.1.name:0 "Machine World Enhanced"
+ gpm_terraform.1.desc:0 "The integrations to our machine World §H[from.GetName]§! with alien artifacts has been completed. We can now decide which aspect of the machine world we want to enhance."
+ gpm_terraform.1.science:0 "Science Research Efficiency"
+ gpm_terraform.1.energy:0 "Energy Production Efficiency"
+ gpm_terraform.1.minerals:0 "Mineral Production Efficiency"
+ gpm_terraform.1.alloy:0 "Alloy Fabrication Efficiency"
+ gpm_terraform.1.rare:0 "Exotic Resource Fabrication Efficiency"
+
+
+
+
+
+  

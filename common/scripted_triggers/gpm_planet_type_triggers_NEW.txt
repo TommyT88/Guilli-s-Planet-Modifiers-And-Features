@@ -1,0 +1,162 @@
+gpm_is_planet_fallen_empire = {
+	exists = owner
+	owner = {
+		OR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}
+gpm_is_fallen_empire_space_owner = {
+	exists = space_owner
+	space_owner = {
+		OR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}
+gpm_is_planet_primitive = {
+	exists = owner
+	owner = {
+		is_primitive = yes
+	}
+}
+
+
+
+
+#############################
+### Used for Terraforming ###
+#############################
+gpm_is_planet_water = {
+	OR = {
+		is_planet_class = pc_gaia					# Vanilla
+		is_planet_class = pc_continental			# Vanilla
+		is_planet_class = pc_ocean					# Vanilla
+		is_planet_class = pc_arctic					# Vanilla
+		is_planet_class = pc_aquatic				# PD
+		is_planet_class = pc_desertislands			# PD
+		is_planet_class = pc_med					# PD
+		is_planet_class = pc_superhabitable			# PD
+		is_planet_class = pc_flat_world				# GE
+		is_planet_class = pc_coral					# PD
+		is_planet_class = pc_storm					# PD
+		is_planet_class = pc_megafloratol			# PD
+		is_planet_class = pc_tepid					# PD
+	}
+}
+
+#############################
+### Used for Terraforming ###
+#############################
+gpm_is_planet_wet_hot = {
+	OR = {
+		is_planet_class = pc_gaia					# Vanilla
+		is_planet_class = pc_continental			# Vanilla
+		is_planet_class = pc_alpine					# Vanilla
+		is_planet_class = pc_tropical				# Vanilla
+		is_planet_class = pc_ocean					# Vanilla
+		is_planet_class = pc_aquatichot				# PD
+		is_planet_class = pc_cascadian				# PD
+		is_planet_class = pc_swamp					# PD
+		is_planet_class = pc_wetswamp				# PD
+		is_planet_class = pc_mangrove				# PD
+		is_planet_class = pc_desertislands			# PD
+		is_planet_class = pc_oasis					# PD
+		is_planet_class = pc_hajungle				# PD
+		is_planet_class = pc_mushroom				# PD
+		is_planet_class = pc_retinal				# PD
+		is_planet_class = pc_forest					# PD
+		is_planet_class = pc_med					# PD
+		is_planet_class = pc_tidallylocked			# PD
+		is_planet_class = pc_biolumen				# PD
+		is_planet_class = pc_veld					# PD
+		is_planet_class = pc_mud					# PD
+		is_planet_class = pc_lake					# PD
+		is_planet_class = pc_coral					# PD
+		is_planet_class = pc_storm					# PD
+		is_planet_class = pc_pdfloraforge			# PD
+		is_planet_class = pc_megafloratol			# PD
+		is_planet_class = pc_megaflora				# PD
+		is_planet_class = pc_semiarid				# PD
+		is_planet_class = pc_supercon				# PD
+		is_planet_class = pc_floating				# PD
+		is_planet_class = pc_crystal				# PD
+		is_planet_class = pc_aeolian				# PD
+		is_planet_class = pc_duneforest				# PD
+		is_planet_class = pc_tepid					# PD
+		is_planet_class = pc_aquifer				# PD
+		is_planet_class = pc_karst					# PD
+	}
+}
+
+#############################
+### Used for Terraforming ###
+#############################
+gpm_is_planet_wet_cold = {
+	OR = {
+		is_planet_class = pc_gaia					# Vanilla
+		is_planet_class = pc_continental			# Vanilla
+		is_planet_class = pc_alpine					# Vanilla
+		is_planet_class = pc_ocean					# Vanilla
+		is_planet_class = pc_aquaticcold			# PD
+		is_planet_class = pc_boreal					# PD
+		is_planet_class = pc_subarctic				# PD
+		is_planet_class = pc_forest					# PD
+		is_planet_class = pc_tidallylocked			# PD
+		is_planet_class = pc_geothermal				# PD
+		is_planet_class = pc_marginal_cold			# PD
+		is_planet_class = pc_veld					# PD
+		is_planet_class = pc_mud					# PD
+		is_planet_class = pc_lake					# PD
+		is_planet_class = pc_storm					# PD
+		is_planet_class = pc_aquifer				# PD
+		is_planet_class = pc_lichen					# PD
+		is_planet_class = pc_karst					# PD
+	}
+}
+
+#############################
+### Used for Terraforming ###
+#############################
+gpm_is_planet_dry_hot = {
+	OR = {
+		is_planet_class = pc_gaia					# Vanilla
+		is_planet_class = pc_savannah				# Vanilla
+		is_planet_class = pc_arid					# Vanilla
+		is_planet_class = pc_desert					# Vanilla
+		is_planet_class = pc_prairie				# PD
+		is_planet_class = pc_steppe					# PD
+		is_planet_class = pc_sandsea				# PD
+		is_planet_class = pc_mesa					# PD
+		is_planet_class = pc_hadesert				# PD
+		is_planet_class = pc_tidallylocked			# PD
+		is_planet_class = pc_primal					# PD
+		is_planet_class = pc_outback				# PD
+		is_planet_class = pc_duneforest				# PD
+		is_planet_class = pc_salt					# PD
+	}
+}
+
+#############################
+### Used for Terraforming ###
+#############################
+gpm_is_planet_dry_cold = {
+	OR = {
+		is_planet_class = pc_gaia					# Vanilla
+		is_planet_class = pc_arctic					# Vanilla
+		is_planet_class = pc_tundra					# Vanilla
+		is_planet_class = pc_antarctic				# PD
+		is_planet_class = pc_snow					# PD
+		is_planet_class = pc_glacial				# PD
+		is_planet_class = pc_frozen_desert			# PD
+		is_planet_class = pc_tidallylocked			# PD
+		is_planet_class = pc_geothermal				# PD
+		is_planet_class = pc_highland				# PD
+		is_planet_class = pc_salt					# PD
+		is_planet_class = pc_glacio					# PD
+	}
+}
+
+

@@ -1,0 +1,276 @@
+# ##########################################################################
+# # Decisions
+# ##########################################################################
+# gpm_decision_moonmining_minerals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			energy = 50
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		is_moon = yes
+# 		OR = {
+# 			has_modifier = gpm_extensive_cavern_system
+# 			has_modifier = gpm_asteroid_impacts
+# 			has_modifier = gpm_mineral_rich
+# 			has_modifier = gpm_ultra_rich
+# 			has_modifier = gpm_periodic_meteor_showers
+# 			has_modifier = gpm_subterranean_eco_system
+# 			has_modifier = gpm_iron_planet
+# 			has_modifier = gpm_carbon_planet
+# 			has_modifier = gpm_salt_flats
+# 			has_modifier = gpm_mercury_atmosphere
+# 		}
+# 		has_deposit = no
+# 		NOT = { has_planet_flag = gpm_has_special_project }
+# 	}
+	
+# 	allow = {
+# 		#FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		set_planet_flag = gpm_has_special_project
+# 		enable_special_project = {
+# 			name = "GPM_MOON_MINING_MINERALS"
+# 			location = this
+# 			owner = FROM
+# 		}
+# 		custom_tooltip = gpm_build_moon_mining_minerals
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = energy
+# 					value < 100					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# gpm_decision_moonmining_energy = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			energy = 50
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		is_moon = yes
+# 		OR = {
+# 			has_modifier = gpm_hydrogen_mist
+# 			has_modifier = gpm_radioactive_mantle
+# 			has_modifier = gpm_cryogeysers
+# 			has_modifier = gpm_abundant_natural_radioactivity
+# 			has_modifier = gpm_hydrogen_ice
+# 			has_modifier = gpm_nitrogen_ice
+# 			has_modifier = gpm_chlorine_planet
+# 			has_modifier = gpm_phosphorus_planet
+# 			has_modifier = gpm_sulfur_planet
+# 		}
+# 		has_deposit = no
+# 		NOT = { has_planet_flag = gpm_has_special_project }
+# 	}
+	
+# 	allow = {
+# 		#FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		set_planet_flag = gpm_has_special_project
+# 		enable_special_project = {
+# 			name = "GPM_MOON_MINING_ENERGY"
+# 			location = this
+# 			owner = FROM
+# 		}
+# 		custom_tooltip = gpm_build_moon_mining_energy
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = energy
+# 					value < 100					
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# gpm_decision_planetmining_minerals = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			energy = 50
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		is_moon = no
+# 		OR = {
+# 			has_modifier = gpm_extensive_cavern_system
+# 			has_modifier = gpm_asteroid_impacts
+# 			has_modifier = gpm_mineral_rich
+# 			has_modifier = gpm_ultra_rich
+# 			has_modifier = gpm_periodic_meteor_showers
+# 			has_modifier = gpm_subterranean_eco_system
+# 			has_modifier = gpm_iron_planet
+# 			has_modifier = gpm_carbon_planet
+# 			has_modifier = gpm_salt_flats
+# 			has_modifier = gpm_mercury_atmosphere
+# 		}
+# 		has_deposit = no
+# 		NOT = { has_planet_flag = gpm_has_special_project }
+# 	}
+	
+# 	allow = {
+# 		#FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		set_planet_flag = gpm_has_special_project
+# 		enable_special_project = {
+# 			name = "GPM_PLANET_MINING_MINERALS"
+# 			location = this
+# 			owner = FROM
+# 		}
+# 		custom_tooltip = gpm_build_planet_mining_minerals
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = energy
+# 					value < 100
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# gpm_decision_planetmining_energy = {
+# 	owned_planets_only = no
+# 	sound = event_administrative_work
+# 	icon = decision_resources
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			energy = 50
+# 		}
+# 	}
+	
+# 	potential = {
+# 		# owner = { is_regular_empire = yes }
+# 		gpm_is_planet_class_normal_habitable = no
+# 		is_moon = no
+# 		OR = {
+# 			has_modifier = gpm_hydrogen_mist
+# 			has_modifier = gpm_radioactive_mantle
+# 			has_modifier = gpm_cryogeysers
+# 			has_modifier = gpm_abundant_natural_radioactivity
+# 			has_modifier = gpm_hydrogen_ice
+# 			has_modifier = gpm_nitrogen_ice
+# 			has_modifier = gpm_chlorine_planet
+# 			has_modifier = gpm_phosphorus_planet
+# 			has_modifier = gpm_sulfur_planet
+# 		}
+# 		has_deposit = no
+# 		NOT = { has_planet_flag = gpm_has_special_project }
+# 	}
+	
+# 	allow = {
+# 		#FROM = { has_technology = gpm_tech_space_surveying }
+# 		custom_tooltip = {
+# 			fail_text = gpm_decision_need_colony
+# 			solar_system = {
+# 				any_system_planet = { 
+# 					is_colony = yes
+# 					FROM = { is_primitive = no }
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	effect = {
+# 		set_planet_flag = gpm_has_special_project
+# 		enable_special_project = {
+# 			name = "GPM_PLANET_MINING_ENERGY"
+# 			location = this
+# 			owner = FROM
+# 		}
+# 		custom_tooltip = gpm_build_planet_mining_energy
+# 	}
+	
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				resource_stockpile_compare = {
+# 					resource = energy
+# 					value < 100
+# 				}
+# 			}
+# 		}
+# 	}
+# }

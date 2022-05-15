@@ -1,0 +1,261 @@
+		# 100 = {
+			# add_modifier = { modifier = 0000000000000 }
+			# Not with these modifiers
+			# modifier = { factor = 0 has_modifier = 0000000000000 }
+			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Weight Factor
+			# modifier = { factor = @default }
+		# }
+
+# Total modifiers: x
+# Spawn chance = 100/Total modifiers
+# Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
+
+# Abundancy Settings and factors used for tweaking
+@rare = 0.25
+@uncommon = 0.5
+@default = 1
+@plenty = 1.5
+@everywhere = 2
+
+# Planetary Ring Adjuster
+@ringfactor = 1.35
+
+gpm_spawn_normal_uninhabitabe_world_modifier = {
+	
+	random_list = {
+		100 = {
+			add_modifier = { modifier = gpm_fast_rotation }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = gpm_fast_rotation }
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_tidallylocked }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = weak_magnetic_field }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = weak_magnetic_field }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = strong_magnetic_field }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = strong_magnetic_field }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = asteroid_impacts }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = asteroid_impacts }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @plenty }
+		}
+		100 = {
+			add_modifier = { modifier = mineral_rich }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = mineral_rich }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = ultra_rich }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = ultra_rich }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = low_gravity }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = high_gravity
+					has_modifier = low_gravity
+					has_modifier = gpm_high_gravity_2
+					has_modifier = gpm_low_gravity_2
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			modifier = { factor = 1.2 planet_size < 14 }
+			modifier = { factor = 1.2 planet_size < 12 }
+			modifier = { factor = 1.2 planet_size < 7 }
+			modifier = { factor = 0.5 planet_size > 19 }
+			modifier = { factor = 2 is_moon = yes }
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = high_gravity }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = high_gravity
+					has_modifier = low_gravity
+					has_modifier = gpm_high_gravity_2
+					has_modifier = gpm_low_gravity_2
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			modifier = { factor = 0 planet_size < 11 }
+			modifier = { factor = 1.5 planet_size > 19 }
+			modifier = { factor = 1.5 planet_size > 22 }
+			modifier = { factor = 0.5 planet_size < 16 }
+			modifier = { factor = 0.2 is_moon = yes }
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_flat_terrain }
+			gpm_set_planet_picture = yes
+			# Not with these modifiers
+			modifier = { 
+				factor = 0 
+				OR = {
+					has_modifier = gpm_flat_terrain
+					has_modifier = gpm_rugged_terrain
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_rugged_terrain }
+			# Not with these modifiers
+			modifier = { 
+				factor = 0 
+				OR = {
+					has_modifier = gpm_rugged_terrain
+					has_modifier = gpm_flat_terrain
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @plenty }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_radioactive_mantle }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = gpm_radioactive_mantle }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_old_world }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = gpm_old_world }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_hiveworld }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = gpm_hiveworld }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_lunar_dance }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = gpm_lunar_dance }
+			# (Not) on these planets
+			modifier = { factor = 0 has_moon = no }
+			# Never in these systems
+			# Tweaks
+			modifier = { factor = 0 num_moons < 2 }
+			modifier = { factor = 2 num_moons > 1 }
+			modifier = { factor = 4 num_moons > 2 }
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = gpm_abundant_natural_radioactivity }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = gpm_abundant_natural_radioactivity }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+	}
+}

@@ -1,0 +1,104 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+master_builders_habitats = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 11
+	planet_max_districts_add = 2
+}
+
+terraforming_candidate = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = gpm_terraforming_candidateTT
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 6
+	important = yes			# if present on a planet, show the planet's nameplate
+}
+
+hazardous_weather = {
+	pop_environment_tolerance = -0.10
+	planet_jobs_energy_produces_mult = 0.20
+	district_generator_max = 2	
+	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
+	icon_frame = 2
+}
+carbon_world = {
+	planet_jobs_minerals_produces_mult = 0.15
+	district_mining_max = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
+	icon_frame = 1
+}
+mineral_rich = {
+	planet_miners_minerals_produces_add = 1
+	district_mining_max = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+	icon_frame = 1
+}
+
+ultra_rich = {
+	planet_miners_minerals_produces_add = 2
+	district_mining_max = 4
+	icon = "gfx/interface/icons/planet_modifiers/pm_ultra_rich.dds"
+	icon_frame = 1
+}
+mineral_poor = {
+	planet_miners_minerals_produces_add = -1
+	district_mining_max = -5	
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_poor.dds"
+	icon_frame = 3
+}
+eat_the_titans = {
+	district_farming_max = 6
+	planet_jobs_food_produces_mult = 0.3
+	job_titan_hunter_add = 1
+	job_titan_hunter_per_pop = 0.05 # 1 per 30
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
+	icon_frame = 1
+}
+
+asteroid_belt = {
+	planet_jobs_minerals_produces_mult = 0.20
+	district_mining_max = 2
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
+	icon_frame = 1
+}
+lush_planet = {
+	pop_environment_tolerance = 0.10
+	planet_jobs_food_produces_mult = 0.20
+	district_farming_max = 4
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+	icon_frame = 1
+}
+low_gravity = {
+	planet_buildings_cost_mult = -0.1
+	planet_jobs_minerals_produces_mult = 0.05
+	district_mining_max = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_low_gravity.dds"
+	icon_frame = 1
+}
+
+high_gravity = {
+	planet_jobs_alloys_produces_mult = 0.05
+	planet_buildings_cost_mult = 0.10
+	pop_environment_tolerance = -0.10
+	district_mining_max = -2
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_high_gravity.dds"
+	icon_frame = 2
+}

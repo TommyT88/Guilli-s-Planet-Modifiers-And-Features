@@ -1,0 +1,70 @@
+objectTypes = {	
+	
+	pdxmesh = {
+		name = "gpm_mining_facility_damaged_mesh"
+		file = "gfx/models/ships/pirate_01/pirate_01_base.mesh"
+		scale = 1.5
+		
+		animation = { id = "idle"			type = "pirate_01_base_idle_animation" }
+		animation = { id = "death"			type = "pirate_01_base_death_animation" }
+		
+		meshsettings = {
+			name = "station3Shape"
+			index = 0
+			texture_diffuse = "gpm_mining_facility_damaged_diffuse.dds"
+			texture_normal = "pirate_01_base_normal.dds"
+			texture_specular = "pirate_01_base_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "station3Shape"
+			index = 1
+			texture_diffuse = "gpm_mining_facility_asteroid_diffuse.dds"
+			texture_normal = "pirate_01_base_asteroid_normal.dds"
+			texture_specular = "pirate_01_base_asteroid_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+		meshsettings = {
+			name = "station3Shape"
+			index = 2
+			texture_diffuse = "gpm_mining_facility_supportstr_diffuse.dds"
+			texture_normal = "pirate_01_base_supportstr_normal.dds"
+			texture_specular = "pirate_01_base_supportstr_specular.dds"
+			shader = "PdxMeshTerraAlphaTest"
+		}		
+	}
+	
+	pdxmesh = {
+		name = "gpm_mining_facility_mesh"
+		file = "gfx/models/ships/pirate_01/pirate_01_base.mesh"
+		scale = 1.5
+		
+		animation = { id = "idle"			type = "pirate_01_base_idle_animation" }
+		animation = { id = "death"			type = "pirate_01_base_death_animation" }
+		
+		meshsettings = {
+			name = "station3Shape"
+			index = 0
+			texture_diffuse = "gpm_mining_facility_diffuse.dds"
+			texture_normal = "pirate_01_base_normal.dds"
+			texture_specular = "pirate_01_base_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "station3Shape"
+			index = 1
+			texture_diffuse = "gpm_mining_facility_asteroid_diffuse.dds"
+			texture_normal = "pirate_01_base_asteroid_normal.dds"
+			texture_specular = "pirate_01_base_asteroid_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+		meshsettings = {
+			name = "station3Shape"
+			index = 2
+			texture_diffuse = "gpm_mining_facility_supportstr_diffuse.dds"
+			texture_normal = "pirate_01_base_supportstr_normal.dds"
+			texture_specular = "pirate_01_base_supportstr_specular.dds"
+			shader = "PdxMeshTerraAlphaTest"
+		}		
+	}
+}

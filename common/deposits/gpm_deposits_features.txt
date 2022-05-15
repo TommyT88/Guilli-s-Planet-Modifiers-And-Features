@@ -1,0 +1,1436 @@
+gpm_d_ruined_battlefield = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = gpm_deposit_cat_special
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 1
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_spaceship_graveyard = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_minerals
+
+	planet_modifier = {
+		district_mining_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_android_pleasure_palace = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = gpm_deposit_cat_special
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_android_entertainer_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			planet_pop_assembly_mult = 0.05
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_unusual_formations = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_minerals
+
+	planet_modifier = {
+		district_mining_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_ice_flora = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_planetwide_forest = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_dense_forests = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_proto_forests = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_temple_of_the_ancient_one = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = gpm_deposit_cat_special
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 1
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_arachnophobia = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		army_starting_experience_add = 50
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_dunes = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_energy
+
+	planet_modifier = {
+		district_generator_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_mushroom_forest = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 3
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_floating_rocks = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_minerals
+
+	planet_modifier = {
+		district_mining_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_oasis = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_ancient_temple = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = gpm_deposit_cat_special
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 1
+		}
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_small_wildlife = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_massive_wildlife = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_super_volcano = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_obsidian_fields = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_magnetic_mountains = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 4
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_magnetic_fields = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_rich_crater = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_surface_mineral_veins = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_dense_metal_veins = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 4
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_iron_mountain = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 4
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_floating_island = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = { 
+		planet_max_districts_add = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_floating_mountain = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = { 
+		planet_max_districts_add = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_carnivorous_jungle = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 1
+		pop_growth_speed = -0.05
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_carnivorous_forest = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 1
+		pop_growth_speed = -0.04
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_carnivorous_kelp = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 1
+		pop_growth_speed = -0.02
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_magma_ocean = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		building_gas_extractors_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_toxic_vent = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		building_gas_extractors_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_colossal_subterranean_cavern = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = { 
+		planet_max_districts_add = 2
+		district_mining_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_titanic_hunting_ground = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_unnatural_crystals = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		building_crystal_mines_max = 1
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_ancient_battlefield = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 1
+		}
+	}
+
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_buried_remains = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 1
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_crashed_fighter = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			engineering_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_crashed_destroyer = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			engineering_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_crashed_battleship = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			engineering_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_crashed_capital_ship = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			engineering_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_crystal_hills = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		building_crystal_mines_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_colossal_fish = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_sprawling_archipelago = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		planet_max_districts_add = 1
+		district_farming_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_spice_fields = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		building_mote_harvesters_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_geometric_oddities = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_garbage_patch = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_industrial_ruins= {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 2
+		district_mining_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_radioactive_dump = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 4
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_ice_flower_field = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_white_forest = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_strange_ice_river = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_massive_ray_school = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_the_black_stone = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_sprawling_prestine_ruins = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = { 
+		planet_max_districts_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gpm_archaeologist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_gpm_archaeologist_drone_add = 1
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_skyscraper_village = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = { 
+		planet_max_districts_add = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_sandworm_pit = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_grand_reef = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_glistening_lake = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = {
+		district_farming_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_fossilized_egg_sacks = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_minerals
+	
+	planet_modifier = {
+		district_mining_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_fossilized_structures = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_minerals
+	
+	planet_modifier = {
+		district_mining_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_fossilized_creep = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_minerals
+	
+	planet_modifier = {
+		district_mining_max = 4
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_giant_skeleton = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_minerals
+	
+	planet_modifier = {
+		district_mining_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_resonating_ice = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_energy
+	
+	planet_modifier = {
+		district_generator_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_tiny_herds = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 5
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_fertile_field = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = {
+		district_Farming_max = 2
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_ecological_brain = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 10
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_hot_springs = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_colossal_coral_life = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_food
+	
+	planet_modifier = {
+		district_Farming_max = 3
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_salt_flats = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_energy
+	
+	planet_modifier = {
+		district_Generator_max = 3
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_floating_islands_housing = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_non_artificial_max_districts_add = 4
+		planet_housing_add = 40
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_restored_infrastructure = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_housing_add = 8
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_tank_factory = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		custom_tooltip = gpm_d_relic_tank_factoryTT
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_mech_factory = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		custom_tooltip = gpm_d_relic_mech_factoryTT
+	}
+	
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_power_armor_factory = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		custom_tooltip = gpm_d_relic_power_armor_factoryTT
+	}
+	
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_ship_factory = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		custom_tooltip = gpm_d_relic_ship_factoryTT
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_reactor_factory = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 25
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_roaming_killbots = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_amenities_mult =  -0.05
+		planet_colony_development_speed_mult = -0.05
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_post_apocalyptic_housing = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	planet_modifier = {
+		planet_housing_add = 12
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_relic_post_apocalyptic_scrapyards = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = gpm_deposit_cat_special
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			alloys = 8
+		}
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,586 @@
+is_terraforming_candidate = {
+	# OR = {
+		has_modifier = terraforming_candidate
+		# has_modifier = terraforming_candidate_precursor
+	# }
+}
+
+gpm_engine_forbidden_planets = {
+	NOR = {
+		solar_system = {
+			exists = space_owner
+			space_owner = { has_origin = origin_gpm_death_world }
+		}
+		solar_system = {
+			exists = space_owner
+			space_owner = { has_origin = origin_gpm_fallen_empire_colony }
+		}
+		solar_system = {
+			exists = space_owner
+			space_owner = { has_origin = origin_gpm_precursor_world }
+		}
+		# space_owner = { has_origin = origin_scion} 							# keep it of for player story purposes
+		has_planet_flag	= hoard_planet
+		AND = {
+			is_planet_class = pc_relic
+			solar_system = { has_star_flag = mechanocalibrator_system }
+		}
+	}
+}
+
+gpm_has_required_terraform_modifier = {
+	# OR = {
+		has_modifier = terraforming_candidate
+		NOT = { has_planet_flag = gpm_solidified_planet_core }
+		# has_modifier = terraforming_candidate_precursor
+	# }
+}
+
+gpm_are_precursors_enabled = {
+	NOT = {
+		has_global_flag = gpm_modifiers_precursor_disabled 
+	}
+}
+
+gpm_are_wonders_enabled = {
+	NOT = {
+		has_global_flag = gpm_planet_wonders_disabled 
+	}
+}
+
+gpm_is_a_precursor_world = {
+	has_planet_flag = gpm_is_precursor_world
+}
+
+gpm_is_a_wondrous_world = {
+	has_planet_flag = gpm_is_wondrous_world
+}
+
+gpm_has_precursor_modifiers = {
+	OR = {
+		has_modifier = "gpm_precursor_remnants"
+		has_modifier = "gpm_precursor_energy_grid"
+		has_modifier = "gpm_precursor_satalite_grid"
+		has_modifier = "gpm_precursor_city"
+		has_modifier = "gpm_precursor_shipyards"
+		has_modifier = "gpm_precursor_planetary_gun"
+		has_modifier = "gpm_precursor_bunker_grid"
+		has_modifier = "gpm_precursor_mechs"
+		has_modifier = "gpm_precursor_planetary_shield"
+		has_modifier = "gpm_precursor_floating_city"
+		has_modifier = "gpm_precursor_capital_complex"
+		has_modifier = "gpm_precursor_communication_hub"
+		has_modifier = "gpm_precursor_singularity_drive"
+		has_modifier = "gpm_precursor_eternal_fortress"
+		has_modifier = "gpm_precursor_prison_planet"
+		has_modifier = "gpm_precursor_mines"
+		has_modifier = "gpm_precursor_manufactorium"
+		has_modifier = "gpm_precursor_vaults"
+		has_modifier = "gpm_precursor_crashed_spacestation"
+		has_modifier = "gpm_precursor_battleground_ruins"
+		has_modifier = "gpm_precursor_outpost_ruins"
+		has_modifier = "gpm_precursor_harbor_ruins"
+		has_modifier = "gpm_precursor_ruins"
+		has_modifier = "gpm_precursor_obelisks"
+	}
+}
+
+gpm_has_precursor_feature = {
+	OR = {
+		has_deposit = gpm_d_precursor_ruins_1
+		has_deposit = gpm_d_precursor_ruins_2
+		has_deposit = gpm_d_precursor_ruins_3
+		has_deposit = gpm_d_precursor_ruins_4
+		has_deposit = gpm_d_precursor_ruins_5
+		has_deposit = gpm_d_precursor_ruins_6
+		has_deposit = gpm_d_precursor_ruins_7
+	}
+}
+
+gpm_has_gpm_special_blocker = {
+	OR = {
+		has_deposit = gpm_d_gargantuan_sinkhole
+		has_deposit = gpm_d_discharging_field
+		has_deposit = gpm_d_giant_trees
+		has_deposit = gpm_d_crystal_jungle
+		has_deposit = gpm_d_floating_islands
+		has_deposit = gpm_d_amoeba_sea
+		has_deposit = gpm_d_glass_towers
+		has_deposit = gpm_d_howling_peaks
+		has_deposit = gpm_d_mega_fungi
+		has_deposit = gpm_d_energy_storm
+		has_deposit = gpm_d_titanic_cave
+		has_deposit = gpm_d_abandoned_stargate
+		has_deposit = gpm_d_bioluminescent_forest
+		has_deposit = gpm_d_land_reefs
+		has_deposit = gpm_d_lava_lake
+		has_deposit = gpm_d_Collapsed_habitat
+		has_deposit = gpm_d_forgotten_deposit
+		has_deposit = gpm_d_ruined_arcology
+		has_deposit = gpm_d_dangerous_hives
+		has_deposit = gpm_d_precursor_planetary_shield
+		has_deposit = gpm_d_precursor_capital_complex
+		has_deposit = gpm_d_android_pleasure_palace
+		has_deposit = gpm_d_temple_of_the_ancient_one
+	}
+}
+
+gpm_is_gpm_special_blocker = {
+	OR = {
+		is_deposit_type = gpm_d_gargantuan_sinkhole
+		is_deposit_type = gpm_d_discharging_field
+		is_deposit_type = gpm_d_giant_trees
+		is_deposit_type = gpm_d_crystal_jungle
+		is_deposit_type = gpm_d_floating_islands
+		is_deposit_type = gpm_d_amoeba_sea
+		is_deposit_type = gpm_d_glass_towers
+		is_deposit_type = gpm_d_howling_peaks
+		is_deposit_type = gpm_d_mega_fungi
+		is_deposit_type = gpm_d_energy_storm
+		is_deposit_type = gpm_d_titanic_cave
+		is_deposit_type = gpm_d_abandoned_stargate
+		is_deposit_type = gpm_d_bioluminescent_forest
+		is_deposit_type = gpm_d_land_reefs
+		is_deposit_type = gpm_d_lava_lake
+		is_deposit_type = gpm_d_Collapsed_habitat
+		is_deposit_type = gpm_d_forgotten_deposit
+		is_deposit_type = gpm_d_ruined_arcology
+		is_deposit_type = gpm_d_dangerous_hives
+		is_deposit_type = gpm_d_precursor_planetary_shield
+		is_deposit_type = gpm_d_precursor_capital_complex
+		is_deposit_type = gpm_d_android_pleasure_palace
+		is_deposit_type = gpm_d_temple_of_the_ancient_one
+	}
+}
+
+gpm_has_gpm_plenatary_feature = {
+	OR = {
+		has_deposit = gpm_d_ruined_battlefield
+		has_deposit = gpm_d_spaceship_graveyard
+		has_deposit = gpm_d_android_pleasure_palace
+		has_deposit = gpm_d_unusual_formations
+		has_deposit = gpm_d_ice_flora
+		has_deposit = gpm_d_planetwide_forest
+		has_deposit = gpm_d_planetwide_forest
+		has_deposit = gpm_d_dense_forests
+		has_deposit = gpm_d_proto_forests
+		has_deposit = gpm_d_temple_of_the_ancient_one
+		has_deposit = gpm_d_arachnophobia
+		has_deposit = gpm_d_dunes
+		has_deposit = gpm_d_mushroom_forest
+		has_deposit = gpm_d_floating_rocks
+		has_deposit = gpm_d_oasis
+		has_deposit = gpm_d_ancient_temple
+		has_deposit = gpm_d_precursor_ruins_1
+		has_deposit = gpm_d_precursor_ruins_2
+		has_deposit = gpm_d_precursor_ruins_3
+		has_deposit = gpm_d_precursor_ruins_4
+		has_deposit = gpm_d_precursor_ruins_5 
+		has_deposit = gpm_d_precursor_ruins_6
+		has_deposit = gpm_d_precursor_ruins_7
+		has_deposit = gpm_d_small_wildlife
+		has_deposit = gpm_d_massive_wildlife
+		has_deposit = gpm_d_super_volcano
+		has_deposit = gpm_d_obsidian_fields
+		has_deposit = gpm_d_magnetic_mountains
+		has_deposit = gpm_d_magnetic_fields
+		has_deposit = gpm_d_rich_crater
+		has_deposit = gpm_d_surface_mineral_veins
+		has_deposit = gpm_d_dense_metal_veins
+		has_deposit = gpm_d_iron_mountain
+		has_deposit = gpm_d_floating_island
+		has_deposit = gpm_d_floating_mountain
+		has_deposit = gpm_d_carnivorous_jungle
+		has_deposit = gpm_d_carnivorous_forest
+		has_deposit = gpm_d_carnivorous_kelp
+		has_deposit = gpm_d_magma_ocean
+		has_deposit = gpm_d_toxic_vent
+		has_deposit = gpm_d_colossal_subterranean_cavern
+		has_deposit = gpm_d_titanic_hunting_ground
+		has_deposit = gpm_d_unnatural_crystals
+		has_deposit = gpm_d_ancient_battlefield
+		has_deposit = gpm_d_buried_remains
+		has_deposit = gpm_d_crashed_fighter
+		has_deposit = gpm_d_crashed_destroyer
+		has_deposit = gpm_d_crashed_battleship
+		has_deposit = gpm_d_crashed_capital_ship
+		has_deposit = gpm_d_crystal_hills
+		has_deposit = gpm_d_colossal_fish
+		has_deposit = gpm_d_sprawling_archipelago
+		has_deposit = gpm_d_spice_fields
+		has_deposit = gpm_d_geometric_oddities
+		has_deposit = gpm_d_garbage_patch
+		has_deposit = gpm_d_industrial_ruins
+		has_deposit = gpm_d_radioactive_dump
+		has_deposit = gpm_d_ice_flower_field
+		has_deposit = gpm_d_white_forest
+		has_deposit = gpm_d_strange_ice_river
+		has_deposit = gpm_d_massive_ray_school
+		has_deposit = gpm_d_the_black_stone
+		has_deposit = gpm_d_sprawling_prestine_ruins
+		has_deposit = gpm_d_skyscraper_village
+		has_deposit = gpm_d_sandworm_pit
+		has_deposit = gpm_d_grand_reef
+		has_deposit = gpm_d_glistening_lake
+		has_deposit = gpm_d_fossilized_egg_sacks
+		has_deposit = gpm_d_fossilized_structures
+		has_deposit = gpm_d_fossilized_creep
+		has_deposit = gpm_d_giant_skeleton
+		has_deposit = gpm_d_resonating_ice
+		has_deposit = gpm_d_tiny_herds
+		has_deposit = gpm_d_fertile_field
+		has_deposit = gpm_d_ecological_brain
+		has_deposit = gpm_d_hot_springs
+		has_deposit = gpm_d_colossal_coral_life
+		has_deposit = gpm_d_salt_flats
+		has_deposit = gpm_d_floating_islands_housing
+		has_deposit = gpm_d_restored_infrastructure
+		has_deposit = gpm_d_relic_tank_factory
+		has_deposit = gpm_d_relic_mech_factory
+		has_deposit = gpm_d_relic_power_armor_factory
+		has_deposit = gpm_d_relic_ship_factory
+		has_deposit = gpm_d_relic_reactor_factory
+		has_deposit = gpm_d_relic_roaming_killbots
+		has_deposit = gpm_d_relic_post_apocalyptic_housing
+		has_deposit = gpm_d_relic_post_apocalyptic_scrapyards
+	}
+}
+
+gpm_is_gpm_plenatary_feature = {
+	OR = {
+		is_deposit_type = gpm_d_ruined_battlefield
+		is_deposit_type = gpm_d_spaceship_graveyard
+		is_deposit_type = gpm_d_android_pleasure_palace
+		is_deposit_type = gpm_d_unusual_formations
+		is_deposit_type = gpm_d_ice_flora
+		is_deposit_type = gpm_d_planetwide_forest
+		is_deposit_type = gpm_d_planetwide_forest
+		is_deposit_type = gpm_d_dense_forests
+		is_deposit_type = gpm_d_proto_forests
+		is_deposit_type = gpm_d_temple_of_the_ancient_one
+		is_deposit_type = gpm_d_arachnophobia
+		is_deposit_type = gpm_d_dunes
+		is_deposit_type = gpm_d_mushroom_forest
+		is_deposit_type = gpm_d_floating_rocks
+		is_deposit_type = gpm_d_oasis
+		is_deposit_type = gpm_d_ancient_temple
+		is_deposit_type = gpm_d_precursor_ruins_1
+		is_deposit_type = gpm_d_precursor_ruins_2
+		is_deposit_type = gpm_d_precursor_ruins_3
+		is_deposit_type = gpm_d_precursor_ruins_4
+		is_deposit_type = gpm_d_precursor_ruins_5
+		is_deposit_type = gpm_d_precursor_ruins_6
+		is_deposit_type = gpm_d_precursor_ruins_7
+		is_deposit_type = gpm_d_small_wildlife
+		is_deposit_type = gpm_d_massive_wildlife
+		is_deposit_type = gpm_d_super_volcano
+		is_deposit_type = gpm_d_obsidian_fields
+		is_deposit_type = gpm_d_magnetic_mountains
+		is_deposit_type = gpm_d_magnetic_fields
+		is_deposit_type = gpm_d_rich_crater
+		is_deposit_type = gpm_d_surface_mineral_veins
+		is_deposit_type = gpm_d_dense_metal_veins
+		is_deposit_type = gpm_d_iron_mountain
+		is_deposit_type = gpm_d_floating_island
+		is_deposit_type = gpm_d_floating_mountain
+		is_deposit_type = gpm_d_carnivorous_jungle
+		is_deposit_type = gpm_d_carnivorous_forest
+		is_deposit_type = gpm_d_carnivorous_kelp
+		is_deposit_type = gpm_d_magma_ocean
+		is_deposit_type = gpm_d_toxic_vent
+		is_deposit_type = gpm_d_colossal_subterranean_cavern
+		is_deposit_type = gpm_d_titanic_hunting_ground
+		is_deposit_type = gpm_d_unnatural_crystals
+		is_deposit_type = gpm_d_ancient_battlefield
+		is_deposit_type = gpm_d_buried_remains
+		is_deposit_type = gpm_d_crashed_fighter
+		is_deposit_type = gpm_d_crashed_destroyer
+		is_deposit_type = gpm_d_crashed_battleship
+		is_deposit_type = gpm_d_crashed_capital_ship
+		is_deposit_type = gpm_d_crystal_hills
+		is_deposit_type = gpm_d_colossal_fish
+		is_deposit_type = gpm_d_sprawling_archipelago
+		is_deposit_type = gpm_d_spice_fields
+		is_deposit_type = gpm_d_geometric_oddities
+		is_deposit_type = gpm_d_garbage_patch
+		is_deposit_type = gpm_d_industrial_ruins
+		is_deposit_type = gpm_d_radioactive_dump
+		is_deposit_type = gpm_d_ice_flower_field
+		is_deposit_type = gpm_d_white_forest
+		is_deposit_type = gpm_d_strange_ice_river
+		is_deposit_type = gpm_d_massive_ray_school
+		is_deposit_type = gpm_d_the_black_stone
+		is_deposit_type = gpm_d_sprawling_prestine_ruins
+		is_deposit_type = gpm_d_skyscraper_village
+		is_deposit_type = gpm_d_sandworm_pit
+		is_deposit_type = gpm_d_grand_reef
+		is_deposit_type = gpm_d_glistening_lake
+		is_deposit_type = gpm_d_fossilized_egg_sacks
+		is_deposit_type = gpm_d_fossilized_structures
+		is_deposit_type = gpm_d_fossilized_creep
+		is_deposit_type = gpm_d_giant_skeleton
+		is_deposit_type = gpm_d_resonating_ice
+		is_deposit_type = gpm_d_tiny_herds
+		is_deposit_type = gpm_d_fertile_field
+		is_deposit_type = gpm_d_ecological_brain
+		is_deposit_type = gpm_d_hot_springs
+		is_deposit_type = gpm_d_colossal_coral_life
+		is_deposit_type = gpm_d_salt_flats
+		is_deposit_type = gpm_d_floating_islands_housing
+		is_deposit_type = gpm_d_restored_infrastructure
+		is_deposit_type = gpm_d_relic_tank_factory
+		is_deposit_type = gpm_d_relic_mech_factory
+		is_deposit_type = gpm_d_relic_power_armor_factory
+		is_deposit_type = gpm_d_relic_ship_factory
+		is_deposit_type = gpm_d_relic_reactor_factory
+		is_deposit_type = gpm_d_relic_roaming_killbots
+		is_deposit_type = gpm_d_relic_post_apocalyptic_housing
+		is_deposit_type = gpm_d_relic_post_apocalyptic_scrapyards
+	}
+}
+
+gpm_is_vanilla_feature = {
+	OR = {
+		is_deposit_type = d_arid_highlands
+		is_deposit_type = d_hot_springs
+		is_deposit_type = d_rushing_waterfalls
+		is_deposit_type = d_searing_desert
+		is_deposit_type = d_frozen_gas_lake
+		is_deposit_type = d_geothermal_vent
+		is_deposit_type = d_underwater_vent
+		is_deposit_type = d_tempestous_mountain
+		is_deposit_type = d_veiny_cliffs
+		is_deposit_type = d_mineral_fields
+		is_deposit_type = d_prosperous_mesa
+		is_deposit_type = d_ore_rich_caverns
+		is_deposit_type = d_rich_mountain
+		is_deposit_type = d_submerged_ore_veins
+		is_deposit_type = d_lichen_fields
+		is_deposit_type = d_bountiful_plains
+		is_deposit_type = d_rugged_woods
+		is_deposit_type = d_green_hills
+		is_deposit_type = d_forgiving_tundra
+		is_deposit_type = d_boggy_fens
+		is_deposit_type = d_nutritious_mudland
+		is_deposit_type = d_fungal_caves
+		is_deposit_type = d_lush_jungle
+		is_deposit_type = d_fertile_lands
+		is_deposit_type = d_great_river
+		is_deposit_type = d_black_soil
+		is_deposit_type = d_teeming_reef
+		is_deposit_type = d_marvelous_oasis
+		is_deposit_type = d_tropical_island
+		is_deposit_type = d_fungal_forest
+	}
+}
+
+gpm_has_vanilla_precursor_relic = {
+	OR = {
+		has_relic = r_dragon_trophy
+		has_relic = r_khans_throne
+		has_relic = r_worm_scales
+		has_relic = r_rubricator
+		has_relic = r_galaxy
+		has_relic = r_omnicodex
+		has_relic = r_surveyor
+		has_relic = r_galatron
+		has_relic = r_ancient_sword
+		has_relic = r_severed_head
+		has_relic = r_prethoryn_queen
+		has_relic = r_unbidden_warlock
+		has_relic = r_contingency_core
+		has_relic = r_zro_crystal
+		has_relic = r_the_last_baol
+		has_relic = r_the_defragmentor
+		has_relic = r_reality_perforator
+		has_relic = r_pox_sample
+		has_relic = r_cryo_core
+		has_relic = r_war_forge
+	}
+}
+
+gpm_has_modded_precursor_relic = {
+	OR = {
+		has_relic = gpm_r_ai_architect
+		has_relic = gpm_r_banner_of_the_fallen
+		has_relic = gpm_r_cloaking_device
+		has_relic = gpm_r_codex_administratum
+		has_relic = gpm_r_datacube
+		has_relic = gpm_r_earthquake_engine
+		has_relic = gpm_r_encrypted_sct
+		has_relic = gpm_r_encyclopedia_galactica
+		has_relic = gpm_r_enigmatic_advisor
+		has_relic = gpm_r_experimental_weapon
+		has_relic = gpm_r_fallout_emergency_replicator
+		has_relic = gpm_r_gravity_engine
+		has_relic = gpm_r_manufactorium_ship
+		has_relic = gpm_r_mysterious_shield_generator
+		has_relic = gpm_r_positronic_microchip
+		has_relic = gpm_r_power_core
+		has_relic = gpm_r_q_storage_compressor
+		has_relic = gpm_r_quantum_sphere
+		has_relic = gpm_r_self_assembly_hub
+		has_relic = gpm_r_self_repairing_obelisk
+		has_relic = gpm_r_sentinel_queen
+		has_relic = gpm_r_soul_gem
+		has_relic = gpm_r_venerable_dreadnaught
+		has_relic = gpm_r_zero_energy_generator
+	}
+}
+
+gpm_has_modded_non_precursor_relic = {
+	OR = {
+		has_relic = gpm_r_time_displacer
+		has_relic = gpm_r_alien_eggs
+		has_relic = gpm_r_machine_world_core
+		# has_relic = gpm_r_mars_rover   Exclude, this stays with humans
+	}
+}
+
+gpm_has_positive_energy_planet_modifier = {
+	OR = {
+		# Vanilla
+		has_modifier = hazardous_weather
+		has_modifier = strong_magnetic_field
+		has_modifier = hazardous_weather
+		has_modifier = stellar_devourer_trophy
+		has_modifier = gas_rich_planet_fo_realz
+		# Precursor modifiers
+		has_modifier = gpm_precursor_energy_grid
+		# Base planet modifiers
+		has_modifier = gpm_frequent_thunderstorms
+		has_modifier = gpm_global_thunderstorms
+		has_modifier = gpm_highly_charged_air_particles
+		has_modifier = gpm_strong_magnetic_field_2
+		has_modifier = gpm_windy
+		has_modifier = gpm_radioactive_mantle
+		has_modifier = gpm_thin_ozone_layer
+		has_modifier = gpm_thin_ozone_layer_fixed
+		has_modifier = gpm_dunes		
+		has_modifier = gpm_tidally_active
+		has_modifier = gpm_steam_vents
+		# Deposits
+		has_deposit = gpm_d_discharging_field
+	}
+}
+
+gpm_has_negative_energy_planet_modifier = {
+	OR = {
+		# Vanilla
+		has_modifier = energy_poor
+		# Precursor modifiers
+		# Base planet modifiers
+		has_modifier = gpm_lingering_pollution
+		has_modifier = gpm_weak_magnetic_field_2
+		has_modifier = gpm_sandstorms
+		has_modifier = gpm_sand_tornadoes
+		has_modifier = gpm_cursed_world
+		# Deposits		
+	}
+}
+
+gpm_has_positive_mineral_planet_modifier = {
+	OR = {
+		# Vanilla
+		has_modifier = asteroid_belt
+		has_modifier = mineral_rich
+		has_modifier = ultra_rich
+		has_modifier = extensive_moon_system
+		has_modifier = asteroid_impacts
+		has_modifier = carbon_world
+		# Precursor modifiers
+		has_modifier = gpm_precursor_mines
+		# Base planet modifiers
+		has_modifier = gpm_strong_volcanism
+		has_modifier = gpm_asteroid_impacts_2
+		has_modifier = gpm_mineral_rich_2
+		has_modifier = gpm_ultra_rich_2
+		has_modifier = gpm_extensive_cavern_system
+		has_modifier = gpm_rugged_terrain
+		has_modifier = gpm_dunes
+		has_modifier = gpm_colossal_cliffs
+		has_modifier = gpm_titanic_geo_form
+		has_modifier = gpm_rich_equator
+		has_modifier = gpm_iron_oceans
+		# Deposits
+		has_deposit = gpm_d_gargantuan_sinkhole
+		has_deposit = gpm_d_howling_peaks
+		has_deposit = gpm_d_titanic_cave
+	}
+}
+
+gpm_has_negative_mineral_planet_modifier = {
+	OR = {
+		# Vanilla
+		has_modifier = intentionally_tidally_locked
+		has_modifier = mineral_poor
+		has_modifier = colony_enclaves
+		# Precursor modifiers
+		# Base planet modifiers
+		has_modifier = gpm_lingering_pollution
+		has_modifier = gpm_flat_terrain
+		has_modifier = gpm_cursed_world
+		# Deposits
+	}
+}
+
+gpm_has_positive_food_planet_modifier = {
+	OR = {
+		# Vanilla
+		has_modifier = eat_the_titans
+		has_modifier = lush_planet
+		# Precursor modifiers
+		has_modifier = gpm_precursor_harbor_ruins
+		# Base planet modifiers
+		has_modifier = gpm_hyper_complex_biome
+		has_modifier = gpm_dense_atmospheres
+		has_modifier = gpm_perfect_seasons
+		has_modifier = gpm_endless_fish
+		has_modifier = gpm_delicious_ingredients
+		has_modifier = gpm_seasonal_flooding
+		has_modifier = gpm_ice_flora
+		has_modifier = gpm_extensive_reef_systems
+		has_modifier = gpm_beautiful_lakes
+		has_modifier = gpm_dense_forests
+		has_modifier = gpm_planetwide_forest
+		has_modifier = gpm_furry_packs
+		has_modifier = gpm_rich_soil
+		has_modifier = gpm_algae_boom
+		has_modifier = gpm_ocean_currents
+		has_modifier = gpm_unique_marine_habitats
+		has_modifier = gpm_mushroom_forest
+		has_modifier = gpm_invasive_stalks
+		# Deposits
+		has_deposit = gpm_d_giant_trees
+		has_deposit = gpm_d_mega_fungi
+	}
+}
+
+gpm_has_negative_food_planet_modifier = {
+	OR = {
+		# Vanilla
+		has_modifier = intentionally_tidally_locked
+		has_modifier = unbalanced_ecosystem
+		has_modifier = bleak_planet
+		has_modifier = irradiated_planet
+		has_modifier = abandoned_terraforming
+		# Precursor modifiers
+		# Base planet modifiers
+		has_modifier = gpm_lingering_pollution
+		has_modifier = gpm_thin_atmospheres
+		has_modifier = gpm_hostile_flora
+		has_modifier = gpm_unusual_seasons
+		has_modifier = gpm_living_planet
+		has_modifier = gpm_artificial_water
+		has_modifier = gpm_simple_organisms
+		has_modifier = gpm_great_temperature_variation
+		has_modifier = gpm_ice_age
+		has_modifier = gpm_locust_plagues
+		has_modifier = gpm_acidic_seas
+		has_modifier = gpm_trubbles
+		has_modifier = gpm_blizzards
+		has_modifier = gpm_cursed_world
+		has_modifier = gpm_iron_oceans
+		# Deposits
+	}
+}

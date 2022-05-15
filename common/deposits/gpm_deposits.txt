@@ -1,0 +1,401 @@
+# Possible Deposit Variables
+# modifier - weight, will replace the weight value
+# modifier - factor, will multiply the weight value
+# resources, resource and amount
+# station = station class in orbit to gather
+# if you mix resources that are not supposed to be collected by an orbital station remember to put is_orbital_slot = no
+
+
+##################################
+######### ENERGY CREDITS #########
+##################################
+
+gpm_d_sun_energy_deposit = {
+	resources = { 
+		category = orbital_mining_deposits
+		produces = {
+            energy = 9
+        }
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_proto_molecule_deposit = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			society_research = 6
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_time_displaced_planet = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 6
+			society_research = 6
+			engineering_research = 6
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_triple_science = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_double_science_phy_soc = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 3
+			society_research = 2
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_double_science_soc_phy = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 2
+			society_research = 3
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_double_science_phy_eng = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 3
+			engineering_research = 2
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_double_science_eng_phy = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 2
+			engineering_research = 3
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_double_science_soc_eng = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			society_research = 3
+			engineering_research = 2
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+gpm_d_double_science_eng_soc = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			society_research = 2
+			engineering_research = 3
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_inspirational = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_dark_matter = 3
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_pulsar_clock = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			physics_research = 12
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_deposit = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			unity = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 2
+		}
+	}
+	
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_10 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			unity = 10
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_trade_deposit = {
+	planet_modifier = {
+		trade_value_add = 20
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_4 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 4
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_5 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 5
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_6 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 6
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_7 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 7
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_8 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 8
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_9 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 9
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_10 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 10
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_15 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 15
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}

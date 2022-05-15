@@ -1,0 +1,611 @@
+gpm_tech_ringworld_parabolic_forcefield = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { tech_psionic_theory tech_mega_engineering }
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_parabolic_forcefield_tt
+	}
+
+	potential = {
+		OR = {
+			has_technology = tech_psionic_shield
+			has_technology = tech_psionic_barrier
+		}
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+		is_gestalt = no
+		NOT = { has_civic = civic_machine_servitor }
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_telepathy }
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 4
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+gpm_tech_ringworld_neural_nexus = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { computing }
+	prerequisites = { tech_mega_engineering }
+	is_rare = yes
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_neural_nexus_tt
+	}
+
+	potential = {
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+		is_hive_empire = no
+		OR = {
+			has_megastructure = think_tank_3
+			has_megastructure = think_tank_4
+			has_megastructure = think_tank_restored
+		}
+		NOT = { has_policy_flag = robots_outlawed }
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_computing"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = physics
+				has_level > 2
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_level > 3
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_level > 4
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_materialist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_materialist"
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+gpm_tech_ringworld_idyllic_gardens = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { biology }
+	prerequisites = { tech_mega_engineering }
+	is_rare = yes
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_idyllic_gardens_tt
+	}
+
+	potential = {
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+		is_machine_empire = no
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_biology"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+gpm_tech_ringworld_xeno_zoo = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { new_worlds }
+	prerequisites = { tech_alien_life_studies tech_mega_engineering }
+	is_rare = yes
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_xeno_zoo_tt
+	}
+
+	potential = {
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+		is_hive_empire = no
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+gpm_tech_ringworld_simulators = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { computing }
+	prerequisites = { tech_mega_engineering }
+	is_rare = yes
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_simulators_tt
+	}
+
+	potential = {
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+		NOR = {
+			has_ethic = ethic_fanatic_pacifist
+			has_ethic = ethic_pacifist
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_computing"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = physics
+				has_level > 2
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_level > 3
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_level > 4
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_materialist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_materialist"
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+gpm_tech_ringworld_endless_oceans = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { new_worlds }
+	prerequisites = { tech_mega_engineering }
+	is_rare = yes
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_endless_oceans_tt
+	}
+
+	potential = {
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+		is_machine_empire = no
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+gpm_tech_ringworld_mass_transit = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { materials }
+	prerequisites = { tech_mega_engineering }
+	is_rare = yes
+	weight = @tier5weight3
+
+	modifier = {
+		custom_tooltip = gpm_tech_ringworld_mass_transit_tt
+	}
+
+	potential = {
+		# requires a colonized ringworld section
+		any_planet_within_border = {
+			is_planet_class = pc_ringworld_habitable
+			is_colony = yes
+		}
+		# has_country_flag = built_ringworld
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_materials"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = engineering
+				has_level > 2
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = engineering
+				has_level > 3
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_level > 4
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}

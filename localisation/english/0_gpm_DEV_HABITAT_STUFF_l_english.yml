@@ -1,0 +1,86 @@
+﻿l_english:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+# l_russian:
+# l_braz_por:
+# l_simp_chinese:
+# l_korean:
+# l_japanese:
+  
+ ################################################
+ ####### HABITAT SPECIALISATION MODIFIERS ####### 
+ 
+ # gpm_Habitat_Outpost_Specialisation:0 "Outpost Specialisation"
+ # gpm_Habitat_Outpost_Specialisation_desc:0 "This habitat has been outfitted with long range scanners, communication systems and monitoring systems. Greatly increases this habitat's sensor range and defensive capabiltiies."
+ 
+ # gpm_Habitat_Food_Specialisation:0 "Food Specialisation"
+ # gpm_Habitat_Food_Specialisation_desc:0 "This habitat has been outfitted with large bio-domes allowing for a much greater variety and greater quantity of food to be produced." 
+ 
+ # gpm_Habitat_Minerals_Specialisation:0 "Mineral Specialisation"
+ # gpm_Habitat_Minerals_Specialisation_desc:0 "This habitat has been outfitted with industrial matter-replicators. By converting energy we are able to produce all the minerals we need." 
+ 
+ # gpm_Habitat_Army_Specialisation:0 "Army Specialisation"
+ # gpm_Habitat_Army_Specialisation_desc:0 "This habitat has been outfitted with various battle simulators and combat areas. It also houses a dedicated military academy allowing us to produce more armies." 
+ 
+ # gpm_Habitat_Science_Specialisation:0 "Science Specialisation"
+ # gpm_Habitat_Science_Specialisation_desc:0 "This habitat has been outfitted with advanced laboratories and a central science academy. This will allow us to consolidate research fields and help us understand the universe to a much greater degree."
+ 
+ # gpm_Habitat_Specialisation_Disruption:0 "Specialisation in progress"
+ # gpm_Habitat_Specialisation_Disruption_desc:0 "This habitat is currently undergoing some specialisation restructuring. Sorry about the noise!"
+
+ ####################################
+ # Habitat Events
+ ####################################
+ 
+ # gpm_habitat_spec.78870.ok:0 "Ok"
+ 
+ # gpm_habitat_spec.78871.name:0 "§HSpecialise Habitat§!"
+ # gpm_habitat_spec.78871.desc:0 "Thanks to our brilliant engineers and designers we can choose to specialise our habitats in a specific area. We can choose to leave our habitat like it is and not change anything or specialize it in one of the following areas:"
+ 
+ # gpm_habitat_spec.78871.a:0 "§HLet's not change anything.§!"
+ # gpm_habitat_spec.78871.aa:0 "\n§GLeave the habitat as it is. No specialisation will be made.§!"
+ 
+ # gpm_habitat_spec.78871.b:0 "§GOutpost§! §HSpecialisation§!"
+ # gpm_habitat_spec.78871.bb:0 "§TOutfit the habitat with long range scanners, communication systems and monitoring systems.§!\n\n§GSensor range increased by 4§!\n§GBombardment protection increased by 30%§!\n"
+ 
+ # gpm_habitat_spec.78871.c:0 "§GFood§! §HSpecialisation§!"
+ # gpm_habitat_spec.78871.cc:0 "§TOutfit  the habitat with large bio-domes allowing for a much greater variety and greater quantity of food to be produced. §!\n\n§GFood production increased by 25%§!\n§REnergy production decreased by -75%§!\n"
+ 
+ # gpm_habitat_spec.78871.d:0 "§GMineral§! §HSpecialisation§!"
+ # gpm_habitat_spec.78871.dd:0 "§TOutfit the habitat with industrial matter-replicators that convert energy  into all the minerals we need. §!\n\n§GMineral production increased by 25%§!\n§REnergy production decreased by -75%§!\n"
+ 
+ # gpm_habitat_spec.78871.e:0 "§GScience§! §HSpecialisation§!"
+ # gpm_habitat_spec.78871.ee:0 "§TOutfit the habitat with advanced laboratories and a central science academy. This will allow us to consolidate research fields and help us understand the universe to a much greater degree. §!\n\n§GScience production increased by 15%§!\n§REnergy production decreased by -75%§!\n"
+ 
+ # gpm_habitat_spec.78871.f:0 "§GCombat§! §HSpecialisation§!"
+ # gpm_habitat_spec.78871.ff:0 "§TOutfit the habitat with various battle simulators and combat areas allowing us to produce more armies. §!\n\n§GArmy build speed improved by 50%§!\n§GArmy build cost reduced by 25%§!\n§REnergy production decreased by -75%§!\n"
+ 
+ # gpm_habitat_spec.78871.g:0 "§RRemove habitat specialisation.§!"
+ # gpm_habitat_spec.78871.gg:0 "§GRemove the current specialisation.§!"
+ 
+ # gpm_habitat_spec.78872.name:0 "Outpost Specialisation Complete"
+ # gpm_habitat_spec.78872.desc:0 "Our habitat is now an outpost and gets a bonus to sensor range."
+ 
+ # gpm_habitat_spec.78873.name:0 "Food Specialisation Complete"
+ # gpm_habitat_spec.78873.desc:0 "Our habitat is now specialised and gets a bonus to food."
+ 
+ # gpm_habitat_spec.78874.name:0 "Mineral Specialisation Complete"
+ # gpm_habitat_spec.78874.desc:0 "Our habitat is now specialised and gets a bonus to minerals."
+ 
+ # gpm_habitat_spec.78875.name:0 "Science Specialisation Complete"
+ # gpm_habitat_spec.78875.desc:0 "Our habitat is now specialised and gets a bonus to science."
+ 
+ # gpm_habitat_spec.78876.name:0 "Combat Specialisation Complete"
+ # gpm_habitat_spec.78876.desc:0 "Our habitat is now specialised and gets a bonus to armies."
+
+ # gpm_habitat_spec.78877.name:0 "Removing Specialisation Complete"
+ # gpm_habitat_spec.78877.desc:0 "Our habitat is now back to it's default design."
+ 
+ ####################################
+ # Habitat Edicts
+ ####################################
+ 
+ # gpm_edict_change_habitat_focus:0 "Change Habitat Specialisation"
+ # gpm_edict_change_habitat_focus_desc:0 "Change or remove the current habitat specialisation.\n§HCosts§! §R1000 minerals§!\n§HCosts§! §R200 Influence§!\nTakes §G90 days§! to complete."

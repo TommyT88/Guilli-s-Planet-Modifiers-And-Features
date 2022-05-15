@@ -1,0 +1,174 @@
+# Types of Shaders
+
+# "AlphaBlend_00"
+# "AlphaBlendNoDepth"
+# "PdxMeshAlphaBlend"
+# "PdxMeshAtmosphere"
+# "PdxMeshAtmosphereStar"
+# "PdxMeshAlphaAdditive"
+# "PdxMeshAlphaAdditiveAnimateUVAlphaOverride"
+# "PdxMeshAlphaAdditiveAnimateUVNoDissolve"
+# "PdxMeshAlphaAdditiveAnimateUV"
+# "PdxMeshBlackHole"
+# "PdxMeshBlackHoleBillboard"
+# "PdxMeshCircleGradient"
+# "PdxMeshClouds"
+# "PdxMeshDimensionalPortal"
+# "PdxMeshExtraDimensionalShip"
+# "PdxMeshFrontendBackground"
+# "ParticleAdditive"
+# "ParticleAlphaBlend"
+# "PdxMeshPlanetEmissive"
+# "PdxMeshShip"
+# "PdxMeshTerra"
+# "PdxMeshTerraAlphaBlend"
+
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_planet_shield_FE_ambient_mesh"
+		file = "gfx/models/planets/gpm_shielded_planet.mesh"
+		animation = { id = "idle"	type = "shielded_planet_idle" }
+		scale = 1.0
+		
+		meshsettings = {
+			name = "planet_geosphereShape"
+			texture_diffuse = "pm_planet_shield_diffuse_fe.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		meshsettings = {
+			name = "polesShape"
+			texture_diffuse = "pm_planet_shield_diffuse_fe.dds"  #pm_planet_shield_diffuse.dds
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip" #PdxMeshAtmosphere
+		}
+		
+		##cloud texture override
+		meshsettings = {
+			name = "clouds_geosphereShape"
+			texture_diffuse = "pm_planet_shield_clouds_fe.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			#shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		##cloud shadow texture override
+		meshsettings = {
+			name = "clouds_shadow_geosphereShape"
+			texture_diffuse = "pm_planet_shield_clouds_fe.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "Collision"	# Setting this shader to hide this texture
+		}
+		
+		
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_planet_shield_PREC_ambient_mesh"
+		file = "gfx/models/planets/gpm_shielded_planet.mesh"
+		animation = { id = "idle"	type = "shielded_planet_idle" }
+		scale = 1.0 
+		
+		meshsettings = {
+			name = "planet_geosphereShape"
+			texture_diffuse = "pm_planet_shield_lower_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		meshsettings = {
+			name = "polesShape"
+			texture_diffuse = "pm_planet_shield_diffuse.dds"  #pm_planet_shield_diffuse.dds
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip" #PdxMeshAtmosphere
+		}
+		
+		##cloud texture override
+		meshsettings = {
+			name = "clouds_geosphereShape"
+			texture_diffuse = "pm_planet_shield_clouds.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			#shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		##cloud shadow texture override
+		meshsettings = {
+			name = "clouds_shadow_geosphereShape"
+			texture_diffuse = "pm_planet_shield_clouds.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "Collision"	# Setting this shader to hide this texture
+		}
+		
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_planet_shield_ME_ambient_mesh"
+		file = "gfx/models/planets/gpm_shielded_planet.mesh"
+		animation = { id = "idle"	type = "shielded_planet_idle" }
+		scale = 1.0 
+		
+		meshsettings = {
+			name = "planet_geosphereShape"
+			texture_diffuse = "pm_planet_shield_diffuse_me.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		meshsettings = {
+			name = "polesShape"
+			texture_diffuse = "pm_planet_shield_diffuse_me.dds"  #pm_planet_shield_diffuse.dds
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip" #PdxMeshAtmosphere
+		}
+		
+		##cloud texture override
+		meshsettings = {
+			name = "clouds_geosphereShape"
+			texture_diffuse = "pm_planet_shield_clouds_me.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			#shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		##cloud shadow texture override
+		meshsettings = {
+			name = "clouds_shadow_geosphereShape"
+			texture_diffuse = "pm_planet_shield_clouds_me.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "Collision"	# Setting this shader to hide this texture
+		}
+		
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "gpm_ringworld_section_shield_ambient_mesh"
+		file = "gfx/models/planets/ringworld_tech.mesh"
+		scale = 1.0 
+		
+		meshsettings = {
+			name = "pasted__polySurface28Shape"
+			index = 0
+			texture_diffuse = "pm_planet_shield_lower_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}	
+	}
+}

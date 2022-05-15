@@ -1,0 +1,120 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+
+# gpm_utopian_world
+# gpm_utopian_services
+# gpm_primitive_reserve
+# gpm_unified_processing
+# gpm_planetary_shielding_FE
+# gpm_living_infrastructure
+# gpm_galactic_databanks
+# gpm_monument_to_the_fallen
+# gpm_longevity
+# gpm_culture_of_games
+# gpm_weather_control
+# gpm_subterranean_paradise
+# gpm_space_elevators
+# gpm_artificial_landscaping
+# gpm_teleportation_systems
+
+
+gpm_utopian_world = {
+	pop_happiness = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_utopian_world.dds"
+	icon_frame = 9
+}
+gpm_utopian_services = {
+	planet_pops_consumer_goods_upkeep_mult = -0.40
+	pop_amenities_usage_mult = -0.40
+	icon = "gfx/interface/icons/planet_modifiers/gpm_utopian_services.dds"
+	icon_frame = 9
+}
+gpm_primitive_reserve = {
+	planet_amenities_add = 50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_primitive_reserve.dds"
+	icon_frame = 9
+}
+gpm_unified_processing = {
+	pop_happiness = 0.10
+	pop_amenities_usage_mult = -0.20
+	icon = "gfx/interface/icons/planet_modifiers/gpm_unified_processing.dds"
+	icon_frame = 9
+}
+gpm_planetary_shielding_FE = {
+	planet_orbital_bombardment_damage = -0.60
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planetary_shielding_fe.dds"
+	icon_frame = 9
+}
+gpm_living_infrastructure = {
+	pop_environment_tolerance = 1.00
+	planet_building_build_speed_mult = 1.00
+	planet_max_districts_add = 10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_living_infrastructure.dds"
+	icon_frame = 9
+}
+gpm_galactic_databanks = {
+	planet_jobs_physics_research_produces_mult = 0.50
+	planet_jobs_society_research_produces_mult = 0.50
+	planet_jobs_engineering_research_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_galactic_databanks.dds"
+	icon_frame = 9
+}
+gpm_monument_to_the_fallen = {
+	planet_stability_add = 30
+	icon = "gfx/interface/icons/planet_modifiers/gpm_monument_to_the_fallen.dds"
+	icon_frame = 9
+}
+gpm_longevity = {
+	pop_government_ethic_attraction = 1.00
+	icon = "gfx/interface/icons/planet_modifiers/gpm_longevity.dds"
+	icon_frame = 9
+}
+gpm_culture_of_games = {
+	pop_amenities_usage_mult = -0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_culture_of_games.dds"
+	icon_frame = 9
+}
+gpm_weather_control = {
+	pop_environment_tolerance = 0.50
+	district_farming_max = 10
+	icon = "gfx/interface/icons/planet_modifiers/gpm_weather_control.dds"
+	icon_frame = 9
+}
+gpm_subterranean_paradise = {
+	planet_max_districts_add = 12
+	icon = "gfx/interface/icons/planet_modifiers/gpm_subterranean_paradise.dds"
+	icon_frame = 9
+}
+gpm_space_elevators = {
+	trade_value_mult = 1.00
+	icon = "gfx/interface/icons/planet_modifiers/gpm_space_elevators.dds"
+	icon_frame = 9
+}
+gpm_artificial_landscaping = {
+	pop_environment_tolerance = 0.30
+	planet_max_districts_add = 6
+	icon = "gfx/interface/icons/planet_modifiers/gpm_artificial_landscaping.dds"
+	icon_frame = 9
+}
+gpm_teleportation_systems = {
+	planet_pops_upkeep_mult = -0.50
+	icon = "gfx/interface/icons/planet_modifiers/gpm_teleportation_systems.dds"
+	icon_frame = 9
+}

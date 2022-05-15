@@ -1,0 +1,149 @@
+gpm_remove_planetary_features = {
+    every_deposit = {
+        if = { limit = { is_deposit_type = gpm_d_ruined_battlefield } remove_deposit = gpm_d_ruined_battlefield }
+        if = { limit = { is_deposit_type = gpm_d_spaceship_graveyard } remove_deposit = gpm_d_spaceship_graveyard }
+        if = { limit = { is_deposit_type = gpm_d_unusual_formations } remove_deposit = gpm_d_unusual_formations }
+        if = { limit = { is_deposit_type = gpm_d_ice_flora } remove_deposit = gpm_d_ice_flora }
+        if = { limit = { is_deposit_type = gpm_d_planetwide_forest } remove_deposit = gpm_d_planetwide_forest }
+        if = { limit = { is_deposit_type = gpm_d_dense_forests } remove_deposit = gpm_d_dense_forests }
+        if = { limit = { is_deposit_type = gpm_d_proto_forests } remove_deposit = gpm_d_proto_forests }
+        if = { limit = { is_deposit_type = gpm_d_arachnophobia } remove_deposit = gpm_d_arachnophobia }
+        if = { limit = { is_deposit_type = gpm_d_dunes } remove_deposit = gpm_d_dunes }
+        if = { limit = { is_deposit_type = gpm_d_mushroom_forest } remove_deposit = gpm_d_mushroom_forest }
+        if = { limit = { is_deposit_type = gpm_d_floating_rocks } remove_deposit = gpm_d_floating_rocks }
+        if = { limit = { is_deposit_type = gpm_d_oasis } remove_deposit = gpm_d_oasis }
+        if = { limit = { is_deposit_type = gpm_d_ancient_temple } remove_deposit = gpm_d_ancient_temple }
+        if = { limit = { is_deposit_type = gpm_d_small_wildlife } remove_deposit = gpm_d_small_wildlife }
+        if = { limit = { is_deposit_type = gpm_d_massive_wildlife } remove_deposit = gpm_d_massive_wildlife }
+        if = { limit = { is_deposit_type = gpm_d_super_volcano } remove_deposit = gpm_d_super_volcano }
+        if = { limit = { is_deposit_type = gpm_d_obsidian_fields } remove_deposit = gpm_d_obsidian_fields }
+        if = { limit = { is_deposit_type = gpm_d_magnetic_mountains } remove_deposit = gpm_d_magnetic_mountains }
+        if = { limit = { is_deposit_type = gpm_d_magnetic_fields } remove_deposit = gpm_d_magnetic_fields }
+        if = { limit = { is_deposit_type = gpm_d_rich_crater } remove_deposit = gpm_d_rich_crater }
+        if = { limit = { is_deposit_type = gpm_d_surface_mineral_veins } remove_deposit = gpm_d_surface_mineral_veins }
+        if = { limit = { is_deposit_type = gpm_d_dense_metal_veins } remove_deposit = gpm_d_dense_metal_veins }
+        if = { limit = { is_deposit_type = gpm_d_iron_mountain } remove_deposit = gpm_d_iron_mountain }
+        if = { limit = { is_deposit_type = gpm_d_floating_island } remove_deposit = gpm_d_floating_island }
+        if = { limit = { is_deposit_type = gpm_d_floating_mountain } remove_deposit = gpm_d_floating_mountain }
+        if = { limit = { is_deposit_type = gpm_d_carnivorous_jungle } remove_deposit = gpm_d_carnivorous_jungle }
+        if = { limit = { is_deposit_type = gpm_d_carnivorous_forest } remove_deposit = gpm_d_carnivorous_forest }
+        if = { limit = { is_deposit_type = gpm_d_carnivorous_kelp } remove_deposit = gpm_d_carnivorous_kelp }
+        if = { limit = { is_deposit_type = gpm_d_magma_ocean } remove_deposit = gpm_d_magma_ocean }
+        if = { limit = { is_deposit_type = gpm_d_toxic_vent } remove_deposit = gpm_d_toxic_vent }
+        if = { limit = { is_deposit_type = gpm_d_colossal_subterranean_cavern } remove_deposit = gpm_d_colossal_subterranean_cavern }
+        if = { limit = { is_deposit_type = gpm_d_titanic_hunting_ground } remove_deposit = gpm_d_titanic_hunting_ground }
+        if = { limit = { is_deposit_type = gpm_d_unnatural_crystals } remove_deposit = gpm_d_unnatural_crystals }
+        if = { limit = { is_deposit_type = gpm_d_ancient_battlefield } remove_deposit = gpm_d_ancient_battlefield }
+        if = { limit = { is_deposit_type = gpm_d_buried_remains } remove_deposit = gpm_d_buried_remains }
+        if = { limit = { is_deposit_type = gpm_d_crashed_fighter } remove_deposit = gpm_d_crashed_fighter }
+        if = { limit = { is_deposit_type = gpm_d_crashed_destroyer } remove_deposit = gpm_d_crashed_destroyer }
+        if = { limit = { is_deposit_type = gpm_d_crashed_battleship } remove_deposit = gpm_d_crashed_battleship }
+        if = { limit = { is_deposit_type = gpm_d_crashed_capital_ship } remove_deposit = gpm_d_crashed_capital_ship }
+        if = { limit = { is_deposit_type = gpm_d_crystal_hills } remove_deposit = gpm_d_crystal_hills }
+        if = { limit = { is_deposit_type = gpm_d_colossal_fish } remove_deposit = gpm_d_colossal_fish }
+        if = { limit = { is_deposit_type = gpm_d_sprawling_archipelago } remove_deposit = gpm_d_sprawling_archipelago }
+        if = { limit = { is_deposit_type = gpm_d_spice_fields } remove_deposit = gpm_d_spice_fields }
+        if = { limit = { is_deposit_type = gpm_d_geometric_oddities } remove_deposit = gpm_d_geometric_oddities }
+        if = { limit = { is_deposit_type = gpm_d_garbage_patch } remove_deposit = gpm_d_garbage_patch }
+        if = { limit = { is_deposit_type = gpm_d_industrial_ruins } remove_deposit = gpm_d_industrial_ruins }
+        if = { limit = { is_deposit_type = gpm_d_radioactive_dump } remove_deposit = gpm_d_radioactive_dump }
+        if = { limit = { is_deposit_type = gpm_d_ice_flower_field } remove_deposit = gpm_d_ice_flower_field }
+        if = { limit = { is_deposit_type = gpm_d_white_forest } remove_deposit = gpm_d_white_forest }
+        if = { limit = { is_deposit_type = gpm_d_strange_ice_river } remove_deposit = gpm_d_strange_ice_river }
+        if = { limit = { is_deposit_type = gpm_d_massive_ray_school } remove_deposit = gpm_d_massive_ray_school }
+        if = { limit = { is_deposit_type = gpm_d_the_black_stone } remove_deposit = gpm_d_the_black_stone }
+        if = { limit = { is_deposit_type = gpm_d_sprawling_prestine_ruins } remove_deposit = gpm_d_sprawling_prestine_ruins }
+        if = { limit = { is_deposit_type = gpm_d_skyscraper_village } remove_deposit = gpm_d_skyscraper_village }
+        if = { limit = { is_deposit_type = gpm_d_sandworm_pit } remove_deposit = gpm_d_sandworm_pit }
+        if = { limit = { is_deposit_type = gpm_d_grand_reef } remove_deposit = gpm_d_grand_reef }
+        if = { limit = { is_deposit_type = gpm_d_glistening_lake } remove_deposit = gpm_d_glistening_lake }
+        if = { limit = { is_deposit_type = gpm_d_fossilized_egg_sacks } remove_deposit = gpm_d_fossilized_egg_sacks }
+        if = { limit = { is_deposit_type = gpm_d_fossilized_structures } remove_deposit = gpm_d_fossilized_structures }
+        if = { limit = { is_deposit_type = gpm_d_fossilized_creep } remove_deposit = gpm_d_fossilized_creep }
+        if = { limit = { is_deposit_type = gpm_d_giant_skeleton } remove_deposit = gpm_d_giant_skeleton }
+        if = { limit = { is_deposit_type = gpm_d_resonating_ice } remove_deposit = gpm_d_resonating_ice }
+        if = { limit = { is_deposit_type = gpm_d_tiny_herds } remove_deposit = gpm_d_tiny_herds }
+        if = { limit = { is_deposit_type = gpm_d_fertile_field } remove_deposit = gpm_d_fertile_field }
+        if = { limit = { is_deposit_type = gpm_d_ecological_brain } remove_deposit = gpm_d_ecological_brain }
+        if = { limit = { is_deposit_type = gpm_d_hot_springs } remove_deposit = gpm_d_hot_springs }
+        if = { limit = { is_deposit_type = gpm_d_colossal_coral_life } remove_deposit = gpm_d_colossal_coral_life }
+        if = { limit = { is_deposit_type = gpm_d_salt_flats } remove_deposit = gpm_d_salt_flats }
+    }
+}
+
+gpm_remove_random_vanilla_planetary_feature = {
+    random_deposit = {
+        limit = {
+            is_blocker = no
+            gpm_is_vanilla_feature = yes
+            PREV = { NOT = { has_planet_flag = gpm_is_terraformed_world } }
+        }
+        remove_deposit = yes
+    }
+}
+
+gpm_remove_random_vanilla_energy_planetary_feature = {
+    random_deposit = {
+        limit = {
+            OR = {
+                is_deposit_type = d_arid_highlands
+                is_deposit_type = d_hot_springs
+                is_deposit_type = d_rushing_waterfalls
+                is_deposit_type = d_searing_desert
+                is_deposit_type = d_frozen_gas_lake
+                is_deposit_type = d_geothermal_vent
+                is_deposit_type = d_underwater_vent
+                is_deposit_type = d_tempestous_mountain
+            }
+
+            PREV = { NOT = { has_planet_flag = gpm_is_terraformed_world } }
+        }
+        remove_deposit = yes
+    }
+}
+
+gpm_remove_random_vanilla_mineral_planetary_feature = {
+    random_deposit = {
+        limit = {
+            OR = {
+                is_deposit_type = d_veiny_cliffs
+                is_deposit_type = d_mineral_fields
+                is_deposit_type = d_prosperous_mesa
+                is_deposit_type = d_ore_rich_caverns
+                is_deposit_type = d_rich_mountain
+                is_deposit_type = d_submerged_ore_veins
+            }
+
+            PREV = { NOT = { has_planet_flag = gpm_is_terraformed_world } }
+        }
+        remove_deposit = yes
+    }
+}
+
+gpm_remove_random_vanilla_food_planetary_feature = {
+    random_deposit = {
+        limit = {
+            OR = {
+                is_deposit_type = d_lichen_fields
+                is_deposit_type = d_bountiful_plains
+                is_deposit_type = d_rugged_woods
+                is_deposit_type = d_green_hills
+                is_deposit_type = d_forgiving_tundra
+                is_deposit_type = d_boggy_fens
+                is_deposit_type = d_nutritious_mudland
+                is_deposit_type = d_fungal_caves
+                is_deposit_type = d_lush_jungle
+                is_deposit_type = d_fertile_lands
+                is_deposit_type = d_great_river
+                is_deposit_type = d_black_soil
+                is_deposit_type = d_teeming_reef
+                is_deposit_type = d_marvelous_oasis
+                is_deposit_type = d_tropical_island
+                is_deposit_type = d_fungal_forest
+            }
+
+            PREV = { NOT = { has_planet_flag = gpm_is_terraformed_world } }
+        }
+        remove_deposit = yes
+    }
+}

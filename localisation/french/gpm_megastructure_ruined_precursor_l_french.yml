@@ -1,0 +1,112 @@
+﻿l_french:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+# l_russian:
+# l_braz_por:
+# l_simp_chinese:
+# l_korean:
+# l_japanese:
+
+ # Mini megastructures
+ NAME_ruined_observation_station_1:1 "Ruined Station"
+ NAME_ruined_observation_station_2:1 "Abandonded Station"
+ NAME_ruined_observation_station_3:1 "Wrecked Station"
+ NAME_ruined_observation_station_4:1 "Depressurised Station"
+ NAME_ruined_observation_station_5:1 "Decrepit Station"
+ 
+ NAME_ruined_mining_facility_1:1 "Abandoned Mining Facility"
+ NAME_ruined_mining_facility_2:1 "Decripit Mining Rigs"
+ NAME_ruined_mining_facility_3:1 "Broken Asteroid Base"
+ NAME_ruined_mining_facility_4:1 "Asteroid Drilling Facility"
+ NAME_ruined_mining_facility_5:1 "Destroyed Resource Facility"
+ 
+ NAME_ruined_refinery_1:1 "Ruined Refinery"
+ NAME_ruined_refinery_2:1 "Broken Down Refinery"
+ NAME_ruined_refinery_3:1 "Depleted Refinery"
+ NAME_ruined_refinery_4:1 "Abandonded Gas Refiner"
+ NAME_ruined_refinery_5:1 "Destroyed Refiner"
+ 
+ NAME_ruined_silo_1:1 "Abandoned Silo"
+ NAME_ruined_silo_2:1 "Hidden Silo"
+ NAME_ruined_silo_3:1 "Leaking Silo"
+ NAME_ruined_silo_4:1 "Ruined Silo"
+ NAME_ruined_silo_5:1 "Destroyed Silo"
+
+ gpm_mega_shipyard_ruined_precursor:0 "Ruined Precursor Shipyards"
+ gpm_mega_shipyard_ruined_precursor_DESC:0 "A ruined precursor shipyard."
+ gpm_mega_shipyard_ruined_precursor_MEGASTRUCTURE_DETAILS:0 "This $mega_shipyard_3$ has seen better days. It will not be producing any more ships without extensive repairs."
+ gpm_mega_shipyard_restored_precursor:0 "Restored Precursor Shipyards"
+ gpm_mega_shipyard_restored_precursor_DESC:0 "This ancient precursor shipyard has been restored to the best of our abilities."
+ 
+ gpm_refinery_ruined:1 "Ruined Refinery"
+ gpm_refinery_ruined_DESC:1 ""
+ gpm_refinery_ruined_MEGASTRUCTURE_DETAILS:1 "$gpm_refinery_ruined_DESC$"
+ 
+ gpm_refinery_restored:1 "Repaired Refinery"
+ gpm_refinery_restored_DESC:1 ""
+ 
+ gpm_mining_facility_ruined:1 "Abandoned Mining Facility"
+ gpm_mining_facility_ruined_DESC:1 ""
+ gpm_mining_facility_ruined_MEGASTRUCTURE_DETAILS:1 "$gpm_mining_facility_ruined_DESC$"
+ 
+ gpm_mining_facility_restored:1 "Repaired Mining Facility"
+ gpm_mining_facility_restored_DESC:1 ""
+ 
+ 
+ gpm_observation_station_ruined:1 "Ruined Structure"
+ gpm_observation_station_ruined_DESC:1 "An an ancient ruined structure orbits this world."
+ gpm_observation_station_ruined_MEGASTRUCTURE_DETAILS:1 "$gpm_observation_station_ruined_DESC$"
+ 
+ gpm_observation_station_restored:1 "Restored Planetary Station"
+ gpm_observation_station_restored_DESC:1 ""
+ 
+ gpm_silo_ruined:1 "Abandoned Silo"
+ gpm_silo_ruined_DESC:1 ""
+ gpm_silo_ruined_MEGASTRUCTURE_DETAILS:1 "$gpm_silo_ruined_DESC$"
+ 
+ gpm_silo_restored:1 "Deep Space Silo"
+ gpm_silo_restored_DESC:1 ""
+ 
+ # Mini megastructures random names
+ NAME_ruined_observation_station_1:1 "Ruined Structure"
+ NAME_ruined_observation_station_2:1 "Abandonded Structure"
+ NAME_ruined_observation_station_3:1 "Wrecked Structure"
+ NAME_ruined_observation_station_4:1 "Depressurised Structure"
+ NAME_ruined_observation_station_5:1 "Decrepit Structure"
+ 
+ NAME_ruined_mining_facility_1:1 "Abandoned Mining Facility"
+ NAME_ruined_mining_facility_2:1 "Decripit Mining Rigs"
+ NAME_ruined_mining_facility_3:1 "Broken Asteroid Base"
+ NAME_ruined_mining_facility_4:1 "Asteroid Drilling Facility"
+ NAME_ruined_mining_facility_5:1 "Destroyed Resource Facility"
+ 
+ NAME_ruined_refinery_1:1 "Ruined Refinery"
+ NAME_ruined_refinery_2:1 "Broken Down Refinery"
+ NAME_ruined_refinery_3:1 "Depleted Refinery"
+ NAME_ruined_refinery_4:1 "Abandonded Gas Refiner"
+ NAME_ruined_refinery_5:1 "Destroyed Refiner"
+ 
+ NAME_ruined_silo_1:1 "Abandoned Silo"
+ NAME_ruined_silo_2:1 "Hidden Silo"
+ NAME_ruined_silo_3:1 "Leaking Silo"
+ NAME_ruined_silo_4:1 "Ruined Silo"
+ NAME_ruined_silo_5:1 "Destroyed Silo"
+
+ # exploration events
+ # Ruined Refinery
+ gpm_mega.1.name:1 "Colossal Blip"
+ gpm_mega.1.desc:1 "As soon as we entered the §Y[from.GetName]§! system our sensors registered a giant blip. A single large structure is kept in orbit over a gas giant. This warrants further investigation."
+
+ # Ruined Mining Facility
+ gpm_mega.2.name:1 "Unusual Emissions"
+ gpm_mega.2.desc:1 "One of the asteroids in the §Y[from.GetName]§! system is emitting a stream of fine particle dust. It seems to be leaking minerals! There must be a structure nearby."
+
+ # Ruined Station
+ gpm_mega.3.name:1 "Debris"
+ gpm_mega.3.desc:1 "Sensors are picking up unusual emissions coming from deep within the §Y[from.GetName]§! system. A very large, abandoned station surrounded in dangerous debris seems to be orbiting a seemingly uninteresting planet. Perhaps something might be salvaged from this."
+
+ # Ruined Silo
+ gpm_mega.4.name:1 "Subspace Warning"
+ gpm_mega.4.desc:1 "Several automated warnings started blaring as soon as we entered the §Y[from.GetName]§! system. It seems something is emitting very strong subspace signals. Scanners detect a large structure at the edge of the system, likely to be the source of these strange emissions."

@@ -1,0 +1,17 @@
+trait_gpm_historian = {
+	cost = 0
+
+	species_potential_add = {
+		always = no
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_gpm_historian.dds"
+	# leader_potential_add = {
+	# 	from = { has_country_flag = gpm_historian_trait_rewarded }
+	# }
+	modifier = {
+		ship_archeaological_site_clues_add = 1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}

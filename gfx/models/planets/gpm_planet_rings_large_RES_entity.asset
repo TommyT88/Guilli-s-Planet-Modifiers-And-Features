@@ -1,0 +1,16 @@
+##################
+## RES "planet" ##
+##################
+
+entity = {
+	name = "gpm_rings_metallic_large_RES_01_entity"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -150 0 } rotation = { 0 0 0 }}
+	attach = { "loc1" = "gpm_rings_metallic_large_RES_attach"}
+}
+
+entity = {
+	name = "gpm_rings_metallic_large_RES_attach"
+	pdxmesh = "gpm_rings_metallic_large_RES_mesh"
+	scale = 10.0
+}

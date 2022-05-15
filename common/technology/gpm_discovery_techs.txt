@@ -1,0 +1,1683 @@
+# Non-Standard Archeologist Safety Gear
+tech_gpm_precursor_remnants_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Triple Probe Search Patterns
+tech_gpm_precursor_remnants_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		science_ship_survey_speed = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Energy Recycling Conduits
+tech_gpm_precursor_energy_grid_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { particles }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		starbase_constructions_energy_produces_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Energy Field Theories
+tech_gpm_precursor_energy_grid_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_technician_energy_produces_add = 0.5
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Non-Emissive Observation Stations
+tech_gpm_precursor_satellite_grid_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		add_base_country_intel = 10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Deep Space Signal Boosters
+tech_gpm_precursor_satellite_grid_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		starbase_outpost_influence_cost_add = -10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Inspiring Designs
+tech_gpm_precursor_city_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_buildings_minerals_cost_add = -50
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Algorithmic Planning
+tech_gpm_precursor_city_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_districts_minerals_cost_add = -50
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Fractal Manufacturing
+tech_gpm_precursor_shipyards_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { industry }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_components_alloys_cost_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Rapid Exchange Units
+tech_gpm_precursor_shipyards_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { voidcraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_upgrades_alloys_cost_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Quantum Predictive Algorithmes
+tech_gpm_precursor_planetary_gun_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_weapon_range_mult = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Aerogel Cooling Plating
+tech_gpm_precursor_planetary_gun_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_fire_rate_mult = 0.12
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Portable Forcefields
+tech_gpm_precursor_bunker_grid_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_soldiers_unity_produces_add = 2
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Defensive Experience
+tech_gpm_precursor_bunker_grid_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_disengage_chance_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Mining Mechs
+tech_gpm_precursor_mechs_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { industry }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Autonomous Reload Arms
+tech_gpm_precursor_mechs_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { voidcraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		weapon_type_kinetic_weapon_fire_rate_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Shield Frequency Modulators
+tech_gpm_precursor_planetary_shield_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_shield_mult = 0.12
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Wide-Channel Shield Conduits
+tech_gpm_precursor_planetary_shield_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { particles }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_shield_regen_add_perc = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Gravity Anchors
+tech_gpm_precursor_floating_city_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_max_buildings_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Micro Gravity Fields
+tech_gpm_precursor_floating_city_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_housing_add = 8
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Bureacratic Protocols
+tech_gpm_precursor_capital_complex_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { statecraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_decision_enact_speed_mult = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Diplomatic Appeasement Techneques
+tech_gpm_precursor_capital_complex_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { statecraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_border_friction_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Time-Crystal Storage
+tech_gpm_precursor_communication_hub_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { particles }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_colony_development_speed_mult = 0.40
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Deep-Space Relay Stations
+tech_gpm_precursor_communication_hub_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_war_exhaustion_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Master-Database
+tech_gpm_precursor_singularity_drive_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Personal Singularity Assistant
+tech_gpm_precursor_singularity_drive_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		scientist_skill_levels = 2
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Obital Camouflage
+tech_gpm_precursor_eternal_fortress_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_orbital_bombardment_damage = -0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Polar Garrisons
+tech_gpm_precursor_eternal_fortress_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_defense_damage_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Drone Watchers
+tech_gpm_precursor_prison_planet_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { statecraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_crime_mult = -0.12
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Prison Planet Propaganda
+tech_gpm_precursor_prison_planet_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { statecraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pop_factions_unity_produces_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Mineral Sensor Field
+tech_gpm_precursor_mines_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_miners_minerals_produces_mult = 0.30
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Tunneling Nanites
+tech_gpm_precursor_mines_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { industry }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		# Building: Mining Nanite Nexus
+		#    district_mining_max = 5
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Cold Foundries
+tech_gpm_precursor_manufactorium_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.12
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Zero-G Belts
+tech_gpm_precursor_manufactorium_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.12
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Artifact Emissions
+tech_gpm_precursor_vaults_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_base_minor_artifacts_produces_add = 0.1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Ancient Vault Treasure Map
+tech_gpm_precursor_vaults_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_base_sr_dark_matter_produces_add = 1
+		country_base_sr_living_metal_produces_add = 1
+		country_base_sr_zro_produces_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Self-Assembly Starbase Modules
+tech_gpm_precursor_crashed_spacestation_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		starbase_modules_cost_mult = -0.25
+		starbase_buildings_cost_mult = -0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Starbase Heat Recycling
+tech_gpm_precursor_crashed_spacestation_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		starbase_constructions_food_produces_mult = 0.40
+		starbase_constructions_energy_produces_mult = 0.40
+		starbase_constructions_minerals_produces_mult = 0.40
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Plasma Rifles
+tech_gpm_precursor_battleground_ruins_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_damage_mult = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Plasma Throwers
+tech_gpm_precursor_battleground_ruins_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_morale_damage_mult = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Subspace Sensors
+tech_gpm_precursor_outpost_ruins_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 2
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Command Outposts
+tech_gpm_precursor_outpost_ruins_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_naval_cap_add = 50
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Auto Fisheries
+tech_gpm_precursor_harbor_ruins_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pc_ocean_habitability = 0.10
+		pc_continental_habitability = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Nanite Fluid Filters
+tech_gpm_precursor_harbor_ruins_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pop_amenities_usage_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Precursor Theories
+tech_gpm_precursor_ruins_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_archeaological_site_clues_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Fast And Loose
+tech_gpm_precursor_ruins_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Terraforming Obelisk
+tech_gpm_precursor_obelisks_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		terraform_speed_mult = 0.10
+		terraforming_cost_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# A.I. Personal Device
+tech_gpm_precursor_obelisks_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		category_computing_research_speed_mult = 0.40
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Core Fluid Dynamics
+tech_gpm_very_hot_core_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { particles }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		terraform_speed_mult = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Volcanic Creation
+tech_gpm_very_hot_core_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		terraforming_cost_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Climate Theories
+tech_gpm_gaia_world_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pop_environment_tolerance = 0.08
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Indestructible Beans
+tech_gpm_gaia_world_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_jobs_food_produces_mult = 0.30
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Elder Envy
+tech_gpm_holy_world_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		all_technology_research_speed = 0.07
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Existential Counselling
+tech_gpm_holy_world_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_unity_produces_mult = 0.15
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+# Anti-Gravity Boosters
+# Unlocks decision to build floating islands
+## Requirement:   tech_housing_2 "Anti-Gravity Engineering"  ??
+tech_gpm_floating_islands_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { propulsion }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_non_artificial_max_districts_add = 1
+		planet_housing_add = 10
+		# show_only_custom_tooltip = yes
+		# custom_tooltip = tech_gpm_floating_islands_discovery_tt
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Gravitational Ejectors
+tech_gpm_floating_islands_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		weapon_type_kinetic_weapon_damage_mult = 0.15
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Speeder Tactics
+tech_gpm_ruined_battlefield_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_morale = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Supply-Line Sabotage
+tech_gpm_ruined_battlefield_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { military_theory }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_morale_damage_mult = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Standard Compartment Templates
+tech_gpm_spaceship_graveyard_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { voidcraft }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_sections_alloys_cost_mult = -0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Superstructure Bulkheads
+tech_gpm_spaceship_graveyard_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { voidcraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_hull_mult = 0.33
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Self Replication
+tech_gpm_artificial_water_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		country_base_nanites_produces_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Nanite Coolant
+tech_gpm_artificial_water_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_metallurgists_alloys_produces_add = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Black Market Droids
+tech_gpm_android_pleasure_palace_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		biological_pop_happiness = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Droid Servants
+tech_gpm_android_pleasure_palace_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pop_amenities_usage_mult = -0.05
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Archaeological Seeker Drone
+tech_gpm_ancient_temple_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Archaeological AI
+tech_gpm_ancient_temple_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_archeaological_site_clues_add = 2
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Crystal Growth Catalysts
+tech_gpm_crystal_moon_palace_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_translucers_rare_crystals_produces_add = 0.5
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Fractal Refraction
+tech_gpm_crystal_moon_palace_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		weapon_type_energy_weapon_damage_mult = 0.15
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Plasma Fields
+tech_gpm_plasmoid_life_discovery = {
+	area = physics
+	cost = @tier2cost1
+	category = { field_manipulation }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_armor_penetration_mult = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Radon Plasma Manufacturing
+tech_gpm_plasmoid_life_discovery_2 = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_chemists_volatile_motes_produces_add = 0.5
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Ritual Of Insight
+tech_gpm_temple_of_the_ancient_one_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Ritual Of Sacrifice
+tech_gpm_temple_of_the_ancient_one_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		leader_age = 30
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Alien Fruits
+tech_gpm_proto_forests_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_farmers_food_produces_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Healing Flowers
+tech_gpm_proto_forests_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		job_healthcare_per_pop = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Self-Regenerating Slime
+tech_gpm_hiveworld_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_hull_regen_add_perc = 0.5
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Gas Pods
+tech_gpm_hiveworld_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_refiners_exotic_gases_produces_add = 0.5
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Arachnid DNA
+tech_gpm_arachnophobia_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		# show_only_custom_tooltip = yes
+		custom_tooltip = tech_gpm_arachnophobia_discovery_tt
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Pack Behaviour Studies
+tech_gpm_arachnophobia_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_researchers_society_research_produces_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Dense Exoscales
+tech_gpm_giant_worm_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_armor_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Mining Worms
+tech_gpm_giant_worm_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_miners_minerals_produces_add = 1
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+###### UNUSED  DO SOMETHING COOL WITH IT
+# tech_gpm_artificial_core_discovery = {
+# 	area = physics
+# 	cost = @tier2cost1
+# 	category = { field_manipulation }
+# 	tier = 2
+# 	is_rare = no
+# 	ai_update_type = all
+# 	weight = 1
+
+# 	modifier = {
+		
+# 	}
+	
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+# }
+###### UNUSED  DO SOMETHING COOL WITH IT
+# tech_gpm_artificial_core_discovery_2 = {
+# 	area = physics
+# 	cost = @tier2cost1
+# 	category = { field_manipulation }
+# 	tier = 2
+# 	is_rare = yes
+# 	ai_update_type = all
+# 	weight = 1
+
+# 	modifier = {
+		
+# 	}
+	
+# 	weight_modifier = {
+# 		factor = 0
+# 	}
+# }
+# Ethics Education
+tech_gpm_surface_of_bones_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { statecraft }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pop_government_ethic_attraction = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Collateral Dread
+tech_gpm_surface_of_bones_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		army_collateral_damage_mult = -0.20
+		army_damage_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Incubation
+tech_gpm_strange_alien_eggs_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		# show_only_custom_tooltip = yes
+		custom_tooltip = tech_gpm_strange_alien_eggs_discovery_tt
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Private Benefactors
+tech_gpm_strange_alien_eggs_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { new_worlds }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.40
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Shroom For The Dead
+tech_gpm_mushroom_forest_discovery = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		planet_farmers_food_produces_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# Blue Fungal
+tech_gpm_mushroom_forest_discovery_2 = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		pop_growth_speed = 0.08
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+# super materials tech building tech - discovery reward precursor city worlds
+tech_gpm_supermaterials_precursor = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# manufactoring hub building tech- discovery reward precursor manufactorium
+tech_gpm_manufactory_hub = {
+	area = engineering
+	cost = @tier2cost1
+	category = { industry }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+# enigmatic power relays component tech- disovery reward precursor shield worlds
+tech_gpm_enigmatic_power_relays = {
+	area = physics
+	cost = @tier2cost1
+	category = { particles }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+	is_reverse_engineerable = no
+
+	modifier = {
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+# singularity matrix component tech- disovery reward precursor singularity
+tech_gpm_singularity_matrix = {
+	area = physics
+	cost = @tier2cost1
+	category = { computing }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+	is_reverse_engineerable = no
+
+	modifier = {
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+# Special
+entity = {
+	name = "gpm_rings_special_large"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -150 0 } rotation = { 0 0 180 }}  # rotated 180 for effect
+	attach = { "loc1" = "gpm_rings_special_large_attach"}
+	
+	locator = { name = "loc2" position = { 0 -149.9 0 } rotation = { 0 0 0 }}  # bottom
+	attach = { "loc2" = "gpm_rings_special_large_attach"}
+	
+}
+
+entity = {
+	name = "gpm_rings_special_large_attach"
+	pdxmesh = "gpm_rings_special_large_mesh"
+	scale = 10.0
+	
+	game_data = {
+		bloom_factor = 0.85
+		uv_animation_speed = 0.25
+		uv_animation_direction 	= { 0.0 0.25 }
+	}
+}
+
+######################
+## Real Space Sizes ##
+######################
+
+# Special
+entity = {
+	name = "gpm_rings_RS_special_large"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -155 0 } rotation = { 0 0 180 }}  # rotated 180 for effect  # was 0 -75 0
+	attach = { "loc1" = "gpm_rings_special_large_attach"}
+	
+	locator = { name = "loc2" position = { 0 -154.9 0 } rotation = { 0 0 0 }}  # bottom # was 0 -74.9 0
+	attach = { "loc2" = "gpm_rings_special_large_attach"}
+	scale = 2.0	
+}

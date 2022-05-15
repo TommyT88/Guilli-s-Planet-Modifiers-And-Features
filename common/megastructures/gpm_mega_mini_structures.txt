@@ -1,0 +1,593 @@
+@phase_0_entity_x = 0
+@phase_0_entity_y = 0
+@entity_x = 0
+@entity_y = 0
+
+# Broken Down Refinery
+# drone homebase damaged entity
+gpm_refinery_ruined = {
+	entity = "gpm_refinery_damaged_entity"
+	portrait = "GFX_gpm_ruined_refinery_background"
+
+	place_entity_on_planet_plane = no
+	show_galactic_map_icon = yes
+	entity_offset = { x = @entity_x y = @entity_y }
+
+	potential = {
+		always = no
+	}
+}
+
+# Restored Refinery
+# drone homebase entity
+gpm_refinery_restored = {
+	entity = "gpm_refinery_entity"
+	construction_entity = "gpm_refinery_damaged_entity"
+	portrait = "GFX_gpm_repaired_refinery_background"
+	place_entity_on_planet_plane = no
+	show_galactic_map_icon = yes
+	entity_offset = { x = @entity_x y = @entity_y }
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+		}
+
+		upkeep = {
+			minerals = 10
+		}
+		produces = {
+			energy = 40
+			exotic_gases = 3
+			unity = 10
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_deposit = d_exotic_gases_1
+							has_deposit = d_exotic_gases_2
+							has_deposit = d_exotic_gases_3
+							has_deposit = d_exotic_gases_4
+							has_deposit = d_exotic_gases_5
+						}
+					}
+				}
+			}
+			exotic_gases = 2
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_modifier = gpm_frequent_thunderstorms
+							has_modifier = gpm_global_thunderstorms
+							has_modifier = gpm_global_thunderstorms_gas_giant
+							has_modifier = gpm_highly_charged_air_particles
+						}
+					}
+				}
+			}
+			energy = 10
+		}
+	}
+
+	upgrade_from = {
+		gpm_refinery_ruined
+	}
+
+	possible = {
+		# from = {
+			# has_technology = tech_mega_engineering
+		# }
+	}
+
+	on_build_start = {
+		# fromfrom = {
+			# set_graphical_culture = root.from
+		# }
+	}
+
+	on_build_complete = {
+		fromfrom = { set_name = gpm_refinery_restored }
+		every_system_ambient_object = {
+			limit = { has_ambient_object_flag = gpm_ambient_ruined_refinery_debris }
+			destroy_ambient_object = this
+		}
+		# from = {
+		# 	set_country_flag = has_built_or_repaired_megastructure
+		# 	country_event = { id = gpm_mega.1 }
+		# }
+		from = {
+			create_message = {
+				type = GPM_MESSAGE_MINIMEGA_REFINERY_COMPLETE
+				localization = GPM_MESSAGE_MINIMEGA_REFINERY_COMPLETE_DESC
+				days = 30
+				target = fromfrom.solar_system # the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = fromfrom.solar_system
+				}
+			}
+			# log = "create test message on target [from.GetName] --- root.owner: [root.owner.GetName] "
+		}
+	}
+
+	country_modifier = {
+		ship_speed_mult = 0.1
+	}
+}
+
+
+# Abandoned Mining Facility
+# pirate homebase damaged entity
+gpm_mining_facility_ruined = {
+	entity = "gpm_mining_facility_damaged_entity"
+	portrait = "GFX_gpm_ruined_mining_station_background"
+
+	place_entity_on_planet_plane = yes
+	show_galactic_map_icon = yes
+	entity_offset = { x = @entity_x y = @entity_y }
+
+	potential = {
+		always = no
+	}
+}
+
+# Restored Mining Facility
+# pirate homebase entity
+gpm_mining_facility_restored = {
+	entity = "gpm_mining_facility_entity"
+	construction_entity = "gpm_mining_facility_damaged_entity"
+	portrait = "GFX_gpm_repaired_mining_station_background"
+	place_entity_on_planet_plane = yes
+	show_galactic_map_icon = yes
+	entity_offset = { x = @entity_x y = @entity_y }
+	build_time = 900
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+		produces = {
+			minerals = 40
+			rare_crystals = 3
+			unity = 10
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_deposit = d_rare_crystals_1
+							has_deposit = d_rare_crystals_2
+							has_deposit = d_rare_crystals_3
+							has_deposit = d_rare_crystals_4
+							has_deposit = d_rare_crystals_5
+						}
+					}
+				}
+			}
+			rare_crystals = 2
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_deposit = d_volatile_motes_1
+							has_deposit = d_volatile_motes_2
+							has_deposit = d_volatile_motes_3
+							has_deposit = d_volatile_motes_4
+							has_deposit = d_volatile_motes_5
+						}
+					}
+				}
+			}
+			volatile_motes = 2
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_deposit = d_exotic_gases_1
+							has_deposit = d_exotic_gases_2
+							has_deposit = d_exotic_gases_3
+							has_deposit = d_exotic_gases_4
+							has_deposit = d_exotic_gases_5
+						}
+					}
+				}
+			}
+			exotic_gases = 2
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_deposit = d_food_3
+							has_deposit = d_food_10
+						}
+					}
+				}
+			}
+			food = 15
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_refinery
+						OR = {
+							has_deposit = d_minerals_1
+							has_deposit = d_minerals_2
+							has_deposit = d_minerals_3
+							has_deposit = d_minerals_4
+							has_deposit = d_minerals_5
+							has_deposit = d_minerals_6
+							has_deposit = d_minerals_7
+							has_deposit = d_minerals_8
+							has_deposit = d_minerals_9
+							has_deposit = d_minerals_10
+						}
+					}
+				}
+			}
+			minerals = 10
+		}
+	}
+
+	upgrade_from = {
+		gpm_mining_facility_ruined
+	}
+
+	possible = {
+		# from = {
+			# has_technology = tech_mega_engineering
+		# }
+	}
+
+	on_build_start = {
+		# fromfrom = {
+			# set_graphical_culture = root.from
+		# }
+	}
+
+	on_build_complete = {
+		fromfrom = { set_name = gpm_mining_facility_restored }
+		every_system_ambient_object = {
+			limit = { has_ambient_object_flag = gpm_ambient_ruined_mining_facility_debris }
+			destroy_ambient_object = this
+		}
+		# from = {
+		# 	country_event = { id = gpm_mega.2 }
+		# }
+		from = {
+			create_message = {
+				type = GPM_MESSAGE_MINIMEGA_MINING_FACILITY_COMPLETE
+				localization = GPM_MESSAGE_MINIMEGA_MINING_FACILITY_COMPLETE_DESC
+				days = 30
+				target = prev # the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = prev
+				}
+			}
+			# log = "create test message on target [from.GetName] --- root.owner: [root.owner.GetName] "
+		}
+	}
+
+	country_modifier = {
+		station_gatherers_produces_mult = 0.10
+	}
+}
+
+
+# Deprecated Observation Station
+# sensor station damaged entity
+gpm_observation_station_ruined = {
+	entity = "gpm_observation_station_damaged_entity"
+	portrait = "GFX_gpm_ruined_station_background"
+	show_galactic_map_icon = yes
+
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @entity_x y = @entity_y }
+
+	potential = {
+		always = no
+	}
+}
+
+# Restored Station
+# sensor station entity
+gpm_observation_station_restored = {
+	entity = "gpm_observation_station_entity"
+	construction_entity = "gpm_observation_station_damaged_entity"
+	portrait = "GFX_gpm_repaired_station_background"
+	show_galactic_map_icon = yes
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @entity_x y = @entity_y }
+	build_time = 750
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+		}
+		upkeep = {
+			energy = 10
+		}
+		produces = {
+			society_research = 30
+			engineering_research = 30
+			physics_research = 30
+			unity = 10
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_observation_station
+						OR = {
+							has_modifier = gpm_ancient_temple
+							gpm_has_precursor_modifiers = yes
+						}
+					}
+				}
+			}
+			society_research = 10
+			minor_artifacts = 0.1
+		}
+		# produces = {
+			# trigger = {
+				# solar_system = {
+					# any_system_planet = {
+						# has_planet_flag = has_gpm_ruined_observation_station
+						# OR = {
+							# has_modifier = gpm_heavy_elements
+							# has_modifier = gpm_rare_metals
+						# }
+					# }
+				# }
+			# }
+			# alloys = 10
+		# }
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_observation_station
+						OR = {
+							has_modifier = gpm_time_displaced_planet
+						}
+					}
+				}
+			}
+			physics_research = 20
+			engineering_research = 20
+			society_research = 20
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_observation_station
+						OR = {
+							has_modifier = gpm_crystal_moon_palace
+							has_modifier = gpm_temple_of_the_ancient_one
+							has_modifier = gpm_ruined_battlefield
+							has_modifier = gpm_old_world
+							has_modifier = gpm_surface_of_bones
+							has_modifier = gpm_sunken_cities
+						}
+					}
+				}
+			}
+			society_research = 10
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_observation_station
+						OR = {
+							has_modifier = gpm_floating_islands
+						}
+					}
+				}
+			}
+			physics_research = 10
+		}
+		produces = {
+			trigger = {
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_observation_station
+						OR = {
+							has_modifier = gpm_spaceship_graveyard
+							has_modifier = gpm_hiveworld
+							has_modifier = gpm_android_pleasure_palace
+						}
+					}
+				}
+			}
+			engineering_research = 10
+		}
+		# produces = {
+			# trigger = {
+				# solar_system = {
+					# any_system_planet = {
+						# has_planet_flag = has_gpm_ruined_observation_station
+						# OR = {
+							# has_modifier = gpm_ultra_rich_2
+							# has_modifier = gpm_mineral_rich_2
+							# has_modifier = ultra_rich
+							# has_modifier = mineral_rich
+							# has_modifier = gpm_extensive_cavern_system
+							# has_modifier = gpm_iron_planet
+						# }
+					# }
+				# }
+			# }
+			# minerals = 20
+		# }
+		# produces = {
+			# trigger = {
+				# solar_system = {
+					# any_system_planet = {
+						# has_planet_flag = has_gpm_ruined_observation_station
+						# OR = {
+							# has_modifier = gpm_delicious_ingredients
+							# has_modifier = gpm_exotic_spices
+						# }
+					# }
+				# }
+			# }
+			# energy = 20
+		# }
+	}
+
+	upgrade_from = {
+		gpm_observation_station_ruined
+	}
+
+	possible = {
+		# from = {
+			# has_technology = tech_mega_engineering
+		# }
+	}
+
+	on_build_start = {
+		# fromfrom = {
+			# set_graphical_culture = root.from
+		# }
+	}
+
+	on_build_complete = {
+		fromfrom = { set_name = gpm_observation_station_restored }
+		every_system_ambient_object = {
+			limit = { has_ambient_object_flag = gpm_ambient_ruined_observation_station_debris }
+			destroy_ambient_object = this
+		}
+		# from = {
+		# 	set_country_flag = has_built_or_repaired_megastructure
+		# 	country_event = { id = gpm_mega.3 }
+		# }
+		from = {
+			create_message = {
+				type = GPM_MESSAGE_MINIMEGA_STATION_COMPLETE
+				localization = GPM_MESSAGE_MINIMEGA_STATION_COMPLETE_DESC
+				days = 30
+				target = fromfrom.solar_system # the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = fromfrom.solar_system
+				}
+			}
+			# log = "create test message on target [from.GetName] --- root.owner: [root.owner.GetName] "
+		}
+	}
+
+	country_modifier = {
+		megastructure_build_speed_mult = 0.10
+	}
+}
+
+
+# Hidden Silo
+gpm_silo_ruined = {
+	entity = "gpm_silo_damaged_entity"
+	portrait = "GFX_gpm_ruined_silo_background"
+	place_entity_on_planet_plane = no
+	show_galactic_map_icon = yes
+	build_outside_gravity_well = yes
+
+	potential = {
+		always = no
+	}
+}
+
+# Deep Space Silo
+gpm_silo_restored = {
+	entity = "gpm_silo_entity"
+	construction_entity = "gpm_silo_damaged_entity"
+	portrait = "GFX_gpm_repaired_silo_background"
+	place_entity_on_planet_plane = no
+	# build_outside_gravity_well = yes
+	show_galactic_map_icon = yes
+
+	potential = {
+	}
+
+	possible = {
+	}
+	upgrade_from = {
+		gpm_silo_ruined
+	}
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+		}
+
+		upkeep = {
+			energy = 10
+		}
+		produces = {
+			unity = 10
+		}
+	}
+	
+	on_build_start = {
+		# fromfrom = {
+			# set_graphical_culture = root.from
+		# }
+	}
+
+	on_build_complete = {
+		fromfrom = { set_name = gpm_silo_restored }
+		every_system_ambient_object = {
+			limit = { has_ambient_object_flag = gpm_ambient_ruined_silo_debris }
+			destroy_ambient_object = this
+		}
+		# from = {
+		# 	set_country_flag = has_built_or_repaired_megastructure
+		# 	country_event = { id = gpm_mega.4 }
+		# }
+		from = {
+			create_message = {
+				type = GPM_MESSAGE_MINIMEGA_SILO_COMPLETE
+				localization = GPM_MESSAGE_MINIMEGA_SILO_COMPLETE_DESC
+				days = 30
+				target = fromfrom.solar_system # the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = fromfrom.solar_system
+				}
+			}
+			# log = "create test message on target [from.GetName] --- root.owner: [root.owner.GetName] "
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 15000
+	}
+}

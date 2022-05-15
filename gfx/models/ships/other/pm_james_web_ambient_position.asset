@@ -1,0 +1,20 @@
+entity = {
+	name = "gpm_james_web_mesh_entity"
+	pdxmesh = "gpm_james_web_mesh"
+	
+	# default_state = idle
+	# state = { name = "idle"	animation = "idle" animation_speed = 0.1 
+		# start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } } 
+	# }
+	scale = 1
+}
+
+
+entity = {
+	name = "gpm_james_web_entity"
+	locator = { name = "main" position = { 0 -40 0 } rotation = { 0 0 0 }}
+	attach = { "main" = "primitive_space_station_entity"}
+	
+	
+	scale = 0.1
+}

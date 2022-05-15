@@ -1,0 +1,99 @@
+gpm_add_space_deposit = {
+	# Asteroid modifiers
+	if = {
+		limit = { gpm_is_planet_class_asteroid= yes }
+		switch = {
+			trigger = has_modifier
+			gpm_large_asteroid = { gpm_d_random_minerals = yes }
+			gpm_asteroid_moon = { gpm_d_random_minerals = yes }
+			gpm_metal_asteroid = { gpm_d_random_minerals = yes }
+			gpm_dense_core = { gpm_d_random_minerals = yes }
+			gpm_crystallized_structure = { gpm_d_random_minerals = yes }
+			gpm_abandoned_mining_platforms = { gpm_d_random_minerals = yes }
+			gpm_m_type_asteroid = { gpm_d_random_minerals = yes }
+			gpm_v_type_asteroid = { gpm_d_random_minerals = yes }
+			default = { }
+		}
+	}	
+
+	# Star modifiers
+	if = {
+		limit = { gpm_is_planet_class_star = yes }
+		switch = {
+			trigger = has_modifier
+			gpm_unusual_sun_spots = { gpm_d_random_energy = yes }
+			gpm_unusual_bright_sun = { gpm_d_random_energy = yes }
+			gpm_plasma_tornadoes = { gpm_d_random_energy = yes }
+			gpm_violent_sun = { gpm_d_random_energy = yes }
+			default = { }
+		}
+	}
+
+	# Gas Giants
+	if = {
+		limit = { gpm_is_planet_class_gas_giant= yes }
+		switch = {
+			trigger = has_modifier
+			gpm_geometrical_polar_storm = { gpm_d_random_physics = yes }
+			gpm_everlasting_tornadoes = { gpm_d_random_physics = yes }
+			gpm_shrinking_giant = { gpm_d_random_physics = yes }
+			gpm_thin_atmospheres_gas_giant = { gpm_d_random_physics = yes }
+			gpm_weak_magnetic_field_gas_giant = { gpm_d_random_physics = yes }
+			gpm_strong_magnetic_field_gas_giant = { gpm_d_random_physics = yes }
+			gpm_radiation_storms = { gpm_d_random_engineering = yes }
+			gpm_super_heated_atmosphere = { gpm_d_random_engineering = yes }
+			gpm_floating_forest = { gpm_d_random_society = yes }
+			gpm_aeroplankton_clouds = { gpm_d_random_society = yes }
+			gpm_floating_kelp = { gpm_d_random_society = yes }
+			gpm_floatig_behemothaurs = { add_deposit = d_society_5 }
+			gpm_viscous_gas_layer = { gpm_d_random_energy = yes }			
+			gpm_charged_atmosphere = { gpm_d_random_energy = yes }			
+			gpm_abandoned_refineries = { gpm_d_random_energy = yes }
+			gpm_global_thunderstorms_gas_giant = { gpm_d_random_energy = yes }
+			default = { }
+		}
+	}
+
+	# Normal Uninhabitable modifiers
+	if = {
+		limit = { gpm_is_planet_class_normal_uninhabitable= yes }
+		switch = {
+			trigger = has_modifier
+			strong_magnetic_field = { gpm_d_random_physics = yes }
+			gpm_subterranean_eco_system = { gpm_d_random_society = yes }
+			gpm_old_world = { gpm_d_random_society = yes }
+			gpm_hiveworld = { gpm_d_random_society = yes }
+			gpm_abundant_natural_radioactivity = { gpm_d_random_engineering = yes }
+			mineral_rich = { gpm_d_random_minerals = yes }
+			ultra_rich = { gpm_d_random_minerals = yes }
+			gpm_periodic_meteor_showers = { gpm_d_random_minerals = yes }
+			# barren
+			gpm_hydrogen_mist = { gpm_d_random_energy = yes }
+			# frozen
+			gpm_water_pockets = { gpm_d_random_physics = yes }
+			gpm_hydrogen_ice = { gpm_d_random_energy = yes }
+			gpm_nitrogen_ice = { gpm_d_random_energy = yes }
+			# toxic
+			gpm_heavy_metal_coral = { gpm_d_random_alloys = yes }
+			gpm_toxic_garbage = { gpm_d_random_alloys = yes }
+			gpm_decomposing_leviathan = { gpm_d_random_society = yes }
+			gpm_mushroom_forest_toxic_world = { gpm_d_random_society = yes }
+			gpm_giant_mold_blobs = { gpm_d_random_society = yes }
+			gpm_garbage_dump = { gpm_d_random_society = yes }
+			gpm_toxic_flora_fauna = { gpm_d_random_society = yes }
+			gpm_corrosive_atmosphere = { gpm_d_random_engineering = yes }
+			gpm_acid_rain = { gpm_d_random_engineering = yes }
+
+			# molten
+			gpm_heavy_elements = { gpm_d_random_alloys = yes }
+			gpm_rare_metals = { gpm_d_random_alloys = yes }	
+			gpm_silicon_crystals = { gpm_d_random_minerals = yes }
+			gpm_crystaline_deposits = { gpm_d_random_crystals = yes }
+			gpm_searing_fumes = { gpm_d_random_gasses = yes }
+			gpm_stable_geodes = { gpm_d_random_motes = yes }
+			gpm_magma_ocean = { gpm_d_random_physics = yes }	
+			default = { }
+		}
+	}
+}
+

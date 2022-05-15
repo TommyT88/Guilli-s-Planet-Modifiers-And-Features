@@ -1,0 +1,39 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+# gpm_origin_death_world_mod
+# gpm_origin_precursor_world_mod
+# gpm_origin_precursor_world_machine_mod
+# gpm_origin_fallen_empire_colony_mod
+
+
+gpm_origin_death_world_mod = {
+	icon = "gfx/interface/icons/origins/origin_gpm_death_world.dds"
+}
+
+gpm_origin_precursor_world_mod = {
+	science_ship_survey_speed = -0.5
+	icon = "gfx/interface/icons/origins/origin_gpm_precursor_world.dds"
+}
+
+gpm_origin_fallen_empire_colony_mod = {
+	diplo_weight_mult = 0.1
+	all_technology_research_speed = -0.15
+	icon = "gfx/interface/icons/origins/origin_gpm_fallen_empire_colony.dds"
+}
