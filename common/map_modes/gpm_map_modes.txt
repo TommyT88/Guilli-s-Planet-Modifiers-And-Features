@@ -1,0 +1,52 @@
+#Scope layout:
+# this = the country who owns the borders we a re coloring
+# from = the country who we are coloring for, usually the player
+
+#example = {
+#	icon = "GFX_some_icon"				-- which icon to use in the main gui
+#	hardcoded_tooltip = opinion		-- override tooltip generation with a hardcoded method. Currently supported: opinion
+#	can_change_point_of_view = yes		-- can the player click on other empires to see the map mode from their point of view?
+#	enable_terra_incognita = yes		-- should terra incognita be rendered when this map mode is active?
+#	display_claims = no					-- Should claims be displayed?
+#	display_espionage_operations = no	-- Should active Espionage Operations be displayed?
+#
+#	color = {								-- the bread and butter of the map modes. A country will be colored with the first color block who's condition is met
+#		type = borders						-- Possible values: borders, country or country_and_borders. Default is country_and_borders
+#		value = hsv { 1.0 0.0 0.0 1.0 }		-- you can also use rgb { 255 0 0 255 }
+#		custom_tooltip = "SOME_STRING"		-- Tooltip to be shown if this is the selected color. suports [This.GetName] etc
+#		condition = {
+#			...							-- simple AND trigger for evaluation. Will also generate a tooltip if neither hardcoded_tooltip or custom_tooltip is defined
+#		}
+#		zoom = 1300						-- Will only be applied when zoomed out more than this value (like empire logos that are only shown at zoom > 600)
+#		filter = union						-- Will only be applied if this map filter is active. Possible values: unions, players, sectors, hyperlanes, trade_routes.
+#	}
+#}
+
+gpm_relic_map_mode = {
+	icon = "GFX_map_mode_neighbours"
+	enable_terra_incognita = yes
+	shortcut = "CTRL+r"
+	
+	color = {
+		value = hsv { 0.0 0.0 0.8 0.7 }
+		custom_tooltip = "GPM_MODE_HAS_RELIC"
+		condition = {
+			OR = {
+				gpm_has_vanilla_precursor_relic = yes
+				gpm_has_modded_precursor_relic = yes
+				gpm_has_modded_non_precursor_relic = yes
+			}
+		}
+	}
+	color = {
+		value = hsv { 0.3 1.0 0.6 1.0 }
+		custom_tooltip = "GPM_MODE_NOT_HAS_RELIC"
+		condition = {
+			NOR = {
+				gpm_has_vanilla_precursor_relic = yes
+				gpm_has_modded_precursor_relic = yes
+				gpm_has_modded_non_precursor_relic = yes
+			}
+		}
+	}
+}
