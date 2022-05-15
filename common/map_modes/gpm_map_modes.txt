@@ -27,6 +27,7 @@ gpm_relic_map_mode = {
 	enable_terra_incognita = yes
 	shortcut = "CTRL+r"
 	
+	# This will be your own empire
 	color = {
 		value = hsv { 0.0 0.0 0.8 0.7 }
 		custom_tooltip = "GPM_MODE_HAS_RELIC"
@@ -38,6 +39,22 @@ gpm_relic_map_mode = {
 			}
 		}
 	}
+	
+	# All empires with a relic
+	# To do restrictions: only known relics and if enough intel (or gathered intel) which relic
+	color = {
+		value = hsv { 0.0 0.0 0.8 0.7 }
+		custom_tooltip = "GPM_MODE_HAS_RELIC"
+		condition = {
+			OR = {
+				gpm_has_vanilla_precursor_relic = yes
+				gpm_has_modded_precursor_relic = yes
+				gpm_has_modded_non_precursor_relic = yes
+			}
+		}
+	}
+	
+	# All empires you dont know about their relics
 	color = {
 		value = hsv { 0.3 1.0 0.6 1.0 }
 		custom_tooltip = "GPM_MODE_NOT_HAS_RELIC"
