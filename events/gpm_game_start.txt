@@ -23,17 +23,12 @@ event = {
 		set_global_flag = gpm_modifier_amount_normal    # for my mod I set a base amount too to get amount cycle option working (has to have a base to check with)
 		set_global_flag = gpm_galaxy_age_default		# for my mod I set the default galaxy ag to get the age cycle option working ^
 
-		# sets default planet modifier scaling values
-		set_variable = { which = gpm_planet_size_multiplier value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
-
 		country_event = { id = gpm_start_menu.1 }       # this is the actual start menu
 
 		# small mineral boost to all countries starting system
 		every_country =  {
 			limit = { is_country_type = default	}
-			add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
+			# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
 			random_owned_planet = {
 				limit = { is_capital = yes }
 				solar_system = {
@@ -61,6 +56,19 @@ event = {
 					}
 				}
 			}
+		}
+
+		# debug added envoys until envoy AI is fixed...
+		every_country =  {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = primitive
+					is_country_type = fallen_empire
+				}
+				is_ai = yes
+			}
+			add_modifier = { modifier = gpm_debug_envoys }
 		}
 
 		# James Webb initialisation

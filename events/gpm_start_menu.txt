@@ -309,29 +309,29 @@ country_event = {
 	###########################################################
 
 	# Disable extra station cost
-	option = {
-		trigger = {
-			NOT = { has_global_flag = gpm_station_extra_cost_disabled }
-		}
-		name = gpm_start_menu.2.disable_stationcost
-		custom_tooltip = gpm_start_menu.2.disable_stationcostTT
-		set_global_flag = gpm_station_extra_cost_disabled
-		hidden_effect = {
-			country_event = { id = gpm_start_menu.2  }
-		}
-	}
+	# option = {
+	# 	trigger = {
+	# 		NOT = { has_global_flag = gpm_station_extra_cost_disabled }
+	# 	}
+	# 	name = gpm_start_menu.2.disable_stationcost
+	# 	custom_tooltip = gpm_start_menu.2.disable_stationcostTT
+	# 	set_global_flag = gpm_station_extra_cost_disabled
+	# 	hidden_effect = {
+	# 		country_event = { id = gpm_start_menu.2  }
+	# 	}
+	# }
 	# Enable extra station cost
-	option = {
-		trigger = {
-			has_global_flag = gpm_station_extra_cost_disabled
-		}
-		name = gpm_start_menu.2.enabled_stationcost
-		custom_tooltip = gpm_start_menu.2.enabled_stationcostTT
-		remove_global_flag = gpm_station_extra_cost_disabled
-		hidden_effect = {
-			country_event = { id = gpm_start_menu.2  }
-		}
-	}
+	# option = {
+	# 	trigger = {
+	# 		has_global_flag = gpm_station_extra_cost_disabled
+	# 	}
+	# 	name = gpm_start_menu.2.enabled_stationcost
+	# 	custom_tooltip = gpm_start_menu.2.enabled_stationcostTT
+	# 	remove_global_flag = gpm_station_extra_cost_disabled
+	# 	hidden_effect = {
+	# 		country_event = { id = gpm_start_menu.2  }
+	# 	}
+	# }
 	
 
 	##############################################

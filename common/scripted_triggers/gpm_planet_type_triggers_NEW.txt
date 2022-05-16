@@ -1,4 +1,5 @@
 gpm_is_planet_fallen_empire = {
+	optimize_memory
 	exists = owner
 	owner = {
 		OR = {
@@ -8,6 +9,7 @@ gpm_is_planet_fallen_empire = {
 	}
 }
 gpm_is_fallen_empire_space_owner = {
+	optimize_memory
 	exists = space_owner
 	space_owner = {
 		OR = {
@@ -17,6 +19,7 @@ gpm_is_fallen_empire_space_owner = {
 	}
 }
 gpm_is_planet_primitive = {
+	optimize_memory
 	exists = owner
 	owner = {
 		is_primitive = yes
@@ -30,6 +33,7 @@ gpm_is_planet_primitive = {
 ### Used for Terraforming ###
 #############################
 gpm_is_planet_water = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia					# Vanilla
 		is_planet_class = pc_continental			# Vanilla
@@ -51,6 +55,7 @@ gpm_is_planet_water = {
 ### Used for Terraforming ###
 #############################
 gpm_is_planet_wet_hot = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia					# Vanilla
 		is_planet_class = pc_continental			# Vanilla
@@ -95,6 +100,7 @@ gpm_is_planet_wet_hot = {
 ### Used for Terraforming ###
 #############################
 gpm_is_planet_wet_cold = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia					# Vanilla
 		is_planet_class = pc_continental			# Vanilla
@@ -121,6 +127,7 @@ gpm_is_planet_wet_cold = {
 ### Used for Terraforming ###
 #############################
 gpm_is_planet_dry_hot = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia					# Vanilla
 		is_planet_class = pc_savannah				# Vanilla
@@ -143,6 +150,7 @@ gpm_is_planet_dry_hot = {
 ### Used for Terraforming ###
 #############################
 gpm_is_planet_dry_cold = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia					# Vanilla
 		is_planet_class = pc_arctic					# Vanilla

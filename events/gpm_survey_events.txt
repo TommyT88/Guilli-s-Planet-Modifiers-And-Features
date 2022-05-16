@@ -7213,6 +7213,7 @@ ship_event = {
 				every_relation = {
 					limit = {
 						is_country_type = default
+						has_communications = root.owner
 					}
 					create_message = {
 						type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR

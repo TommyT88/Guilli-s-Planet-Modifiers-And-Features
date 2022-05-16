@@ -596,76 +596,76 @@ gpm_tech_arcane_research = {
 # }
 
 # station_gatherers_build_cost
-tech_gpm_station_gatherers_build_cost = {
-	cost = @tier1cost3
-	area = engineering
-	tier = 1
-	category = { voidcraft }	
-	prerequisites = { "tech_space_mining_1" }
-	weight = @tier2weight1
+# tech_gpm_station_gatherers_build_cost = {
+	# cost = @tier1cost3
+	# area = engineering
+	# tier = 1
+	# category = { voidcraft }	
+	# prerequisites = { "tech_space_mining_1" }
+	# weight = @tier2weight1
 	
-	potential = {
-		NOT = { has_global_flag = gpm_station_extra_cost_disabled }
-	}
+	# potential = {
+		# NOT = { has_global_flag = gpm_station_extra_cost_disabled }
+	# }
 	
-	modifier = {
-		station_gatherers_minerals_cost_add = -50
-	}
+	# modifier = {
+		# station_gatherers_minerals_cost_add = -50
+	# }
 	
-	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}			
-		}
-	}
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = engineering
+				# has_trait = "leader_trait_expertise_voidcraft"
+			# }			
+		# }
+	# }
 	
-	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
-	}
-}
+	# ai_weight = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = engineering
+				# has_trait = "leader_trait_expertise_voidcraft"
+			# }
+		# }
+	# }
+# }
 # station_researchers_build_cost
-tech_gpm_station_researchers_build_cost = {
-	cost = @tier1cost3
-	area = engineering
-	tier = 1
-	category = { voidcraft }	
-	prerequisites = { "tech_space_science_1" }
-	weight = @tier2weight1
+# tech_gpm_station_researchers_build_cost = {
+	# cost = @tier1cost3
+	# area = engineering
+	# tier = 1
+	# category = { voidcraft }	
+	# prerequisites = { "tech_space_science_1" }
+	# weight = @tier2weight1
 	
-	potential = {
-		NOT = { has_global_flag = gpm_station_extra_cost_disabled }
-	}
+	# potential = {
+		# NOT = { has_global_flag = gpm_station_extra_cost_disabled }
+	# }
 	
-	modifier = {
-		station_researchers_minerals_cost_add = -50
-	}
+	# modifier = {
+		# station_researchers_minerals_cost_add = -50
+	# }
 	
-	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}			
-		}
-	}
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = engineering
+				# has_trait = "leader_trait_expertise_voidcraft"
+			# }			
+		# }
+	# }
 	
-	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
-	}
-}
+	# ai_weight = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = engineering
+				# has_trait = "leader_trait_expertise_voidcraft"
+			# }
+		# }
+	# }
+# }

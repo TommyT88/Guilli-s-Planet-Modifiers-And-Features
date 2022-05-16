@@ -142,8 +142,8 @@ gpm_spawn_gas_giant_modifier = {
 		100 = {
 			add_modifier = { modifier = "gpm_abandoned_refineries" }
 			clear_deposits = yes
-			add_deposit = d_energy_3
-			add_deposit = d_minerals_3
+			# add_deposit = d_energy_3
+			# add_deposit = d_minerals_3
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_abandoned_refineries" }
 			modifier = { factor = 0 has_modifier = "gpm_floatig_behemothaurs" }

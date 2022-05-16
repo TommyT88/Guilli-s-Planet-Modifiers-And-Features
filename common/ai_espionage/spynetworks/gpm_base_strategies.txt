@@ -2,7 +2,7 @@ gpm_added_to_default_empire = {
 	strategy_weight = {
 		modifier = {
 			is_country_type = default
-			weight = 2
+			weight = 10
 		}
 		modifier = {
 			owner = {
@@ -20,9 +20,6 @@ gpm_added_to_default_empire = {
 
 	network_weight = {
 		modifier = {
-			weight = 200
-		}
-		modifier = {
 			target = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
@@ -30,7 +27,7 @@ gpm_added_to_default_empire = {
 					gpm_has_modded_non_precursor_relic = yes
 				}
 			}
-			factor = 20
+			weight = 1000
 		}
 		modifier = {
 			target = {
@@ -49,22 +46,15 @@ gpm_added_to_default_empire = {
 			owner = {
 				has_rival = root.target
 			}
-			factor = 50
+			factor = 5
 		}
 		modifier = {
-			# Proximity is they key
+			# nearby is better
 			owner = {
 				is_neighbor_of = root.target
 			}
-			factor = 50
+			factor = 5
 		}
-		modifier = {
-			owner = {
-				is_in_federation_with = root.target
-			}
-			factor = 0 # dont spy on fed members
-		}
-		
 		
 		#### weights courtesy of Danetta ###
 		# nothing good will come out of it as there are no useful operations
@@ -72,7 +62,7 @@ gpm_added_to_default_empire = {
 		modifier = {
 			is_running_espionage_operation = no
 			is_spynetwork_max_level < 20
-			factor = 0
+			factor = 0.1
 		}
 		# if we have envoy already assigned here
 		# nulify weight if any non-spy-network envoy is not on cooldown
@@ -93,7 +83,7 @@ gpm_added_to_default_empire = {
 					}
 				}
 			}
-			factor = 0
+			factor = 0.1
 		}
 	}
 
@@ -113,7 +103,7 @@ gpm_added_to_default_empire = {
 			operation_policy = gpm_spy_policy_steal_relic
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 
@@ -121,7 +111,7 @@ gpm_added_to_default_empire = {
 			operation_policy = until_max_network_cap_policy
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 
@@ -129,7 +119,7 @@ gpm_added_to_default_empire = {
 			operation_policy = fix_chance_10
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 
@@ -137,72 +127,72 @@ gpm_added_to_default_empire = {
 			operation_policy = fix_chance_10
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 		operation_sleeper_cells = {
 			operation_policy = gpm_spy_policy_rival
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 		operation_diplomatic_incident = {
 			operation_policy = gpm_spy_policy_rival
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 		operation_extort_favors = {
 			operation_policy = gpm_spy_policy_rival
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 		operation_smear_campaign = {
 			operation_policy = gpm_spy_policy_rival
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 		operation_arm_privateers = {
 			operation_policy = gpm_spy_policy_rival
 
 			target_value = {
-				min = 10
+				min = 1
 			}
 		}
 		operation_sabotage_starbase = {
 			operation_policy = gpm_spy_policy_rival
 			target_value = {
-				min = 10
+				min = 1
 			} 
 		}
 		operation_crisis_beacon = {
 			operation_policy = gpm_spy_policy_rival
 			target_value = {
-				min = 10
+				min = 1
 			} 
 		}
 		operation_weaken_galactic_empire = {
 			operation_policy = gpm_spy_policy_rival
 			target_value = {
-				min = 10
+				min = 1
 			} 
 		}
 		operation_target_seditionists = {
 			operation_policy = gpm_spy_policy_rival
 			target_value = {
-				min = 10
+				min = 1
 			} 
 		}
 		operation_spark_rebellion = {
 			operation_policy = gpm_spy_policy_rival
 			target_value = {
-				min = 10
+				min = 1
 			} 
 		}
 	}

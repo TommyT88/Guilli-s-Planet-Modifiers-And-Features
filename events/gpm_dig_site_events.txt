@@ -99,9 +99,10 @@ fleet_event = {
 		}
 		owner = { add_relic = gpm_r_time_displacer }
 		owner = {
-			every_relation = {
+			every_relation = { 
 				limit = {
 					is_country_type = default
+					has_communications = root.owner
 				}
 				create_message = {
 					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -498,6 +499,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -529,6 +531,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -560,6 +563,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -591,6 +595,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -622,6 +627,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -844,6 +850,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -878,6 +885,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1029,6 +1037,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1181,6 +1190,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1313,6 +1323,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1350,6 +1361,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1548,6 +1560,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1699,6 +1712,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1822,6 +1836,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -1977,6 +1992,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -2100,6 +2116,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -2280,6 +2297,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -2403,6 +2421,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -2537,6 +2556,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -2660,6 +2680,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -2870,6 +2891,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -3031,6 +3053,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -3157,6 +3180,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
@@ -3280,6 +3304,7 @@ fleet_event = {
 					every_relation = {
 						limit = {
 							is_country_type = default
+							has_communications = root.owner
 						}
 						create_message = {
 							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR

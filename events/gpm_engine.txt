@@ -30,11 +30,6 @@ country_event = {
 	immediate = {
 		# global target to hook variables and stuff to for galaxy gen mechanics
 		save_global_event_target_as = gpm_host_country_event_target
-
-		# set default base modifiier multipliers
-		set_variable = { which = gpm_planet_size_multiplier value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
 		set_variable = { which = gpm_galaxy_setting_habitable_worlds_scale value = 1 }
 		
 		# SOL system
@@ -68,6 +63,7 @@ country_event = {
 		if = {
 			limit = { gpm_are_wonders_enabled = yes	}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -87,6 +83,7 @@ country_event = {
 				gpm_spawn_planet_wonders_desert = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -106,6 +103,7 @@ country_event = {
 				gpm_spawn_planet_wonders_arid = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -125,6 +123,7 @@ country_event = {
 				gpm_spawn_planet_wonders_savannah = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -144,6 +143,7 @@ country_event = {
 				gpm_spawn_planet_wonders_tropical = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -163,6 +163,7 @@ country_event = {
 				gpm_spawn_planet_wonders_continental = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -182,6 +183,7 @@ country_event = {
 				gpm_spawn_planet_wonders_ocean = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -201,6 +203,7 @@ country_event = {
 				gpm_spawn_planet_wonders_arctic = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -220,6 +223,7 @@ country_event = {
 				gpm_spawn_planet_wonders_alpine = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -239,6 +243,7 @@ country_event = {
 				gpm_spawn_planet_wonders_tundra = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -258,6 +263,7 @@ country_event = {
 				gpm_spawn_planet_wonders_gaia = yes
 			}
 			random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = { 
 					NAND = {
 						is_capital = yes
@@ -281,6 +287,7 @@ country_event = {
 			while = {
 				count = 4
 				random_galaxy_planet = {
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 					limit = { 
 						NOT = { gpm_is_a_wondrous_world = yes }
 						gpm_is_planet_class_normal_habitable = yes
@@ -312,6 +319,20 @@ country_event = {
 		}
 	
 		every_galaxy_planet = {
+			# Planet Modifier Scaling
+			if = {
+				limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+				gpm_scale_planet_modifiers = yes
+			}
+			if = {
+				limit = { has_global_flag = gpm_scaling_multiplier_disabled }
+				set_variable = { which = gpm_planet_size_multiplier value = 1 }
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+			}
+			gpm_set_galaxy_scaler_planet_variable = yes
+			
+			
 			# set precursor worlds
 			if = {
 				limit = { gpm_are_precursors_enabled = yes }
@@ -319,6 +340,12 @@ country_event = {
 			}
 			# spawn engine MASTER EVENT
 			planet_event = { id = gpm_engine.1 days = 1 }
+			
+			# Cleanup
+			# clear_variable = gpm_planet_size_multiplier
+			# clear_variable = gpm_planet_size_multiplier_wonders
+			# clear_variable = gpm_planet_size_multiplier_precursor
+			# clear_variable = gpm_galaxy_setting_habitable_worlds_scale
 		}
 	}
 }
@@ -334,7 +361,7 @@ planet_event = {
 		OR = {
 			gpm_is_planet_class_normal_uninhabitable = yes
 			gpm_is_planet_class_normal_habitable = yes
-			gpm_is_planet_class_nuked = yes			
+			gpm_is_planet_class_nuked = yes
 			gpm_is_planet_class_toxic = yes
 			gpm_is_planet_class_barren = yes
 			# gpm_is_planet_class_molten = yes
@@ -378,12 +405,7 @@ planet_event = {
 	}
 	
 	immediate = {
-		# set default base modifiier multipliers
-		# not very efficient 
-		set_variable = { which = gpm_planet_size_multiplier value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
-		gpm_set_galaxy_scaler_planet_variable = yes
+		
 
 		if = {
 			limit = { gpm_is_planet_class_star = yes }
@@ -441,10 +463,10 @@ planet_event = {
 					set_planet_flag = gpm_is_precursor_world
 					solar_system = { set_star_flag = gpm_is_precursor_system }
 					# Planet Modifier Scaling
-					if = {
-						limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-						gpm_scale_planet_modifiers = yes
-					}
+					# if = {
+						# limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+						# gpm_scale_planet_modifiers = yes
+					# }
 					# roll precursor modifiers
 					gpm_roll_precursor_modifiers = yes
 					# spawn precursor features
@@ -470,10 +492,10 @@ planet_event = {
 					set_planet_flag = gpm_is_precursor_world
 					solar_system = { set_star_flag = gpm_is_precursor_system }
 					# Planet Modifier Scaling
-					if = {
-						limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-						gpm_scale_planet_modifiers = yes
-					}
+					# if = {
+						# limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+						# gpm_scale_planet_modifiers = yes
+					# }
 					# spawn precursor features
 					# gpm_spawn_precursor_features = yes
 					# chance to turn into precursor ruined world
@@ -597,10 +619,10 @@ planet_event = {
 					set_planet_flag = gpm_is_precursor_world
 					solar_system = { set_star_flag = gpm_is_precursor_system }
 					# Planet Modifier Scaling
-					if = {
-						limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-						gpm_scale_planet_modifiers = yes
-					}
+					# if = {
+						# limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+						# gpm_scale_planet_modifiers = yes
+					# }
 					# roll precursor modifiers
 					gpm_roll_precursor_modifiers = yes
 					# spawn precursor features
@@ -620,10 +642,10 @@ planet_event = {
 					set_planet_flag = gpm_is_precursor_world
 					solar_system = { set_star_flag = gpm_is_precursor_system }
 					# Planet Modifier Scaling
-					if = {
-						limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-						gpm_scale_planet_modifiers = yes
-					}
+					# if = {
+						# limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+						# gpm_scale_planet_modifiers = yes
+					# }
 					# roll precursor modifiers
 					gpm_roll_precursor_modifiers = yes
 					# spawn precursor features
@@ -662,9 +684,6 @@ planet_event = {
 		# 		gpm_spawn_precursor_features = yes
 		# 	}
 		# }
-
-		# cleanup
-		clear_variable = gpm_galaxy_setting_habitable_worlds_scale
 	}
 }
 
@@ -682,10 +701,6 @@ planet_event = {
 	}
 
 	immediate = {
-		# set default base modifiier multipliers
-		set_variable = { which = gpm_planet_size_multiplier value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
 
 		## STARS
 		if = {
@@ -792,9 +807,6 @@ planet_event = {
 			}
 			add_modifier = { modifier = terraforming_candidate }
 		}
-
-		# Cleanup
-		planet_event = { id = gpm_engine.200 days = 30 }
 
 		
 		# spawn a random mini megastructure to repair
@@ -1013,7 +1025,7 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
-				250 = { }
+				290 = { }
 				10 = { 
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
@@ -1025,11 +1037,11 @@ planet_event = {
 		}
 		
 		# Planet Modifier Scaling
-		if = {
-			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
-			gpm_reapply_vanilla_planet_modifiers = yes
-		}
+		# if = {
+			# limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+			# gpm_scale_planet_modifiers = yes
+			# gpm_reapply_vanilla_planet_modifiers = yes
+		# }
 
 		if = {
 			limit = { gpm_is_planet_class_barren = yes }
@@ -1089,7 +1101,7 @@ planet_event = {
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
+			# gpm_scale_planet_modifiers = yes
 			gpm_reapply_vanilla_planet_modifiers = yes
 		}
 		gpm_roll_tomb_world_modifiers = yes
@@ -1133,7 +1145,7 @@ planet_event = {
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
+			# gpm_scale_planet_modifiers = yes
 			gpm_reapply_vanilla_planet_modifiers = yes
 		}
 
@@ -1190,7 +1202,7 @@ planet_event = {
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
+			# gpm_scale_planet_modifiers = yes
 			gpm_reapply_vanilla_planet_modifiers = yes
 		}
 		gpm_roll_city_planet_modifiers = yes
@@ -1219,7 +1231,7 @@ planet_event = {
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
+			# gpm_scale_planet_modifiers = yes
 			gpm_reapply_vanilla_planet_modifiers = yes
 		}
 		gpm_roll_machine_world_modifiers = yes
@@ -1284,7 +1296,7 @@ planet_event = {
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
+			# gpm_scale_planet_modifiers = yes
 			gpm_reapply_vanilla_planet_modifiers = yes
 		}
 		gpm_roll_fallen_empire_world_modifiers = yes
@@ -1381,7 +1393,7 @@ planet_event = {
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-			gpm_scale_planet_modifiers = yes
+			# gpm_scale_planet_modifiers = yes
 			gpm_reapply_vanilla_planet_modifiers = yes
 		}
 		if = {
@@ -1393,23 +1405,6 @@ planet_event = {
 			gpm_roll_normal_habitable_modifiers = yes
 		}		
 		gpm_roll_planetary_features = yes
-	}
-}
-
-## Cleanup Event
-planet_event = {
-	id = gpm_engine.200
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	immediate = {
-		# Cleanup
-		clear_variable = gpm_planet_size_multiplier
-		clear_variable = gpm_planet_size_multiplier_wonders
-		clear_variable = gpm_planet_size_multiplier_precursor
 	}
 }
 

@@ -11,14 +11,24 @@ action_harm_relation = {
 	action_type = negative
 
 	potential = {
+		# always = no		
 		hidden_trigger = {
 			is_country_type = default
 			from = { is_country_type = default }
-			is_ai = no # -Guilli
+			AND = {
+				is_ai = no
+				from = { is_ai = no }
+			}
 		}
 	}
 
 	possible = {
+		hidden_trigger = {
+			AND = {
+				is_ai = no
+				from = { is_ai = no }
+			}
+		}
 		custom_tooltip = {
 			fail_text = "DIPLOMACY_STATUS_WAR"
 			NOT = { is_at_war_with = from }
@@ -78,6 +88,13 @@ action_harm_relation = {
 	}
 
 	proposable = {
+		# always = no
+		hidden_trigger = {
+			AND = {
+				is_ai = no
+				from = { is_ai = no }
+			}
+		}
 		custom_tooltip = {
 			fail_text = "requires_envoy_not_improving_relations"
 			NOT = { is_improving_relations_with = from }

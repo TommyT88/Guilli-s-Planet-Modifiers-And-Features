@@ -5005,7 +5005,7 @@ espionage_operation_event = {
 		hidden_effect = {
 			owner = { country_event = { id = gpm_operation.11 } }
 		}
-		log = "launch message event gpm_operation.11 on [owner.GetName]"
+		# log = "launch message event gpm_operation.11 on [owner.GetName]"
 		# Target gets a notification that an unknown empire knows about relic if counter intel is medium
 		# from = {
 			# if = { 
@@ -5070,7 +5070,7 @@ espionage_operation_event = {
 					scope = root.owner
 				}
 			}
-			log = "create test message on target [from.GetName] --- root.owner: [root.owner.GetName] "
+			# log = "create test message on target [from.GetName] --- root.owner: [root.owner.GetName] "
 		}
 		# owner = {
 			# create_message = {

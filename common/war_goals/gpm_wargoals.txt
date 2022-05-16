@@ -81,8 +81,10 @@ wg_gpm_r_dragon_trophy = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}	
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -92,7 +94,7 @@ wg_gpm_r_dragon_trophy = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -102,8 +104,43 @@ wg_gpm_r_dragon_trophy = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -113,21 +150,21 @@ wg_gpm_r_dragon_trophy = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -208,8 +245,10 @@ wg_gpm_r_khans_throne = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -219,7 +258,7 @@ wg_gpm_r_khans_throne = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -229,8 +268,43 @@ wg_gpm_r_khans_throne = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -240,21 +314,21 @@ wg_gpm_r_khans_throne = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -335,8 +409,10 @@ wg_gpm_r_worm_scales = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -346,7 +422,7 @@ wg_gpm_r_worm_scales = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -356,8 +432,43 @@ wg_gpm_r_worm_scales = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -367,21 +478,21 @@ wg_gpm_r_worm_scales = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -462,8 +573,10 @@ wg_gpm_r_rubricator = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -473,7 +586,7 @@ wg_gpm_r_rubricator = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -483,8 +596,43 @@ wg_gpm_r_rubricator = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -494,21 +642,21 @@ wg_gpm_r_rubricator = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -589,8 +737,10 @@ wg_gpm_r_galaxy = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -600,7 +750,7 @@ wg_gpm_r_galaxy = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -610,8 +760,43 @@ wg_gpm_r_galaxy = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -621,21 +806,21 @@ wg_gpm_r_galaxy = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -716,8 +901,10 @@ wg_gpm_r_omnicodex = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -727,7 +914,7 @@ wg_gpm_r_omnicodex = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -737,8 +924,43 @@ wg_gpm_r_omnicodex = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -748,21 +970,21 @@ wg_gpm_r_omnicodex = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -843,9 +1065,11 @@ wg_gpm_r_surveyor = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -855,7 +1079,7 @@ wg_gpm_r_surveyor = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -865,8 +1089,43 @@ wg_gpm_r_surveyor = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -876,21 +1135,21 @@ wg_gpm_r_surveyor = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -971,8 +1230,10 @@ wg_gpm_r_ancient_sword = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -982,7 +1243,7 @@ wg_gpm_r_ancient_sword = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -992,8 +1253,43 @@ wg_gpm_r_ancient_sword = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1003,21 +1299,21 @@ wg_gpm_r_ancient_sword = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1098,8 +1394,10 @@ wg_gpm_r_severed_head = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1109,7 +1407,7 @@ wg_gpm_r_severed_head = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1119,8 +1417,43 @@ wg_gpm_r_severed_head = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1130,21 +1463,21 @@ wg_gpm_r_severed_head = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1225,8 +1558,10 @@ wg_gpm_r_prethoryn_queen = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1236,7 +1571,7 @@ wg_gpm_r_prethoryn_queen = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1246,8 +1581,43 @@ wg_gpm_r_prethoryn_queen = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1257,21 +1627,21 @@ wg_gpm_r_prethoryn_queen = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1352,8 +1722,10 @@ wg_gpm_r_unbidden_warlock = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1363,7 +1735,7 @@ wg_gpm_r_unbidden_warlock = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1373,8 +1745,43 @@ wg_gpm_r_unbidden_warlock = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1384,21 +1791,21 @@ wg_gpm_r_unbidden_warlock = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1479,8 +1886,10 @@ wg_gpm_r_contingency_core = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1490,7 +1899,7 @@ wg_gpm_r_contingency_core = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1500,8 +1909,43 @@ wg_gpm_r_contingency_core = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1511,21 +1955,21 @@ wg_gpm_r_contingency_core = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1606,8 +2050,10 @@ wg_gpm_r_zro_crystal = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1617,7 +2063,7 @@ wg_gpm_r_zro_crystal = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1627,8 +2073,43 @@ wg_gpm_r_zro_crystal = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1638,21 +2119,21 @@ wg_gpm_r_zro_crystal = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1733,8 +2214,10 @@ wg_gpm_r_the_last_baol = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1744,7 +2227,7 @@ wg_gpm_r_the_last_baol = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1754,8 +2237,43 @@ wg_gpm_r_the_last_baol = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1765,21 +2283,21 @@ wg_gpm_r_the_last_baol = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1860,9 +2378,11 @@ wg_gpm_r_the_defragmentor = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1872,7 +2392,7 @@ wg_gpm_r_the_defragmentor = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1882,8 +2402,43 @@ wg_gpm_r_the_defragmentor = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -1893,21 +2448,21 @@ wg_gpm_r_the_defragmentor = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -1988,8 +2543,10 @@ wg_gpm_r_reality_perforator = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1999,7 +2556,7 @@ wg_gpm_r_reality_perforator = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2009,8 +2566,43 @@ wg_gpm_r_reality_perforator = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2020,21 +2612,21 @@ wg_gpm_r_reality_perforator = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -2115,8 +2707,10 @@ wg_gpm_r_pox_sample = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2126,7 +2720,7 @@ wg_gpm_r_pox_sample = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2136,8 +2730,43 @@ wg_gpm_r_pox_sample = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2147,21 +2776,21 @@ wg_gpm_r_pox_sample = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -2242,8 +2871,10 @@ wg_gpm_r_cryo_core = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2253,7 +2884,7 @@ wg_gpm_r_cryo_core = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2263,8 +2894,43 @@ wg_gpm_r_cryo_core = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2274,21 +2940,21 @@ wg_gpm_r_cryo_core = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -2369,8 +3035,10 @@ wg_gpm_r_war_forge = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2380,7 +3048,7 @@ wg_gpm_r_war_forge = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2390,8 +3058,43 @@ wg_gpm_r_war_forge = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2401,21 +3104,21 @@ wg_gpm_r_war_forge = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -2500,9 +3203,11 @@ wg_gpm_r_time_displacer = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2512,7 +3217,7 @@ wg_gpm_r_time_displacer = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2522,8 +3227,43 @@ wg_gpm_r_time_displacer = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2533,21 +3273,21 @@ wg_gpm_r_time_displacer = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_alien_eggs
@@ -2627,8 +3367,10 @@ wg_gpm_r_alien_eggs = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2638,7 +3380,7 @@ wg_gpm_r_alien_eggs = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2648,8 +3390,43 @@ wg_gpm_r_alien_eggs = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2659,21 +3436,21 @@ wg_gpm_r_alien_eggs = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_machine_world_core
@@ -2753,8 +3530,10 @@ wg_gpm_r_machine_world_core = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2764,7 +3543,7 @@ wg_gpm_r_machine_world_core = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2774,8 +3553,43 @@ wg_gpm_r_machine_world_core = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2785,21 +3599,21 @@ wg_gpm_r_machine_world_core = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 
@@ -2880,8 +3694,10 @@ wg_gpm_r_encyclopedia_galactica = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2891,7 +3707,7 @@ wg_gpm_r_encyclopedia_galactica = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2901,8 +3717,43 @@ wg_gpm_r_encyclopedia_galactica = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -2912,21 +3763,21 @@ wg_gpm_r_encyclopedia_galactica = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_zero_energy_generator
@@ -3006,8 +3857,10 @@ wg_gpm_r_zero_energy_generator = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3017,7 +3870,7 @@ wg_gpm_r_zero_energy_generator = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3027,8 +3880,43 @@ wg_gpm_r_zero_energy_generator = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3038,21 +3926,21 @@ wg_gpm_r_zero_energy_generator = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_quantum_sphere
@@ -3132,8 +4020,10 @@ wg_gpm_r_quantum_sphere = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3143,7 +4033,7 @@ wg_gpm_r_quantum_sphere = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3153,8 +4043,43 @@ wg_gpm_r_quantum_sphere = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3164,21 +4089,21 @@ wg_gpm_r_quantum_sphere = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_ai_architect
@@ -3258,8 +4183,10 @@ wg_gpm_r_ai_architect = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3269,7 +4196,7 @@ wg_gpm_r_ai_architect = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3279,8 +4206,43 @@ wg_gpm_r_ai_architect = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3290,21 +4252,21 @@ wg_gpm_r_ai_architect = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_encrypted_sct
@@ -3384,8 +4346,10 @@ wg_gpm_r_encrypted_sct = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3395,7 +4359,7 @@ wg_gpm_r_encrypted_sct = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3405,8 +4369,43 @@ wg_gpm_r_encrypted_sct = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3416,21 +4415,21 @@ wg_gpm_r_encrypted_sct = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_experimental_weapon
@@ -3510,8 +4509,10 @@ wg_gpm_r_experimental_weapon = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3521,7 +4522,7 @@ wg_gpm_r_experimental_weapon = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3531,8 +4532,43 @@ wg_gpm_r_experimental_weapon = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3542,21 +4578,21 @@ wg_gpm_r_experimental_weapon = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_fallout_emergency_replicator
@@ -3636,8 +4672,10 @@ wg_gpm_r_fallout_emergency_replicator = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3647,7 +4685,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3657,8 +4695,43 @@ wg_gpm_r_fallout_emergency_replicator = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3668,21 +4741,21 @@ wg_gpm_r_fallout_emergency_replicator = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_power_core
@@ -3762,8 +4835,10 @@ wg_gpm_r_power_core = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3773,7 +4848,7 @@ wg_gpm_r_power_core = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3783,8 +4858,43 @@ wg_gpm_r_power_core = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3794,21 +4904,21 @@ wg_gpm_r_power_core = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_mysterious_shield_generator
@@ -3888,8 +4998,10 @@ wg_gpm_r_mysterious_shield_generator = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3899,7 +5011,7 @@ wg_gpm_r_mysterious_shield_generator = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3909,8 +5021,43 @@ wg_gpm_r_mysterious_shield_generator = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -3920,21 +5067,21 @@ wg_gpm_r_mysterious_shield_generator = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_gravity_engine
@@ -4014,8 +5161,10 @@ wg_gpm_r_gravity_engine = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4025,7 +5174,7 @@ wg_gpm_r_gravity_engine = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4035,8 +5184,43 @@ wg_gpm_r_gravity_engine = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4046,21 +5230,21 @@ wg_gpm_r_gravity_engine = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_codex_administratum
@@ -4140,8 +5324,10 @@ wg_gpm_r_codex_administratum = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4151,7 +5337,7 @@ wg_gpm_r_codex_administratum = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4161,8 +5347,43 @@ wg_gpm_r_codex_administratum = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4172,21 +5393,21 @@ wg_gpm_r_codex_administratum = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_enigmatic_advisor
@@ -4266,8 +5487,10 @@ wg_gpm_r_enigmatic_advisor = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4277,7 +5500,7 @@ wg_gpm_r_enigmatic_advisor = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4287,8 +5510,43 @@ wg_gpm_r_enigmatic_advisor = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4298,21 +5556,21 @@ wg_gpm_r_enigmatic_advisor = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_positronic_microchip
@@ -4392,8 +5650,10 @@ wg_gpm_r_positronic_microchip = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4403,7 +5663,7 @@ wg_gpm_r_positronic_microchip = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4413,8 +5673,43 @@ wg_gpm_r_positronic_microchip = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4424,21 +5719,21 @@ wg_gpm_r_positronic_microchip = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_venerable_dreadnaught
@@ -4518,8 +5813,10 @@ wg_gpm_r_venerable_dreadnaught = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4529,7 +5826,7 @@ wg_gpm_r_venerable_dreadnaught = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4539,8 +5836,43 @@ wg_gpm_r_venerable_dreadnaught = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4550,21 +5882,21 @@ wg_gpm_r_venerable_dreadnaught = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_sentinel_queen
@@ -4644,8 +5976,10 @@ wg_gpm_r_sentinel_queen = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4655,7 +5989,7 @@ wg_gpm_r_sentinel_queen = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4665,8 +5999,43 @@ wg_gpm_r_sentinel_queen = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4676,21 +6045,21 @@ wg_gpm_r_sentinel_queen = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_earthquake_engine
@@ -4770,8 +6139,10 @@ wg_gpm_r_earthquake_engine = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4781,7 +6152,7 @@ wg_gpm_r_earthquake_engine = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4791,8 +6162,43 @@ wg_gpm_r_earthquake_engine = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4802,21 +6208,21 @@ wg_gpm_r_earthquake_engine = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_manufactorium_ship
@@ -4896,8 +6302,10 @@ wg_gpm_r_manufactorium_ship = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4907,7 +6315,7 @@ wg_gpm_r_manufactorium_ship = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4917,8 +6325,43 @@ wg_gpm_r_manufactorium_ship = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -4928,21 +6371,21 @@ wg_gpm_r_manufactorium_ship = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_datacube
@@ -5022,8 +6465,10 @@ wg_gpm_r_datacube = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5033,7 +6478,7 @@ wg_gpm_r_datacube = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5043,8 +6488,43 @@ wg_gpm_r_datacube = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5054,21 +6534,21 @@ wg_gpm_r_datacube = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_self_assembly_hub
@@ -5148,8 +6628,10 @@ wg_gpm_r_self_assembly_hub = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5159,7 +6641,7 @@ wg_gpm_r_self_assembly_hub = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5169,8 +6651,43 @@ wg_gpm_r_self_assembly_hub = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5180,21 +6697,21 @@ wg_gpm_r_self_assembly_hub = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_banner_of_the_fallen
@@ -5275,8 +6792,10 @@ wg_gpm_r_banner_of_the_fallen = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5286,7 +6805,7 @@ wg_gpm_r_banner_of_the_fallen = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5296,8 +6815,43 @@ wg_gpm_r_banner_of_the_fallen = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5307,21 +6861,21 @@ wg_gpm_r_banner_of_the_fallen = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_cloaking_device
@@ -5402,8 +6956,10 @@ wg_gpm_r_cloaking_device = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5413,7 +6969,7 @@ wg_gpm_r_cloaking_device = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5423,8 +6979,43 @@ wg_gpm_r_cloaking_device = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5434,21 +7025,21 @@ wg_gpm_r_cloaking_device = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_q_storage_compressor
@@ -5528,8 +7119,10 @@ wg_gpm_r_q_storage_compressor = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5539,7 +7132,7 @@ wg_gpm_r_q_storage_compressor = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5549,8 +7142,43 @@ wg_gpm_r_q_storage_compressor = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5560,21 +7188,21 @@ wg_gpm_r_q_storage_compressor = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_soul_gem
@@ -5654,8 +7282,10 @@ wg_gpm_r_soul_gem = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5665,7 +7295,7 @@ wg_gpm_r_soul_gem = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5675,8 +7305,43 @@ wg_gpm_r_soul_gem = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5686,21 +7351,21 @@ wg_gpm_r_soul_gem = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }
 # gpm_r_self_repairing_obelisk
@@ -5780,8 +7445,10 @@ wg_gpm_r_self_repairing_obelisk = {
 		}
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
+		log = ";RELIC WAR; [from.GetName] humiliated "
 	}
 	on_status_quo = {
+		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5791,7 +7458,7 @@ wg_gpm_r_self_repairing_obelisk = {
 	}
 
 	ai_weight = {
-		weight = 50
+		weight = 5
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5801,8 +7468,43 @@ wg_gpm_r_self_repairing_obelisk = {
 			is_rival = from
 		}
 		modifier = {
+			opinion_level = {
+				who = from
+				level < neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.6
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.8
+		}
+		modifier = {
+			owner = { num_owned_relics = 5 }
 			factor = 2
-			from = { is_at_war = yes }
+		}
+		modifier = {
+			owner = { num_owned_relics >= 6 }
+			factor = 2.2
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = 2
@@ -5812,20 +7514,20 @@ wg_gpm_r_self_repairing_obelisk = {
 			factor = 4
 			has_ethic = ethic_fanatic_materialist
 		}
-		modifier = {
-			factor = 0
-			opinion_level = {
-				who = root
-				level >= good
-			}
-		}
-		modifier = {
-			factor = 0.1
-			from = { is_overlord_to = root }
-		}
-		modifier = {
-			factor = 0.2
-			is_in_federation_with = from
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	opinion_level = {
+		# 		who = root
+		# 		level >= good
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.1
+		# 	from = { is_overlord_to = root }
+		# }
+		# modifier = {
+		# 	factor = 0.2
+		# 	is_in_federation_with = from
+		# }
 	}
 }

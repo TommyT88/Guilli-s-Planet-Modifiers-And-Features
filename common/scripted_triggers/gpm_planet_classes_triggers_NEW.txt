@@ -2,6 +2,7 @@
 #### uninhabitable classes ####
 ###############################
 gpm_is_planet_class_normal_uninhabitable = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_molten					# Vanilla
 		is_planet_class = pc_toxic					# Vanilla
@@ -15,6 +16,7 @@ gpm_is_planet_class_normal_uninhabitable = {
 	}
 }
 gpm_is_planet_class_molten = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_molten					# Vanilla
 	}
@@ -33,11 +35,13 @@ gpm_is_planet_class_toxic = {
 	}
 }
 gpm_is_planet_class_frozen = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_frozen					# Vanilla
 	}
 }
 gpm_is_planet_class_barren = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_barren					# Vanilla
 		is_planet_class = pc_barren_cold			# Vanilla
@@ -49,6 +53,7 @@ gpm_is_planet_class_barren = {
 ###### Habitable classes ######
 ###############################
 gpm_is_planet_class_normal_habitable = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia					# Vanilla
 		is_planet_class = pc_continental			# Vanilla
@@ -118,6 +123,7 @@ gpm_is_planet_class_normal_habitable = {
 	}
 }
 gpm_is_planet_class_nuked = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_nuked					# Vanilla
 		is_planet_class = pc_ash					# PD
@@ -132,6 +138,7 @@ gpm_is_planet_class_nuked = {
 ######## Other classes ########
 ###############################
 gpm_is_planet_class_star = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_b_star					# Vanilla
 		is_planet_class = pc_a_star					# Vanilla
@@ -148,6 +155,7 @@ gpm_is_planet_class_star = {
 	}
 }
 gpm_is_planet_class_asteroid = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_asteroid				# Vanilla
 		is_planet_class = pc_ice_asteroid			# Vanilla
@@ -155,6 +163,7 @@ gpm_is_planet_class_asteroid = {
 	}
 }
 gpm_is_planet_class_gas_giant = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_gas_giant				# Vanilla
 		is_planet_class = pc_habitable_gas_giant	# GE
@@ -163,6 +172,7 @@ gpm_is_planet_class_gas_giant = {
 	}
 }
 gpm_is_planet_class_city = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_city					# Vanilla
 		is_planet_class = pc_relic					# Vanilla
@@ -179,6 +189,7 @@ gpm_is_planet_class_city = {
 	}
 }
 gpm_is_planet_class_machine = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_machine					# Vanilla
 		is_planet_class = pc_ai							# Vanilla
@@ -188,6 +199,7 @@ gpm_is_planet_class_machine = {
 	}
 }
 gpm_is_planet_class_hive = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_hive					# Vanilla
 		is_planet_class = pc_ringworld_hive			# GE
@@ -197,6 +209,7 @@ gpm_is_planet_class_hive = {
 	}
 }
 gpm_is_planet_class_habitat = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_habitat				# Vanilla
 		is_planet_class = pc_gghab					# PD
@@ -221,6 +234,7 @@ gpm_is_planet_class_habitat = {
 	}
 }
 gpm_is_planet_class_ringworld = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_ringworld_habitable				# Vanilla
 		is_planet_class = pc_cybrex								# Vanilla

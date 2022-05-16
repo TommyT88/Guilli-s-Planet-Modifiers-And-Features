@@ -36,7 +36,7 @@ gpm_spawn_molten_world_modifier = {
 			# Not on these planets
 			# Never in these systems
 			# Tweaks
-			add_deposit = d_exotic_gases_1
+			# add_deposit = d_exotic_gases_1
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -49,9 +49,10 @@ gpm_spawn_molten_world_modifier = {
 			# Never in these systems
 			# Tweaks		
 			random_list = {
-				80 = { add_deposit = d_minerals_2 }
-				15 = { add_deposit = d_rare_crystals_1 }
-				5 = { add_deposit = d_rare_crystals_2 }
+				100 = {	}
+				95 = { add_deposit = d_minerals_2 }
+				4 = { add_deposit = d_rare_crystals_1 }
+				1 = { add_deposit = d_rare_crystals_2 }
 			}
 			# Galaxy age setting modifier
 			# Weight Factor
@@ -87,7 +88,7 @@ gpm_spawn_molten_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
-			add_deposit = d_minerals_3
+			# add_deposit = d_minerals_3
 			# Weight Factor
 			modifier = { factor = @plenty }
 		}
@@ -99,7 +100,7 @@ gpm_spawn_molten_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
-			add_deposit = d_alloys_1
+			# add_deposit = d_alloys_1
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -113,7 +114,7 @@ gpm_spawn_molten_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
-			add_deposit = d_minerals_4
+			# add_deposit = d_minerals_4
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -127,7 +128,7 @@ gpm_spawn_molten_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
-			add_deposit = d_minerals_5
+			# add_deposit = d_minerals_5
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -141,7 +142,7 @@ gpm_spawn_molten_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
-			add_deposit = d_alloys_2
+			# add_deposit = d_alloys_2
 			# Weight Factor
 			modifier = { factor = @rare }
 		}
