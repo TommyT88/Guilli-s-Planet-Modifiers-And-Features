@@ -511,6 +511,8 @@ espionage_operation_event = {
 				log = ";OP - STEAL; - Message event to all other empires root.from = [root.from.GetName] --- root.owner = [root.owner.GetName]"
 			}
 		}
+		# We set a timed flag so the AI doens't spam relic heist too frequently
+		owner = { set_timed_country_flag = { flag = gpm_recent_heist days = 1825 } }
 	}
 
 	option = {
