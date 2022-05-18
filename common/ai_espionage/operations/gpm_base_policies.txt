@@ -12,14 +12,87 @@ gpm_spy_policy_steal_relic = {
 	weight = {
 		base = 400
 		modifier = {
+			owner = { NOT = { is_neighbor_of = root.target } }
+			factor = 0
+		}
+		modifier = {
 			owner = {
 				opinion_level = {
 					who = root.target
-					level < neutral
+					level = excellent
+				}
+			}
+			factor = 0
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = good
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = poor
+				}
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = terrible
+				}
+			}
+			factor = 2
+		}
+
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = overwhelming
+				}
+			}
+			factor = 0.25
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = superior
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = inferior
 				}
 			}
 			factor = 1.1
 		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = pathetic
+				}
+			}
+			factor = 1.2
+		}
+
 		modifier = {
 			owner = {
 				has_rival = root.target
@@ -27,7 +100,7 @@ gpm_spy_policy_steal_relic = {
 			factor = 1.5
 		}
 		modifier = {
-			owner = { num_owned_relics = 1 }			
+			owner = { num_owned_relics = 1 }
 			factor = 1.1
 		}
 		modifier = {
@@ -43,32 +116,40 @@ gpm_spy_policy_steal_relic = {
 			factor = 1.4
 		}
 		modifier = {
-			owner = { num_owned_relics = 5 }
+			owner = { num_owned_relics >= 5 }
 			factor = 1.5
 		}
 		modifier = {
-			owner = { num_owned_relics >= 6 }
-			factor = 1.6
-		}
-		modifier = {
-			factor = 2
+			factor = 1.25
 			owner = { has_ethic = ethic_militarist }
 		}
 		modifier = {
-			factor = 4
+			factor = 1.5
 			owner = { has_ethic = ethic_fanatic_militarist }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			owner = { has_ethic = ethic_materialist }
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			owner = { has_ethic = ethic_fanatic_materialist }
 		}
 		modifier = {
 			factor = 0
 			owner = { has_country_flag = gpm_recent_heist }
+		}
+		modifier = {
+			factor = 0.5
+			root.target = { is_ai = no }
+		}
+		# Disable if the game option is enabled
+		modifier = {
+			factor = 0
+			AND = {
+				root.target = { is_ai = no }
+				has_global_flag = gpm_relic_heists_AI_disabled
+			}
 		}
 	}
 }

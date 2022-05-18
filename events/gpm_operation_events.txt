@@ -361,7 +361,7 @@ espionage_operation_event = {
 				limit = {
 					has_intel_level = {
 						category = government
-						level > 2
+						level >= 2
 						who = owner
 					}
 				}
@@ -476,7 +476,7 @@ espionage_operation_event = {
 				}
 			}
 
-			# Other know empires with sufficient intelligence are notified a relic has been stolen
+			# Other known empires with sufficient intelligence are notified a relic has been stolen
 			every_country = {
 				limit = {
 					is_country_type = default
@@ -505,7 +505,7 @@ espionage_operation_event = {
 					variable = {
 						type = name
 						localization = COUNTRY
-						scope = owner
+						scope = root.owner
 					}
 				}
 				log = ";OP - STEAL; - Message event to all other empires root.from = [root.from.GetName] --- root.owner = [root.owner.GetName]"
