@@ -23,6 +23,7 @@
 @ringfactor = 1.35
 
 gpm_spawn_hive_world_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {}
 		1 = {
@@ -77,6 +78,7 @@ gpm_spawn_hive_world_modifier = {
 }
 
 gpm_roll_hive_world_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

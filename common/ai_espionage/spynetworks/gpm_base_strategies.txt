@@ -1,20 +1,65 @@
 gpm_added_to_default_empire = {
 	strategy_weight = {
 		modifier = {
-			is_country_type = default
-			weight = 10
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			weight = 1
 		}
 		modifier = {
-			owner = {
-				any_neighbor_country = {
-					OR = {
-						gpm_has_vanilla_precursor_relic = yes
-						gpm_has_modded_precursor_relic = yes
-						gpm_has_modded_non_precursor_relic = yes
-					}
+			target = {
+				OR = {
+					gpm_has_vanilla_precursor_relic = yes
+					gpm_has_modded_precursor_relic = yes
+					gpm_has_modded_non_precursor_relic = yes
 				}
 			}
-			weight = 3
+			factor = 1.5
+		}
+		# Cadet
+		modifier = {
+			is_difficulty = 0
+			factor = 0.25
+		}
+		# Ensign
+		modifier = {
+			is_difficulty = 1
+			factor = 0.5
+		}
+		# Captain
+		modifier = {
+			is_difficulty = 2
+			factor = 0.75
+		}
+		# Commodore
+		modifier = {
+			is_difficulty = 3
+			factor = 1.2
+		}
+		# Admiral
+		modifier = {
+			is_difficulty = 4
+			factor = 1.5
+		}
+		# Grand Admiral
+		modifier = {
+			is_difficulty = 5
+			factor = 2
+		}
+
+		modifier = {
+			owner = { has_ethic = ethic_pacifist }
+			factor = 0.75
+		}
+		modifier = {
+			owner = { has_ethic = ethic_fanatic_pacifist }
+			factor = 0.5
+		}
+
+		modifier = {
+			owner = { is_hostile = target }
+			factor = 1.5
 		}
 	}
 
@@ -155,7 +200,7 @@ gpm_added_to_default_empire = {
 			operation_policy = gpm_spy_policy_rival
 
 			target_value = {
-				min = 1
+				min = 10
 			}
 		}
 		operation_arm_privateers = {

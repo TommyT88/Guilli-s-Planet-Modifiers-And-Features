@@ -7,6 +7,7 @@
 
 # Reapply vanilla planet modifiers for scaling
 gpm_reapply_vanilla_planet_modifiers = {
+	optimize_memory
 	if = { limit = { has_modifier = hazardous_weather } remove_modifier = hazardous_weather add_modifier = { modifier = hazardous_weather multiplier = gpm_planet_size_multiplier } }
 	if = { limit = { has_modifier = dangerous_wildlife } remove_modifier = dangerous_wildlife add_modifier = { modifier = dangerous_wildlife multiplier = gpm_planet_size_multiplier } }
 	if = { limit = { has_modifier = weak_magnetic_field } remove_modifier = weak_magnetic_field add_modifier = { modifier = weak_magnetic_field multiplier = gpm_planet_size_multiplier } }
@@ -33,6 +34,7 @@ gpm_reapply_vanilla_planet_modifiers = {
 # Planet Modifier Scaling based on planet size:
 
 gpm_scale_planet_modifiers = {
+	optimize_memory
 	# Re(set) Default as failsafe
 	set_variable = { which = gpm_planet_size_multiplier value = 1 }
 	set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
@@ -181,6 +183,7 @@ gpm_designate_wonder_world = {
 }
 
 gpm_make_precursor_ruined_world = {
+	optimize_memory
 	change_pc = pc_gpm_precursor_tomb
 	clear_deposits = yes
 	# clear_planet_modifiers = yes
@@ -283,6 +286,7 @@ gpm_make_precursor_ruined_world = {
 }
 
 gpm_colour_planet_name = {
+	optimize_memory
 	if = {
 		limit = {
 			has_planet_flag = "gpm_is_precursor_world"
@@ -313,6 +317,7 @@ gpm_colour_planet_name = {
 
 # Remove planet name and icon and reset name to something that makes sense
 gpm_reset_planet_name = {
+	optimize_memory
 	if = { 
 		limit = {
 			OR = {
@@ -350,6 +355,7 @@ gpm_reset_planet_name = {
 }
 
 gpm_random_dangerous_modifiers = {
+	optimize_memory
 	# Planet Modifier Scaling
 	if = {
 		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -400,6 +406,7 @@ gpm_random_dangerous_modifiers = {
 }
 
 gpm_random_res_metallic_ring_deposit = {
+	optimize_memory
 	random_list = {
 		20 = {
 			clear_deposits = yes
@@ -450,6 +457,7 @@ gpm_random_res_metallic_ring_deposit = {
 }
 
 gpm_random_res_ice_ring_deposit = {
+	optimize_memory
 	random_list = {
 		75 = {
 			clear_deposits = yes
@@ -477,6 +485,7 @@ gpm_random_res_ice_ring_deposit = {
 }
 
 gpm_create_tiyanki_resident = {
+	optimize_memory
 	save_event_target_as = planet_location
 	set_planet_flag = gpm_tiyanki_grounds
 	add_modifier = { days = -1 modifier = "gpm_tiyanki_feeding_grounds" }
@@ -653,6 +662,7 @@ gpm_create_tiyanki_resident = {
 }
 
 gpm_create_rogue_traders = {
+	optimize_memory
 	save_event_target_as = planet_location
 	event_target:drone_country = {
 		random_list = {
@@ -974,6 +984,7 @@ gpm_create_rogue_traders = {
 }
 
 gpm_random_ring_feature = {
+	optimize_memory
 	####################
 	# GALAXY AGE: YOUNG
 	if = { 
@@ -1151,6 +1162,7 @@ gpm_set_planet_picture = {
 }
 
 gpm_spawn_xandar_gaia_world = {
+	optimize_memory
 	spawn_planet = {
 		class = "pc_gaia"
 		location = event_target:gpm_ego
@@ -1298,6 +1310,7 @@ gpm_spawn_xandar_gaia_world = {
 
 # scope solar system!
 gpm_cybrex_ringworld_switch = {
+	optimize_memory
 	random_system_megastructure = {
 		limit = { is_megastructure_type = ring_world_ruined }
 		save_event_target_as = gpm_ring_world_localtion
@@ -1382,6 +1395,7 @@ gpm_cybrex_ringworld_switch = {
 # 	}
 # }
 gpm_precursor_home_planet_setup = {
+	optimize_memory
 	# Planet Modifier Scaling
 	if = {
 		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1447,6 +1461,7 @@ gpm_precursor_home_planet_setup = {
 }
 
 gpm_precursor_planet_setup_no_modifiers = {
+	optimize_memory
 	if = {
 		limit = { 
 			gpm_are_precursors_enabled = yes
@@ -1467,6 +1482,7 @@ gpm_precursor_planet_setup_no_modifiers = {
 }
 
 gpm_precursor_star_shipyards = {
+	optimize_memory
 	if = {
 		limit = { 
 			gpm_are_precursors_enabled = yes
@@ -1507,6 +1523,7 @@ gpm_precursor_star_shipyards = {
 
 
 gpm_create_primitive_relic_world = {
+	optimize_memory
 	change_pc = pc_relic
 	clear_planet_modifiers = yes
 	clear_deposits = yes
@@ -1700,6 +1717,7 @@ gpm_create_primitive_relic_world = {
 }
 
 gpm_remove_galaxy_generation_deposits = {
+	optimize_memory
 	if = {
 		limit = {
 			solar_system = {
@@ -1750,6 +1768,7 @@ gpm_remove_galaxy_generation_deposits = {
 }
 
 gpm_spawn_ruined_observation_station = {
+	optimize_memory
 	solar_system = {
 		spawn_megastructure = {
 			type = "gpm_observation_station_ruined"
@@ -1820,6 +1839,7 @@ gpm_spawn_ruined_observation_station = {
 }
 
 gpm_spawn_ruined_mining_facility = {
+	optimize_memory
 	solar_system = {
 		spawn_megastructure = {
 			type = "gpm_mining_facility_ruined"
@@ -1891,6 +1911,7 @@ gpm_spawn_ruined_mining_facility = {
 }
 
 gpm_spawn_ruined_refinery = {
+	optimize_memory
 	solar_system = {
 		spawn_megastructure = {
 			type = "gpm_refinery_ruined"
@@ -1961,6 +1982,7 @@ gpm_spawn_ruined_refinery = {
 }
 
 gpm_spawn_ruined_silo = {
+	optimize_memory
 	solar_system = {
 		spawn_megastructure = {
 			type = "gpm_silo_ruined"

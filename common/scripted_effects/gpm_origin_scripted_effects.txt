@@ -1,6 +1,7 @@
 
 # planet scope
 gpm_run_origin_death_world_planet_gen = {
+	optimize_memory
 	# owner = { add_modifier = { modifier = gpm_origin_death_world_mod } }
 	clear_deposits = yes
 
@@ -154,6 +155,7 @@ gpm_run_origin_death_world_planet_gen = {
 
 # planet scope
 gpm_run_origin_precursor_world_planet_gen = {
+	optimize_memory
 	owner = { add_modifier = { modifier = gpm_origin_precursor_world_mod } }
 	clear_blockers = yes
 
@@ -297,6 +299,7 @@ gpm_run_origin_precursor_world_planet_gen = {
 
 # planet scope
 gpm_run_origin_fallen_empire_planet_gen = {
+	optimize_memory
 	owner = { add_modifier = { modifier = gpm_origin_fallen_empire_colony_mod } }
 	# clear_deposits = yes
 	clear_blockers = yes
@@ -383,6 +386,7 @@ gpm_run_origin_fallen_empire_planet_gen = {
 }
 
 gpm_run_scion_planet_gen = {
+	optimize_memory
 	add_modifier = { days = -1 modifier = "gpm_planetary_shielding_FE" }
 	gpm_set_fallen_empire_planetary_shields = yes
 }

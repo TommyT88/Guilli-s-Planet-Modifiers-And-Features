@@ -22,7 +22,8 @@
 # Planetary Ring Adjuster
 @ringfactor = 1.35
 
-gpm_spawn_tomb_world_modifier = {	
+gpm_spawn_tomb_world_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { modifier = "low_gravity" multiplier = gpm_planet_size_multiplier }
@@ -969,6 +970,7 @@ gpm_spawn_tomb_world_modifier = {
 }
 
 gpm_roll_tomb_world_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

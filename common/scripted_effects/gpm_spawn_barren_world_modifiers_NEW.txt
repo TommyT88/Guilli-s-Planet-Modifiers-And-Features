@@ -23,6 +23,7 @@
 @ringfactor = 1.35
 
 gpm_spawn_barren_world_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { modifier = "gpm_cryogeysers" }
@@ -120,6 +121,7 @@ gpm_spawn_barren_world_modifier = {
 }
 
 gpm_roll_barren_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

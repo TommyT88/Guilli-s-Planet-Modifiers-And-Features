@@ -1,4 +1,5 @@
 gpm_random_minor_artifacts_5 = {
+	optimize_memory
 	custom_tooltip = minor_artifacts_found
 	locked_random_list = {
 		35 = { add_resource = { minor_artifacts = 1 } }
@@ -16,6 +17,7 @@ gpm_random_minor_artifacts_5 = {
 }
 
 gpm_random_minor_artifacts_precursor = {
+	optimize_memory
 	custom_tooltip = minor_artifacts_found
 	locked_random_list = {
 		15 = { add_resource = { minor_artifacts = 4 } }
@@ -33,6 +35,7 @@ gpm_random_minor_artifacts_precursor = {
 }
 
 gpm_random_minor_artifacts_precursor_big = {
+	optimize_memory
 	custom_tooltip = minor_artifacts_found
 	locked_random_list = {
 		15 = { add_resource = { minor_artifacts = 10 } }
@@ -53,6 +56,7 @@ gpm_random_minor_artifacts_precursor_big = {
 }
 
 gpm_d_random_minerals = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -66,6 +70,7 @@ gpm_d_random_minerals = {
 }
 
 gpm_d_random_energy = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -79,6 +84,7 @@ gpm_d_random_energy = {
 }
 
 gpm_d_random_food = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -95,6 +101,7 @@ gpm_d_random_food = {
 }
 
 gpm_d_random_alloys = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -107,6 +114,7 @@ gpm_d_random_alloys = {
 }
 
 gpm_d_random_trade_small = {
+	optimize_memory
 	locked_random_list = {
 		4 = { add_deposit = d_trade_value_1 }
 		2 = { add_deposit = d_trade_value_2 }
@@ -117,6 +125,7 @@ gpm_d_random_trade_small = {
 }
 
 gpm_d_random_trade = {
+	optimize_memory
 	locked_random_list = {
 		16 = { add_deposit = d_trade_value_3 }
 		8 = { add_deposit = d_trade_value_4 }
@@ -130,6 +139,7 @@ gpm_d_random_trade = {
 }
 
 gpm_d_random_physics = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_mining_station } }
 		locked_random_list = {
@@ -143,6 +153,7 @@ gpm_d_random_physics = {
 }
 
 gpm_d_random_society = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_mining_station } }
 		locked_random_list = {
@@ -156,6 +167,7 @@ gpm_d_random_society = {
 }
 
 gpm_d_random_engineering = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_mining_station } }
 		locked_random_list = {
@@ -169,6 +181,7 @@ gpm_d_random_engineering = {
 }
 
 gpm_d_random_crystals = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -182,6 +195,7 @@ gpm_d_random_crystals = {
 }
 
 gpm_d_random_gasses = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -195,6 +209,7 @@ gpm_d_random_gasses = {
 }
 
 gpm_d_random_motes = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_deposit_for = shipclass_research_station } }
 		locked_random_list = {
@@ -208,6 +223,7 @@ gpm_d_random_motes = {
 }
 
 gpm_random_unity = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			add_monthly_resource_mult = {
@@ -237,6 +253,7 @@ gpm_random_unity = {
 }
 
 gpm_random_experience_big = {
+	optimize_memory
 	if = {
 		limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 		locked_random_list = {
@@ -263,6 +280,7 @@ gpm_random_experience_big = {
 
 # scope = leader
 gpm_random_experience = {
+	optimize_memory
 	if = {
 		limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 		locked_random_list = {
@@ -288,6 +306,7 @@ gpm_random_experience = {
 }
 
 gpm_exploration_policy_extra_reward = {
+	optimize_memory
 	locked_random_list = {
 		10 = {
 			add_random_research_option = {
@@ -362,6 +381,7 @@ gpm_exploration_policy_extra_reward = {
 }
 
 gpm_random_precursor_tech_reward = {
+	optimize_memory
 	locked_random_list = {
 		10 = {
 			add_monthly_resource_mult = {
@@ -431,6 +451,7 @@ gpm_random_precursor_tech_reward = {
 
 # Random reward list for precursor remnants
 gpm_random_reward_precursor_remnants = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -499,6 +520,7 @@ gpm_random_reward_precursor_remnants = {
 }
 # Random reward list for precursor energy grid
 gpm_random_reward_precursor_energy_grid = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -567,6 +589,7 @@ gpm_random_reward_precursor_energy_grid = {
 }
 # Random reward list for precursor satellite grid
 gpm_random_reward_precursor_satalite_grid = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -635,6 +658,7 @@ gpm_random_reward_precursor_satalite_grid = {
 }
 # Random reward list for precursor city
 gpm_random_reward_precursor_city = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -715,6 +739,7 @@ gpm_random_reward_precursor_city = {
 }
 # Random reward list for precursor shipyards
 gpm_random_reward_precursor_shipyards = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -809,6 +834,7 @@ gpm_random_reward_precursor_shipyards = {
 }
 # Random reward list for precursor planetary gun
 gpm_random_reward_precursor_planetary_gun = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -877,6 +903,7 @@ gpm_random_reward_precursor_planetary_gun = {
 }
 # Random reward list for precursor bunker grid
 gpm_random_reward_precursor_bunker_grid = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -945,6 +972,7 @@ gpm_random_reward_precursor_bunker_grid = {
 }
 # Random reward list for precursor mechs
 gpm_random_reward_precursor_mechs = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1028,6 +1056,7 @@ gpm_random_reward_precursor_mechs = {
 }
 # Random reward list for precursor planetary shields
 gpm_random_reward_precursor_planetary_shield = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1108,6 +1137,7 @@ gpm_random_reward_precursor_planetary_shield = {
 }
 # Random reward list for precursor floating city
 gpm_random_reward_precursor_floating_city = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1176,6 +1206,7 @@ gpm_random_reward_precursor_floating_city = {
 }
 # Random reward list for precursor capital complex
 gpm_random_reward_precursor_capital_complex = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1262,6 +1293,7 @@ gpm_random_reward_precursor_capital_complex = {
 }
 # Random reward list for precursor communication hub
 gpm_random_reward_precursor_communication_hub = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1330,6 +1362,7 @@ gpm_random_reward_precursor_communication_hub = {
 }
 # Random reward list for precursor singularity drive
 gpm_random_reward_precursor_singularity_drive = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1447,6 +1480,7 @@ gpm_random_reward_precursor_singularity_drive = {
 }
 # Random reward list for precursor eternal fortress
 gpm_random_reward_precursor_eternal_fortress = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1515,6 +1549,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 }
 # Random reward list for precursor prison planet
 gpm_random_reward_precursor_prison_planet = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1597,6 +1632,7 @@ gpm_random_reward_precursor_prison_planet = {
 }
 # Random reward list for precursor mines
 gpm_random_reward_precursor_mines = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1665,6 +1701,7 @@ gpm_random_reward_precursor_mines = {
 }
 # Random reward list for precursor manufactorium
 gpm_random_reward_precursor_manufactorium = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1798,6 +1835,7 @@ gpm_random_reward_precursor_manufactorium = {
 }
 # Random reward list for precursor vaults
 gpm_random_reward_precursor_vaults = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1894,6 +1932,7 @@ gpm_random_reward_precursor_vaults = {
 }
 # Random reward list for precursor crashed spacestation
 gpm_random_reward_precursor_crashed_spacestation = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -1962,6 +2001,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 }
 # Random reward list for precursor battleground ruins
 gpm_random_reward_precursor_battleground_ruins = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -2060,6 +2100,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 }
 # Random reward list for precursor outpost ruins
 gpm_random_reward_precursor_outpost_ruins = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -2128,6 +2169,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 }
 # Random reward list for precursor harbor ruins
 gpm_random_reward_precursor_harbor_ruins = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -2196,6 +2238,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 }
 # Random reward list for precursor ruins
 gpm_random_reward_precursor_ruins = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -2264,6 +2307,7 @@ gpm_random_reward_precursor_ruins = {
 }
 # Random reward list for precursor obelisks
 gpm_random_reward_precursor_obelisks = {
+	optimize_memory
 	locked_random_list = {
 		20 = {
 			if = {
@@ -2347,6 +2391,7 @@ gpm_random_reward_precursor_obelisks = {
 
 
 gpm_random_precursor_empire_dig_site_bonus = {
+	optimize_memory
 	locked_random_list = {
 		25 = {
 			owner = {
@@ -2680,6 +2725,7 @@ gpm_random_precursor_empire_dig_site_bonus = {
 }
 
 gpm_random_precursor_building_reward = {
+	optimize_memory
 	locked_random_list = {
 		2 = {
 			hidden_effect = { owner = { change_variable = { which = nano_forge_build_count value = 1 } } }

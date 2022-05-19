@@ -10,6 +10,7 @@
 @everywhere = 2
 
 gpm_spawn_precursor_modifier = {
+	optimize_memory
 	if = {
 		limit = { NOT = { has_planet_flag = gpm_is_precursor_world } }
 		set_planet_flag = gpm_is_precursor_world
@@ -593,6 +594,7 @@ gpm_spawn_precursor_modifier = {
 
 # used for specific events. Needed because they cant have any restrictions
 gpm_random_precursor_modifier = {
+	optimize_memory
 
 	if = {
 		limit = { 
@@ -818,6 +820,7 @@ gpm_random_precursor_modifier = {
 
 # this always spaws precursor modifiers (designated precursor world). How many is determined by the options menu setting. 
 gpm_roll_precursor_modifiers = {
+	optimize_memory
 	gpm_precursor_ambient_object_generator = yes
 	switch = {
 		trigger = has_global_flag

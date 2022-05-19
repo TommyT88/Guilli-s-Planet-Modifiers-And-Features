@@ -1,5 +1,6 @@
 # scope = planet
 gpm_set_shipyards_objects = {
+	optimize_memory
 	if = {
 		limit = {
 			NOT = { has_global_flag = "has_system_scale_mod" }
@@ -997,6 +998,7 @@ gpm_set_shipyards_objects = {
 
 # scope = planet
 gpm_set_precursor_planetary_shields_machines = {
+	optimize_memory
 	if = {
 		limit = { 
 			NOT = { has_global_flag = "has_system_scale_mod" } 
@@ -1066,6 +1068,7 @@ gpm_set_precursor_planetary_shields_machines = {
 
 # scope = planet
 gpm_set_precursor_planetary_shields = {
+	optimize_memory
 	if = {
 		limit = { 
 			NOT = { has_global_flag = "has_system_scale_mod" } 
@@ -2101,6 +2104,7 @@ gpm_set_precursor_planetary_shields = {
 }
 # scope = planet
 gpm_set_fallen_empire_planetary_shields = {
+	optimize_memory
 	if = {
 		limit = { 
 			NOT = { has_global_flag = "has_system_scale_mod" } 
@@ -3129,6 +3133,7 @@ gpm_set_fallen_empire_planetary_shields = {
 }
 
 gpm_set_precursor_energy_grid = {
+	optimize_memory
 	if = {
 		limit = { is_planet_class = pc_continental }
 		set_planet_entity = { entity = "gpm_continental_planet_energy_grid_entity" }
@@ -3198,6 +3203,7 @@ gpm_set_precursor_energy_grid = {
 # Duplicate asteroid 
 # scope = planet
 gpm_set_binary_asteroid = {
+	optimize_memory
 	save_event_target_as = gpm_double_asteroid
 	solar_system = {
 		spawn_planet = {
@@ -3233,6 +3239,7 @@ gpm_set_binary_asteroid = {
 # Ambient object flag = gpm_ambient_ring
 
 gpm_set_planetary_rings = {
+	optimize_memory
 	if = {
 		limit = { has_ring = yes }
 		set_ring = no
@@ -3418,6 +3425,7 @@ gpm_set_planetary_rings = {
 # Set minor ambient objects in or around planets
 # planet scope
 gpm_set_space_ship_graveyard_ambient_objects = {
+	optimize_memory
 	if = {
 		limit = {
 			has_modifier = gpm_spaceship_graveyard
@@ -3501,6 +3509,7 @@ gpm_set_space_ship_graveyard_ambient_objects = {
 # planet scope
 # this = planet
 gpm_precursor_ambient_object_generator = {
+	optimize_memory
 	solar_system = {
 		random_system_planet = {
 			limit = {

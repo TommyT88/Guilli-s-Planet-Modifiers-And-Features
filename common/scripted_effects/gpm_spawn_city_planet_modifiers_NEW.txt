@@ -23,6 +23,7 @@
 @ringfactor = 1.35
 
 gpm_spawn_city_planet_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { modifier = "gpm_relic_factories" multiplier = gpm_planet_size_multiplier }
@@ -72,6 +73,7 @@ gpm_spawn_city_planet_modifier = {
 }
 
 gpm_roll_city_planet_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

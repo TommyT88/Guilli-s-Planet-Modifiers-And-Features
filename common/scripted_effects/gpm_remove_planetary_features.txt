@@ -1,4 +1,5 @@
 gpm_remove_planetary_features = {
+	optimize_memory
     every_deposit = {
         if = { limit = { is_deposit_type = gpm_d_ruined_battlefield } remove_deposit = gpm_d_ruined_battlefield }
         if = { limit = { is_deposit_type = gpm_d_spaceship_graveyard } remove_deposit = gpm_d_spaceship_graveyard }
@@ -72,6 +73,7 @@ gpm_remove_planetary_features = {
 }
 
 gpm_remove_random_vanilla_planetary_feature = {
+	optimize_memory
     random_deposit = {
         limit = {
             is_blocker = no
@@ -83,6 +85,7 @@ gpm_remove_random_vanilla_planetary_feature = {
 }
 
 gpm_remove_random_vanilla_energy_planetary_feature = {
+	optimize_memory
     random_deposit = {
         limit = {
             OR = {
@@ -103,6 +106,7 @@ gpm_remove_random_vanilla_energy_planetary_feature = {
 }
 
 gpm_remove_random_vanilla_mineral_planetary_feature = {
+	optimize_memory
     random_deposit = {
         limit = {
             OR = {
@@ -121,6 +125,7 @@ gpm_remove_random_vanilla_mineral_planetary_feature = {
 }
 
 gpm_remove_random_vanilla_food_planetary_feature = {
+	optimize_memory
     random_deposit = {
         limit = {
             OR = {

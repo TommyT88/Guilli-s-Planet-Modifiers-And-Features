@@ -10,6 +10,7 @@
 @everywhere = 2
 
 gpm_spawn_star_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { modifier = "gpm_unusual_sun_spots" }
@@ -98,6 +99,7 @@ gpm_spawn_star_modifier = {
 }
 
 gpm_roll_star_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

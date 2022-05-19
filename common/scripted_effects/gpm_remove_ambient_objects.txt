@@ -1,6 +1,7 @@
 # Planet Scope
 
 gpm_remove_precursor_shields = {
+	optimize_memory
 	every_ambient_object = {
 		if = {
 			limit = { has_ambient_object_flag = gpm_precursor_shield_flag }
@@ -10,6 +11,7 @@ gpm_remove_precursor_shields = {
 	}
 }
 gpm_remove_precursor_shipyards = {
+	optimize_memory
 	every_ambient_object = {
 		if = {
 			limit = { has_ambient_object_flag = gpm_precursor_shipyard_flag }
@@ -19,6 +21,7 @@ gpm_remove_precursor_shipyards = {
 	}
 }
 gpm_remove_fallen_empire_shields = {
+	optimize_memory
 	every_ambient_object = {
 		if = {
 			limit = { has_ambient_object_flag = gpm_fallen_empire_shield_flag }
@@ -28,6 +31,7 @@ gpm_remove_fallen_empire_shields = {
 	}
 }
 gpm_remove_planet_rings = {
+	optimize_memory
 	every_ambient_object = {
 		if = {
 			limit = { has_ambient_object_flag = gpm_ambient_ring }

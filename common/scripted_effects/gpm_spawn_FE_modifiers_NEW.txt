@@ -25,7 +25,8 @@
 @everywhere = 3
 
 
-gpm_spawn_fallen_empire_world_modifier = {	
+gpm_spawn_fallen_empire_world_modifier = {
+	optimize_memory
 	if = {
 		limit = {
 			NOT = { has_modifier = gpm_planetary_shielding_FE }
@@ -128,6 +129,7 @@ gpm_spawn_fallen_empire_world_modifier = {
 }
 
 gpm_roll_fallen_empire_world_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

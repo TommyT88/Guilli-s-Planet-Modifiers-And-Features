@@ -11,6 +11,7 @@
 @everywhere = 2
 
 gpm_spawn_constructed_ringworld_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { days = -1 modifier = "gpm_warm_water_lakes" }
@@ -204,10 +205,12 @@ gpm_spawn_constructed_ringworld_modifier = {
 	}
 }
 gpm_spawn_ringworld_modifier = {
+	optimize_memory
 
 }
 
 gpm_spawn_ringworld_tier_modifier = {
+	optimize_memory
 	# gpm_ringworld_engineering_mastery
 	# gpm_ringworld_engineering_voidborn
 	# gpm_ringworld_engineering_voidborn_mastery
@@ -278,6 +281,7 @@ gpm_spawn_ringworld_tier_modifier = {
 }
 
 gpm_spawn_habitat_tier_modifier = {
+	optimize_memory
 	# gpm_habitat_engineering (base)
 	# master_builders_habitats  (voidborn)
 	# gpm_habitat_engineering_mastery (master builders AP)
@@ -358,6 +362,7 @@ gpm_spawn_habitat_tier_modifier = {
 }
 
 gpm_spawn_constructed_habitat_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { days = -1 modifier = "gpm_habitat_trade_docks" }
@@ -412,10 +417,12 @@ gpm_spawn_constructed_habitat_modifier = {
 }
 
 gpm_spawn_habitat_modifier = {
+	optimize_memory
 	# this will be used for voidborn and abandoned habitat modifiers in the future
 }
 
 gpm_spawn_habitat_infrastructure = {
+	optimize_memory
 	if = {
 		limit = { has_modifier = extensive_moon_system }
 		event_target:gpm_new_constructed_habitat = {
@@ -752,6 +759,7 @@ gpm_spawn_habitat_infrastructure = {
 
 # doesnt always work, need to redo creatively for voidborn?
 gpm_add_habitat_infrastructure = {
+	optimize_memory
 	save_event_target_as = gpm_new_constructed_habitat
 	from.planet = {
 		gpm_spawn_habitat_infrastructure = yes
@@ -1122,6 +1130,7 @@ gpm_add_habitat_infrastructure = {
 }
 
 gpm_roll_habitat_modifiers = {
+	optimize_memory
 	if = {
 		limit = { 
 			has_planet_flag = gpm_is_galaxy_generated_habitat
@@ -1192,6 +1201,7 @@ gpm_roll_habitat_modifiers = {
 }
 
 gpm_roll_constructed_ringworld_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {
@@ -1259,6 +1269,7 @@ gpm_roll_constructed_ringworld_modifiers = {
 }
 
 gpm_roll_ringworld_modifiers = {
+	optimize_memory
 	
 }
 

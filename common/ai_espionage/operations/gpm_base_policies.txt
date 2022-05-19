@@ -11,9 +11,195 @@ gpm_spy_policy_gather_relic_information = {
 gpm_spy_policy_steal_relic = {
 	weight = {
 		base = 400
+		# Dont let AI use this on their subjects or their overlord
+		modifier = {
+			OR = {
+				owner = { is_overlord_to = root.target	}
+				root.target = { is_overlord_to = owner	}
+			}
+			factor = 0
+		}
+		# Weigts bases on oppinion levels. We dont steal from friends.
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = excellent
+				}
+			}
+			factor = 0
+		}
+		
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = good
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = poor
+				}
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = terrible
+				}
+			}
+			factor = 2
+		}
+		# Weights based on other empires fleet power. We dont steal if we can end up in a fight we cant possibly win
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = overwhelming
+				}
+			}
+			factor = 0.25
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = superior
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = inferior
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = pathetic
+				}
+			}
+			factor = 1.2
+		}
+		# Added weight if rival because fuck you empire X
+		modifier = {
+			owner = {
+				has_rival = root.target
+			}
+			factor = 2
+		}
+		# With every relic our taste for more increases
+		modifier = {
+			owner = { num_owned_relics = 1 }
+			factor = 1.1
+		}
+		modifier = {
+			owner = { num_owned_relics = 2 }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { num_owned_relics = 3 }
+			factor = 1.3
+		}
+		modifier = {
+			owner = { num_owned_relics = 4 }
+			factor = 1.4
+		}
+		modifier = {
+			owner = { num_owned_relics >= 5 }
+			factor = 1.5
+		}
+		# some empires like relics a little more than others
+		modifier = {
+			factor = 1.25
+			owner = { has_ethic = ethic_militarist }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_ethic = ethic_fanatic_militarist }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_ethic = ethic_materialist }
+		}
+		modifier = {
+			factor = 2
+			owner = { has_ethic = ethic_fanatic_materialist }
+		}
+		modifier = {
+			factor = 0
+			owner = { has_country_flag = gpm_recent_heist }
+		}
+		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
+		modifier = {
+			factor = 0.5
+			root.target = { is_ai = no }
+		}
+		# added weights based on difficulty level
+		# Cadet
+		modifier = {
+			is_difficulty = 0
+			factor = 0.50
+		}
+		# Ensign
+		modifier = {
+			is_difficulty = 1
+			factor = 0.75
+		}
+		# Captain
+		modifier = {
+			is_difficulty = 2
+			factor = 1
+		}
+		# Commodore
+		modifier = {
+			is_difficulty = 3
+			factor = 1.25
+		}
+		# Admiral
+		modifier = {
+			is_difficulty = 4
+			factor = 1.5
+		}
+		# Grand Admiral
+		modifier = {
+			is_difficulty = 5
+			factor = 2
+		}
+		# Disable if the game option is enabled
+		modifier = {
+			factor = 0
+			AND = {
+				root.target = { is_ai = no }
+				has_global_flag = gpm_relic_heists_AI_disabled
+			}
+		}
+	}
+}
+
+gpm_spy_policy_rival = {
+	weight = {
+		base = 500
 		modifier = {
 			owner = { NOT = { is_neighbor_of = root.target } }
-			factor = 0
+			factor = 0.5
 		}
 		modifier = {
 			owner = {
@@ -98,76 +284,6 @@ gpm_spy_policy_steal_relic = {
 				has_rival = root.target
 			}
 			factor = 1.5
-		}
-		modifier = {
-			owner = { num_owned_relics = 1 }
-			factor = 1.1
-		}
-		modifier = {
-			owner = { num_owned_relics = 2 }
-			factor = 1.2
-		}
-		modifier = {
-			owner = { num_owned_relics = 3 }
-			factor = 1.3
-		}
-		modifier = {
-			owner = { num_owned_relics = 4 }
-			factor = 1.4
-		}
-		modifier = {
-			owner = { num_owned_relics >= 5 }
-			factor = 1.5
-		}
-		modifier = {
-			factor = 1.25
-			owner = { has_ethic = ethic_militarist }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { has_ethic = ethic_fanatic_militarist }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { has_ethic = ethic_materialist }
-		}
-		modifier = {
-			factor = 2
-			owner = { has_ethic = ethic_fanatic_materialist }
-		}
-		modifier = {
-			factor = 0
-			owner = { has_country_flag = gpm_recent_heist }
-		}
-		modifier = {
-			factor = 0.5
-			root.target = { is_ai = no }
-		}
-		# Disable if the game option is enabled
-		modifier = {
-			factor = 0
-			AND = {
-				root.target = { is_ai = no }
-				has_global_flag = gpm_relic_heists_AI_disabled
-			}
-		}
-	}
-}
-
-gpm_spy_policy_rival = {
-	weight = {
-		base = 500
-		modifier = {
-			owner = {
-				or = {
-					opinion_level = {
-						who = root.target
-						level < neutral
-					}
-					has_rival = root.target
-				}
-			}
-			factor = 1.2
 		}
 	}
 }

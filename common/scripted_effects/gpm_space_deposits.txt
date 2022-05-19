@@ -1,4 +1,5 @@
 gpm_add_space_deposit = {
+	optimize_memory
 	# Asteroid modifiers
 	if = {
 		limit = { gpm_is_planet_class_asteroid= yes }

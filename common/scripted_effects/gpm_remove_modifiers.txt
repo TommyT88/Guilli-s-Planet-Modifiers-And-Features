@@ -1,5 +1,6 @@
 
 gpm_remove_negative_modifiers = {
+	optimize_memory
 	if = {
 		limit = { has_modifier = gpm_frequent_thunderstorms }
 		remove_modifier = gpm_frequent_thunderstorms
@@ -166,6 +167,7 @@ gpm_remove_negative_modifiers = {
 	}
 }
 gpm_remove_neutral_modifiers = {
+	optimize_memory
 	if = {
 		limit = {
 			gpm_is_planet_class_city = yes
@@ -316,6 +318,7 @@ gpm_remove_neutral_modifiers = {
 	remove_modifier = gpm_stellar_irradiation
 }
 gpm_remove_positive_modifiers = {
+	optimize_memory
 	if = {
 		limit = {
 			gpm_is_planet_water = no
@@ -437,6 +440,7 @@ gpm_remove_positive_modifiers = {
 	remove_modifier = gpm_melted_ice_caps
 }
 gpm_remove_precursor_modifiers = {
+	optimize_memory
 	remove_modifier = gpm_precursor_remnants
 	remove_modifier = gpm_precursor_energy_grid
 	remove_modifier = gpm_precursor_satalite_grid
@@ -471,6 +475,7 @@ gpm_remove_precursor_modifiers = {
 	remove_modifier = gpm_precursor_obelisks
 }
 gpm_remove_fallen_empire_modifiers = {
+	optimize_memory
 	remove_modifier = gpm_utopian_world
 	remove_modifier = gpm_utopian_services
 	remove_modifier = gpm_primitive_reserve
@@ -494,6 +499,7 @@ gpm_remove_fallen_empire_modifiers = {
 	remove_modifier = gpm_teleportation_systems
 }
 gpm_remove_machine_world_modifiers = {
+	optimize_memory
 	remove_modifier = gpm_ghost_in_the_machine
 	remove_modifier = gpm_framework
 	remove_modifier = gpm_giant_transmitter
@@ -520,6 +526,7 @@ gpm_remove_machine_world_modifiers = {
 	remove_modifier = gpm_sharp_architecture
 }
 gpm_purge_all_planetary_modifiers = {
+	optimize_memory
 	# Vanilla Modifiers 
 	remove_modifier = hazardous_weather
 	remove_modifier = eat_the_titans
@@ -926,6 +933,7 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_titanic_geo_form	
 }
 gpm_purge_all_core_modifiers = {
+	optimize_memory
 	remove_modifier = ultra_rich
 	remove_modifier = gpm_ultra_rich_2
 	remove_modifier = carbon_world
@@ -936,6 +944,7 @@ gpm_purge_all_core_modifiers = {
 	remove_modifier = gpm_high_gravity_2
 }
 gpm_purge_ringworld_modifiers = {
+	optimize_memory
 	remove_modifier = gpm_ringworld_engineering_mastery
 	remove_modifier = gpm_ringworld_engineering_voidborn
 	remove_modifier = gpm_ringworld_engineering_voidborn_mastery

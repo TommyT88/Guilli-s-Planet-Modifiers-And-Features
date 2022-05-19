@@ -12,6 +12,7 @@
 @everywhere = 2
 
 gpm_spawn_asteroid_modifier = {
+	optimize_memory
 	random_list = {
 		100 = {
 			add_modifier = { modifier = "gpm_large_asteroid" }
@@ -214,6 +215,7 @@ gpm_spawn_asteroid_modifier = {
 }
 
 gpm_roll_asteroid_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

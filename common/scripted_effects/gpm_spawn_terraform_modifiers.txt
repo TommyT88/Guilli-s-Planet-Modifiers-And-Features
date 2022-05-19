@@ -9,6 +9,7 @@
 
 
 gpm_switch_fixable_modifiers = {
+	optimize_memory
 	# Planet Modifier Scaling
 	if = {
 		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -24,6 +25,7 @@ gpm_switch_fixable_modifiers = {
 }
 
 gpm_spawn_terraform_tier_modifier = {
+	optimize_memory
 	# gpm_terraforming_world_engineering
 	# gpm_terraforming_world_engineering_shaper
 	# gpm_terraforming_world_engineering_mastery
@@ -110,6 +112,7 @@ gpm_spawn_terraform_tier_modifier = {
 
 
 gpm_spawn_terraform_modifier = {
+	optimize_memory
 	
 	# Planet Modifier Scaling
 	if = {
@@ -665,6 +668,7 @@ gpm_spawn_terraform_modifier = {
 }
 
 gpm_roll_terraform_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

@@ -264,7 +264,7 @@ operation_gpm_gather_information_relic = {
 
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = {
-			RANDOM_EVENTS = operation_random_events_low_stakes
+			RANDOM_EVENTS = operation_random_events_generic
 		}
 	}
 	on_create = {
@@ -301,9 +301,6 @@ operation_gpm_steal_relic = {
 
 	spy_power_cost = 70
 	potential = {
-
-		#TEMP TO DEV TEST
-		# owner = { is_ai = no }
 
 		target = {
 			OR = {
@@ -502,7 +499,9 @@ operation_gpm_steal_relic = {
 		custom_tooltip = {
 			is_running_espionage_operation = no
 			fail_text = operation_one_at_a_time
-		}		
+		}
+		# Forbid if not neighbours
+		is_neighbor_of = target
 	}
 	# The Crew
 	stage = {
@@ -531,7 +530,7 @@ operation_gpm_steal_relic = {
 
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = {
-			RANDOM_EVENTS = operation_random_events_low_stakes
+			RANDOM_EVENTS = operation_random_events_generic
 		}
 	}
 	on_create = {

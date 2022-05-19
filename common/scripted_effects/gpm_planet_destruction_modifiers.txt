@@ -1,5 +1,6 @@
 # Check what planet type the purged world turns into and apply modifiers
 gpm_random_modifier_crisis_purge = {
+	optimize_memory
 	if = {
 		limit = { is_planet_class = pc_barren_cold }
 		if = {

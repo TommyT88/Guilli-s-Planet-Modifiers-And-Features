@@ -26,6 +26,7 @@
 @galaxyfoodtweak = 0.5
 
 gpm_spawn_normal_habitable_world_modifier = {
+	optimize_memory
 	random_list = {
 		10 = {
 			add_modifier = { modifier = "low_gravity" multiplier = gpm_planet_size_multiplier }
@@ -2267,6 +2268,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0 is_moon = yes }
+			modifier = { factor = 0 has_moon = yes }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2284,6 +2286,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0 is_moon = yes }
+			modifier = { factor = 0 has_moon = yes }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2749,6 +2752,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 }
 
 gpm_roll_normal_habitable_modifiers = {
+	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {

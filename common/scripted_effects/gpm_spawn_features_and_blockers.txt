@@ -3,6 +3,7 @@
 
 
 gpm_roll_planetary_features = {
+	optimize_memory
 	# set unique features
 	if = {
 		limit = {
@@ -128,6 +129,7 @@ gpm_roll_planetary_features = {
 }
 
 gpm_roll_planetary_blockers = {
+	optimize_memory
 	# blockers
 	if = {
 		limit = {
@@ -200,6 +202,7 @@ gpm_roll_planetary_blockers = {
 
 # set unique features
 gpm_roll_planetary_features_unique = {
+	optimize_memory
 	if = {
 		limit = {
 			AND = {
@@ -240,6 +243,7 @@ gpm_roll_planetary_features_unique = {
 
 # roll normal habitable features
 gpm_roll_planetary_features_normal_habitable = {
+	optimize_memory
 	random_list = {
 		10 = {
 			add_deposit = gpm_d_ruined_battlefield
@@ -660,6 +664,7 @@ gpm_roll_planetary_features_normal_habitable = {
 }
 # roll normal habitable blockers
 gpm_roll_planetary_blockers_normal_habitable = {
+	optimize_memory
 	if = {
 		limit = { has_modifier = gpm_toxic_gas }
 		add_deposit = gpm_tb_toxic_gas
@@ -821,6 +826,7 @@ gpm_roll_planetary_blockers_normal_habitable = {
 
 # roll city features
 gpm_roll_planetary_features_city = {
+	optimize_memory
 	random_list = {
 		10 = {
 			add_deposit =  gpm_d_relic_tank_factory
@@ -934,6 +940,7 @@ gpm_roll_planetary_features_city = {
 
 # roll hive features
 gpm_roll_planetary_features_hive = {
+	optimize_memory
 	# NOT = { has_planet_flag = gpm_is_terraformed_world }
 	random_list = {
 		10 = { }
@@ -943,6 +950,7 @@ gpm_roll_planetary_features_hive = {
 
 # roll machine world features
 gpm_roll_planetary_features_machine = {
+	optimize_memory
 	# NOT = { has_planet_flag = gpm_is_terraformed_world }
 	random_list = {
 		10 = { }
@@ -952,6 +960,7 @@ gpm_roll_planetary_features_machine = {
 
 # roll habitat features
 gpm_roll_planetary_features_habitat = {
+	optimize_memory
 	random_list = {
 		10 = { }
 		10 = { }
@@ -960,6 +969,7 @@ gpm_roll_planetary_features_habitat = {
 
 # roll ringworld features
 gpm_roll_planetary_features_ringworld = {
+	optimize_memory
 	random_list = {
 		10 = { }
 		10 = { }
@@ -969,6 +979,7 @@ gpm_roll_planetary_features_ringworld = {
 
 # spaws 1 - 3 random precursor features
 gpm_spawn_precursor_features = {
+	optimize_memory
 	if = {
 		limit = {
 			OR = { 
@@ -1061,6 +1072,7 @@ gpm_spawn_precursor_features = {
 
 # planet wonders
 gpm_spawn_planet_wonders_desert = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_gargantuan_sinkhole" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1073,6 +1085,7 @@ gpm_spawn_planet_wonders_desert = {
 	}
 }
 gpm_spawn_planet_wonders_arid = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_discharging_field" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1085,6 +1098,7 @@ gpm_spawn_planet_wonders_arid = {
 	}
 }
 gpm_spawn_planet_wonders_savannah = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_giant_trees" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1097,6 +1111,7 @@ gpm_spawn_planet_wonders_savannah = {
 	}
 }
 gpm_spawn_planet_wonders_tropical = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_crystal_jungle" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1109,6 +1124,7 @@ gpm_spawn_planet_wonders_tropical = {
 	}
 }
 gpm_spawn_planet_wonders_continental = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_floating_islands" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1121,6 +1137,7 @@ gpm_spawn_planet_wonders_continental = {
 	}
 }
 gpm_spawn_planet_wonders_ocean = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_amoeba_sea" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1132,6 +1149,7 @@ gpm_spawn_planet_wonders_ocean = {
 	}
 }
 gpm_spawn_planet_wonders_arctic = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_glass_towers" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1143,6 +1161,7 @@ gpm_spawn_planet_wonders_arctic = {
 	}
 }
 gpm_spawn_planet_wonders_alpine = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_howling_peaks" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1154,6 +1173,7 @@ gpm_spawn_planet_wonders_alpine = {
 	}
 }
 gpm_spawn_planet_wonders_tundra = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_mega_fungi" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1165,6 +1185,7 @@ gpm_spawn_planet_wonders_tundra = {
 	}
 }
 gpm_spawn_planet_wonders_gaia = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_energy_storm" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1176,6 +1197,7 @@ gpm_spawn_planet_wonders_gaia = {
 	}
 }
 gpm_spawn_planet_wonders_nuked = {
+	optimize_memory
 	random_list = {
 		16 = { add_deposit = "gpm_d_forgotten_deposit" }
 		2 = { add_deposit = "gpm_d_titanic_cave" }
@@ -1188,6 +1210,7 @@ gpm_spawn_planet_wonders_nuked = {
 	}
 }
 gpm_spawn_planet_wonders_any = {
+	optimize_memory
 	random_list = {
 		2 = { add_deposit = "gpm_d_titanic_cave" }
 		2 = { add_deposit = "gpm_d_abandoned_stargate" }
@@ -1200,6 +1223,7 @@ gpm_spawn_planet_wonders_any = {
 }
 
 gpm_spawn_planet_ring_modifier = {
+	optimize_memory
 	random_list = {
 		# 0 to catch exceptions
 		0 = { }
