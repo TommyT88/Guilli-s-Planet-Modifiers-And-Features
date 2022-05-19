@@ -501,7 +501,7 @@ operation_gpm_steal_relic = {
 			fail_text = operation_one_at_a_time
 		}
 		# Forbid if not neighbours
-		is_neighbor_of = target
+		target = { is_neighbor_of = root.owner }
 	}
 	# The Crew
 	stage = {

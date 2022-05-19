@@ -7,7 +7,6 @@ gpm_spacer = {
 	# This is called whenever a Pop is created, moved to a different planet, or gets a new owner
 	assign_to_pop = {
 		exists = owner
-		gpm_is_planet_class_habitat = yes
 	}
 	weight = {
 		weight = 1
@@ -129,7 +128,6 @@ gpm_spacer_specialist = {
 	# This is called whenever a Pop is created, moved to a different planet, or gets a new owner
 	assign_to_pop = {
 		exists = owner
-		gpm_is_planet_class_habitat = yes
 	}
 	weight = {
 		weight = 1

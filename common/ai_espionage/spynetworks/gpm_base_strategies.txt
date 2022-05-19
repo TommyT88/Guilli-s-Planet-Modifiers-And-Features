@@ -8,7 +8,7 @@ gpm_added_to_default_empire = {
 			weight = 1
 		}
 		modifier = {
-			target = {
+			any_neighbor_country = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -20,22 +20,22 @@ gpm_added_to_default_empire = {
 		# Cadet
 		modifier = {
 			is_difficulty = 0
-			factor = 0.25
+			factor = 0.5
 		}
 		# Ensign
 		modifier = {
 			is_difficulty = 1
-			factor = 0.5
+			factor = 0.75
 		}
 		# Captain
 		modifier = {
 			is_difficulty = 2
-			factor = 0.75
+			factor = 1
 		}
 		# Commodore
 		modifier = {
 			is_difficulty = 3
-			factor = 1.2
+			factor = 1.25
 		}
 		# Admiral
 		modifier = {
@@ -45,9 +45,8 @@ gpm_added_to_default_empire = {
 		# Grand Admiral
 		modifier = {
 			is_difficulty = 5
-			factor = 2
+			factor = 1.75
 		}
-
 		modifier = {
 			owner = { has_ethic = ethic_pacifist }
 			factor = 0.75
@@ -56,10 +55,13 @@ gpm_added_to_default_empire = {
 			owner = { has_ethic = ethic_fanatic_pacifist }
 			factor = 0.5
 		}
-
 		modifier = {
-			owner = { is_hostile = target }
-			factor = 1.5
+			owner = { is_criminal_syndicate = yes }
+			factor = 1.2
+		}
+		modifier = {
+			owner = { has_crisis_level >= 1 }
+			factor = 1.2
 		}
 	}
 

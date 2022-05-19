@@ -94,7 +94,7 @@ wg_gpm_r_dragon_trophy = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -106,7 +106,7 @@ wg_gpm_r_dragon_trophy = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -258,7 +258,7 @@ wg_gpm_r_khans_throne = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -270,7 +270,7 @@ wg_gpm_r_khans_throne = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -422,7 +422,7 @@ wg_gpm_r_worm_scales = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -434,7 +434,7 @@ wg_gpm_r_worm_scales = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -586,7 +586,7 @@ wg_gpm_r_rubricator = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -598,7 +598,7 @@ wg_gpm_r_rubricator = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -750,7 +750,7 @@ wg_gpm_r_galaxy = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -762,7 +762,7 @@ wg_gpm_r_galaxy = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -914,7 +914,7 @@ wg_gpm_r_omnicodex = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -926,7 +926,7 @@ wg_gpm_r_omnicodex = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -1079,7 +1079,7 @@ wg_gpm_r_surveyor = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1091,7 +1091,7 @@ wg_gpm_r_surveyor = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -1243,7 +1243,7 @@ wg_gpm_r_ancient_sword = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1255,7 +1255,7 @@ wg_gpm_r_ancient_sword = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -1407,7 +1407,7 @@ wg_gpm_r_severed_head = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1419,7 +1419,7 @@ wg_gpm_r_severed_head = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -1571,7 +1571,7 @@ wg_gpm_r_prethoryn_queen = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1583,7 +1583,7 @@ wg_gpm_r_prethoryn_queen = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -1735,7 +1735,7 @@ wg_gpm_r_unbidden_warlock = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1747,7 +1747,7 @@ wg_gpm_r_unbidden_warlock = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -1899,7 +1899,7 @@ wg_gpm_r_contingency_core = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -1911,7 +1911,7 @@ wg_gpm_r_contingency_core = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -2063,7 +2063,7 @@ wg_gpm_r_zro_crystal = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2075,7 +2075,7 @@ wg_gpm_r_zro_crystal = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -2227,7 +2227,7 @@ wg_gpm_r_the_last_baol = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2239,7 +2239,7 @@ wg_gpm_r_the_last_baol = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -2392,7 +2392,7 @@ wg_gpm_r_the_defragmentor = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2404,7 +2404,7 @@ wg_gpm_r_the_defragmentor = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -2556,7 +2556,7 @@ wg_gpm_r_reality_perforator = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2568,7 +2568,7 @@ wg_gpm_r_reality_perforator = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -2720,7 +2720,7 @@ wg_gpm_r_pox_sample = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2732,7 +2732,7 @@ wg_gpm_r_pox_sample = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -2884,7 +2884,7 @@ wg_gpm_r_cryo_core = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -2896,7 +2896,7 @@ wg_gpm_r_cryo_core = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -3048,7 +3048,7 @@ wg_gpm_r_war_forge = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3060,7 +3060,7 @@ wg_gpm_r_war_forge = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -3217,7 +3217,7 @@ wg_gpm_r_time_displacer = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3229,7 +3229,7 @@ wg_gpm_r_time_displacer = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -3380,7 +3380,7 @@ wg_gpm_r_alien_eggs = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3392,7 +3392,7 @@ wg_gpm_r_alien_eggs = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -3543,7 +3543,7 @@ wg_gpm_r_machine_world_core = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3555,7 +3555,7 @@ wg_gpm_r_machine_world_core = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -3707,7 +3707,7 @@ wg_gpm_r_encyclopedia_galactica = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3719,7 +3719,7 @@ wg_gpm_r_encyclopedia_galactica = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -3870,7 +3870,7 @@ wg_gpm_r_zero_energy_generator = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -3882,7 +3882,7 @@ wg_gpm_r_zero_energy_generator = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -4033,7 +4033,7 @@ wg_gpm_r_quantum_sphere = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4045,7 +4045,7 @@ wg_gpm_r_quantum_sphere = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -4196,7 +4196,7 @@ wg_gpm_r_ai_architect = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4208,7 +4208,7 @@ wg_gpm_r_ai_architect = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -4359,7 +4359,7 @@ wg_gpm_r_encrypted_sct = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4371,7 +4371,7 @@ wg_gpm_r_encrypted_sct = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -4522,7 +4522,7 @@ wg_gpm_r_experimental_weapon = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4534,7 +4534,7 @@ wg_gpm_r_experimental_weapon = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -4685,7 +4685,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4697,7 +4697,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -4848,7 +4848,7 @@ wg_gpm_r_power_core = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -4860,7 +4860,7 @@ wg_gpm_r_power_core = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5011,7 +5011,7 @@ wg_gpm_r_mysterious_shield_generator = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5023,7 +5023,7 @@ wg_gpm_r_mysterious_shield_generator = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5174,7 +5174,7 @@ wg_gpm_r_gravity_engine = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5186,7 +5186,7 @@ wg_gpm_r_gravity_engine = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5337,7 +5337,7 @@ wg_gpm_r_codex_administratum = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5349,7 +5349,7 @@ wg_gpm_r_codex_administratum = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5500,7 +5500,7 @@ wg_gpm_r_enigmatic_advisor = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5512,7 +5512,7 @@ wg_gpm_r_enigmatic_advisor = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5663,7 +5663,7 @@ wg_gpm_r_positronic_microchip = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5675,7 +5675,7 @@ wg_gpm_r_positronic_microchip = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5826,7 +5826,7 @@ wg_gpm_r_venerable_dreadnaught = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -5838,7 +5838,7 @@ wg_gpm_r_venerable_dreadnaught = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -5989,7 +5989,7 @@ wg_gpm_r_sentinel_queen = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6001,7 +6001,7 @@ wg_gpm_r_sentinel_queen = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -6152,7 +6152,7 @@ wg_gpm_r_earthquake_engine = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6164,7 +6164,7 @@ wg_gpm_r_earthquake_engine = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -6315,7 +6315,7 @@ wg_gpm_r_manufactorium_ship = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6327,7 +6327,7 @@ wg_gpm_r_manufactorium_ship = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -6478,7 +6478,7 @@ wg_gpm_r_datacube = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6490,7 +6490,7 @@ wg_gpm_r_datacube = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -6641,7 +6641,7 @@ wg_gpm_r_self_assembly_hub = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6653,7 +6653,7 @@ wg_gpm_r_self_assembly_hub = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -6805,7 +6805,7 @@ wg_gpm_r_banner_of_the_fallen = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6817,7 +6817,7 @@ wg_gpm_r_banner_of_the_fallen = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -6969,7 +6969,7 @@ wg_gpm_r_cloaking_device = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -6981,7 +6981,7 @@ wg_gpm_r_cloaking_device = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -7132,7 +7132,7 @@ wg_gpm_r_q_storage_compressor = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -7144,7 +7144,7 @@ wg_gpm_r_q_storage_compressor = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -7295,7 +7295,7 @@ wg_gpm_r_soul_gem = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -7307,7 +7307,7 @@ wg_gpm_r_soul_gem = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}
@@ -7458,7 +7458,7 @@ wg_gpm_r_self_repairing_obelisk = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 0
 			has_country_flag = gpm_recent_relic_war_ended
@@ -7470,7 +7470,7 @@ wg_gpm_r_self_repairing_obelisk = {
 		modifier = {
 			opinion_level = {
 				who = from
-				level < neutral
+				level <= neutral
 			}
 			factor = 1.5
 		}

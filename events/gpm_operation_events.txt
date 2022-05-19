@@ -329,12 +329,15 @@ espionage_operation_event = {
 	}
 
 	immediate = {
+		# We set a timed flag so the AI doens't spam relic heist too frequently
+		owner = { set_timed_country_flag = { flag = gpm_recent_heist days = 5400 } }
+		from = { set_timed_country_flag = { flag = gpm_recent_heist days = 5400 } }
 	}
 
 	option = {
 		name = gpm_operation.1.a
 		trigger = {
-			target = {
+			from = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -348,7 +351,7 @@ espionage_operation_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			target = {
+			from = {
 				NOR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -386,7 +389,7 @@ espionage_operation_event = {
 	option = {
 		name = gpm_operation.2.a
 		trigger = {
-			target = {
+			from = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -425,7 +428,7 @@ espionage_operation_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			target = {
+			from = {
 				NOR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -463,7 +466,7 @@ espionage_operation_event = {
 	option = {
 		name = gpm_operation.3.a
 		trigger = {
-			target = {
+			from = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -477,7 +480,7 @@ espionage_operation_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			target = {
+			from = {
 				NOR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -510,14 +513,13 @@ espionage_operation_event = {
 	}
 
 	immediate = {
-		# We set a timed flag so the AI doens't spam relic heist too frequently
-		owner = { set_timed_country_flag = { flag = gpm_recent_heist days = 1825 } }
+		log = ";OP - STEAL; - Operation.4 GETAWAY Finished -- root.from = [root.from.GetName] --- root.owner = [root.owner.GetName]"
 	}
 
 	option = {
 		name = gpm_operation.4.a
 		trigger = {
-			target = {
+			from = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -579,7 +581,7 @@ espionage_operation_event = {
 	option = {
 		name = UNFORTUNATE
 		trigger = {
-			target = {
+			from = {
 				NOR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
@@ -5043,7 +5045,7 @@ country_event = {
 
 	immediate = {
 		#### DEBUG LOGGING ####
-		log = ";OP - GATHER-MSG; gpm_operation.11 (Gather Relic Information Message event) triggered by [from.owner.GetName] about relic from [fromfrom.GetName]"
+		log = ";OP - GATHER-MSG; gpm_operation.8 (Gather Relic Information Message event NO RELICS) triggered by [from.owner.GetName] about relic from [fromfrom.GetName]"
 		#### ##################
 	}
 

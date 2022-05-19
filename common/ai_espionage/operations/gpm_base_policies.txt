@@ -143,9 +143,13 @@ gpm_spy_policy_steal_relic = {
 			factor = 2
 			owner = { has_ethic = ethic_fanatic_materialist }
 		}
+		# Disable if the target or the targetting empire has "recently" attempted or been victim of a steal relic operation
 		modifier = {
 			factor = 0
-			owner = { has_country_flag = gpm_recent_heist }
+			OR = {
+				owner = { has_country_flag = gpm_recent_heist }
+				root.target = { has_country_flag = gpm_recent_heist }
+			}
 		}
 		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
 		modifier = {
@@ -201,6 +205,15 @@ gpm_spy_policy_rival = {
 			owner = { NOT = { is_neighbor_of = root.target } }
 			factor = 0.5
 		}
+		# Dont let AI use this on their subjects or their overlord
+		modifier = {
+			OR = {
+				owner = { is_overlord_to = root.target	}
+				root.target = { is_overlord_to = owner	}
+			}
+			factor = 0
+		}
+		# Weigts bases on oppinion levels. We dont steal from friends.
 		modifier = {
 			owner = {
 				opinion_level = {
@@ -237,7 +250,7 @@ gpm_spy_policy_rival = {
 			}
 			factor = 2
 		}
-
+		# Weights based on other empires fleet power. We dont steal if we can end up in a fight we cant possibly win
 		modifier = {
 			owner = {
 				relative_power = {
@@ -278,12 +291,48 @@ gpm_spy_policy_rival = {
 			}
 			factor = 1.2
 		}
-
+		# Added weight if rival because fuck you empire X
 		modifier = {
 			owner = {
 				has_rival = root.target
 			}
 			factor = 1.5
+		}
+		# added weights based on difficulty level
+		# Cadet
+		modifier = {
+			is_difficulty = 0
+			factor = 0.50
+		}
+		# Ensign
+		modifier = {
+			is_difficulty = 1
+			factor = 0.75
+		}
+		# Captain
+		modifier = {
+			is_difficulty = 2
+			factor = 1
+		}
+		# Commodore
+		modifier = {
+			is_difficulty = 3
+			factor = 1.25
+		}
+		# Admiral
+		modifier = {
+			is_difficulty = 4
+			factor = 1.5
+		}
+		# Grand Admiral
+		modifier = {
+			is_difficulty = 5
+			factor = 2
+		}
+		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
+		modifier = {
+			factor = 0.5
+			root.target = { is_ai = no }
 		}
 	}
 }
