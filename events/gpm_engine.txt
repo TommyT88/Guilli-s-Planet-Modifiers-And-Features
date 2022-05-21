@@ -432,7 +432,10 @@ planet_event = {
 		}
 
 		if = {
-			limit = { gpm_is_planet_class_normal_habitable = yes }
+			limit = {
+				gpm_is_planet_class_normal_habitable = yes
+				NOT = { gpm_is_planet_primitive = yes }
+			}
 			random_list = {
 				850 = {}
 				150 = {
@@ -457,8 +460,8 @@ planet_event = {
 		if = {
 			limit = { gpm_is_planet_primitive = yes }
 			random_list = {
-				900 = {}
-				100 = {
+				970 = {}
+				30 = {
 					# designate precursor world
 					set_planet_flag = gpm_is_precursor_world
 					solar_system = { set_star_flag = gpm_is_precursor_system }

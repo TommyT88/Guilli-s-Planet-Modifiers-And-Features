@@ -9,13 +9,13 @@ gpm_added_to_default_empire = {
 		}
 		modifier = {
 			any_neighbor_country = {
-				OR = {
+				NOR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
 					gpm_has_modded_non_precursor_relic = yes
 				}
 			}
-			factor = 1.5
+			factor = 2
 		}
 		# Cadet
 		modifier = {
@@ -176,71 +176,6 @@ gpm_added_to_default_empire = {
 			target_value = {
 				min = 1
 			}
-		}
-		operation_sleeper_cells = {
-			operation_policy = gpm_spy_policy_rival
-
-			target_value = {
-				min = 1
-			}
-		}
-		operation_diplomatic_incident = {
-			operation_policy = gpm_spy_policy_rival
-
-			target_value = {
-				min = 1
-			}
-		}
-		operation_extort_favors = {
-			operation_policy = gpm_spy_policy_rival
-
-			target_value = {
-				min = 1
-			}
-		}
-		operation_smear_campaign = {
-			operation_policy = gpm_spy_policy_rival
-
-			target_value = {
-				min = 10
-			}
-		}
-		operation_arm_privateers = {
-			operation_policy = gpm_spy_policy_rival
-
-			target_value = {
-				min = 1
-			}
-		}
-		operation_sabotage_starbase = {
-			operation_policy = gpm_spy_policy_rival
-			target_value = {
-				min = 1
-			} 
-		}
-		operation_crisis_beacon = {
-			operation_policy = gpm_spy_policy_rival
-			target_value = {
-				min = 1
-			} 
-		}
-		operation_weaken_galactic_empire = {
-			operation_policy = gpm_spy_policy_rival
-			target_value = {
-				min = 1
-			} 
-		}
-		operation_target_seditionists = {
-			operation_policy = gpm_spy_policy_rival
-			target_value = {
-				min = 1
-			} 
-		}
-		operation_spark_rebellion = {
-			operation_policy = gpm_spy_policy_rival
-			target_value = {
-				min = 1
-			} 
 		}
 	}
 }

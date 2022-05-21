@@ -1,9 +1,54 @@
 gpm_spy_policy_gather_relic_information = {
 	weight = {
-		base = 10000
+		base = 200
 		modifier = {
 			owner = { is_neighbor_of = root.target }
 			factor = 10
+		}
+		# Weigts bases on oppinion levels. We dont steal from friends.
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = excellent
+				}
+			}
+			factor = 0.25
+		}
+		
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = good
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = poor
+				}
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = terrible
+				}
+			}
+			factor = 2
+		}
+		# Added weight if rival because fuck you empire X
+		modifier = {
+			owner = {
+				has_rival = root.target
+			}
+			factor = 2
 		}
 	}
 }
@@ -332,6 +377,114 @@ gpm_spy_policy_rival = {
 		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
 		modifier = {
 			factor = 0.5
+			root.target = { is_ai = no }
+		}
+	}
+}
+
+gpm_spy_policy_rival_reduced = {
+	weight = {
+		base = 500
+		modifier = {
+			owner = { NOT = { is_neighbor_of = root.target } }
+			factor = 0.5
+		}
+		# Dont let AI use this on their subjects or their overlord
+		modifier = {
+			OR = {
+				owner = { is_overlord_to = root.target	}
+				root.target = { is_overlord_to = owner	}
+			}
+			factor = 0
+		}
+		# Weigts bases on oppinion levels. We dont steal from friends.
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = excellent
+				}
+			}
+			factor = 0
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = good
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = poor
+				}
+			}
+			factor = 1.5
+		}
+		modifier = {
+			owner = {
+				opinion_level = {
+					who = root.target
+					level = terrible
+				}
+			}
+			factor = 2
+		}
+		# Weights based on other empires fleet power. We dont steal if we can end up in a fight we cant possibly win
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = overwhelming
+				}
+			}
+			factor = 0.25
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = superior
+				}
+			}
+			factor = 0.5
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = inferior
+				}
+			}
+			factor = 1.1
+		}
+		modifier = {
+			owner = {
+				relative_power = {
+					who = root.target
+					category = fleet
+					value = pathetic
+				}
+			}
+			factor = 1.2
+		}
+		# Added weight if rival because fuck you empire X
+		modifier = {
+			owner = {
+				has_rival = root.target
+			}
+			factor = 1.5
+		}
+		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
+		modifier = {
+			factor = 0.1
 			root.target = { is_ai = no }
 		}
 	}
