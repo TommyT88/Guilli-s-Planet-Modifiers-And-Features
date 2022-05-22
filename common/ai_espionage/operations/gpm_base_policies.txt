@@ -257,23 +257,20 @@ gpm_spy_policy_steal_relic = {
 		# diplomatic modfiers
 		modifier = {
 			factor = 0
-				owner = { 
-					OR = {
-						has_non_aggression_pact = root.target
-						has_defensive_pact = root.target
-					}
+			owner = {
+				OR = {
+					has_non_aggression_pact = root.target
+					has_defensive_pact = root.target
 				}
 			}
 		}
 		modifier = {
 			factor = 0
-				owner = { is_improving_relations_with = root.target }
-			}
+			owner = { is_improving_relations_with = root.target }
 		}
 		modifier = {
 			factor = 0
-				root.target = { is_loyal_to = owner }
-			}
+			root.target = { is_loyal_to = owner }
 		}
 	}
 }
