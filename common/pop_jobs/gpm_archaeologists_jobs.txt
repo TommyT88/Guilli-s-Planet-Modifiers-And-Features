@@ -122,13 +122,13 @@ gpm_precursor_archaeologist = {
 			physics_research = 8
 			engineering_research = 8
 			society_research = 8
-			minor_artifacts = 0.5
+			minor_artifacts = 0.20
 		}
 		produces = {
 			trigger = {
 				planet = { is_planet_class = pc_gpm_precursor_tomb }
 			}
-			minor_artifacts = 0.5
+			minor_artifacts = 0.10
 		}
 		upkeep = {
 			consumer_goods = 6
@@ -185,13 +185,13 @@ gpm_precursor_archaeologist_drone = {
 			physics_research = 8
 			engineering_research = 8
 			society_research = 8
-			minor_artifacts = 0.5
+			minor_artifacts = 0.20
 		}
 		produces = {
 			trigger = {
 				planet = { is_planet_class = pc_gpm_precursor_tomb }
 			}
-			minor_artifacts = 0.5
+			minor_artifacts = 0.10
 		}
 		upkeep = {
 			energy = 8

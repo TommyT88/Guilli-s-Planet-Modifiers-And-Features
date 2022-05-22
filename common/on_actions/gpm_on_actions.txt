@@ -576,11 +576,12 @@ on_country_destroyed = {
 
 # This = subject
 # From = subject's overlord
-# on_becoming_subject = {
-	# events = {
+on_becoming_subject = {
+	events = {
 		# gpm_relics.1100				# Gain all relics from your new subject
-	# }
-# }
+		gpm_operation.100				# event to stop steal relic operations if either empire becomes a vassel or overlord
+	}
+}
 
 # fires when a country finishes being integrated
 # This = overlord

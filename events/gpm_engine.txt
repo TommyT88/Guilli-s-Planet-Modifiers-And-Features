@@ -781,9 +781,7 @@ planet_event = {
 		
 		## PRIMITIVE PLANETS 
 		if = {
-			limit = {
-				gpm_is_planet_primitive = yes
-			}
+			limit = { gpm_is_planet_primitive = yes	}
 			planet_event = { id = gpm_engine.130 days = 15 }
 		}
 		
@@ -1411,6 +1409,7 @@ planet_event = {
 	}
 }
 
+# spawn primitive relic worlds
 country_event = {
 	id = gpm_engine.999
 	hide_window = yes

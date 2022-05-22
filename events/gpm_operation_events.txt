@@ -6314,3 +6314,52 @@ country_event = {
 		}
 	}
 }
+
+
+# event to stop steal relic operations if either empire becomes a vassel or overlord
+# This = subject
+# From = subject's overlord
+country_event = {
+	id = gpm_operation.100
+	hide_window = yes 
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "RELIC SUBJUGATION - On Becomming Subject: Overlord = FROM = [from.GetName] --- Subject = THIS = [this.GetName]"
+		
+		# (country scope)
+		# This = subject
+		# From = subject's overlord
+		# Overlord 		
+		FROM = {
+			if = {
+				limit = { is_running_espionage_operation = yes }
+				random_espionage_operation = {
+					limit = {
+						has_espionage_type = operation_gpm_steal_relic
+						target = { is_same_value = root }
+					}
+					destroy_espionage_operation = THIS
+					log = "RELIC SUBJUGATION - Destroying Operation on Overlord. Scopes random_espionage_operation: FROM = [from.GetName] -- THIS = [this.GetName] -- ROOT = [root.GetName] -- PREV = [prev.GetName]"
+					PREV = { add_resource = { influence = 300 } }
+				}
+			}
+		}
+		
+		# Subject 
+		THIS = {
+			if = {
+				limit = { is_running_espionage_operation = yes }
+				random_espionage_operation = {
+					limit = {
+						has_espionage_type = operation_gpm_steal_relic
+						target = { is_same_value = root }
+					}
+					destroy_espionage_operation = THIS
+					log = "RELIC SUBJUGATION - Destroying Operation on Subject. Scopes random_espionage_operation: FROM = [from.GetName] -- THIS = [this.GetName] -- ROOT = [root.GetName] -- PREV = [prev.GetName]"
+					PREV = { add_resource = { influence = 300 } }
+				}
+			}
+		}
+	}
+}

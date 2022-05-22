@@ -19,12 +19,8 @@ gpm_edict_alloy_production  = {
 
 	resources = {
 		category = campaigns
-		cost = {
-			minor_artifacts = @arcanetechcost
-		}
 		upkeep = {
-			unity = @Edict2Cost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 2
 		}
 	}
 
@@ -52,12 +48,8 @@ gpm_edict_consumer_goods_production  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
-			minor_artifacts = @arcanetechcost
-		}
 		upkeep = {
-			unity = @Edict2Cost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 2
 		}
 	}
 
@@ -90,12 +82,8 @@ gpm_edict_exotic_production  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
-			minor_artifacts = @arcanetechcost
-		}
 		upkeep = {
-			unity = @Edict2Cost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 2
 		}
 	}
 

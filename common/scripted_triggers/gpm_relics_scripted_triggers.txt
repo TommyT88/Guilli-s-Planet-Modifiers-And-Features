@@ -1,0 +1,209 @@
+gpm_has_vanilla_precursor_relic = {
+	optimize_memory
+	OR = {
+		has_relic = r_dragon_trophy
+		has_relic = r_khans_throne
+		has_relic = r_worm_scales
+		has_relic = r_rubricator
+		has_relic = r_galaxy
+		has_relic = r_omnicodex
+		has_relic = r_surveyor
+		has_relic = r_galatron
+		has_relic = r_ancient_sword
+		has_relic = r_severed_head
+		has_relic = r_prethoryn_queen
+		has_relic = r_unbidden_warlock
+		has_relic = r_contingency_core
+		has_relic = r_zro_crystal
+		has_relic = r_the_last_baol
+		has_relic = r_the_defragmentor
+		has_relic = r_reality_perforator
+		has_relic = r_pox_sample
+		has_relic = r_cryo_core
+		has_relic = r_war_forge
+	}
+}
+
+gpm_has_modded_precursor_relic = {
+	optimize_memory
+	OR = {
+		has_relic = gpm_r_ai_architect
+		has_relic = gpm_r_banner_of_the_fallen
+		has_relic = gpm_r_cloaking_device
+		has_relic = gpm_r_codex_administratum
+		has_relic = gpm_r_datacube
+		has_relic = gpm_r_earthquake_engine
+		has_relic = gpm_r_encrypted_sct
+		has_relic = gpm_r_encyclopedia_galactica
+		has_relic = gpm_r_enigmatic_advisor
+		has_relic = gpm_r_experimental_weapon
+		has_relic = gpm_r_fallout_emergency_replicator
+		has_relic = gpm_r_gravity_engine
+		has_relic = gpm_r_manufactorium_ship
+		has_relic = gpm_r_mysterious_shield_generator
+		has_relic = gpm_r_positronic_microchip
+		has_relic = gpm_r_power_core
+		has_relic = gpm_r_q_storage_compressor
+		has_relic = gpm_r_quantum_sphere
+		has_relic = gpm_r_self_assembly_hub
+		has_relic = gpm_r_self_repairing_obelisk
+		has_relic = gpm_r_sentinel_queen
+		has_relic = gpm_r_soul_gem
+		has_relic = gpm_r_venerable_dreadnaught
+		has_relic = gpm_r_zero_energy_generator
+	}
+}
+
+gpm_has_modded_non_precursor_relic = {
+	optimize_memory
+	OR = {
+		has_relic = gpm_r_time_displacer
+		has_relic = gpm_r_alien_eggs
+		has_relic = gpm_r_machine_world_core
+		# has_relic = gpm_r_mars_rover   Exclude, this stays with humans
+	}
+}
+
+gpm_has_other_mod_relic = {
+	optimize_memory
+	OR = {
+		# Ancient Empire
+		has_relic = ag_gamma_crisis_relic
+		has_relic = ag_zeta_crisis_relic
+		has_relic = ag_key_relic
+		# Archaeology Story Pack
+		has_relic = r_ASP_music_of_the_universe
+		has_relic = r_aspmod_geocentric_device
+		has_relic = r_aspmod_communist_manifesto
+		has_relic = r_aspmod_vermifugum
+		has_relic = r_aspmod_protagonist_of_the_show
+		has_relic = r_aspmod_deadspace_marker
+		has_relic = r_aspmod_synthetic_god_mummy
+		has_relic = r_aspmod_the_replicator
+		has_relic = r_aspmod_the_last_tribute
+		has_relic = r_aspmod_parasite_machine
+		has_relic = r_aspmod_parasite_machine_2
+		# AshArms Aquarius History
+		has_relic = r_adf_literature
+		has_relic = r_adf_Stonetablets
+		has_relic = r_adf_TARDIS
+		has_relic = r_ancientsatellite
+		has_relic = r_Zero_Point_Module
+		has_relic = r_lse_holygrail
+		# Azur Lane Stellaris DLC
+		has_relic = colorful_rubik's_cube
+		# Empire of Eveelution
+		has_relic = r_EOE_warp_gate
+		has_relic = r_EOE_eevium_z
+		# Empires Expanded
+		has_relic = r_shivkonian_implant
+		has_relic = r_dna_engine_prototype
+		has_relic = r_tma_core
+		# Expanded Events
+		has_relic = r_memorex
+		has_relic = r_three_londor
+		# Gigastructural Engineering & More
+		has_relic = r_soul_of_grandbunny
+		has_relic = r_creator_shard
+		has_relic = r_ehof_dragon_trophy
+		has_relic = r_ehof_khans_throne
+		has_relic = r_ehof_worm_scales
+		has_relic = r_ehof_rubricator
+		has_relic = r_ehof_galaxy
+		has_relic = r_ehof_omnicodex
+		has_relic = r_ehof_surveyor
+		has_relic = r_ehof_galatron
+		has_relic = r_ehof_ancient_sword
+		has_relic = r_ehof_severed_head
+		has_relic = r_ehof_prethoryn_queen
+		has_relic = r_ehof_unbidden_warlock
+		has_relic = r_ehof_contingency_core
+		has_relic = r_ehof_zro_crystal
+		has_relic = r_ehof_the_last_baol
+		has_relic = r_ehof_the_defragmentor
+		has_relic = r_ehof_reality_perforator
+		has_relic = r_ehof_pox_sample
+		has_relic = r_ehof_cryo_core
+		has_relic = r_ehof_war_forge
+		# Girls Frontline
+		has_relic = relic_gf_ruin_civil_1
+		# Infinite Stellaris
+		has_relic = z_fw_r_head_of_karyl
+		# Kancolle
+		has_relic = r_kancolle_poinner_relic
+		# L-Cluster Plus
+		has_relic = r_nanite_artifact
+		# Machine & Robot Expansion
+		has_relic = xvcv_mdlc_r_unknown_core
+		# More Events Mod
+		has_relic = r_mem_dread_pirate_mask
+		has_relic = r_mem_severance_core
+		has_relic = r_mem_dwarf_fortress_boot
+		has_relic = r_mem_surveyor_personality_core
+		has_relic = r_mem_surveyor_mobile_production_matrix
+		has_relic = r_mem_wpdr_production_matrix
+		has_relic = r_mem_doom_capacitor
+		# Planetary Diversity
+		has_relic = r_pdarchive
+		# Precursors Story Pack
+		has_relic = r_pspmod_sless_gene_template
+		has_relic = r_pspmod_diary_of_innovo
+		has_relic = r_pspmod_astanine_last_projector
+		# Real Space - New Frontiers
+		has_relic = r_mysterious_monolith
+		# Reworked Advanced Ascension
+		has_relic = r_defender
+		has_relic = AAR_R_webway
+		has_relic = AAR_R_jumper
+		# Shadowgate
+		has_relic = r_shadowgate_shadowforge
+		has_relic = r_shadowgate_st
+		has_relic = r_shadowgate_crwt
+		has_relic = r_shadowgate_crwt_active
+		has_relic = r_shadowgate_cpc
+		has_relic = r_shadowgate_ae
+		has_relic = r_shadowgate_es
+		has_relic = r_shadowgate_pv
+		has_relic = r_shadowgate_br
+		has_relic = r_shadowgate_sous
+		# Solar Storm
+		has_relic = r_heart_of_creation
+		# Some Events of Outside Cluster
+		has_relic = r_nep_alchemist_box
+		has_relic = r_nep_ugo_relic
+		has_relic = r_nep_orb_x1
+		has_relic = r_nep_orb_x2
+		has_relic = r_nep_orb_x3
+		has_relic = r_nep_orb_x3_useful
+		# Star Wars: UnknownWorld Shipgirls Story
+		has_relic = r_sithlightsaber
+		has_relic = r_jedibook
+		has_relic = r_eddydata
+		has_relic = r_afk_device
+		has_relic = r_501sthelmet
+		# The Empty Vagrant
+		has_relic = r_ev_fleet_maintenance
+		has_relic = r_ev_fleet_influence_mult
+		has_relic = r_ev_dragon_trophy
+		# Tidy Tradition
+		has_relic = r_the_road_to_rejuvenation
+		# Twinks Atlantean
+		has_relic = r_atlantean_crown
+		has_relic = r_atlantean_apple
+		# Twinks Kaldorei
+		has_relic = r_highborne_astrolab_tw
+		has_relic = r_sharasdal_tw
+		# Warship Girls R And MIST Species
+		has_relic = r_xh_boss
+		has_relic = r_ck2
+		has_relic = r_eila_throne
+		has_relic = r_united_fleet
+		has_relic = r_uf
+		has_relic = r_wg_god
+		has_relic = r_wg_fm
+		has_relic = r_eddy
+		has_relic = r_early_rush
+		has_relic = r_wg_psionic_gem
+		has_relic = r_sh_book
+	}
+}

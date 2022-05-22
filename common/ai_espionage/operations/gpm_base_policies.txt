@@ -1,6 +1,13 @@
 gpm_spy_policy_gather_relic_information = {
 	weight = {
 		base = 200
+		### DEBUGGING ###
+		modifier = {
+			has_global_flag = gpm_debug_relic_ops
+			factor = 100
+		}
+		### END DEBUGGING ###
+		# we like to get to know out neighbours
 		modifier = {
 			owner = { is_neighbor_of = root.target }
 			factor = 10
@@ -56,12 +63,19 @@ gpm_spy_policy_gather_relic_information = {
 gpm_spy_policy_steal_relic = {
 	weight = {
 		base = 400
+		### DEBUGGING ###
+		modifier = {
+			has_global_flag = gpm_debug_relic_ops
+			factor = 100
+		}
+		### END DEBUGGING ###
 		# Dont let AI use this on their subjects or their overlord
 		modifier = {
-			OR = {
-				owner = { is_overlord_to = root.target	}
-				root.target = { is_overlord_to = owner	}
-			}
+			owner = { is_overlord_to = root.target	}
+			factor = 0
+		}
+		modifier = {
+			root.target = { is_overlord_to = owner	}
 			factor = 0
 		}
 		# Weigts bases on oppinion levels. We dont steal from friends.
@@ -111,7 +125,7 @@ gpm_spy_policy_steal_relic = {
 					value = overwhelming
 				}
 			}
-			factor = 0.25
+			factor = 0.1
 		}
 		modifier = {
 			owner = {
@@ -198,7 +212,7 @@ gpm_spy_policy_steal_relic = {
 		}
 		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			root.target = { is_ai = no }
 		}
 		# added weights based on difficulty level
@@ -238,6 +252,27 @@ gpm_spy_policy_steal_relic = {
 			AND = {
 				root.target = { is_ai = no }
 				has_global_flag = gpm_relic_heists_AI_disabled
+			}
+		}
+		# diplomatic modfiers
+		modifier = {
+			factor = 0
+				owner = { 
+					OR = {
+						has_non_aggression_pact = root.target
+						has_defensive_pact = root.target
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+				owner = { is_improving_relations_with = root.target }
+			}
+		}
+		modifier = {
+			factor = 0
+				root.target = { is_loyal_to = owner }
 			}
 		}
 	}

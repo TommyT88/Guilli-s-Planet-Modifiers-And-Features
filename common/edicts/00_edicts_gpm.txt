@@ -15,12 +15,8 @@ gpm_edict_tech_alternatives  = {
 
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-		}
 		upkeep = {
-			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 1
 		}
 	}
 
@@ -43,12 +39,8 @@ gpm_edict_planet_sensor_range  = {
 	
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-		}
 		upkeep = {
-			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 1
 		}
 	}
 

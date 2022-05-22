@@ -207,20 +207,8 @@ district_gpm_precursor_science = {
 	}
 
 	resources = {
-		category = planet_districts
+		category = planet_districts	
 		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			minerals = 500
-			minor_artifacts = 50
-		}		
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = yes }
-			}
 			minerals = 500
 		}
 		upkeep = {
@@ -375,7 +363,7 @@ district_gpm_precursor_manufactorium = {
 				owner = { is_ai = no }
 			}
 			minerals = 500
-			minor_artifacts = 50
+			minor_artifacts = 100
 		}		
 		cost = {
 			trigger = {
@@ -575,7 +563,7 @@ district_gpm_precursor_power_plant = {
 				owner = { is_ai = no }
 			}
 			minerals = 500
-			minor_artifacts = 50
+			minor_artifacts = 100
 		}
 		cost = {
 			trigger = {

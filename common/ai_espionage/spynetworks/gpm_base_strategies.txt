@@ -1,5 +1,11 @@
 gpm_added_to_default_empire = {
 	strategy_weight = {
+		### DEBUGGING ###
+		modifier = {
+			has_global_flag = gpm_debug_relic_ops
+			weight = 100
+		}
+		### END DEBUGGING ###
 		modifier = {
 			OR = {
 				is_country_type = default
@@ -66,6 +72,12 @@ gpm_added_to_default_empire = {
 	}
 
 	network_weight = {
+		### DEBUGGING ###
+		modifier = {
+			has_global_flag = gpm_debug_relic_ops
+			weight = 10000
+		}
+		### END DEBUGGING ###
 		modifier = {
 			target = {
 				OR = {
