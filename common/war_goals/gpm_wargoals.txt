@@ -82,7 +82,38 @@ wg_gpm_r_dragon_trophy = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
-	}	
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_dragon_trophy_relic@from
+			}
+			remove_country_flag = gpm_has_r_dragon_trophy_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
+	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
 		from = {
@@ -246,6 +277,37 @@ wg_gpm_r_khans_throne = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_khans_throne_relic@from
+			}
+			remove_country_flag = gpm_has_r_khans_throne_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -410,6 +472,37 @@ wg_gpm_r_worm_scales = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_worm_scales_relic@from
+			}
+			remove_country_flag = gpm_has_r_worm_scales_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -574,6 +667,37 @@ wg_gpm_r_rubricator = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_rubricator_scales_relic@from
+			}
+			remove_country_flag = gpm_has_r_rubricator_scales_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -738,6 +862,37 @@ wg_gpm_r_galaxy = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_galaxy_relic@from
+			}
+			remove_country_flag = gpm_has_r_galaxy_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -902,6 +1057,37 @@ wg_gpm_r_omnicodex = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_omnicodex_relic@from
+			}
+			remove_country_flag = gpm_has_r_omnicodex_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -1066,6 +1252,37 @@ wg_gpm_r_surveyor = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_surveyor_relic@from
+			}
+			remove_country_flag = gpm_has_r_surveyor_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 
 	on_status_quo = {
@@ -1231,6 +1448,37 @@ wg_gpm_r_ancient_sword = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_ancient_sword_relic@from
+			}
+			remove_country_flag = gpm_has_r_ancient_sword_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -1395,6 +1643,37 @@ wg_gpm_r_severed_head = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_severed_head_relic@from
+			}
+			remove_country_flag = gpm_has_r_severed_head_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -1559,6 +1838,37 @@ wg_gpm_r_prethoryn_queen = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_prethoryn_queen_relic@from
+			}
+			remove_country_flag = gpm_has_r_prethoryn_queen_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -1723,6 +2033,37 @@ wg_gpm_r_unbidden_warlock = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_unbidden_warlock_relic@from
+			}
+			remove_country_flag = gpm_has_r_unbidden_warlock_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -1887,6 +2228,37 @@ wg_gpm_r_contingency_core = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_contingency_core_relic@from
+			}
+			remove_country_flag = gpm_has_r_contingency_core_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -2051,6 +2423,37 @@ wg_gpm_r_zro_crystal = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_zro_crystal_relic@from
+			}
+			remove_country_flag = gpm_has_r_zro_crystal_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -2215,6 +2618,37 @@ wg_gpm_r_the_last_baol = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_the_last_baol_relic@from
+			}
+			remove_country_flag = gpm_has_r_the_last_baol_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -2379,6 +2813,37 @@ wg_gpm_r_the_defragmentor = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_the_defragmentor_relic@from
+			}
+			remove_country_flag = gpm_has_r_the_defragmentor_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 
 	on_status_quo = {
@@ -2544,6 +3009,37 @@ wg_gpm_r_reality_perforator = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_reality_perforator_relic@from
+			}
+			remove_country_flag = gpm_has_r_reality_perforator_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -2708,6 +3204,37 @@ wg_gpm_r_pox_sample = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_pox_sample_relic@from
+			}
+			remove_country_flag = gpm_has_r_pox_sample_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -2872,6 +3399,37 @@ wg_gpm_r_cryo_core = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_cryo_core_relic@from
+			}
+			remove_country_flag = gpm_has_r_cryo_core_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -3036,6 +3594,37 @@ wg_gpm_r_war_forge = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_war_forge_relic@from
+			}
+			remove_country_flag = gpm_has_r_war_forge_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -3204,6 +3793,37 @@ wg_gpm_r_time_displacer = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_time_displacer_relic@from
+			}
+			remove_country_flag = gpm_has_r_time_displacer_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 
 	}
 	on_status_quo = {
@@ -3368,6 +3988,37 @@ wg_gpm_r_alien_eggs = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_alien_eggs_relic@from
+			}
+			remove_country_flag = gpm_has_r_alien_eggs_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -3531,6 +4182,37 @@ wg_gpm_r_machine_world_core = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_machine_world_core_relic@from
+			}
+			remove_country_flag = gpm_has_r_machine_world_core_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -3695,6 +4377,37 @@ wg_gpm_r_encyclopedia_galactica = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_encyclopedia_galactica_relic@from
+			}
+			remove_country_flag = gpm_has_r_encyclopedia_galactica_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -3858,6 +4571,37 @@ wg_gpm_r_zero_energy_generator = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_zero_energy_generator_relic@from
+			}
+			remove_country_flag = gpm_has_r_zero_energy_generator_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4021,6 +4765,37 @@ wg_gpm_r_quantum_sphere = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_quantum_sphere_relic@from
+			}
+			remove_country_flag = gpm_has_r_quantum_sphere_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4184,6 +4959,37 @@ wg_gpm_r_ai_architect = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_ai_architect_relic@from
+			}
+			remove_country_flag = gpm_has_r_ai_architect_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4347,6 +5153,37 @@ wg_gpm_r_encrypted_sct = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_encrypted_sct_relic@from
+			}
+			remove_country_flag = gpm_has_r_encrypted_sct_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4510,6 +5347,37 @@ wg_gpm_r_experimental_weapon = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_experimental_weapon_relic@from
+			}
+			remove_country_flag = gpm_has_r_experimental_weapon_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4673,6 +5541,37 @@ wg_gpm_r_fallout_emergency_replicator = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_fallout_emergency_replicator_relic@from
+			}
+			remove_country_flag = gpm_has_r_fallout_emergency_replicator_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4836,6 +5735,37 @@ wg_gpm_r_power_core = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_power_core_relic@from
+			}
+			remove_country_flag = gpm_has_r_power_core_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -4999,6 +5929,37 @@ wg_gpm_r_mysterious_shield_generator = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_mysterious_shield_generator_relic@from
+			}
+			remove_country_flag = gpm_has_r_mysterious_shield_generator_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -5162,6 +6123,37 @@ wg_gpm_r_gravity_engine = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_gravity_engine_relic@from
+			}
+			remove_country_flag = gpm_has_r_gravity_engine_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -5325,6 +6317,37 @@ wg_gpm_r_codex_administratum = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_codex_administratum_relic@from
+			}
+			remove_country_flag = gpm_has_r_codex_administratum_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -5488,6 +6511,37 @@ wg_gpm_r_enigmatic_advisor = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_enigmatic_advisor_relic@from
+			}
+			remove_country_flag = gpm_has_r_enigmatic_advisor_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -5651,6 +6705,37 @@ wg_gpm_r_positronic_microchip = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_positronic_microchip_relic@from
+			}
+			remove_country_flag = gpm_has_r_positronic_microchip_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -5814,6 +6899,37 @@ wg_gpm_r_venerable_dreadnaught = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_venerable_dreadnaught_relic@from
+			}
+			remove_country_flag = gpm_has_r_venerable_dreadnaught_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -5977,6 +7093,37 @@ wg_gpm_r_sentinel_queen = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_sentinel_queen_relic@from
+			}
+			remove_country_flag = gpm_has_r_sentinel_queen_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -6140,6 +7287,37 @@ wg_gpm_r_earthquake_engine = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_earthquake_engine_relic@from
+			}
+			remove_country_flag = gpm_has_r_earthquake_engine_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -6303,6 +7481,37 @@ wg_gpm_r_manufactorium_ship = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_manufactorium_ship_relic@from
+			}
+			remove_country_flag = gpm_has_r_manufactorium_ship_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -6466,6 +7675,37 @@ wg_gpm_r_datacube = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_datacube_relic@from
+			}
+			remove_country_flag = gpm_has_r_datacube_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -6629,6 +7869,37 @@ wg_gpm_r_self_assembly_hub = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_self_assembly_hub_relic@from
+			}
+			remove_country_flag = gpm_has_r_self_assembly_hub_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -6793,6 +8064,37 @@ wg_gpm_r_banner_of_the_fallen = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_banner_of_the_fallen_relic@from
+			}
+			remove_country_flag = gpm_has_r_banner_of_the_fallen_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -6957,6 +8259,37 @@ wg_gpm_r_cloaking_device = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_cloaking_device_relic@from
+			}
+			remove_country_flag = gpm_has_r_cloaking_device_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -7120,6 +8453,37 @@ wg_gpm_r_q_storage_compressor = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_q_storage_compressor_relic@from
+			}
+			remove_country_flag = gpm_has_r_q_storage_compressor_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -7283,6 +8647,37 @@ wg_gpm_r_soul_gem = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_soul_gem_relic@from
+			}
+			remove_country_flag = gpm_has_r_soul_gem_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
@@ -7446,6 +8841,37 @@ wg_gpm_r_self_repairing_obelisk = {
 		# Defender is humiliated
 		from = { add_modifier = { modifier = humiliated days = 3600 } }
 		log = ";RELIC WAR; [from.GetName] humiliated "
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				is_country_type = default
+				has_communications = root
+			}
+			create_message = {
+				type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
+				localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+			}
+			log = ";RELIC WAR; create notification on all root [root.GetName] relations"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { is_same_value = from }
+				has_country_flag = gpm_has_r_self_repairing_obelisk_relic@from
+			}
+			remove_country_flag = gpm_has_r_self_repairing_obelisk_relic@from
+		}
+		log = ";RELIC WAR; removing all @from [from.GetName] flags from countries"
 	}
 	on_status_quo = {
 		log = ";RELIC WAR; defender [from.GetName] status quo'd with attacker [root.GetName]"
