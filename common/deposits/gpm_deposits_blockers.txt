@@ -129,6 +129,8 @@ gpm_tb_xenomorph_blocker = {
 	drop_weight = {
 		weight = 0
 	}
+
+	prerequisites = { "tech_dangerous_wildlife" }
 }
 # ringworld blockers
 gpm_tb_ringworld_blocker = {	
@@ -571,6 +573,8 @@ gpm_tb_xenomorph_blocker_empty = {
 	drop_weight = {
 		weight = 0
 	}
+
+	prerequisites = { "tech_dangerous_wildlife" }
 }
 gpm_tb_automated_turrets_empty = {
     time = 270

@@ -1460,6 +1460,7 @@ gpm_random_reward_precursor_singularity_drive = {
 			}
 			hidden_effect = {
 				set_global_flag = gpm_enigmatic_hack_happened
+				set_country_flag = gpm_enigmatic_hack_happened_country
 				every_owned_pop = {
 					limit = {
 						is_robot_pop = yes

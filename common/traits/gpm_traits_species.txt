@@ -5,13 +5,18 @@ trait_gpm_enigmatic_update = {
 	randomized = no
 	
 	species_potential_add = {
+		# has_country_flag = gpm_enigmatic_hack_happened_country
 		always = no
 	}
 	species_possible_remove = {
+		# has_country_flag = gpm_enigmatic_hack_happened_country
 		always = no
 	}
 	species_possible_merge_add = {
-		always = no
+		exists = from
+		from = { 
+			has_country_flag = gpm_enigmatic_hack_happened_country
+		}
 	}
 
 	allowed_archetypes = { ROBOT MACHINE }

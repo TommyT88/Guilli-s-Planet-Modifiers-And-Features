@@ -1,0 +1,125 @@
+# trade_action_!!0000000000000000000000000 = {
+	# fire_and_forget = yes
+
+	# potential = {
+		# has_relic = gpm_r_!!0000000000000000000000000
+		# is_country_type = default
+		
+		# from = {
+			# is_country_type = default
+			# not = { has_relic = gpm_r_!!0000000000000000000000000 }
+			
+			# # either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
+			# OR = {
+				# from = { is_in_federation_with = root }
+				# from = { is_overlord_to = root }
+				# root = { is_overlord_to = from }
+				# has_intel_level = {
+					# who = root
+					# category = technology
+					# level >= 2
+				# }
+			# }
+		# }
+	# }
+
+	# on_traded_effect = {
+		# # actions on the selling country
+		# remove_relic = gpm_r_!!0000000000000000000000000
+		
+		# # actions on the buying country
+		# from = {
+			# add_relic = gpm_r_!!0000000000000000000000000
+			# every_relation = {
+				# limit = {
+					# is_country_type = default
+					# has_communications = prev
+				# }
+				# create_message = {
+					# log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+					# type = GPM_MESSAGE_RELIC_TRADE
+					# localization = GPM_MESSAGE_RELIC_TRADE_DESC
+					# days = 30
+					# target = prev.capital_scope
+					# variable = {
+						# type = name
+						# localization = COUNTRY
+						# scope = prev
+					# }
+					# variable = {
+					# 	type = name
+					# 	localization = COUNTRY_TARGET
+					# 	scope = root.from
+					# }
+				# }
+			# }
+		# }
+		
+	# }
+
+	# ai_weight = {
+		# weight = 1000
+		# # Opinion modifiers
+		# modifier = {
+			# opinion_level = {
+				# who = from
+				# level = excellent
+			# }
+			# factor = 0.25
+		# }		
+		# modifier = {
+			# opinion_level = {
+				# who = from
+				# level = good
+			# }
+			# factor = 0.5
+		# }
+		# modifier = {
+			# opinion_level = {
+				# who = from
+				# level = neutral
+			# }
+			# factor = 1
+		# }
+		# modifier = {
+			# opinion_level = {
+				# who = from
+				# level = poor
+			# }
+			# factor = 1.5
+		# }
+		# modifier = {
+			# opinion_level = {
+				# who = from
+				# level = terrible
+			# }
+			# factor = 2
+		# }
+		# # Overlords dont trade away their relic with subjects, and subjects feel compelled to not disobey their overlord
+		# modifier = {
+			# root = { is_overlord_to = from }
+			# factor = 2
+		# }
+		# modifier = {
+			# FROM = { is_overlord_to = root }
+			# factor = 0.2
+		# }
+		# # Scary fleet power helps
+		# modifier = {
+			# relative_power = {
+				# who = from
+				# category = fleet
+				# value = overwhelming
+			# }
+			# factor = 0.7
+		# }
+		# modifier = {
+			# relative_power = {
+				# who = from
+				# category = fleet
+				# value = superior
+			# }
+			# factor = 0.85
+		# }
+	# }
+# }

@@ -98,15 +98,17 @@ fleet_event = {
 			}
 		}
 		owner = { add_relic = gpm_r_time_displacer }
+		log = "<< RELICS >> | ADD_RELIC <<< gpm_r_time_displacer >>> to OWNER = [owner.GetName] ; dig site reward"
 		owner = {
 			every_relation = { 
 				limit = {
 					is_country_type = default
 					has_communications = root.owner
 				}
+				log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 				create_message = {
-					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-					localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+					type = GPM_MESSAGE_RELIC_POSSESSION
+					localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 					days = 30
 					target = root.owner.capital_scope
 					variable = {
@@ -495,15 +497,17 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_encyclopedia_galactica }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encyclopedia_galactica >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -527,15 +531,17 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_quantum_sphere }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_quantum_sphere >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -559,15 +565,17 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_ai_architect }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_ai_architect >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -591,15 +599,17 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_soul_gem }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_soul_gem >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -623,15 +633,17 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_self_repairing_obelisk }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_repairing_obelisk >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -846,15 +858,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_zero_energy_generator }
+				log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -881,15 +895,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_mysterious_shield_generator }
+				log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1033,15 +1049,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_encrypted_sct }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encrypted_sct >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1186,15 +1204,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_experimental_weapon }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_experimental_weapon >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1319,15 +1339,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_fallout_emergency_replicator }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_fallout_emergency_replicator >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1357,15 +1379,17 @@ fleet_event = {
 					add_relic = gpm_r_banner_of_the_fallen
 					hidden_effect = { country_event = { id = gpm_relics.20 } } # adds trait to admirals
 				}
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_banner_of_the_fallen >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1556,15 +1580,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_power_core }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_power_core >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1708,15 +1734,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_gravity_engine }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_gravity_engine >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1832,15 +1860,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_codex_administratum }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_codex_administratum >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -1988,15 +2018,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_enigmatic_advisor }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_enigmatic_advisor >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -2112,15 +2144,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_positronic_microchip }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_positronic_microchip >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -2293,15 +2327,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_venerable_dreadnaught }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_venerable_dreadnaught >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -2417,15 +2453,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_sentinel_queen }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_sentinel_queen >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -2552,15 +2590,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_earthquake_engine }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_earthquake_engine >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -2676,15 +2716,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_manufactorium_ship }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_manufactorium_ship >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -2887,15 +2929,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_datacube }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_datacube >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -3049,15 +3093,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_self_assembly_hub }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_assembly_hub >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -3176,15 +3222,17 @@ fleet_event = {
 					add_relic = gpm_r_cloaking_device
 					hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
 				}
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_cloaking_device >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -3300,15 +3348,17 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_q_storage_compressor }
+				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_q_storage_compressor >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {

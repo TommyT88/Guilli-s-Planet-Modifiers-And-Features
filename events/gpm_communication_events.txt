@@ -39,6 +39,9 @@ country_event = {
 }
 
 # message event to let empires know the other party has a relic - Empire 1
+# Executed right after country has established communications with another country
+# This/root = Country which established the communications
+# From = Country which communications were established with
 country_event = {
 	id = gpm_com.2
 	hide_window = yes
@@ -81,13 +84,16 @@ country_event = {
 						gpm_has_vanilla_precursor_relic = yes
 						gpm_has_modded_precursor_relic = yes
 						gpm_has_modded_non_precursor_relic = yes
+						gpm_has_other_mod_relic = yes
 					}
+					num_owned_relics = 1
 				}
 			}
 			root = {
+				log = "<< RELICS >> | RELIC COMMUNICATION <<< create message on ROOT = [ROOT.GetName]"
 				create_message = {
-					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-					localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+					type = GPM_MESSAGE_RELIC_POSSESSION
+					localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 					days = 30
 					target = FROM.capital_scope
 					variable = {
@@ -96,7 +102,62 @@ country_event = {
 						scope = FROM
 					}
 				}
-				# log = "create message on communication established [from.GetName] has relic, letting [root.GetName] know"
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						gpm_has_vanilla_precursor_relic = yes
+						gpm_has_modded_precursor_relic = yes
+						gpm_has_modded_non_precursor_relic = yes
+						gpm_has_other_mod_relic = yes
+					}
+					num_owned_relics > 1
+				}
+			}
+			root = {
+				log = "<< RELICS >> | RELIC COMMUNICATION <<< create message on ROOT = [ROOT.GetName]"
+				create_message = {
+					type = GPM_MESSAGE_RELIC_POSSESSION_MULTI
+					localization = GPM_MESSAGE_RELIC_POSSESSION_MULTI_DESC
+					days = 30
+					target = FROM.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = FROM
+					}
+				}
+			}
+		}
+
+
+		if = {
+			limit = {
+				root = {
+					OR = {
+						gpm_has_vanilla_precursor_relic = yes
+						gpm_has_modded_precursor_relic = yes
+						gpm_has_modded_non_precursor_relic = yes
+						gpm_has_other_mod_relic = yes
+					}
+					num_owned_relics = 1
+				}
+			}
+			FROM = {
+				log = "<< RELICS >> | RELIC COMMUNICATION <<< create message on ROOT = [ROOT.GetName]"
+				create_message = {
+					type = GPM_MESSAGE_RELIC_POSSESSION
+					localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
+					days = 30
+					target = root.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = root
+					}
+				}
 			}
 		}
 		if = {
@@ -106,13 +167,16 @@ country_event = {
 						gpm_has_vanilla_precursor_relic = yes
 						gpm_has_modded_precursor_relic = yes
 						gpm_has_modded_non_precursor_relic = yes
+						gpm_has_other_mod_relic = yes
 					}
+					num_owned_relics > 1
 				}
 			}
 			FROM = {
+				log = "<< RELICS >> | RELIC COMMUNICATION <<< create message on ROOT = [ROOT.GetName]"
 				create_message = {
-					type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-					localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+					type = GPM_MESSAGE_RELIC_POSSESSION_MULTI
+					localization = GPM_MESSAGE_RELIC_POSSESSION_MULTI_DESC
 					days = 30
 					target = root.capital_scope
 					variable = {
@@ -121,7 +185,6 @@ country_event = {
 						scope = root
 					}
 				}
-				# log = "create message on communication established [root.GetName] has relic, letting [from.GetName] know"
 			}
 		}
 	}

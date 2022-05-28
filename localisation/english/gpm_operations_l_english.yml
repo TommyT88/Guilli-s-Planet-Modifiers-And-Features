@@ -16,6 +16,11 @@
  operation_gpm_steal_relic:1 "Steal Relic"
  operation_gpm_steal_relic_desc:1 "Attempt a daring heist in orde to steal a mysterious and powerful Relic from this empire."
  operation_gpm_steal_relic_on_success:1 "§EIf Successful:§!\nSteal the mysterious and powerful relic from this empire. This may have unintended consequences.."
+ gpm_target_has_no_relics_operation:1 "$TRIGGER_FAIL$ §RThis empire has no relics to steal§!"
+ gpm_target_not_enough_intel:1 "$TRIGGER_FAIL$ §RWe neem more intel on this empire§!"
+ gpm_operation_not_neighbours:1 "§R$TRIGGER_FAIL$ This empire is not bordering our empire. It's too dangerous to try.§!"
+ gpm_operation_is_subject:1 "§R$TRIGGER_FAIL$ This empire is our subject, it would be rude to steal from them.§!"
+ gpm_operation_is_overlord:1 "§R$TRIGGER_FAIL$ This empire is our overlord, it would be too dangerous.§!"
  
  #######################################
  #### Steal Relic Events
@@ -42,6 +47,7 @@
  gpm_operation.4.a:1 "Executed to perfection!"
 
  gpm_operation_getaway_gpm_r_time_displacerTT:1 "\n   §RRelic Stolen:§! §Y$gpm_r_time_displacer$§!\n\n"
+ gpm_operation_getaway_gpm_r_mars_roverTT:1 "\n   §RRelic Stolen:§! §Y$gpm_r_mars_rover$§!\n\n"
  gpm_operation_getaway_r_dragon_trophyTT:1 "\n   §RRelic Stolen:§! §Y$r_dragon_trophy$§!\n\n"
  gpm_operation_getaway_r_khans_throneTT:1 "\n   §RRelic Stolen:§! §Y$r_khans_throne$§!\n\n"
  gpm_operation_getaway_r_worm_scalesTT:1 "\n   §RRelic Stolen:§! §Y$r_worm_scales$§!\n\n"
@@ -129,16 +135,7 @@
  #######################################
  #### Steal Minor Artifacts Events
  #######################################
- 
- 
- 
- #######################################
- #### Gather Relic Information
- #######################################
- 
- operation_gpm_gather_information_relic:1 "Gather Relic Intel"
- operation_gpm_gather_information_relic_desc:1 "Investigate the report that this empire has found a mysterious relic."
- operation_gpm_gather_information_relic_on_success:1 "§EIf Successful:§!\nDiscover what Ancient Relic that the empire has found and gain a claim relic casus belli for it."
+
  
  #######################################
  #### Gather Relic Information Events

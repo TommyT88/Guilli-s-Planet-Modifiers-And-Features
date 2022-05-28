@@ -1,0 +1,33 @@
+	log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+	
+	log = "<< RELICS >> | RELIC STOLEN <<< ROOT = [root.GetName] stolen relic from FROM = [from.GetName] >>>"
+	
+	log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed relic from FROM = [from.GetName] >>>"
+	log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< 000000 >>> from FROM = [from.GetName] >>>"
+	log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+	
+	log = "<< RELICS >> | RELIC CONQUEST <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+	
+	
+	log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName]"
+	log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to FROM = [from.GetName]"
+	log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to ROOT = [root.GetName]"
+	
+	
+	log = "<< RELICS >> | REMOVE_RELIC <<< 000000 >>> from OWNER = [owner.GetName]"
+	log = "<< RELICS >> | REMOVE_RELIC <<< 000000 >>> from FROM = [from.GetName]"
+	log = "<< RELICS >> | REMOVE_RELIC <<< 000000 >>> from ROOT = [root.GetName]"
+	
+	
+	log = "<< RELICS >> | STEAL_RELIC <<< 000000 >>> from OWNER = [owner.GetName] giving it to "
+	log = "<< RELICS >> | STEAL_RELIC <<< 000000 >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+	log = "<< RELICS >> | STEAL_RELIC <<< 000000 >>> from FROM = [from.GetName] giving it to ROOT = [root.GetName]"
+	log = "<< RELICS >> | STEAL_RELIC <<< 000000 >>> from ROOT = [root.GetName] giving it to "
+	
+	
+	log = "<< RELICS >> | STEAL_RELIC operation_gpm_steal_relic launched by THIS.OWNER = [this.owner.GetName] on TARGET = [target.GetName]"
+	
+	
+	
+	00
+	log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"

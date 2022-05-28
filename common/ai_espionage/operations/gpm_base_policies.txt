@@ -1,73 +1,7 @@
-gpm_spy_policy_gather_relic_information = {
-	weight = {
-		base = 200
-		### DEBUGGING ###
-		modifier = {
-			has_global_flag = gpm_debug_relic_ops
-			factor = 100
-		}
-		### END DEBUGGING ###
-		# we like to get to know out neighbours
-		modifier = {
-			owner = { is_neighbor_of = root.target }
-			factor = 10
-		}
-		# Weigts bases on oppinion levels. We dont steal from friends.
-		modifier = {
-			owner = {
-				opinion_level = {
-					who = root.target
-					level = excellent
-				}
-			}
-			factor = 0.25
-		}
-		
-		modifier = {
-			owner = {
-				opinion_level = {
-					who = root.target
-					level = good
-				}
-			}
-			factor = 0.5
-		}
-		modifier = {
-			owner = {
-				opinion_level = {
-					who = root.target
-					level = poor
-				}
-			}
-			factor = 1.5
-		}
-		modifier = {
-			owner = {
-				opinion_level = {
-					who = root.target
-					level = terrible
-				}
-			}
-			factor = 2
-		}
-		# Added weight if rival because fuck you empire X
-		modifier = {
-			owner = {
-				has_rival = root.target
-			}
-			factor = 2
-		}
-	}
-}
-
 gpm_spy_policy_steal_relic = {
 	weight = {
 		base = 400
 		### DEBUGGING ###
-		modifier = {
-			has_global_flag = gpm_debug_relic_ops
-			factor = 100
-		}
 		### END DEBUGGING ###
 		# Dont let AI use this on their subjects or their overlord
 		modifier = {
@@ -212,7 +146,7 @@ gpm_spy_policy_steal_relic = {
 		}
 		# we help the player a little, it's more fun to see AI's screw eachother over than to be screwed over
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			root.target = { is_ai = no }
 		}
 		# added weights based on difficulty level

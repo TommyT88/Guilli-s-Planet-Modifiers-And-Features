@@ -143,12 +143,12 @@ gpm_run_origin_death_world_planet_gen = {
 	}
 	
 	while = {
-		count < 3
-		gpm_roll_planetary_blockers_normal_habitable = yes
+		count < 2
+		if = { 
+			limit = { free_district_slots >= 6 }
+			gpm_roll_planetary_blockers_normal_habitable = yes
+		}
 	}
-	add_deposit = d_mountain_range
-	add_deposit = d_dangerous_wildlife_blocker
-	add_deposit = d_dangerous_wildlife_blocker
 	add_deposit = d_dangerous_wildlife_blocker
 	add_deposit = d_dangerous_wildlife_blocker
 }

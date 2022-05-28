@@ -58,19 +58,6 @@ event = {
 			}
 		}
 
-		# debug added envoys until envoy AI is fixed...
-		every_country =  {
-			limit = {
-				OR = {
-					is_country_type = default
-					is_country_type = primitive
-					is_country_type = fallen_empire
-				}
-				is_ai = yes
-			}
-			add_modifier = { modifier = gpm_debug_envoys }
-		}
-
 		# James Webb initialisation
 		# SOL system
 		random_system = {
@@ -116,7 +103,9 @@ country_event = {
 	immediate = {
 		random_owned_planet = {
 			limit = { is_capital = yes }
+			set_planet_size = 25
 			gpm_run_origin_death_world_planet_gen = yes
+			
 		}
 		every_owned_pop = {
 			limit = {
@@ -148,7 +137,7 @@ country_event = {
 	immediate = {
 		random_owned_planet ={
 			limit = { is_capital = yes }
-			gpm_run_origin_precursor_world_planet_gen = yes			
+			gpm_run_origin_precursor_world_planet_gen = yes
 		}
 	}
 }

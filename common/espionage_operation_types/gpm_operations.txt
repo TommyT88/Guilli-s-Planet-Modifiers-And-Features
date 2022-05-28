@@ -33,8 +33,6 @@
 
 @operationTargetedByTimer = 10800 #30 years during which the effects of an operation may be felt by select Spy Network events
 
-# this = operation
-# target = operation target
 operation_gpm_gather_information_relic = {
 	target = none
 	categories = { op_cat_subterfuge }
@@ -45,216 +43,19 @@ operation_gpm_gather_information_relic = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 20
+			influence = 99999
 		}
 		upkeep = {
 			energy = 4
 		}
 	}
 
-	spy_power_cost = 20
+	spy_power_cost = 100
 	potential = {
-
-		#TEMP TO DEV TEST
-		# owner = { is_ai = no }
-		target = {
-			OR = {
-				AND = {
-					has_relic = gpm_r_time_displacer
-					NOT = { has_country_flag = gpm_has_r_time_displacer_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_dragon_trophy
-					NOT = { has_country_flag = gpm_has_r_dragon_trophy_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_khans_throne
-					NOT = { has_country_flag = gpm_has_r_khans_throne_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_worm_scales
-					NOT = { has_country_flag = gpm_has_r_worm_scales_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_rubricator
-					NOT = { has_country_flag = gpm_has_r_rubricator_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_galaxy
-					NOT = { has_country_flag = gpm_has_r_galaxy_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_omnicodex
-					NOT = { has_country_flag = gpm_has_r_omnicodex_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_surveyor
-					NOT = { has_country_flag = gpm_has_r_surveyor_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_galatron
-					NOT = { has_country_flag = gpm_has_r_galatron_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_ancient_sword
-					NOT = { has_country_flag = gpm_has_r_ancient_sword_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_severed_head
-					NOT = { has_country_flag = gpm_has_r_severed_head_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_prethoryn_queen
-					NOT = { has_country_flag = gpm_has_r_prethoryn_queen_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_unbidden_warlock
-					NOT = { has_country_flag = gpm_has_r_unbidden_warlock_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_contingency_core
-					NOT = { has_country_flag = gpm_has_r_contingency_core_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_zro_crystal
-					NOT = { has_country_flag = gpm_has_r_zro_crystal_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_the_last_baol
-					NOT = { has_country_flag = gpm_has_r_the_last_baol_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_the_defragmentor
-					NOT = { has_country_flag = gpm_has_r_the_defragmentor_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_reality_perforator
-					NOT = { has_country_flag = gpm_has_r_reality_perforator_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_pox_sample
-					NOT = { has_country_flag = gpm_has_r_pox_sample_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_cryo_core
-					NOT = { has_country_flag = gpm_has_r_cryo_core_relic@root.owner }
-				}
-				AND = {
-					has_relic = r_war_forge
-					NOT = { has_country_flag = gpm_has_r_war_forge_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_ai_architect
-					NOT = { has_country_flag = gpm_has_r_ai_architect_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_banner_of_the_fallen
-					NOT = { has_country_flag = gpm_has_r_banner_of_the_fallen_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_cloaking_device
-					NOT = { has_country_flag = gpm_has_r_cloaking_device_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_codex_administratum
-					NOT = { has_country_flag = gpm_has_r_codex_administratum_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_datacube
-					NOT = { has_country_flag = gpm_has_r_datacube_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_earthquake_engine
-					NOT = { has_country_flag = gpm_has_r_earthquake_engine_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_encrypted_sct
-					NOT = { has_country_flag = gpm_has_r_encrypted_sct_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_encyclopedia_galactica
-					NOT = { has_country_flag = gpm_has_r_encyclopedia_galactica_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_enigmatic_advisor
-					NOT = { has_country_flag = gpm_has_r_enigmatic_advisor_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_experimental_weapon
-					NOT = { has_country_flag = gpm_has_r_experimental_weapon_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_fallout_emergency_replicator
-					NOT = { has_country_flag = gpm_has_r_fallout_emergency_replicator_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_gravity_engine
-					NOT = { has_country_flag = gpm_has_r_gravity_engine_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_manufactorium_ship
-					NOT = { has_country_flag = gpm_has_r_manufactorium_ship_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_mysterious_shield_generator
-					NOT = { has_country_flag = gpm_has_r_mysterious_shield_generator_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_positronic_microchip
-					NOT = { has_country_flag = gpm_has_r_positronic_microchip_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_power_core
-					NOT = { has_country_flag = gpm_has_r_power_core_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_q_storage_compressor
-					NOT = { has_country_flag = gpm_has_r_q_storage_compressor_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_quantum_sphere
-					NOT = { has_country_flag = gpm_has_r_quantum_sphere_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_self_assembly_hub
-					NOT = { has_country_flag = gpm_has_r_self_assembly_hub_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_self_repairing_obelisk
-					NOT = { has_country_flag = gpm_has_r_self_repairing_obelisk_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_sentinel_queen
-					NOT = { has_country_flag = gpm_has_r_sentinel_queen_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_soul_gem
-					NOT = { has_country_flag = gpm_has_r_soul_gem_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_venerable_dreadnaught
-					NOT = { has_country_flag = gpm_has_r_venerable_dreadnaught_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_zero_energy_generator
-					NOT = { has_country_flag = gpm_has_r_zero_energy_generator_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_alien_eggs
-					NOT = { has_country_flag = gpm_has_r_alien_eggs_relic@root.owner }
-				}
-				AND = {
-					has_relic = gpm_r_machine_world_core
-					NOT = { has_country_flag = gpm_has_r_machine_world_core_relic@root.owner }
-				}
-			}
-		}
+		always = no					# we keep this in here for save game compatibility but never allow it
 	}
 	allow = {
-		custom_tooltip = {
-			is_running_espionage_operation = no
-			fail_text = operation_one_at_a_time
-		}
+		always = no					# we keep this in here for save game compatibility but never allow it
 	}
 	stage = {
 		difficulty = @diff_t2
@@ -302,206 +103,62 @@ operation_gpm_steal_relic = {
 	spy_power_cost = 70
 	potential = {
 
-		target = {
-			OR = {
-				AND = {
-					has_relic = gpm_r_time_displacer
-					has_country_flag = gpm_has_r_time_displacer_relic@root.owner
-				}
-				AND = {
-					has_relic = r_dragon_trophy
-					has_country_flag = gpm_has_r_dragon_trophy_relic@root.owner
-				}
-				AND = {
-					has_relic = r_khans_throne
-					has_country_flag = gpm_has_r_khans_throne_relic@root.owner
-				}
-				AND = {
-					has_relic = r_worm_scales
-					has_country_flag = gpm_has_r_worm_scales_relic@root.owner
-				}
-				AND = {
-					has_relic = r_rubricator
-					has_country_flag = gpm_has_r_rubricator_relic@root.owner
-				}
-				AND = {
-					has_relic = r_galaxy
-					has_country_flag = gpm_has_r_galaxy_relic@root.owner
-				}
-				AND = {
-					has_relic = r_omnicodex
-					has_country_flag = gpm_has_r_omnicodex_relic@root.owner
-				}
-				AND = {
-					has_relic = r_surveyor
-					has_country_flag = gpm_has_r_surveyor_relic@root.owner
-				}
-				AND = {
-					has_relic = r_galatron
-					has_country_flag = gpm_has_r_galatron_relic@root.owner
-				}
-				AND = {
-					has_relic = r_ancient_sword
-					has_country_flag = gpm_has_r_ancient_sword_relic@root.owner
-				}
-				AND = {
-					has_relic = r_severed_head
-					has_country_flag = gpm_has_r_severed_head_relic@root.owner
-				}
-				AND = {
-					has_relic = r_prethoryn_queen
-					has_country_flag = gpm_has_r_prethoryn_queen_relic@root.owner
-				}
-				AND = {
-					has_relic = r_unbidden_warlock
-					has_country_flag = gpm_has_r_unbidden_warlock_relic@root.owner
-				}
-				AND = {
-					has_relic = r_contingency_core
-					has_country_flag = gpm_has_r_contingency_core_relic@root.owner
-				}
-				AND = {
-					has_relic = r_zro_crystal
-					has_country_flag = gpm_has_r_zro_crystal_relic@root.owner
-				}
-				AND = {
-					has_relic = r_the_last_baol
-					has_country_flag = gpm_has_r_the_last_baol_relic@root.owner
-				}
-				AND = {
-					has_relic = r_the_defragmentor
-					has_country_flag = gpm_has_r_the_defragmentor_relic@root.owner
-				}
-				AND = {
-					has_relic = r_reality_perforator
-					has_country_flag = gpm_has_r_reality_perforator_relic@root.owner
-				}
-				AND = {
-					has_relic = r_pox_sample
-					has_country_flag = gpm_has_r_pox_sample_relic@root.owner
-				}
-				AND = {
-					has_relic = r_cryo_core
-					has_country_flag = gpm_has_r_cryo_core_relic@root.owner
-				}
-				AND = {
-					has_relic = r_war_forge
-					has_country_flag = gpm_has_r_war_forge_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_ai_architect
-					has_country_flag = gpm_has_r_ai_architect_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_banner_of_the_fallen
-					has_country_flag = gpm_has_r_banner_of_the_fallen_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_cloaking_device
-					has_country_flag = gpm_has_r_cloaking_device_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_codex_administratum
-					has_country_flag = gpm_has_r_codex_administratum_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_datacube
-					has_country_flag = gpm_has_r_datacube_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_earthquake_engine
-					has_country_flag = gpm_has_r_earthquake_engine_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_encrypted_sct
-					has_country_flag = gpm_has_r_encrypted_sct_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_encyclopedia_galactica
-					has_country_flag = gpm_has_r_encyclopedia_galactica_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_enigmatic_advisor
-					has_country_flag = gpm_has_r_enigmatic_advisor_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_experimental_weapon
-					has_country_flag = gpm_has_r_experimental_weapon_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_fallout_emergency_replicator
-					has_country_flag = gpm_has_r_fallout_emergency_replicator_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_gravity_engine
-					has_country_flag = gpm_has_r_gravity_engine_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_manufactorium_ship
-					has_country_flag = gpm_has_r_manufactorium_ship_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_mysterious_shield_generator
-					has_country_flag = gpm_has_r_mysterious_shield_generator_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_positronic_microchip
-					has_country_flag = gpm_has_r_positronic_microchip_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_power_core
-					has_country_flag = gpm_has_r_power_core_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_q_storage_compressor
-					has_country_flag = gpm_has_r_q_storage_compressor_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_quantum_sphere
-					has_country_flag = gpm_has_r_quantum_sphere_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_self_assembly_hub
-					has_country_flag = gpm_has_r_self_assembly_hub_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_self_repairing_obelisk
-					has_country_flag = gpm_has_r_self_repairing_obelisk_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_sentinel_queen
-					has_country_flag = gpm_has_r_sentinel_queen_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_soul_gem
-					has_country_flag = gpm_has_r_soul_gem_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_venerable_dreadnaught
-					has_country_flag = gpm_has_r_venerable_dreadnaught_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_zero_energy_generator
-					has_country_flag = gpm_has_r_zero_energy_generator_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_alien_eggs
-					has_country_flag = gpm_has_r_alien_eggs_relic@root.owner
-				}
-				AND = {
-					has_relic = gpm_r_machine_world_core
-					has_country_flag = gpm_has_r_machine_world_core_relic@root.owner
-				}
-			}
-		}
 	}
 	allow = {
+		custom_tooltip = {
+			target = {
+				OR = {
+					gpm_has_vanilla_precursor_relic = yes
+					gpm_has_modded_precursor_relic = yes
+					gpm_has_modded_non_precursor_relic = yes
+					gpm_has_other_mod_relic = yes
+				}
+			}
+			fail_text = gpm_target_has_no_relics_operation
+		}
 		custom_tooltip = {
 			is_running_espionage_operation = no
 			fail_text = operation_one_at_a_time
 		}
 		# Forbid if not neighbours
-		target = { is_neighbor_of = root.owner }
+		custom_tooltip = {
+			target = { is_neighbor_of = root.owner }
+			fail_text = gpm_operation_not_neighbours
+		}
+		
+		# forbid for overlords and their subjects if both arent AI
+		custom_tooltip = {
+			OR = {
+				target = {
+					OR = {
+						AND = {
+							is_subject = yes
+							overlord = {
+								NOT = { is_same_value = root.owner }
+							}
+						}
+						is_subject = no
+					}
+				}
+				AND = {
+					target = { is_ai = no }
+					root.owner = { is_ai = no }
+				}
+			}
+			fail_text = gpm_operation_is_subject
+		}
+		custom_tooltip = {
+			OR = {
+				target = { 
+					NOT = { is_overlord_to = root.owner	}
+				}
+				AND = {
+					target = { is_ai = no }
+					root.owner = { is_ai = no }
+				}
+			}
+			fail_text = gpm_operation_is_overlord
+		}
 	}
 	# The Crew
 	stage = {
@@ -541,7 +198,7 @@ operation_gpm_steal_relic = {
 			}
 		}
 		#### DEBUG LOGGING ####
-		log = ";OP - STEAL; operation_gpm_steal_relic launched by [this.owner.GetName] on [target.GetName]"
+		log = "<< RELICS >> | STEAL_RELIC operation_gpm_steal_relic launched by THIS.OWNER = [this.owner.GetName] on TARGET = [target.GetName]"
 		#### ##################
 	}
 }

@@ -408,6 +408,7 @@ gpm_r_machine_world_core = {
 	active_effect = {
 		custom_tooltip = gpm_r_machine_world_core_active_tooltip
 		remove_relic = gpm_r_machine_world_core
+		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_machine_world_core >>> from ROOT = [root.GetName] ; relic activation self destruct"
 		# custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			set_country_flag = relic_machine_world_core_activated

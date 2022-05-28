@@ -580,6 +580,7 @@ on_becoming_subject = {
 	events = {
 		# gpm_relics.1100				# Gain all relics from your new subject
 		gpm_operation.100				# event to stop steal relic operations if either empire becomes a vassel or overlord
+		gpm_com.2						# event to inform overlord and subject of eachother's relic ownership
 	}
 }
 

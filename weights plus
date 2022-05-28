@@ -1,0 +1,220 @@
+	War Goals
+		+
+			modifier = {
+				owner = { has_ethic = ethic_authoritarian }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_authoritarian }
+				factor = 2
+			}
+			
+			modifier = {
+				owner = { has_ethic = ethic_militarist }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_militarist }
+				factor = 2
+			}
+		
+			modifier = {
+				owner = { has_ethic = ethic_xenophobe }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_xenophobe }
+				factor = 2
+			}
+		
+			modifier = {
+				owner = { has_ethic = ethic_materialist }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_materialist }
+				factor = 2
+			}
+		
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_pacifist }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_pacifist }
+				factor = 2
+			}
+		
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_xenophile }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_xenophile }
+				factor = 2
+			}
+		
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_spiritualist }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_spiritualist }
+				factor = 2
+			}
+
+			modifier = {
+				owner = { has_ethic = ethic_egalitarian }
+				factor = 1.5
+			}
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_egalitarian }
+				factor = 2
+			}
+		
+			modifier = {
+				owner = { is_machine_empire = yes }
+				factor = 2
+			}
+			
+			modifier = {
+				owner = { is_hive_empire = yes }
+				factor = 2
+			}
+			
+			modifier = {
+				owner = { is_megacorp = yes }
+				factor = 2
+			}
+			
+			modifier = {
+				owner = {
+					OR = {
+						has_civic = civic_machine_terminator
+						has_civic = civic_machine_assimilator
+						has_civic = civic_fanatic_purifiers
+					}
+				}
+				factor = 2
+			}
+			
+			modifier = {
+				owner = { has_civic = civic_machine_servitor }
+				factor = 2
+			}
+			
+			modifier = {
+				owner = { has_civic = civic_hive_devouring_swarm }
+				factor = 2
+			}
+		
+		
+
+	Tradeable actions
+		+
+
+			modifier = {
+				has_ethic = ethic_authoritarian
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_fanatic_authoritarian
+				factor = 0.75
+			}
+			
+			modifier = {
+				owner = { has_ethic = ethic_militarist }
+				factor = 0.9
+			}
+			modifier = {
+				owner = { has_ethic = ethic_fanatic_militarist }
+				factor = 0.75
+			}
+		
+			modifier = {
+				has_ethic = ethic_xenophobe
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_fanatic_xenophobe
+				factor = 0.75
+			}
+		
+			modifier = {
+				has_ethic = ethic_materialist
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_fanatic_materialist
+				factor = 0.75
+			}
+		
+			modifier = {
+				has_ethic = ethic_fanatic_pacifist
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_pacifist
+				factor = 0.75
+			}
+		
+			modifier = {
+				has_ethic = ethic_fanatic_xenophile
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_xenophile
+				factor = 0.75
+			}
+		
+			modifier = {
+				has_ethic = ethic_fanatic_spiritualist
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_spiritualist
+				factor = 0.75
+			}
+
+			modifier = {
+				has_ethic = ethic_egalitarian
+				factor = 0.9
+			}
+			modifier = {
+				has_ethic = ethic_fanatic_egalitarian
+				factor = 0.75
+			}
+		
+			modifier = {
+				is_machine_empire = yes
+				factor = 0.8
+			}
+			
+			modifier = {
+				is_hive_empire = yes
+				factor = 0.8
+			}
+			
+			modifier = {
+				is_megacorp = yes
+				factor = 0.8
+			}
+			
+			modifier = {
+				OR = {
+					has_civic = civic_machine_terminator
+					has_civic = civic_machine_assimilator
+					has_civic = civic_fanatic_purifiers
+				}
+				factor = 0.8
+			}
+			
+			modifier = {
+				has_civic = civic_machine_servitor
+				factor = 0.8
+			}
+			
+			modifier = {
+				has_civic = civic_hive_devouring_swarm
+				factor = 0.8
+			}

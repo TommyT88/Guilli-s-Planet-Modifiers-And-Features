@@ -447,6 +447,7 @@ decision_gpm_restore_oppertunity = {
     effect = {
 		remove_modifier = gpm_oppertunity
 		owner = { add_relic = gpm_r_mars_rover }
+		log = "<< RELICS >> | ADD_RELIC <<< gpm_r_mars_rover >>> to OWNER = [owner.GetName] ; planet decision"
 		set_global_flag = gpm_r_mars_rover_found
 	}
 	

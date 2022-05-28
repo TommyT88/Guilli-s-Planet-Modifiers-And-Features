@@ -449,7 +449,7 @@ gpm_r_power_core = {
 		potential = {
 			always = yes
 		}
-		station_gatherers_energy_produces_mult = 1.0
+		station_gatherers_energy_produces_mult = 0.5
 	}
 
 	score = 1000
@@ -598,9 +598,19 @@ gpm_r_codex_administratum = {
 	score = 1000
 
 	active_effect = {
-		add_modifier = {
-			modifier = "gpm_r_codex_administratum_active_effect" 
-			days = @triumph_duration
+		if = {
+			limit = { is_machine_empire = yes }
+			add_modifier = {
+				modifier = "relay_network_stability_edict_modifier" multiplier = 3.34
+				days = @triumph_duration
+			}
+		}
+		if = {
+			limit = { is_machine_empire = no }
+			add_modifier = {
+				modifier = "gpm_r_codex_administratum_active_effect" 
+				days = @triumph_duration
+			}
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
@@ -1311,58 +1321,75 @@ gpm_r_soul_gem = {
 	
 	triggered_country_modifier = {
 		potential = {
-			always = yes
+			is_machine_empire = no
 		}
 		leader_age = 100
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			is_machine_empire = yes
+		}
+		country_physics_research_produces_mult = 0.15
 	}
 
 	score = 1000
 
 	active_effect = {
-		custom_tooltip = "gpm_r_soul_gem_active_effect"
-		hidden_effect = {
-			random_list = {
-				10 = {
-					create_leader = {
-						class = admiral
-						species = owner_main_species
-						skill = 5
-						name = random
-						traits = {
-							trait = leader_trait_gpm_shared_soul
+		if = {
+			limit = { is_machine_empire = yes }
+			add_modifier = {
+				modifier = "shroud_influence_boost"
+				days = @triumph_duration
+			}
+		}
+		if = {
+			limit = { is_machine_empire = no }
+			custom_tooltip = "gpm_r_soul_gem_active_effect"
+			hidden_effect = {
+				random_list = {
+					10 = {
+						create_leader = {
+							class = admiral
+							species = owner_main_species
+							skill = 5
+							name = random
+							traits = {
+								trait = leader_trait_gpm_shared_soul
+							}
 						}
 					}
-				}
-				10 = {
-					create_leader = {
-						class = general
-						species = owner_main_species
-						skill = 5
-						name = random
-						traits = {
-							trait = leader_trait_gpm_shared_soul
+					10 = {
+						create_leader = {
+							class = general
+							species = owner_main_species
+							skill = 5
+							name = random
+							traits = {
+								trait = leader_trait_gpm_shared_soul
+							}
 						}
 					}
-				}
-				10 = {
-					create_leader = {
-						class = governor
-						species = owner_main_species
-						skill = 5
-						name = random
-						traits = {
-							trait = leader_trait_gpm_shared_soul
+					10 = {
+						create_leader = {
+							class = governor
+							species = owner_main_species
+							skill = 5
+							name = random
+							traits = {
+								trait = leader_trait_gpm_shared_soul
+							}
 						}
 					}
-				}
-				10 = {
-					create_leader = {
-						class = scientist
-						species = owner_main_species
-						skill = 5
-						name = random
-						traits = {
-							trait = leader_trait_gpm_shared_soul
+					10 = {
+						create_leader = {
+							class = scientist
+							species = owner_main_species
+							skill = 5
+							name = random
+							traits = {
+								trait = leader_trait_gpm_shared_soul
+							}
 						}
 					}
 				}

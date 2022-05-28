@@ -10969,16 +10969,18 @@ ship_event = {
 		#custom_tooltip = gpm_survey_reward_new_line
 		locked_random_list = {
 			0 = {
-				root.owner = { add_relic = gpm_r_machine_world_core }
 				root.owner = {
+					add_relic = gpm_r_machine_world_core
+					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -11139,16 +11141,18 @@ ship_event = {
 		locked_random_list = {
 			10 = { }
 			1 = {
-				root.owner = { add_relic = gpm_r_machine_world_core }
 				root.owner = {
+					add_relic = gpm_r_machine_world_core
+					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {
@@ -11270,16 +11274,18 @@ ship_event = {
 		locked_random_list = {
 			10 = { }
 			1 = {
-				root.owner = { add_relic = gpm_r_machine_world_core }
 				root.owner = {
+					add_relic = gpm_r_machine_world_core
+					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							is_country_type = default
 							has_communications = root.owner
 						}
+						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
-							type = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR
-							localization = GPM_MESSAGE_NEIGHBOUR_RELIC_RUMOUR_DESC
+							type = GPM_MESSAGE_RELIC_POSSESSION
+							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
 							days = 30
 							target = root.owner.capital_scope
 							variable = {

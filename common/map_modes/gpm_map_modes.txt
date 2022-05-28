@@ -28,9 +28,11 @@ gpm_relic_map_mode = {
 	shortcut = "CTRL+r"	
 	can_change_point_of_view = no
 	display_espionage_operations = yes
+	display_claims = yes
 	
 	# observer mode
-	color = { value = rgb { 66 0 7 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_11" condition = { NOT = { exists = FROM } num_owned_relics >= 10 } }
+	color = { value = hsv { 0.0 0.0 0.8 0.7 } condition = { NOT = { exists = FROM } num_owned_relics = 0 } custom_tooltip = "MAP_MODE_OBSERVER" }
+	color = { value = rgb { 66 0 7 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_11" condition = { NOT = { exists = FROM } num_owned_relics >= 11 } }
 	color = { value = rgb { 203 0 34 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_10" condition = { NOT = { exists = FROM } num_owned_relics = 10 } }
 	color = { value = rgb { 203 0 34 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_9" condition = { NOT = { exists = FROM } num_owned_relics = 9 } }
 	color = { value = rgb { 255 122 6 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_8" condition = { NOT = { exists = FROM } num_owned_relics = 8 } }
@@ -43,82 +45,55 @@ gpm_relic_map_mode = {
 	color = { value = rgb { 127 0 149 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC" condition = { NOT = { exists = FROM } num_owned_relics = 1 } }
 	
 	# This will be your own empire
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_11" condition = { is_same_empire = from num_owned_relics >= 11 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_10" condition = { is_same_empire = from num_owned_relics = 10 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_9" condition = { is_same_empire = from num_owned_relics = 9 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_8" condition = { is_same_empire = from num_owned_relics = 8 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_7" condition = { is_same_empire = from num_owned_relics = 7 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_6" condition = { is_same_empire = from num_owned_relics = 6 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_5" condition = { is_same_empire = from num_owned_relics = 5 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_4" condition = { is_same_empire = from num_owned_relics = 4 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_3" condition = { is_same_empire = from num_owned_relics = 3 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC_2" condition = { is_same_empire = from num_owned_relics = 2 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC" condition = { is_same_empire = from num_owned_relics = 1 } }
+	color = { value = hsv { 0.580 1.0 0.8 1.0 } custom_tooltip = "GPM_MAP_MODE_SAME_EMPIRE_HAS_RELIC" condition = { is_same_empire = from num_owned_relics = 0 } }
+	
+	
+	# color = {
+		# value = hsv { 0.580 1.0 0.8 1.0 }
+		# custom_tooltip = "DIPLOMATIC_MAP_MODE_SAME_EMPIRE"
+		# condition = {
+			# is_same_empire = from
+		# }
+	# }
+
+	# empires if not sufficient intel:
 	color = {
-		value = hsv { 0.580 1.0 0.8 1.0 }
-		custom_tooltip = "DIPLOMATIC_MAP_MODE_SAME_EMPIRE"
+		value = rgb { 255 128 0 200 }
+		custom_tooltip = "GPM_MAP_MODE_HAS_UNKNOWN_RELICS" 
 		condition = {
-			is_same_empire = from
+			num_owned_relics >= 1
+			FROM = {
+				has_intel_level = {
+					who = prev
+					category = government
+					level < 2
+				}
+			}
 		}
 	}
 
-	# All empires you have a relic casus belli with
-	# color = {
-	# 	value = hsv { 0.015 1.0 0.9 1.0 }
-	# 	custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_CASUS_BELLI"
-	# 	condition = {
-	# 		OR = {
-	# 			has_casus_belli = { target = this type = cb_gpm_r_time_displacer }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_dragon_trophy }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_khans_throne }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_worm_scales }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_rubricator }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_galaxy }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_omnicodex }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_surveyor }
-	# 			has_casus_belli = { target = this type = cb_galatron }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_ancient_sword }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_severed_head }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_prethoryn_queen }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_unbidden_warlock }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_contingency_core }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_zro_crystal }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_the_last_baol }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_the_defragmentor }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_reality_perforator }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_pox_sample }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_cryo_core }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_war_forge }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_ai_architect }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_banner_of_the_fallen }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_cloaking_device }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_codex_administratum }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_datacube }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_earthquake_engine }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_encrypted_sct }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_encyclopedia_galactica }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_enigmatic_advisor }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_experimental_weapon }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_fallout_emergency_replicator }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_gravity_engine }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_manufactorium_ship }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_mysterious_shield_generator }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_positronic_microchip }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_power_core }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_q_storage_compressor }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_quantum_sphere }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_self_assembly_hub }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_self_repairing_obelisk }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_sentinel_queen }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_soul_gem }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_venerable_dreadnaught }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_zero_energy_generator }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_alien_eggs }
-	# 			has_casus_belli = { target = this type = cb_gpm_r_machine_world_core }
-	# 		}
-	# 	}
-	# }
-	
-	# All empires with a relic
-	color = { value = rgb { 66 0 7 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_11" condition = { num_owned_relics >= 10 } }
-	color = { value = rgb { 203 0 34 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_10" condition = { num_owned_relics = 10 } }
+	# All empires with a relic and sufficient intel
+	color = { value = rgb { 66 0 7 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_11" condition = { num_owned_relics >= 11 } }
+	color = { value = rgb { 66 0 7 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_10" condition = { num_owned_relics = 10 } }
 	color = { value = rgb { 203 0 34 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_9" condition = { num_owned_relics = 9 } }
-	color = { value = rgb { 255 122 6 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_8" condition = { num_owned_relics = 8 } }
-	color = { value = rgb { 255 122 6 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_7" condition = { num_owned_relics = 7 } }
-	color = { value = rgb { 252 84 158 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_6" condition = { num_owned_relics = 6 } }
-	color = { value = rgb { 252 84 158 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_5" condition = { num_owned_relics = 5 } }
-	color = { value = rgb { 213 45 169 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_4" condition = { num_owned_relics = 4 } }
-	color = { value = rgb { 213 45 169 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_3" condition = { num_owned_relics = 3 } }
-	color = { value = rgb { 127 0 149 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_2" condition = { num_owned_relics = 2 } }
+	color = { value = rgb { 203 0 34 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_8" condition = { num_owned_relics = 8 } }
+	color = { value = rgb { 203 0 34 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_7" condition = { num_owned_relics = 7 } }
+	color = { value = rgb { 255 122 6 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_6" condition = { num_owned_relics = 6 } }
+	color = { value = rgb { 255 122 6 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_5" condition = { num_owned_relics = 5 } }
+	color = { value = rgb { 255 122 6 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_4" condition = { num_owned_relics = 4 } }
+	color = { value = rgb { 252 84 158 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_3" condition = { num_owned_relics = 3 } }
+	color = { value = rgb { 213 45 169 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC_2" condition = { num_owned_relics = 2 } }
 	color = { value = rgb { 127 0 149 200 } custom_tooltip = "GPM_MAP_MODE_HAS_RELIC" condition = { num_owned_relics = 1 } }
 	
 	# All empires you dont know about their relics
@@ -126,11 +101,7 @@ gpm_relic_map_mode = {
 		value = rgb { 183 183 183 255 }
 		custom_tooltip = "GPM_MAP_MODE_NOT_HAS_RELIC"
 		condition = {
-			NOR = {
-				gpm_has_vanilla_precursor_relic = yes
-				gpm_has_modded_precursor_relic = yes
-				gpm_has_modded_non_precursor_relic = yes
-			}
+			num_owned_relics = 0
 		}
 	}
 }

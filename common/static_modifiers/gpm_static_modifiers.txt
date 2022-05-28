@@ -33,14 +33,15 @@
 gpm_debug_envoys = {
 	hide_from_country_list = yes
 	envoys_add = 2
-	espionage_operation_cost_mult = -0.75
-	operations_cost_mult = -0.75
+	espionage_operation_cost_mult = -0.5
+	operations_cost_mult = -0.5
 	espionage_operation_speed_mult = 0.5
 	spy_network_daily_value_mult = 0.5
-	spy_network_decay_mult = -0.5
+	spy_network_decay_mult = -0.5	
+	add_base_country_intel = 20
 }
 
-gpm_debug_envoys_DEBUGGING = {
+gpm_debug_envoys_BIG = {
 	hide_from_country_list = yes
 	envoys_add = 10
 	espionage_operation_cost_mult = -0.99
@@ -48,6 +49,7 @@ gpm_debug_envoys_DEBUGGING = {
 	espionage_operation_speed_mult = 5
 	spy_network_daily_value_mult = 5
 	spy_network_decay_mult = -0.01
+	add_base_country_intel = 100
 }
 
 gpm_compact_star = {
