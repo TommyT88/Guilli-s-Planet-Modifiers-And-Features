@@ -24,6 +24,12 @@ gpm_archaeologist = {
 			engineering_research = 5
 			society_research = 7
 		}
+		produces = {
+			trigger = {
+				planet = { gpm_has_precursor_modifiers = yes }
+			}
+			minor_artifacts = 0.10
+		}
 		upkeep = {
 			consumer_goods = 3
 		}
@@ -80,6 +86,12 @@ gpm_archaeologist_drone = {
 			engineering_research = 5
 			society_research = 7
 		}
+		produces = {
+			trigger = {
+				planet = { gpm_has_precursor_modifiers = yes }
+			}
+			minor_artifacts = 0.10
+		}
 		upkeep = {
 			energy = 5
 		}		
@@ -122,13 +134,13 @@ gpm_precursor_archaeologist = {
 			physics_research = 8
 			engineering_research = 8
 			society_research = 8
-			minor_artifacts = 0.20
+			minor_artifacts = 0.50
 		}
 		produces = {
 			trigger = {
 				planet = { is_planet_class = pc_gpm_precursor_tomb }
 			}
-			minor_artifacts = 0.10
+			minor_artifacts = 0.50
 		}
 		upkeep = {
 			consumer_goods = 6
@@ -185,13 +197,13 @@ gpm_precursor_archaeologist_drone = {
 			physics_research = 8
 			engineering_research = 8
 			society_research = 8
-			minor_artifacts = 0.20
+			minor_artifacts = 0.50
 		}
 		produces = {
 			trigger = {
 				planet = { is_planet_class = pc_gpm_precursor_tomb }
 			}
-			minor_artifacts = 0.10
+			minor_artifacts = 0.50
 		}
 		upkeep = {
 			energy = 8

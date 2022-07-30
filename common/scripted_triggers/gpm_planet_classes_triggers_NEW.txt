@@ -22,6 +22,7 @@ gpm_is_planet_class_molten = {
 	}
 }
 gpm_is_planet_class_toxic = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_toxic					# Vanilla
 		is_planet_class = pc_acid					# PD
