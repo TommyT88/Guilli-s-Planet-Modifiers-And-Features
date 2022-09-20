@@ -29,6 +29,14 @@ gpm_mega_shipyard_restored_precursor = {
 		cost = {
 			trigger = { 
 				from = { is_ai = no }
+				from = { has_ancrel = no }
+			}
+			alloys = 7000
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = no }
+				from = { has_ancrel = yes }
 			}
 			alloys = 5000
 			minor_artifacts = 100

@@ -242,6 +242,7 @@ country_event = {
 						add_research_option = tech_gpm_precursor_vaults_discovery
 						add_tech_progress = { tech = tech_gpm_precursor_vaults_discovery progress = 0.25 }
 						modifier = { factor = 0 has_technology = tech_gpm_precursor_vaults_discovery }
+						modifier = { factor = 0 has_ancrel = no }
 					}
 					10 = {
 						add_research_option = tech_gpm_precursor_vaults_discovery_2

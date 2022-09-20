@@ -508,9 +508,11 @@ planet_event = {
 							gpm_make_precursor_ruined_world = yes
 							event_target:gpm_host_country_event_target = {
 								change_variable = { which = gpm_precursor_archaeopolis_amount value = 1 }
-							}							
+							}
 							# add a factor scale based on number of habitable worlds galaxy setting. Higher setting = more chance for a habitable precursor ruined world. 
 							modifier = { factor = gpm_galaxy_setting_habitable_worlds_scale } # scale chance bases on galaxy setting
+							# not if you dont have ancrel DLC
+							modifier = { factor = 0 has_ancrel = no }
 							remove_modifier = terraforming_candidate
 							modifier = { factor = 0
 								any_system = {

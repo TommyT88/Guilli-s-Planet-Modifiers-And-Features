@@ -27,6 +27,7 @@ gpm_archaeologist = {
 		produces = {
 			trigger = {
 				planet = { gpm_has_precursor_modifiers = yes }
+				owner = { has_ancrel = yes}
 			}
 			minor_artifacts = 0.10
 		}
@@ -89,6 +90,7 @@ gpm_archaeologist_drone = {
 		produces = {
 			trigger = {
 				planet = { gpm_has_precursor_modifiers = yes }
+				owner = { has_ancrel = yes}
 			}
 			minor_artifacts = 0.10
 		}
@@ -131,6 +133,17 @@ gpm_precursor_archaeologist = {
 	resources = {
 		category = planet_researchers
 		produces = {
+			trigger = {
+				owner = { has_ancrel = no }
+			}
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+		}
+		produces = {
+			trigger = {
+				owner = { has_ancrel = yes }
+			}
 			physics_research = 8
 			engineering_research = 8
 			society_research = 8
@@ -139,6 +152,7 @@ gpm_precursor_archaeologist = {
 		produces = {
 			trigger = {
 				planet = { is_planet_class = pc_gpm_precursor_tomb }
+				owner = { has_ancrel = yes }
 			}
 			minor_artifacts = 0.50
 		}
@@ -194,6 +208,17 @@ gpm_precursor_archaeologist_drone = {
 	resources = {
 		category = planet_researchers
 		produces = {
+			trigger = {
+				owner = { has_ancrel = no }
+			}
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+		}
+		produces = {
+			trigger = {
+				owner = { has_ancrel = yes }
+			}
 			physics_research = 8
 			engineering_research = 8
 			society_research = 8
@@ -202,6 +227,7 @@ gpm_precursor_archaeologist_drone = {
 		produces = {
 			trigger = {
 				planet = { is_planet_class = pc_gpm_precursor_tomb }
+				owner = { has_ancrel = yes }
 			}
 			minor_artifacts = 0.50
 		}

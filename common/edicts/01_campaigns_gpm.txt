@@ -26,6 +26,7 @@ gpm_edict_alloy_production  = {
 
 	potential = {
 		has_technology = tech_arcane_deciphering
+		has_ancrel = yes
 	}
 
 	modifier = {
@@ -55,6 +56,7 @@ gpm_edict_consumer_goods_production  = {
 
 	potential = {
 		has_technology = tech_arcane_deciphering
+		has_ancrel = yes
 		is_hive_empire = no
 		OR = {
 			is_machine_empire = no
@@ -89,6 +91,7 @@ gpm_edict_exotic_production  = {
 
 	potential = {
 		has_technology = tech_arcane_deciphering
+		has_ancrel = yes
 	}
 
 	modifier = {

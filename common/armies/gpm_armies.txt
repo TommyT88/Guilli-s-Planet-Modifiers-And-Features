@@ -51,6 +51,15 @@ gpm_dreadnaught_army = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 25
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 25
 			minor_artifacts = 5
 		}
@@ -91,6 +100,15 @@ gpm_precursor_mech_army = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 50
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 50
 			minor_artifacts = 10
 		}
@@ -211,6 +229,15 @@ gpm_precursor_mech_army_machine = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 50
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 50
 			minor_artifacts = 10
 		}
@@ -317,6 +344,15 @@ gpm_relic_tank_battalion = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 25
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 25
 			minor_artifacts = 5
 		}
@@ -348,6 +384,15 @@ gpm_relic_mech_squadron = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 50
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 50
 			minor_artifacts = 5
 		}
@@ -379,6 +424,15 @@ gpm_relic_fighter_squadron = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 30
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 30
 			minor_artifacts = 5
 		}
@@ -407,6 +461,15 @@ gpm_relic_power_armoured_troops = {
 	resources = {
 		category = armies
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
+			alloys = 15
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
 			alloys = 15
 			minor_artifacts = 2
 		}

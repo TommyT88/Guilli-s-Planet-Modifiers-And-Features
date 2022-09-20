@@ -315,6 +315,7 @@ planet_pop_assemblers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_farmers = {
@@ -327,6 +328,7 @@ planet_farmers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_miners = {
@@ -339,6 +341,7 @@ planet_miners = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_livestock = {
@@ -351,6 +354,7 @@ planet_livestock = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_technician = {
@@ -363,6 +367,7 @@ planet_technician = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_executives = {
@@ -375,6 +380,7 @@ planet_executives = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_managers = {
@@ -387,6 +393,7 @@ planet_managers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_administrators = {
@@ -400,6 +407,7 @@ planet_administrators = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_researchers = {
@@ -413,6 +421,7 @@ planet_researchers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_metallurgists = {
@@ -426,10 +435,11 @@ planet_metallurgists = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_culture_workers = {
-	parent = planet_jobs_productive
+	parent = planet_administrators
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -438,6 +448,7 @@ planet_culture_workers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_evaluators = {
@@ -450,6 +461,7 @@ planet_evaluators = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_synapse_drones = {
@@ -462,6 +474,7 @@ planet_synapse_drones = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_nobles = {
@@ -474,6 +487,7 @@ planet_nobles = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_necro_apprentices = {
@@ -486,6 +500,7 @@ planet_necro_apprentices = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_merchants = {
@@ -498,6 +513,7 @@ planet_merchants = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_entertainers = {
@@ -510,6 +526,7 @@ planet_entertainers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_soldiers = {
@@ -522,6 +539,7 @@ planet_soldiers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_necromancers = {
@@ -534,6 +552,7 @@ planet_necromancers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_priests = {
@@ -546,6 +565,7 @@ planet_priests = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_enforcers = {
@@ -558,6 +578,7 @@ planet_enforcers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_telepaths = {
@@ -570,6 +591,7 @@ planet_telepaths = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_doctors = {
@@ -582,6 +604,7 @@ planet_doctors = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_refiners = {
@@ -594,6 +617,7 @@ planet_refiners = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_translucers = {
@@ -606,6 +630,7 @@ planet_translucers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_chemists = {
@@ -618,6 +643,7 @@ planet_chemists = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 planet_artisans = {
@@ -631,6 +657,7 @@ planet_artisans = {
 		produces
 		upkeep
 	}
+	modifier_category = pop
 }
 
 ships = {
@@ -699,7 +726,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = corvette
+			OR = {
+				is_ship_size = corvette
+				is_ship_size = offspring_corvette
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -712,7 +742,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = corvette
+			OR = {
+				is_ship_size = corvette
+				is_ship_size = offspring_corvette
+			}
 		}
 	}
 
@@ -726,7 +759,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = destroyer
+			OR = {
+				is_ship_size = destroyer
+				is_ship_size = offspring_destroyer
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -739,7 +775,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = destroyer
+			OR = {
+				is_ship_size = destroyer
+				is_ship_size = offspring_destroyer
+			}
 		}
 	}
 	
@@ -753,7 +792,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = cruiser
+			OR = {
+				is_ship_size = cruiser
+				is_ship_size = offspring_cruiser
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -766,7 +808,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = cruiser
+			OR = {
+				is_ship_size = cruiser
+				is_ship_size = offspring_cruiser
+			}
 		}
 	}
 	
@@ -780,7 +825,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = battleship
+			OR = {
+				is_ship_size = battleship
+				is_ship_size = offspring_battleship
+			}
 		}
 	}
 	

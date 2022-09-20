@@ -338,6 +338,26 @@ gpm_observation_station_restored = {
 		}
 		produces = {
 			trigger = {
+				owner = {
+					has_ancrel = no
+				}
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = has_gpm_ruined_observation_station
+						OR = {
+							has_modifier = gpm_ancient_temple
+							gpm_has_precursor_modifiers = yes
+						}
+					}
+				}
+			}
+			society_research = 10
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_ancrel = yes
+				}
 				solar_system = {
 					any_system_planet = {
 						has_planet_flag = has_gpm_ruined_observation_station

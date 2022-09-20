@@ -2970,6 +2970,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_vaults_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_vaults_discovery } }
+				modifier = { factor = 0 owner = { has_ancrel = no } }
 			}
 			10 = {
 				owner = {

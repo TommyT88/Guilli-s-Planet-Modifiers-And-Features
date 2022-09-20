@@ -225,6 +225,7 @@ operation_gpm_steal_minor_artifacts = {
 		always = no # disabled for now
 		#TEMP TO DEV TEST
 		owner = { is_ai = no }
+		owner = { has_ancrel = yes }
 
 	}
 	allow = {

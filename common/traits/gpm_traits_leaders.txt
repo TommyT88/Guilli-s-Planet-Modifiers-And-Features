@@ -39,12 +39,13 @@ leader_trait_gpm_stealth_tactician = {
 	randomized = no
 	
 	leader_potential_add = {
-		always = no
+		from = { has_relic = gpm_r_cloaking_device }
 	}
 	
 	icon = "gfx/interface/icons/traits/leader_trait_gpm_stealth_tactician.dds"
 	modifier = {
-		ship_evasion_mult = 0.10
+		ship_evasion_mult = 0.05
+		ship_jumpdrive_cooldown_mult = -0.25
 	}
 	leader_trait =  { admiral }
 	leader_class = { admiral }

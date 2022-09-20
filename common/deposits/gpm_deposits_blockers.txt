@@ -596,7 +596,7 @@ gpm_tb_automated_turrets_empty = {
 
 	on_cleared = {
 		if = {
-			limit = { exists = owner }
+			limit = { exists = owner owner = { has_ancrel = yes }}
 			owner = { add_resource = { minor_artifacts = 20 } }
 		}
 	}

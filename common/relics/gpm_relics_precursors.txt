@@ -1282,7 +1282,10 @@ gpm_r_q_storage_compressor = {
 			10 = { add_resource = { sr_zro = 200 } }
 			10 = { add_resource = { sr_dark_matter = 200 } }
 			10 = { add_resource = { nanites = 200 } }
-			10 = { add_resource = { minor_artifacts = 200 } }
+			10 = { 
+				add_resource = { minor_artifacts = 200 }
+				modifier = { factor = 0 has_ancrel = no }
+			}
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
