@@ -27,25 +27,25 @@ gpm_mega_shipyard_restored_precursor = {
 	resources = {
 		category = megastructures
 		cost = {
-			trigger = { 
+			trigger = {
 				from = { is_ai = no }
 				from = { has_ancrel = no }
 			}
-			alloys = 7000
+			alloys = 5000
 		}
 		cost = {
 			trigger = { 
 				from = { is_ai = no }
 				from = { has_ancrel = yes }
 			}
-			alloys = 5000
-			minor_artifacts = 100
+			alloys = 2500
+			minor_artifacts = 250
 		}
 		cost = {
 			trigger = { 
 				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
 			}
-			alloys = 5000
+			alloys = 2500
 		}
 
 		upkeep = {

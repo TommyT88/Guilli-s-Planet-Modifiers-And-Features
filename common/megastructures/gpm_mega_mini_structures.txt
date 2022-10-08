@@ -31,15 +31,33 @@ gpm_refinery_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 1000
+			trigger = {
+				from = { is_ai = no }
+				from = { has_ancrel = no }
+			}
+			alloys = 500
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = no }
+				from = { has_ancrel = yes }
+			}
+			alloys = 250
+			minor_artifacts = 20
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
+			}
+			alloys = 250
 		}
 
 		upkeep = {
 			minerals = 10
 		}
 		produces = {
-			energy = 40
-			exotic_gases = 3
+			energy = 50
+			exotic_gases = 5
 			unity = 10
 		}
 		produces = {
@@ -82,9 +100,9 @@ gpm_refinery_restored = {
 	}
 
 	possible = {
-		# from = {
-			# has_technology = tech_mega_engineering
-		# }
+		from = {
+			resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+		}
 	}
 
 	on_build_start = {
@@ -152,14 +170,32 @@ gpm_mining_facility_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 500
+			trigger = {
+				from = { is_ai = no }
+				from = { has_ancrel = no }
+			}
+			minerals = 1000
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = no }
+				from = { has_ancrel = yes }
+			}
+			minerals = 500
+			minor_artifacts = 20
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
+			}
+			minerals = 500
 		}
 		upkeep = {
 			energy = 10
 		}
 		produces = {
-			minerals = 40
-			rare_crystals = 3
+			minerals = 50
+			rare_crystals = 5
 			unity = 10
 		}
 		produces = {
@@ -256,9 +292,9 @@ gpm_mining_facility_restored = {
 	}
 
 	possible = {
-		# from = {
-			# has_technology = tech_mega_engineering
-		# }
+		from = {
+			resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+		}
 	}
 
 	on_build_start = {
@@ -325,7 +361,25 @@ gpm_observation_station_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 1000
+			trigger = {
+				from = { is_ai = no }
+				from = { has_ancrel = no }
+			}
+			alloys = 500
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = no }
+				from = { has_ancrel = yes }
+			}
+			alloys = 250
+			minor_artifacts = 20
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
+			}
+			alloys = 500
 		}
 		upkeep = {
 			energy = 10
@@ -369,7 +423,6 @@ gpm_observation_station_restored = {
 				}
 			}
 			society_research = 10
-			minor_artifacts = 0.1
 		}
 		# produces = {
 			# trigger = {
@@ -485,9 +538,9 @@ gpm_observation_station_restored = {
 	}
 
 	possible = {
-		# from = {
-			# has_technology = tech_mega_engineering
-		# }
+		from = {
+			resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+		}
 	}
 
 	on_build_start = {
@@ -552,7 +605,8 @@ gpm_silo_restored = {
 	potential = {
 	}
 
-	possible = {
+	from = {
+		resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
 	}
 	upgrade_from = {
 		gpm_silo_ruined
@@ -561,7 +615,25 @@ gpm_silo_restored = {
 	resources = {
 		category = megastructures
 		cost = {
+			trigger = {
+				from = { is_ai = no }
+				from = { has_ancrel = no }
+			}
 			alloys = 1000
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = no }
+				from = { has_ancrel = yes }
+			}
+			alloys = 500
+			minor_artifacts = 20
+		}
+		cost = {
+			trigger = { 
+				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
+			}
+			alloys = 500
 		}
 
 		upkeep = {
@@ -604,6 +676,7 @@ gpm_silo_restored = {
 	}
 
 	country_modifier = {
-		country_resource_max_add = 30000
+		country_resource_max_add = 25000
+		planet_max_buildings_add = 1
 	}
 }

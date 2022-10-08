@@ -20,16 +20,9 @@ gpm_archaeologist = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 5
-			engineering_research = 5
+			physics_research = 7
+			engineering_research = 7
 			society_research = 7
-		}
-		produces = {
-			trigger = {
-				planet = { gpm_has_precursor_modifiers = yes }
-				owner = { has_ancrel = yes}
-			}
-			minor_artifacts = 0.10
 		}
 		upkeep = {
 			consumer_goods = 3
@@ -83,16 +76,9 @@ gpm_archaeologist_drone = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 5
-			engineering_research = 5
+			physics_research = 7
+			engineering_research = 7
 			society_research = 7
-		}
-		produces = {
-			trigger = {
-				planet = { gpm_has_precursor_modifiers = yes }
-				owner = { has_ancrel = yes}
-			}
-			minor_artifacts = 0.10
 		}
 		upkeep = {
 			energy = 5
@@ -133,28 +119,9 @@ gpm_precursor_archaeologist = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			trigger = {
-				owner = { has_ancrel = no }
-			}
-			physics_research = 8
-			engineering_research = 8
-			society_research = 8
-		}
-		produces = {
-			trigger = {
-				owner = { has_ancrel = yes }
-			}
-			physics_research = 8
-			engineering_research = 8
-			society_research = 8
-			minor_artifacts = 0.50
-		}
-		produces = {
-			trigger = {
-				planet = { is_planet_class = pc_gpm_precursor_tomb }
-				owner = { has_ancrel = yes }
-			}
-			minor_artifacts = 0.50
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
 		}
 		upkeep = {
 			consumer_goods = 6
@@ -208,28 +175,9 @@ gpm_precursor_archaeologist_drone = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			trigger = {
-				owner = { has_ancrel = no }
-			}
-			physics_research = 8
-			engineering_research = 8
-			society_research = 8
-		}
-		produces = {
-			trigger = {
-				owner = { has_ancrel = yes }
-			}
-			physics_research = 8
-			engineering_research = 8
-			society_research = 8
-			minor_artifacts = 0.50
-		}
-		produces = {
-			trigger = {
-				planet = { is_planet_class = pc_gpm_precursor_tomb }
-				owner = { has_ancrel = yes }
-			}
-			minor_artifacts = 0.50
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
 		}
 		upkeep = {
 			energy = 8

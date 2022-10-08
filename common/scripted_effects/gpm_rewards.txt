@@ -7,11 +7,25 @@ gpm_random_minor_artifacts_5 = {
 			has_ancrel = yes
 		}
 		locked_random_list = {
-			35 = { add_resource = { minor_artifacts = 1 } }
-			45 = { add_resource = { minor_artifacts = 2 } }
-			25 = { add_resource = { minor_artifacts = 3 } }
-			15 = { add_resource = { minor_artifacts = 4 } }
-			5 = { add_resource = { minor_artifacts = 5 } }
+			1 = { add_resource = { minor_artifacts = 1 } }
+			2 = { add_resource = { minor_artifacts = 2 } }
+			4 = { add_resource = { minor_artifacts = 3 } }
+			8 = { add_resource = { minor_artifacts = 4 } }
+			10 = { add_resource = { minor_artifacts = 5 } }
+			10 = { add_resource = { minor_artifacts = 6 } }
+			10 = { add_resource = { minor_artifacts = 7 } }
+			10 = { add_resource = { minor_artifacts = 8 } }
+			10 = { add_resource = { minor_artifacts = 9 } }
+			10 = { add_resource = { minor_artifacts = 10 } }
+			10 = { add_resource = { minor_artifacts = 11 } }
+			10 = { add_resource = { minor_artifacts = 12 } }
+			10 = { add_resource = { minor_artifacts = 13 } }
+			10 = { add_resource = { minor_artifacts = 14 } }
+			10 = { add_resource = { minor_artifacts = 15 } }
+			8 = { add_resource = { minor_artifacts = 20 } }
+			4 = { add_resource = { minor_artifacts = 25 } }
+			2 = { add_resource = { minor_artifacts = 30 } }
+			1 = { add_resource = { minor_artifacts = 50 } }
 		}
 	}
 
@@ -44,11 +58,25 @@ gpm_random_minor_artifacts_precursor = {
 			has_ancrel = yes
 		}
 		locked_random_list = {
-			15 = { add_resource = { minor_artifacts = 4 } }
-			25 = { add_resource = { minor_artifacts = 5 } }
-			50 = { add_resource = { minor_artifacts = 6 } }
+			1 = { add_resource = { minor_artifacts = 1 } }
+			2 = { add_resource = { minor_artifacts = 2 } }
+			4 = { add_resource = { minor_artifacts = 3 } }
+			8 = { add_resource = { minor_artifacts = 4 } }
+			10 = { add_resource = { minor_artifacts = 5 } }
+			10 = { add_resource = { minor_artifacts = 6 } }
 			10 = { add_resource = { minor_artifacts = 7 } }
-			5 = { add_resource = { minor_artifacts = 9 } }
+			10 = { add_resource = { minor_artifacts = 8 } }
+			10 = { add_resource = { minor_artifacts = 9 } }
+			10 = { add_resource = { minor_artifacts = 10 } }
+			10 = { add_resource = { minor_artifacts = 11 } }
+			10 = { add_resource = { minor_artifacts = 12 } }
+			10 = { add_resource = { minor_artifacts = 13 } }
+			10 = { add_resource = { minor_artifacts = 14 } }
+			10 = { add_resource = { minor_artifacts = 15 } }
+			8 = { add_resource = { minor_artifacts = 20 } }
+			4 = { add_resource = { minor_artifacts = 25 } }
+			2 = { add_resource = { minor_artifacts = 30 } }
+			1 = { add_resource = { minor_artifacts = 50 } }
 		}
 	}
 
@@ -81,14 +109,25 @@ gpm_random_minor_artifacts_precursor_big = {
 			has_ancrel = yes
 		}
 		locked_random_list = {
-			15 = { add_resource = { minor_artifacts = 10 } }
-			25 = { add_resource = { minor_artifacts = 12 } }
-			50 = { add_resource = { minor_artifacts = 14 } }
-			25 = { add_resource = { minor_artifacts = 16 } }
-			15 = { add_resource = { minor_artifacts = 18 } }
-			10 = { add_resource = { minor_artifacts = 20 } }
-			5 = { add_resource = { minor_artifacts = 25 } }
-			1 = { add_resource = { minor_artifacts = 30 } }
+			1 = { add_resource = { minor_artifacts = 10 } }
+			2 = { add_resource = { minor_artifacts = 20 } }
+			4 = { add_resource = { minor_artifacts = 30 } }
+			8 = { add_resource = { minor_artifacts = 40 } }
+			10 = { add_resource = { minor_artifacts = 50 } }
+			10 = { add_resource = { minor_artifacts = 60 } }
+			10 = { add_resource = { minor_artifacts = 70 } }
+			10 = { add_resource = { minor_artifacts = 80 } }
+			10 = { add_resource = { minor_artifacts = 90 } }
+			10 = { add_resource = { minor_artifacts = 100 } }
+			10 = { add_resource = { minor_artifacts = 110 } }
+			10 = { add_resource = { minor_artifacts = 120 } }
+			10 = { add_resource = { minor_artifacts = 130 } }
+			10 = { add_resource = { minor_artifacts = 140 } }
+			10 = { add_resource = { minor_artifacts = 150 } }
+			8 = { add_resource = { minor_artifacts = 200 } }
+			4 = { add_resource = { minor_artifacts = 250 } }
+			2 = { add_resource = { minor_artifacts = 300 } }
+			1 = { add_resource = { minor_artifacts = 500 } }
 		}
 	}
 
@@ -111,7 +150,7 @@ gpm_random_minor_artifacts_precursor_big = {
 	# we give AI a minor artifact boost as they're not as intelligent with managing them
 	if = {
 		limit = { is_ai = yes }
-		add_resource = { minor_artifacts = 90 }
+		add_resource = { minor_artifacts = 200 }
 	}
 }
 

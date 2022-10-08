@@ -777,7 +777,7 @@ country_event = {
 					log = "<< RELICS >> | RELIC STOLEN <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_STOLEN
-						localization = GPM_MESSAGE_RELIC_STOLEN
+						localization = GPM_MESSAGE_RELIC_STOLEN_DESC
 						days = 30
 						target = root.owner.capital_scope
 						variable = {
@@ -935,7 +935,7 @@ country_event = {
 					log = "<< RELICS >> | RELIC STOLEN <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_STOLEN
-						localization = GPM_MESSAGE_RELIC_STOLEN
+						localization = GPM_MESSAGE_RELIC_STOLEN_DESC
 						days = 30
 						target = root.owner.capital_scope
 						variable = {

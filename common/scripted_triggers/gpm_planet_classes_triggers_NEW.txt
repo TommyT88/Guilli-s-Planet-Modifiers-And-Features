@@ -237,6 +237,7 @@ gpm_is_planet_class_habitat = {
 gpm_is_planet_class_ringworld = {
 	optimize_memory
 	OR = {
+		is_ringworld = yes
 		is_planet_class = pc_ringworld_habitable				# Vanilla
 		is_planet_class = pc_cybrex								# Vanilla
 		is_planet_class = pc_city_ringworld_habitable 			# GE

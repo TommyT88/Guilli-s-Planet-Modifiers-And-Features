@@ -51,17 +51,7 @@ gpm_dreadnaught_army = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
-			alloys = 25
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 25
-			minor_artifacts = 5
+			alloys = 35
 		}
 		upkeep = {
 			energy = 3
@@ -100,17 +90,7 @@ gpm_precursor_mech_army = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
 			alloys = 50
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 50
-			minor_artifacts = 10
 		}
 		upkeep = {
 			energy = 5
@@ -229,17 +209,7 @@ gpm_precursor_mech_army_machine = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
 			alloys = 50
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 50
-			minor_artifacts = 10
 		}
 		upkeep = {
 			energy = 5
@@ -344,22 +314,12 @@ gpm_relic_tank_battalion = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
-			alloys = 25
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 25
-			minor_artifacts = 5
+			alloys = 75
 		}
 
 		upkeep = {
 			energy = 0.5
-			alloys = 0.1
+			alloys = 0.2
 		}
 	}
 
@@ -384,22 +344,12 @@ gpm_relic_mech_squadron = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
-			alloys = 50
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 50
-			minor_artifacts = 5
+			alloys = 75
 		}
 
 		upkeep = {
 			energy = 1
-			alloys = 0.25
+			alloys = 0.2
 		}
 	}
 
@@ -424,21 +374,12 @@ gpm_relic_fighter_squadron = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
-			alloys = 30
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 30
-			minor_artifacts = 5
+			alloys = 100
 		}
 
 		upkeep = {
 			energy = 3
+			alloys = 0.3
 		}
 	}
 
@@ -461,17 +402,7 @@ gpm_relic_power_armoured_troops = {
 	resources = {
 		category = armies
 		cost = {
-			trigger = {
-				has_ancrel = no
-			}
-			alloys = 15
-		}
-		cost = {
-			trigger = {
-				has_ancrel = yes
-			}
-			alloys = 15
-			minor_artifacts = 2
+			alloys = 25
 		}
 
 		upkeep = {

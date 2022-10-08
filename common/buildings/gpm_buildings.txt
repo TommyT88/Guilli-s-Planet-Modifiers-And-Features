@@ -118,15 +118,22 @@ gpm_building_mining_nanite_nexus = {
 gpm_precursor_research_center = {
 	base_buildtime = 480
 
-	empire_limit = {
-		base = 1
-	}
+	# empire_limit = {
+	# 	base = 1
+	# }
 
 	category = research
 
 	potential = {
 		owner = { has_country_flag = gpm_artifact_research_centre_unlocked }
 		has_ancrel = yes
+	}
+
+	allow = {
+		OR = {
+			has_precursor_modifiers = yes
+			is_capital = yes
+		}
 	}
 
 	prerequisites = {
