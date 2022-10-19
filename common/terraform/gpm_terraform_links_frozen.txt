@@ -27,10 +27,26 @@ terraform_link = {
 	to = pc_ocean
     resources = { category = terraforming_ocean cost = { energy = @terraforming_cost_level_3 } }
 	duration = @terraforming_duration_level_3
+	potential = {
+		has_trait = trait_aquatic
+		from = { has_modifier = frozen_terraforming_candidate }
+	}
+	condition = { 
+		has_ascension_perk = ap_hydrocentric
+		has_technology = "tech_climate_restoration"
+	}
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 5 }	
+}
+terraform_link = {
+	from = pc_frozen
+	to = pc_ocean
+    resources = { category = terraforming_ocean cost = { energy = @terraforming_cost_level_3 } }
+	duration = @terraforming_duration_level_3
 	potential = { from = { has_modifier = terraforming_candidate } }
 	condition = { has_technology = "tech_climate_restoration" }
 	effect = { from = { remove_modifier = terraforming_candidate } }
-	ai_weight = { weight = 5 }
+	ai_weight = { weight = 5 }	
 }
 terraform_link = {
 	from = pc_frozen

@@ -100,6 +100,10 @@ gpm_spy_policy_steal_relic = {
 		}
 		# With every relic our taste for more increases
 		modifier = {
+			owner = { num_owned_relics = 0 }
+			factor = 0
+		}
+		modifier = {
 			owner = { num_owned_relics = 1 }
 			factor = 1.1
 		}

@@ -76,41 +76,42 @@ planet_event = {
 					gpm_is_planet_class_habitat = yes
 				}
 			}
-			solar_system = {
-				if = { # Build starbase if no other colonies are left	
-					limit = {	
-						NOT = {	
-							exists = starbase	
-							any_system_planet = {	
-								has_owner = yes	
-								owner = {	
-									NOT = { is_same_value = event_target:swarm }
-								}
+			remove_planet = yes
+		}
+		solar_system = {
+			if = { # Build starbase if no other colonies are left	
+				limit = {	
+					NOT = {	
+						exists = starbase	
+						any_system_planet = {	
+							has_owner = yes	
+							owner = {	
+								NOT = { is_same_value = event_target:swarm }
 							}
 						}
 					}
-					create_starbase = {	
-						size = starbase_swarm	
-						owner = event_target:swarm	
-					}
-					if = {
-						limit = {
-							NOT = {
-								any_system_ambient_object = { has_ambient_object_flag = swarm_system_effect }
-							}
+				}
+				create_starbase = {	
+					size = starbase_swarm	
+					owner = event_target:swarm	
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_system_ambient_object = { has_ambient_object_flag = swarm_system_effect }
 						}
-						star = {
-							create_ambient_object = {
-								type = "swarm_1"	
-								location = this	
-							}
-							last_created_ambient_object = {
-								set_ambient_object_flag = swarm_system_effect	
-								set_location = {	
-									target = prev	
-									distance = 0	
-									angle = random	
-								}
+					}
+					star = {
+						create_ambient_object = {
+							type = "swarm_1"	
+							location = this	
+						}
+						last_created_ambient_object = {
+							set_ambient_object_flag = swarm_system_effect	
+							set_location = {	
+								target = prev	
+								distance = 0	
+								angle = random	
 							}
 						}
 					}

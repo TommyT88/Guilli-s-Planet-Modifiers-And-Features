@@ -79,8 +79,10 @@ GPM_WEIRD_CAT = {
 			add = 3
 			OR = {
 				gpm_is_planet_class_normal_habitable = yes
-				gpm_is_planet_class_normal_uninhabitable = yes
-			}			
+				gpm_is_planet_class_molten = yes
+				gpm_is_planet_class_frozen = yes
+				gpm_is_planet_class_barren = yes
+			}
 			NOT = { gpm_is_planet_class_asteroid = yes }
 		}
 		modifier = { factor = 0 gpm_is_a_precursor_world = yes }

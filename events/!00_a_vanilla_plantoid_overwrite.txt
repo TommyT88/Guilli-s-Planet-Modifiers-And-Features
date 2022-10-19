@@ -1,0 +1,56 @@
+namespace = plant
+
+# Gaia Seed building chain completed.
+planet_event = {
+	id = plant.100
+	is_triggered_only = yes
+	title = "plant.100.name"
+	desc = "plant.100.desc"
+	picture = GFX_evt_gaia
+
+	trigger = {
+		last_building_changed = building_gaiaseeders_4
+		NOT = {
+			is_planet_class = pc_gaia
+		}
+	}
+
+	immediate = {
+		# Turn planet into Gaia world.
+		change_pc = pc_gaia
+		
+		## Guilli ##
+		planet_event = { id = gpm_terraform.78871 }
+		## Guilli End ##
+
+		# Remove Gaia Seed building.
+		remove_building = building_gaiaseeders_4
+	}
+
+	option = {
+		# Not Hive-mind
+		name = plant.100.a
+		trigger = {
+			owner = { is_hive_empire = no }
+		}
+		add_modifier = {
+			modifier = celebrate_idyllic_bloom
+			days = 180
+		}
+	}
+
+	option = {
+		name = plant.100.b
+		# Hive-mind
+		trigger = {
+			owner = { is_hive_empire = yes }
+		}
+	}
+
+	after = {
+		tooltip = {
+			change_pc = pc_gaia
+			remove_building = building_gaiaseeders_4
+		}
+	}
+}

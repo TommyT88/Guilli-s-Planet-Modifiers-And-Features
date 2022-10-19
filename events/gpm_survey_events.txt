@@ -3144,6 +3144,135 @@ ship_event = {
 			}
 		}
 	}
+	# Spiritualist option
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					OR = {
+						has_ethic = "ethic_fanatic_spiritualist"
+						has_ethic = "ethic_spiritualist"
+					}
+				}
+			}
+		}
+		name = gpm_survey.24.spiritualist
+		# purge modifier and give alloys
+		FROM = {
+			remove_modifier = gpm_android_pleasure_palace
+			add_deposit = d_bomb_crater
+			add_deposit = d_bomb_crater
+			add_deposit = d_bomb_crater
+		}
+		owner = { add_resource = { alloys = 362 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
+	# Xenophile option
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					OR = {
+						has_ethic = "ethic_fanatic_xenophile"
+						has_ethic = "ethic_xenophile"
+					}
+				}
+			}
+		}
+		name = gpm_survey.24.xenophile
+		# give pops 
+		owner = {
+			random_owned_planet ={
+				limit = { is_capital = yes }
+				create_pop = {
+					species = owner_main_species
+					ethos = { ethic = ethic_fanatic_xenophile }
+				}
+				create_pop = {
+					species = owner_main_species
+					ethos = { ethic = ethic_fanatic_xenophile }
+				}
+			}
+		}
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
+	# Determined Exterminator option
+	option = {
+		trigger = { root = { owner = { has_authority = auth_machine_intelligence has_civic = civic_machine_terminator } } }
+		name = gpm_survey.24.DE
+		# purge modifier and give alloys
+		FROM = {
+			remove_modifier = gpm_android_pleasure_palace
+		}
+		owner = { add_resource = { alloys = 1000 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
+	# Hivemind option
+	option = {
+		trigger = { root = { owner = { has_authority = auth_hive_mind } } }
+		name = gpm_survey.24.hive
+		# purge modifier and give alloys
+		FROM = {
+			remove_modifier = gpm_android_pleasure_palace
+			add_deposit = d_crater
+		}
+		owner = { add_resource = { alloys = 650 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
+	# machine assimilator option
+	option = {
+		trigger = { root = { owner = { has_authority = auth_machine_intelligence has_civic = civic_machine_assimilator } } }
+		name = gpm_survey.24.assimilator
+		# purge modifier and give machine pops
+		FROM = {
+			remove_modifier = gpm_android_pleasure_palace
+		}
+		owner = {
+			random_owned_planet ={
+				limit = { is_capital = yes }
+				create_pop = {
+					species = owner_main_species
+				}
+				create_pop = {
+					species = owner_main_species
+				}
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+		}
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
+	# machine servitor option
+	option = {
+		trigger = { root = { owner = { has_authority = auth_machine_intelligence has_civic = civic_machine_servitor } } }
+		name = gpm_survey.24.servitor
+		# duplicate modifier on capital
+		owner = {
+			random_owned_planet ={
+				limit = { is_capital = yes }
+				add_modifier = { modifier = gpm_android_pleasure_palace multiplier = 1 } }
+		}
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
+	# pleasure seekers
+	option = {
+		trigger = { root = { owner = { has_civic = civic_pleasure_seekers } } }
+		name = gpm_survey.24.pleasureseekers
+		# thematic rewards
+		# add_modifier = { modifier = "gpm_android_pleasure_palace_discovery" days = -1 }
+		owner = { 
+			give_technology = { tech = tech_gpm_android_pleasure_palace_discovery }
+		}
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+	}
 }
 # android pleasure palace discovery bonuses
 ship_event = {
@@ -5743,6 +5872,33 @@ ship_event = {
 				}
 			}
 		}
+	}
+	# purge with fire option
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					NOR = {
+						has_ethic = "ethic_fanatic_xenophile"
+						has_ethic = "ethic_xenophile"
+					}
+				}
+			}
+		}
+		name = gpm_survey.31.fire
+		# fire fire fire
+		FROM = {
+			remove_modifier = gpm_arachnophobia
+			change_pc = pc_nuked
+			hidden_effect = {
+				set_planet_flag = nuked_planet_anomalies_disabled
+				gpm_purge_all_planetary_modifiers = yes
+				reroll_planet = yes
+			}
+			add_deposit = d_bomb_crater
+		}
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
 	}
 }
 # arachnids discovery bonuses

@@ -483,9 +483,13 @@ planet_event = {
 		if = {
 			limit = {
 				OR = {
-					gpm_is_planet_class_normal_uninhabitable = yes
-					gpm_is_planet_class_toxic = yes
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
 					gpm_is_planet_class_barren = yes
+					AND = {
+						has_toxoids = yes
+						gpm_is_planet_class_toxic = yes
+					}
 				}
 			}
 			random_list = {
@@ -790,7 +794,11 @@ planet_event = {
 		# Spawn a terraforming candidate if specific modifiers are present
 		if = {
 			limit = {
-				gpm_is_planet_class_normal_uninhabitable = yes
+				OR = {
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+					gpm_is_planet_class_barren = yes
+				}
 				gpm_has_required_terraform_modifier = no
 				OR = {
 					# has_modifier = gpm_unnatural_world
@@ -798,17 +806,26 @@ planet_event = {
 					has_modifier = gpm_spaceship_graveyard
 					# has_modifier = gpm_old_world
 					has_modifier = gpm_artificial_core
+					gpm_has_precursor_modifiers = yes
 				}
 			}
-			add_modifier = { modifier = terraforming_candidate days = -1 }
+			add_modifier = { modifier = terraforming_candidate }
 		}
 		if = {
 			limit = {
-				gpm_has_precursor_modifiers = yes
-				gpm_is_planet_class_normal_uninhabitable = yes
-				gpm_has_required_terraform_modifier = no
+					gpm_is_planet_class_toxic = yes
+					has_toxoids = yes
+					NOT = { has_modifier = toxic_terraforming_candidate }
+					OR = {
+						# has_modifier = gpm_unnatural_world
+						has_modifier = gpm_ultra_rich_2
+						has_modifier = gpm_spaceship_graveyard
+						# has_modifier = gpm_old_world
+						has_modifier = gpm_artificial_core
+						gpm_has_precursor_modifiers = yes
+					}
 			}
-			add_modifier = { modifier = terraforming_candidate }
+			add_modifier = { modifier = toxic_terraforming_candidate }
 		}
 
 		

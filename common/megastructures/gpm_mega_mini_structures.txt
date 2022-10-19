@@ -100,8 +100,14 @@ gpm_refinery_restored = {
 	}
 
 	possible = {
-		from = {
-			resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+		OR = { 
+			has_ancrel = no
+			AND = {
+				from = {
+					has_ancrel = yes
+					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+				}
+			}
 		}
 	}
 
@@ -292,8 +298,14 @@ gpm_mining_facility_restored = {
 	}
 
 	possible = {
-		from = {
-			resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+		OR = { 
+			has_ancrel = no
+			AND = {
+				from = {
+					has_ancrel = yes
+					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+				}
+			}
 		}
 	}
 
@@ -538,8 +550,14 @@ gpm_observation_station_restored = {
 	}
 
 	possible = {
-		from = {
-			resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+		OR = { 
+			has_ancrel = no
+			AND = {
+				from = {
+					has_ancrel = yes
+					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+				}
+			}
 		}
 	}
 
@@ -602,12 +620,18 @@ gpm_silo_restored = {
 	# build_outside_gravity_well = yes
 	show_galactic_map_icon = yes
 
-	potential = {
+	possible = {
+		OR = { 
+			has_ancrel = no
+			AND = {
+				from = {
+					has_ancrel = yes
+					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+				}
+			}
+		}
 	}
 
-	from = {
-		resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
-	}
 	upgrade_from = {
 		gpm_silo_ruined
 	}

@@ -858,11 +858,17 @@
  gpm_start_menu.1.old_galaxy_age:0 "§YGalaxy Age:§! Old"
  gpm_start_menu.1.old_galaxy_ageTT:0 "§HClick to Cycle§! through the settings that determine the age of the galaxy. This determines the spawn chance of planet modifiers. An old galaxy will have more ruins and signs of previous civilisations.\n-----§HGalaxy Age:§!:-----\n§L Young§! \n§L Normal (default)§!\n§W Old§G(currently selected)§!\n\n§HEffects:§!\nPrecursor Planet Modifiers: §G+30%§! spawn chance\nNormal non-natural Planet Modifiers: §G+30%§! spawn chance\nNormal natural Planet Modifiers: §R-30%§! spawn chance"
 
- gpm_start_menu.1.default_scaling:0 "§YScaling:§! On"
- gpm_start_menu.1.default_scalingTT:0 "§HClick to Cycle§! through the settings that determine if planet modifiers scale based on planet size. §HScaling is now turned§! §GON§!"
+ gpm_start_menu.1.default_scaling:0 "§YScaling:§! Planet Size"
+ gpm_start_menu.1.default_scalingTT:0 "§HClick to Cycle§! through the settings that determine how planet modifiers scale.\n-----§HScaling:§!:-----\n§W On Planet Size§! §G(currently selected)§!\n§L Random§!\n§L Random+§!\n§L Off§!"
+ 
+ gpm_start_menu.1.scaling_random:0 "§YScaling:§! Random"
+ gpm_start_menu.1.scaling_randomTT:0 "§HClick to Cycle§! through the settings that determine how planet modifiers scale.\n-----§HScaling:§!:-----\n§L On Planet Size§!\n§W Random§! §G(currently selected)§!\n§L Random+§!\n§L Off§!"
+
+ gpm_start_menu.1.scaling_randomplus:0 "§YScaling:§! Random+"
+ gpm_start_menu.1.scaling_randomplusTT:0 "§HClick to Cycle§! through the settings that determine how planet modifiers scale.\n-----§HScaling:§!:-----\n§L On Planet Size§!\n§L Random§!\n§W Random+§! §G(currently selected)§!\n§L Off§!\n\n§LPlanet modifier bonuses §Tmaximum§! values is increased by 50%\n<<<§RWarning§!: this isn't very balanced!>>>§!"
 
  gpm_start_menu.1.scaling_off:0 "§YScaling:§! Off"
- gpm_start_menu.1.scaling_offTT:0 "§HClick to Cycle§! through the settings that determine if planet modifiers scale based on planet size. §HScaling is now turned§! §ROFF§!"
+ gpm_start_menu.1.scaling_offTT:0 "§HClick to Cycle§! through the settings that determine how planet modifiers scale.\n-----§HScaling:§!:-----\n§L On Planet Size§!\n§L Random§!\n§L Random+§!\n§R Off§! §G(currently selected)§!"
  
  # various options
  gpm_start_menu.1.options:0 "£options_icon  §YOptions§! £options_icon"
@@ -1164,7 +1170,7 @@
  tech_gpm_artificial_water_discovery_2:0 "Nanite Coolant"
  tech_gpm_artificial_water_discovery_2_desc:0 "Nanite coolant is capable of keeping itself cold, so cold it can stay near sub-zero temperatures forever. It does this by actively transferring heat from it's environment and retaining that heat in hyper-efficient thermal cells."
  
- tech_gpm_android_pleasure_palace_discovery:0 "Black Market Droids"
+ tech_gpm_android_pleasure_palace_discovery:0 "Pleasure Droids"
  tech_gpm_android_pleasure_palace_discovery_desc:0 "While not officially supported, pleasure droids are so widespread they are impossible to forbid at this point. A thriving black market has resulted in one being in nearly every home, though none would admit to owning one."
  
  tech_gpm_android_pleasure_palace_discovery_2:0 "Droid Servants"

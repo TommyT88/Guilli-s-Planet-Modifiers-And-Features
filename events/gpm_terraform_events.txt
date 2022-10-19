@@ -91,6 +91,14 @@ planet_event = {
 				limit = { has_modifier = terraforming_candidate }
 				remove_modifier = terraforming_candidate
 			}
+			if = {
+				limit = { has_modifier = frozen_terraforming_candidate }
+				remove_modifier = terraforming_candidate
+			}
+			if = {
+				limit = { has_modifier = toxic_terraforming_candidate }
+				remove_modifier = terraforming_candidate
+			}
 
 			# Machine world modifiers
 			# Random modifier

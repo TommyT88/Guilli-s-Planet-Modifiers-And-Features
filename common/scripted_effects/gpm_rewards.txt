@@ -2502,11 +2502,13 @@ gpm_random_precursor_empire_dig_site_bonus = {
 					max = 3000
 				}
 			}
-			# log = "gpm_random_precursor_empire_dig_site_bonus - unity"
+			# log = "gpm_random_precursor_empire_dig_site_bonus - unity"			
+			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
 		}
 		25 = { 
 			owner = { add_resource = { minor_artifacts = 50 } }
-			# log = "gpm_random_precursor_empire_dig_site_bonus - minor_artifacts"
+			# log = "gpm_random_precursor_empire_dig_site_bonus - minor_artifacts"			
+			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
 		}
 		25 = {
 			owner = {
@@ -2530,6 +2532,7 @@ gpm_random_precursor_empire_dig_site_bonus = {
 				}
 			}
 			# log = "gpm_random_precursor_empire_dig_site_bonus - research"
+			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
 		}
 		50 = {
 			owner = { add_modifier = { modifier = gpm_precursor_energy_grid_discovery } }

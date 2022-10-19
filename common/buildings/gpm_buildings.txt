@@ -61,7 +61,6 @@ gpm_building_mining_nanite_nexus = {
 	
 	potential = {
 		NOT = { has_modifier = resort_colony }
-
 		NOR = { # Ringworlds don't have mines
 			is_planet_class = pc_ringworld_habitable
 			is_planet_class = pc_cybrex
@@ -127,12 +126,18 @@ gpm_precursor_research_center = {
 	potential = {
 		owner = { has_country_flag = gpm_artifact_research_centre_unlocked }
 		has_ancrel = yes
+		planet = {
+			OR = {
+				# gpm_has_precursor_modifiers = yes
+				gpm_is_a_precursor_world = yes
+				is_capital = yes
+			}
+		}
 	}
 
 	allow = {
-		OR = {
-			has_precursor_modifiers = yes
-			is_capital = yes
+		planet = {
+			NOT = { has_building = gpm_precursor_research_center }
 		}
 	}
 
@@ -144,7 +149,7 @@ gpm_precursor_research_center = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			minor_artifacts = 1
+			minor_artifacts = 0.2
 		}
 		cost = {
 			minerals = 1200

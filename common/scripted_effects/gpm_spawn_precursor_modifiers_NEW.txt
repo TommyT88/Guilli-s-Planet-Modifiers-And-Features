@@ -892,10 +892,34 @@ gpm_roll_precursor_modifiers = {
 
 	# adds terraforming candidate modifier on uninhabitable worlds with precursor modifiers
 	if = {
-		limit = {
-			gpm_is_planet_class_normal_uninhabitable = yes
-			gpm_has_required_terraform_modifier = no
+		limit = { has_toxoids = yes }
+		if = {
+			limit = {
+				OR = {
+					gpm_is_planet_class_molten = yes
+					gpm_is_planet_class_frozen = yes
+					gpm_is_planet_class_barren = yes
+				}
+			}
+			add_modifier = { modifier = terraforming_candidate }
 		}
-		add_modifier = { modifier = terraforming_candidate }
+		if = {
+			limit = { gpm_is_planet_class_toxic = yes }
+			add_modifier = { modifier = toxic_terraforming_candidate }
+			if = {
+				limit = { has_modifier = terraforming_candidate }
+				remove_modifier = terraforming_candidate
+			}
+		}
+	}
+	else_if = {
+		limit = { has_toxoids = no }
+		if = {
+			limit = {
+				gpm_is_planet_class_normal_uninhabitable = yes
+				gpm_has_required_terraform_modifier = no
+			}
+			add_modifier = { modifier = terraforming_candidate }
+		}
 	}
 }

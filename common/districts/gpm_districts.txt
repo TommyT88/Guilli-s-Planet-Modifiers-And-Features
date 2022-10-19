@@ -210,6 +210,7 @@ district_gpm_precursor_science = {
 		category = planet_districts	
 		cost = {
 			minerals = 500
+			minor_artifacts = 100
 		}
 		upkeep = {
 			energy = 5
@@ -383,7 +384,7 @@ district_gpm_precursor_manufactorium = {
 				exists = owner
 				owner = {
 					NOT = { has_deficit = minor_artifacts }
-					is_machine_empire = yes
+					is_gestalt = yes
 				}
 			}
 			alloys = 30
@@ -393,7 +394,7 @@ district_gpm_precursor_manufactorium = {
 				exists = owner
 				owner = {
 					NOT = { has_deficit = minor_artifacts }
-					is_machine_empire = no
+					is_gestalt = no
 				}
 			}
 			alloys = 20

@@ -40,73 +40,188 @@ gpm_scale_planet_modifiers = {
 	set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 	set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
 
-	# Planet Wonders
-	# get planet size as variable
-	if = { 
-		limit = { planet_size < 12 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.25 }
-	}
-	if = { 
-		limit = { planet_size > 11 planet_size < 16 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.5 }
-	}
-	if = { 
-		limit = { planet_size > 15 planet_size < 20 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-	}
-	if = { 
-		limit = { planet_size > 19 planet_size < 24 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.50 }
-	}
-	if = { 
-		limit = { planet_size > 23 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 2 }
+	# base scaling option: scales modifiers on planet size
+	if = {
+		limit = { has_global_flag = gpm_scaling_base_modifier_option }
+		# Planet Wonders
+		# get planet size as variable
+		if = { 
+			limit = { planet_size < 12 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.25 }
+		}
+		if = { 
+			limit = { planet_size > 11 planet_size < 16 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.5 }
+		}
+		if = { 
+			limit = { planet_size > 15 planet_size < 20 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+		}
+		if = { 
+			limit = { planet_size > 19 planet_size < 24 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.50 }
+		}
+		if = { 
+			limit = { planet_size > 23 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 2 }
+		}
+
+		# Precursor Modifiers
+		if = {
+			limit = { planet_size < 12 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.5 }
+		}
+		if = { 
+			limit = { planet_size > 11 planet_size < 16 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.75 }
+		}
+		if = { 
+			limit = { planet_size > 15 planet_size < 20 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+		}
+		if = { 
+			limit = { planet_size > 19 planet_size < 24 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.5 }
+		}
+		if = { 
+			limit = { planet_size > 23 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 2 }
+		}
+
+		# General Modifiers
+		if = {
+			limit = { planet_size < 12 }
+			set_variable = { which = gpm_planet_size_multiplier value = 0.5 }
+		}
+		if = { 
+			limit = { planet_size > 11 planet_size < 16 }
+			set_variable = { which = gpm_planet_size_multiplier value = 0.75 }
+		}
+		if = { 
+			limit = { planet_size > 15 planet_size < 20 }
+			set_variable = { which = gpm_planet_size_multiplier value = 1 }
+		}
+		if = {
+			limit = { planet_size > 19 planet_size < 24 }
+			set_variable = { which = gpm_planet_size_multiplier value = 1.50 }
+		}
+		if = { 
+			limit = { planet_size > 23 }
+			set_variable = { which = gpm_planet_size_multiplier value = 2 }
+		}
 	}
 
-	# Precursor Modifiers
+	
+
+	# random scaling option: scales modifiers randomly
 	if = {
-		limit = { planet_size < 12 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.5 }
-	}
-	if = { 
-		limit = { planet_size > 11 planet_size < 16 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.75 }
-	}
-	if = { 
-		limit = { planet_size > 15 planet_size < 20 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
-	}
-	if = { 
-		limit = { planet_size > 19 planet_size < 24 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.5 }
-	}
-	if = { 
-		limit = { planet_size > 23 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 2 }
+		limit = { has_global_flag = gpm_scaling_random_modifier_option }
+		random_list = {
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.25 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.5 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 0.5 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.5 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.75 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 0.75 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 1 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.5 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.5 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 1.5 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 2 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 2 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 2 }
+			}
+		}
 	}
 
-	# General Modifiers
+	# random plus scaling option: scales modifiers randomly with higher ceiling
 	if = {
-		limit = { planet_size < 12 }
-		set_variable = { which = gpm_planet_size_multiplier value = 0.5 }
+		limit = { has_global_flag = gpm_scaling_random_plus_modifier_option }
+		random_list = {
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.25 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.5 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 0.5 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.5 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.75 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 0.75 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 1 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.5 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.5 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 1.5 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 2 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 2 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 2 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 2.5 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 2.5 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 2.5 }
+			}
+			10 = {
+				# Planet Wonders
+				set_variable = { which = gpm_planet_size_multiplier_wonders value = 3 }
+				# Precursor Modifiers
+				set_variable = { which = gpm_planet_size_multiplier_precursor value = 3 }
+				# General Modifiers
+				set_variable = { which = gpm_planet_size_multiplier value = 3 }
+			}
+		}
 	}
-	if = { 
-		limit = { planet_size > 11 planet_size < 16 }
-		set_variable = { which = gpm_planet_size_multiplier value = 0.75 }
-	}
-	if = { 
-		limit = { planet_size > 15 planet_size < 20 }
-		set_variable = { which = gpm_planet_size_multiplier value = 1 }
-	}
-	if = {
-		limit = { planet_size > 19 planet_size < 24 }
-		set_variable = { which = gpm_planet_size_multiplier value = 1.50 }
-	}
-	if = { 
-		limit = { planet_size > 23 }
-		set_variable = { which = gpm_planet_size_multiplier value = 2 }
-	}
-
 }
 
 

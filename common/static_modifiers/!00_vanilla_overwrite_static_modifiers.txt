@@ -28,6 +28,20 @@ terraforming_candidate = {
 	important = yes			# if present on a planet, show the planet's nameplate
 }
 
+frozen_terraforming_candidate = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 6
+	important = yes			# if present on a planet, show the planet's nameplate
+	custom_tooltip = frozen_terraforming_candidate_tooltip
+}
+
+toxic_terraforming_candidate = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 6
+	important = yes			# if present on a planet, show the planet's nameplate
+	custom_tooltip = toxic_terraforming_candidate_tooltip
+}
+
 hazardous_weather = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_energy_produces_mult = 0.20

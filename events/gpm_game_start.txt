@@ -19,9 +19,10 @@ event = {
 		is_ai = no                                              # stop this from running on AI 
 	}
 	immediate = {
-		set_global_flag = gpm_initialisation_menu       # safety to prevent additional runs
-		set_global_flag = gpm_modifier_amount_normal    # for my mod I set a base amount too to get amount cycle option working (has to have a base to check with)
-		set_global_flag = gpm_galaxy_age_default		# for my mod I set the default galaxy ag to get the age cycle option working ^
+		set_global_flag = gpm_initialisation_menu       		# safety to prevent additional runs
+		set_global_flag = gpm_modifier_amount_normal    		# for my mod I set a base amount too to get amount cycle option working (has to have a base to check with)
+		set_global_flag = gpm_galaxy_age_default				# for my mod I set the default galaxy ag to get the age cycle option working ^
+		set_global_flag = gpm_scaling_base_modifier_option		# set base scaling option
 
 		country_event = { id = gpm_start_menu.1 }       # this is the actual start menu
 
@@ -69,6 +70,7 @@ event = {
 				limit = {
 					exists = owner
 					owner = { is_primitive = no }
+					owner = { is_human_species = yes }
 				}
 				set_star_flag = gpm_has_james_web_flag
 				random_system_planet = {

@@ -144,16 +144,42 @@ country_event = {
 	# Scaling on (default)
 	option = {
 		trigger = {
-			NOT = { has_global_flag = gpm_scaling_multiplier_disabled }
+			has_global_flag = gpm_scaling_base_modifier_option
 		}
 		name = gpm_start_menu.1.default_scaling
 		custom_tooltip = gpm_start_menu.1.default_scalingTT
-		set_global_flag = gpm_scaling_multiplier_disabled
+		set_global_flag = gpm_scaling_random_modifier_option
+		remove_global_flag = gpm_scaling_base_modifier_option
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}	
+	# scaling random
+	option = {
+		trigger = {
+			has_global_flag = gpm_scaling_random_modifier_option
+		}
+		name = gpm_start_menu.1.scaling_random
+		custom_tooltip = gpm_start_menu.1.scaling_randomTT
+		set_global_flag = gpm_scaling_random_plus_modifier_option
+		remove_global_flag = gpm_scaling_random_modifier_option
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
 		}
 	}
-	
+	# scaling random plus
+	option = {
+		trigger = {
+			has_global_flag = gpm_scaling_random_plus_modifier_option
+		}
+		name = gpm_start_menu.1.scaling_randomplus
+		custom_tooltip = gpm_start_menu.1.scaling_randomplusTT
+		set_global_flag = gpm_scaling_multiplier_disabled
+		remove_global_flag = gpm_scaling_random_plus_modifier_option
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
 	# scaling off
 	option = {
 		trigger = {
@@ -161,6 +187,7 @@ country_event = {
 		}
 		name = gpm_start_menu.1.scaling_off
 		custom_tooltip = gpm_start_menu.1.scaling_offTT
+		set_global_flag = gpm_scaling_base_modifier_option
 		remove_global_flag = gpm_scaling_multiplier_disabled
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
