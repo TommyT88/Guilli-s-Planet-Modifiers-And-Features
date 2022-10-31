@@ -116,10 +116,7 @@ gpm_building_mining_nanite_nexus = {
 
 gpm_precursor_research_center = {
 	base_buildtime = 480
-
-	# empire_limit = {
-	# 	base = 1
-	# }
+	base_cap_amount = 1
 
 	category = research
 
@@ -132,12 +129,6 @@ gpm_precursor_research_center = {
 				gpm_is_a_precursor_world = yes
 				is_capital = yes
 			}
-		}
-	}
-
-	allow = {
-		planet = {
-			NOT = { has_building = gpm_precursor_research_center }
 		}
 	}
 

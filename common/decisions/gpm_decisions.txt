@@ -617,5 +617,598 @@ decision_gpm_upgrade_machine_world = {
 
 
 
+decision_gpm_clear_sandstorms = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
 
+    resources = {
+		category = decisions
+		cost = {
+			minerals = 5000
+		}
+	}
 
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_sandstorms
+	}
+	
+	allow = {
+		owner = { has_technology = tech_mineral_purification_1 }
+	}
+
+    effect = {
+		remove_modifier = gpm_sandstorms
+		add_deposit = d_searing_desert
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+decision_gpm_clear_arachnophobia = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			exotic_gases = 2000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_arachnophobia
+		owner = {
+			NOR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_xenophile
+			}
+		}
+	}
+	
+	allow = {}
+
+    effect = {
+		remove_modifier = gpm_arachnophobia
+		add_deposit = gpm_d_empty_nest
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_placade_arachnophobia = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			food = 10000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_arachnophobia
+		owner = {
+			NOR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+				AND = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+			}
+		}
+	}
+	
+	allow = {
+		owner = { has_technology = tech_dangerous_wildlife }
+	}
+
+    effect = {
+		remove_modifier = gpm_arachnophobia
+		add_modifier = { modifier = gpm_placated_arachnids }
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_clear_hazardous_weather = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 4000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = hazardous_weather
+	}
+	
+	allow = {
+		owner = { has_technology = tech_terrestrial_sculpting }
+	}
+
+    effect = {
+		remove_modifier = hazardous_weather
+		add_modifier = { modifier = gpm_pleasant_weather }
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_clear_melted_icecaps = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			minerals = 6000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_melted_ice_caps
+	}
+	
+	allow = {
+		owner = { has_technology = tech_cold_fusion_power }
+	}
+
+    effect = {
+		remove_modifier = gpm_melted_ice_caps
+		add_modifier = { modifier = gpm_artificial_polar_ice }
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_clear_ocean_dragons  = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 7000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_giant_ocean_snakes
+	}
+	
+	allow = {
+		owner = { has_technology = tech_swarmer_missiles_1 }
+	}
+
+    effect = {
+		remove_modifier = gpm_giant_ocean_snakes
+		random_list = {
+			10 = {}
+			10 = { add_planet_devastation = 25 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_clear_weak_magnetic_field  = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 1800
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 10000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		OR = {
+			has_modifier = weak_magnetic_field
+			has_modifier = gpm_weak_magnetic_field_2
+		}
+	}
+	
+	allow = {
+		owner = { has_technology = tech_planetary_shield_generator }
+		has_building = building_planetary_shield_generator
+	}
+
+    effect = {
+		if = { 
+			limit = { has_modifier = weak_magnetic_field }
+			remove_modifier = weak_magnetic_field
+		}
+		if = { 
+			limit = { has_modifier = gpm_weak_magnetic_field_2 }
+			remove_modifier = gpm_weak_magnetic_field_2
+		}
+		random_list = {
+			10 = { add_deposit = gpm_d_magnetic_mountains }
+			10 = { add_deposit = gpm_d_magnetic_fields }
+			10 = { add_modifier = { modifier = gpm_strong_magnetic_field_2 multiplier = 2 } }
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_listen_to_the_voices  = {
+    owned_planets_only = yes
+	sound = event_death_cult_01
+	icon = decision_gpm_listen_to_the_voices
+
+    resources = {
+		category = decisions
+		cost = {
+			sr_zro = 1
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_strange_voices
+	}
+	
+	allow = {
+		owner = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+				owner_species = { has_trait = trait_psionic }
+			}
+		}
+	}
+
+    effect = {
+		custom_tooltip = decision_gpm_listen_to_the_voicesTT
+		remove_modifier = gpm_strange_voices
+		add_modifier = { modifier = gpm_maw_worship }
+		hidden_effect = {
+			random_list = {
+				10 = {
+					every_owned_pop = {
+						kill_pop = yes
+					}
+					destroy_colony = yes
+				}
+				10 = {
+					every_owned_pop = {
+						modify_species = {
+							species = this
+							add_trait = trait_psionic
+						}
+					}
+					modifier = { factor = 0 owner_species = { has_trait = trait_psionic } }
+				}
+				10 = { 
+					owner = { 
+						add_research_option = tech_psionic_theory
+						add_tech_progress = {
+							tech = tech_psionic_theory
+							progress = 0.50
+						}
+					}
+					modifier = { factor = 0 owner = { has_technology = tech_psionic_theory } }
+				}
+				10 = { 
+					owner = { 
+						add_research_option = tech_psionic_barrier
+						add_tech_progress = {
+							tech = tech_psionic_barrier
+							progress = 0.10
+						}
+					}
+					modifier = { factor = 0 owner = { has_technology = tech_psionic_barrier } }
+				}
+				10 = { 
+					owner = { 
+						add_research_option = tech_psi_jump_drive_1
+						add_tech_progress = {
+							tech = tech_psi_jump_drive_1
+							progress = 0.05
+						}
+					}
+					modifier = { factor = 0 owner = { has_technology = tech_psi_jump_drive_1 } }
+				}
+				10 = { add_deposit = d_zro_deposit_1 }
+				10 = { add_deposit = d_zro_deposit_2 }
+				10 = { add_deposit = d_zro_deposit_3 }
+				10 = { add_deposit = d_zro_deposit_4 }
+				10 = { add_deposit = d_zro_deposit_5 }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_gpm_clear_alien_eggs  = {
+    owned_planets_only = yes
+	sound = event_death_cult_01
+	icon = decision_gpm_listen_to_the_voices
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 3000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_strange_alien_eggs
+	}
+	
+	allow = {
+		owner = {
+			has_technology = tech_alien_life_studies
+		}
+	}
+
+    effect = {
+		remove_modifier = gpm_strange_alien_eggs
+		random_list = {
+			50 = { 
+				owner = {
+					add_resource = {
+						unity = 5000
+					}
+				} 
+			}
+			35 = {
+				add_deposit = gpm_tb_xenomorph_blocker_empty
+				add_deposit = gpm_tb_xenomorph_blocker_empty
+				add_deposit = gpm_tb_xenomorph_blocker_empty
+			}
+			10 = {
+				random_owned_pop = {
+					kill_pop = yes
+				}
+			}
+			5 = {
+				owner = { add_relic = gpm_r_alien_eggs }
+				hidden_effect = {
+					owner = {
+						every_relation = {
+							limit = {
+								is_country_type = default
+								has_communications = root.owner
+							}
+							log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+							create_message = {
+								type = GPM_MESSAGE_RELIC_POSSESSION
+								localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
+								days = 30
+								target = root.owner.capital_scope
+								variable = {
+									type = name
+									localization = COUNTRY
+									scope = root.owner
+								}
+							}
+						}
+					}
+					set_global_flag = gpm_r_alien_eggs_found
+				}
+				modifier = { factor = 0 has_global_flag = gpm_r_alien_eggs_found }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_gpm_clear_temp_variation = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			minerals = 10000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_great_temperature_variation
+	}
+	
+	allow = {
+		owner = { has_technology = tech_ecological_adaptation }
+	}
+
+    effect = {
+		remove_modifier = gpm_great_temperature_variation
+		add_modifier = { modifier = gpm_artificial_weather_systems }
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_evolve_simple_organisms = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 1800
+
+    resources = {
+		category = decisions
+		cost = {
+			food = 5000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_simple_organisms
+		owner = { is_gestalt = no }
+	}
+	
+	allow = {
+		owner = { has_technology = tech_epigenetic_triggers }
+	}
+
+    effect = {
+		remove_modifier = gpm_simple_organisms
+		random_list = {
+			20 = { add_modifier = { modifier = titanic_life } }
+			20 = { add_modifier = { modifier = gpm_feline_companions } }
+			20 = { add_modifier = { modifier = gpm_titanic_predators } }
+			20 = { add_modifier = { modifier = gpm_hostile_flora } }
+			20 = { add_modifier = { modifier = gpm_carnivorous_flies } }
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_gpm_clear_titanic_predators = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 360
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_titanic_predators
+	}
+	
+	allow = {
+		owner = { has_technology = tech_dangerous_wildlife }
+	}
+
+    effect = {
+		remove_modifier = gpm_titanic_predators
+		add_modifier = { modifier = gpm_recent_mass_extinction years = 50 }
+		if = {
+			limit = { owner = { is_machine_empire = no } }
+			owner = { add_resource = { food = 5000 } }
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_clear_wild_storms = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = wild_storms
+	}
+	
+	allow = {
+		owner = { has_technology = tech_ecological_adaptation }
+	}
+
+    effect = {
+		remove_modifier = wild_storms
+		add_modifier = { modifier = gpm_controlled_storms }
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_bleak_fertilize_world = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_drilling_for_gas
+	enactment_time = 1800
+
+    resources = {
+		category = decisions
+		cost = {
+			volatile_motes = 5000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = bleak_planet
+	}
+	
+	allow = {
+		owner = { has_technology = tech_ecological_adaptation }
+	}
+
+    effect = {
+		remove_modifier = bleak_planet
+		add_modifier = { modifier = lush_planet }
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}

@@ -341,3 +341,21 @@ planet_event = { id = gpm_iddqd.2 hide_window = yes is_triggered_only = yes
 		add_modifier = { days = -1 modifier = gpm_precursor_obelisks }
 	}
 }
+
+planet_event = { id = gpm_iddqd.3 hide_window = yes is_triggered_only = yes
+	immediate = {
+		add_modifier = { days = -1 modifier = gpm_sandstorms }
+		add_modifier = { days = -1 modifier = gpm_arachnophobia }
+		add_modifier = { days = -1 modifier = hazardous_weather }
+		add_modifier = { days = -1 modifier = gpm_melted_ice_caps }
+		add_modifier = { days = -1 modifier = gpm_giant_ocean_snakes }
+		add_modifier = { days = -1 modifier = weak_magnetic_field }
+		add_modifier = { days = -1 modifier = gpm_strange_voices }
+		add_modifier = { days = -1 modifier = gpm_strange_alien_eggs }
+		add_modifier = { days = -1 modifier = gpm_great_temperature_variation }
+		add_modifier = { days = -1 modifier = gpm_simple_organisms }
+		add_modifier = { days = -1 modifier = gpm_titanic_predators }
+		add_modifier = { days = -1 modifier = wild_storms }
+		add_modifier = { days = -1 modifier = bleak_planet }
+	}
+}

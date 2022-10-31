@@ -304,6 +304,17 @@ gpm_make_precursor_ruined_world = {
 	# clear_planet_modifiers = yes
 	gpm_purge_all_core_modifiers = yes
 	gpm_purge_all_planetary_modifiers = yes
+	# Planet Modifier Scaling
+	if = {
+		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+		gpm_scale_planet_modifiers = yes
+	}
+	if = {
+		limit = { has_global_flag = gpm_scaling_multiplier_disabled }
+		set_variable = { which = gpm_planet_size_multiplier value = 1 }
+		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+	}
 	if = {
 		limit = { has_modifier = terraforming_candidate }
 		remove_modifier = terraforming_candidate	
@@ -1517,6 +1528,12 @@ gpm_precursor_home_planet_setup = {
 		gpm_scale_planet_modifiers = yes
 	}
 	if = {
+		limit = { has_global_flag = gpm_scaling_multiplier_disabled }
+		set_variable = { which = gpm_planet_size_multiplier value = 1 }
+		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+	}
+	if = {
 		limit = { 
 			gpm_are_precursors_enabled = yes
 		}
@@ -1577,6 +1594,17 @@ gpm_precursor_home_planet_setup = {
 
 gpm_precursor_planet_setup_no_modifiers = {
 	optimize_memory
+	# Planet Modifier Scaling
+	if = {
+		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+		gpm_scale_planet_modifiers = yes
+	}
+	if = {
+		limit = { has_global_flag = gpm_scaling_multiplier_disabled }
+		set_variable = { which = gpm_planet_size_multiplier value = 1 }
+		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+	}
 	if = {
 		limit = { 
 			gpm_are_precursors_enabled = yes

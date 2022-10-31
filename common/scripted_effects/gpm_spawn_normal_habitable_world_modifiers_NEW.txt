@@ -1764,6 +1764,21 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_arachnophobia" multiplier = gpm_planet_size_multiplier }
+			random_list = {
+				10 = {
+					add_deposit = gpm_d_webbing
+				}
+				10 = {
+					add_deposit = gpm_d_webbing
+					add_deposit = gpm_d_webbing
+				}
+				10 = {
+					add_deposit = gpm_d_webbing
+					add_deposit = gpm_d_webbing
+					add_deposit = gpm_d_webbing
+				}
+			}
+			
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_arachnophobia" }
 			# (Not) on these planets

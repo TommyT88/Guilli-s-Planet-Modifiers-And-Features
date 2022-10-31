@@ -330,6 +330,8 @@ country_event = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
 			}
+			
+			# used to 'limit' amount of terraformable able planets
 			gpm_set_galaxy_scaler_planet_variable = yes
 			
 			

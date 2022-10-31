@@ -1434,3 +1434,20 @@ gpm_d_relic_post_apocalyptic_scrapyards = {
 		weight = 0
 	}
 }
+
+gpm_d_empty_nest = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		district_mining_max = 1
+		building_crystal_mines_max = 1
+	}
+	
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}

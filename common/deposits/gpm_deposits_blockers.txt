@@ -606,3 +606,28 @@ gpm_tb_automated_turrets_empty = {
 		weight = 0
 	}
 }
+
+
+gpm_d_webbing = {
+    time = 270
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+    resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	all_blocker_swap_types = yes
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
