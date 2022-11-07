@@ -33,53 +33,53 @@
 
 @operationTargetedByTimer = 10800 #30 years during which the effects of an operation may be felt by select Spy Network events
 
-operation_gpm_gather_information_relic = {
-	target = none
-	categories = { op_cat_subterfuge }
-	picture = GFX_evt_spymaster	
-	desc = operation_gpm_gather_information_relic_desc
-	stages = 1
+# operation_gpm_gather_information_relic = {
+	# target = none
+	# categories = { op_cat_subterfuge }
+	# picture = GFX_evt_spymaster	
+	# desc = operation_gpm_gather_information_relic_desc
+	# stages = 1
 
-	resources = {
-		category = operations
-		cost = {
-			influence = 99999
-		}
-		upkeep = {
-			energy = 4
-		}
-	}
+	# resources = {
+		# category = operations
+		# cost = {
+			# influence = 99999
+		# }
+		# upkeep = {
+			# energy = 4
+		# }
+	# }
 
-	spy_power_cost = 100
-	potential = {
-		always = no					# we keep this in here for save game compatibility but never allow it
-	}
-	allow = {
-		always = no					# we keep this in here for save game compatibility but never allow it
-	}
-	stage = {
-		difficulty = @diff_t2
-		icon = GFX_espionage_chapter_icon_document
-		event = gpm_operation.10
-	}
+	# spy_power_cost = 100
+	# potential = {
+		# always = no					# we keep this in here for save game compatibility but never allow it
+	# }
+	# allow = {
+		# always = no					# we keep this in here for save game compatibility but never allow it
+	# }
+	# stage = {
+		# difficulty = @diff_t2
+		# icon = GFX_espionage_chapter_icon_document
+		# event = gpm_operation.10
+	# }
 
-	on_roll_failed = {
-		standard_espionage_operation_on_roll_failed = {
-			RANDOM_EVENTS = operation_random_events_generic
-		}
-	}
-	on_create = {
-		target = {
-			set_timed_country_flag = {
-				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
-				days = @operationTargetedByTimer
-			}
-		}
-		#### DEBUG LOGGING ####
-		log = ";OP - GATHER; operation_gpm_gather_information_relic launched by [this.owner.GetName] on [target.GetName]"
-		#### ##################
-	}
-}
+	# on_roll_failed = {
+		# standard_espionage_operation_on_roll_failed = {
+			# RANDOM_EVENTS = operation_random_events_generic
+		# }
+	# }
+	# on_create = {
+		# target = {
+			# set_timed_country_flag = {
+				# flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				# days = @operationTargetedByTimer
+			# }
+		# }
+		### DEBUG LOGGING ####
+		# log = ";OP - GATHER; operation_gpm_gather_information_relic launched by [this.owner.GetName] on [target.GetName]"
+		### ##################
+	# }
+# }
 
 # this = operation
 # target = operation target

@@ -26,6 +26,7 @@ gpm_refinery_restored = {
 	portrait = "GFX_gpm_repaired_refinery_background"
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
+	show_in_outliner = no
 	entity_offset = { x = @entity_x y = @entity_y }
 	build_time = 1200
 	resources = {
@@ -171,6 +172,7 @@ gpm_mining_facility_restored = {
 	portrait = "GFX_gpm_repaired_mining_station_background"
 	place_entity_on_planet_plane = yes
 	show_galactic_map_icon = yes
+	show_in_outliner = no
 	entity_offset = { x = @entity_x y = @entity_y }
 	build_time = 900
 	resources = {
@@ -368,6 +370,7 @@ gpm_observation_station_restored = {
 	portrait = "GFX_gpm_repaired_station_background"
 	show_galactic_map_icon = yes
 	place_entity_on_planet_plane = no
+	show_in_outliner = no
 	entity_offset = { x = @entity_x y = @entity_y }
 	build_time = 750
 	resources = {
@@ -617,6 +620,7 @@ gpm_silo_restored = {
 	construction_entity = "gpm_silo_damaged_entity"
 	portrait = "GFX_gpm_repaired_silo_background"
 	place_entity_on_planet_plane = no
+	show_in_outliner = no
 	# build_outside_gravity_well = yes
 	show_galactic_map_icon = yes
 

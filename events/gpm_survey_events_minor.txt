@@ -13,6 +13,75 @@
 @tier1unitymin_half = 50
 @tier1unitymax_half = 500
 
+###### Info ######
+## gpm_random_experience and gpm_random_experience_big include bonus experience using the flag gpm_more_discovery_rewards from the survey policy ##
+##################
+
+######### Ethics #########
+##########################
+### Materialist
+### Spiritualist
+### Authoritarian
+### Egalitarian
+### Pacifist
+### Militarist
+### Xenophobe
+### Xenophile 
+ 
+######### Type #########
+########################
+### Mega Corp
+### Hive
+### Machine 
+### Gestalt
+
+######### Civics #########
+##########################
+### civic_exalted_priesthood
+### civic_environmentalist
+### civic_agrarian_idyll
+### civic_mining_guilds
+### civic_functional_architecture
+### civic_aristocratic_elite
+### civic_fanatic_purifiers
+### civic_merchant_guilds
+### civic_death_cult
+### civic_death_cult_corporate
+### civic_pleasure_seekers
+### civic_corporate_hedonism
+### civic_anglers
+### civic_corporate_anglers
+### civic_crafters
+### civic_corporate_crafters
+### 
+### civic_hive_natural_neural_network
+### civic_hive_devouring_swarm
+### 
+### civic_machine_servitor
+### civic_machine_terminator
+### civic_machine_assimilator
+### civic_machine_rockbreakers
+### 
+### civic_memorialist
+### civic_hive_memorialist
+### civic_machine_memorialist
+### 
+### civic_catalytic_processing
+### civic_hive_catalytic_processing
+### civic_machine_catalytic_processing
+### civic_corporate_catalytic_processing
+### 
+### civic_franchising
+### civic_private_prospectors
+ 
+######### Origins #########
+###########################
+### origin_post_apocalyptic
+### origin_remnants
+### origin_lithoid
+### origin_doomsday
+### origin_necrophage
+
 
 namespace = gpm_survey_minor
 
@@ -45,321 +114,346 @@ ship_event = {
 
 	is_triggered_only = yes
 	
+	#################
+	#### TRIGGER ####
+	#################
 	trigger = {
-		# not if the exploration policy is set to the quick epxloration option
-		owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } }
-		#
-		FROM = {
-			has_modifier = gpm_hollow_structure
-			root = {
-				owner = {
-					NOT = {
-						has_country_flag = gpm_hollow_structure_discovered
-					}
-				}
-			}
-		}
+		FROM = { has_modifier = gpm_hollow_structure }
+		OWNER = { NOT = { has_country_flag = gpm_hollow_structure_discovered } }
+	}
+	
+	###################
+	#### IMMEDIATE ####
+	###################
+	immediate = {
+		OWNER = { set_country_flag = gpm_hollow_structure_discovered }
 	}
 
-	immediate = {
-		root = {
-			owner = {
-				set_country_flag = gpm_hollow_structure_discovered
-			}
-		}
-	}	
-	
-	# BASIC OPTION #
+	########################
+	#### DEFAULT OPTION ####
+	########################
 	option = {
 		trigger = {
-			
 		}
 		name = DISCONCERTING
-		
 		# leader experience
 		locked_random_list = {
 			90 = {
-				root.leader = { gpm_random_experience = yes }
+				LEADER = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_paranoid }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_paranoid } }
+				LEADER = {	add_trait = leader_trait_paranoid }
+				modifier = { factor = 0 LEADER = { has_trait = leader_trait_paranoid } }
 			}
 		}
-		
-		#### Deposit or Research ####
-		# resources
-		#custom_tooltip = gpm_survey_reward_new_line
-		locked_random_list = {
-			0 = { }
-			10 = {
-				if = {
-					limit = {
-						root.from = {
-							OR = {
-								AND = {
-									has_deposit = yes
-									NOT = { has_deposit_for = shipclass_research_station }
-								}
-								has_planet_flag = gpm_has_minor_survey_visit
-							}
-						}
-					}
-					root.owner = {
-						add_monthly_resource_mult = {
-							resource = physics_research
-							value = @tier1researchreward_half
-							min = @tier1researchmin_half
-							max = @tier1researchmax_half
-						}
-					}
-				}
-				# planet deposit
-				root.from = {
-					if = {
-						limit = {
-							OR = {
-								has_deposit = no
-								has_deposit_for = shipclass_research_station
-							}
-							NOT = { has_planet_flag = gpm_has_minor_survey_visit }
-							gpm_is_planet_class_normal_habitable = no
-						}
-						locked_random_list = {
-							16 = { add_deposit = d_physics_2 }
-							8 = { add_deposit = d_physics_3 }
-							4 = { add_deposit = d_physics_4 }
-							2 = { add_deposit = d_physics_5 }
-							1 = { add_deposit = d_physics_6 }
-						}
+		# deposit
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						gpm_is_planet_class_normal_habitable = yes
+						has_deposit = yes
+						has_planet_flag = gpm_has_been_deposit_explored_flag
 					}
 				}
 			}
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier1researchreward_half
+					min = @tier1researchmin_half
+					max = @tier1researchmax_half
+				}
+			}
 		}
-		
-		# aditional reward from exploration policy
-		root.owner = {
+		else = {
+			FROM = {
+				locked_random_list = {
+					16 = { add_deposit = d_physics_2 }
+					8 = { add_deposit = d_physics_3 }
+					4 = { add_deposit = d_physics_4 }
+					2 = { add_deposit = d_physics_5 }
+					1 = { add_deposit = d_physics_6 }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		# other rewards
+		# bonus rewards
+		OWNER = {
 			if = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
-				custom_tooltip = gpm_survey_reward_bonus
-				locked_random_list = {
-					3 = {
-						FROM = {
-							locked_random_list = {
-								10 = { add_deposit = d_physics_1 }
-								10 = { add_deposit = d_physics_2 }
-							}
-						}
-						modifier = { factor = 0 FROM = { gpm_is_planet_class_normal_habitable = no } }
-					}
-					10 = {
-						add_monthly_resource_mult = {
-							resource = physics_research
-							value = @tier1researchreward_qrt
-							min = @tier1researchmin_qrt
-							max = @tier1researchmax_qrt
-						}
-					}
-					# 3 = { gpm_random_unity = yes }
-					3 = { root.leader = { gpm_random_experience = yes } }
-				}
+				gpm_exploration_policy_away_teams_reward = yes
 			}
 		}
-
-		# timed event to place planet flag gpm_has_minor_survey_visit to prevent too many deposits
-		hidden_effect = { FROM = { planet_event = { id = gpm_survey_minor.9999 days = 7 } } }
 	}
-	
-	# MEGACORP OPTION #
+	#########################
+	#### MEGACORP OPTION ####
+	#########################
 	option = {
 		trigger = {
-			root.owner = { has_authority = auth_corporate }
-			root.from = { gpm_is_planet_class_normal_habitable = no }
+			OWNER = { has_authority = auth_corporate }
 		}
 		name = gpm_survey.LICENCE_RESEARCH
-		
 		# leader experience
 		locked_random_list = {
 			90 = {
-				root.leader = { gpm_random_experience = yes }
+				LEADER = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_paranoid }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_paranoid } }
+				LEADER = {	add_trait = leader_trait_paranoid }
+				modifier = { factor = 0 LEADER = { has_trait = leader_trait_paranoid } }
 			}
 		}
-
-		# random wad of cash
-		locked_random_list = {
-			5 = { owner = { add_resource = { energy = 5 } } }
-			6 = { owner = { add_resource = { energy = 25 } } }
-			7 = { owner = { add_resource = { energy = 50 } } }
-			9 = { owner = { add_resource = { energy = 75 } } }
-			10 = { owner = { add_resource = { energy = 100 } } }
-			10 = { owner = { add_resource = { energy = 125 } } }
-			10 = { owner = { add_resource = { energy = 150 } } }
-			9 = { owner = { add_resource = { energy = 175 } } }
-			7 = { owner = { add_resource = { energy = 200 } } }
-			6 = { owner = { add_resource = { energy = 225 } } }
-			5 = { owner = { add_resource = { energy = 250 } } }
-		}
-		
-		#### Deposit or Research ####
-		# resources
+		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# locked_random_list = {
-			# 10 = { }
-			# 10 = { }
-		# }
+		# deposit
 		FROM = {
-			gpm_d_random_trade = yes
+			if = {
+				limit = {
+					AND = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					}
+				}
+				gpm_d_random_trade_small = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
 		}
-		
-		# aditional reward from exploration policy
-		root.owner = {
+		# other rewards
+		locked_random_list = {
+			5 = { OWNER = { add_resource = { energy = 5 } } }
+			6 = { OWNER = { add_resource = { energy = 25 } } }
+			7 = { OWNER = { add_resource = { energy = 50 } } }
+			9 = { OWNER = { add_resource = { energy = 75 } } }
+			10 = { OWNER = { add_resource = { energy = 100 } } }
+			10 = { OWNER = { add_resource = { energy = 125 } } }
+			10 = { OWNER = { add_resource = { energy = 150 } } }
+			9 = { OWNER = { add_resource = { energy = 175 } } }
+			7 = { OWNER = { add_resource = { energy = 200 } } }
+			6 = { OWNER = { add_resource = { energy = 225 } } }
+			5 = { OWNER = { add_resource = { energy = 250 } } }
+		}
+		# bonus rewards
+		OWNER = {
 			if = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
-				custom_tooltip = gpm_survey_reward_bonus
-				locked_random_list = {
-					3 = {
-						FROM = {
-							locked_random_list = {
-								16 = { add_deposit = d_trade_value_2 }
-								8 = { add_deposit = d_trade_value_3 }
-								4 = { add_deposit = d_trade_value_4 }
-								2 = { add_deposit = d_trade_value_5 }
-							}
-						}
-					}
-					10 = {
-						add_monthly_resource_mult = {
-							resource = physics_research
-							value = @tier1researchreward_qrt
-							min = @tier1researchmin_qrt
-							max = @tier1researchmax_qrt
-						}
-					}
-					# 3 = { gpm_random_unity = yes }
-					3 = { root.leader = { gpm_random_experience = yes } }
-				}
+				gpm_exploration_policy_away_teams_reward = yes
 			}
 		}
-
-		# timed event to place planet flag gpm_has_minor_survey_visit to prevent too many deposits
-		hidden_effect = { FROM = { planet_event = { id = gpm_survey_minor.9999 days = 7 } } }
 	}
-	
-	# SCIENCE OPTION # 
+	########################
+	#### MACHINE OPTION ####
+	########################
 	option = {
 		trigger = {
-			root = { owner = { resource_stockpile_compare = { resource = influence value > 15 } } }
-			root.from = { gpm_is_planet_class_normal_habitable = no }
-			root.from = {
-				OR = {
-					has_deposit = no
-					has_deposit_for = shipclass_research_station
-				}
-			}
-			root = {
-				owner = {
-					OR = {
-						has_authority = auth_machine_intelligence
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
-				}
-			}
+			OWNER = { has_authority = auth_machine_intelligence }
 		}
-		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > 15 } } } }
-		name = gpm_survey.RESEARCH_EMPIRE		
-		root.owner = { add_resource = { influence = -15 } }
-		
+		name = ACKNOWLEDGED
 		# leader experience
-		locked_random_list = {
-			90 = {
-				root.leader = { gpm_random_experience = yes }
-			}
-			10 = {
-				root.leader = {	add_trait = leader_trait_paranoid }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_paranoid } }
-			}
-		}
-		
-		#### Deposit or Research ####
-		# resources
-		custom_tooltip = gpm_survey_reward_deposit_science		
-		# locked_random_list = {
-			# 10 = { }
-			# 10 = { }
-		# }
-		root.from = { 
-			if = {
-				limit = { 
+		LEADER = { gpm_random_experience = yes }
+		# deposit
+		if = {
+			limit = {
+				FROM = {
 					OR = {
-						gpm_is_planet_class_normal_uninhabitable = yes
-						gpm_is_planet_class_asteroid = yes
-						gpm_is_planet_class_gas_giant = yes
-						gpm_is_planet_class_star = yes
+						gpm_is_planet_class_normal_habitable = yes
+						has_deposit = yes
+						has_planet_flag = gpm_has_been_deposit_explored_flag
 					}
-					has_deposit_for = shipclass_mining_station
 				}
-				every_deposit = {
-					remove_deposit = yes
-				} 
+			}
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier1researchreward_half
+					min = @tier1researchmin_half
+					max = @tier1researchmax_half
+				}
 			}
 		}
-		FROM = {
-			locked_random_list = {
-				10 = { add_deposit = gpm_d_double_science_phy_soc }
-				10 = { add_deposit = gpm_d_double_science_soc_phy }
-				10 = { add_deposit = gpm_d_double_science_phy_eng }
-				10 = { add_deposit = gpm_d_double_science_eng_phy }
-				10 = { add_deposit = gpm_d_double_science_soc_eng }
-				10 = { add_deposit = gpm_d_double_science_eng_soc }
-				10 = { add_deposit = gpm_d_triple_science }
+		else = {
+			FROM = {
+				gpm_d_random_minerals = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
 		}
-		
-		# aditional reward from exploration policy
-		root.owner = {
+		# other rewards
+		# bonus rewards
+		OWNER = {
 			if = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
-				custom_tooltip = gpm_survey_reward_bonus
-				locked_random_list = {
-					3 = {
-						FROM = {
-							locked_random_list = {
-								10 = { add_deposit = d_physics_1 }
-								10 = { add_deposit = d_physics_2 }
-								10 = { add_deposit = d_physics_3 }
-								10 = { add_deposit = d_society_1 }
-								10 = { add_deposit = d_society_2 }
-								10 = { add_deposit = d_society_3 }
-								10 = { add_deposit = d_engineering_1 }
-								10 = { add_deposit = d_engineering_2 }
-								10 = { add_deposit = d_engineering_3 }
-								10 = { add_deposit = gpm_d_triple_science }
-							}
-						}
+				gpm_exploration_policy_away_teams_reward = yes
+			}
+		}
+	}
+	#####################
+	#### HIVE OPTION ####
+	#####################
+	option = {
+		trigger = {
+			OWNER = { has_authority = auth_hive_mind }
+		}
+		name = DISTURBING
+		# leader experience
+		LEADER = { gpm_random_experience = yes }
+		# deposit
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						gpm_is_planet_class_normal_habitable = yes
+						has_deposit = yes
+						has_planet_flag = gpm_has_been_deposit_explored_flag
 					}
-					10 = {
-						add_monthly_resource_mult = {
-							resource = physics_research
-							value = @tier1researchreward_qrt
-							min = @tier1researchmin_qrt
-							max = @tier1researchmax_qrt
-						}
-					}
-					# 3 = { gpm_random_unity = yes }
-					3 = { root.leader = { gpm_random_experience = yes } }
+				}
+			}
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier1researchreward_half
+					min = @tier1researchmin_half
+					max = @tier1researchmax_half
 				}
 			}
 		}
-
-		# timed event to place planet flag gpm_has_minor_survey_visit to prevent too many deposits
-		hidden_effect = { FROM = { planet_event = { id = gpm_survey_minor.9999 days = 7 } } }
+		else = {
+			FROM = {
+				gpm_d_random_minerals = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		# other rewards
+		# bonus rewards
+		OWNER = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				gpm_exploration_policy_away_teams_reward = yes
+			}
+		}
+	}
+	#######################
+	#### CIVIC OPTIONS ####
+	#######################
+	option = {
+		trigger = {
+			OR = {
+				OWNER = { 
+					OR = {
+						has_civic = civic_mining_guilds
+						has_civic = civic_machine_rockbreakers
+						has_civic = civic_private_prospectors
+						owner_species = { has_trait = trait_lithoid }
+					}
+				}
+			}
+		}
+		name = DIG
+		# leader experience
+		LEADER = { gpm_random_experience = yes }
+		# deposit
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					}
+				}
+				gpm_d_random_minerals = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		# other rewards
+		OWNER = { add_resource = { minerals = 100 multiplier = value:edict_size_effect } }
+		# bonus rewards
+		OWNER = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				gpm_exploration_policy_away_teams_reward = yes
+			}
+		}
+	}
+	option = {
+		trigger = {
+			OWNER = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = gpm_survey.INVESTIGATE.4
+		# leader experience
+		LEADER = { gpm_random_experience = yes }
+		# deposit
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					}
+				}
+				gpm_d_random_research = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		# other rewards
+		# bonus rewards
+		OWNER = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				gpm_exploration_policy_away_teams_reward = yes
+			}
+		}
+	}
+	option = {
+		trigger = {
+			OR = {
+				OWNER = { 
+					OR = {
+						has_civic = civic_exalted_priesthood
+						has_ethic = ethic_spiritalist
+						has_ethic = ethic_fanatic_spiritalist
+					}
+				}
+			}
+		}
+		name = gpm_survey.OMEN
+		# leader experience
+		LEADER = { gpm_random_experience = yes }
+		# deposit
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					}
+				}
+				gpm_d_random_unity = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		# other rewards
+		OWNER = { add_resource = { unity = 50 multiplier = value:edict_size_effect } }
+		# bonus rewards
+		OWNER = {
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				gpm_exploration_policy_away_teams_reward = yes
+			}
+		}
 	}
 }
+
+
+
 # gpm_crystallized_structure
 ship_event = {
 	id = gpm_survey_minor.5

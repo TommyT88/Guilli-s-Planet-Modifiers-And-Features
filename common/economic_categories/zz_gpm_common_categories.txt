@@ -1197,6 +1197,21 @@ ships = {
 			is_ship_size = shipclass_science_ship
 		}
 	}
+	
+	## special to make shipsize_science_upkeep_mult work
+	triggered_upkeep_modifier = {
+		key = shipsize_science
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = science
+		}
+	}
     
     triggered_cost_modifier = {
 		key = ship_constructor

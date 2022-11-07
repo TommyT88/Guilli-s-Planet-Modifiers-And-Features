@@ -5894,6 +5894,10 @@ ship_event = {
 				set_planet_flag = nuked_planet_anomalies_disabled
 				gpm_purge_all_planetary_modifiers = yes
 				reroll_planet = yes
+				every_deposit = {
+					limit = { is_deposit_type = gpm_d_arachnophobia	}
+					remove_deposit = yes
+				}
 			}
 			add_deposit = d_bomb_crater
 		}

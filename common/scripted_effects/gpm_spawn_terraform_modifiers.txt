@@ -21,7 +21,59 @@ gpm_switch_fixable_modifiers = {
 		remove_modifier = gpm_thin_ozone_layer
 		add_modifier = { modifier = gpm_thin_ozone_layer_fixed multiplier = gpm_planet_size_multiplier }
 	}
-
+	if = {
+		limit = { has_modifier = gpm_unusual_seasons }
+		remove_modifier = gpm_unusual_seasons
+		random_list = {
+			7 = { 
+				add_modifier = { modifier = gpm_perfect_seasons multiplier = gpm_planet_size_multiplier }
+				modifier = { factor = 0 has_modifier = gpm_perfect_seasons }
+			}
+			17 = { 
+				add_modifier = { modifier = gpm_clear_skies multiplier = gpm_planet_size_multiplier }
+				modifier = { factor = 0 has_modifier = gpm_clear_skies }
+			}
+			12 = { 
+				add_modifier = { modifier = gpm_pleasant_weather multiplier = gpm_planet_size_multiplier } 
+				modifier = { factor = 0 has_modifier = gpm_pleasant_weather }
+			}
+			12 = { 
+				add_modifier = { modifier = gpm_gorgeous_sky multiplier = gpm_planet_size_multiplier }
+				modifier = { factor = 0 has_modifier = gpm_gorgeous_sky }
+			}
+		}
+	}
+	if = {
+		limit = { has_modifier = hazardous_weather }
+		remove_modifier = hazardous_weather
+		if = {
+			limit = { NOT = { has_modifier = gpm_pleasant_weather } }
+			add_modifier = { modifier = gpm_pleasant_weather multiplier = gpm_planet_size_multiplier }
+		}
+	}
+	if = {
+		limit = { has_modifier = gpm_melted_ice_caps }
+		remove_modifier = gpm_melted_ice_caps
+		add_modifier = { modifier = gpm_artificial_polar_ice }
+	}
+	if = {
+		limit = { has_modifier = gpm_great_temperature_variation }
+		remove_modifier = gpm_great_temperature_variation
+		add_modifier = { modifier = gpm_artificial_weather_systems }
+	}
+	if = {
+		limit = { has_modifier = wild_storms }
+		remove_modifier = wild_storms
+		add_modifier = { modifier = gpm_controlled_storms }
+	}
+	if = {
+		limit = { has_modifier = bleak_planet }
+		remove_modifier = bleak_planet
+		if = {
+			limit = { NOT = { has_modifier = lush_planet } }
+			add_modifier = { modifier = lush_planet multiplier = gpm_planet_size_multiplier }
+		}
+	}
 }
 
 gpm_spawn_terraform_tier_modifier = {

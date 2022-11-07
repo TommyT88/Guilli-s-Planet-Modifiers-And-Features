@@ -619,8 +619,8 @@ decision_gpm_upgrade_machine_world = {
 
 decision_gpm_clear_sandstorms = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_laboratory_sound
+	icon = decision_gpm_clear_sandstorms
 	enactment_time = 720
 
     resources = {
@@ -648,10 +648,11 @@ decision_gpm_clear_sandstorms = {
 		weight = 1000
 	}
 }
+
 decision_gpm_clear_arachnophobia = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_ship_explosion
+	icon = decision_gpm_clear_arachnophobia
 	enactment_time = 720
 
     resources = {
@@ -677,6 +678,12 @@ decision_gpm_clear_arachnophobia = {
     effect = {
 		remove_modifier = gpm_arachnophobia
 		add_deposit = gpm_d_empty_nest
+		hidden_effect = {
+			every_deposit = {
+				limit = { is_deposit_type = gpm_d_arachnophobia	}
+				remove_deposit = yes
+			}
+		}
 	}
 	
 	ai_weight = {
@@ -686,8 +693,8 @@ decision_gpm_clear_arachnophobia = {
 
 decision_gpm_placade_arachnophobia = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_alien_nature
+	icon = decision_gpm_placade_arachnophobia
 	enactment_time = 720
 
     resources = {
@@ -728,8 +735,8 @@ decision_gpm_placade_arachnophobia = {
 
 decision_gpm_clear_hazardous_weather = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_cityscape
+	icon = decision_gpm_clear_hazardous_weather
 	enactment_time = 720
 
     resources = {
@@ -750,7 +757,12 @@ decision_gpm_clear_hazardous_weather = {
 
     effect = {
 		remove_modifier = hazardous_weather
-		add_modifier = { modifier = gpm_pleasant_weather }
+		if = { 
+			limit = { 
+				NOT = { has_modifier = gpm_pleasant_weather } 
+			}
+			add_modifier = { modifier = gpm_pleasant_weather }
+		}
 	}
 	
 	ai_weight = {
@@ -760,8 +772,8 @@ decision_gpm_clear_hazardous_weather = {
 
 decision_gpm_clear_melted_icecaps = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_construction_02
+	icon = decision_gpm_clear_melted_icecaps
 	enactment_time = 720
 
     resources = {
@@ -792,8 +804,8 @@ decision_gpm_clear_melted_icecaps = {
 
 decision_gpm_clear_ocean_dragons  = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_ground_battle_03
+	icon = decision_gpm_clear_ocean_dragons
 	enactment_time = 720
 
     resources = {
@@ -814,8 +826,12 @@ decision_gpm_clear_ocean_dragons  = {
 
     effect = {
 		remove_modifier = gpm_giant_ocean_snakes
+		if = {
+			limit = { owner = { is_machine_empire = no } }
+			owner = { add_resource = { food = 110 mult = value:edict_size_effect } }
+		}
 		random_list = {
-			10 = {}
+			10 = { owner = { add_resource = { unity = 90 mult = value:edict_size_effect } } }
 			10 = { add_planet_devastation = 25 }
 		}
 	}
@@ -827,8 +843,8 @@ decision_gpm_clear_ocean_dragons  = {
 
 decision_gpm_clear_weak_magnetic_field  = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_activating_unknown_technology
+	icon = decision_gpm_clear_weak_magnetic_field
 	enactment_time = 1800
 
     resources = {
@@ -863,7 +879,7 @@ decision_gpm_clear_weak_magnetic_field  = {
 		random_list = {
 			10 = { add_deposit = gpm_d_magnetic_mountains }
 			10 = { add_deposit = gpm_d_magnetic_fields }
-			10 = { add_modifier = { modifier = gpm_strong_magnetic_field_2 multiplier = 2 } }
+			10 = { add_modifier = { modifier = gpm_strong_magnetic_field_2 multiplier = 1 } }
 		}
 	}
 	
@@ -876,6 +892,7 @@ decision_gpm_listen_to_the_voices  = {
     owned_planets_only = yes
 	sound = event_death_cult_01
 	icon = decision_gpm_listen_to_the_voices
+	enactment_time = 30
 
     resources = {
 		category = decisions
@@ -904,58 +921,7 @@ decision_gpm_listen_to_the_voices  = {
 		remove_modifier = gpm_strange_voices
 		add_modifier = { modifier = gpm_maw_worship }
 		hidden_effect = {
-			random_list = {
-				10 = {
-					every_owned_pop = {
-						kill_pop = yes
-					}
-					destroy_colony = yes
-				}
-				10 = {
-					every_owned_pop = {
-						modify_species = {
-							species = this
-							add_trait = trait_psionic
-						}
-					}
-					modifier = { factor = 0 owner_species = { has_trait = trait_psionic } }
-				}
-				10 = { 
-					owner = { 
-						add_research_option = tech_psionic_theory
-						add_tech_progress = {
-							tech = tech_psionic_theory
-							progress = 0.50
-						}
-					}
-					modifier = { factor = 0 owner = { has_technology = tech_psionic_theory } }
-				}
-				10 = { 
-					owner = { 
-						add_research_option = tech_psionic_barrier
-						add_tech_progress = {
-							tech = tech_psionic_barrier
-							progress = 0.10
-						}
-					}
-					modifier = { factor = 0 owner = { has_technology = tech_psionic_barrier } }
-				}
-				10 = { 
-					owner = { 
-						add_research_option = tech_psi_jump_drive_1
-						add_tech_progress = {
-							tech = tech_psi_jump_drive_1
-							progress = 0.05
-						}
-					}
-					modifier = { factor = 0 owner = { has_technology = tech_psi_jump_drive_1 } }
-				}
-				10 = { add_deposit = d_zro_deposit_1 }
-				10 = { add_deposit = d_zro_deposit_2 }
-				10 = { add_deposit = d_zro_deposit_3 }
-				10 = { add_deposit = d_zro_deposit_4 }
-				10 = { add_deposit = d_zro_deposit_5 }
-			}
+			planet_event = { id = gpm_decisions.2 }
 		}
 	}
 	
@@ -966,8 +932,9 @@ decision_gpm_listen_to_the_voices  = {
 
 decision_gpm_clear_alien_eggs  = {
     owned_planets_only = yes
-	sound = event_death_cult_01
-	icon = decision_gpm_listen_to_the_voices
+	sound = event_swarm
+	icon = decision_gpm_clear_alien_eggs
+	enactment_time = 60
 
     resources = {
 		category = decisions
@@ -993,13 +960,11 @@ decision_gpm_clear_alien_eggs  = {
 			50 = { 
 				owner = {
 					add_resource = {
-						unity = 5000
+						unity = 50 multiplier = value:edict_size_effect
 					}
 				} 
 			}
 			35 = {
-				add_deposit = gpm_tb_xenomorph_blocker_empty
-				add_deposit = gpm_tb_xenomorph_blocker_empty
 				add_deposit = gpm_tb_xenomorph_blocker_empty
 			}
 			10 = {
@@ -1044,8 +1009,8 @@ decision_gpm_clear_alien_eggs  = {
 
 decision_gpm_clear_temp_variation = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_construction
+	icon = decision_gpm_clear_temp_variation
 	enactment_time = 720
 
     resources = {
@@ -1076,8 +1041,8 @@ decision_gpm_clear_temp_variation = {
 
 decision_gpm_evolve_simple_organisms = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_evolution_mastery_01
+	icon = decision_gpm_evolve_simple_organisms
 	enactment_time = 1800
 
     resources = {
@@ -1115,8 +1080,8 @@ decision_gpm_evolve_simple_organisms = {
 
 decision_gpm_clear_titanic_predators = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_ground_battle
+	icon = decision_gpm_clear_titanic_predators
 	enactment_time = 360
 
     resources = {
@@ -1140,7 +1105,7 @@ decision_gpm_clear_titanic_predators = {
 		add_modifier = { modifier = gpm_recent_mass_extinction years = 50 }
 		if = {
 			limit = { owner = { is_machine_empire = no } }
-			owner = { add_resource = { food = 5000 } }
+			owner = { add_resource = { food = 350 multiplier = value:edict_size_effect } }
 		}
 	}
 	
@@ -1151,8 +1116,8 @@ decision_gpm_clear_titanic_predators = {
 
 decision_gpm_clear_wild_storms = {
     owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	sound = event_laboratory_sound
+	icon = decision_gpm_clear_wild_storms
 	enactment_time = 720
 
     resources = {
@@ -1184,7 +1149,7 @@ decision_gpm_clear_wild_storms = {
 decision_gpm_bleak_fertilize_world = {
     owned_planets_only = yes
 	sound = event_administrative_work
-	icon = decision_drilling_for_gas
+	icon = decision_gpm_bleak_fertilize_world
 	enactment_time = 1800
 
     resources = {

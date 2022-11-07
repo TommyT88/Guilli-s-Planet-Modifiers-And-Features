@@ -24,8 +24,10 @@ gpm_exploration_policy = {
 		}
 
 		modifier = {
-			science_ship_survey_speed = -0.30
-			ship_anomaly_generation_chance_mult = 0.05
+			ship_anomaly_generation_chance_mult = 0.10
+			ship_anomaly_research_speed_mult = 0.20
+			science_ship_survey_speed = -0.40
+			shipsize_science_influence_upkeep_add = 0.1
 		}
 
 		AI_weight = {
@@ -68,7 +70,10 @@ gpm_exploration_policy = {
 	option = {
 		name = "gpm_to_boldly_go"
 
-		modifier = {}
+		modifier = {
+			ship_anomaly_generation_chance_mult = 0.01
+			science_ship_survey_speed = 0.10
+		}
 
 		AI_weight = {
 			factor = 10
@@ -122,7 +127,10 @@ gpm_exploration_policy = {
 		}
 
 		modifier = {
-			science_ship_survey_speed = 0.50
+			science_ship_survey_speed = 0.40
+			shipsize_science_upkeep_mult = -0.8
+			ship_anomaly_generation_chance_mult = -0.05
+			
 		}
 
 		AI_weight = {

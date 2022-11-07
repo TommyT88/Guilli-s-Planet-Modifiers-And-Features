@@ -359,3 +359,44 @@ planet_event = { id = gpm_iddqd.3 hide_window = yes is_triggered_only = yes
 		add_modifier = { days = -1 modifier = bleak_planet }
 	}
 }
+
+country_event = { id = gpm_iddqd.4 hide_window = yes is_triggered_only = yes
+	immediate = {
+		force_add_civic = civic_exalted_priesthood
+		force_add_civic = civic_environmentalist
+		force_add_civic = civic_agrarian_idyll
+		force_add_civic = civic_mining_guilds
+		force_add_civic = civic_functional_architecture
+		force_add_civic = civic_aristocratic_elite
+		force_add_civic = civic_fanatic_purifiers
+		force_add_civic = civic_merchant_guilds
+		force_add_civic = civic_death_cult
+		force_add_civic = civic_death_cult_corporate
+		force_add_civic = civic_pleasure_seekers
+		force_add_civic = civic_corporate_hedonism
+		force_add_civic = civic_anglers
+		force_add_civic = civic_corporate_anglers
+		force_add_civic = civic_crafters
+		force_add_civic = civic_corporate_crafters
+		### 
+		force_add_civic = civic_hive_natural_neural_network
+		force_add_civic = civic_hive_devouring_swarm
+		### 
+		force_add_civic = civic_machine_servitor
+		force_add_civic = civic_machine_terminator
+		force_add_civic = civic_machine_assimilator
+		force_add_civic = civic_machine_rockbreakers
+		### 
+		force_add_civic = civic_memorialist
+		force_add_civic = civic_hive_memorialist
+		force_add_civic = civic_machine_memorialist
+		### 
+		force_add_civic = civic_catalytic_processing
+		force_add_civic = civic_hive_catalytic_processing
+		force_add_civic = civic_machine_catalytic_processing
+		force_add_civic = civic_corporate_catalytic_processing
+		### 
+		force_add_civic = civic_franchising
+		force_add_civic = civic_private_prospectors
+	}
+}

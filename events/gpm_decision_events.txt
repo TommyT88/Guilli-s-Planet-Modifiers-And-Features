@@ -33,3 +33,86 @@ ship_event = {
 		}
 	}
 }
+
+planet_event = {
+	id = gpm_decisions.2
+	title = "gpm_decisions.2.name"
+	desc = "gpm_decisions.2.desc"
+	picture = GFX_evt_gpm_great_one
+	show_sound = event_whispering
+	location = this
+
+	is_triggered_only = yes
+	
+	
+	trigger = {
+	
+	}
+	
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = gpm_decisions.2.a
+		locked_random_list = {
+			10 = {
+				every_owned_pop = {
+					kill_pop = yes
+				}
+				destroy_colony = yes
+			}
+			10 = {
+				every_owned_pop = {
+					modify_species = {
+						species = this
+						add_trait = trait_psionic
+					}
+				}
+				modifier = { factor = 0 owner_species = { has_trait = trait_psionic } }
+			}
+			10 = { 
+				owner = { 
+					add_research_option = tech_psionic_theory
+					hidden_effect = {
+						add_tech_progress = {
+							tech = tech_psionic_theory
+							progress = 0.50
+						}
+					}
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_psionic_theory } }
+			}
+			10 = { 
+				owner = { 
+					add_research_option = tech_psionic_barrier
+					hidden_effect = {
+						add_tech_progress = {
+							tech = tech_psionic_barrier
+							progress = 0.10
+						}
+					}
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_psionic_barrier } }
+			}
+			10 = { 
+				owner = { 
+					add_research_option = tech_psi_jump_drive_1
+					hidden_effect = {
+						add_tech_progress = {
+							tech = tech_psi_jump_drive_1
+							progress = 0.05
+						}
+					}
+				}
+				modifier = { factor = 0 owner = { has_technology = tech_psi_jump_drive_1 } }
+			}
+			10 = { add_deposit = d_zro_deposit_1 }
+			10 = { add_deposit = d_zro_deposit_2 }
+			10 = { add_deposit = d_zro_deposit_3 }
+			10 = { add_deposit = d_zro_deposit_4 }
+			10 = { add_deposit = d_zro_deposit_5 }
+		}
+	}
+}
