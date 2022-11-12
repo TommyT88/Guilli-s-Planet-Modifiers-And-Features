@@ -14,7 +14,7 @@ gpm_d_sun_energy_deposit = {
 	resources = { 
 		category = orbital_mining_deposits
 		produces = {
-            energy = 9
+            energy = 12
         }
 	}
 	station = shipclass_mining_station
@@ -27,9 +27,9 @@ gpm_d_sun_energy_deposit = {
 
 gpm_d_proto_molecule_deposit = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			society_research = 6
+			society_research = 15
 		}
 	}
 	station = shipclass_research_station
@@ -42,7 +42,7 @@ gpm_d_proto_molecule_deposit = {
 
 gpm_d_time_displaced_planet = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
 			physics_research = 6
 			society_research = 6
@@ -58,11 +58,11 @@ gpm_d_time_displaced_planet = {
 
 gpm_d_triple_science = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			physics_research = 2
-			society_research = 2
-			engineering_research = 2
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
 		}
 	}
 	station = shipclass_research_station
@@ -71,12 +71,13 @@ gpm_d_triple_science = {
 		weight = 0
 	}
 }
+
 gpm_d_double_science_phy_soc = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			physics_research = 3
-			society_research = 2
+			physics_research = 6
+			society_research = 4
 		}
 	}
 	station = shipclass_research_station
@@ -85,12 +86,13 @@ gpm_d_double_science_phy_soc = {
 		weight = 0
 	}
 }
+
 gpm_d_double_science_soc_phy = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			physics_research = 2
-			society_research = 3
+			physics_research = 4
+			society_research = 6
 		}
 	}
 	station = shipclass_research_station
@@ -99,12 +101,13 @@ gpm_d_double_science_soc_phy = {
 		weight = 0
 	}
 }
+
 gpm_d_double_science_phy_eng = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			physics_research = 3
-			engineering_research = 2
+			physics_research = 6
+			engineering_research = 4
 		}
 	}
 	station = shipclass_research_station
@@ -113,12 +116,13 @@ gpm_d_double_science_phy_eng = {
 		weight = 0
 	}
 }
+
 gpm_d_double_science_eng_phy = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			physics_research = 2
-			engineering_research = 3
+			physics_research = 4
+			engineering_research = 6
 		}
 	}
 	station = shipclass_research_station
@@ -127,12 +131,13 @@ gpm_d_double_science_eng_phy = {
 		weight = 0
 	}
 }
+
 gpm_d_double_science_soc_eng = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			society_research = 3
-			engineering_research = 2
+			society_research = 6
+			engineering_research = 4
 		}
 	}
 	station = shipclass_research_station
@@ -141,12 +146,13 @@ gpm_d_double_science_soc_eng = {
 		weight = 0
 	}
 }
+
 gpm_d_double_science_eng_soc = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
-			society_research = 2
-			engineering_research = 3
+			society_research = 4
+			engineering_research = 6
 		}
 	}
 	station = shipclass_research_station
@@ -173,7 +179,7 @@ gpm_d_inspirational = {
 
 gpm_d_pulsar_clock = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
 			physics_research = 12
 		}
@@ -191,7 +197,7 @@ gpm_d_unity_deposit = {
 	is_for_colonizable = no
 		
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
 			unity = 5
 		}
@@ -233,14 +239,167 @@ gpm_d_unity_deposit = {
 	}
 }
 
+gpm_d_unity_space_deposit_2 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 2
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_3 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 3
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_4 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 4
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_5 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 5
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_6 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 6
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_7 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 7
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_8 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 8
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_9 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 9
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
 gpm_d_unity_space_deposit_10 = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_research_deposits
 		produces = {
 			unity = 10
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_unity_space_deposit_15 = {
+	station = shipclass_research_station
+	is_for_colonizable = no
+		
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 15
 		}
 	}
 
@@ -398,4 +557,193 @@ gpm_d_food_15 = {
 	drop_weight = {
 		weight = 0
 	}
+}
+
+gpm_d_food_20 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 20
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_food_25 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 25
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_minerals_11 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 11
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_minerals_12 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 12
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_minerals_13 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 13
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_minerals_14 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 14
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_minerals_15 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 15
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+gpm_d_energy_11 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = 11
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_energy_12 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = 12
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_energy_13 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = 13
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_energy_14 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = 14
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_energy_15 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = 15
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
 }
