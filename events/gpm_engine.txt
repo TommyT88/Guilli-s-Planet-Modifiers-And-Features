@@ -835,7 +835,10 @@ planet_event = {
 		# 1 type per system to prevent ambient object and flag issues
 		## ASTEROIDS
 		if = {
-			limit = { gpm_is_planet_class_asteroid = yes }
+			limit = { 
+				gpm_is_planet_class_asteroid = yes
+				NOT = { has_global_flag = gpm_mini_megas_disabled }
+			}
 			random_list = {
 				993 = { }
 				7 = {
@@ -865,7 +868,10 @@ planet_event = {
 		
 		## GAS GIANTS
 		if = {
-			limit = { gpm_is_planet_class_gas_giant = yes }
+			limit = { 
+				gpm_is_planet_class_gas_giant = yes
+				NOT = { has_global_flag = gpm_mini_megas_disabled }
+			}
 			random_list = {
 				996 = { }
 				4 = {
@@ -895,7 +901,10 @@ planet_event = {
 		
 		## NORMAL UNINHABITABLE PLANETS (Barren, Frozen, Toxic, Molten)
 		if = {
-			limit = { gpm_is_planet_class_normal_uninhabitable = yes }
+			limit = { 
+				gpm_is_planet_class_normal_uninhabitable = yes
+				NOT = { has_global_flag = gpm_mini_megas_disabled }
+			}
 			random_list = {
 				998 = { }
 				1 = {
@@ -925,7 +934,10 @@ planet_event = {
 		
 		## STARS
 		if = {
-			limit = { gpm_is_planet_class_star = yes }
+			limit = {
+				gpm_is_planet_class_star = yes
+				NOT = { has_global_flag = gpm_mini_megas_disabled }
+			}
 			random_list = {
 				995 = { }
 				3 = {

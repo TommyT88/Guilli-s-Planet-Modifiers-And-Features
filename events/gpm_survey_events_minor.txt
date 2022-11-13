@@ -389,18 +389,22 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
 						gpm_is_planet_class_normal_habitable = no
 						has_deposit = no
-						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_research_station
+						}
 					}
 				}
 				gpm_d_random_unity_deposit = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-				OWNER = { add_resource = { unity = 20 multiplier = value:gpm_leader_level_value } }
+				OWNER = { add_resource = { unity = 40 multiplier = value:gpm_leader_level_value } }
 			}
 			else = {
-				OWNER = { add_resource = { unity = 60 multiplier = value:gpm_leader_level_value } }
+				OWNER = { add_resource = { unity = 110 multiplier = value:gpm_leader_level_value } }
 			}
 		}
 		# other rewards
@@ -1252,12 +1256,6 @@ ship_event = {
 					7 = { add_resource = { energy = 50 multiplier = value:gpm_leader_level_value } }
 					9 = { add_resource = { energy = 75 multiplier = value:gpm_leader_level_value } }
 					10 = { add_resource = { energy = 100 multiplier = value:gpm_leader_level_value } }
-					10 = { add_resource = { energy = 125 multiplier = value:gpm_leader_level_value } }
-					10 = { add_resource = { energy = 150 multiplier = value:gpm_leader_level_value } }
-					9 = { add_resource = { energy = 175 multiplier = value:gpm_leader_level_value } }
-					7 = { add_resource = { energy = 200 multiplier = value:gpm_leader_level_value } }
-					6 = { add_resource = { energy = 225 multiplier = value:gpm_leader_level_value } }
-					5 = { add_resource = { energy = 250 multiplier = value:gpm_leader_level_value } }
 				}
 			}
 		}
@@ -1296,11 +1294,6 @@ ship_event = {
 		# other rewards
 		OWNER = {
 			locked_random_list = {
-				5 = { add_resource = { energy = 5 multiplier = value:gpm_leader_level_value } }
-				6 = { add_resource = { energy = 25 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { energy = 50 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { energy = 75 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { energy = 100 multiplier = value:gpm_leader_level_value } }
 				10 = { add_resource = { energy = 125 multiplier = value:gpm_leader_level_value } }
 				10 = { add_resource = { energy = 150 multiplier = value:gpm_leader_level_value } }
 				9 = { add_resource = { energy = 175 multiplier = value:gpm_leader_level_value } }
@@ -3542,6 +3535,7 @@ ship_event = {
 			}
 			FROM = {
 				gpm_d_random_energy = yes
+				gpm_d_random_trade = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 				every_moon = {
 					limit = {
@@ -3554,6 +3548,7 @@ ship_event = {
 						}
 					}
 					gpm_d_random_energy = yes
+					gpm_d_random_trade_small = yes
 					hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 				}
 			}

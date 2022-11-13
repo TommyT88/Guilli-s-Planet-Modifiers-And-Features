@@ -360,6 +360,35 @@ country_event = {
 	# 	}
 	# }
 
+	############################################################
+	############ Disable/Enable Mini Megastructures ############
+	############################################################
+
+	# Disable Structures
+	option = {
+		trigger = {
+			NOT = { has_global_flag = gpm_mini_megas_disabled }
+		}
+		name = gpm_start_menu.2.disable_mini_structures
+		custom_tooltip = gpm_start_menu.2.disable_mini_structuresTT
+		set_global_flag = gpm_mini_megas_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+	# Enable Structurss
+	option = {
+		trigger = {
+			has_global_flag = gpm_mini_megas_disabled
+		}
+		name = gpm_start_menu.2.enabled_mini_structures
+		custom_tooltip = gpm_start_menu.2.enable_mini_structuresTT
+		remove_global_flag = gpm_mini_megas_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.2  }
+		}
+	}
+
 	######################################################################
 	############ Disable/Enable Steal Relic Operations for AI ############
 	######################################################################
