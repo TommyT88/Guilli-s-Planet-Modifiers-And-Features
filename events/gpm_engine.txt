@@ -1013,13 +1013,42 @@ planet_event = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { 
-				NOT = {
+				NAND = {
 					has_global_flag = gpm_planetary_rings_disabled
 					exists = space_owner
 				}
 			}
 			random_list = {
-				120 = { }
+				120 = {
+					modifier = { 
+						factor = 0
+						OR = {
+							has_planet_flag = gpm_rings_huge
+							has_planet_flag = gpm_rings_large
+							has_planet_flag = has_rings_01_large
+							has_planet_flag = has_rings_02_large
+							has_planet_flag = has_rings_03_large
+							has_planet_flag = has_rings_04_large
+							has_planet_flag = gpm_rings_medium
+							has_planet_flag = has_rings_01_sparse
+							has_planet_flag = has_rings_02_sparse
+							has_planet_flag = has_rings_03_sparse
+							has_planet_flag = has_rings_04_sparse
+							has_planet_flag = gpm_rings_small
+							has_planet_flag = has_rings_01_small
+							has_planet_flag = has_rings_02_small
+							has_planet_flag = has_rings_03_small
+							has_planet_flag = has_rings_04_small
+							has_planet_flag = has_rings_01_thin
+							has_planet_flag = has_rings_02_thin
+							has_planet_flag = has_rings_03_thin
+							has_planet_flag = has_rings_01_low
+							has_planet_flag = has_rings_02_low
+							has_planet_flag = has_rings_01_rare
+							has_planet_flag = has_rings_02_rare
+						}
+					}
+				}
 				10 = {
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
@@ -1059,7 +1088,36 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
-				290 = { }
+				290 = {
+					modifier = { 
+						factor = 0
+						OR = {
+							has_planet_flag = gpm_rings_huge
+							has_planet_flag = gpm_rings_large
+							has_planet_flag = has_rings_01_large
+							has_planet_flag = has_rings_02_large
+							has_planet_flag = has_rings_03_large
+							has_planet_flag = has_rings_04_large
+							has_planet_flag = gpm_rings_medium
+							has_planet_flag = has_rings_01_sparse
+							has_planet_flag = has_rings_02_sparse
+							has_planet_flag = has_rings_03_sparse
+							has_planet_flag = has_rings_04_sparse
+							has_planet_flag = gpm_rings_small
+							has_planet_flag = has_rings_01_small
+							has_planet_flag = has_rings_02_small
+							has_planet_flag = has_rings_03_small
+							has_planet_flag = has_rings_04_small
+							has_planet_flag = has_rings_01_thin
+							has_planet_flag = has_rings_02_thin
+							has_planet_flag = has_rings_03_thin
+							has_planet_flag = has_rings_01_low
+							has_planet_flag = has_rings_02_low
+							has_planet_flag = has_rings_01_rare
+							has_planet_flag = has_rings_02_rare
+						}
+					}
+				}
 				10 = { 
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
@@ -1121,7 +1179,36 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
-				140 = { }
+				140 = {
+					modifier = { 
+						factor = 0
+						OR = {
+							has_planet_flag = gpm_rings_huge
+							has_planet_flag = gpm_rings_large
+							has_planet_flag = has_rings_01_large
+							has_planet_flag = has_rings_02_large
+							has_planet_flag = has_rings_03_large
+							has_planet_flag = has_rings_04_large
+							has_planet_flag = gpm_rings_medium
+							has_planet_flag = has_rings_01_sparse
+							has_planet_flag = has_rings_02_sparse
+							has_planet_flag = has_rings_03_sparse
+							has_planet_flag = has_rings_04_sparse
+							has_planet_flag = gpm_rings_small
+							has_planet_flag = has_rings_01_small
+							has_planet_flag = has_rings_02_small
+							has_planet_flag = has_rings_03_small
+							has_planet_flag = has_rings_04_small
+							has_planet_flag = has_rings_01_thin
+							has_planet_flag = has_rings_02_thin
+							has_planet_flag = has_rings_03_thin
+							has_planet_flag = has_rings_01_low
+							has_planet_flag = has_rings_02_low
+							has_planet_flag = has_rings_01_rare
+							has_planet_flag = has_rings_02_rare
+						}
+					}
+				}
 				10 = { 
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
@@ -1165,7 +1252,36 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
-				120 = { }
+				120 = {
+					modifier = { 
+						factor = 0
+						OR = {
+							has_planet_flag = gpm_rings_huge
+							has_planet_flag = gpm_rings_large
+							has_planet_flag = has_rings_01_large
+							has_planet_flag = has_rings_02_large
+							has_planet_flag = has_rings_03_large
+							has_planet_flag = has_rings_04_large
+							has_planet_flag = gpm_rings_medium
+							has_planet_flag = has_rings_01_sparse
+							has_planet_flag = has_rings_02_sparse
+							has_planet_flag = has_rings_03_sparse
+							has_planet_flag = has_rings_04_sparse
+							has_planet_flag = gpm_rings_small
+							has_planet_flag = has_rings_01_small
+							has_planet_flag = has_rings_02_small
+							has_planet_flag = has_rings_03_small
+							has_planet_flag = has_rings_04_small
+							has_planet_flag = has_rings_01_thin
+							has_planet_flag = has_rings_02_thin
+							has_planet_flag = has_rings_03_thin
+							has_planet_flag = has_rings_01_low
+							has_planet_flag = has_rings_02_low
+							has_planet_flag = has_rings_01_rare
+							has_planet_flag = has_rings_02_rare
+						}
+					}
+				}
 				10 = { 
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
@@ -1316,7 +1432,36 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
-				240 = { }
+				240 = {
+					modifier = { 
+						factor = 0
+						OR = {
+							has_planet_flag = gpm_rings_huge
+							has_planet_flag = gpm_rings_large
+							has_planet_flag = has_rings_01_large
+							has_planet_flag = has_rings_02_large
+							has_planet_flag = has_rings_03_large
+							has_planet_flag = has_rings_04_large
+							has_planet_flag = gpm_rings_medium
+							has_planet_flag = has_rings_01_sparse
+							has_planet_flag = has_rings_02_sparse
+							has_planet_flag = has_rings_03_sparse
+							has_planet_flag = has_rings_04_sparse
+							has_planet_flag = gpm_rings_small
+							has_planet_flag = has_rings_01_small
+							has_planet_flag = has_rings_02_small
+							has_planet_flag = has_rings_03_small
+							has_planet_flag = has_rings_04_small
+							has_planet_flag = has_rings_01_thin
+							has_planet_flag = has_rings_02_thin
+							has_planet_flag = has_rings_03_thin
+							has_planet_flag = has_rings_01_low
+							has_planet_flag = has_rings_02_low
+							has_planet_flag = has_rings_01_rare
+							has_planet_flag = has_rings_02_rare
+						}
+					}
+				}
 				10 = { 
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
@@ -1413,7 +1558,36 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
-				140 = { }
+				140 = {
+					modifier = { 
+						factor = 0
+						OR = {
+							has_planet_flag = gpm_rings_huge
+							has_planet_flag = gpm_rings_large
+							has_planet_flag = has_rings_01_large
+							has_planet_flag = has_rings_02_large
+							has_planet_flag = has_rings_03_large
+							has_planet_flag = has_rings_04_large
+							has_planet_flag = gpm_rings_medium
+							has_planet_flag = has_rings_01_sparse
+							has_planet_flag = has_rings_02_sparse
+							has_planet_flag = has_rings_03_sparse
+							has_planet_flag = has_rings_04_sparse
+							has_planet_flag = gpm_rings_small
+							has_planet_flag = has_rings_01_small
+							has_planet_flag = has_rings_02_small
+							has_planet_flag = has_rings_03_small
+							has_planet_flag = has_rings_04_small
+							has_planet_flag = has_rings_01_thin
+							has_planet_flag = has_rings_02_thin
+							has_planet_flag = has_rings_03_thin
+							has_planet_flag = has_rings_01_low
+							has_planet_flag = has_rings_02_low
+							has_planet_flag = has_rings_01_rare
+							has_planet_flag = has_rings_02_rare
+						}
+					}
+				}
 				10 = { 
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes

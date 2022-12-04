@@ -467,20 +467,20 @@ gpm_exploration_policy_away_teams_reward = {
 		10 = { root.leader = { gpm_random_experience_big = yes } }
 		20 = { 
 			add_resource = {
-				alloys = 25 multiplier = value:gpm_leader_level_value
-				unity = 50 multiplier = value:gpm_leader_level_value 
+				alloys = 15 multiplier = value:gpm_leader_level_value
+				unity = 10 multiplier = value:gpm_leader_level_value 
 			}
 		}
 		20 = { 
 			add_resource = {
-				minerals = 55 multiplier = value:gpm_leader_level_value
-				unity = 75 multiplier = value:gpm_leader_level_value 
+				minerals = 30 multiplier = value:gpm_leader_level_value
+				unity = 10 multiplier = value:gpm_leader_level_value 
 			}
 		}
 		20 = {
 			add_resource = { 
-				energy = 65 multiplier = value:gpm_leader_level_value
-				unity = 75 multiplier = value:gpm_leader_level_value 
+				energy = 40 multiplier = value:gpm_leader_level_value
+				unity = 10 multiplier = value:gpm_leader_level_value 
 			}
 			modifier = { factor = 0 is_megacorp = no }
 		}

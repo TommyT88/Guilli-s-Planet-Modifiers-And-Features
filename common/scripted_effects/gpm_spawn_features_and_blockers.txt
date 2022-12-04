@@ -1232,7 +1232,6 @@ gpm_spawn_planet_wonders_any = {
 }
 
 gpm_spawn_planet_ring_modifier = {
-	optimize_memory
 	random_list = {
 		# 0 to catch exceptions
 		0 = { }
@@ -1244,8 +1243,8 @@ gpm_spawn_planet_ring_modifier = {
 				OR = {
 					has_modifier = "gpm_metallic_ring"
 					has_modifier = "gpm_ice_ring"
-					has_modifier = "gpm_massive_world"
-					has_modifier = "gpm_tidally_active"
+					# has_modifier = "gpm_massive_world"
+					# has_modifier = "gpm_tidally_active"
 				}
 			}
 			# (Not) on these planets
@@ -1264,7 +1263,7 @@ gpm_spawn_planet_ring_modifier = {
 			modifier = { factor = 1.2 planet_size > 15 }
 			modifier = { factor = 1.4 planet_size > 20 }
 			modifier = { factor = 2 planet_size > 25 }
-			modifier = { factor = 0 num_moons > 1 }
+			# modifier = { factor = 0 num_moons > 1 }
 			modifier = { factor = 0.4 num_moons = 1 }
 			modifier = { factor = 1.5 num_moons = 0 }
 			# Galaxy age setting modifier
@@ -1280,8 +1279,8 @@ gpm_spawn_planet_ring_modifier = {
 				OR = {
 					has_modifier = "gpm_metallic_ring"
 					has_modifier = "gpm_ice_ring"
-					has_modifier = "gpm_massive_world"
-					has_modifier = "gpm_tidally_active"
+					# has_modifier = "gpm_massive_world"
+					# has_modifier = "gpm_tidally_active"
 				}
 			}
 			# (Not) on these planets
@@ -1301,7 +1300,7 @@ gpm_spawn_planet_ring_modifier = {
 			modifier = { factor = 1.2 planet_size > 15 }
 			modifier = { factor = 1.4 planet_size > 20 }
 			modifier = { factor = 2 planet_size > 25 }
-			modifier = { factor = 0 num_moons > 1 }
+			# modifier = { factor = 0 num_moons > 1 }
 			modifier = { factor = 0.4 num_moons = 1 }
 			modifier = { factor = 1.5 num_moons = 0 }
 			# Galaxy age setting modifier

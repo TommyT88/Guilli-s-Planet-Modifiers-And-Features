@@ -3989,6 +3989,40 @@ ship_event = {
 			}
 		}
 		# deposit
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				gpm_d_random_food = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					5 = { add_resource = { food = 25 multiplier = value:gpm_leader_level_value } }
+					6 = { add_resource = { food = 35 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { food = 45 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { food = 55 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { food = 65 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { food = 75 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { food = 85 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { food = 95 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { food = 115 multiplier = value:gpm_leader_level_value } }
+					6 = { add_resource = { food = 125 multiplier = value:gpm_leader_level_value } }
+				}
+			}
+		}
 		# other rewards
 		# bonus rewards
 		OWNER = {

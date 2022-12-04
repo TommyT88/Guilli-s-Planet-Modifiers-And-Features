@@ -3246,21 +3246,37 @@ gpm_set_planetary_rings = {
 	}
 	## Metallic Rings ##
 	if = {
-		limit = { 
-			AND = {
-				has_modifier = gpm_metallic_ring
-				NOT = { has_planet_flag = gpm_has_planet_rings }
+		limit = {
+			has_modifier = gpm_metallic_ring
+			NOR = { 
+				has_planet_flag = gpm_rings_huge
+				has_planet_flag = gpm_rings_large
+				has_planet_flag = has_rings_01_large
+				has_planet_flag = has_rings_02_large
+				has_planet_flag = has_rings_03_large
+				has_planet_flag = has_rings_04_large
+				has_planet_flag = gpm_rings_medium
+				has_planet_flag = has_rings_01_sparse
+				has_planet_flag = has_rings_02_sparse
+				has_planet_flag = has_rings_03_sparse
+				has_planet_flag = has_rings_04_sparse
+				has_planet_flag = gpm_rings_small
+				has_planet_flag = has_rings_01_small
+				has_planet_flag = has_rings_02_small
+				has_planet_flag = has_rings_03_small
+				has_planet_flag = has_rings_04_small
+				has_planet_flag = has_rings_01_thin
+				has_planet_flag = has_rings_02_thin
+				has_planet_flag = has_rings_03_thin
+				has_planet_flag = has_rings_01_low
+				has_planet_flag = has_rings_02_low
+				has_planet_flag = has_rings_01_rare
+				has_planet_flag = has_rings_02_rare
 			}
 		}
-		set_planet_flag = gpm_has_planet_rings
 		save_event_target_as = planet_location_rings
 		if = {
-			limit = {
-				AND = {
-					has_global_flag = "has_system_scale_mod"
-					NOT = { has_global_flag = "has_real_space_mc_mod" }
-				}
-			}
+			limit = { has_global_flag = "has_system_scale_mod" }
 			random_list = {
 				8 = {
 					create_ambient_object = {
@@ -3334,21 +3350,37 @@ gpm_set_planetary_rings = {
 	}
 	## Ice Rings ##
 	if = {
-		limit = { 
-			AND = {
-				has_modifier = gpm_ice_ring
-				NOT = { has_planet_flag = gpm_has_planet_rings }
+		limit = {
+			has_modifier = gpm_metallic_ring
+			NOR = { 
+				has_planet_flag = gpm_rings_huge
+				has_planet_flag = gpm_rings_large
+				has_planet_flag = has_rings_01_large
+				has_planet_flag = has_rings_02_large
+				has_planet_flag = has_rings_03_large
+				has_planet_flag = has_rings_04_large
+				has_planet_flag = gpm_rings_medium
+				has_planet_flag = has_rings_01_sparse
+				has_planet_flag = has_rings_02_sparse
+				has_planet_flag = has_rings_03_sparse
+				has_planet_flag = has_rings_04_sparse
+				has_planet_flag = gpm_rings_small
+				has_planet_flag = has_rings_01_small
+				has_planet_flag = has_rings_02_small
+				has_planet_flag = has_rings_03_small
+				has_planet_flag = has_rings_04_small
+				has_planet_flag = has_rings_01_thin
+				has_planet_flag = has_rings_02_thin
+				has_planet_flag = has_rings_03_thin
+				has_planet_flag = has_rings_01_low
+				has_planet_flag = has_rings_02_low
+				has_planet_flag = has_rings_01_rare
+				has_planet_flag = has_rings_02_rare
 			}
 		}
-		set_planet_flag = gpm_has_planet_rings
 		save_event_target_as = planet_location_rings
 		if = {
-			limit = {
-				AND = {
-					has_global_flag = "has_system_scale_mod"
-					NOT = { has_global_flag = "has_real_space_mc_mod" }
-				}
-			}
+			limit = { has_global_flag = "has_system_scale_mod" }
 			random_list = {
 				8 = {
 					create_ambient_object = {

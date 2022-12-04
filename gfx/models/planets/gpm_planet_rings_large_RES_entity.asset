@@ -3,9 +3,16 @@
 ##################
 
 entity = {
-	name = "gpm_rings_metallic_large_RES_01_entity"
+	name = "gpm_rings_metallic_large_RES"
 	cull_radius = 500
 	locator = { name = "loc1" position = { 0 -150 0 } rotation = { 0 0 0 }}
+	attach = { "loc1" = "gpm_rings_metallic_large_RES_attach"}
+}
+
+entity = {
+	name = "gpm_rings_metallic_large_RES_RS"
+	cull_radius = 500
+	locator = { name = "loc1" position = { 0 -3000 0 } rotation = { 0 0 0 }}
 	attach = { "loc1" = "gpm_rings_metallic_large_RES_attach"}
 }
 

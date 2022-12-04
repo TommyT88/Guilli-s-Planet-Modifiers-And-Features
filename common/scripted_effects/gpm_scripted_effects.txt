@@ -532,48 +532,44 @@ gpm_random_dangerous_modifiers = {
 }
 
 gpm_random_res_metallic_ring_deposit = {
-	optimize_memory
 	random_list = {
 		20 = {
 			clear_deposits = yes
 			random_list = {
-				64 = { add_deposit = d_minerals_3 }
-				32 = { add_deposit = d_minerals_4 }
-				16 = { add_deposit = d_minerals_5 }
-				8 = { add_deposit = d_minerals_6 }
-				4 = { add_deposit = d_minerals_7 }
-				2 = { add_deposit = d_minerals_8 }
+				13 = { add_deposit = d_minerals_3 }
+				11 = { add_deposit = d_minerals_4 }
+				9 = { add_deposit = d_minerals_5 }
+				7 = { add_deposit = d_minerals_6 }
+				5 = { add_deposit = d_minerals_7 }
+				3 = { add_deposit = d_minerals_8 }
 				1 = { add_deposit = d_minerals_9 }
 			}
 		}
-		
 		2 = {
 			clear_deposits = yes
 			random_list = {
-				64 = { add_deposit = d_alloys_2 }
-				16 = { add_deposit = d_alloys_3 }
-				4 = { add_deposit = d_alloys_4 }
+				9 = { add_deposit = d_alloys_2 }
+				6 = { add_deposit = d_alloys_3 }
+				3 = { add_deposit = d_alloys_4 }
 				1 = { add_deposit = d_alloys_5 }
 			}
 		}
-		
 		1 = {
 			clear_deposits = yes
 			random_list = {
-				81 = { add_deposit = d_rare_crystals_1 }
-				27 = { add_deposit = d_rare_crystals_2 }
-				9 = { add_deposit = d_rare_crystals_3 }
+				9 = { add_deposit = d_rare_crystals_1 }
+				7 = { add_deposit = d_rare_crystals_2 }
+				5 = { add_deposit = d_rare_crystals_3 }
 				3 = { add_deposit = d_rare_crystals_4 }
 				1 = { add_deposit = d_rare_crystals_5 }
 			}
 		}
-		
 		1 = {
 			clear_deposits = yes
 			random_list = {
-				81 = { add_deposit = d_volatile_motes_1 }
-				27 = { add_deposit = d_volatile_motes_2 }
-				9 = { add_deposit = d_volatile_motes_3 }
+				9 = { add_deposit = d_volatile_motes_1 }
+				7 = { add_deposit = d_volatile_motes_2 }
+				5 = { add_deposit = d_volatile_motes_3 }
 				3 = { add_deposit = d_volatile_motes_4 }
 				1 = { add_deposit = d_volatile_motes_5 }
 			}
@@ -583,23 +579,22 @@ gpm_random_res_metallic_ring_deposit = {
 }
 
 gpm_random_res_ice_ring_deposit = {
-	optimize_memory
 	random_list = {
-		75 = {
+		9 = {
 			clear_deposits = yes
 			random_list = {
 				95 = { add_deposit = d_energy_2 }
 				5 = { add_deposit = d_exotic_gases_1 }
 			}
 		}
-		18 = {
+		4 = {
 			clear_deposits = yes
 			random_list = {
 				95 = { add_deposit = d_energy_3 }
 				5 = { add_deposit = d_exotic_gases_2 }
 			}
 		}
-		7 = {
+		1 = {
 			clear_deposits = yes
 			random_list = {
 				95 = { add_deposit = d_energy_4 }
