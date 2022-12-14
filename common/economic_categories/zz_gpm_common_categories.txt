@@ -769,6 +769,7 @@ ships = {
 			OR = {
 				is_ship_size = corvette
 				is_ship_size = offspring_corvette
+				is_ship_size = frigate
 			}
 		}
 	}
@@ -786,6 +787,7 @@ ships = {
 			OR = {
 				is_ship_size = corvette
 				is_ship_size = offspring_corvette
+				is_ship_size = frigate
 			}
 		}
 	}
@@ -1194,6 +1196,34 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_science_ship
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_science
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+            add
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = science
+		}
+	}
+    
+    triggered_upkeep_modifier = {
+		key = ship_science
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
 			is_ship_size = science
 		}
 	}
@@ -1411,6 +1441,72 @@ ships = {
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
 			is_ship_size = starbase_citadel
+		}
+	}
+
+	triggered_cost_modifier = {
+		key = ship_StrikeCruiser
+		use_parent_icon = yes
+		modifier_types = { mult }
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = StrikeCruiser
+		}
+	}	
+	
+	triggered_cost_modifier = {
+		key = ship_Battlecruiser
+		use_parent_icon = yes
+		modifier_types = { mult }
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Battlecruiser
+		}
+	}
+
+	triggered_cost_modifier = {
+		key = ship_Carrier
+		use_parent_icon = yes
+		modifier_types = { mult }
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Carrier
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_Dreadnought
+		use_parent_icon = yes
+		modifier_types = { mult }
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Dreadnought
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_Flagship
+		use_parent_icon = yes
+		modifier_types = { mult }
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Flagship
+		}
+	}
+	
+	triggered_cost_modifier = {
+		key = ship_explorationship
+		use_parent_icon = yes
+		modifier_types = { mult }
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = explorationship
 		}
 	}
 }
