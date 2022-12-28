@@ -128,10 +128,10 @@ gpm_d_precursor_capital_complex = {
 }
 gpm_d_precursor_ruins_1 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	planet_modifier = {
-		# district_gpm_precursor_manufactorium_max = 3
+		planet_max_buildings_add = 2
 	}
 
 	resources = {
@@ -148,11 +148,11 @@ gpm_d_precursor_ruins_1 = {
 }
 gpm_d_precursor_ruins_2 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 
 	planet_modifier = {
-		# district_gpm_precursor_science_standard_max = 2
+		planet_max_buildings_add = 3
 	}
 
 	resources = {
@@ -171,10 +171,11 @@ gpm_d_precursor_ruins_2 = {
 }
 gpm_d_precursor_ruins_3 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	planet_modifier = {
-		# district_gpm_precursor_science_standard_max = 2
+		planet_max_districts_add = 2
+		planet_max_buildings_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -220,7 +221,7 @@ gpm_d_precursor_ruins_3 = {
 }
 gpm_d_precursor_ruins_4 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	# planet_modifier = {
 	# 	district_gpm_precursor_science_standard_max = 1
@@ -252,13 +253,15 @@ gpm_d_precursor_ruins_4 = {
 			job_gpm_archaeologist_drone_add = 2
 		}
 	}
+	
+	planet_modifier = {
+		BIOLOGICAL_pop_growth_speed = 0.20
+	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 5
-			society_research = 5
-			engineering_research = 5
+			society_research = 30
 		}
 	}
 
@@ -269,7 +272,7 @@ gpm_d_precursor_ruins_4 = {
 }
 gpm_d_precursor_ruins_5 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 
 	planet_modifier = {
@@ -290,7 +293,7 @@ gpm_d_precursor_ruins_5 = {
 }
 gpm_d_precursor_ruins_6 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	# planet_modifier = {
 	# 	district_gpm_precursor_science_standard_max = 1
@@ -326,9 +329,7 @@ gpm_d_precursor_ruins_6 = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 5
-			society_research = 5
-			engineering_research = 5
+			physics_research = 15
 		}
 	}
 
@@ -339,7 +340,7 @@ gpm_d_precursor_ruins_6 = {
 }
 gpm_d_precursor_ruins_7 = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	# planet_modifier = {
 	# 	district_gpm_precursor_science_standard_max = 1
@@ -376,9 +377,7 @@ gpm_d_precursor_ruins_7 = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 5
-			society_research = 5
-			engineering_research = 5
+			engineering_research = 25
 		}
 	}
 
@@ -389,10 +388,10 @@ gpm_d_precursor_ruins_7 = {
 }
 gpm_d_precursor_ruins_1_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 2
 	}
 
 	# weight 0: event added
@@ -402,11 +401,11 @@ gpm_d_precursor_ruins_1_distr = {
 }
 gpm_d_precursor_ruins_2_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 3
 	}
 
 	# weight 0: event added
@@ -416,11 +415,12 @@ gpm_d_precursor_ruins_2_distr = {
 }
 gpm_d_precursor_ruins_3_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 
 	planet_modifier = {
-		planet_max_districts_add = 1
+		planet_max_districts_add = 2
+		planet_max_buildings_add = 1
 	}
 
 	# weight 0: event added
@@ -430,16 +430,16 @@ gpm_d_precursor_ruins_3_distr = {
 }
 gpm_d_precursor_ruins_4_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_districts_add = 1
+		planet_colony_development_speed_mult = 3.0
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			society_research = 2
+			society_research = 30
 		}
 	}
 
@@ -450,10 +450,13 @@ gpm_d_precursor_ruins_4_distr = {
 }
 gpm_d_precursor_ruins_5_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
-	planet_modifier = {
-		district_Generator_max = 4
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 15
+		}
 	}
 
 	# weight 0: event added
@@ -463,10 +466,13 @@ gpm_d_precursor_ruins_5_distr = {
 }
 gpm_d_precursor_ruins_6_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
-	planet_modifier = {
-		planet_max_districts_add = 1
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 15
+		}
 	}
 
 	# weight 0: event added
@@ -476,10 +482,13 @@ gpm_d_precursor_ruins_6_distr = {
 }
 gpm_d_precursor_ruins_7_distr = {
 	is_for_colonizable = yes
-	category = gpm_deposit_cat_special
+	category = deposit_cat_rare
 	
-	planet_modifier = {
-		planet_max_districts_add = 1
+	resources = {
+		category = planet_deposits
+		produces = {
+			engineering_research = 25
+		}
 	}
 
 	# weight 0: event added

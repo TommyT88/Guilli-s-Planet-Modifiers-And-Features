@@ -143,6 +143,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.2 is_planet_class = pc_storm }
 			modifier = { factor = 0.1 has_modifier = "high_gravity" }
 			modifier = { factor = 1.2 has_modifier = "low_gravity" }
 			modifier = { factor = 0.1 has_modifier = "gpm_high_gravity_2" }
@@ -163,6 +164,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 1.5 is_planet_class = pc_storm }
 			modifier = { factor = 1.2 has_modifier = "high_gravity" }
 			modifier = { factor = 0.1 has_modifier = "low_gravity" }
 			modifier = { factor = 1.2 has_modifier = "gpm_high_gravity_2" }
@@ -184,6 +186,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 2 is_planet_class = pc_storm }
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -201,6 +204,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 3 is_planet_class = pc_storm }
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -212,6 +216,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 1.2 is_planet_class = pc_storm }
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
@@ -1041,6 +1046,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_pleasant_weather" }
 			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_storm }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 3 is_planet_class = pc_gaia }
@@ -1169,6 +1175,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_gorgeous_sky" }
 			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_storm }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 3 is_planet_class = pc_gaia }

@@ -318,6 +318,7 @@ country_event = {
 			}
 		}
 	
+		# Main engine to spawn all planet modifiers
 		every_galaxy_planet = {
 			# Planet Modifier Scaling
 			if = {
@@ -348,6 +349,16 @@ country_event = {
 			# clear_variable = gpm_planet_size_multiplier_wonders
 			# clear_variable = gpm_planet_size_multiplier_precursor
 			# clear_variable = gpm_galaxy_setting_habitable_worlds_scale
+			
+			
+			# added 3.6; spicing up fallen empire systems
+			if = {
+				limit = {
+					gpm_is_fallen_empire_space_owner = yes
+					gpm_is_planet_class_normal_habitable = no
+				}
+				gpm_set_fallen_empire_space_deposit = yes
+			}
 		}
 	}
 }
@@ -771,7 +782,7 @@ planet_event = {
 		if = {
 			limit = { has_owner = yes gpm_is_planet_fallen_empire = yes }
 			planet_event = { id = gpm_engine.100 days = 10 }
-		}
+		}		
 		
 		## HABITATS 
 		if = {

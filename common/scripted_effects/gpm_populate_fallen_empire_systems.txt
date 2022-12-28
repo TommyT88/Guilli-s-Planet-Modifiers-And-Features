@@ -1,0 +1,449 @@
+gpm_set_fallen_empire_space_deposit = {
+	if = {
+		limit = { 
+			is_planet_class = pc_black_hole
+			has_deposit = no
+		}					
+		random_list = {
+			10 = { add_deposit = d_dark_matter_deposit_10 }
+			10 = {
+				add_deposit = d_dark_matter_deposit_10
+				add_deposit = d_dark_matter_deposit_10
+			}
+		}
+		create_mining_station = { owner = prevprev.owner }
+	}
+	if = {
+		limit = { 
+			OR = {
+				is_planet_class = pc_neutron_star
+				is_planet_class = pc_pulsar
+			}
+			has_deposit = no
+		}
+		random_list = {
+			10 = { add_deposit = gpm_d_unity_space_deposit_15 }
+			10 = {
+				add_deposit = gpm_d_unity_space_deposit_15
+				add_deposit = gpm_d_unity_space_deposit_15
+			}
+			10 = { 
+				add_deposit = gpm_d_unity_space_deposit_15
+				add_deposit = gpm_d_unity_space_deposit_15
+				add_deposit = gpm_d_unity_space_deposit_15
+			}
+		}
+		create_research_station = { owner = prevprev.owner }
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_molten = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = { add_deposit = d_alloys_25 }
+			10 = { add_deposit = d_alloys_10 }
+			10 = { 
+				add_deposit = d_living_metal_deposit
+				add_deposit = d_living_metal_deposit
+				add_deposit = d_living_metal_deposit
+			}
+			10 = { 
+				add_deposit = d_exotic_gases_5
+				add_deposit = d_exotic_gases_5
+			}
+			10 = { add_deposit = d_exotic_gases_5 }
+			10 = {
+				add_deposit = gpm_d_minerals_15
+				add_deposit = gpm_d_minerals_15
+			}
+			10 = { add_deposit = gpm_d_minerals_15 }
+		}
+		create_mining_station = { owner = prevprev.owner }
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_toxic = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = { 
+				add_deposit = gpm_d_energy_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = gpm_d_minerals_15
+				add_deposit = gpm_d_minerals_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = { 
+				add_deposit = gpm_d_minerals_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			30 = {
+				while = {
+					count = 7
+					random_list = {
+						10 = { add_deposit = gpm_d_double_science_phy_soc }
+						10 = { add_deposit = gpm_d_double_science_soc_phy }
+						10 = { add_deposit = gpm_d_double_science_phy_eng }
+						10 = { add_deposit = gpm_d_double_science_eng_phy }
+						10 = { add_deposit = gpm_d_double_science_soc_eng }
+						10 = { add_deposit = gpm_d_double_science_eng_soc }
+						10 = { add_deposit = gpm_d_triple_science }
+					}
+				}
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				create_research_station = { owner = prevprev.owner }
+			}
+		}
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_frozen = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = { 
+				add_deposit = gpm_d_energy_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = gpm_d_minerals_15
+				add_deposit = gpm_d_minerals_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = { 
+				add_deposit = gpm_d_minerals_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			30 = {
+				while = {
+					count = 7
+					random_list = {
+						10 = { add_deposit = gpm_d_double_science_phy_soc }
+						10 = { add_deposit = gpm_d_double_science_soc_phy }
+						10 = { add_deposit = gpm_d_double_science_phy_eng }
+						10 = { add_deposit = gpm_d_double_science_eng_phy }
+						10 = { add_deposit = gpm_d_double_science_soc_eng }
+						10 = { add_deposit = gpm_d_double_science_eng_soc }
+						10 = { add_deposit = gpm_d_triple_science }
+					}
+				}
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				create_research_station = { owner = prevprev.owner }
+			}
+		}
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_barren = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = { 
+				add_deposit = gpm_d_energy_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = gpm_d_minerals_15
+				add_deposit = gpm_d_minerals_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			10 = { 
+				add_deposit = gpm_d_minerals_15
+				create_mining_station = { owner = prevprev.owner }
+			}
+			30 = {
+				while = {
+					count = 5
+					random_list = {
+						10 = { add_deposit = gpm_d_double_science_phy_soc }
+						10 = { add_deposit = gpm_d_double_science_soc_phy }
+						10 = { add_deposit = gpm_d_double_science_phy_eng }
+						10 = { add_deposit = gpm_d_double_science_eng_phy }
+						10 = { add_deposit = gpm_d_double_science_soc_eng }
+						10 = { add_deposit = gpm_d_double_science_eng_soc }
+						10 = { add_deposit = gpm_d_triple_science }
+					}
+				}
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				create_research_station = { owner = prevprev.owner }
+			}
+			10 = {
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				create_research_station = { owner = prevprev.owner }
+			}
+		}
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_star = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+			}
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+			}
+			10 = { add_deposit = gpm_d_energy_15 }
+			10 = { add_deposit = d_dark_matter_deposit_10 }
+		}
+		create_mining_station = { owner = prevprev.owner }
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_asteroid = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_minerals_15
+				add_deposit = gpm_d_minerals_15
+			}
+			10 = { add_deposit = gpm_d_minerals_15 }
+			10 = { 
+				add_deposit = d_rare_crystals_5
+				add_deposit = d_rare_crystals_5
+			}
+			10 = { add_deposit = d_rare_crystals_5 }
+			10 = { add_deposit = d_dark_matter_deposit_10 }
+		}
+		create_mining_station = { owner = prevprev.owner }
+	}
+	if = {
+		limit = { 
+			gpm_is_planet_class_gas_giant = yes
+			has_deposit = no
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_food_25
+				add_deposit = gpm_d_food_25
+			}
+			10 = { add_deposit = gpm_d_food_25 }
+			10 = { 
+				add_deposit = d_volatile_motes_5
+				add_deposit = d_volatile_motes_5
+			}
+			10 = { add_deposit = d_volatile_motes_5 }
+			10 = { 
+				add_deposit = d_exotic_gases_5
+				add_deposit = d_exotic_gases_5
+			}
+			10 = { add_deposit = d_exotic_gases_5 }
+			10 = { 
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+			}
+			10 = { add_deposit = gpm_d_energy_15 }
+		}
+		create_mining_station = { owner = prevprev.owner }
+	}
+	if = {
+		limit = {
+			has_deposit = yes
+			OR = {
+				has_deposit = d_minerals_1
+				has_deposit = d_minerals_2
+				has_deposit = d_minerals_3
+				has_deposit = d_minerals_4
+				has_deposit = d_minerals_5
+				has_deposit = d_minerals_6
+				has_deposit = d_minerals_7
+				has_deposit = d_minerals_8
+				has_deposit = d_minerals_9
+				has_deposit = d_minerals_10
+			}
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_minerals_15
+				add_deposit = gpm_d_minerals_15
+			}
+			10 = { add_deposit = gpm_d_minerals_15 }
+		}
+	}
+	if = {
+		limit = {
+			has_deposit = yes
+			OR = {
+				has_deposit = d_energy_1
+				has_deposit = d_energy_2
+				has_deposit = d_energy_3
+				has_deposit = d_energy_4
+				has_deposit = d_energy_5
+				has_deposit = d_energy_6
+				has_deposit = d_energy_7
+				has_deposit = d_energy_8
+				has_deposit = d_energy_9
+				has_deposit = d_energy_10
+			}
+		}
+		random_list = {
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+			}
+			10 = {
+				add_deposit = gpm_d_energy_15
+				add_deposit = gpm_d_energy_15
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_deposit = yes
+			OR = {
+				has_deposit = d_society_1
+				has_deposit = d_society_2
+				has_deposit = d_society_3
+				has_deposit = d_society_4
+				has_deposit = d_society_5
+				has_deposit = d_society_6
+				has_deposit = d_society_7
+				has_deposit = d_society_8
+				has_deposit = d_society_9
+				has_deposit = d_society_10
+			}
+		}
+		random_list = {
+			10 = {
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+			}
+			10 = {
+				add_deposit = d_society_10
+				add_deposit = d_society_10
+			}
+			10 = { add_deposit = d_society_10 }
+		}
+	}
+	if = {
+		limit = {
+			has_deposit = yes
+			OR = {
+				has_deposit = d_engineering_1
+				has_deposit = d_engineering_2
+				has_deposit = d_engineering_3
+				has_deposit = d_engineering_4
+				has_deposit = d_engineering_5
+				has_deposit = d_engineering_6
+				has_deposit = d_engineering_7
+				has_deposit = d_engineering_8
+				has_deposit = d_engineering_9
+				has_deposit = d_engineering_10
+			}
+		}
+		random_list = {
+			10 = {
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+			}
+			10 = {
+				add_deposit = d_engineering_10
+				add_deposit = d_engineering_10
+			}
+			10 = { add_deposit = d_engineering_10 }
+		}
+	}
+	if = {
+		limit = {
+			has_deposit = yes
+			OR = {
+				has_deposit = d_physics_1
+				has_deposit = d_physics_2
+				has_deposit = d_physics_3
+				has_deposit = d_physics_4
+				has_deposit = d_physics_5
+				has_deposit = d_physics_6
+				has_deposit = d_physics_7
+				has_deposit = d_physics_8
+				has_deposit = d_physics_9
+				has_deposit = d_physics_10
+			}
+		}
+		random_list = {
+			10 = {
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+			}
+			10 = {
+				add_deposit = d_physics_10
+				add_deposit = d_physics_10
+			}
+			10 = { add_deposit = d_physics_10 }
+		}
+	}
+}
