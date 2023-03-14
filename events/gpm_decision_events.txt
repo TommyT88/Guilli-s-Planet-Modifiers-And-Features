@@ -11,17 +11,17 @@ ship_event = {
 	location = this
 
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
-	
+
 	}
-	
-	
+
+
 	immediate = {
-		
+
 	}
-	
+
 	option = {
 		name = gpm_decisions.option
 		FROMFROM = {
@@ -43,17 +43,17 @@ planet_event = {
 	location = this
 
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
-	
+
 	}
-	
-	
+
+
 	immediate = {
-		
+
 	}
-	
+
 	option = {
 		name = gpm_decisions.2.a
 		locked_random_list = {
@@ -72,8 +72,8 @@ planet_event = {
 				}
 				modifier = { factor = 0 owner_species = { has_trait = trait_psionic } }
 			}
-			10 = { 
-				owner = { 
+			10 = {
+				owner = {
 					add_research_option = tech_psionic_theory
 					hidden_effect = {
 						add_tech_progress = {
@@ -84,8 +84,8 @@ planet_event = {
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_psionic_theory } }
 			}
-			10 = { 
-				owner = { 
+			10 = {
+				owner = {
 					add_research_option = tech_psionic_barrier
 					hidden_effect = {
 						add_tech_progress = {
@@ -96,8 +96,8 @@ planet_event = {
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_psionic_barrier } }
 			}
-			10 = { 
-				owner = { 
+			10 = {
+				owner = {
 					add_research_option = tech_psi_jump_drive_1
 					hidden_effect = {
 						add_tech_progress = {

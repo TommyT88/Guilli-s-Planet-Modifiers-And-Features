@@ -4,12 +4,13 @@ tech_gpm_precursor_remnants_discovery = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		ship_anomaly_research_speed_mult = 0.20
+		ship_anomaly_fail_risk = -0.10
 	}
 	
 	weight_modifier = {
@@ -22,12 +23,13 @@ tech_gpm_precursor_remnants_discovery_2 = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		science_ship_survey_speed = 0.20
+		ship_anomaly_generation_chance_mult = 0.5
 	}
 	
 	weight_modifier = {
@@ -40,12 +42,13 @@ tech_gpm_precursor_energy_grid_discovery = {
 	cost = @tier2cost1
 	category = { particles }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		starbase_constructions_energy_produces_mult = 0.20
+		starbases_upkeep_mult = -0.20
+		stations_upkeep_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -58,12 +61,13 @@ tech_gpm_precursor_energy_grid_discovery_2 = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_technician_energy_produces_add = 0.5
+		planet_technician_energy_produces_add = 1
+		station_gatherers_energy_produces_mult = 0.2
 	}
 	
 	weight_modifier = {
@@ -76,12 +80,13 @@ tech_gpm_precursor_satellite_grid_discovery = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		add_base_country_intel = 10
+		station_observers_produces_mult = 1
 	}
 	
 	weight_modifier = {
@@ -94,12 +99,13 @@ tech_gpm_precursor_satellite_grid_discovery_2 = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		starbase_outpost_influence_cost_add = -10
+		starbase_outpost_influence_cost_add = -5
+		fleet_mia_time_mult = -0.5
 	}
 	
 	weight_modifier = {
@@ -112,12 +118,13 @@ tech_gpm_precursor_city_discovery = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		planet_buildings_minerals_cost_add = -50
+		planet_amenities_add = 10
 	}
 	
 	weight_modifier = {
@@ -130,12 +137,13 @@ tech_gpm_precursor_city_discovery_2 = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		planet_districts_minerals_cost_add = -50
+		planet_max_buildings_add = 1
 	}
 	
 	weight_modifier = {
@@ -148,12 +156,13 @@ tech_gpm_precursor_shipyards_discovery = {
 	cost = @tier2cost1
 	category = { industry }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		ship_components_alloys_cost_mult = -0.10
+		starbase_shipyard_capacity_add = 1
 	}
 	
 	weight_modifier = {
@@ -166,12 +175,13 @@ tech_gpm_precursor_shipyards_discovery_2 = {
 	cost = @tier2cost1
 	category = { voidcraft }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		ship_upgrades_alloys_cost_mult = -0.10
+		ship_upgrades_cost_mult = -0.10
+		ship_orbit_upkeep_mult = -0.10
 	}
 	
 	weight_modifier = {
@@ -184,12 +194,12 @@ tech_gpm_precursor_planetary_gun_discovery = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		ship_weapon_range_mult = 0.10
+		ship_weapon_range_mult = 0.12
 	}
 	
 	weight_modifier = {
@@ -202,7 +212,7 @@ tech_gpm_precursor_planetary_gun_discovery_2 = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -220,12 +230,13 @@ tech_gpm_precursor_bunker_grid_discovery = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		planet_soldiers_unity_produces_add = 2
+		army_health = 0.20
 	}
 	
 	weight_modifier = {
@@ -238,12 +249,13 @@ tech_gpm_precursor_bunker_grid_discovery_2 = {
 	cost = @tier2cost1
 	category = { military_theory }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		army_disengage_chance_mult = 0.20
+		army_disengage_chance_mult = 0.10
+		army_defense_damage_mult = 0.20
 	}
 	
 	weight_modifier = {
@@ -256,12 +268,12 @@ tech_gpm_precursor_mechs_discovery = {
 	cost = @tier2cost1
 	category = { industry }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.20
+		planet_miners_minerals_produces_add = 2
 	}
 	
 	weight_modifier = {
@@ -274,7 +286,7 @@ tech_gpm_precursor_mechs_discovery_2 = {
 	cost = @tier2cost1
 	category = { voidcraft }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -292,12 +304,12 @@ tech_gpm_precursor_planetary_shield_discovery = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		ship_shield_mult = 0.12
+		ship_shield_mult = 0.20
 	}
 	
 	weight_modifier = {
@@ -310,7 +322,7 @@ tech_gpm_precursor_planetary_shield_discovery_2 = {
 	cost = @tier2cost1
 	category = { particles }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -328,7 +340,7 @@ tech_gpm_precursor_floating_city_discovery = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -346,12 +358,12 @@ tech_gpm_precursor_floating_city_discovery_2 = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_housing_add = 8
+		planet_housing_mult = 0.15
 	}
 	
 	weight_modifier = {
@@ -364,12 +376,12 @@ tech_gpm_precursor_capital_complex_discovery = {
 	cost = @tier2cost1
 	category = { statecraft }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_decision_enact_speed_mult = 0.25
+		planet_decision_enact_speed_mult = 0.50
 	}
 	
 	weight_modifier = {
@@ -382,12 +394,12 @@ tech_gpm_precursor_capital_complex_discovery_2 = {
 	cost = @tier2cost1
 	category = { statecraft }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		country_border_friction_mult = -0.10
+		country_border_friction_mult = -0.15
 	}
 	
 	weight_modifier = {
@@ -400,12 +412,12 @@ tech_gpm_precursor_communication_hub_discovery = {
 	cost = @tier2cost1
 	category = { particles }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_colony_development_speed_mult = 0.40
+		all_technology_research_speed = 0.05
 	}
 	
 	weight_modifier = {
@@ -418,12 +430,12 @@ tech_gpm_precursor_communication_hub_discovery_2 = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		country_war_exhaustion_mult = -0.10
+		planet_colony_development_speed_mult = 1
 	}
 	
 	weight_modifier = {
@@ -436,7 +448,7 @@ tech_gpm_precursor_singularity_drive_discovery = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -454,12 +466,13 @@ tech_gpm_precursor_singularity_drive_discovery_2 = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		scientist_skill_levels = 2
+		scientist_skill_levels = 1
+		species_leader_exp_gain = 0.33
 	}
 	
 	weight_modifier = {
@@ -472,12 +485,12 @@ tech_gpm_precursor_eternal_fortress_discovery = {
 	cost = @tier2cost1
 	category = { military_theory }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_orbital_bombardment_damage = -0.20
+		planet_orbital_bombardment_damage = -0.30
 	}
 	
 	weight_modifier = {
@@ -490,12 +503,13 @@ tech_gpm_precursor_eternal_fortress_discovery_2 = {
 	cost = @tier2cost1
 	category = { military_theory }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		army_defense_damage_mult = 0.20
+		army_defense_health_mult = 0.20
 	}
 	
 	weight_modifier = {
@@ -508,12 +522,12 @@ tech_gpm_precursor_prison_planet_discovery = {
 	cost = @tier2cost1
 	category = { statecraft }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_crime_mult = -0.12
+		planet_crime_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -526,12 +540,12 @@ tech_gpm_precursor_prison_planet_discovery_2 = {
 	cost = @tier2cost1
 	category = { statecraft }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		pop_factions_unity_produces_mult = 0.20
+		pop_factions_unity_produces_mult = 0.30
 	}
 	
 	weight_modifier = {
@@ -544,7 +558,7 @@ tech_gpm_precursor_mines_discovery = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -562,7 +576,7 @@ tech_gpm_precursor_mines_discovery_2 = {
 	cost = @tier2cost1
 	category = { industry }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -581,12 +595,12 @@ tech_gpm_precursor_manufactorium_discovery = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.12
+		planet_jobs_alloys_produces_mult = 0.15
 	}
 	
 	weight_modifier = {
@@ -599,12 +613,12 @@ tech_gpm_precursor_manufactorium_discovery_2 = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		planet_jobs_consumer_goods_produces_mult = 0.12
+		planet_jobs_consumer_goods_produces_mult = 0.15
 	}
 	
 	weight_modifier = {
@@ -617,12 +631,12 @@ tech_gpm_precursor_vaults_discovery = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		country_base_minor_artifacts_produces_add = 0.1
+		country_base_minor_artifacts_produces_add = 2
 	}
 	
 	weight_modifier = {
@@ -635,7 +649,7 @@ tech_gpm_precursor_vaults_discovery_2 = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -655,13 +669,13 @@ tech_gpm_precursor_crashed_spacestation_discovery = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		starbase_modules_cost_mult = -0.25
-		starbase_buildings_cost_mult = -0.25
+		starbase_modules_cost_mult = -0.30
+		starbase_buildings_cost_mult = -0.30
 	}
 	
 	weight_modifier = {
@@ -674,14 +688,14 @@ tech_gpm_precursor_crashed_spacestation_discovery_2 = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		starbase_constructions_food_produces_mult = 0.40
-		starbase_constructions_energy_produces_mult = 0.40
-		starbase_constructions_minerals_produces_mult = 0.40
+		starbase_constructions_food_produces_mult = 0.50
+		starbase_constructions_energy_produces_mult = 0.50
+		starbase_constructions_minerals_produces_mult = 0.50
 	}
 	
 	weight_modifier = {
@@ -694,7 +708,7 @@ tech_gpm_precursor_battleground_ruins_discovery = {
 	cost = @tier2cost1
 	category = { military_theory }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -712,7 +726,7 @@ tech_gpm_precursor_battleground_ruins_discovery_2 = {
 	cost = @tier2cost1
 	category = { military_theory }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -730,13 +744,12 @@ tech_gpm_precursor_outpost_ruins_discovery = {
 	cost = @tier2cost1
 	category = { field_manipulation }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		ship_sensor_range_add = 1
-		ship_hyperlane_range_add = 2
+		ship_hyperlane_range_add = 3
 	}
 	
 	weight_modifier = {
@@ -749,7 +762,7 @@ tech_gpm_precursor_outpost_ruins_discovery_2 = {
 	cost = @tier2cost1
 	category = { military_theory }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -767,7 +780,7 @@ tech_gpm_precursor_harbor_ruins_discovery = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -786,12 +799,12 @@ tech_gpm_precursor_harbor_ruins_discovery_2 = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		pop_amenities_usage_mult = -0.10
+		pop_amenities_usage_mult = -0.12
 	}
 	
 	weight_modifier = {
@@ -804,12 +817,13 @@ tech_gpm_precursor_ruins_discovery = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
 		ship_archaeological_site_clues_add = 1
+		ship_archaeological_site_excavation_speed_mult = 0.33
 	}
 	
 	weight_modifier = {
@@ -822,12 +836,12 @@ tech_gpm_precursor_ruins_discovery_2 = {
 	cost = @tier2cost1
 	category = { new_worlds }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		ship_archaeological_site_excavation_speed_mult = 0.20
+		ship_archaeological_site_excavation_speed_mult = 1.00
 	}
 	
 	weight_modifier = {
@@ -840,13 +854,13 @@ tech_gpm_precursor_obelisks_discovery = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		terraform_speed_mult = 0.10
-		terraforming_cost_mult = -0.10
+		terraform_speed_mult = 0.20
+		terraforming_cost_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -859,12 +873,12 @@ tech_gpm_precursor_obelisks_discovery_2 = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		category_computing_research_speed_mult = 0.40
+		planet_jobs_upkeep_mult = -0.10
 	}
 	
 	weight_modifier = {
@@ -882,7 +896,7 @@ tech_gpm_very_hot_core_discovery = {
 	weight = 1
 
 	modifier = {
-		terraform_speed_mult = 0.25
+		terraform_speed_mult = 0.40
 	}
 	
 	weight_modifier = {
@@ -900,7 +914,7 @@ tech_gpm_very_hot_core_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		terraforming_cost_mult = -0.10
+		terraforming_cost_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -918,7 +932,7 @@ tech_gpm_gaia_world_discovery = {
 	weight = 1
 
 	modifier = {
-		pop_environment_tolerance = 0.08
+		pop_environment_tolerance = 0.10
 	}
 	
 	weight_modifier = {

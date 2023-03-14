@@ -1742,7 +1742,7 @@ gpm_create_primitive_relic_world = {
 				type = primitive
 				effect = {
 					set_country_flag = bronze_age
-					set_primitive_age = bronze_age
+					set_pre_ftl_age = bronze_age
 					set_graphical_culture = preindustrial_01
 				}
 			}
@@ -1759,7 +1759,7 @@ gpm_create_primitive_relic_world = {
 				type = primitive
 				effect = {
 					set_country_flag = iron_age
-					set_primitive_age = iron_age
+					set_pre_ftl_age = iron_age
 					set_graphical_culture = preindustrial_01
 				}
 			}
@@ -1776,7 +1776,7 @@ gpm_create_primitive_relic_world = {
 				type = primitive
 				effect = {
 					set_country_flag = late_medieval_age
-					set_primitive_age = late_medieval_age
+					set_pre_ftl_age = late_medieval_age
 					set_graphical_culture = preindustrial_01
 				}
 			}
@@ -1793,7 +1793,7 @@ gpm_create_primitive_relic_world = {
 				type = primitive
 				effect = {
 					set_country_flag = renaissance_age
-					set_primitive_age = renaissance_age
+					set_pre_ftl_age = renaissance_age
 					set_graphical_culture = preindustrial_01
 				}
 			}
@@ -1810,7 +1810,7 @@ gpm_create_primitive_relic_world = {
 				type = primitive
 				effect = {
 					set_country_flag = steam_age
-					set_primitive_age = steam_age
+					set_pre_ftl_age = steam_age
 					set_graphical_culture = industrial_01
 				}
 			}
@@ -1827,13 +1827,13 @@ gpm_create_primitive_relic_world = {
 				type = primitive
 				effect = {
 					set_country_flag = machine_age
-					set_primitive_age = machine_age
+					set_pre_ftl_age = machine_age
 					set_graphical_culture = industrial_01
 				}
 			}
 		}
 	}
-
+	set_pre_ftl_origin = yes
 	set_owner = last_created_country
 	set_capital = yes
 	while = {
@@ -1874,8 +1874,8 @@ gpm_remove_galaxy_generation_deposits = {
 		}
 
 		random_list = {
-			88 = { }
-			12 = {
+			85 = { }
+			15 = {
 				if = {
 					limit = { has_deposit = d_minerals_2 }
 					remove_deposit = d_minerals_2
@@ -1899,6 +1899,51 @@ gpm_remove_galaxy_generation_deposits = {
 				if = { 
 					limit = { has_deposit = d_energy_4 }
 					remove_deposit = d_energy_4
+				}
+				modifier = { factor = 200
+					OR = {
+						galaxy_size = large
+						galaxy_size = huge
+					}
+					any_system = {
+						distance = {
+							source = this
+							use_bypasses = no
+							max_jumps = 2
+						}
+						any_system_planet = {
+							is_capital = yes
+						}
+					}
+				}
+				modifier = { factor = 150
+					galaxy_size = medium
+					any_system = {
+						distance = {
+							source = this
+							use_bypasses = no
+							max_jumps = 2
+						}
+						any_system_planet = {
+							is_capital = yes
+						}
+					}
+				}
+				modifier = { factor = 100
+					OR = {
+						galaxy_size = tiny
+						galaxy_size = small
+					}
+					any_system = {
+						distance = {
+							source = this
+							use_bypasses = no
+							max_jumps = 2
+						}
+						any_system_planet = {
+							is_capital = yes
+						}
+					}
 				}
 			}
 		}

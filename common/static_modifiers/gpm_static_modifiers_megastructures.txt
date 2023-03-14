@@ -124,8 +124,10 @@ gpm_ringworld_idyllic_gardens = {
 	icon_frame = 11
 }
 gpm_ringworld_xeno_zoo = {
-	building_xeno_zoo_max = 5
-	planet_culture_workers_produces_mult = 1.00
+	job_livestock_zoo_animal_per_pop = 0.1
+	job_livestock_zoo_beast_per_pop = 0.1
+	planet_culture_workers_produces_mult = 0.5
+	planet_entertainers_produces_mult = 0.5
 	icon = "gfx/interface/icons/planet_modifiers/gpm_ringworld_xeno_zoo.dds"
 	icon_frame = 11
 }

@@ -44,6 +44,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 1.2 planet_size < 14 }
 			modifier = { factor = 1.2 planet_size < 12 }
@@ -69,6 +75,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 1.2 planet_size < 14 }
 			modifier = { factor = 1.2 planet_size < 12 }
@@ -93,6 +105,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			modifier = { factor = 0 planet_size < 12 }
 			# Tweaks
 			modifier = { factor = 1.5 planet_size > 19 }
@@ -119,6 +137,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 1.5 planet_size > 19 }
 			modifier = { factor = 1.7 planet_size > 22 }
@@ -564,6 +588,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 5 is_planet_class = pc_floating }
 			modifier = { factor = 1.2
@@ -631,6 +661,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
@@ -720,6 +756,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
@@ -777,6 +819,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 1.5 
 				OR = {
@@ -823,6 +871,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_ruined_battlefield" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -837,6 +891,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_spaceship_graveyard" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -893,6 +953,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 1.5 is_moon = yes }
 			# Galaxy age setting modifier
@@ -983,6 +1049,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_young }
@@ -1059,6 +1131,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_unusual_formations" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 2 is_planet_class = pc_alpine }
@@ -1143,6 +1221,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 					gpm_is_planet_wet_cold = yes
 				}
 			}
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -1164,6 +1248,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0 is_planet_class = pc_gaia }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -1207,6 +1297,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 1.5 
 				OR = {
@@ -1239,6 +1335,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_graveyard
 				}
 			}
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -1258,6 +1360,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 0 
 				OR = {
@@ -1400,10 +1508,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 				}
 			}
 			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_gaia }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
-			# Tweaks
-			modifier = { factor = 3 is_planet_class = pc_gaia }
+			# Tweaks			
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -1489,6 +1597,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_black_oily_stone" }
 			# (Not) on these planets
 			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 2 is_moon = yes }
@@ -1505,6 +1619,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_moon = no }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }	
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
@@ -1516,6 +1636,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_cities_in_the_sky" }
 			# (Not) on these planets
 			# Never in these systems
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
@@ -1530,6 +1656,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
@@ -1569,6 +1701,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_trubbles" }
 			# (Not) on these planets
 			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
@@ -1583,6 +1721,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
@@ -1616,6 +1760,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 					gpm_is_planet_wet_hot = yes
 				}
 			}
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -1632,6 +1782,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			modifier = { factor = 2	has_modifier = "gpm_strange_alien_eggs" }
 			# Galaxy age setting modifier
@@ -1674,6 +1830,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_desert
 					gpm_is_planet_dry_cold = yes
 				}
+			}
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
 			}
 			# Never in these systems
 			# Tweaks
@@ -1751,6 +1913,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_primal }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
@@ -1799,6 +1967,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
 			modifier = { factor = 2 is_moon = yes }
+			modifier = { factor = 0 has_global_flag = "gpm_spider_features_disabled" }
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -1824,6 +1993,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
@@ -1839,6 +2014,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_tidallylocked }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
@@ -2026,6 +2207,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_otherworldly_colours" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2048,6 +2235,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_ecological_nervous_system" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2155,7 +2348,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
 				}
-			}			
+			}
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
 			# Never in these systems
 			# Tweaks
@@ -2208,6 +2407,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_surface_of_bones" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2226,6 +2431,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 					gpm_is_planet_wet_hot = yes
 					gpm_is_planet_wet_cold = yes
 				}
+			}
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
 			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
 			# Never in these systems
@@ -2285,7 +2496,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0 is_moon = yes }
-			modifier = { factor = 0 has_moon = yes }
+			modifier = { factor = 0 has_moon = no }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2303,7 +2514,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0 is_moon = yes }
-			modifier = { factor = 0 has_moon = yes }
+			modifier = { factor = 0 has_moon = no }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2347,6 +2558,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_musical_creatures" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2360,6 +2577,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_odd_cloud_shapes" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -2372,6 +2595,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_giant_mold_blobs" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2383,6 +2612,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_subterranean_eco_system" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2420,6 +2655,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_strange_alien_eggs" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 2 is_moon = yes }
@@ -2443,6 +2684,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets			
 			modifier = { factor = 0	is_planet_class = pc_arctic }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2477,8 +2724,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			add_modifier = { modifier = "gpm_cursed_world" }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_cursed_world" }
-			# (Not) on these planets
-			modifier = { factor = 0 is_capital = yes }
+			# (Not) on these planets			
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2490,8 +2742,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_sunken_cities" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
-			modifier = { factor = 0 is_capital = yes }
+			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }			
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2505,6 +2762,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_titanic_geo_form" }
 			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2523,7 +2786,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 				}
 			}
 			# (Not) on these planets
-			modifier = { factor = 0 is_capital = yes }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0 num_moons > 0 }
@@ -2546,7 +2814,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
+			modifier = { factor = 0 has_global_flag = "gpm_spider_features_disabled" }
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -2559,6 +2834,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_invasive_stalks" }
 			# (Not) on these planets
 			modifier = { factor = 0 NOT = { gpm_is_planet_water = yes } }
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -2574,6 +2855,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0 gpm_is_planet_primitive = no }
 			# Never in these systems
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { is_country_type = default }
+			}
 			# Tweaks
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
@@ -2622,7 +2909,6 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_mineral_pools" }
 			# (Not) on these planets
-			modifier = { factor = 0 is_capital = yes }
 			modifier = { factor = 0 gpm_is_planet_water = yes }
 			# Never in these systems
 			# Tweaks
@@ -2748,7 +3034,6 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0 is_moon = yes }
-			modifier = { factor = 0 is_capital = yes }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 1.2

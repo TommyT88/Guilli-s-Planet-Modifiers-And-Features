@@ -300,7 +300,7 @@ gpm_giant_arachnid_army_machine = {
 
 # Relic Armies
 gpm_relic_tank_battalion = {
-	damage = 4.0
+	damage = 6.0
 	health = 5.0
 	morale = 4.0
 	morale_damage = 2.5
@@ -314,12 +314,13 @@ gpm_relic_tank_battalion = {
 	resources = {
 		category = armies
 		cost = {
-			alloys = 75
+			minerals = 100
+			minor_artifacts = 40
 		}
 
 		upkeep = {
-			energy = 0.5
-			alloys = 0.2
+			energy = 3
+			minor_artifacts = 0.1
 		}
 	}
 
@@ -327,11 +328,12 @@ gpm_relic_tank_battalion = {
 		planet = {
 			has_deposit = gpm_d_relic_tank_factory
 		}
+		has_ancrel = yes
 	}
 }
 gpm_relic_mech_squadron = {
-	damage = 4.0
-	health = 4.0
+	damage = 6.0
+	health = 6.0
 	morale = 2.5
 	morale_damage = 2.5
 	collateral_damage = 5.0
@@ -344,12 +346,13 @@ gpm_relic_mech_squadron = {
 	resources = {
 		category = armies
 		cost = {
-			alloys = 75
+			minerals = 200
+			minor_artifacts = 80
 		}
 
 		upkeep = {
-			energy = 1
-			alloys = 0.2
+			energy = 4
+			minor_artifacts = 0.2
 		}
 	}
 
@@ -357,10 +360,11 @@ gpm_relic_mech_squadron = {
 		planet = {
 			has_deposit = gpm_d_relic_mech_factory
 		}
+		has_ancrel = yes
 	}
 }
 gpm_relic_fighter_squadron = {
-	damage = 5.0
+	damage = 7.0
 	health = 2.5
 	morale = 2.5
 	morale_damage = 4.0
@@ -374,12 +378,13 @@ gpm_relic_fighter_squadron = {
 	resources = {
 		category = armies
 		cost = {
-			alloys = 100
+			minerals = 100
+			minor_artifacts = 50
 		}
 
 		upkeep = {
 			energy = 3
-			alloys = 0.3
+			minor_artifacts = 0.1
 		}
 	}
 
@@ -387,10 +392,11 @@ gpm_relic_fighter_squadron = {
 		planet = {
 			has_deposit = gpm_d_relic_ship_factory
 		}
+		has_ancrel = yes
 	}
 }
 gpm_relic_power_armoured_troops = {
-	damage = 2.50
+	damage = 4.00
 	health = 3.00
 	morale = 3.00
 	morale_damage = 1.20
@@ -402,11 +408,13 @@ gpm_relic_power_armoured_troops = {
 	resources = {
 		category = armies
 		cost = {
-			alloys = 25
+			minerals = 50
+			minor_artifacts = 25
 		}
 
 		upkeep = {
 			energy = 2
+			minor_artifacts = 0.1
 		}
 	}
 
@@ -414,6 +422,7 @@ gpm_relic_power_armoured_troops = {
 		planet = {
 			has_deposit = gpm_d_relic_power_armor_factory
 		}
+		has_ancrel = yes
 	}
 }
 

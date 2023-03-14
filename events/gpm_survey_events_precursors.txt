@@ -23,7 +23,7 @@ ship_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	location = FROM
-	
+
 	trigger = {
 		FROM = {
 			gpm_has_precursor_modifiers = yes
@@ -41,11 +41,11 @@ ship_event = {
 
 	immediate = {
 		locked_random_list = {
-			15 = {
+			30 = {
 				FROM = { set_planet_flag = gpm_already_rolled_for_prec_dig_site }
 				# modifier = { factor = 0 root.owner = { is_ai = yes } }
 			}
-			85 = {
+			70 = {
 				FROM = {
 					create_archaeological_site = gpm_precursor_generic_digsite
 					set_planet_flag = gpm_already_rolled_for_prec_dig_site
@@ -85,7 +85,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -232,7 +232,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -242,7 +242,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_energy_grid } }
 		FROM = {
 			if = {
@@ -379,7 +379,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -389,7 +389,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_satelite_grid } }
 		FROM = {
 			if = {
@@ -526,7 +526,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -536,7 +536,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_city } }
 		FROM = {
 			if = {
@@ -673,7 +673,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -683,7 +683,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_shipyards } }
 		FROM = {
 			if = {
@@ -820,7 +820,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -830,7 +830,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_planetary_gun } }
 		FROM = {
 			if = {
@@ -967,7 +967,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -977,7 +977,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_bunker_grid } }
 		FROM = {
 			if = {
@@ -1114,7 +1114,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1124,7 +1124,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_mechs } }
 		FROM = {
 			if = {
@@ -1261,7 +1261,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1271,7 +1271,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_planetary_shield } }
 		FROM = {
 			if = {
@@ -1408,7 +1408,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1418,7 +1418,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_floating_city } }
 		FROM = {
 			if = {
@@ -1555,7 +1555,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1565,7 +1565,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_capital_complex } }
 		FROM = {
 			if = {
@@ -1702,7 +1702,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1712,7 +1712,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_communication_hub } }
 		FROM = {
 			if = {
@@ -1849,7 +1849,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1859,7 +1859,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_singularity_drive } }
 		FROM = {
 			if = {
@@ -1996,7 +1996,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2006,7 +2006,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_eternal_fortress } }
 		FROM = {
 			if = {
@@ -2143,7 +2143,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2153,7 +2153,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_prison_planet } }
 		FROM = {
 			if = {
@@ -2290,7 +2290,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2300,7 +2300,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_mines } }
 		FROM = {
 			if = {
@@ -2437,7 +2437,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2447,7 +2447,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_manufactorium } }
 		FROM = {
 			if = {
@@ -2584,7 +2584,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2594,7 +2594,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_vaults	} }
 		FROM = {
 			if = {
@@ -2731,7 +2731,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2741,7 +2741,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_crashed_spacestation } }
 		FROM = {
 			if = {
@@ -2878,7 +2878,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2888,7 +2888,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_battleground_ruins } }
 		FROM = {
 			if = {
@@ -3025,7 +3025,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -3035,7 +3035,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_outpost_ruins } }
 		FROM = {
 			if = {
@@ -3172,7 +3172,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -3182,7 +3182,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_harbor_ruins } }
 		FROM = {
 			if = {
@@ -3319,7 +3319,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -3329,7 +3329,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_generic_ruins } }
 		FROM = {
 			if = {
@@ -3466,7 +3466,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -3476,7 +3476,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = { owner = { set_country_flag = gpm_discover_precursor_obelisks } }
 		FROM = {
 			if = {

@@ -1,3 +1,5 @@
+# 3.7 compatible
+
 ########################
 #
 # Precursor Events
@@ -17,7 +19,7 @@ namespace = precursor
 country_event = {
 	id = precursor.99336
 	title = "precursor.99336.name"
-	
+
 	desc = {
 		text = precursor.99336.desc.vultaum
 		trigger = {
@@ -27,15 +29,15 @@ country_event = {
 			}
 		}
 	}
-	
+
 	location = from
 	picture = GFX_evt_archaeological_dig
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 	}
-	
+
 	option = {
 		name = "UNFORTUNATE"
 		# vultaum
@@ -55,7 +57,7 @@ country_event = {
 country_event = {
 	id = precursor.99337
 	title = "precursor.99336.name"
-	
+
 	desc = {
 		text = precursor.99336.desc.yuht
 		trigger = {
@@ -65,15 +67,15 @@ country_event = {
 			}
 		}
 	}
-	
+
 	location = from
 	picture = GFX_evt_archaeological_dig
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 	}
-	
+
 	option = {
 		name = "UNFORTUNATE"
 		# yuht
@@ -93,7 +95,7 @@ country_event = {
 country_event = {
 	id = precursor.99338
 	title = "precursor.99336.name"
-	
+
 	desc = {
 		text = precursor.99336.desc.first_league
 		trigger = {
@@ -103,15 +105,15 @@ country_event = {
 			}
 		}
 	}
-	
+
 	location = from
 	picture = GFX_evt_archaeological_dig
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 	}
-	
+
 	option = {
 		name = "UNFORTUNATE"
 		# first_league
@@ -131,7 +133,7 @@ country_event = {
 country_event = {
 	id = precursor.99339
 	title = "precursor.99336.name"
-	
+
 	desc = {
 		text = precursor.99336.desc.irassian
 		trigger = {
@@ -141,15 +143,15 @@ country_event = {
 			}
 		}
 	}
-	
+
 	location = from
 	picture = GFX_evt_archaeological_dig
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 	}
-	
+
 	option = {
 		name = "UNFORTUNATE"
 		# irassian
@@ -169,7 +171,7 @@ country_event = {
 country_event = {
 	id = precursor.99340
 	title = "precursor.99336.name"
-	
+
 	desc = {
 		text = precursor.99336.desc.cybrex
 		trigger = {
@@ -179,15 +181,15 @@ country_event = {
 			}
 		}
 	}
-	
+
 	location = from
 	picture = GFX_evt_archaeological_dig
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 	}
-	
+
 	option = {
 		name = "UNFORTUNATE"
 		# cybrex
@@ -211,13 +213,13 @@ ship_event = {
 	desc = "precursor.101.desc"
 	picture = GFX_evt_archaeological_dig
 	location = from
-	
+
 	is_triggered_only = yes
 
 	trigger = {
 		fromfrom = { has_planet_flag = vultaum_homeworld }
-		owner = { 
-			# is_ai = no 
+		owner = {
+			# is_ai = no
 			has_country_flag = vultaum_system
 		}
 	}
@@ -245,7 +247,7 @@ ship_event = {
 			country_event = { id = precursor.99336 }
 		}
 	}
-	
+
 	option = {
 		name = "FASCINATING"
 		owner = {
@@ -312,17 +314,17 @@ ship_event = {
 	desc = "precursor.601.desc"
 	picture = GFX_evt_archaeological_dig
 	location = from
-	
+
 	is_triggered_only = yes
 
 	trigger = {
 		fromfrom = { has_planet_flag = yuht_homeworld }
-		owner = { 
-			# is_ai = no 
+		owner = {
+			# is_ai = no
 			has_country_flag = yuht_system
 		}
 	}
-	
+
 	immediate = {
 		set_global_flag = yuht_homeworld_found
 		owner = {
@@ -339,7 +341,18 @@ ship_event = {
 			country_event = { id = precursor.99337 }
 		}
 	}
-	
+
+	after = {
+		if = {
+			limit = {
+				has_overlord_dlc = yes
+			}
+			hidden_effect = {
+				owner = { country_event = { id = over.50 days = 720 random = 1080 } }
+			}
+		}
+	}
+
 	option = {
 		name = "FASCINATING"
 		owner = {
@@ -401,13 +414,13 @@ ship_event = {
 	desc = "precursor.1101.desc"
 	picture = GFX_evt_dead_city
 	location = from
-	
+
 	is_triggered_only = yes
 
 	trigger = {
 		fromfrom = { has_planet_flag = first_league_homeworld }
-		owner = { 
-			# is_ai = no 
+		owner = {
+			# is_ai = no
 			has_country_flag = first_league_system
 		}
 	}
@@ -446,7 +459,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "FASCINATING"
 		trigger = {
@@ -501,13 +514,13 @@ ship_event = {
 	desc = "precursor.1601.desc"
 	picture = GFX_evt_dead_city
 	location = from
-	
+
 	is_triggered_only = yes
 
 	trigger = {
 		fromfrom = { has_planet_flag = irassian_homeworld }
-		owner = { 
-			# is_ai = no 
+		owner = {
+			# is_ai = no
 			has_country_flag = irassian_system
 		}
 	}
@@ -535,7 +548,7 @@ ship_event = {
 			country_event = { id = precursor.99339 }
 		}
 	}
-	
+
 	option = {
 		name = "FASCINATING"
 		owner = {
@@ -597,7 +610,7 @@ ship_event = {
 	desc = "precursor.2101.desc"
 	picture = GFX_evt_dead_city
 	location = from
-	
+
 	is_triggered_only = yes
 
 	trigger = {
@@ -644,7 +657,7 @@ ship_event = {
 			country_event = { id = precursor.99340 }
 		}
 	}
-	
+
 	option = {
 		name = "FASCINATING"
 		trigger = {

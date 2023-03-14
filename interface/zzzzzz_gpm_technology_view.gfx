@@ -1,0 +1,21 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_tech_entry_custom_tech_3_bg"
+		texturefile = "gfx/interface/tech_view/gpm_tech_bg_precursor.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/tech_view/tech_bg_rare_mask.dds"
+			animationtexturefile = "gfx/interface/tech_view/tech_bg_rare_texture.dds"
+			animationrotation = 70.0
+			animationlooping = yes
+			animationtime = 10.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+}

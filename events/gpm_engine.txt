@@ -26,12 +26,12 @@ country_event = {
 	hide_window = yes
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	immediate = {
 		# global target to hook variables and stuff to for galaxy gen mechanics
 		save_global_event_target_as = gpm_host_country_event_target
 		set_variable = { which = gpm_galaxy_setting_habitable_worlds_scale value = 1 }
-		
+
 		# SOL system
 		random_system = {
 			limit = { has_star_flag = sol_system }
@@ -64,11 +64,11 @@ country_event = {
 			limit = { gpm_are_wonders_enabled = yes	}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_desert
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -84,11 +84,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_arid
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -104,11 +104,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_savannah
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -124,11 +124,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_tropical
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -144,11 +144,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_continental
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -164,11 +164,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_ocean
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -184,11 +184,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_arctic
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -204,11 +204,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_alpine
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -224,11 +224,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_tundra
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -244,11 +244,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_gaia
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -264,11 +264,11 @@ country_event = {
 			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-				limit = { 
+				limit = {
 					NAND = {
 						is_capital = yes
 						gpm_is_planet_primitive = no
-					} 
+					}
 					is_planet_class = pc_nuked
 					NOT = { gpm_is_planet_fallen_empire = yes }
 					NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
@@ -282,13 +282,13 @@ country_event = {
 				add_modifier = { modifier = gpm_planet_wonder_discovered multiplier = gpm_planet_size_multiplier_wonders }
 				gpm_spawn_planet_wonders_nuked = yes
 			}
-			
+
 			# extra random planet wonders
 			while = {
 				count = 4
 				random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-					limit = { 
+					limit = {
 						NOT = { gpm_is_a_wondrous_world = yes }
 						gpm_is_planet_class_normal_habitable = yes
 						NOT = { gpm_is_planet_fallen_empire = yes }
@@ -317,7 +317,7 @@ country_event = {
 				}
 			}
 		}
-	
+
 		# Main engine to spawn all planet modifiers
 		every_galaxy_planet = {
 			# Planet Modifier Scaling
@@ -331,11 +331,11 @@ country_event = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
 			}
-			
+
 			# used to 'limit' amount of terraformable able planets
 			gpm_set_galaxy_scaler_planet_variable = yes
-			
-			
+
+
 			# set precursor worlds
 			if = {
 				limit = { gpm_are_precursors_enabled = yes }
@@ -343,22 +343,23 @@ country_event = {
 			}
 			# spawn engine MASTER EVENT
 			planet_event = { id = gpm_engine.1 days = 1 }
-			
+
 			# Cleanup
 			# clear_variable = gpm_planet_size_multiplier
 			# clear_variable = gpm_planet_size_multiplier_wonders
 			# clear_variable = gpm_planet_size_multiplier_precursor
 			# clear_variable = gpm_galaxy_setting_habitable_worlds_scale
-			
-			
+
+
 			# added 3.6; spicing up fallen empire systems
-			if = {
-				limit = {
-					gpm_is_fallen_empire_space_owner = yes
-					gpm_is_planet_class_normal_habitable = no
-				}
-				gpm_set_fallen_empire_space_deposit = yes
-			}
+			# Temp disabled, be more creative with this, also Giga incompatibility issue with dissapearing FE empire
+			# if = {
+			# 	limit = {
+			# 		gpm_is_fallen_empire_space_owner = yes
+			# 		gpm_is_planet_class_normal_habitable = no
+			# 	}
+			# 	gpm_set_fallen_empire_space_deposit = yes
+			# }
 		}
 	}
 }
@@ -368,8 +369,8 @@ planet_event = {
 	id = gpm_engine.2
 	hide_window = yes
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 		OR = {
 			gpm_is_planet_class_normal_uninhabitable = yes
@@ -416,9 +417,9 @@ planet_event = {
 		NOT = { gpm_is_planet_fallen_empire = yes }
 		NOT = { gpm_is_a_wondrous_world = yes }
 	}
-	
+
 	immediate = {
-		
+
 
 		if = {
 			limit = { gpm_is_planet_class_star = yes }
@@ -434,8 +435,9 @@ planet_event = {
 					# 	gpm_scale_planet_modifiers = yes
 					# }
 					# roll precursor modifiers
-					gpm_roll_precursor_modifiers = yes
+					add_modifier = { modifier = "gpm_precursor_star_filter" }
 					# spawn precursor features
+					clear_deposits = yes
 					# gpm_spawn_precursor_features = yes
 					modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young } 	# GALAXY AGE: YOUNG  -25% spawn chance
 					modifier = { factor = 1 has_global_flag = gpm_galaxy_age_young } 		# GALAXY AGE: NORMAL
@@ -526,7 +528,7 @@ planet_event = {
 							event_target:gpm_host_country_event_target = {
 								change_variable = { which = gpm_precursor_archaeopolis_amount value = 1 }
 							}
-							# add a factor scale based on number of habitable worlds galaxy setting. Higher setting = more chance for a habitable precursor ruined world. 
+							# add a factor scale based on number of habitable worlds galaxy setting. Higher setting = more chance for a habitable precursor ruined world.
 							modifier = { factor = gpm_galaxy_setting_habitable_worlds_scale } # scale chance bases on galaxy setting
 							# not if you dont have ancrel DLC
 							modifier = { factor = 0 has_ancrel = no }
@@ -625,6 +627,41 @@ planet_event = {
 					gpm_roll_precursor_modifiers = yes
 					# spawn precursor features
 					gpm_spawn_precursor_features = yes
+					if = {
+						limit = {
+							host_has_dlc = "Ancient Relics Story Pack"
+							OR = {
+								is_planet_class = pc_gpm_precursor_tomb
+								gpm_is_planet_class_hive = yes
+								gpm_is_planet_class_machine = yes
+								gpm_is_planet_class_city = yes
+								gpm_is_planet_class_normal_habitable = yes
+							}
+							NOT = { is_planet_class = pc_gpm_precursor_tomb }
+							OR = {
+								has_deposit_for = shipclass_research_station
+								has_deposit = no
+							}
+						}
+						add_deposit = d_artifacts_planet_1
+					}
+					if = {
+						limit = {
+							host_has_dlc = "Ancient Relics Story Pack"
+							NOR = {
+								is_planet_class = pc_gpm_precursor_tomb
+								gpm_is_planet_class_hive = yes
+								gpm_is_planet_class_machine = yes
+								gpm_is_planet_class_city = yes
+								gpm_is_planet_class_normal_habitable = yes
+							}
+							OR = {
+								has_deposit_for = shipclass_research_station
+								has_deposit = no
+							}
+						}
+						add_deposit = d_artifacts_1
+					}
 					modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }		# GALAXY AGE: YOUNG  -25% spawn chance
 					modifier = { factor = 1 has_global_flag = gpm_galaxy_age_young } 		# GALAXY AGE: NORMAL
 					modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }		# GALAXY AGE: OLD # +25% spawn chance
@@ -700,7 +737,7 @@ planet_event = {
 		# 	}
 		# 	# we roll for precursor modifiers
 		# 	gpm_roll_precursor_modifiers = yes
-			
+
 		# 	if = {
 		# 		limit = { gpm_is_planet_class_normal_habitable = yes }
 		# 		gpm_spawn_precursor_features = yes
@@ -729,81 +766,81 @@ planet_event = {
 			limit = { gpm_is_planet_class_star = yes }
 			planet_event = { id = gpm_engine.10 days = 2 }
 		}
-		
-		## ASTEROIDS 
+
+		## ASTEROIDS
 		if = {
 			limit = { gpm_is_planet_class_asteroid = yes }
 			planet_event = { id = gpm_engine.20 days = 2 }
 		}
-		
-		## GAS GIANTS 
+
+		## GAS GIANTS
 		if = {
 			limit = { gpm_is_planet_class_gas_giant = yes }
 			planet_event = { id = gpm_engine.30 days = 3 }
 		}
-		
+
 		## NORMAL UNINHABITABLE PLANETS (Barren, Frozen, Toxic, Molten)
 		if = {
 			limit = { gpm_is_planet_class_normal_uninhabitable = yes }
 			planet_event = { id = gpm_engine.40 days = 6 }
 		}
-		
-		## NUKED PLANETS 
+
+		## NUKED PLANETS
 		if = {
 			limit = { gpm_is_planet_class_nuked = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			planet_event = { id = gpm_engine.50 days = 2 }
 		}
-		
+
 		## NORMAL HABITABLE PLANETS (Colonizable standard planets)
 		if = {
 			limit = { gpm_is_planet_class_normal_habitable = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			planet_event = { id = gpm_engine.60 days = 1 }
 		}
-		
-		## CITY PLANETS 
+
+		## CITY PLANETS
 		if = {
 			limit = { gpm_is_planet_class_city = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			planet_event = { id = gpm_engine.70 days = 3 }
 		}
-		
-		## MACHINE PLANETS 
+
+		## MACHINE PLANETS
 		if = {
 			limit = { gpm_is_planet_class_machine = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			planet_event = { id = gpm_engine.80 days = 3 }
 		}
-		
-		## HIVE PLANETS 
+
+		## HIVE PLANETS
 		if = {
 			limit = { gpm_is_planet_class_hive = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			planet_event = { id = gpm_engine.90 days = 3 }
 		}
-		
-		## FALLEN EMPIRE PLANETS 
+
+		## FALLEN EMPIRE PLANETS
 		if = {
 			limit = { has_owner = yes gpm_is_planet_fallen_empire = yes }
 			planet_event = { id = gpm_engine.100 days = 10 }
-		}		
-		
-		## HABITATS 
+		}
+
+		## HABITATS
 		if = {
 			limit = { gpm_is_planet_class_habitat = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			set_planet_flag = gpm_is_galaxy_generated_habitat
 			planet_event = { id = gpm_engine.110 days = 5 }
 		}
-		
-		## RINGWORLDS 
+
+		## RINGWORLDS
 		if = {
 			limit = { gpm_is_planet_class_ringworld = yes NOT = { gpm_is_planet_fallen_empire = yes } }
 			planet_event = { id = gpm_engine.120 days = 6 }
 			set_planet_flag = gpm_is_galaxy_generated_ringworld
 		}
-		
-		## PRIMITIVE PLANETS 
+
+		## PRIMITIVE PLANETS
 		if = {
 			limit = { gpm_is_planet_primitive = yes	}
 			planet_event = { id = gpm_engine.130 days = 15 }
 		}
-		
+
 		# Spawn a terraforming candidate if specific modifiers are present
 		if = {
 			limit = {
@@ -841,12 +878,12 @@ planet_event = {
 			add_modifier = { modifier = toxic_terraforming_candidate }
 		}
 
-		
+
 		# spawn a random mini megastructure to repair
 		# 1 type per system to prevent ambient object and flag issues
 		## ASTEROIDS
 		if = {
-			limit = { 
+			limit = {
 				gpm_is_planet_class_asteroid = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
 			}
@@ -876,10 +913,10 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		## GAS GIANTS
 		if = {
-			limit = { 
+			limit = {
 				gpm_is_planet_class_gas_giant = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
 			}
@@ -909,10 +946,10 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		## NORMAL UNINHABITABLE PLANETS (Barren, Frozen, Toxic, Molten)
 		if = {
-			limit = { 
+			limit = {
 				gpm_is_planet_class_normal_uninhabitable = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
 			}
@@ -942,7 +979,7 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		## STARS
 		if = {
 			limit = {
@@ -977,22 +1014,22 @@ planet_event = {
 	}
 }
 
-## STARS 
+## STARS
 planet_event = {
 	id = gpm_engine.10
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		gpm_roll_star_modifiers = yes
 	}
 }
 
-## ASTEROIDS 
+## ASTEROIDS
 planet_event = {
 	id = gpm_engine.20
 	hide_window = yes
@@ -1001,7 +1038,7 @@ planet_event = {
 	trigger = {
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		gpm_roll_asteroid_modifiers = yes
 
@@ -1010,20 +1047,20 @@ planet_event = {
 	}
 }
 
-## GAS GIANTS 
+## GAS GIANTS
 planet_event = {
 	id = gpm_engine.30
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { 
+			limit = {
 				NAND = {
 					has_global_flag = gpm_planetary_rings_disabled
 					exists = space_owner
@@ -1031,7 +1068,7 @@ planet_event = {
 			}
 			random_list = {
 				120 = {
-					modifier = { 
+					modifier = {
 						factor = 0
 						OR = {
 							has_planet_flag = gpm_rings_huge
@@ -1082,7 +1119,7 @@ planet_event = {
 	id = gpm_engine.40
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1093,14 +1130,14 @@ planet_event = {
 		}
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
 				290 = {
-					modifier = { 
+					modifier = {
 						factor = 0
 						OR = {
 							has_planet_flag = gpm_rings_huge
@@ -1129,7 +1166,7 @@ planet_event = {
 						}
 					}
 				}
-				10 = { 
+				10 = {
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
@@ -1138,7 +1175,7 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		# Planet Modifier Scaling
 		# if = {
 			# limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1168,12 +1205,12 @@ planet_event = {
 	}
 }
 
-## NUKED PLANETS 
+## NUKED PLANETS
 planet_event = {
 	id = gpm_engine.50
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1184,14 +1221,14 @@ planet_event = {
 		}
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
 				140 = {
-					modifier = { 
+					modifier = {
 						factor = 0
 						OR = {
 							has_planet_flag = gpm_rings_huge
@@ -1220,7 +1257,7 @@ planet_event = {
 						}
 					}
 				}
-				10 = { 
+				10 = {
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
@@ -1229,7 +1266,7 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1241,12 +1278,12 @@ planet_event = {
 	}
 }
 
-## HABITABLE NORMAL PLANETS 
+## HABITABLE NORMAL PLANETS
 planet_event = {
 	id = gpm_engine.60
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1257,14 +1294,14 @@ planet_event = {
 		}
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
 				120 = {
-					modifier = { 
+					modifier = {
 						factor = 0
 						OR = {
 							has_planet_flag = gpm_rings_huge
@@ -1293,7 +1330,7 @@ planet_event = {
 						}
 					}
 				}
-				10 = { 
+				10 = {
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
@@ -1302,7 +1339,7 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1311,32 +1348,44 @@ planet_event = {
 		}
 
 		# we purge some vanilla features to cut back on total districts after the engine has run
-		if = {
-			limit = { 
-				planet_size < 11
-				is_capital = no
-			}
-			gpm_remove_random_vanilla_planetary_feature = yes
-		}
-		if = {
-			limit = { 
-				planet_size > 10
-				planet_size < 16
-				is_capital = no
-			}
-			gpm_remove_random_vanilla_planetary_feature = yes
-			gpm_remove_random_vanilla_planetary_feature = yes
-		}
-		if = {
-			limit = { 
-				planet_size > 15
-				is_capital = no
-			}
-			gpm_remove_random_vanilla_planetary_feature = yes
-			gpm_remove_random_vanilla_planetary_feature = yes
-			gpm_remove_random_vanilla_planetary_feature = yes
-		}
-		
+		# now done at gpm_roll_planetary_features_normal_habitable
+		# if = {
+		# 	limit = {
+		# 		planet_size < 11
+		# 		is_capital = no
+		# 	}
+		# 	gpm_remove_random_vanilla_food_planetary_feature = yes
+		# }
+		# if = {
+		# 	limit = {
+		# 		planet_size > 10
+		# 		planet_size < 15
+		# 		is_capital = no
+		# 	}
+		# 	gpm_remove_random_vanilla_planetary_feature = yes
+		# 	gpm_remove_random_vanilla_food_planetary_feature = yes
+		# }
+		# if = {
+		# 	limit = {
+		# 		planet_size > 14
+		# 		planet_size < 20
+		# 		is_capital = no
+		# 	}
+		# 	gpm_remove_random_vanilla_planetary_feature = yes
+		# 	gpm_remove_random_vanilla_planetary_feature = yes
+		# 	gpm_remove_random_vanilla_food_planetary_feature = yes
+		# }
+		# if = {
+		# 	limit = {
+		# 		planet_size > 19
+		# 		is_capital = no
+		# 	}
+		# 	gpm_remove_random_vanilla_planetary_feature = yes
+		# 	gpm_remove_random_vanilla_planetary_feature = yes
+		# 	gpm_remove_random_vanilla_planetary_feature = yes
+		# 	gpm_remove_random_vanilla_food_planetary_feature = yes
+		# }
+
 		gpm_roll_normal_habitable_modifiers = yes
 		gpm_roll_planetary_features = yes
 	}
@@ -1347,7 +1396,7 @@ planet_event = {
 	id = gpm_engine.70
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1358,7 +1407,7 @@ planet_event = {
 		}
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# Planet Modifier Scaling
 		if = {
@@ -1371,12 +1420,12 @@ planet_event = {
 	}
 }
 
-## MACHINE PLANETS 
+## MACHINE PLANETS
 planet_event = {
 	id = gpm_engine.80
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1387,7 +1436,7 @@ planet_event = {
 		}
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# Planet Modifier Scaling
 		if = {
@@ -1400,12 +1449,12 @@ planet_event = {
 	}
 }
 
-## HIVE PLANETS 
+## HIVE PLANETS
 planet_event = {
 	id = gpm_engine.90
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1415,7 +1464,7 @@ planet_event = {
 			}
 		}
 	}
-	
+
 	immediate = {
 		# Planet Modifier Scaling
 		if = {
@@ -1433,18 +1482,18 @@ planet_event = {
 	id = gpm_engine.100
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
-	
+
 	}
-	
+
 	immediate = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
 				240 = {
-					modifier = { 
+					modifier = {
 						factor = 0
 						OR = {
 							has_planet_flag = gpm_rings_huge
@@ -1473,7 +1522,7 @@ planet_event = {
 						}
 					}
 				}
-				10 = { 
+				10 = {
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
@@ -1482,7 +1531,7 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1494,12 +1543,12 @@ planet_event = {
 	}
 }
 
-## HABITATS 
+## HABITATS
 planet_event = {
 	id = gpm_engine.110
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			AND = {
@@ -1521,18 +1570,18 @@ planet_event = {
 			}
 		}
 	}
-	
+
 	immediate = {
 		gpm_roll_habitat_modifiers = yes
 	}
 }
 
-## RINGWORLDS 
+## RINGWORLDS
 planet_event = {
 	id = gpm_engine.120
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			is_capital = no
@@ -1543,7 +1592,7 @@ planet_event = {
 		}
 		NOT = { gpm_is_planet_fallen_empire = yes }
 	}
-	
+
 	immediate = {
 		# gpm_roll_ringworld_modifiers = yes
 		# deprecated - to review
@@ -1555,7 +1604,7 @@ planet_event = {
 	id = gpm_engine.130
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		NOR = {
 			gpm_is_planet_class_ringworld = yes
@@ -1563,14 +1612,14 @@ planet_event = {
 		}
 		gpm_engine_forbidden_planets = yes
 	}
-	
+
 	immediate = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
 			random_list = {
 				140 = {
-					modifier = { 
+					modifier = {
 						factor = 0
 						OR = {
 							has_planet_flag = gpm_rings_huge
@@ -1599,7 +1648,7 @@ planet_event = {
 						}
 					}
 				}
-				10 = { 
+				10 = {
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
@@ -1608,7 +1657,7 @@ planet_event = {
 				}
 			}
 		}
-		
+
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1622,7 +1671,7 @@ planet_event = {
 		else_if = {
 			limit = { gpm_is_planet_class_city = no }
 			gpm_roll_normal_habitable_modifiers = yes
-		}		
+		}
 		gpm_roll_planetary_features = yes
 	}
 }
@@ -1632,28 +1681,32 @@ country_event = {
 	id = gpm_engine.999
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
-	
+
 	}
-	
+
 	immediate = {
 		random_galaxy_planet = {
-			limit = { 
+			limit = {
 				is_moon = no
 				gpm_is_planet_class_normal_uninhabitable = yes
 				has_owner = no
 				NOT = { exists = space_owner }
-				
+				# Ego system
+				NOT = { solar_system = { has_star_flag = gpm_guardians_ego_system } }
+
 			}
 			gpm_create_primitive_relic_world = yes
-		}		
+		}
 		random_galaxy_planet = {
-			limit = { 
+			limit = {
 				is_moon = yes
 				gpm_is_planet_class_normal_uninhabitable = yes
 				has_owner = no
 				NOT = { exists = space_owner }
+				# Ego system
+				NOT = { solar_system = { has_star_flag = gpm_guardians_ego_system } }
 			}
 			gpm_create_primitive_relic_world = yes
 		}
@@ -1661,22 +1714,26 @@ country_event = {
 			50 = { }
 			25 = {
 				random_galaxy_planet = {
-					limit = { 
+					limit = {
 						is_moon = yes
 						gpm_is_planet_class_normal_uninhabitable = yes
 						has_owner = no
 						NOT = { exists = space_owner }
+						# Ego system
+						NOT = { solar_system = { has_star_flag = gpm_guardians_ego_system } }
 					}
 					gpm_create_primitive_relic_world = yes
 				}
 			}
 			25 = {
 				random_galaxy_planet = {
-					limit = { 
+					limit = {
 						is_moon = no
 						gpm_is_planet_class_normal_uninhabitable = yes
 						has_owner = no
 						NOT = { exists = space_owner }
+						# Ego system
+						NOT = { solar_system = { has_star_flag = gpm_guardians_ego_system } }
 					}
 					gpm_create_primitive_relic_world = yes
 				}

@@ -1,3 +1,5 @@
+# 3.7 compatible
+
 namespace = action
 
 # Planet is turned into tomb world by Armageddon bombing stance
@@ -6,7 +8,7 @@ planet_event = {
 	hide_window = yes
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		OR = {
 			has_orbital_bombardment_stance = armageddon
@@ -21,7 +23,7 @@ planet_event = {
 		}
 		habitable_planet = yes
 	}
-	
+
 	immediate = {
 		owner = {
 			add_static_war_exhaustion = {
@@ -50,12 +52,12 @@ planet_event = {
 		remove_modifier = "natural_beauty"
 		remove_modifier = "atmospheric_aphrodisiac"
 		remove_modifier = "atmospheric_hallucinogen"
-		remove_modifier = "lush_planet"		
+		remove_modifier = "lush_planet"
 		remove_modifier = "dangerous_wildlife"
 		gpm_purge_all_planetary_modifiers = yes 		# -guilli remove other modifiers
 		gpm_random_modifier_crisis_purge = yes 		# -guilli roll tombworld modifiers
 		gpm_remove_planetary_features = yes 		# -guilli roll tombworld modifiers
-		gpm_roll_planetary_features = yes 			# -guilli up to X times planetary feature 
+		gpm_roll_planetary_features = yes 			# -guilli up to X times planetary feature
 		set_planet_flag = armageddon_nuked
 	}
 }

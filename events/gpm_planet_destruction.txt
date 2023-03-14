@@ -7,9 +7,9 @@ namespace = gpm_planet_destruction
 planet_event = {
 	id = gpm_planet_destruction.1
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		# log = "---- Fired Event gpm_planet_destruction.1 ----"
 		# log = "---- Planet is cracked, remove ALL modifiers ----"
@@ -18,7 +18,7 @@ planet_event = {
 		gpm_purge_all_planetary_modifiers = yes
 		gpm_remove_precursor_modifiers = yes
 		gpm_remove_fallen_empire_modifiers = yes
-		
+
 		# if ringworld is destroyed
 		if = {
 			limit = {

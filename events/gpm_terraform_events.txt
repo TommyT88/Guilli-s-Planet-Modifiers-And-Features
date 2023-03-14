@@ -9,9 +9,9 @@ planet_event = {
 	picture = GFX_evt_gpm_machine_world_terraforming
 	show_sound = event_scanner
 	location = FROM
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 	}
 
@@ -55,11 +55,11 @@ planet_event = {
 planet_event = {
 	id = gpm_terraform.78871
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	
-	
+
+
+
 	immediate = {
 		THIS = {
 			# set planet flag to tell scripts this planet is now a terraformed planet (used to limit removing vanilla features
@@ -76,15 +76,15 @@ planet_event = {
 
 			# Remove bad modifiers where is makes sense
 			gpm_remove_negative_modifiers = yes
-			
+
 			# Remove neutral modifiers where it makes sense
 			gpm_remove_neutral_modifiers = yes
-			
+
 			# Remove good modifiers where it makes sense
 			gpm_remove_positive_modifiers = yes
 			#######################################################
-			
-			
+
+
 
 			# Remove valuable world/terraform candidate modifier  (this gets removed trough the terraform links, but in some edge cases it doesn't, so this way it does get removed).
 			if = {
@@ -103,7 +103,7 @@ planet_event = {
 			# Machine world modifiers
 			# Random modifier
 			if = {
-				limit = { 
+				limit = {
 					gpm_is_planet_class_machine = yes
 					NOT = { has_planet_flag = gpm_is_terraformed_machine_world }
 				}
@@ -117,39 +117,39 @@ planet_event = {
 			# We put this behind a decision
 
 
-			# Relic world to Ecumenopolis dissapearing deposits catcher 
+			# Relic world to Ecumenopolis dissapearing deposits catcher
 			if = {
 				limit = { gpm_is_planet_class_city = yes }
 				if = {
-					limit = { 
+					limit = {
 						has_planet_flag = has_gpm_d_relic_tank_factory
 						NOT = { has_deposit = gpm_d_relic_tank_factory }
 					}
 					add_deposit = gpm_d_relic_tank_factory
 				}
 				if = {
-					limit = { 
+					limit = {
 						has_planet_flag = has_gpm_d_relic_mech_factory
 						NOT = { has_deposit = gpm_d_relic_mech_factory }
 					}
 					add_deposit = gpm_d_relic_mech_factory
 				}
 				if = {
-					limit = { 
+					limit = {
 						has_planet_flag = has_gpm_d_relic_power_armor_factory
 						NOT = { has_deposit = gpm_d_relic_power_armor_factory }
 					}
 					add_deposit = gpm_d_relic_power_armor_factory
 				}
 				if = {
-					limit = { 
+					limit = {
 						has_planet_flag = has_gpm_d_relic_ship_factory
 						NOT = { has_deposit = gpm_d_relic_ship_factory }
 					}
 					add_deposit = gpm_d_relic_ship_factory
 				}
 				if = {
-					limit = { 
+					limit = {
 						has_planet_flag = has_gpm_d_relic_reactor_factory
 						NOT = { has_deposit = gpm_d_relic_reactor_factory }
 					}
@@ -167,8 +167,8 @@ planet_event = {
 			}
 
 			# if this world has a specific modifier, apply matching planet graphics
-			if = { 
-				limit = { has_modifier = gpm_precursor_energy_grid } 
+			if = {
+				limit = { has_modifier = gpm_precursor_energy_grid }
 				gpm_set_precursor_energy_grid = yes
 			}
 			# We check to see if we need to remove and add planetary features after the world was changed.
@@ -176,7 +176,7 @@ planet_event = {
 			gpm_roll_planetary_features = yes
 			# spawn a random precursor ruin if there is a precursor planet modifier
 			if = {
-				limit = { 
+				limit = {
 					gpm_has_precursor_modifiers = yes
 					NOT = { gpm_has_precursor_feature = yes }
 				}
@@ -203,6 +203,23 @@ planet_event = {
 			# clear_variable = gpm_planet_size_multiplier_wonders
 			# clear_variable = gpm_planet_size_multiplier_precursor
 			# clear_variable = gpm_galaxy_setting_habitable_worlds_scale
+
+			# We switch non-planet versions with planet versions
+			if = {
+				limit = { has_deposit = d_artifacts_1 }
+				remove_deposit = d_artifacts_1
+				add_deposit = d_artifacts_planet_1
+			}
+			if = {
+				limit = { has_deposit = d_artifacts_2 }
+				remove_deposit = d_artifacts_2
+				add_deposit = d_artifacts_planet_2
+			}
+			if = {
+				limit = { has_deposit = d_artifacts_3 }
+				remove_deposit = d_artifacts_3
+				add_deposit = d_artifacts_planet_3
+			}
 		}
 	}
 }

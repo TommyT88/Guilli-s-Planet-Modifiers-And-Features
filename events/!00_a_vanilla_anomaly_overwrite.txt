@@ -1,3 +1,5 @@
+# 3.7 compatible
+
 namespace = anomaly
 
 
@@ -16,9 +18,9 @@ namespace = anomaly
 # 		from = {
 # 			while = {
 # 				limit = {
-# 					any_tile = { 
+# 					any_tile = {
 # 						AND = {
-# 							has_blocker = yes 
+# 							has_blocker = yes
 # 							NOT = {									# -guilli
 # 								gpm_has_gpm_special_blocker = yes
 # 							}
@@ -26,13 +28,13 @@ namespace = anomaly
 # 					}
 # 				}
 # 				random_tile = {
-# 					limit = { 
+# 					limit = {
 # 						AND = {
 # 							has_blocker = yes
 # 							NOT = {									# -guilli
 # 								gpm_has_gpm_special_blocker = yes
 # 							}
-# 						}					
+# 						}
 # 					}
 # 					remove_blocker = yes
 # 				}
@@ -60,7 +62,7 @@ ship_event = {
 	immediate = {
 		fromfrom = {
 			change_pc = pc_arid
-			
+
 			if = {									# -guilli
 				limit = {
 					NOR = {
@@ -71,7 +73,7 @@ ship_event = {
 				reset_planet = yes
 				gpm_remove_precursor_modifiers = yes 	# -guilli
 				gpm_remove_planetary_features = yes 		# -guilli roll tombworld modifiers
-				gpm_roll_planetary_features = yes 			# -guilli up to X times planetary feature 
+				gpm_roll_planetary_features = yes 			# -guilli up to X times planetary feature
 			}
 		}
 	}

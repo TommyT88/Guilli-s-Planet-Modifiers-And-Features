@@ -16,7 +16,7 @@ event = {
 		NOT = {
 			has_global_flag = gpm_initialisation_menu           # safery check, we apply this flag immediately on this same event below
 		}
-		is_ai = no                                              # stop this from running on AI 
+		is_ai = no                                              # stop this from running on AI
 	}
 	immediate = {
 		set_global_flag = gpm_initialisation_menu       		# safety to prevent additional runs
@@ -62,7 +62,7 @@ event = {
 		# James Webb initialisation
 		# SOL system
 		random_system = {
-			limit = { 
+			limit = {
 				has_star_flag = sol_system
 				NOT = { has_star_flag = gpm_has_james_web_flag }
 			}
@@ -98,8 +98,8 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { 
-		has_origin = origin_gpm_death_world 
+	trigger = {
+		has_origin = origin_gpm_death_world
 	}
 
 	immediate = {
@@ -107,7 +107,7 @@ country_event = {
 			limit = { is_capital = yes }
 			set_planet_size = 25
 			gpm_run_origin_death_world_planet_gen = yes
-			
+
 		}
 		every_owned_pop = {
 			limit = {
@@ -132,7 +132,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { 
+	trigger = {
 		has_origin = origin_gpm_precursor_world
 	}
 
@@ -151,7 +151,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_gpm_fallen_empire_colony 
+		has_origin = origin_gpm_fallen_empire_colony
 	}
 
 	immediate = {

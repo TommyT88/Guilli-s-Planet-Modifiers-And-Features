@@ -10,9 +10,9 @@ country_event = {
 	title = gpm_start_menu.1.name
 	desc = gpm_start_menu.1.desc
 	picture = GFX_evt_gpm_guillis_planet_modifiers
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 	}
 
@@ -34,7 +34,7 @@ country_event = {
 		}
 		name = gpm_start_menu.1.max_one
 		custom_tooltip = gpm_start_menu.1.max_oneTT
-		set_global_flag = gpm_modifier_amount_low		
+		set_global_flag = gpm_modifier_amount_low
 		remove_global_flag = gpm_modifier_amount_max_one
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
@@ -54,7 +54,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.1  }
 		}
 	}
-	
+
 	# normal amount of modifiers (recomended)
 	option = {
 		trigger = {
@@ -68,7 +68,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.1  }
 		}
 	}
-	
+
 	# high amount of modifiers
 	option = {
 		trigger = {
@@ -106,7 +106,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.1  }
 		}
 	}
-	
+
 	# default galaxy age
 	option = {
 		trigger = {
@@ -120,7 +120,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.1  }
 		}
 	}
-	
+
 	# old galaxy
 	option = {
 		trigger = {
@@ -139,7 +139,7 @@ country_event = {
 	##############################################
 	############## Scaling Settings ##############
 	##############################################
-	
+
 
 	# Scaling on (default)
 	option = {
@@ -153,7 +153,7 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
 		}
-	}	
+	}
 	# scaling random
 	option = {
 		trigger = {
@@ -258,7 +258,7 @@ country_event = {
 			country_event = { id = gpm_engine.0 days = 1 }
 		}
 	}
-	
+
 	##TEST OPTION##
 	# option = {
 		# name = gpm_start_menu.1.TEST
@@ -285,22 +285,22 @@ country_event = {
 	title = gpm_start_menu.1.name
 	desc = gpm_start_menu.1.desc
 	picture = GFX_evt_gpm_guillis_planet_modifiers
-	
+
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 		# is_multiplayer = no
 		# is_country = 00
 	}
-	
-	
+
+
 	immediate = {
 
 	}
 
-	
-	
+
+
 	##############################################
 	############ Home World Modifiers ############
 	##############################################
@@ -330,7 +330,7 @@ country_event = {
 		}
 	}
 
-	
+
 	###########################################################
 	############ Mining and Research station costs ############
 	###########################################################
@@ -417,7 +417,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.2  }
 		}
 	}
-	
+
 
 	##############################################
 	############ Precursor Modifiers #############
@@ -488,7 +488,7 @@ country_event = {
 	################ Planet Wonders ##############
 	##############################################
 
-	# Disable planet wonders 
+	# Disable planet wonders
 	option = {
 		trigger = {
 			NOT = { has_global_flag = gpm_planet_wonders_disabled }
@@ -500,7 +500,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.2  }
 		}
 	}
-	# enable planet wonders 
+	# enable planet wonders
 	option = {
 		trigger = {
 			has_global_flag = gpm_planet_wonders_disabled
@@ -517,7 +517,7 @@ country_event = {
 	############### Planet Rings #################
 	##############################################
 
-	# Disable planetary rings 
+	# Disable planetary rings
 	option = {
 		trigger = {
 			NOT = { has_global_flag = gpm_planetary_rings_disabled }
@@ -529,7 +529,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.2  }
 		}
 	}
-	# enable planetary rings 
+	# enable planetary rings
 	option = {
 		trigger = {
 			has_global_flag = gpm_planetary_rings_disabled
@@ -580,7 +580,7 @@ country_event = {
 	############ BACK TO MAIN MENU ###############
 	##############################################
 
-	# back button 
+	# back button
 	option = {
 		name = gpm_start_menu.2.back
 		custom_tooltip = gpm_start_menu.2.backTT

@@ -28,9 +28,9 @@ ship_event = {
 	id = gpm_survey.2000
 	hide_window = yes
 	location = ROOT
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		owner = {
 			is_ai = no
@@ -121,9 +121,9 @@ ship_event = {
 	id = gpm_survey.2001
 	hide_window = yes
 	location = ROOT
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		owner = { NOT = { has_technology = tech_mine_betharian } }
 		FROM = { has_modifier = gpm_precursor_vaults }
@@ -145,9 +145,9 @@ ship_event = {
 	id = gpm_survey.1
 	hide_window = yes
 	location = ROOT
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			has_modifier = "gpm_very_hot_core"
@@ -161,16 +161,16 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
-		FROM = { save_event_target_as = "hot_core_world"}	
+	immediate = {
+		FROM = { save_event_target_as = "hot_core_world"}
 		owner = {
 			if = {
 				limit = { has_modifier = gpm_terraform_speed_two }
-				country_event = { id = gpm_survey.4 }	
+				country_event = { id = gpm_survey.4 }
 			}
 			if = {
 				limit = { has_modifier = gpm_terraform_speed_one }
-				country_event = { id = gpm_survey.3 }	
+				country_event = { id = gpm_survey.3 }
 			}
 			if = {
 				limit = {
@@ -181,29 +181,31 @@ ship_event = {
 					}
 				}
 				country_event = { id = gpm_survey.2 }
-			}	
+			}
 		}
 	}
 }
 # give terraform 1/3 bonus
-country_event = {
+ship_event = {
 	id = gpm_survey.2
 	title = "gpm_survey.2.name"
 	desc = {
 		trigger = {
-			NOR = { 
-				has_authority = auth_hive_mind
-				has_authority = auth_machine_intelligence
-			} 
+			root.owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
 		}
 		text = "gpm_survey.2.desc"
 	}
 	desc = {
-		trigger = {	has_authority = auth_hive_mind } 
+		trigger = {	root.owner = { has_authority = auth_hive_mind } }
 		text = "gpm_survey.2.hive.desc"
 	}
 	desc = {
-		trigger = {	has_authority = auth_machine_intelligence } 
+		trigger = {	root.owner = { has_authority = auth_machine_intelligence } }
 		text = "gpm_survey.2.mach.desc"
 	}
 	picture = GFX_evt_gpm_hot_core
@@ -214,72 +216,86 @@ country_event = {
 
 	option = {
 		name = INTERESTING
-		add_monthly_resource_mult = {
-			resource = society_research
-			value = @tier1researchreward
-			min = @tier1researchmin
-			max = @tier1researchmax
-		}
-		add_modifier = {
-			modifier = "gpm_terraform_speed_one"
-			days = -1
+		root.owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			add_modifier = {
+				modifier = "gpm_terraform_speed_one"
+				days = -1
+			}
 		}
 	}
 	option = {
-		trigger = { NOT = { has_authority = auth_machine_intelligence } }
-		allow = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } }
+		trigger = { root.owner = { NOT = { has_authority = auth_machine_intelligence } } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } }
 		name =  gpm_survey.2.c
-		add_resource = { influence = @lootboxInfluenceCost_Add }
+		root.owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.2.spec_project
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_1"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_1"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
 		}
-		add_modifier = {
-			modifier = "gpm_terraform_speed_one"
-			days = -1
+		root.owner = {
+			add_modifier = {
+				modifier = "gpm_terraform_speed_one"
+				days = -1
+			}
 		}
 	}
 	option = {
-		trigger = { has_authority = auth_corporate }
-		allow = { resource_stockpile_compare = { resource = energy value > 250 } }
+		trigger = { root.owner = { has_authority = auth_corporate } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.3_CORP
-		add_resource = { energy = -250 }
+		root.owner = { add_resource = { energy = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.2.spec_project
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_1"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_1"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
 		}
-		add_modifier = {
-			modifier = "gpm_terraform_speed_one"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_one"
+				days = -1
+			}
 		}
 	}
 	option = {
-		trigger = { has_authority = auth_machine_intelligence }
-		allow = { resource_stockpile_compare = { resource = energy value > 250 } }
+		trigger = { root.owner = { has_authority = auth_machine_intelligence } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.3_MACH
-		add_resource = { energy = -250 }
+		root.owner = { add_resource = { energy = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.2.spec_project
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_1"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_1"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
 		}
-		add_modifier = {
-			modifier = "gpm_terraform_speed_one"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_one"
+				days = -1
+			}
 		}
 	}
 }
@@ -289,19 +305,21 @@ country_event = {
 	title = "gpm_survey.3.name"
 	desc = {
 		trigger = {
-			NOR = { 
-				has_authority = auth_hive_mind
-				has_authority = auth_machine_intelligence
-			} 
+			root.owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
 		}
 		text = "gpm_survey.3.desc"
 	}
 	desc = {
-		trigger = {	has_authority = auth_hive_mind } 
+		trigger = { root.owner = { has_authority = auth_hive_mind } }
 		text = "gpm_survey.3.hive.desc"
 	}
 	desc = {
-		trigger = {	has_authority = auth_machine_intelligence } 
+		trigger = {	root.owner = { has_authority = auth_machine_intelligence } }
 		text = "gpm_survey.3.mach.desc"
 	}
 	picture = GFX_evt_gpm_hot_core
@@ -312,78 +330,92 @@ country_event = {
 
 	option = {
 		name = FASCINATING
-		add_monthly_resource_mult = {
-			resource = physics_research
-			value = @tier1researchreward
-			min = @tier1researchmin
-			max = @tier1researchmax
-		}
-		add_modifier = {
-			modifier = "gpm_terraform_speed_two"
-			days = -1
-		}
-		hidden_effect = {
-			remove_modifier = gpm_terraform_speed_one
+		root.owner = { 
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			add_modifier = {
+				modifier = "gpm_terraform_speed_two"
+				days = -1
+			}
+			hidden_effect = {
+				remove_modifier = gpm_terraform_speed_one
+			}
 		}
 	}
 	option = {
-		trigger = { NOT = { has_authority = auth_machine_intelligence } }
-		allow = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } }
+		trigger = { root.owner = { NOT = { has_authority = auth_machine_intelligence } } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } }
 		name =  gpm_survey.2.c
-		add_resource = { influence = @lootboxInfluenceCost_Add }
+		root.owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.3.spec_project
-		add_modifier = {
-			modifier = "gpm_terraform_speed_two"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_two"
+				days = -1
+			}
 		}
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_2"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_2"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
-			remove_modifier = gpm_terraform_speed_one
+			root.owner = { remove_modifier = gpm_terraform_speed_one }
 		}
 	}
 	option = {
-		trigger = { has_authority = auth_corporate }
-		allow = { resource_stockpile_compare = { resource = energy value > 250 } }
+		trigger = { root.owner = { has_authority = auth_corporate } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.4_CORP
-		add_resource = { energy = -250 }
+		root.owner = { add_resource = { energy = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.3.spec_project
-		add_modifier = {
-			modifier = "gpm_terraform_speed_two"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_two"
+				days = -1
+			}
 		}
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_2"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_2"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
-			remove_modifier = gpm_terraform_speed_one
+			root.owner = { remove_modifier = gpm_terraform_speed_one }
 		}
 	}
 	option = {
-		trigger = { has_authority = auth_machine_intelligence }
-		allow = { resource_stockpile_compare = { resource = energy value > 250 } }
+		trigger = { root.owner = { has_authority = auth_machine_intelligence } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.4_MACH
-		add_resource = { energy = -250 }
+		root.owner = { add_resource = { energy = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.3.spec_project
-		add_modifier = {
-			modifier = "gpm_terraform_speed_two"
-			days = -1
+		root.owner = {
+			add_modifier = {
+				modifier = "gpm_terraform_speed_two"
+				days = -1
+			}
 		}
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_2"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_2"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
-			remove_modifier = gpm_terraform_speed_one
+			root.owner = { remove_modifier = gpm_terraform_speed_one }
 		}
 	}
 }
@@ -393,19 +425,21 @@ country_event = {
 	title = "gpm_survey.4.name"
 	desc = {
 		trigger = {
-			NOR = { 
-				has_authority = auth_hive_mind
-				has_authority = auth_machine_intelligence
-			} 
+			root.owner = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
 		}
 		text = "gpm_survey.4.desc"
 	}
 	desc = {
-		trigger = {	has_authority = auth_hive_mind } 
+		trigger = {	root.owner = { has_authority = auth_hive_mind } }
 		text = "gpm_survey.4.hive.desc"
 	}
 	desc = {
-		trigger = {	has_authority = auth_machine_intelligence } 
+		trigger = {	root.owner = { has_authority = auth_machine_intelligence } }
 		text = "gpm_survey.4.mach.desc"
 	}
 	picture = GFX_evt_gpm_hot_core
@@ -416,78 +450,92 @@ country_event = {
 
 	option = {
 		name = gpm_survey.4.a
-		add_monthly_resource_mult = {
-			resource = engineering_research
-			value = @tier1researchreward
-			min = @tier1researchmin
-			max = @tier1researchmax
-		}
-		add_modifier = {
-			modifier = "gpm_terraform_speed_three"
-			days = -1
-		}
-		hidden_effect = {
-			remove_modifier = gpm_terraform_speed_two
+		root.owner = { 
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			add_modifier = {
+				modifier = "gpm_terraform_speed_three"
+				days = -1
+			}
+			hidden_effect = {
+				remove_modifier = gpm_terraform_speed_two
+			}
 		}
 	}
 	option = {
-		trigger = { NOT = { has_authority = auth_machine_intelligence } }
-		allow = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } }
+		trigger = { root.owner = { NOT = { has_authority = auth_machine_intelligence } } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } }
 		name =  gpm_survey.2.c
-		add_resource = { influence = @lootboxInfluenceCost_Add }
+		root.owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.4.spec_project
-		add_modifier = {
-			modifier = "gpm_terraform_speed_three"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_three"
+				days = -1
+			}
 		}
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_3"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_3"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
-			remove_modifier = gpm_terraform_speed_two
+			root.owner = { remove_modifier = gpm_terraform_speed_two }
 		}
 	}
 	option = {
-		trigger = { has_authority = auth_corporate }
-		allow = { resource_stockpile_compare = { resource = energy value > 250 } }
+		trigger = { root.owner = { has_authority = auth_corporate } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.5_CORP
-		add_resource = { energy = -250 }
+		root.owner = { add_resource = { energy = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.4.spec_project
-		add_modifier = {
-			modifier = "gpm_terraform_speed_three"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_three"
+				days = -1
+			}
 		}
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_3"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_3"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
-			remove_modifier = gpm_terraform_speed_two
+			root.owner = { remove_modifier = gpm_terraform_speed_two }
 		}
 	}
 	option = {
-		trigger = { has_authority = auth_machine_intelligence }
-		allow = { resource_stockpile_compare = { resource = energy value > 250 } }
+		trigger = { root.owner = { has_authority = auth_machine_intelligence } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.5_MACH
-		add_resource = { energy = -250 }
+		root.owner = { add_resource = { energy = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.4.spec_project
-		add_modifier = {
-			modifier = "gpm_terraform_speed_three"
-			days = -1
+		root.owner = { 
+			add_modifier = {
+				modifier = "gpm_terraform_speed_three"
+				days = -1
+			}
 		}
 		hidden_effect = {
-			enable_special_project = {
-				name = "GPM_DISCOVERY_TERRAFORM_3"
-				location = event_target:hot_core_world
-				owner = root
+			root.FROM = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TERRAFORM_3"
+					location = event_target:hot_core_world
+					owner = root
+				}
 			}
-			remove_modifier = gpm_terraform_speed_two
+			root.owner = { remove_modifier = gpm_terraform_speed_two }
 		}
 	}
 }
@@ -510,7 +558,7 @@ ship_event = {
 	location = THIS
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name =  FASCINATING
 		custom_tooltip = gpm_survey_reward_new_line
@@ -556,8 +604,8 @@ ship_event = {
 				if = {
 					limit = {
 						NAND = {
-							has_technology = "tech_terrestrial_sculpting" 
-							has_technology = "tech_ecological_adaptation" 
+							has_technology = "tech_terrestrial_sculpting"
+							has_technology = "tech_ecological_adaptation"
 						}
 					}
 					add_research_option = tech_terrestrial_sculpting
@@ -565,7 +613,7 @@ ship_event = {
 				}
 				if = {
 					limit = {
-						has_technology = "tech_terrestrial_sculpting" 
+						has_technology = "tech_terrestrial_sculpting"
 						NOT = { has_technology = "tech_ecological_adaptation" }
 					}
 					add_research_option = tech_ecological_adaptation
@@ -573,8 +621,8 @@ ship_event = {
 				}
 				if = {
 					limit = {
-						has_technology = "tech_terrestrial_sculpting" 
-						has_technology = "tech_ecological_adaptation" 
+						has_technology = "tech_terrestrial_sculpting"
+						has_technology = "tech_ecological_adaptation"
 					}
 					add_research_option = tech_climate_restoration
 					hidden_effect = { add_tech_progress = { tech = tech_climate_restoration progress = 0.10 } }
@@ -650,7 +698,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -673,7 +721,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.BEAUTY
 		owner = {
@@ -896,7 +944,7 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name =  REMARKABLE
 		custom_tooltip = gpm_survey_reward_new_line
@@ -984,7 +1032,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1000,14 +1048,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_holy_world
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.OMEN
 		owner = {
@@ -1252,7 +1300,7 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name =  INTRIGUING
 		custom_tooltip = gpm_survey_reward_new_line
@@ -1291,7 +1339,7 @@ ship_event = {
 				remove_country_flag = "gpm_discovery_reward_5"
 			}
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
-				PREVPREV = { 
+				PREVPREV = {
 					if = {
 						limit = {
 							leader = { not = { has_trait = leader_trait_scientist_psionic } }
@@ -1352,7 +1400,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1368,14 +1416,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_floating_islands
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.UNBELIEVABLE
 		owner = {
@@ -1694,8 +1742,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  FASCINATING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -1780,7 +1828,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -1796,14 +1844,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_ruined_battlefield
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.HORROR
 		owner = {
@@ -2042,9 +2090,9 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
-		name =  ASTOUNDING 
+
+	option = {
+		name =  ASTOUNDING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
 		owner = {
@@ -2132,7 +2180,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2148,14 +2196,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_spaceship_graveyard
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.MASSIVE
 		owner = {
@@ -2168,7 +2216,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -2213,7 +2261,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -2269,7 +2317,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -2325,7 +2373,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -2394,8 +2442,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  AMAZING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -2484,7 +2532,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2500,14 +2548,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_artificial_water
 			}
 		}
 	}
-	
+
 	option = {
 		name = FASCINATING
 		owner = {
@@ -2826,8 +2874,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  AMAZING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -2918,7 +2966,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -2934,14 +2982,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_pleasure_palace
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.NEAT
 		owner = {
@@ -2954,7 +3002,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -2995,7 +3043,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3047,7 +3095,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3099,7 +3147,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3146,9 +3194,9 @@ ship_event = {
 	}
 	# Spiritualist option
 	option = {
-		trigger = { 
-			root = { 
-				owner = { 
+		trigger = {
+			root = {
+				owner = {
 					OR = {
 						has_ethic = "ethic_fanatic_spiritualist"
 						has_ethic = "ethic_spiritualist"
@@ -3170,9 +3218,9 @@ ship_event = {
 	}
 	# Xenophile option
 	option = {
-		trigger = { 
-			root = { 
-				owner = { 
+		trigger = {
+			root = {
+				owner = {
 					OR = {
 						has_ethic = "ethic_fanatic_xenophile"
 						has_ethic = "ethic_xenophile"
@@ -3181,7 +3229,7 @@ ship_event = {
 			}
 		}
 		name = gpm_survey.24.xenophile
-		# give pops 
+		# give pops
 		owner = {
 			random_owned_planet ={
 				limit = { is_capital = yes }
@@ -3267,7 +3315,7 @@ ship_event = {
 		name = gpm_survey.24.pleasureseekers
 		# thematic rewards
 		# add_modifier = { modifier = "gpm_android_pleasure_palace_discovery" days = -1 }
-		owner = { 
+		owner = {
 			give_technology = { tech = tech_gpm_android_pleasure_palace_discovery }
 		}
 		# Exploration Policy Reward integration
@@ -3293,9 +3341,9 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
-		name =  ASTOUNDING 
+
+	option = {
+		name =  ASTOUNDING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
 		owner = {
@@ -3322,15 +3370,15 @@ ship_event = {
 				remove_country_flag = "gpm_discovery_reward_4"
 			}
 			if = { limit = { has_country_flag = "gpm_discovery_reward_5" }
-				PREVPREV = { 
+				PREVPREV = {
 					leader = {
 						if = {
 							limit = { NOT = { has_trait = leader_trait_custom_AI_assistant } }
-							add_trait = leader_trait_custom_AI_assistant 
+							add_trait = leader_trait_custom_AI_assistant
 						}
 						else_if = {
 							limit = { NOT = { has_trait = leader_trait_sapient_AI_assistant } }
-							add_trait = leader_trait_sapient_AI_assistant 
+							add_trait = leader_trait_sapient_AI_assistant
 						}
 						else = { add_trait = leader_trait_towel }
 					}
@@ -3386,7 +3434,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -3402,14 +3450,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_ancient_temple
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.INSPIRING
 		owner = {
@@ -3427,7 +3475,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -3472,7 +3520,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -3528,7 +3576,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -3584,7 +3632,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -3648,8 +3696,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  FASCINATING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -3733,7 +3781,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -3749,14 +3797,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_moon_palace
 			}
 		}
 	}
-	
+
 	option = {
 		name = AMAZING
 		owner = {
@@ -3769,7 +3817,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3810,7 +3858,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3862,7 +3910,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3914,7 +3962,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -3979,8 +4027,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  INCREDIBLE
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -4060,7 +4108,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -4076,14 +4124,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_plasmoid_life
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.UNBELIEVABLE
 		owner = {
@@ -4096,7 +4144,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -4137,7 +4185,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -4189,7 +4237,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -4241,7 +4289,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -4306,8 +4354,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  INTERESTING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -4337,20 +4385,20 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_5" }
 				if = {
 					limit = {
-						has_technology = "tech_plasma_3" 
+						has_technology = "tech_plasma_3"
 					}
 					add_research_option = tech_repeatable_weapon_type_energy_damage
 				}
 				if = {
 					limit = {
-						has_technology = "tech_plasma_2" 
+						has_technology = "tech_plasma_2"
 						NOT = { has_technology = "tech_plasma_3" }
 					}
 					add_research_option = tech_plasma_3
 				}
 				if = {
 					limit = {
-						has_technology = "tech_plasma_1" 
+						has_technology = "tech_plasma_1"
 						NOT = { has_technology = "tech_plasma_2" }
 					}
 					add_research_option = tech_plasma_2
@@ -4412,7 +4460,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -4428,14 +4476,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_ancient_one
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.LEAVE
 		owner = {
@@ -4453,7 +4501,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner ={
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -4546,7 +4594,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner ={
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -4650,7 +4698,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner ={
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -4754,7 +4802,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner ={
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -4866,8 +4914,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  REMARKABLE
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -4951,7 +4999,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -4967,14 +5015,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_proto_forest
 			}
 		}
 	}
-	
+
 	option = {
 		name = INTERESTING
 		owner = {
@@ -4987,7 +5035,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5027,7 +5075,7 @@ ship_event = {
 		name = gpm_survey.INVESTIGATE.8
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			leader = { add_experience = 200 }
@@ -5084,7 +5132,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5136,7 +5184,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5201,8 +5249,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  FASCINATING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -5293,7 +5341,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -5309,14 +5357,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_hive_world
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.HORRIFYING
 		owner = {
@@ -5329,7 +5377,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5370,7 +5418,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5422,7 +5470,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5474,7 +5522,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5540,9 +5588,9 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
-		name =  ASTOUNDING 
+
+	option = {
+		name =  ASTOUNDING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
 		owner = {
@@ -5586,7 +5634,7 @@ ship_event = {
 						set_location = {
 							target = FROMFROMFROM
 							distance = 5
-							angle = random 
+							angle = random
 						}
 					}
 					settings = {
@@ -5647,7 +5695,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -5663,14 +5711,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_spiders
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.HELL
 		owner = {
@@ -5683,7 +5731,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5724,7 +5772,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5776,7 +5824,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5828,7 +5876,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -5875,15 +5923,16 @@ ship_event = {
 	}
 	# purge with fire option
 	option = {
-		trigger = { 
-			root = { 
-				owner = { 
+		trigger = {
+			root = {
+				owner = {
 					NOR = {
 						has_ethic = "ethic_fanatic_xenophile"
 						has_ethic = "ethic_xenophile"
 					}
 				}
 			}
+			FROM = { NOT = { owner = exists } }
 		}
 		name = gpm_survey.31.fire
 		# fire fire fire
@@ -5924,8 +5973,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  INTERESTING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -5983,7 +6032,7 @@ ship_event = {
 						set_location = {
 							target = FROMFROMFROM
 							distance = 5
-							angle = random 
+							angle = random
 						}
 					}
 					settings = {
@@ -6044,7 +6093,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -6060,14 +6109,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_giant_worm
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.MASSIVE
 		owner = {
@@ -6080,7 +6129,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6121,7 +6170,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6173,7 +6222,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6225,7 +6274,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6290,8 +6339,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  INCREDIBLE
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -6376,7 +6425,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -6392,14 +6441,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_artificial_core
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.UNBELIEVABLE
 		owner = {
@@ -6412,7 +6461,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6453,7 +6502,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6505,7 +6554,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6557,7 +6606,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6622,8 +6671,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  FASCINATING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -6703,7 +6752,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -6719,14 +6768,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_surface_of_bones
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.HORRIFYING
 		owner = {
@@ -6739,7 +6788,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6780,7 +6829,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6832,7 +6881,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6884,7 +6933,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -6949,8 +6998,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  FASCINATING
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -7035,7 +7084,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -7051,14 +7100,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_alien_eggs
 			}
 		}
 	}
-	
+
 	option = {
 		name = gpm_survey.SEEN
 		owner = {
@@ -7076,7 +7125,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -7121,7 +7170,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -7177,7 +7226,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -7233,7 +7282,7 @@ ship_event = {
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
 			owner = {
-				if = { 
+				if = {
 					limit = { has_ancrel = yes }
 					gpm_random_minor_artifacts_5 = yes
 				}
@@ -7297,8 +7346,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  INCREDIBLE
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -7342,7 +7391,7 @@ ship_event = {
 						set_location = {
 							target = FROMFROMFROM
 							distance = 5
-							angle = random 
+							angle = random
 						}
 					}
 					settings = {
@@ -7354,7 +7403,7 @@ ship_event = {
 				}
 				remove_country_flag = "gpm_discovery_reward_5"
 				hidden_effect = {
-					country_event = { id = gpm_colony.9001 }
+					country_event = { id = gpm_colony.9000 }
 				}
 			}
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
@@ -7430,7 +7479,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -7446,14 +7495,14 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_mushroom_forest
 			}
 		}
 	}
-	
+
 	option = {
 		name = INTERESTING
 		owner = {
@@ -7466,7 +7515,7 @@ ship_event = {
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -7507,7 +7556,7 @@ ship_event = {
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -7559,7 +7608,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -7611,7 +7660,7 @@ ship_event = {
 		owner = { add_resource = { energy = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
-		if = { 
+		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
 			## Additional Reward ##
@@ -7676,8 +7725,8 @@ ship_event = {
 	location = ROOT
 
 	is_triggered_only = yes
-	
-	option = {	
+
+	option = {
 		name =  REMARKABLE
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
@@ -7755,7 +7804,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = {
 			AND = {
@@ -7765,7 +7814,7 @@ ship_event = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		FROM = {
 			if = {
 				limit = {
@@ -7809,7 +7858,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = { has_modifier = "gpm_planet_wonder_discovered" }
 		NOT = { owner = { has_country_flag = gpm_discover_planet_wonder } }
@@ -7817,7 +7866,7 @@ ship_event = {
 
 	immediate = {
 		FROM = {
-			if = { 
+			if = {
 				limit = {
 					NOT = { has_planet_flag = "gpm_is_surveyed" }
 				}
@@ -7841,9 +7890,9 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	option = {
-		name = gpm_survey.UNBELIEVABLE		
+		name = gpm_survey.UNBELIEVABLE
 		hidden_effect = { owner = { set_country_flag = gpm_discover_planet_wonder } }
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience_big = yes }
@@ -7903,7 +7952,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = { has_modifier = "gpm_planet_wonder_discovered" }
 		owner = { has_country_flag = gpm_discover_planet_wonder }
@@ -7945,7 +7994,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROM = { has_modifier = "terraforming_candidate" }
 		owner = { is_ai = no }
@@ -7976,9 +8025,9 @@ country_event = {
 	title = "precursor.301.name"
 	desc = "gpm_precursor.9000.desc"
 	picture = GFX_evt_gpm_precursor_artifact_discovery
-	
-	is_triggered_only = yes	
-	
+
+	is_triggered_only = yes
+
 	trigger = {
 		# event_target:precursor_planet = {
 			# NOT = { has_planet_flag = "gpm_artifact_discovered" }
@@ -8003,7 +8052,7 @@ country_event = {
 					}
 				}
 			}
-			AND = { 
+			AND = {
 				has_event_chain = "first_league_chain"
 				NOT = {
 					has_completed_event_chain_counter = {
@@ -8032,7 +8081,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	immediate = {
 		if = {
 			limit = {
@@ -8058,7 +8107,7 @@ country_event = {
 					name = "YUHT_ARTIFACT_FOUND"
 					location = event_target:precursor_planet
 					owner = root
-				}	
+				}
 			}
 			break = yes
 		}
@@ -8105,7 +8154,7 @@ country_event = {
 			break = yes
 		}
 	}
-	
+
 	option = {
 		name = precursor.301.a
 		custom_tooltip = new_precursor_project

@@ -6,17 +6,17 @@ megastructures = {
 	}
 	parent = country
 	modifier_category = megastructure
-	
+
 	generate_mult_modifiers = {
 		produces
 		cost
 		upkeep
-	}	
+	}
 	generate_add_modifiers = {
 		produces
 		cost
 		upkeep
-	}	
+	}
 	triggered_cost_modifier = { #from gigastructure mod
 		key = megastructure_build
 		modifier_types = { mult }
@@ -33,13 +33,13 @@ megastructures = {
 
 ship_components = {
 	parent = ships
-	
+
 	generate_mult_modifiers = {
 		cost
         produces
         upkeep
 	}
-	
+
 	generate_add_modifiers = {
 		cost
         produces
@@ -49,7 +49,7 @@ ship_components = {
 
 ship_sections = {
 	parent = ships
-	
+
 	generate_mult_modifiers = {
 		cost
 		upkeep
@@ -59,7 +59,7 @@ ship_sections = {
 ship_upgrades = {
 	parent = ships
 	use_for_ai_budget = yes
-	
+
 	generate_mult_modifiers = {
 		cost
 	}
@@ -76,7 +76,7 @@ stations = {
 		upkeep
 		cost
 	}
-	
+
 	generate_add_modifiers = {
 		produces
 		upkeep
@@ -93,11 +93,11 @@ planets = {
 	ai_use_parent_for_resources_upkeep = {
 		energy
 	}
-	
+
 	generate_mult_modifiers = {
 		produces
 	}
-	
+
 	generate_add_modifiers = {
 		produces
 	}
@@ -153,7 +153,7 @@ planet_buildings = {
 
 planet_buildings_strongholds = {
 	parent = planet_buildings
-	
+
 	generate_mult_modifiers = {
 		cost
 		upkeep
@@ -171,7 +171,7 @@ colonies = {
 	ai_use_parent_for_resources_upkeep = {
 		energy
 	}
-	
+
 	modifier_category = ship
 
 	triggered_cost_modifier = {
@@ -187,19 +187,19 @@ colonies = {
 			is_ship_class = shipclass_colonizer
 		}
 	}
-	
+
 	generate_mult_modifiers = {
 		produces
 		cost
 		upkeep
 	}
-	
+
 	generate_add_modifiers = {
 		produces
 		cost
 		upkeep
 	}
-	
+
 	parent = ships
 }
 
@@ -237,13 +237,13 @@ station_researchers = {
 
 station_observers = {
 	parent = stations
-	
+
 	generate_mult_modifiers = {
 		produces
 		cost
 		upkeep
 	}
-	
+
 	generate_add_modifiers = {
 		produces
 		cost
@@ -254,13 +254,13 @@ station_observers = {
 
 station_observer_missions = {
 	parent = station_observers
-	
+
 	generate_mult_modifiers = {
 		produces
 		cost
 		upkeep
 	}
-	
+
 	generate_add_modifiers = {
 		produces
 		cost
@@ -316,7 +316,7 @@ starbase_buildings = {
 		upkeep
 		produces
 	}
-	
+
 	generate_add_modifiers = {
 		cost
 		upkeep
@@ -333,7 +333,7 @@ starbase_modules = {
 		upkeep
 		produces
 	}
-	
+
 	generate_add_modifiers = {
 		cost
 		upkeep
@@ -435,7 +435,7 @@ planet_managers = {
 
 planet_administrators = {
 	icon = "job_bureaucrat"
-	parent = planet_jobs_productive	
+	parent = planet_jobs_productive
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -702,11 +702,13 @@ ships = {
 	generate_mult_modifiers = {
 		upkeep
 		cost
+		produces
 	}
-	
+
 	generate_add_modifiers = {
 		upkeep
 		cost
+		produces
 	}
 
 	ai_use_parent_for_resources_upkeep = {
@@ -717,7 +719,7 @@ ships = {
 
 	parent = country
 	modifier_category = ship
-	
+
 	triggered_cost_modifier = {
 		key = starbase_shipyard_build
 		use_parent_icon = yes
@@ -727,7 +729,7 @@ ships = {
             add
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = gdf_ship
 		use_parent_icon = yes
@@ -741,7 +743,7 @@ ships = {
 			has_ship_owner_type = galactic_community
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = gdf_ship
 		use_parent_icon = yes
@@ -773,7 +775,7 @@ ships = {
 			}
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_corvette
 		use_parent_icon = yes
@@ -808,7 +810,7 @@ ships = {
 			}
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_destroyer
 		use_parent_icon = yes
@@ -825,7 +827,7 @@ ships = {
 			}
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_cruiser
 		use_parent_icon = yes
@@ -842,7 +844,7 @@ ships = {
 			}
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_cruiser
 		use_parent_icon = yes
@@ -859,7 +861,7 @@ ships = {
 			}
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_battleship
 		use_parent_icon = yes
@@ -876,7 +878,7 @@ ships = {
 			}
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_battleship
 		use_parent_icon = yes
@@ -893,7 +895,7 @@ ships = {
 			}
 		}
 	}
-	
+
     triggered_cost_modifier = {
 		key = ship_titan
 		use_parent_icon = yes
@@ -920,7 +922,7 @@ ships = {
 			is_ship_size = titan
 		}
 	}
-    
+
     triggered_cost_modifier = {
 		key = ship_juggernaut
 		use_parent_icon = yes
@@ -934,7 +936,7 @@ ships = {
 			is_ship_size = juggernaut
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = ship_juggernaut
 		use_parent_icon = yes
@@ -948,7 +950,7 @@ ships = {
 			is_ship_size = juggernaut
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_colossus
 		use_parent_icon = yes
@@ -975,7 +977,7 @@ ships = {
 			is_ship_size = colossus
 		}
 	}
-    
+
 	triggered_cost_modifier = {
 		key = ship_military_station_small
 		use_parent_icon = yes
@@ -989,7 +991,7 @@ ships = {
 			is_ship_size = military_station_small
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_military_station_small
 		use_parent_icon = yes
@@ -1003,7 +1005,7 @@ ships = {
 			is_ship_size = military_station_small
 		}
 	}
-    
+
 	triggered_cost_modifier = {
 		key = ship_military_station_medium
 		use_parent_icon = yes
@@ -1017,7 +1019,7 @@ ships = {
 			is_ship_size = military_station_medium
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_military_station_medium
 		use_parent_icon = yes
@@ -1031,7 +1033,7 @@ ships = {
 			is_ship_size = military_station_medium
 		}
 	}
-    
+
 	triggered_cost_modifier = {
 		key = ship_military_station_large
 		use_parent_icon = yes
@@ -1045,7 +1047,7 @@ ships = {
 			is_ship_size = military_station_large
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_military_station_large
 		use_parent_icon = yes
@@ -1059,7 +1061,7 @@ ships = {
 			is_ship_size = military_station_large
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = shipsize_military_station_small
 		use_parent_icon = yes
@@ -1073,7 +1075,7 @@ ships = {
 			is_ship_size = military_station_small
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = shipsize_military_station_small
 		use_parent_icon = yes
@@ -1087,7 +1089,7 @@ ships = {
 			is_ship_size = military_station_small
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = shipsize_military_station_medium
 		use_parent_icon = yes
@@ -1101,7 +1103,7 @@ ships = {
 			is_ship_size = military_station_medium
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = shipsize_military_station_medium
 		use_parent_icon = yes
@@ -1115,7 +1117,7 @@ ships = {
 			is_ship_size = military_station_medium
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = shipsize_military_station_large
 		use_parent_icon = yes
@@ -1129,7 +1131,7 @@ ships = {
 			is_ship_size = military_station_large
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = shipsize_military_station_large
 		use_parent_icon = yes
@@ -1143,7 +1145,7 @@ ships = {
 			is_ship_size = military_station_large
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_ion_cannon
 		use_parent_icon = yes
@@ -1157,7 +1159,7 @@ ships = {
 			is_ship_size = ion_cannon
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = ship_ion_cannon
 		use_parent_icon = yes
@@ -1171,7 +1173,7 @@ ships = {
 			is_ship_size = ion_cannon
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_science
 		use_parent_icon = yes
@@ -1185,7 +1187,7 @@ ships = {
 			is_ship_class = shipclass_science_ship
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_science
 		use_parent_icon = yes
@@ -1199,7 +1201,7 @@ ships = {
 			is_ship_class = shipclass_science_ship
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_science
 		use_parent_icon = yes
@@ -1213,7 +1215,7 @@ ships = {
 			is_ship_size = science
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_science
 		use_parent_icon = yes
@@ -1227,7 +1229,7 @@ ships = {
 			is_ship_size = science
 		}
 	}
-	
+
 	## special to make shipsize_science_upkeep_mult work
 	triggered_upkeep_modifier = {
 		key = shipsize_science
@@ -1242,7 +1244,7 @@ ships = {
 			is_ship_size = science
 		}
 	}
-    
+
     triggered_cost_modifier = {
 		key = ship_constructor
 		use_parent_icon = yes
@@ -1256,7 +1258,7 @@ ships = {
 			is_ship_class = shipclass_constructor
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = ship_constructor
 		use_parent_icon = yes
@@ -1270,7 +1272,7 @@ ships = {
 			is_ship_size = constructor
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_military
 		use_parent_icon = yes
@@ -1304,7 +1306,7 @@ ships = {
 			}
 		}
 	}
-    
+
     triggered_cost_modifier = {
 		key = starbase_outpost
 		modifier_types = {
@@ -1317,7 +1319,7 @@ ships = {
 			is_ship_size = starbase_outpost
 		}
 	}
-    
+
     triggered_upkeep_modifier = {
 		key = starbase_outpost
 		use_parent_icon = yes
@@ -1331,7 +1333,7 @@ ships = {
 			is_ship_size = starbase_outpost
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = starbase_starport
 		use_parent_icon = yes
@@ -1345,7 +1347,7 @@ ships = {
 			is_ship_size = starbase_starport
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = starbase_starport
 		use_parent_icon = yes
@@ -1359,7 +1361,7 @@ ships = {
 			is_ship_size = starbase_starport
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = starbase_starhold
 		use_parent_icon = yes
@@ -1373,7 +1375,7 @@ ships = {
 			is_ship_size = starbase_starhold
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = starbase_starhold
 		use_parent_icon = yes
@@ -1387,7 +1389,7 @@ ships = {
 			is_ship_size = starbase_starhold
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = starbase_starfortress
 		use_parent_icon = yes
@@ -1401,7 +1403,7 @@ ships = {
 			is_ship_size = starbase_starfortress
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = starbase_starfortress
 		use_parent_icon = yes
@@ -1415,7 +1417,7 @@ ships = {
 			is_ship_size = starbase_starfortress
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = starbase_citadel
 		use_parent_icon = yes
@@ -1429,7 +1431,7 @@ ships = {
 			is_ship_size = starbase_citadel
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = starbase_citadel
 		use_parent_icon = yes
@@ -1453,8 +1455,8 @@ ships = {
 			is_scope_valid = yes
 			is_ship_size = StrikeCruiser
 		}
-	}	
-	
+	}
+
 	triggered_cost_modifier = {
 		key = ship_Battlecruiser
 		use_parent_icon = yes
@@ -1476,7 +1478,7 @@ ships = {
 			is_ship_size = Carrier
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_Dreadnought
 		use_parent_icon = yes
@@ -1487,7 +1489,7 @@ ships = {
 			is_ship_size = Dreadnought
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_Flagship
 		use_parent_icon = yes
@@ -1498,7 +1500,7 @@ ships = {
 			is_ship_size = Flagship
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_explorationship
 		use_parent_icon = yes

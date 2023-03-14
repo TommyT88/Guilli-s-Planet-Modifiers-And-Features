@@ -1,6 +1,8 @@
+# 3.7 compatible
+
 #################################
 #
-# Anomaly Events 
+# Anomaly Events
 #
 #################################
 
@@ -74,7 +76,7 @@ ship_event = {
 			is_colonizable = no
 			gpm_has_precursor_modifiers = no
 			has_deposit_for = shipclass_mining_station
-			OR = { 
+			OR = {
 				# has_modifier = hazardous_weather
 				has_modifier = strong_magnetic_field
 				has_modifier = gpm_strong_magnetic_field_2

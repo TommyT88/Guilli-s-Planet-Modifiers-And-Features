@@ -225,13 +225,14 @@ gpm_tech_arcane_research = {
 	cost = @tier3cost3
 	area = society
 	tier = 3
-	category = { statecraft }
-	weight = 0
+	category = { archaeostudies }	
+	prerequisites = { "tech_arcane_deciphering" }
+	weight = @tier3weight3
 	is_rare = yes
 
-	# modifier = {
-	# 	custom_tooltip = gpm_tech_arcane_researchTT
-	# }
+	modifier = {
+		custom_tooltip = gpm_tech_arcane_researchTT
+	}
 
 	potential = {
 		has_ancrel = yes
@@ -247,9 +248,7 @@ gpm_tech_arcane_research = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				has_ancrel = yes
-			}
+			has_ancrel = no
 		}
 		modifier = {
 			factor = 2

@@ -1,3 +1,4 @@
+# 3.7 compatible
 
 namespace = crisis
 
@@ -6,16 +7,19 @@ namespace = crisis
 planet_event = {
 	id = crisis.200
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		planet_devastation >= 100
 		is_planet_class = pc_infested
 	}
-	
+
 	immediate = {
 		set_planet_flag = previously_infested
+		every_owned_pop = {
+			kill_pop = yes
+		}
 		destroy_colony = yes
 		random_list = {
 			50 = { change_pc = pc_barren }
@@ -32,15 +36,15 @@ planet_event = {
 planet_event = {
 	id = crisis.202
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
-		num_pops = 1 # Last Pop is still alive when this event is fired		
+		num_pops = 1 # Last Pop is still alive when this event is fired
 		exists = controller
 		controller = { is_country_type = "swarm" }
 	}
-	
+
 	immediate = {
 		controller = { save_event_target_as = swarm }
 		if = {
@@ -57,13 +61,16 @@ planet_event = {
 			planet_event = { id = gpm_crisis.2 }
 		}
 		else_if = {
-			# Habitable Ring Worlds can't be infested... 
+			# Habitable Ring Worlds can't be infested...
 			# they are destroyed instead
 			limit = {
 				OR = {
 					is_planet_class = pc_ringworld_habitable
 					gpm_is_planet_class_ringworld = yes
 				}
+			}
+			every_owned_pop = {
+				kill_pop = yes
 			}
 			destroy_colony = yes
 			change_pc = pc_ringworld_habitable_damaged
@@ -79,21 +86,21 @@ planet_event = {
 			remove_planet = yes
 		}
 		solar_system = {
-			if = { # Build starbase if no other colonies are left	
-				limit = {	
-					NOT = {	
-						exists = starbase	
-						any_system_planet = {	
-							has_owner = yes	
-							owner = {	
+			if = { # Build starbase if no other colonies are left
+				limit = {
+					NOT = {
+						exists = starbase
+						any_system_planet = {
+							has_owner = yes
+							owner = {
 								NOT = { is_same_value = event_target:swarm }
 							}
 						}
 					}
 				}
-				create_starbase = {	
-					size = starbase_swarm	
-					owner = event_target:swarm	
+				create_starbase = {
+					size = starbase_swarm
+					owner = event_target:swarm
 				}
 				if = {
 					limit = {
@@ -103,15 +110,15 @@ planet_event = {
 					}
 					star = {
 						create_ambient_object = {
-							type = "swarm_1"	
-							location = this	
+							type = "swarm_1"
+							location = this
 						}
 						last_created_ambient_object = {
-							set_ambient_object_flag = swarm_system_effect	
-							set_location = {	
-								target = prev	
-								distance = 0	
-								angle = random	
+							set_ambient_object_flag = swarm_system_effect
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
 							}
 						}
 					}
@@ -125,13 +132,13 @@ planet_event = {
 planet_event = {
 	id = crisis.203
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		owner = { is_country_type = "swarm" }
 	}
-	
+
 	immediate = {
 		every_owned_pop = { kill_pop = yes }
 		if = {
@@ -149,9 +156,9 @@ planet_event = {
 			planet_event = { id = gpm_crisis.3 }
 		}
 		else_if = {
-			# Habitable Ring Worlds can't be infested... 
+			# Habitable Ring Worlds can't be infested...
 			# they are destroyed instead
-			limit = { 
+			limit = {
 				OR = {
 					is_planet_class = pc_ringworld_habitable
 					gpm_is_planet_class_ringworld = yes
@@ -161,7 +168,7 @@ planet_event = {
 			reset_planet = yes
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				OR = {
 					is_planet_class = pc_habitat
 					gpm_is_planet_class_habitat = yes
@@ -180,19 +187,19 @@ planet_event = {
 # 	desc = "crisis.1011.desc"
 # 	picture = GFX_evt_city_ruins
 # 	show_sound = event_ghost_town
-	
+
 # 	is_triggered_only = yes
-	
+
 # 	trigger = {
 # 		FROM = {
 # 			OR = {
-# 				is_country_type = extradimensional 
+# 				is_country_type = extradimensional
 # 				is_country_type = extradimensional_2
 # 				is_country_type = extradimensional_3
 # 			}
 # 		}
 # 	}
-	
+
 # 	immediate = {
 # 		add_threat = { who = from amount = 2 }
 # 		while = {
@@ -221,7 +228,7 @@ planet_event = {
 # 				modifier = "terraforming_candidate"
 # 				days = -1
 # 			}
-			
+
 # 			planet_event = { id = gpm_crisis.10 }
 # 			else = {
 # 				if = {
@@ -238,10 +245,10 @@ planet_event = {
 # 			limit = { FROM = { is_country_type = extradimensional } }
 # 			every_country = {
 # 				limit = { has_event_chain = "extradimensional_invasion_chain" }
-# 				add_event_chain_counter = { 
-# 					event_chain = "extradimensional_invasion_chain" 
-# 					counter = "extradimensional_planets_1" 
-# 					amount = 1 
+# 				add_event_chain_counter = {
+# 					event_chain = "extradimensional_invasion_chain"
+# 					counter = "extradimensional_planets_1"
+# 					amount = 1
 # 				}
 # 			}
 # 			# break = yes
@@ -250,10 +257,10 @@ planet_event = {
 # 			limit = { FROM = { is_country_type = extradimensional_2 } }
 # 			every_country = {
 # 				limit = { has_event_chain = "extradimensional_invasion_chain_2" }
-# 				add_event_chain_counter = { 
-# 					event_chain = "extradimensional_invasion_chain_2" 
-# 					counter = "extradimensional_planets_2" 
-# 					amount = 1 
+# 				add_event_chain_counter = {
+# 					event_chain = "extradimensional_invasion_chain_2"
+# 					counter = "extradimensional_planets_2"
+# 					amount = 1
 # 				}
 # 			}
 # 			# break = yes
@@ -262,16 +269,16 @@ planet_event = {
 # 			limit = { FROM = { is_country_type = extradimensional_3 } }
 # 			every_country = {
 # 				limit = { has_event_chain = "extradimensional_invasion_chain_3" }
-# 				add_event_chain_counter = { 
-# 					event_chain = "extradimensional_invasion_chain_3" 
-# 					counter = "extradimensional_planets_3" 
-# 					amount = 1 
+# 				add_event_chain_counter = {
+# 					event_chain = "extradimensional_invasion_chain_3"
+# 					counter = "extradimensional_planets_3"
+# 					amount = 1
 # 				}
 # 			}
 # 			# break = yes
 # 		}
 # 	}
-	
+
 # 	option = {
 # 		name = crisis.1011.a
 # 	}
@@ -282,12 +289,12 @@ planet_event = {
 planet_event = {
 	id = crisis.2025
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	immediate = {	
+
+	immediate = {
 		set_crisis_sound = ai_empire_ambient_stage_1
-		set_crisis_stage_1 = yes	
+		set_crisis_stage_1 = yes
 		create_species = {
 			name = "NAME_Custodian_Bot"
 			class = "ROBOT"
@@ -358,8 +365,8 @@ planet_event = {
 				create_ship_design = { design = "NAME_AI_2" }
 				add_ship_design = last_created_design
 				create_ship_design = { design = "NAME_AI_STARBASE" }
-				add_ship_design = last_created_design			
-				save_event_target_as = AI_crisis 
+				add_ship_design = last_created_design
+				save_event_target_as = AI_crisis
 			}
 		}
 		every_owned_pop = { kill_pop = yes }
@@ -398,7 +405,7 @@ planet_event = {
 			add_event_chain_counter = {
 				event_chain = "ai_crisis_chain"
 				counter = "active_machine_worlds"
-				amount = 1 
+				amount = 1
 			}
 		}
 		awaken_guardians_of_the_galaxy = yes
@@ -439,9 +446,9 @@ planet_event = {
 planet_event = {
 	id = crisis.2026
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		random_country = {
 			limit = { is_country_type = ai_empire }
@@ -472,7 +479,7 @@ planet_event = {
 			add_event_chain_counter = {
 				event_chain = "ai_crisis_chain"
 				counter = "active_machine_worlds"
-				amount = 1 
+				amount = 1
 			}
 		}
 		solar_system = {
@@ -507,9 +514,9 @@ planet_event = {
 planet_event = {
 	id = crisis.2027
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		random_country = {
 			limit = { is_country_type = ai_empire }
@@ -541,7 +548,7 @@ planet_event = {
 			add_event_chain_counter = {
 				event_chain = "ai_crisis_chain"
 				counter = "active_machine_worlds"
-				amount = 1 
+				amount = 1
 			}
 		}
 		solar_system = {
@@ -576,9 +583,9 @@ planet_event = {
 planet_event = {
 	id = crisis.2028
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		random_country = {
 			limit = { is_country_type = ai_empire }
@@ -598,7 +605,7 @@ planet_event = {
 		create_ai_fleet = yes
 		create_ai_fleet = yes
 		random_country = { observer_event = { id = observer.48 } }
-		
+
 		# Custodian/Emperor Announcements
 		event_target:AI_crisis = { save_event_target_as = crisis_country }
 		if = {
@@ -615,7 +622,7 @@ planet_event = {
 				country_event = { id = emperor.90 days = 30 }
 			}
 		}
-		
+
 		every_country = {
 			limit = { is_ai = no }
 			country_event = { id = crisis.2033 }
@@ -627,7 +634,7 @@ planet_event = {
 			add_event_chain_counter = {
 				event_chain = "ai_crisis_chain"
 				counter = "active_machine_worlds"
-				amount = 1 
+				amount = 1
 			}
 		}
 		solar_system = {
@@ -673,11 +680,12 @@ planet_event = {
 			from = { is_same_value = root }
 			planet_devastation >= 50
 			has_planet_flag = planet_godrayed
+			has_planet_flag = planet_drenched
 		}
 	}
 
 	immediate = {
-		destroy_machine_world = yes		
+		destroy_machine_world = yes
 		gpm_purge_all_planetary_modifiers = yes		# -guilli
 		gpm_purge_all_core_modifiers = yes			# -guilli
 	}
@@ -693,6 +701,7 @@ planet_event = {
 	immediate = {
 		set_global_flag = ai_invasion_defeated
 		event_target:final_machine_world_destroyer = { set_country_flag = does_not_compute }
+		event_target:final_machine_world_destroyer = { set_country_flag = with_great_power_achievement }
 		if = {
 			limit = {
 				event_target:final_machine_world_destroyer = { is_ai = no }
@@ -746,11 +755,15 @@ planet_event = {
 				OR = {
 					NOT = { has_planet_flag = destroyed_by_colossus }
 					has_planet_flag = planet_godrayed
+					has_planet_flag = planet_drenched
 				}
+			}
+			every_owned_pop = {
+				kill_pop = yes
 			}
 			destroy_colony = yes
 			change_pc = pc_broken
-			reset_planet = yes			
+			reset_planet = yes
 			gpm_purge_all_planetary_modifiers = yes		# -guilli
 			gpm_purge_all_core_modifiers = yes			# -guilli
 		}

@@ -5,12 +5,12 @@ namespace = gpm_guardian
 planet_event = {
 	id = gpm_guardian.1
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 	}
-	
+
 	immediate = {
 		# log = "Guardian event has run"
 		if = {
@@ -71,13 +71,13 @@ planet_event = {
 							}
 						}
 					}
-					
+
 					last_created_fleet = {
 						create_ambient_object = {
 							type = "gpm_ego_spawn_object"
 							location = THIS
 							# use_3d_location = yes
-							
+
 						}
 						last_created_ambient_object = {
 							set_ambient_object_flag = gpm_ambient_ego_flag
@@ -99,10 +99,10 @@ country_event = {
 	id = gpm_guardian.2
 	hide_window = yes
 	location = this
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	trigger = {
 		THIS = {
 			#is_country_type = guardian_horror
@@ -110,7 +110,7 @@ country_event = {
 			FROMFROM = { is_ship_size = gpm_ego }
 		}
 	}
-	
+
 	immediate = {
 		fromfrom = { save_event_target_as = gpm_ego }
 		random_system = {
@@ -135,7 +135,7 @@ country_event = {
 				limit = {
 					is_ship_size = gpm_ego
 				}
-				fleet = { 
+				fleet = {
 					destroy_fleet = THIS
 				}
 			}
@@ -146,12 +146,12 @@ country_event = {
 		# FROMFROM = {
 		# 	solar_system = {
 		# 		save_event_target_as = gpm_guardians_ego_system
-				
+
 		# 		random_ambient_object = {
 		# 			limit = { has_ambient_object_flag = gpm_ambient_ego_flag }
 		# 			destroy_ambient_object = this
 		# 		}
-				
+
 		# 	}
 		# }
 	}
@@ -282,13 +282,13 @@ country_event = {
 
 	diplomatic = yes
 	is_triggered_only = yes
-	
+
 
 	picture_event_data = {
 		room = ego_nice_room
 	}
-	
-	immediate = { 
+
+	immediate = {
 		set_global_flag = gpm_ego_chain_completed
 	}
 
@@ -325,7 +325,7 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			owner = { 
+			owner = {
 				has_civic = civic_machine_terminator
 			}
 		}
@@ -371,7 +371,7 @@ country_event = {
 					has_ethic = ethic_fanatic_xenophobe
 					has_ethic = ethic_authoritarian
 					has_ethic = ethic_fanatic_authoritarian
-		
+
 				}
 			}
 		}
@@ -660,7 +660,7 @@ country_event = {
 					limit = {
 						is_ship_size = gpm_ego
 					}
-					fleet = { 
+					fleet = {
 						destroy_fleet = THIS
 					}
 				}
@@ -721,46 +721,46 @@ country_event = {
 		}
 		#give terraforming tech
 		if = {
-			limit = { 
-				has_technology = "tech_terrestrial_sculpting" 
-				has_technology = "tech_ecological_adaptation" 
+			limit = {
+				has_technology = "tech_terrestrial_sculpting"
+				has_technology = "tech_ecological_adaptation"
 			}
 			add_research_option = tech_climate_restoration
 			hidden_effect = {
 				add_tech_progress = {
-					tech = tech_climate_restoration 
+					tech = tech_climate_restoration
 					progress = 0.75
 				}
 			}
 		}
 		if = {
 			limit = {
-				has_technology = "tech_terrestrial_sculpting" 
+				has_technology = "tech_terrestrial_sculpting"
 				NOT = { has_technology = "tech_ecological_adaptation" }
 			}
 			add_research_option = tech_ecological_adaptation
 			hidden_effect = {
 				add_tech_progress = {
-					tech = tech_ecological_adaptation 
+					tech = tech_ecological_adaptation
 					progress = 0.75
 				}
 			}
 		}
 		if = {
-			limit = { 
+			limit = {
 				NAND = {
-					has_technology = "tech_terrestrial_sculpting" 
-					has_technology = "tech_ecological_adaptation" 
+					has_technology = "tech_terrestrial_sculpting"
+					has_technology = "tech_ecological_adaptation"
 				}
 			}
 			add_research_option = tech_terrestrial_sculpting
 			hidden_effect = {
 				add_tech_progress = {
-					tech = tech_terrestrial_sculpting 
+					tech = tech_terrestrial_sculpting
 					progress = 0.75
 				}
 			}
-		}		
+		}
 	}
 }
 
@@ -811,7 +811,7 @@ country_event = {
 			has_country_flag = gpm_ego_country
 		}
 		#FROMFROMFROM = { any_owned_ship = { is_ship_size = gpm_ego } }
-		THIS = { 
+		THIS = {
 			has_country_flag = gpm_ego_first_meet
 			NOT = { has_country_flag = gpm_ego_first_fleet_destroyed }
 		}

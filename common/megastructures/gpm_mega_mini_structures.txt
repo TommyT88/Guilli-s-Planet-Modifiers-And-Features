@@ -33,24 +33,20 @@ gpm_refinery_restored = {
 		category = megastructures
 		cost = {
 			trigger = {
-				from = { is_ai = no }
-				from = { has_ancrel = no }
+				from = {
+					has_ancrel = no
+				}
 			}
 			alloys = 500
 		}
 		cost = {
-			trigger = { 
-				from = { is_ai = no }
-				from = { has_ancrel = yes }
+			trigger = {
+				from = {
+					has_ancrel = yes
+				}
 			}
-			alloys = 250
-			minor_artifacts = 20
-		}
-		cost = {
-			trigger = { 
-				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
-			}
-			alloys = 250
+			alloys = 500
+			minor_artifacts = 500
 		}
 
 		upkeep = {
@@ -101,15 +97,16 @@ gpm_refinery_restored = {
 	}
 
 	possible = {
-		OR = { 
+		OR = {
 			has_ancrel = no
 			AND = {
 				from = {
 					has_ancrel = yes
-					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+					resource_stockpile_compare = { resource = minor_artifacts value >= 500 }
 				}
 			}
 		}
+		from = { resource_stockpile_compare = { resource = alloys value >= 500 } }
 	}
 
 	on_build_start = {
@@ -179,25 +176,18 @@ gpm_mining_facility_restored = {
 		category = megastructures
 		cost = {
 			trigger = {
-				from = { is_ai = no }
 				from = { has_ancrel = no }
 			}
 			minerals = 1000
 		}
 		cost = {
 			trigger = { 
-				from = { is_ai = no }
 				from = { has_ancrel = yes }
 			}
-			minerals = 500
-			minor_artifacts = 20
+			minerals = 1000
+			minor_artifacts = 500
 		}
-		cost = {
-			trigger = { 
-				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
-			}
-			minerals = 500
-		}
+		
 		upkeep = {
 			energy = 10
 		}
@@ -305,10 +295,11 @@ gpm_mining_facility_restored = {
 			AND = {
 				from = {
 					has_ancrel = yes
-					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+					resource_stockpile_compare = { resource = minor_artifacts value >= 500 }
 				}
 			}
 		}
+		from = { resource_stockpile_compare = { resource = minerals value >= 1000 } }
 	}
 
 	on_build_start = {
@@ -377,24 +368,16 @@ gpm_observation_station_restored = {
 		category = megastructures
 		cost = {
 			trigger = {
-				from = { is_ai = no }
 				from = { has_ancrel = no }
 			}
 			alloys = 500
 		}
 		cost = {
-			trigger = { 
-				from = { is_ai = no }
+			trigger = {
 				from = { has_ancrel = yes }
 			}
-			alloys = 250
-			minor_artifacts = 20
-		}
-		cost = {
-			trigger = { 
-				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
-			}
 			alloys = 500
+			minor_artifacts = 500
 		}
 		upkeep = {
 			energy = 10
@@ -558,10 +541,11 @@ gpm_observation_station_restored = {
 			AND = {
 				from = {
 					has_ancrel = yes
-					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+					resource_stockpile_compare = { resource = minor_artifacts value >= 500 }
 				}
 			}
 		}
+		from = { resource_stockpile_compare = { resource = alloys value >= 500 } }
 	}
 
 	on_build_start = {
@@ -630,10 +614,11 @@ gpm_silo_restored = {
 			AND = {
 				from = {
 					has_ancrel = yes
-					resource_stockpile_compare = { resource = minor_artifacts value >= 20 }
+					resource_stockpile_compare = { resource = minor_artifacts value >= 500 }
 				}
 			}
 		}
+		from = { resource_stockpile_compare = { resource = alloys value >= 1000 } }
 	}
 
 	upgrade_from = {
@@ -644,24 +629,16 @@ gpm_silo_restored = {
 		category = megastructures
 		cost = {
 			trigger = {
-				from = { is_ai = no }
 				from = { has_ancrel = no }
 			}
 			alloys = 1000
 		}
 		cost = {
-			trigger = { 
-				from = { is_ai = no }
+			trigger = {
 				from = { has_ancrel = yes }
 			}
-			alloys = 500
-			minor_artifacts = 20
-		}
-		cost = {
-			trigger = { 
-				from = { is_ai = yes } # AI bad at managing minor_artifacts :(
-			}
-			alloys = 500
+			alloys = 1000
+			minor_artifacts = 500
 		}
 
 		upkeep = {

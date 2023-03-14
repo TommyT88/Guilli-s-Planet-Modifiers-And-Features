@@ -8,16 +8,16 @@ artifact_arcane_deciphering = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 15
-			multiplier = value:edict_size_effect
+			minor_artifacts = 750
+			# multiplier = value:edict_size_effect
 		}
 	}
 	
 	ai_weight = {
-		weight = 5000
+		weight = 500
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 50 }
+			has_resource = { type = minor_artifacts amount < 750 }
 		}
 	}
 
@@ -89,53 +89,63 @@ artifact_arcane_deciphering = {
 	}
 }
 
-GPM_unlock_artifact_research_centre = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 10
-		}
-	}
+# fund precursor research
+# GPM_unlock_artifact_research_centre = {
+	# resources = {
+		# category = artifact_actions
+		# cost = {
+			# minor_artifacts = 500
+			# # multiplier = value:edict_size_effect
+		# }
+	# }
 	
-	ai_weight = {
-		weight = 10000
-		modifier = {
-			factor = 0
-			has_resource = { type = minor_artifacts amount < 25 }
-		}
-	}
+	# ai_weight = {
+		# weight = 50
+		# modifier = {
+			# factor = 0
+			# has_resource = { type = minor_artifacts amount < 750 }
+		# }
+	# }
 
-	potential = {
-		has_technology = tech_arcane_deciphering
-		has_ancrel = yes
-		NOT = { has_country_flag = gpm_artifact_research_centre_unlocked }
-	}
+	# allow = {		
+		# NOT = { has_modifier = gpm_precursor_studies_modifier }
+	# }
 
-	effect = {
-		add_research_option = gpm_tech_arcane_research
-		custom_tooltip = GPM_unlock_artifact_research_centre_TT
-		hidden_effect = {
-			set_country_flag = gpm_artifact_research_centre_unlocked
-			add_tech_progress = {
-				tech = gpm_tech_arcane_research
-				progress = 0.10
-			}
-		}
-	}
-}
+	# potential = {
+		# has_technology = tech_arcane_deciphering
+		# has_ancrel = yes
+	# }
+
+	# effect = {
+		# add_modifier = {
+			# modifier = "gpm_precursor_studies_modifier" 
+			# days = 3600
+		# }
+		# # add_research_option = gpm_tech_arcane_research
+		# # custom_tooltip = GPM_unlock_artifact_research_centre_TT
+	# }
+# }
 
 # overwrite to add cooldown
 artifact_sell_collector = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 10
+			minor_artifacts = 100
 		}
 	}
 	
-	# set weight to 0 cous AI keept using it regardless of modifiers wasting all their minor artifacts..
+	# 
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 0
+			has_resource = { type = energy amount > 5000 }
+		}
+		modifier = {
+			factor = 0
+			has_resource = { type = minor_artifacts amount < 1000 }
+		}
 	}
 
 	potential = { is_gestalt = no }
@@ -168,13 +178,20 @@ artifact_celebrate_diversity = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = @minor_artifact_decision_cost
+			minor_artifacts = 100
 		}
 	}
 	
-	# set weight to 0 cous AI keept using it regardless of modifiers wasting all their minor artifacts..
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0
+			has_resource = { type = minor_artifacts amount < 1000 }
+		}
 	}
 
 	potential = {

@@ -3,7 +3,7 @@ namespace = gpm_operation
 # DEBUG EVENT TO GIVE ALL EMPIRES A RELIC
 country_event = {
 	id = gpm_operation.9999
-	hide_window = yes 
+	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		owner = {
@@ -1064,16 +1064,16 @@ country_event = {
 # From = subject's overlord
 country_event = {
 	id = gpm_operation.100
-	hide_window = yes 
+	hide_window = yes
 	is_triggered_only = yes
-	
+
 	immediate = {
 		log = "<< RELICS >> | RELIC SUBJUGATION - ROOT = [root.GetName] became subject of FROM = [from.GetName]"
-		
+
 		# (country scope)
 		# This = subject
 		# From = subject's overlord
-		# Overlord 		
+		# Overlord
 		FROM = {
 			if = {
 				limit = { is_running_espionage_operation = yes }
@@ -1088,8 +1088,8 @@ country_event = {
 				}
 			}
 		}
-		
-		# Subject 
+
+		# Subject
 		THIS = {
 			if = {
 				limit = { is_running_espionage_operation = yes }

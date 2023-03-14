@@ -1,3 +1,15 @@
+@tier1researchreward_half= 15
+@tier1researchmin_half = 90
+@tier1researchmax_half = 900
+
+@tier1researchreward_qrt = 7
+@tier1researchmin_qrt = 30
+@tier1researchmax_qrt = 300
+
+@tier1unityreward_half = 50
+@tier1unitymin_half = 50
+@tier1unitymax_half = 500
+
 gpm_random_minor_artifacts_5 = {
 	### 
 	custom_tooltip = minor_artifacts_found
@@ -7,10 +19,6 @@ gpm_random_minor_artifacts_5 = {
 			has_ancrel = yes
 		}
 		locked_random_list = {
-			1 = { add_resource = { minor_artifacts = 1 } }
-			2 = { add_resource = { minor_artifacts = 2 } }
-			4 = { add_resource = { minor_artifacts = 3 } }
-			8 = { add_resource = { minor_artifacts = 4 } }
 			10 = { add_resource = { minor_artifacts = 5 } }
 			10 = { add_resource = { minor_artifacts = 6 } }
 			10 = { add_resource = { minor_artifacts = 7 } }
@@ -21,11 +29,11 @@ gpm_random_minor_artifacts_5 = {
 			10 = { add_resource = { minor_artifacts = 12 } }
 			10 = { add_resource = { minor_artifacts = 13 } }
 			10 = { add_resource = { minor_artifacts = 14 } }
-			10 = { add_resource = { minor_artifacts = 15 } }
-			8 = { add_resource = { minor_artifacts = 20 } }
-			4 = { add_resource = { minor_artifacts = 25 } }
-			2 = { add_resource = { minor_artifacts = 30 } }
-			1 = { add_resource = { minor_artifacts = 50 } }
+			9 = { add_resource = { minor_artifacts = 15 } }
+			9 = { add_resource = { minor_artifacts = 20 } }
+			8 = { add_resource = { minor_artifacts = 25 } }
+			8 = { add_resource = { minor_artifacts = 30 } }
+			7 = { add_resource = { minor_artifacts = 50 } }
 		}
 	}
 
@@ -244,11 +252,14 @@ gpm_d_random_food_big = {
 gpm_d_random_alloys = {
 	### 
 	locked_random_list = {
-		10 = { add_deposit = d_alloys_1 }
-		10 = { add_deposit = d_alloys_2 }
-		10 = { add_deposit = d_alloys_3 }
-		10 = { add_deposit = d_alloys_4 }
-		10 = { add_deposit = d_alloys_5 }
+		15 = { add_deposit = d_alloys_2 }
+		13 = { add_deposit = d_alloys_3 }
+		11 = { add_deposit = d_alloys_4 }
+		9 = { add_deposit = d_alloys_5 }
+		7 = { add_deposit = gpm_d_alloys_6 }
+		5 = { add_deposit = gpm_d_alloys_7 }
+		3 = { add_deposit = gpm_d_alloys_8 }
+		1 = { add_deposit = gpm_d_alloys_9 }
 	}
 }
 
@@ -492,9 +503,9 @@ gpm_exploration_policy_away_teams_reward = {
 				fail_effects = {
 					add_monthly_resource_mult = {
 						resource = engineering_research
-						value = @tier1researchreward
-						min = @tier1researchmin
-						max = @tier1researchmax
+						value = @tier1researchreward_qrt
+						min = @tier1researchmin_qrt
+						max = @tier1researchmax_qrt
 					}
 				}
 			}
@@ -507,9 +518,9 @@ gpm_exploration_policy_away_teams_reward = {
 				fail_effects = {
 					add_monthly_resource_mult = {
 						resource = physics_research
-						value = @tier1researchreward
-						min = @tier1researchmin
-						max = @tier1researchmax
+						value = @tier1researchreward_qrt
+						min = @tier1researchmin_qrt
+						max = @tier1researchmax_qrt
 					}
 				}
 			}
@@ -522,9 +533,9 @@ gpm_exploration_policy_away_teams_reward = {
 				fail_effects = {
 					add_monthly_resource_mult = {
 						resource = society_research
-						value = @tier1researchreward
-						min = @tier1researchmin
-						max = @tier1researchmax
+						value = @tier1researchreward_qrt
+						min = @tier1researchmin_qrt
+						max = @tier1researchmax_qrt
 					}
 				}
 			}
@@ -532,25 +543,25 @@ gpm_exploration_policy_away_teams_reward = {
 		30 = {
 			add_monthly_resource_mult = {
 				resource = physics_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier1researchreward_qrt
+				min = @tier1researchmin_qrt
+				max = @tier1researchmax_qrt
 			}
 		}
 		30 = {
 			add_monthly_resource_mult = {
 				resource = society_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier1researchreward_qrt
+				min = @tier1researchmin_qrt
+				max = @tier1researchmax_qrt
 			}
 		}
 		30 = {
 			add_monthly_resource_mult = {
 				resource = engineering_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier1researchreward_qrt
+				min = @tier1researchmin_qrt
+				max = @tier1researchmax_qrt
 			}
 		}
 	}
@@ -567,9 +578,9 @@ gpm_exploration_policy_extra_reward = {
 				fail_effects = {
 					add_monthly_resource_mult = {
 						resource = engineering_research
-						value = @tier1researchreward
-						min = @tier1researchmin
-						max = @tier1researchmax
+						value = @tier1researchreward_half
+						min = @tier1researchmin_half
+						max = @tier1researchmax_half
 					}
 				}
 			}
@@ -582,9 +593,9 @@ gpm_exploration_policy_extra_reward = {
 				fail_effects = {
 					add_monthly_resource_mult = {
 						resource = physics_research
-						value = @tier1researchreward
-						min = @tier1researchmin
-						max = @tier1researchmax
+						value = @tier1researchreward_half
+						min = @tier1researchmin_half
+						max = @tier1researchmax_half
 					}
 				}
 			}
@@ -597,9 +608,9 @@ gpm_exploration_policy_extra_reward = {
 				fail_effects = {
 					add_monthly_resource_mult = {
 						resource = society_research
-						value = @tier1researchreward
-						min = @tier1researchmin
-						max = @tier1researchmax
+						value = @tier1researchreward_half
+						min = @tier1researchmin_half
+						max = @tier1researchmax_half
 					}
 				}
 			}
@@ -607,25 +618,25 @@ gpm_exploration_policy_extra_reward = {
 		30 = {
 			add_monthly_resource_mult = {
 				resource = physics_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier1researchreward_half
+				min = @tier1researchmin_half
+				max = @tier1researchmax_half
 			}
 		}
 		30 = {
 			add_monthly_resource_mult = {
 				resource = society_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier1researchreward_half
+				min = @tier1researchmin_half
+				max = @tier1researchmax_half
 			}
 		}
 		30 = {
 			add_monthly_resource_mult = {
 				resource = engineering_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
+				value = @tier1researchreward_half
+				min = @tier1researchmin_half
+				max = @tier1researchmax_half
 			}
 		}
 	}

@@ -8,7 +8,7 @@ namespace = gpm_crisis
 planet_event = {
 	id = gpm_crisis.1
 	hide_window = yes
-	
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -33,7 +33,7 @@ planet_event = {
 			35 = {
 				if = {
 					limit = { NOT = { has_modifier = gpm_hiveworld } }
-					add_modifier = { modifier = gpm_hiveworld days = -1 } 
+					add_modifier = { modifier = gpm_hiveworld days = -1 }
 				}
 			}
 			50 = { }
@@ -47,9 +47,9 @@ planet_event = {
 planet_event = {
 	id = gpm_crisis.2
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		# log = "---- Fired Event gpm_crisis.2 ----"
 		# log = "---- Purging world (scourge) ----"
@@ -61,9 +61,9 @@ planet_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					OR = {
-						has_modifier = gpm_planet_wonder_discovered 
+						has_modifier = gpm_planet_wonder_discovered
 						has_planet_flag = gpm_is_wondrous_planet
 					}
 				}
@@ -100,9 +100,9 @@ planet_event = {
 planet_event = {
 	id = gpm_crisis.3
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		# log = "---- Fired Event gpm_crisis.3 ----"
 		# log = "---- Colonized world (scourge) ----"
@@ -114,9 +114,9 @@ planet_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					OR = {
-						has_modifier = gpm_planet_wonder_discovered 
+						has_modifier = gpm_planet_wonder_discovered
 						has_planet_flag = gpm_is_wondrous_planet
 					}
 				}
@@ -157,9 +157,9 @@ planet_event = {
 planet_event = {
 	id = gpm_crisis.10
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		# log = "---- Fired Event gpm_crisis.10 ----"
 		# log = "---- Bombarded world (unbidden) turn to random world ----"

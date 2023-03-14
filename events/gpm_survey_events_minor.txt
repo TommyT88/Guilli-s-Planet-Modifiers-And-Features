@@ -31,7 +31,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
-	
+
 	#################
 	#### TRIGGER ####
 	#################
@@ -39,7 +39,7 @@ ship_event = {
 		FROM = { has_modifier = gpm_hollow_structure }
 		OWNER = { NOT = { has_country_flag = gpm_hollow_structure_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
@@ -285,7 +285,7 @@ ship_event = {
 	option = {
 		trigger = {
 			OR = {
-				OWNER = { 
+				OWNER = {
 					OR = {
 						has_civic = civic_mining_guilds
 						has_civic = civic_machine_rockbreakers
@@ -310,10 +310,10 @@ ship_event = {
 				}
 				gpm_d_random_minerals = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-				OWNER = { add_resource = { minerals = 100 multiplier = value:gpm_leader_level_value } }
+				root.OWNER = { add_resource = { minerals = 100 multiplier = value:gpm_leader_level_value } }
 			}
 			else = {
-				OWNER = { add_resource = { minerals = 200 multiplier = value:gpm_leader_level_value } }
+				root.OWNER = { add_resource = { minerals = 200 multiplier = value:gpm_leader_level_value } }
 			}
 		}
 		# other rewards
@@ -351,7 +351,7 @@ ship_event = {
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
 			else = {
-				OWNER = {
+				root.OWNER = {
 					add_monthly_resource_mult = {
 						resource = physics_research
 						value = @tier1researchreward_half
@@ -373,7 +373,7 @@ ship_event = {
 	option = {
 		trigger = {
 			OR = {
-				OWNER = { 
+				OWNER = {
 					OR = {
 						has_civic = civic_exalted_priesthood
 						has_ethic = ethic_spiritualist
@@ -401,10 +401,10 @@ ship_event = {
 				}
 				gpm_d_random_unity_deposit = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-				OWNER = { add_resource = { unity = 40 multiplier = value:gpm_leader_level_value } }
+				root.OWNER = { add_resource = { unity = 40 multiplier = value:gpm_leader_level_value } }
 			}
 			else = {
-				OWNER = { add_resource = { unity = 110 multiplier = value:gpm_leader_level_value } }
+				root.OWNER = { add_resource = { unity = 110 multiplier = value:gpm_leader_level_value } }
 			}
 		}
 		# other rewards
@@ -439,14 +439,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_crystallized_structure }
 		OWNER = { NOT = { has_country_flag = gpm_crystallized_structure_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_crystallized_structure_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -469,7 +469,7 @@ ship_event = {
 					}
 				}
 			}
-			FROM = { 
+			FROM = {
 				gpm_d_random_engineering = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
@@ -493,7 +493,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -501,7 +501,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING	
+		name = gpm_survey.LICENCE_MINING
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -565,7 +565,7 @@ ship_event = {
 					}
 				}
 			}
-			FROM = { 
+			FROM = {
 				gpm_d_random_crystals = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
@@ -591,10 +591,10 @@ ship_event = {
 
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -673,14 +673,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_abandoned_mining_platforms }
 		OWNER = { NOT = { has_country_flag = gpm_abandoned_mining_platforms_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_abandoned_mining_platforms_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -749,7 +749,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -757,7 +757,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_2	
+		name = gpm_survey.LICENCE_MINING_2
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -831,7 +831,7 @@ ship_event = {
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -902,7 +902,7 @@ ship_event = {
 
 	##############################
 	#### MERCHANT GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
 			OWNER = {
@@ -994,10 +994,10 @@ ship_event = {
 
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -1063,7 +1063,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MEMORIALISTS OPTION ####
 	#############################
@@ -1122,7 +1122,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###############################
 	#### INDUSTRIALISTS OPTION ####
 	###############################
@@ -1213,14 +1213,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_hydrogen_mist }
 		OWNER = { NOT = { has_country_flag = gpm_hydrogen_mist_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_hydrogen_mist_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -1268,7 +1268,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -1276,7 +1276,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_3	
+		name = gpm_survey.LICENCE_MINING_3
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -1310,13 +1310,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -1392,14 +1392,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_salt_flats }
 		OWNER = { NOT = { has_country_flag = gpm_salt_flats_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_salt_flats_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -1446,7 +1446,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -1454,7 +1454,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_2	
+		name = gpm_survey.LICENCE_RESEARCH_2
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -1493,8 +1493,8 @@ ship_event = {
 			}
 		}
 	}
-	
-	
+
+
 	#############################
 	#### ARISTOCRATES OPTION ####
 	#############################
@@ -1562,13 +1562,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -1647,14 +1647,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_relic_lower_levels }
 		OWNER = { NOT = { has_country_flag = gpm_relic_lower_levels_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_relic_lower_levels_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -1744,7 +1744,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -1752,7 +1752,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_3	
+		name = gpm_survey.LICENCE_RESEARCH_3
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -1870,7 +1870,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#################################
 	#### ENVIROMENTALISTS OPTION ####
 	#################################
@@ -1978,8 +1978,8 @@ ship_event = {
 				}
 			}
 		}
-	}	
-	
+	}
+
 	#############################
 	#### ARCHITECTURE OPTION ####
 	#############################
@@ -2008,7 +2008,7 @@ ship_event = {
 		}
 		# deposit
 		# other rewards
-		OWNER = { 
+		OWNER = {
 			gpm_random_minor_artifacts_5 = yes
 			give_technology = { tech = tech_repeatable_improved_starbase_capacity }
 		}
@@ -2074,7 +2074,7 @@ ship_event = {
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -2177,7 +2177,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MEMORIALISTS OPTION ####
 	#############################
@@ -2293,14 +2293,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_water_pockets }
 		OWNER = { NOT = { has_country_flag = gpm_water_pockets_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_water_pockets_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -2355,7 +2355,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -2363,7 +2363,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_4	
+		name = gpm_survey.LICENCE_RESEARCH_4
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -2410,8 +2410,8 @@ ship_event = {
 			}
 		}
 	}
-	
-	
+
+
 	##############################
 	#### MEGACORP DUNG OPTION ####
 	##############################
@@ -2419,7 +2419,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey_minor.MEGACORPSELL_DUNG	
+		name = gpm_survey_minor.MEGACORPSELL_DUNG
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -2446,10 +2446,10 @@ ship_event = {
 
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -2514,7 +2514,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### AGRARIAN OPTION ####
 	#########################
@@ -2604,14 +2604,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_geometrical_polar_storm }
 		OWNER = { NOT = { has_country_flag = gpm_geometrical_polar_storm_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_geometrical_polar_storm_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -2658,7 +2658,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -2727,14 +2727,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_floating_forest }
 		OWNER = { NOT = { has_country_flag = gpm_floating_forest_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_floating_forest_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -2795,7 +2795,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -2803,7 +2803,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_6	
+		name = gpm_survey.LICENCE_RESEARCH_6
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -2856,7 +2856,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#####################
 	#### FOOD OPTION ####
 	#####################
@@ -2926,13 +2926,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### SPIRITUALIST OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
@@ -3044,7 +3044,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###########################
 	#### TERMINATOR OPTION ####
 	###########################
@@ -3110,7 +3110,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### CATALYTIC OPTION ###
 	#########################
@@ -3189,7 +3189,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#################################
 	#### MACHINE SERVITOR OPTION ####
 	#################################
@@ -3261,7 +3261,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### AGRARIAN OPTION ####
 	#########################
@@ -3357,14 +3357,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_viscous_gas_layer }
 		OWNER = { NOT = { has_country_flag = gpm_viscous_gas_layer_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_viscous_gas_layer_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -3411,7 +3411,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -3419,7 +3419,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_7	
+		name = gpm_survey.LICENCE_RESEARCH_7
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -3458,7 +3458,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### EXOTIC GASSES OPTION ####
 	##############################
@@ -3483,7 +3483,7 @@ ship_event = {
 					}
 				}
 			}
-			FROM = { 
+			FROM = {
 				gpm_d_random_gasses = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
@@ -3601,14 +3601,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_everlasting_tornadoes }
 		OWNER = { NOT = { has_country_flag = gpm_everlasting_tornadoes_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_everlasting_tornadoes_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -3655,7 +3655,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -3663,7 +3663,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_8	
+		name = gpm_survey.LICENCE_RESEARCH_8
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -3724,14 +3724,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_shrinking_giant }
 		OWNER = { NOT = { has_country_flag = gpm_shrinking_giant_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_shrinking_giant_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -3778,7 +3778,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -3786,7 +3786,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_9	
+		name = gpm_survey.LICENCE_RESEARCH_9
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -3847,14 +3847,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_aeroplankton_clouds }
 		OWNER = { NOT = { has_country_flag = gpm_aeroplankton_clouds_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_aeroplankton_clouds_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -3909,7 +3909,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -3917,7 +3917,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_10	
+		name = gpm_survey.LICENCE_RESEARCH_10
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -3963,14 +3963,14 @@ ship_event = {
 				gpm_exploration_policy_away_teams_reward = yes
 			}
 		}
-	}	
-	
+	}
+
 	#####################
 	#### FOOD OPTION ####
 	#####################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				NOR = {
 					has_civic = civic_hive_devouring_swarm
 					has_civic = civic_machine_terminator
@@ -4081,7 +4081,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###########################
 	#### TERMINATOR OPTION ####
 	###########################
@@ -4141,7 +4141,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### CATALYTIC OPTION ###
 	#########################
@@ -4236,14 +4236,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_abandoned_refineries }
 		OWNER = { NOT = { has_country_flag = gpm_abandoned_refineries_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_abandoned_refineries_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -4353,7 +4353,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -4361,7 +4361,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_4	
+		name = gpm_survey.LICENCE_MINING_4
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -4429,13 +4429,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -4502,7 +4502,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	################################
 	#### MERCHANT GUILDS OPTION ####
 	################################
@@ -4590,13 +4590,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -4665,7 +4665,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MEMORIALISTS OPTION ####
 	#############################
@@ -4724,7 +4724,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###############################
 	#### INDUSTRIALISTS OPTION ####
 	###############################
@@ -4818,14 +4818,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_floating_kelp }
 		OWNER = { NOT = { has_country_flag = gpm_floating_kelp_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_floating_kelp_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -4872,7 +4872,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -4880,7 +4880,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH	
+		name = gpm_survey.LICENCE_RESEARCH
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -4925,7 +4925,7 @@ ship_event = {
 	option = {
 		trigger = {
 			OWNER = {
-				NOR = { 
+				NOR = {
 					has_civic = civic_machine_servitor
 					has_civic = civic_hive_devouring_swarm
 					has_civic = civic_machine_terminator
@@ -4983,10 +4983,10 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	######################################
 	#### MACHINE SERVITOR FOOD OPTION ####
-	###################################### 
+	######################################
 	option = {
 		trigger = {
 			OWNER = {
@@ -5140,7 +5140,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###########################
 	#### TERMINATOR OPTION ####
 	###########################
@@ -5192,7 +5192,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### ARISTOCRATES OPTION ####
 	#############################
@@ -5256,7 +5256,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### CATALYTIC OPTION ###
 	#########################
@@ -5403,14 +5403,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_super_heated_atmosphere }
 		OWNER = { NOT = { has_country_flag = gpm_super_heated_atmosphere_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_super_heated_atmosphere_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -5457,7 +5457,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -5526,14 +5526,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_floatig_behemothaurs }
 		OWNER = { NOT = { has_country_flag = gpm_floatig_behemothaurs_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_floatig_behemothaurs_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -5585,7 +5585,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -5593,7 +5593,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_3	
+		name = gpm_survey.LICENCE_RESEARCH_3
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -5649,13 +5649,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### SPIRITUALIST OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
@@ -5739,14 +5739,14 @@ ship_event = {
 			}
 		}
 	}
-	
-	
+
+
 	###############################
 	#### XENOPHOBE FOOD OPTION ####
 	###############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_xenophobe
 					has_ethic = ethic_fanatic_xenophobe
@@ -5826,7 +5826,7 @@ ship_event = {
 	###############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_xenophobe
 					has_ethic = ethic_fanatic_xenophobe
@@ -5854,7 +5854,7 @@ ship_event = {
 			}
 		}
 		# deposit
-		# other rewards		
+		# other rewards
 		FROM = { remove_modifier = gpm_floatig_behemothaurs }
 		OWNER = {
 			locked_random_list = {
@@ -5891,14 +5891,14 @@ ship_event = {
 				gpm_exploration_policy_away_teams_reward = yes
 			}
 		}
-	}	
-	
+	}
+
 	##########################
 	#### XENOPHILE OPTION ####
 	##########################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_xenophile
 					has_ethic = ethic_fanatic_xenophile
@@ -6108,8 +6108,8 @@ ship_event = {
 			}
 		}
 	}
-	
-	
+
+
 	##########################
 	#### PURIFIERS OPTION ####
 	##########################
@@ -6261,7 +6261,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### CATALYTIC OPTION ###
 	#########################
@@ -6370,14 +6370,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_magma_ocean }
 		OWNER = { NOT = { has_country_flag = gpm_magma_ocean_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_magma_ocean_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -6433,7 +6433,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -6441,7 +6441,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_5	
+		name = gpm_survey.LICENCE_MINING_5
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -6480,13 +6480,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -6567,14 +6567,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_heavy_elements }
 		OWNER = { NOT = { has_country_flag = gpm_heavy_elements_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_heavy_elements_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -6630,7 +6630,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -6638,7 +6638,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_6	
+		name = gpm_survey.LICENCE_MINING_6
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -6677,7 +6677,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###############################
 	#### VOLATILE MOTES OPTION ####
 	###############################
@@ -6702,11 +6702,11 @@ ship_event = {
 					}
 				}
 			}
-			FROM = { 
+			FROM = {
 				gpm_d_random_motes = yes
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
-			
+
 		}
 		else = {
 			OWNER = {
@@ -6727,13 +6727,13 @@ ship_event = {
 		}
 	}
 
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -6797,10 +6797,10 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MERCHANT GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
 			OWNER = {
@@ -6858,7 +6858,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	############################
 	#### FRANCHISING OPTION ####
 	############################
@@ -6980,13 +6980,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -7081,14 +7081,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_rare_metals }
 		OWNER = { NOT = { has_country_flag = gpm_rare_metals_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_rare_metals_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -7144,7 +7144,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -7152,7 +7152,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_7	
+		name = gpm_survey.LICENCE_MINING_7
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -7197,7 +7197,7 @@ ship_event = {
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -7245,10 +7245,10 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MERCHANT GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
 			OWNER = {
@@ -7306,7 +7306,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	############################
 	#### FRANCHISING OPTION ####
 	############################
@@ -7369,7 +7369,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	############################
 	#### PROSPECTORS OPTION ####
 	############################
@@ -7428,10 +7428,10 @@ ship_event = {
 
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -7520,14 +7520,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_proto_planet }
 		OWNER = { NOT = { has_country_flag = gpm_proto_planet_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_proto_planet_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -7582,7 +7582,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -7590,7 +7590,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_4	
+		name = gpm_survey.LICENCE_RESEARCH_4
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -7637,13 +7637,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -7730,14 +7730,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_old_world }
 		OWNER = { NOT = { has_country_flag = gpm_old_world_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_old_world_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -7818,7 +7818,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -7826,7 +7826,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_5	
+		name = gpm_survey.LICENCE_RESEARCH_5
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -7914,7 +7914,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### ARCHITECTURE OPTION ####
 	#############################
@@ -8005,7 +8005,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MEMORIALISTS OPTION ####
 	#############################
@@ -8085,7 +8085,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###############################
 	#### INDUSTRIALISTS OPTION ####
 	###############################
@@ -8178,13 +8178,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -8294,14 +8294,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_solidified_core }
 		OWNER = { NOT = { has_country_flag = gpm_solidified_core_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_solidified_core_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -8348,7 +8348,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -8356,7 +8356,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_6	
+		name = gpm_survey.LICENCE_RESEARCH_6
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -8395,13 +8395,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -8455,7 +8455,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	############################
 	#### PROSPECTORS OPTION ####
 	############################
@@ -8517,13 +8517,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MINING GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_civic = civic_mining_guilds
 					has_civic = civic_machine_rockbreakers
@@ -8602,14 +8602,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_subterranean_eco_system }
 		OWNER = { NOT = { has_country_flag = gpm_subterranean_eco_system_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_subterranean_eco_system_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -8656,7 +8656,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -8664,7 +8664,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_7	
+		name = gpm_survey.LICENCE_RESEARCH_7
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -8703,7 +8703,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	################################
 	#### DEVOURING SWARM OPTION ####
 	################################
@@ -8743,8 +8743,8 @@ ship_event = {
 				gpm_exploration_policy_away_teams_reward = yes
 			}
 		}
-	}	
-	
+	}
+
 	###########################
 	#### TERMINATOR OPTION ####
 	###########################
@@ -8883,14 +8883,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_plasma_tornadoes }
 		OWNER = { NOT = { has_country_flag = gpm_plasma_tornadoes_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_plasma_tornadoes_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -8937,7 +8937,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -8945,7 +8945,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_8	
+		name = gpm_survey.LICENCE_RESEARCH_8
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -9006,14 +9006,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_singing_star }
 		OWNER = { NOT = { has_country_flag = gpm_singing_star_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_singing_star_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -9060,7 +9060,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -9068,7 +9068,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_9	
+		name = gpm_survey.LICENCE_RESEARCH_9
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -9107,13 +9107,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### SPIRITUALIST OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
@@ -9178,14 +9178,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_precursor_star_filter }
 		OWNER = { NOT = { has_country_flag = gpm_precursor_star_filter_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_precursor_star_filter_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -9199,17 +9199,18 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					OR = {
-						has_deposit = no
-						AND = {
-							has_deposit = yes
-							has_deposit_for = shipclass_research_station
-						}
-					}
+					has_deposit = no
 				}
 			}
 			FROM = {
-				add_deposit = gpm_d_triple_science
+				if = {
+					limit = { has_ancrel = yes }
+					add_deposit = d_artifacts_1
+				}
+				if = {
+					limit = { has_ancrel = no }
+					add_deposit = gpm_d_triple_science
+				}
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
 		}
@@ -9244,7 +9245,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -9252,7 +9253,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_10	
+		name = gpm_survey.LICENCE_RESEARCH_10
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -9291,13 +9292,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -9312,17 +9313,20 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					OR = {
-						has_deposit = no
-						AND = {
-							has_deposit = yes
-							has_deposit_for = shipclass_research_station
-						}
-					}
+					has_deposit = no
 				}
 			}
 			FROM = {
-				gpm_d_random_unity_deposit_big = yes
+				if = {
+					limit = { has_ancrel = yes }
+					add_deposit = d_artifacts_1
+					gpm_d_random_unity_deposit_big = yes
+				}
+				if = {
+					limit = { has_ancrel = no }
+					add_deposit = gpm_d_triple_science
+					gpm_d_random_unity_deposit_big = yes
+				}
 				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
 		}
@@ -9407,14 +9411,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_lingering_pollution }
 		OWNER = { NOT = { has_country_flag = gpm_lingering_pollution_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_lingering_pollution_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -9462,7 +9466,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -9470,7 +9474,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH	
+		name = gpm_survey.LICENCE_RESEARCH
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -9510,7 +9514,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#################################
 	#### ENVIROMENTALISTS OPTION ####
 	#################################
@@ -9558,14 +9562,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_decaying_structures }
 		OWNER = { NOT = { has_country_flag = gpm_decaying_structures_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_decaying_structures_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -9645,7 +9649,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -9653,7 +9657,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_3	
+		name = gpm_survey.LICENCE_RESEARCH_3
 		# leader experience
 		locked_random_list = {
 			90 = {
@@ -9741,7 +9745,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#################################
 	#### ENVIROMENTALISTS OPTION ####
 	#################################
@@ -9834,7 +9838,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### ARCHITECTURE OPTION ####
 	#############################
@@ -9924,7 +9928,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MEMORIALISTS OPTION ####
 	#############################
@@ -10003,7 +10007,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###############################
 	#### INDUSTRIALISTS OPTION ####
 	###############################
@@ -10117,14 +10121,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_heavy_metal_coral }
 		OWNER = { NOT = { has_country_flag = gpm_heavy_metal_coral_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_heavy_metal_coral_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -10176,7 +10180,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -10184,7 +10188,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_8	
+		name = gpm_survey.LICENCE_MINING_8
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -10223,13 +10227,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -10289,10 +10293,10 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	##############################
 	#### MERCHANT GUILDS OPTION ####
-	##############################	
+	##############################
 	option = {
 		trigger = {
 			OWNER = {
@@ -10367,14 +10371,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_decomposing_leviathan }
 		OWNER = { NOT = { has_country_flag = gpm_decomposing_leviathan_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_decomposing_leviathan_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -10421,7 +10425,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -10429,7 +10433,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_4	
+		name = gpm_survey.LICENCE_RESEARCH_4
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -10468,7 +10472,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	################################
 	#### DEVOURING SWARM OPTION ####
 	################################
@@ -10629,7 +10633,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###########################
 	#### REANIMATOR OPTION ####
 	###########################
@@ -10679,6 +10683,9 @@ ship_event = {
 								design = "NAME_Shard_Dragon"
 								prefix = no
 								upgradable = no
+								effect = {
+									add_modifier = { modifier = gpm_ship_balancer_leviathan }
+								}
 							}
 							set_location = {
 								target = from
@@ -10736,14 +10743,14 @@ ship_event = {
 		FROM = { has_modifier = gpm_giant_mold_blobs }
 		OWNER = { NOT = { has_country_flag = gpm_giant_mold_blobs_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_giant_mold_blobs_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -10791,7 +10798,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -10799,7 +10806,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_RESEARCH_10	
+		name = gpm_survey.LICENCE_RESEARCH_10
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -10858,22 +10865,22 @@ ship_event = {
 	#### TRIGGER ####
 	#################
 	trigger = {
-		FROM = { 
+		FROM = {
 			OR = {
 				has_modifier = gpm_toxic_garbage
 				has_modifier = gpm_garbage_dump
 			}
-		}	
+		}
 		OWNER = { NOT = { has_country_flag = gpm_toxic_garbage_discovered } }
 	}
-	
+
 	###################
 	#### IMMEDIATE ####
 	###################
 	immediate = {
 		OWNER = { set_country_flag = gpm_toxic_garbage_discovered }
 	}
-	
+
 	########################
 	#### DEFAULT OPTION ####
 	########################
@@ -10924,7 +10931,7 @@ ship_event = {
 		# other rewards
 		locked_random_list = {
 			90 = { }
-			10 = { 
+			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
 					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
@@ -10949,8 +10956,8 @@ ship_event = {
 				}
 				set_global_flag = gpm_r_machine_world_core_found
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
-				modifier = { factor = 0 
-					root.owner = { 
+				modifier = { factor = 0
+					root.owner = {
 						OR = {
 							has_ethic = ethic_spiritualist
 							has_ethic = ethic_fanatic_spiritualist
@@ -10967,7 +10974,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#########################
 	#### MEGACORP OPTION ####
 	#########################
@@ -10975,7 +10982,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_corporate }
 		}
-		name = gpm_survey.LICENCE_MINING_9	
+		name = gpm_survey.LICENCE_MINING_9
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
@@ -11009,7 +11016,7 @@ ship_event = {
 		}
 		locked_random_list = {
 			90 = { }
-			10 = { 
+			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
 					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
@@ -11034,8 +11041,8 @@ ship_event = {
 				}
 				set_global_flag = gpm_r_machine_world_core_found
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
-				modifier = { factor = 0 
-					root.owner = { 
+				modifier = { factor = 0
+					root.owner = {
 						OR = {
 							has_ethic = ethic_spiritualist
 							has_ethic = ethic_fanatic_spiritualist
@@ -11052,13 +11059,13 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	#############################
 	#### MATERIALISTS OPTION ####
 	#############################
 	option = {
 		trigger = {
-			OWNER = { 
+			OWNER = {
 				OR = {
 					has_ethic = ethic_materialist
 					has_ethic = ethic_fanatic_materialist
@@ -11115,7 +11122,7 @@ ship_event = {
 		# other rewards
 		locked_random_list = {
 			90 = { }
-			10 = { 
+			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
 					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
@@ -11140,8 +11147,8 @@ ship_event = {
 				}
 				set_global_flag = gpm_r_machine_world_core_found
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
-				modifier = { factor = 0 
-					root.owner = { 
+				modifier = { factor = 0
+					root.owner = {
 						OR = {
 							has_ethic = ethic_spiritualist
 							has_ethic = ethic_fanatic_spiritualist
@@ -11158,8 +11165,8 @@ ship_event = {
 			}
 		}
 	}
-	
-	
+
+
 	########################
 	#### MACHINE OPTION ####
 	########################
@@ -11167,7 +11174,7 @@ ship_event = {
 		trigger = {
 			OWNER = { has_authority = auth_machine_intelligence }
 		}
-		name = gpm_survey.MACHINE	
+		name = gpm_survey.MACHINE
 		# leader experience
 		root.leader = { gpm_random_experience = yes }
 		# deposit
@@ -11261,7 +11268,7 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# deposit
 		# other rewards
-		FROM = { 
+		FROM = {
 			remove_modifier = gpm_toxic_garbage
 			remove_modifier = gpm_garbage_dump
 		}
@@ -11318,7 +11325,7 @@ ship_event = {
 		}
 		locked_random_list = {
 			90 = { }
-			10 = { 
+			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
 					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
@@ -11343,8 +11350,8 @@ ship_event = {
 				}
 				set_global_flag = gpm_r_machine_world_core_found
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
-				modifier = { factor = 0 
-					root.owner = { 
+				modifier = { factor = 0
+					root.owner = {
 						OR = {
 							has_ethic = ethic_spiritualist
 							has_ethic = ethic_fanatic_spiritualist
@@ -11361,7 +11368,7 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	###############################
 	#### INDUSTRIALISTS OPTION ####
 	###############################
@@ -11415,7 +11422,7 @@ ship_event = {
 		# other rewards
 		locked_random_list = {
 			90 = { }
-			10 = { 
+			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
 					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
@@ -11440,8 +11447,8 @@ ship_event = {
 				}
 				set_global_flag = gpm_r_machine_world_core_found
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
-				modifier = { factor = 0 
-					root.owner = { 
+				modifier = { factor = 0
+					root.owner = {
 						OR = {
 							has_ethic = ethic_spiritualist
 							has_ethic = ethic_fanatic_spiritualist

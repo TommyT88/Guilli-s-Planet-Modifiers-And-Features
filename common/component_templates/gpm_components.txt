@@ -33,7 +33,8 @@ utility_component_template = {
 	component_set = "GPM_ENIGMATIC_POWER_RELAY"
 	
 	modifier = {
-		ship_shield_regen_add_perc = 1
+		ship_shield_regen_add_perc = 0.1
+		ship_shield_hardening_add = 0.1
 	}
 	
 	ai_weight = {
@@ -57,14 +58,6 @@ utility_component_template = {
 			alloys = 10
 			energy = 30
 		}
-		produces = {
-			physics_research = 2
-			society_research = 2
-			engineering_research = 2
-		}
-		upkeep = {
-			energy = 2
-		}
 	}
 	
 	prerequisites = { "tech_gpm_singularity_matrix" }
@@ -72,8 +65,13 @@ utility_component_template = {
 	
 	modifier = {
 		ship_fire_rate_mult = 0.05
-		custom_tooltip = gpm_singularity_matrix_tt
-		show_only_custom_tooltip = no
+		# custom_tooltip = gpm_singularity_matrix_tt
+		# show_only_custom_tooltip = no
+	}
+	ship_modifier = {
+		ships_physics_research_produces_add = 2
+		ships_society_research_produces_add = 2
+		ships_engineering_research_produces_add = 2
 	}
 	
 	ai_weight = {
@@ -86,19 +84,23 @@ utility_component_template = {
 	icon = "GFX_GPM_ORBITAL_FABRICATOR"
 	icon_frame = 1
 	power = @power1
+	hidden = yes
 	resources = {
 		category = ship_components
-		produces = {
-			alloys = 2
+		cost = {
+			alloys = 50
 		}
 	}
-	hidden = yes
 	
 	component_set = "GPM_ORBITAL_FABRICATOR"
 	
-	modifier = {
-		custom_tooltip = gpm_orbital_fabricator_tt
-		show_only_custom_tooltip = no
+	# modifier = {
+		# custom_tooltip = gpm_orbital_fabricator_tt
+		# show_only_custom_tooltip = no
+	# }
+	ship_modifier = {
+		ships_alloys_produces_add = 2
+		ships_minor_artifacts_produces_add = 0.1
 	}
 	
 	ai_weight = {

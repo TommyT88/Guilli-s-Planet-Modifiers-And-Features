@@ -1,0 +1,32 @@
+
+namespace = gpm_hidden_option
+
+# remove all spider related modifiers and features and block further spawning of them
+event = {
+	id = gpm_hidden_option.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = gpm_spider_features_disabled
+		every_galaxy_planet = {
+			if = {
+				limit = { has_modifier = gpm_arachnophobia }
+				remove_modifier = gpm_arachnophobia
+			}
+			if = {
+				limit = { has_modifier = gpm_giant_scorpioids }
+				remove_modifier = gpm_giant_scorpioids
+			}
+			every_deposit = {
+				limit = {
+					OR = {
+						is_deposit_type = gpm_d_arachnophobia
+						is_deposit_type = gpm_d_webbing
+						is_deposit_type = gpm_d_empty_nest
+					}
+				}
+				remove_deposit = yes
+			}
+		}
+	}
+}

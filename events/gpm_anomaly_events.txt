@@ -10,11 +10,11 @@ ship_event = {
 	title = "gpm_anomaly.78877.name"
 	desc = {
 		trigger = {
-			owner = { 
-				NOR = { 
+			owner = {
+				NOR = {
 					has_authority = auth_hive_mind
 					has_authority = auth_machine_intelligence
-				} 
+				}
 			}
 		}
 		text = gpm_anomaly.78877.desc
@@ -30,17 +30,17 @@ ship_event = {
 	picture = GFX_evt_gpm_black_hole
 	show_sound = event_ship_bridge
 	location = FROM
-	
+
 	is_triggered_only = yes
 
 	immediate = {
 		owner = { country_event = { id = story.2 days = 30 } }
 	}
-	
+
 	option = {
 		trigger = { owner = { NOR = {
 			has_authority = auth_hive_mind
-			has_authority = auth_machine_intelligence 
+			has_authority = auth_machine_intelligence
 			} } }
 		name = MARVELOUS
 		hidden_effect = {
@@ -51,7 +51,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_inspirational
 		}
 		owner = {
@@ -73,7 +73,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_inspirational
 		}
 		owner = {
@@ -94,7 +94,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_inspirational
 		}
 		owner = {
@@ -112,11 +112,11 @@ ship_event = {
 	title = "gpm_anomaly.78878.name"
 	desc = {
 		trigger = {
-			owner = { 
-				NOR = { 
+			owner = {
+				NOR = {
 					has_authority = auth_hive_mind
 					has_authority = auth_machine_intelligence
-				} 
+				}
 			}
 		}
 		text = gpm_anomaly.78878.desc
@@ -132,7 +132,7 @@ ship_event = {
 	picture = GFX_evt_gpm_bright_sun
 	show_sound = event_ship_bridge
 	location = FROM
-	
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -140,11 +140,11 @@ ship_event = {
 		from = { clear_deposits = yes }
 		owner = { country_event = { id = story.2 days = 30 } }
 	}
-	
+
 	option = {
 		trigger = { owner = { NOR = {
 			has_authority = auth_hive_mind
-			has_authority = auth_machine_intelligence 
+			has_authority = auth_machine_intelligence
 			} } }
 		name = FASCINATING
 		hidden_effect = {
@@ -155,7 +155,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_sun_energy_deposit
 		}
 	}
@@ -170,7 +170,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_sun_energy_deposit
 		}
 	}
@@ -185,7 +185,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_sun_energy_deposit
 		}
 	}
@@ -197,11 +197,11 @@ ship_event = {
 	title = "gpm_anomaly.78879.name"
 	desc = {
 		trigger = {
-			owner = { 
-				NOR = { 
+			owner = {
+				NOR = {
 					has_authority = auth_hive_mind
 					has_authority = auth_machine_intelligence
-				} 
+				}
 			}
 		}
 		text = gpm_anomaly.78879.desc
@@ -217,13 +217,13 @@ ship_event = {
 	picture = GFX_evt_gpm_time_displaced
 	show_sound = event_ship_bridge
 	location = FROM
-	
+
 	is_triggered_only = yes
 
 	immediate = {
 		# log = "---- Fired Event gpm_anomaly.78879 "
 		# from = { clear_deposits = yes }
-		from = { set_name = Guillifrey }		
+		from = { set_name = Guillifrey }
 		owner = { country_event = { id = story.2 days = 30 } }
 		FROM = {
 			if = {
@@ -235,11 +235,11 @@ ship_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		trigger = { owner = { NOR = {
 			has_authority = auth_hive_mind
-			has_authority = auth_machine_intelligence 
+			has_authority = auth_machine_intelligence
 			} } }
 		name = ASTOUNDING
 		custom_tooltip = gpm_anomaly.78879.TT
@@ -247,7 +247,7 @@ ship_event = {
 			FROM = {
 				add_modifier = { modifier = "gpm_time_displaced_planet" days = -1 }
 				if = {
-					limit = { 
+					limit = {
 						NOR = {
 							has_modifier = terraforming_candidate
 							gpm_is_planet_class_normal_habitable = yes
@@ -282,8 +282,8 @@ ship_event = {
 			FROM = {
 				add_modifier = { modifier = "gpm_time_displaced_planet" days = -1 }
 				if = {
-					limit = { 
-						NOR = { 
+					limit = {
+						NOR = {
 							has_modifier = terraforming_candidate
 							gpm_is_planet_class_normal_habitable = yes
 						}
@@ -305,7 +305,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_time_displaced_planet
 			create_archaeological_site = gpm_time_lost_digsite
 		}
@@ -317,8 +317,8 @@ ship_event = {
 			FROM = {
 				add_modifier = { modifier = "gpm_time_displaced_planet" days = -1 }
 				if = {
-					limit = { 
-						NOR = { 
+					limit = {
+						NOR = {
 							has_modifier = terraforming_candidate
 							gpm_is_planet_class_normal_habitable = yes
 						}
@@ -340,7 +340,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_time_displaced_planet
 			create_archaeological_site = gpm_time_lost_digsite
 		}
@@ -353,11 +353,11 @@ ship_event = {
 	title = "gpm_anomaly.78880.name"
 	desc = {
 		trigger = {
-			owner = { 
-				NOR = { 
+			owner = {
+				NOR = {
 					has_authority = auth_hive_mind
 					has_authority = auth_machine_intelligence
-				} 
+				}
 			}
 		}
 		text = gpm_anomaly.78880.desc
@@ -373,7 +373,7 @@ ship_event = {
 	picture = GFX_evt_gpm_proto_molecule
 	show_sound = event_ship_bridge
 	location = FROM
-	
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -381,11 +381,11 @@ ship_event = {
 		from = { clear_deposits = yes }
 		owner = { country_event = { id = story.2 days = 30 } }
 	}
-	
+
 	option = {
 		trigger = { owner = { NOR = {
 			has_authority = auth_hive_mind
-			has_authority = auth_machine_intelligence 
+			has_authority = auth_machine_intelligence
 			} } }
 		name = WORRYING
 		hidden_effect = {
@@ -396,7 +396,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_proto_molecule_deposit
 		}
 	}
@@ -411,7 +411,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_proto_molecule_deposit
 		}
 	}
@@ -426,7 +426,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_proto_molecule_deposit
 		}
 	}
@@ -438,11 +438,11 @@ ship_event = {
 	title = "gpm_anomaly.78881.name"
 	desc = {
 		trigger = {
-			owner = { 
-				NOR = { 
+			owner = {
+				NOR = {
 					has_authority = auth_hive_mind
 					has_authority = auth_machine_intelligence
-				} 
+				}
 			}
 		}
 		text = gpm_anomaly.78881.desc
@@ -458,7 +458,7 @@ ship_event = {
 	picture = GFX_evt_gpm_pulsar_clock
 	show_sound = event_ship_bridge
 	location = FROM
-	
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -466,11 +466,11 @@ ship_event = {
 		from = { clear_deposits = yes }
 		owner = { country_event = { id = story.2 days = 30 } }
 	}
-	
+
 	option = {
 		trigger = { owner = { NOR = {
 			has_authority = auth_hive_mind
-			has_authority = auth_machine_intelligence 
+			has_authority = auth_machine_intelligence
 			} } }
 		name = FASCINATING
 		hidden_effect = {
@@ -481,7 +481,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_pulsar_clock
 		}
 	}
@@ -496,7 +496,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_pulsar_clock
 		}
 	}
@@ -511,7 +511,7 @@ ship_event = {
 				}
 			}
 		}
-		FROM = { 
+		FROM = {
 			add_deposit = gpm_d_pulsar_clock
 		}
 	}

@@ -17,13 +17,13 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
 		name = CURIOUS
-		owner = { 
+		owner = {
 			add_monthly_resource_mult = {
 				resource = society_research
 				value = @tier1researchreward
@@ -50,13 +50,13 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
 		name = EXCELLENT
-		owner = { 
+		owner = {
 			add_monthly_resource_mult = {
 				resource = engineering_research
 				value = @tier2researchreward
@@ -83,13 +83,13 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
 		name = FASCINATING
-		owner = { 
+		owner = {
 			add_monthly_resource_mult = {
 				resource = physics_research
 				value = @tier4researchreward
@@ -100,7 +100,7 @@ fleet_event = {
 		owner = { add_relic = gpm_r_time_displacer }
 		log = "<< RELICS >> | ADD_RELIC <<< gpm_r_time_displacer >>> to OWNER = [owner.GetName] ; dig site reward"
 		owner = {
-			every_relation = { 
+			every_relation = {
 				limit = {
 					is_country_type = default
 					has_communications = root.owner
@@ -139,8 +139,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -172,8 +172,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -206,8 +206,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -241,13 +241,13 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
 		name = gpm_dig_site.130.a
-		owner = { 
+		owner = {
 			add_monthly_resource_mult = {
 				resource = society_research
 				value = @tier1researchreward
@@ -276,13 +276,13 @@ fleet_event = {
 		fromfrom.planet = { set_planet_flag = gpm_has_precursor_digsite_progress }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
 		name = gpm_dig_site.140.a
-		owner = { 
+		owner = {
 			add_monthly_resource_mult = {
 				resource = engineering_research
 				value = @tier1researchreward
@@ -299,10 +299,10 @@ fleet_event = {
 fleet_event = {
 	id = gpm_dig_site.9000
 	hide_window = yes
-	
+
 	archaeology = yes
 	is_triggered_only = yes
-	
+
 	immediate = {
 		random_list	= {
 			10 = {
@@ -311,7 +311,7 @@ fleet_event = {
 				# log = "Digsite 6 - spawn a default precursor dig site"
 				modifier = { factor = 0
 					fromfrom.planet = {
-						NOR = { 
+						NOR = {
 							has_modifier = gpm_precursor_remnants
 							has_modifier = gpm_precursor_satalite_grid
 							has_modifier = gpm_precursor_city
@@ -327,7 +327,7 @@ fleet_event = {
 				# log = "Digsite 6 - spawn a gpm_precursor_energy_grid or gpm_precursor_planetary_shieldprecursor dig site"
 				modifier = { factor = 0
 					fromfrom.planet = {
-						NOR = { 
+						NOR = {
 							has_modifier = gpm_precursor_energy_grid
 							has_modifier = gpm_precursor_planetary_shield
 						}
@@ -361,7 +361,7 @@ fleet_event = {
 				# log = "Digsite 6 - spawn a gpm_precursor_bunker_grid or gpm_precursor_battleground_ruins precursor dig site"
 				modifier = { factor = 0
 					fromfrom.planet = {
-						NOR = { 
+						NOR = {
 							has_modifier = gpm_precursor_bunker_grid
 							has_modifier = gpm_precursor_battleground_ruins
 						}
@@ -449,8 +449,8 @@ fleet_event = {
 		}
 	}
 
-	after = { 
-		from = { expire_site_event = gpm_dig_site.9000 } 
+	after = {
+		from = { expire_site_event = gpm_dig_site.9000 }
 	}
 }
 
@@ -471,8 +471,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -492,7 +492,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			20 = { 
+			20 = {
 				# log = "dig site relic no reward"
 			}
 			10 = {
@@ -528,6 +528,15 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			10 = {
 				owner = { add_relic = gpm_r_quantum_sphere }
@@ -557,11 +566,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_quantum_sphere_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			10 = {
 				owner = { add_relic = gpm_r_ai_architect }
@@ -591,11 +609,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_ai_architect_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			10 = {
 				owner = { add_relic = gpm_r_soul_gem }
@@ -625,11 +652,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_soul_gem_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			10 = {
 				owner = { add_relic = gpm_r_self_repairing_obelisk }
@@ -659,11 +695,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_self_repairing_obelisk_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -728,7 +773,7 @@ fleet_event = {
 				owner = {
 					add_research_option = tech_gpm_precursor_ruins_discovery
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_ruins_discovery progress = 0.33 } }
-					
+
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_ruins_discovery } }
 				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
@@ -737,7 +782,7 @@ fleet_event = {
 				owner = {
 					add_research_option = tech_gpm_precursor_ruins_discovery_2
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_ruins_discovery_2 progress = 0.33 } }
-					
+
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_ruins_discovery_2 } }
 				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
@@ -763,6 +808,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -782,7 +836,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.150.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -829,8 +883,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -844,16 +898,16 @@ fleet_event = {
 				max = @tier4materialmax
 			}
 		}
-		
+
 		# root.prev = { from = { add_modifier = { modifier = gpm_precursor_planetary_shield } } }
-		
+
 		# custom_tooltip = gpm_survey_reward_new_line
 		owner = { gpm_random_precursor_tech_reward = yes }
 		## Minor Relics Reward ##
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			10 = { 
+			10 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -884,11 +938,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_zero_energy_generator_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
 				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
@@ -921,11 +984,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_mysterious_shield_generator_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
 				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
@@ -978,6 +1050,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -987,7 +1068,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.151.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1023,8 +1104,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1044,7 +1125,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -1075,11 +1156,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_encrypted_sct_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1103,6 +1193,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1134,6 +1233,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_shipyards : gpm_reward_precursor_ship"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1142,7 +1250,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.152.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1158,7 +1266,7 @@ fleet_event = {
 				22 = { add_resource = { energy = 17500 } }
 				11 = { add_resource = { energy = 20000 } }
 			}
-		}		
+		}
 	}
 }
 # PrecDig 6 -orbital monitoring station
@@ -1178,8 +1286,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1199,7 +1307,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -1230,11 +1338,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_experimental_weapon_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1258,10 +1375,19 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
-		
+
 		locked_random_list = {
 			5 = { owner = { gpm_random_reward_precursor_planetary_gun = yes } }
 			1 = {
@@ -1269,6 +1395,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1277,7 +1412,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.153.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1313,8 +1448,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1334,7 +1469,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			10 = { 
+			10 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -1365,11 +1500,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_fallout_emergency_replicator_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
 				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
@@ -1405,11 +1549,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_banner_of_the_fallen_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
 				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
@@ -1454,13 +1607,22 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
 		locked_random_list = {
 			5 = { }
 			1 = {
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_fallen_heraldry_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.20 } } } # adds trait to admirals
 				}
@@ -1470,9 +1632,18 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			1 = {
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_battle_standards_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.40 } } } # adds trait to generals
 				}
@@ -1482,6 +1653,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1490,7 +1670,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.154.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1511,7 +1691,7 @@ fleet_event = {
 		locked_random_list = {
 			5 = { }
 			1 = {
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_fallen_heraldry_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.20 } } } # adds trait to admirals
 				}
@@ -1521,9 +1701,18 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			1 = {
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_battle_standards_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.40 } } } # adds trait to generals
 				}
@@ -1533,6 +1722,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1554,8 +1752,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1575,7 +1773,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -1606,11 +1804,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_power_core_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1634,13 +1841,22 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
 		locked_random_list = {
 			5 = { }
 			1 = {
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_personal_mech_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.50 } } } # adds trait to generals
 				}
@@ -1649,6 +1865,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1657,7 +1882,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.155.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1678,7 +1903,7 @@ fleet_event = {
 		locked_random_list = {
 			5 = { }
 			1 = {
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_personal_mech_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.50 } } } # adds trait to generals
 				}
@@ -1687,6 +1912,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1708,8 +1942,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1729,7 +1963,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -1760,11 +1994,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_gravity_engine_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1788,6 +2031,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1797,7 +2049,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.156.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1834,8 +2086,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1855,7 +2107,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -1886,11 +2138,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_codex_administratum_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1914,6 +2175,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1921,7 +2191,7 @@ fleet_event = {
 			5 = { }
 			1 = {
 				leader = { add_trait = trait_gpm_historian }
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_historian_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.30 } } } # adds trait to ruler
 				}
@@ -1931,6 +2201,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1939,7 +2218,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.157.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -1961,7 +2240,7 @@ fleet_event = {
 			5 = { }
 			1 = {
 				leader = { add_trait = trait_gpm_historian }
-				hidden_effect = { 
+				hidden_effect = {
 					owner = { set_country_flag = gpm_historian_trait_rewarded }
 					hidden_effect = { owner = { country_event = { id = gpm_relics.30 } } } # adds trait to ruler
 				}
@@ -1971,6 +2250,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -1992,8 +2280,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2013,7 +2301,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -2044,11 +2332,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_enigmatic_advisor_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2072,6 +2369,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2081,7 +2387,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.158.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -2118,8 +2424,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2139,7 +2445,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -2170,11 +2476,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_positronic_microchip_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2205,6 +2520,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2213,7 +2537,7 @@ fleet_event = {
 			1 = {
 				hidden_effect = {
 					set_global_flag = gpm_enigmatic_hack_happened
-					owner = { 
+					owner = {
 						every_owned_pop = {
 							limit = {
 								is_robot_pop = yes
@@ -2231,6 +2555,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -2239,7 +2572,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.159.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -2262,7 +2595,7 @@ fleet_event = {
 			1 = {
 				hidden_effect = {
 					set_global_flag = gpm_enigmatic_hack_happened
-					owner = { 
+					owner = {
 						every_owned_pop = {
 							limit = {
 								is_robot_pop = yes
@@ -2280,6 +2613,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -2301,8 +2643,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2322,7 +2664,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -2353,11 +2695,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_venerable_dreadnaught_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2381,6 +2732,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2390,7 +2750,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.160.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -2427,8 +2787,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2448,7 +2808,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -2479,11 +2839,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_sentinel_queen_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2512,12 +2881,30 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_prison_planet : gpm_core_prison_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			1 = {
 				gpm_random_precursor_building_reward = yes
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2527,7 +2914,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.161.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -2564,8 +2951,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2585,7 +2972,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -2616,11 +3003,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_earthquake_engine_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2644,6 +3040,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2653,7 +3058,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.162.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -2690,8 +3095,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2711,8 +3116,8 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
-				# log = "dig site relic no reward" 
+			5 = {
+				# log = "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_manufactorium_ship }
@@ -2742,11 +3147,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_manufactorium_ship_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2776,6 +3190,15 @@ fleet_event = {
 				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			10 = {
 				owner = {
@@ -2796,6 +3219,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2827,6 +3259,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -2835,7 +3276,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.163.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -2882,6 +3323,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -2903,8 +3353,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2924,8 +3374,8 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
-				# log = "dig site relic no reward" 
+			5 = {
+				# log = "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_datacube }
@@ -2955,11 +3405,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_datacube_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2984,6 +3443,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2996,6 +3464,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_vaults : leader_trait_scientist_brainslug"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			1 = {
 				leader = { add_trait = leader_trait_cataloger }
@@ -3004,6 +3481,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_vaults : leader_trait_cataloger"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -3012,7 +3498,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.164.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -3039,6 +3525,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_vaults : leader_trait_scientist_brainslug"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			1 = {
 				leader = { add_trait = leader_trait_cataloger }
@@ -3047,6 +3542,15 @@ fleet_event = {
 				# log = "gpm_random_reward_precursor_vaults : leader_trait_cataloger"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 	}
@@ -3068,8 +3572,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3089,7 +3593,7 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
@@ -3120,11 +3624,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_self_assembly_hub_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3148,6 +3661,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3157,7 +3679,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.165.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -3194,8 +3716,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3215,11 +3737,11 @@ fleet_event = {
 		owner = { gpm_random_minor_artifacts_precursor_big = yes }
 		## Relic Drop Chance ##
 		locked_random_list = {
-			5 = { 
+			5 = {
 				# log = "dig site relic no reward"
 			}
 			15 = {
-				owner = { 
+				owner = {
 					add_relic = gpm_r_cloaking_device
 					hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
 				}
@@ -3249,11 +3771,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_cloaking_device_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3277,6 +3808,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3286,7 +3826,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.166.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }
@@ -3323,8 +3863,8 @@ fleet_event = {
 		fromfrom = { set_site_progress_locked = yes }
 	}
 
-	after = { 
-		fromfrom = { set_site_progress_locked = no } 
+	after = {
+		fromfrom = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3375,11 +3915,20 @@ fleet_event = {
 				modifier = { factor = 0 has_global_flag = gpm_r_q_storage_compressor_found }
 				modifier = { factor = 1.5 owner = { gpm_has_modded_precursor_relic = no is_ai = no } }
 				# modifier = { factor = 2 owner = { is_ai = yes } }
-				
+
 				# prevent from appearing if the relics are disabled
 				modifier = { factor = 0 has_global_flag = gpm_relic_drops_disabled }
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3403,6 +3952,15 @@ fleet_event = {
 				# log = "gpm_random_precursor_building_reward"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
+				# boost if you got the archaeo perk
+				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
+				# boost if scientist has specific perks
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist_ancrel } }
+				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
+				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
+				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3412,7 +3970,7 @@ fleet_event = {
 		trigger = {
 			root.owner = { has_authority = auth_corporate }
 		}
-		
+
 		name = gpm_dig_site.167.MEGACORP
 		custom_tooltip = gpm_survey_reward_empire
 		owner = { add_resource = { influence = 200 } }

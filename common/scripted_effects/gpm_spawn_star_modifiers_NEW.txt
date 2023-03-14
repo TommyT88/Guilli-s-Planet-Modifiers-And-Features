@@ -82,19 +82,19 @@ gpm_spawn_star_modifier = {
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
-		100 = {
-			add_modifier = { modifier = "gpm_precursor_star_filter" }
-			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_precursor_star_filter" }
-			# Not on these planets
-			# Tweaks
-			modifier = { factor = 0 gpm_are_precursors_enabled = yes }
-			# Galaxy age setting modifier
-			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
-			# Weight Factor
-			modifier = { factor = @rare }
-		}
+		# 100 = {
+			# add_modifier = { modifier = "gpm_precursor_star_filter" }
+			# # Not with these modifiers
+			# modifier = { factor = 0 has_modifier = "gpm_precursor_star_filter" }
+			# # Not on these planets
+			# # Tweaks
+			# modifier = { factor = 0 gpm_are_precursors_enabled = yes }
+			# # Galaxy age setting modifier
+			# modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
+			# modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }
+			# # Weight Factor
+			# modifier = { factor = @rare }
+		# }
 	}
 }
 

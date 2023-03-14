@@ -1311,8 +1311,23 @@ gpm_d_relic_tank_factory = {
 	
 	category = deposit_cat_rare
 	
-	planet_modifier = {
-		custom_tooltip = gpm_d_relic_tank_factoryTT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = yes
+		}
+		modifier = {
+			custom_tooltip = gpm_d_relic_tank_factoryTT
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = no
+		}
+		modifier = {
+			planet_jobs_engineering_research_produces_mult = 0.1
+		}
 	}
 	
 	# weight 0: event added
@@ -1326,8 +1341,23 @@ gpm_d_relic_mech_factory = {
 	
 	category = deposit_cat_rare
 	
-	planet_modifier = {
-		custom_tooltip = gpm_d_relic_mech_factoryTT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = yes
+		}
+		modifier = {
+			custom_tooltip = gpm_d_relic_mech_factoryTT
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = no
+		}
+		modifier = {
+			planet_jobs_engineering_research_produces_mult = 0.2
+		}
 	}
 	
 	
@@ -1342,8 +1372,23 @@ gpm_d_relic_power_armor_factory = {
 	
 	category = deposit_cat_rare
 	
-	planet_modifier = {
-		custom_tooltip = gpm_d_relic_power_armor_factoryTT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = yes
+		}
+		modifier = {
+			custom_tooltip = gpm_d_relic_power_armor_factoryTT
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = no
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.15
+		}
 	}
 	
 
@@ -1358,8 +1403,24 @@ gpm_d_relic_ship_factory = {
 	
 	category = deposit_cat_rare
 	
-	planet_modifier = {
-		custom_tooltip = gpm_d_relic_ship_factoryTT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = yes
+		}
+		modifier = {
+			custom_tooltip = gpm_d_relic_ship_factoryTT
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_ancrel = no
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.1
+			planet_jobs_engineering_research_produces_mult = 0.1
+		}
 	}
 	
 	# weight 0: event added

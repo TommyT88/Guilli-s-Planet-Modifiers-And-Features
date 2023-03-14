@@ -5,15 +5,15 @@ namespace = gpm_relics
 country_event = {
 	id = gpm_relics.1
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 
 	}
-	
-	
+
+
 	immediate = {
 		every_pool_leader = {
 			if = {
@@ -68,15 +68,15 @@ country_event = {
 # country_event = {
 # 	id = gpm_relics.10
 # 	hide_window = yes
-	
+
 # 	is_triggered_only = yes
-	
-	
+
+
 # 	trigger = {
 
 # 	}
-	
-	
+
+
 # 	immediate = {
 # 		leader = {
 # 			if = {
@@ -109,15 +109,15 @@ country_event = {
 # country_event = {
 # 	id = gpm_relics.11
 # 	hide_window = yes
-	
+
 # 	is_triggered_only = yes
-	
-	
+
+
 # 	trigger = {
 
 # 	}
-	
-	
+
+
 # 	immediate = {
 # 		every_pool_leader = {
 # 			if = {
@@ -159,15 +159,15 @@ country_event = {
 country_event = {
 	id = gpm_relics.20
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 
 	}
-	
-	
+
+
 	immediate = {
 		every_pool_leader = {
 			if = {
@@ -216,15 +216,15 @@ country_event = {
 country_event = {
 	id = gpm_relics.30
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 
 	}
-	
-	
+
+
 	immediate = {
 		leader = {
 			if = {
@@ -261,15 +261,15 @@ country_event = {
 country_event = {
 	id = gpm_relics.40
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 
 	}
-	
-	
+
+
 	immediate = {
 		every_pool_leader = {
 			if = {
@@ -318,15 +318,15 @@ country_event = {
 country_event = {
 	id = gpm_relics.50
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
-	
+
+
 	trigger = {
 
 	}
-	
-	
+
+
 	immediate = {
 		every_pool_leader = {
 			if = {
@@ -379,7 +379,7 @@ country_event = {
 country_event = {
 	id = gpm_relics.1000
 	hide_window = yes
-	
+
 	is_triggered_only = yes
 
 	trigger = {
@@ -419,7 +419,7 @@ country_event = {
 	title = "gpm_relics.1001.name"
 	desc = "gpm_relics.1001.desc"
 	picture = GFX_evt_gpm_artifact_collection
-	
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -606,8 +606,8 @@ country_event = {
 		# 	this = { set_country_flag = gpm_r_ai_architect_loot_flag }
 		# }
 		# if = { limit = { from = { has_relic = gpm_r_banner_of_the_fallen } }
-		# 	hidden_effect = { 
-		# 		from = { 
+		# 	hidden_effect = {
+		# 		from = {
 		# 			remove_relic = gpm_r_banner_of_the_fallen
 		# 			remove_country_flag = gpm_r_banner_of_the_fallen_loot_flag
 		# 		}
@@ -618,8 +618,8 @@ country_event = {
 		# 	}
 		# }
 		# if = { limit = { from = { has_relic = gpm_r_cloaking_device } }
-		# 	hidden_effect = { 
-		# 		from = { 
+		# 	hidden_effect = {
+		# 		from = {
 		# 			remove_relic = gpm_r_cloaking_device
 		# 			remove_country_flag = gpm_r_cloaking_device_loot_flag
 		# 		}
@@ -779,8 +779,8 @@ country_event = {
 			}
 			custom_tooltip = gpm_relics_looted
 		}
-		
-		
+
+
 		# if = { limit = { this = { has_country_flag = r_dragon_trophy_loot_flag } }
 		# 	hidden_effect = { this = { remove_country_flag = r_dragon_trophy_loot_flag } }
 		# 	this = { add_relic = r_dragon_trophy }
@@ -867,14 +867,14 @@ country_event = {
 		# }
 		# if = { limit = { this = { has_country_flag = gpm_r_banner_of_the_fallen_loot_flag } }
 		# 	hidden_effect = { this = { remove_country_flag = gpm_r_banner_of_the_fallen_loot_flag } }
-		# 	this = { 
+		# 	this = {
 		# 		add_relic = gpm_r_banner_of_the_fallen
 		# 		hidden_effect = { country_event = { id = gpm_relics.20 } } # adds trait to admirals
 		# 	}
 		# }
 		# if = { limit = { this = { has_country_flag = gpm_r_cloaking_device_loot_flag } }
 		# 	hidden_effect = { this = { remove_country_flag = gpm_r_cloaking_device_loot_flag } }
-		# 	this = { 
+		# 	this = {
 		# 		add_relic = gpm_r_cloaking_device
 		# 		hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
 		# 	}

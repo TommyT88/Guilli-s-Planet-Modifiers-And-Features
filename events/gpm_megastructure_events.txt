@@ -51,7 +51,7 @@ ship_event = {
 	trigger = {
 		owner = { NOT = { has_country_flag = gpm_found_ruined_mining_facility } }
 		FROM = {
-			any_system_megastructure = { 
+			any_system_megastructure = {
 				is_megastructure_type = gpm_mining_facility_ruined
 			}
 		}
@@ -88,7 +88,7 @@ ship_event = {
 	trigger = {
 		owner = { NOT = { has_country_flag = gpm_found_ruined_station } }
 		FROM = {
-			any_system_megastructure = { 
+			any_system_megastructure = {
 				is_megastructure_type = gpm_observation_station_ruined
 			}
 		}
@@ -125,7 +125,7 @@ ship_event = {
 	trigger = {
 		owner = { NOT = { has_country_flag = gpm_found_ruined_silo } }
 		FROM = {
-			any_system_megastructure = { 
+			any_system_megastructure = {
 				is_megastructure_type = gpm_silo_ruined
 			}
 		}

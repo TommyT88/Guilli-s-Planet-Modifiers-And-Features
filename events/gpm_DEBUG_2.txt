@@ -2,13 +2,13 @@
 namespace = gpm_iddqd
 
 # test event, gives you all modded stuff
-event = { 
+event = {
 	id = gpm_iddqd.1
-	hide_window = yes 
+	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		owner = {
-			
+
 			# give relics
 			add_relic = gpm_r_encyclopedia_galactica
 			add_relic = gpm_r_zero_energy_generator
@@ -130,7 +130,7 @@ event = {
 			add_modifier = { modifier = gpm_strange_alien_eggs_discovery_2 }
 			add_modifier = { modifier = gpm_mushroom_forest_discovery }
 			add_modifier = { modifier = gpm_mushroom_forest_discovery_2 }
-			
+
 			# give techs
 			give_technology = { tech = tech_gpm_tb_seasonal_flooding }
 			give_technology = { tech = tech_gpm_tb_locust_plagues }
@@ -226,11 +226,11 @@ event = {
 			give_technology = { tech = tech_gpm_manufactory_hub }
 			give_technology = { tech = tech_gpm_enigmatic_power_relays }
 			give_technology = { tech = tech_gpm_singularity_matrix }
-			
+
 			# spawn event ships
 			random_owned_planet = {
 				save_event_target_as = gpm_capital_test
-			}			
+			}
 			create_fleet = {
 				name = "NAME_manufactorium_fleet"
 				settings = {
@@ -269,8 +269,8 @@ event = {
 					set_location = event_target:gpm_capital_test
 				}
 			}
-			
-			
+
+
 			# give guilli leader
 			random_country = {
 				limit = { is_country_type = default }
@@ -305,7 +305,7 @@ event = {
 					add_trait = leader_trait_gpm_precursor_expert
 				}
 			}
-			
+
 			# Country flags unlocks
 			set_country_flag = gpm_exotic_park_rewarded
 			set_country_flag = gpm_core_prison_rewarded
@@ -378,24 +378,24 @@ country_event = { id = gpm_iddqd.4 hide_window = yes is_triggered_only = yes
 		force_add_civic = civic_corporate_anglers
 		force_add_civic = civic_crafters
 		force_add_civic = civic_corporate_crafters
-		### 
+		###
 		force_add_civic = civic_hive_natural_neural_network
 		force_add_civic = civic_hive_devouring_swarm
-		### 
+		###
 		force_add_civic = civic_machine_servitor
 		force_add_civic = civic_machine_terminator
 		force_add_civic = civic_machine_assimilator
 		force_add_civic = civic_machine_rockbreakers
-		### 
+		###
 		force_add_civic = civic_memorialist
 		force_add_civic = civic_hive_memorialist
 		force_add_civic = civic_machine_memorialist
-		### 
+		###
 		force_add_civic = civic_catalytic_processing
 		force_add_civic = civic_hive_catalytic_processing
 		force_add_civic = civic_machine_catalytic_processing
 		force_add_civic = civic_corporate_catalytic_processing
-		### 
+		###
 		force_add_civic = civic_franchising
 		force_add_civic = civic_private_prospectors
 	}

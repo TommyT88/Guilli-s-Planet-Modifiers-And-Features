@@ -105,6 +105,7 @@
  NAME_primitive_world_name_6:0 "Anthem"
  NAME_primitive_world_name_7:0 "Tron"
  NAME_Fen_Habbanis_IIIa:0 "Fen Habbanis IIIa"
+ TECH_IS_CUSTOM_TECH_3:0 "§BPrecursor Discovery§!"
  
 
  #######################################
@@ -266,13 +267,14 @@
  
  GPM_unlock_artifact_research_centre_locked:0 "§L??????§!"
  GPM_unlock_artifact_research_centre_locked_desc:0 "$artifact_action_locked_desc$"
- GPM_unlock_artifact_research_centre:0 "Fund $gpm_tech_arcane_research$"
- GPM_unlock_artifact_research_centre_desc:0 "Unlocks the §H$gpm_tech_arcane_research$§! technology allowing the construction of a §H$gpm_precursor_research_center$§! on planets with precursor planet modifiers or habitats orbiting such planets. This is an empire unique building to assist in the research and experimentation of minor artifacts."
+ GPM_unlock_artifact_research_centre:0 "Fund Precursor Research"
+ GPM_unlock_artifact_research_centre_desc:0 "Institute an empire wide protocol allowing researchers far and wide access to precursor data, greatly eccelerating your understanding of precursor artifacts."
  GPM_unlock_artifact_research_centre_TT:0 "\n§Y$gpm_tech_arcane_research$§! unlocks the §H$gpm_precursor_research_center$§! building which adds 3 $job_gpm_archaeologist$ jobs and pruduce some £minor_artifacts£ Minor Artifacts.\n\n$job_gpm_archaeologist_effect_desc$\n\n" 
  gpm_artifact.1.name:0 "Ancient Technology Breakthrough!"
  gpm_artifact.1.desc:0 "Experiments on the arcane artifacts have resulted in an incredible technological breakthrough!"
  gpm_artifact.2.name:0 "§HReverse Engineering§! Ready"
  gpm_artifact.2.desc:0 "Our scientists are ready to begin §HReverse Engineering§! another set of £minor_artifacts£ minor artifacts."
+ gpm_precursor_studies_modifier:0 "Precursor Studies"
  
  #######################################
  #### Buildings
@@ -283,8 +285,10 @@
  gpm_building_mining_nanite_nexus:0 "Mining Nanite Nexus"
  gpm_building_mining_nanite_nexus_desc:0 "Storage and control centre for our mining nanites. These nanites, once released, will dig smooth large tunnels towards any otherwise unreachable mineral veins."
 
- gpm_precursor_research_center:0 "Arcane Institute"
+ gpm_precursor_research_center:0 "Precursor Institute"
  gpm_precursor_research_center_desc:0 "Specialised research facilities to assist in researching the ancient and powerful precursor civilisations."
+ gpm_building_precursor_research_center_effect:0 "\n§BCan only be build on a precursor world§!\nIf built on a §YRelic World§!:\n Research Speed (Archaeostudies): §G+50%§!\n £minor_artifacts£ Minor Artifacts from £job_researcher£ Archaeoengineers: §G+0.3§!"
+
  
  gpm_building_ascension_tower:0 "Ascension Tower"
  gpm_building_ascension_tower_desc:0 "A colossal building capable of housing an incredible amount of people. The ascension tower reaches so high the top has to be made air tight to prevent its residents from suffacating."
@@ -596,12 +600,12 @@
  job_gpm_precursor_archaeologist:0 "Precursor Archaeologist"
  job_gpm_precursor_archaeologist_plural:0 "Precursor Archaeologists"
  job_gpm_precursor_archaeologist_desc:0 "Archaeologists specialised in the study of ancient civilisations."
- job_gpm_precursor_archaeologist_effect_desc:0 "£job_gpm_precursor_archaeologist£ $job_gpm_precursor_archaeologist_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £physics£ £society£ £engineering£ §YResearch Points§!"
+ job_gpm_precursor_archaeologist_effect_desc:0 "£job_gpm_precursor_archaeologist£ $job_gpm_precursor_archaeologist_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £physics£ £society£ £engineering£ §YResearch Points§! and produce £minor_artifacts£ §YMinor Artifacts§!"
 
  job_gpm_precursor_archaeologist_drone:0 "Precursor Archaeologist Drone"
  job_gpm_precursor_archaeologist_drone_plural:0 "Precursor Archaeologist Drones"
  job_gpm_precursor_archaeologist_drone_desc:0 "$job_gpm_precursor_archaeologist_desc$"
- job_gpm_precursor_archaeologist_drone_effect_desc:0 "£job_gpm_precursor_archaeologist_drone£ $job_gpm_precursor_archaeologist_drone_plural$ turn £energy£ §Y$energy$§! into £physics£ £society£ £engineering£ §YResearch Points§!"
+ job_gpm_precursor_archaeologist_drone_effect_desc:0 "£job_gpm_precursor_archaeologist_drone£ $job_gpm_precursor_archaeologist_drone_plural$ turn £energy£ §Y$energy$§! into £physics£ £society£ £engineering£ §YResearch Points§! and produce £minor_artifacts£ §YMinor Artifacts§!"
 
  job_gpm_orbital_alloy_miner:0 "Orbital Alloy Miner"
  job_gpm_orbital_alloy_miner_plural:0 "Orbital Alloy Miners"
@@ -736,6 +740,13 @@
  mod_job_criminal_per_pop:1 "§G+1§! $job_criminal$ Job per $VALUE$ Pops"
  mod_shipsize_science_influence_upkeep_add:0 "Science Ship Influence Upkeep"
  mod_shipsize_science_energy_upkeep_add:0 "Science Ship Energy Upkeep"
+ mod_planet_researchers_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts from reseachers"
+ mod_ships_physics_research_produces_add:0 "£physics_research£ Physics Research produced"
+ mod_ships_society_research_produces_add:0 "£society_research£ Society Research produced"
+ mod_ships_engineering_research_produces_add:0 "£engineering_research£ Engineering Research produced"
+ mod_ships_consumer_goods_produces_add:0 "£consumer_goods£ Consumer Goods produced"
+ mod_ships_alloys_produces_add:0 "£alloys£ Alloys produced"
+ mod_ships_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts produced"
 
  #######################################
  #### Opinions
@@ -751,6 +762,8 @@
  
  pc_gpm_precursor_tomb:0 "Ancient Archaeopolis"
  pc_gpm_precursor_tomb_desc:0 "An ancient ruined precursor city world stripped of most of its toxic atmosphere. Surviving on the surface of this once great city world would be very challenging."
+ trait_pc_gpm_precursor_tomb_preference:0 "Archaeopolis World Preference"
+ trait_pc_gpm_precursor_tomb_preference_desc:0 "Somehow, this specief found it's home here."
  
  #######################################
  #### Policies
@@ -808,12 +821,12 @@
  # manufactorium ship
  NAME_manufactorium_fleet:0 "Manufactorium Ship"
  NAME_gpm_manufactorium_ship:0 "Fabricator"
- NAME_manufactorium_ship_name:0 ""
+ NAME_manufactorium_ship_name:0 "Bolt"
   
  # precursor ship
  NAME_precursor_fleet:0 "Precursor Ship"
  NAME_gpm_precursor_ship:0 "Warbringer"
- NAME_precursor_ship_name:0 ""
+ NAME_precursor_ship_name:0 "Enigma"
  
  #######################################
  #### Ship Components
@@ -940,8 +953,9 @@
  # tech_gpm_artificial_core_discovery_2_desc:0 ""
  
  
- gpm_tech_arcane_research:0 "Arcane Research Institute"
- gpm_tech_arcane_research_desc:0 "Specialised research institute dedicated to the collecting and understading of arcane technolgies."
+ gpm_tech_arcane_research:0 "Precursor Studies"
+ gpm_tech_arcane_research_desc:0 "Enhanced research methodologies for to the collecting and understading of precursor technolgies."
+ gpm_tech_arcane_researchTT: "§HUnlocks:§! $gpm_precursor_research_center$ £minor_artifacts£ Minor Artifacts production: §G+0.25§!"
  
  tech_gpm_tb_toxic_gas:0 "Aero-Chemical Neutralisers"
  tech_gpm_tb_toxic_gas_desc:0 "It is going to be hard to remove toxic gas clouds that roam the landscape. Our best bet is dropping a mist of chemical neutralisers over them."
@@ -1235,7 +1249,7 @@
  
  tech_gpm_strange_alien_eggs_discovery:0 "Incubation"
  tech_gpm_strange_alien_eggs_discovery_desc:0 "Careful management of the eggs that were found allows us to grow more of these creatures."
- tech_gpm_strange_alien_eggs_discovery_tt:0 "Gain §G1§! Xenomorph army every §Y7§! years."
+ tech_gpm_strange_alien_eggs_discovery_tt:0 "Breed §G10§! Xenomorph armies."
  
  tech_gpm_strange_alien_eggs_discovery_2:0 "Private Benefactors"
  tech_gpm_strange_alien_eggs_discovery_2_desc:0 "Some discoveries are so unique and interesting that they practically invite private investors."
@@ -1333,6 +1347,10 @@
 
  leader_trait_gpm_personal_mech:0 "Personal Mech"
  leader_trait_gpm_personal_mech_desc:0 "This leader has access to a personal mech."
+
+ gpm_leader_trait_collector:0 "Collector of Artifacts"
+ gpm_leader_trait_collector_desc:0 "This leader has a habit of staying behind collecting anything worthwhile."
+ gpm_leader_trait_collectorTT:0 "Chance of finding £minor_artifacts£ §YMinor Artifacts§! or §YAncient Relics§!: §G+20%§!\nArchaeology Excavation Speed: §R-20%§!"
 
 
  #######################################

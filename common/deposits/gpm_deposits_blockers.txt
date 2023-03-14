@@ -144,14 +144,6 @@ gpm_tb_xenomorph_blocker = {
 	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 
-	can_be_cleared = {
-		custom_tooltip = {
-			fail_text = has_ranger_lodge
-			planet = {
-				NOT = { has_building = building_ranger_lodge }
-			}
-		}
-	}
 	
 	resources = {
 		category = deposit_blockers_natural
@@ -688,15 +680,6 @@ gpm_tb_xenomorph_blocker_empty = {
 		category = deposit_blockers_natural
 		cost = {
 			energy = 2000
-		}
-	}
-
-	can_be_cleared = {
-		custom_tooltip = {
-			fail_text = has_ranger_lodge
-			planet = {
-				NOT = { has_building = building_ranger_lodge }
-			}
 		}
 	}
 	

@@ -1,3 +1,5 @@
+# 3.7 compatible
+
 namespace = ancrel
 
 # Arcane Deciphering Events
@@ -6,7 +8,7 @@ country_event = {
 	title = "ancrel.10001.name"
 	desc = "ancrel.10001.desc"
 	picture = GFX_evt_ancient_records
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -72,7 +74,7 @@ country_event = {
 					max = @tier3researchmax
 				}
 				locked_random_list = {
-					
+
 					10 = {
 						add_research_option = tech_repeatable_improved_shield_output
 						add_tech_progress = { tech = tech_repeatable_improved_shield_output progress = 0.90 }
@@ -152,7 +154,7 @@ country_event = {
 	title = "ancrel.10002.name"
 	desc = "ancrel.10002.desc"
 	picture = GFX_evt_ancient_records
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -187,7 +189,7 @@ country_event = {
 	title = "ancrel.10003.name"
 	desc = "ancrel.10003.desc"
 	picture = GFX_evt_ancient_records
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -251,7 +253,7 @@ ship_event = {
 			event_chain = "rubricator_chain"
 			target = this.owner
 		}
-		
+
 		hidden_effect = {
 			if = {
 				limit = {
@@ -265,7 +267,7 @@ ship_event = {
 						has_owner = no
 						NOT = {
 							any_fleet_in_system = {
-								owner = { 
+								owner = {
 									is_hostile = root.owner
 								}
 							}
@@ -280,7 +282,7 @@ ship_event = {
 						has_owner = no
 						NOT = {
 							any_fleet_in_system = {
-								owner = { 
+								owner = {
 									is_hostile = root.owner
 								}
 							}
@@ -306,7 +308,7 @@ ship_event = {
 						has_access_fleet = root.owner
 						NOT = {
 							any_fleet_in_system = {
-								owner = { 
+								owner = {
 									is_hostile = root.owner
 								}
 							}
@@ -320,7 +322,7 @@ ship_event = {
 						has_access_fleet = root.owner
 						NOT = {
 							any_fleet_in_system = {
-								owner = { 
+								owner = {
 									is_hostile = root.owner
 								}
 							}
@@ -377,7 +379,7 @@ ship_event = {
 				event_chain = rubricator_chain
 				location = event_target:rubricator_planet
 			}
-		}	
+		}
 	}
 	option = {
 		name = ancrel.4011.b

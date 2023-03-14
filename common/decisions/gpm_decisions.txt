@@ -950,7 +950,13 @@ decision_gpm_clear_alien_eggs  = {
 	
 	allow = {
 		owner = {
-			has_technology = tech_alien_life_studies
+			OR = {
+				AND = { 
+					is_gestalt = no
+					has_technology = tech_alien_life_studies
+				}
+				is_gestalt = yes
+			}
 		}
 	}
 

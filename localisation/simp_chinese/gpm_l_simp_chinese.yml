@@ -92,6 +92,7 @@
  NAME_primitive_world_name_6:0 "Anthem"
  NAME_primitive_world_name_7:0 "Tron"
  NAME_Fen_Habbanis_IIIa:0 "Fen Habbanis IIIa"
+ TECH_IS_CUSTOM_TECH_3:0 "§BPrecursor Discovery§!"
  
 
  #######################################
@@ -271,13 +272,14 @@
  
  GPM_unlock_artifact_research_centre_locked:0 "§L？？？？？？§!"
  GPM_unlock_artifact_research_centre_locked_desc:0 "$artifact_action_locked_desc$"
- GPM_unlock_artifact_research_centre:0 "资助$gpm_tech_arcane_research$"
+ GPM_unlock_artifact_research_centre:0 "Fund Precursor Research"
  GPM_unlock_artifact_research_centre_desc:0 "解锁§H$gpm_tech_arcane_research$§!科技后可以在具有先驱者修正的星球或环绕该星球的轨道居住站上建设§H$gpm_precursor_research_center$§!。这是一个帝国唯一的建筑，用于辅助科学研究和稀有文物实验。"
  GPM_unlock_artifact_research_centre_TT:0 "\n§Y$gpm_tech_arcane_research$§!的研究解锁了§H$gpm_precursor_research_center$§!建筑，它提供2个$job_gpm_precursor_archaeologist$岗位.\n\n$job_gpm_precursor_archaeologist_effect_desc$\n\n"
  gpm_artifact.1.name:0 "上古科技研究取得重大突破！"
  gpm_artifact.1.desc:0 "对这些古老神器做的实验，让我们取得了惊人的技术突破！"
  gpm_artifact.2.name:0 "§H逆向工程§!准备完毕"
  gpm_artifact.2.desc:0 "我们的科学家已经准备好对另一组£minor_artifacts£稀有文物进行§H逆向工程§!。"
+ gpm_precursor_studies_modifier:0 "Precursor Studies"
  
  #######################################
  #### Buildings
@@ -290,6 +292,7 @@
 
  gpm_precursor_research_center:0 "奥术研究院"
  gpm_precursor_research_center_desc:0 "这是一个专门的研究设施，协助研究古代强大的先驱者文明。"
+ gpm_building_precursor_research_center_effect:0 "\n§BCan only be build on a precursor world§!\nIf built on a §YRelic World§!:\n Research Speed (Archaeostudies): §G+50%§!\n £minor_artifacts£ Minor Artifacts from £job_researcher£ Archaeoengineers: §G+0.3§!"
  
  gpm_building_ascension_tower:0 "飞升之塔"
  gpm_building_ascension_tower_desc:0 "这是一座巨大的建筑，能够容纳大量的人。飞升之塔非常高，塔顶必须做得密不透风，以防止居民窒息。"
@@ -602,12 +605,12 @@ pop_cat_gpm_spacer:0 "轨道采集工"
  job_gpm_precursor_archaeologist:0 "先驱者考古学家"
  job_gpm_precursor_archaeologist_plural:0 "先驱者考古学家"
  job_gpm_precursor_archaeologist_desc:0 "他们是专门研究先驱者文明的考古学家。"
- job_gpm_precursor_archaeologist_effect_desc:0 "£job_gpm_precursor_archaeologist£ $job_gpm_precursor_archaeologist_plural$将 £consumer_goods£ §Y$consumer_goods$§!转化为 £physics£ £society£ £engineering£ §Y研究点数§!和 £minor_artifacts£ §Y稀有文物§!。"
+ job_gpm_precursor_archaeologist_effect_desc:0 "£job_gpm_precursor_archaeologist£ $job_gpm_precursor_archaeologist_plural$将 £consumer_goods£ §Y$consumer_goods$§!转化为 £physics£ £society£ £engineering£ §Y研究点数§!和 £minor_artifacts£ §Y稀有文物§!。 and produce £minor_artifacts£ §YMinor Artifacts§!"
 
  job_gpm_precursor_archaeologist_drone:0 "先驱者考古无人机"
  job_gpm_precursor_archaeologist_drone_plural:0 "先驱者考古无人机"
  job_gpm_precursor_archaeologist_drone_desc:0 "他们专门研究先驱者文明。"
- job_gpm_precursor_archaeologist_drone_effect_desc:0 "£job_gpm_precursor_archaeologist_drone£ $job_gpm_precursor_archaeologist_drone_plural$ 将 £energy£ §Y$energy$§!转化为 £physics£ £society£ £engineering£ §Y研究点数§!和 £minor_artifacts£ §Y稀有文物§!。"
+ job_gpm_precursor_archaeologist_drone_effect_desc:0 "£job_gpm_precursor_archaeologist_drone£ $job_gpm_precursor_archaeologist_drone_plural$ 将 £energy£ §Y$energy$§!转化为 £physics£ £society£ £engineering£ §Y研究点数§!和 £minor_artifacts£ §Y稀有文物§!。 and produce £minor_artifacts£ §YMinor Artifacts§!"
 
  job_gpm_orbital_alloy_miner:0 "轨道合金矿工"
  job_gpm_orbital_alloy_miner_plural:0 "轨道合金矿工"
@@ -742,6 +745,13 @@ pop_cat_gpm_spacer:0 "轨道采集工"
  mod_job_criminal_per_pop:1 "§G+1§! $job_criminal$ Job per $VALUE$ Pops"
  mod_shipsize_science_influence_upkeep_add:0 "Science Ship Influence Upkeep"
  mod_shipsize_science_energy_upkeep_add:0 "Science Ship Energy Upkeep"
+ mod_planet_researchers_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts from reseachers"
+ mod_ships_physics_research_produces_add:0 "£physics_research£ Physics Research produced"
+ mod_ships_society_research_produces_add:0 "£society_research£ Society Research produced"
+ mod_ships_engineering_research_produces_add:0 "£engineering_research£ Engineering Research produced"
+ mod_ships_consumer_goods_produces_add:0 "£consumer_goods£ Consumer Goods produced"
+ mod_ships_alloys_produces_add:0 "£alloys£ Alloys produced"
+ mod_ships_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts produced"
  
  #######################################
  #### Opinions
@@ -757,6 +767,8 @@ pop_cat_gpm_spacer:0 "轨道采集工"
  
  pc_gpm_precursor_tomb:0 "Ancient Archaeopolis"
  pc_gpm_precursor_tomb_desc:0 "An ancient ruined precursor city world stripped of most of its toxic atmosphere. Surviving on the surface of this once great city world would be very challenging."
+ trait_pc_gpm_precursor_tomb_preference:0 "Archaeopolis World Preference"
+ trait_pc_gpm_precursor_tomb_preference_desc:0 "Somehow, this specief found it's home here."
  
  #######################################
  #### Policies
@@ -814,12 +826,12 @@ pop_cat_gpm_spacer:0 "轨道采集工"
  # manufactorium ship
  NAME_manufactorium_fleet:0 "Manufactorium Ship"
  NAME_gpm_manufactorium_ship:0 "Fabricator"
- NAME_manufactorium_ship_name:0 ""
+ NAME_manufactorium_ship_name:0 "Bolt"
   
  # precursor ship
  NAME_precursor_fleet:0 "Precursor Ship"
  NAME_gpm_precursor_ship:0 "Warbringer"
- NAME_precursor_ship_name:0 ""
+ NAME_precursor_ship_name:0 "Enigma"
  
  #######################################
  #### Ship Components
@@ -931,8 +943,9 @@ pop_cat_gpm_spacer:0 "轨道采集工"
  
  
 
- gpm_tech_arcane_research:0 "奥术研究所"
- gpm_tech_arcane_research_desc:0 "专业化的研究机构，致力于收集和了解神秘技术。"
+ gpm_tech_arcane_research:0 "Precursor Studies"
+ gpm_tech_arcane_research_desc:0 "Enhanced research methodologies for to the collecting and understading of precursor technolgies."
+ gpm_tech_arcane_researchTT: "§HUnlocks:§! $gpm_precursor_research_center$ £minor_artifacts£ Minor Artifacts production: §G+0.25§!"
  
  tech_gpm_tb_toxic_gas:0 "空气化学中和剂"
  tech_gpm_tb_toxic_gas_desc:0 "要消除游荡在地表的毒气云是很难的。我们最好的办法是在它们身上撒上一层化学中和剂。"
@@ -1324,6 +1337,10 @@ leader_trait_gpm_guilli_desc:0 "G'uil-li在Xandar上生活了很久，虽然这�
 
  leader_trait_gpm_personal_mech:0 "Personal Mech"
  leader_trait_gpm_personal_mech_desc:0 "This leader has access to a personal mech."
+
+ gpm_leader_trait_collector:0 "Collector of Artifacts"
+ gpm_leader_trait_collector_desc:0 "This leader has a habit of staying behind collecting anything worthwhile."
+ gpm_leader_trait_collectorTT:0 "Chance of finding £minor_artifacts£ §YMinor Artifacts§! or §YAncient Relics§!: §G+20%§!\nArchaeology Excavation Speed: §R-20%§!"
  
  #######################################
  #### War Goals

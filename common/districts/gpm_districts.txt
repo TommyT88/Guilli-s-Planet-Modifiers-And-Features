@@ -21,7 +21,7 @@ district_gpm_precursor_housing = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 1000
+			minerals = 2000
 		}
 		upkeep = {
 			energy = 5
@@ -210,14 +210,14 @@ district_gpm_precursor_science = {
 		category = planet_districts	
 		cost = {
 			minerals = 500
-			minor_artifacts = 100
+			unity = 500
 		}
 		upkeep = {
 			energy = 5
 		}
-		produces = {
-			minor_artifacts = 0.1
-		}
+		# produces = {
+		# 	minor_artifacts = 0.1
+		# }
 	}
 
 	triggered_planet_modifier = {
@@ -227,11 +227,10 @@ district_gpm_precursor_science = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 3
-			job_gpm_precursor_archaeologist_add = 2
+			job_gpm_precursor_archaeologist_add = 1
 		}
 	}
 
@@ -241,8 +240,7 @@ district_gpm_precursor_science = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 3
-			job_gpm_precursor_archaeologist_drone_add = 2
+			job_gpm_precursor_archaeologist_drone_add = 1
 		}
 	}
 
@@ -252,19 +250,39 @@ district_gpm_precursor_science = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 3
-			job_gpm_precursor_archaeologist_drone_add = 2
+			job_gpm_precursor_archaeologist_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_archaeoengineers_add = 2
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = { is_hive_empire = yes }
 		}
-		text = job_gpm_archaeologist_effect_desc
+		modifier = {
+			job_archaeo_drone_add = 2
+		}
 	}
-	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_archaeo_unit_add = 2
+		}
+	}
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -283,19 +301,34 @@ district_gpm_precursor_science = {
 				}
 			}
 		}
-		text = job_gpm_archaeologist_drone
+		text = job_gpm_precursor_archaeologist_drone
 	}
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
+			owner = { is_gestalt = no }
+			has_ancrel = yes
 		}
-		text = job_gpm_precursor_archaeologist_drone_effect_desc
+		text = job_archaeoengineers_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			has_ancrel = yes
+		}
+		text = job_archaeo_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			has_ancrel = yes
+		}
+		text = job_archaeo_unit_effect_desc
 	}
 	
 	triggered_desc = {
@@ -360,24 +393,17 @@ district_gpm_precursor_manufactorium = {
 	}
 
 	resources = {
-		category = planet_districts		
+		category = planet_districts
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_ai = no }
 			}
-			minerals = 500
-			minor_artifacts = 100
-		}		
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = yes }
-			}
-			minerals = 500
+			minerals = 1000
+			minor_artifacts = 500
 		}
 		upkeep = {
 			energy = 30
+			minor_artifacts = 0.5
 		}
 		produces = {
 			trigger = {
@@ -554,24 +580,19 @@ district_gpm_precursor_power_plant = {
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_ai = no }
 			}
-			minerals = 500
-			minor_artifacts = 100
-		}
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = yes }
-			}
-			minerals = 500
+			minerals = 1000
+			minor_artifacts = 500
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = { NOT = { has_deficit = minor_artifacts } }
 			}
-			energy = 30
+			energy = 50
+		}
+		upkeep = {
+			minor_artifacts = 0.25
 		}
 	}
 

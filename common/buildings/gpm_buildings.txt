@@ -115,35 +115,38 @@ gpm_building_mining_nanite_nexus = {
 }
 
 gpm_precursor_research_center = {
-	base_buildtime = 480
+	base_buildtime = @b2_time
 	base_cap_amount = 1
 
 	category = research
 
 	potential = {
+		exists = owner
 		owner = { has_country_flag = gpm_artifact_research_centre_unlocked }
 		has_ancrel = yes
-		planet = {
-			OR = {
-				# gpm_has_precursor_modifiers = yes
-				gpm_is_a_precursor_world = yes
-				is_capital = yes
-			}
-		}
+		gpm_is_a_precursor_world = yes
 	}
 
 	prerequisites = {
-		gpm_tech_arcane_research
+		# gpm_tech_arcane_research
+		tech_archaeostudies
 	}
 
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			minor_artifacts = 0.2
-		}
 		cost = {
-			minerals = 1200
+			minerals = @b2_minerals
+			minor_artifacts = 35
+		}
+		produces = {
+			minor_artifacts = 0.25
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = gpm_tech_arcane_research }
+			}
+			minor_artifacts = 0.25
 		}
 		upkeep = {
 			energy = 10
@@ -153,42 +156,97 @@ gpm_precursor_research_center = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = { is_gestalt = no }
 		}
 		modifier = {
-			# job_gpm_precursor_archaeologist_add = 1
-			job_gpm_archaeologist_add = 3
+			job_archaeoengineers_add = 2
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner			
-			owner = { is_gestalt = yes }
+			exists = owner
+			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			# job_gpm_precursor_archaeologist_drone_add = 1
-			job_gpm_archaeologist_drone_add = 3
+			job_archaeo_drone_add = 2
 		}
 	}
-	
-	triggered_desc = {
-		# text = job_gpm_precursor_archaeologist_effect_desc
-		text = job_gpm_archaeologist_effect_desc
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_archaeo_unit_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		modifier = {
+			job_archaeoengineers_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		modifier = {
+			job_archaeo_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		modifier = {
+			job_archaeo_unit_add = 1
+		}
 	}
 	
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = { is_gestalt = no }
 		}
-		# text = job_gpm_precursor_archaeologist_drone_effect_desc
-		text = job_gpm_archaeologist_drone_effect_desc
+		text = job_archaeoengineers_effect_desc
 	}
 
-	
-	ai_weight = {
-		weight = 10000
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_archaeo_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_archaeo_unit_effect_desc
+	}
+	triggered_desc = {
+		text = gpm_building_precursor_research_center_effect
 	}
 }
 
@@ -325,7 +383,10 @@ gpm_building_manufactory_hub = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
 		}
 		modifier = {
 			job_artisan_add = 2
@@ -335,10 +396,13 @@ gpm_building_manufactory_hub = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
 		}
 		modifier = {
-			job_artisan_drone_add = 2
+			job_artificer_add = 2
 		}
 	}
 
@@ -359,9 +423,23 @@ gpm_building_manufactory_hub = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
 		}
 		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+		}
+		text = job_artificer_effect_desc
 	}
 
 	triggered_desc = {

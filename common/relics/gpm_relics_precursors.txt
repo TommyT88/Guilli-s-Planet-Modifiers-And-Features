@@ -486,7 +486,16 @@ gpm_r_mysterious_shield_generator = {
 		category = relics
 		# Activation cost
 		cost = {
+			trigger = {
+				has_ancrel = no
+			}
 			alloys = 2000
+		}
+		cost = {
+			trigger = {
+				has_ancrel = yes
+			}
+			minor_artifacts = 250
 		}
 	}
 	
@@ -938,7 +947,7 @@ gpm_r_manufactorium_ship = {
 			trigger = {
 				has_ancrel = yes
 			}
-			minor_artifacts = 50
+			minor_artifacts = 500
 		}
 	}
 	
@@ -1002,7 +1011,7 @@ gpm_r_datacube = {
 			trigger = {
 				has_ancrel = yes
 			}
-			minor_artifacts = 50
+			minor_artifacts = 500
 		}
 	}
 	
@@ -1209,7 +1218,15 @@ gpm_r_cloaking_device = {
 	
 	triggered_country_modifier = {
 		potential = {
-			always = yes
+			has_first_contact_dlc = yes
+		}
+		ship_cloaking_strength_add = 3
+		show_only_custom_tooltip = no
+		custom_tooltip = "gpm_r_cloaking_device_passive_effect_tooltip"
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_first_contact_dlc = no
 		}
 		add_base_country_intel = 30
 		show_only_custom_tooltip = no
@@ -1283,7 +1300,7 @@ gpm_r_q_storage_compressor = {
 			10 = { add_resource = { sr_dark_matter = 200 } }
 			10 = { add_resource = { nanites = 200 } }
 			10 = { 
-				add_resource = { minor_artifacts = 200 }
+				add_resource = { minor_artifacts = 1000 }
 				modifier = { factor = 0 has_ancrel = no }
 			}
 		}
