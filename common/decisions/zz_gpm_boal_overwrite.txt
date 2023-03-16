@@ -26,7 +26,6 @@ decision_baol_life_seed = {
 		NOT = { is_planet_class = pc_relic }
 		NOT = { is_planet_class = pc_gpm_precursor_tomb }
 		gpm_is_planet_class_machine = no
-		is_planet_class = pc_gaia
 
 		exists = owner
 		owner = { has_country_flag = relic_last_baol_activated }
@@ -143,6 +142,82 @@ decision_baol_life_seed = {
 
 	on_unqueued = {
 		owner = { set_country_flag = not_activated_baol }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+decision_baol_life_seed_enhance = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_resort_colony
+
+	potential = {
+		is_planet_class = pc_gaia
+		exists = owner
+		owner = { has_country_flag = relic_last_baol_activated }
+	}
+
+	allow = { }
+
+	effect = {
+		# Convert to Gaia world, spawn Nu-Baol pops
+		custom_tooltip = decision_baol_life_seed_enhance_effects
+		hidden_effect = {
+			owner = { remove_country_flag = relic_last_baol_activated }
+			if = {
+				limit = { NOT = { exists = event_target:nu_baol_species } }
+				if = {
+					limit = {
+						owner = {
+							is_hive_empire = yes
+						}
+					}
+					create_hive_nu_baol_effect = yes
+				}
+				else = {
+					create_nu_baol_effect = yes
+				}
+			}
+			while = {
+				count = 4
+				create_pop = {
+					species = event_target:nu_baol_species
+					ethos = {
+						ethic = "ethic_pacifist"
+					}
+				}
+			}
+			while = {
+				count = 10
+				random_owned_pop = {
+					limit = {
+						NOR = {
+							is_robot_pop = yes
+							has_trait = trait_pc_gaia_preference_terraforming
+						}
+					}
+					modify_species = {
+						species = this
+						ideal_planet_class = pc_nuked
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_pc_nuked_preference
+						add_trait = trait_pc_gaia_preference_terraforming
+					}
+				}
+			}
+			planet_event = { id = ancrel.2026 } #Notification event
+			planet_event = { id = gpm_terraform.78871 } # guilli
+		}
+	}
+
+	on_queued = {
+		owner = { remove_country_flag = not_activated_baol }
 	}
 
 	ai_weight = {
