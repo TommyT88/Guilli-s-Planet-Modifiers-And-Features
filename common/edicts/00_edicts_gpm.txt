@@ -6,7 +6,7 @@
 @Edict1Cost = 10
 @Edict2Cost = 20
 @Edict3Cost = 30
-
+@EdictSpecialCost = 1
 @EdictPerpetual = -1
 
 gpm_edict_tech_alternatives  = {
@@ -15,10 +15,6 @@ gpm_edict_tech_alternatives  = {
 
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -32,6 +28,7 @@ gpm_edict_tech_alternatives  = {
 
 	modifier = {
 		num_tech_alternatives_add = 3
+		planet_researchers_minor_artifacts_upkeep_add = 0.2
 	}
 	
 	ai_weight = {
@@ -39,35 +36,33 @@ gpm_edict_tech_alternatives  = {
 	}
 }
 
-gpm_edict_planet_sensor_range  = {
-	length = @EdictPerpetual
-	icon = "GFX_edict_type_policy"
+# gpm_edict_planet_sensor_range  = {
+	# length = @EdictPerpetual
+	# icon = "GFX_edict_type_policy"
 	
-	resources = {
-		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
-		upkeep = {
-			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
-		}
-	}
+	# resources = {
+		# category = edicts
+		# upkeep = {
+			# unity = @Edict1Cost
+			# multiplier = value:edict_size_effect
+		# }
+	# }
 
-	potential = {
-		has_technology = tech_arcane_deciphering
-		has_ancrel = yes
-	}
+	# potential = {
+		# has_technology = tech_arcane_deciphering
+		# has_ancrel = yes
+	# }
 
-	modifier = {
-		planet_sensor_range_add = 3
-	}
+	# modifier = {
+		# planet_sensor_range_add = 2
+		# planet_hyperlane_range_add = 4
+		# starbases_minor_artifacts_upkeep_add = 0.2
+	# }
 	
-	ai_weight = {
-		weight = 1
-	}
-}
+	# ai_weight = {
+		# weight = 1
+	# }
+# }
 
 # gpm_edict_station_production  = {
 # 	length = @arcanetechlength

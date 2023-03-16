@@ -13,11 +13,12 @@ gpm_edict_pop_assembly  = {
 	resources = {
 		category = edicts
 		cost = {
-			minor_artifacts = @arcanetechcost
+			unity = @ambitionCost
 			multiplier = value:edict_size_effect
 		}
+
 		upkeep = {
-			unity = @ambitionCost
+			unity = @ambitionUpkeep
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -35,6 +36,7 @@ gpm_edict_pop_assembly  = {
 
 	modifier = {
 		planet_pop_assembly_mult = 0.33
+		planet_pop_assemblers_minor_artifacts_upkeep_add = 1.0
 	}
 
 	ai_weight = {
@@ -46,13 +48,8 @@ gpm_edict_terraform_speed  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @ambitionCost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 5
 		}
 	}
 
@@ -63,7 +60,7 @@ gpm_edict_terraform_speed  = {
 	}
 
 	modifier = {
-		terraform_speed_mult = 1.00
+		terraform_speed_mult = 2.00
 	}
 	
 	ai_weight = {
@@ -79,13 +76,8 @@ gpm_edict_armor_regen  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @ambitionCost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 5
 		}
 	}
 
@@ -97,8 +89,8 @@ gpm_edict_armor_regen  = {
 
 	modifier = {
 		#ship_armor_regen_add_perc = 100.00
-		ship_hull_regen_add_perc = 5.0
-		ship_armor_regen_add_perc = 5.0
+		ship_hull_regen_add_perc = 1.0
+		ship_armor_regen_add_perc = 1.0
 	}
 	
 	ai_weight = {
@@ -114,13 +106,8 @@ gpm_edict_shield_regen  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @ambitionCost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 5
 		}
 	}
 
@@ -131,7 +118,7 @@ gpm_edict_shield_regen  = {
 	}
 
 	modifier = {
-		ship_shield_regen_add_perc = 5.0
+		ship_shield_regen_add_perc = 1.0
 	}
 	
 	ai_weight = {
@@ -147,13 +134,8 @@ gpm_edict_ship_bombard_dmg  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @ambitionCost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 5
 		}
 	}
 
@@ -180,13 +162,8 @@ gpm_edict_army_boost  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @ambitionCost
-			multiplier = value:edict_size_effect
+			minor_artifacts = 5
 		}
 	}
 
@@ -197,8 +174,8 @@ gpm_edict_army_boost  = {
 	}
 
 	modifier = {
-		army_defense_damage_mult = 0.50
-        army_attack_damage_mult = 0.50
+		army_defense_damage_mult = 1.00
+        army_attack_damage_mult = 1.00
 	}
 	
 	ai_weight = {

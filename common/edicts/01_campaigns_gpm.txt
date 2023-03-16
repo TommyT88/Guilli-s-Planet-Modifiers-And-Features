@@ -8,10 +8,12 @@
 ##########################################################################
 @campaignDuration = -1
 @arcanetechcost = 50
+@campaignCost = 15
 
-@Edict1Cost = 50
-@Edict2Cost = 65
-@Edict3Cost = 75
+
+@Edict1Cost = 10
+@Edict2Cost = 20
+@Edict3Cost = 30
 
 gpm_edict_alloy_production  = {
 	length = @campaignDuration
@@ -19,13 +21,8 @@ gpm_edict_alloy_production  = {
 
 	resources = {
 		category = campaigns
-		
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @Edict1Cost
+			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -37,6 +34,7 @@ gpm_edict_alloy_production  = {
 
 	modifier = {
 		planet_jobs_alloys_produces_mult = 0.20
+		planet_metallurgists_minor_artifacts_upkeep_add = 0.5
 	}
 	
 	ai_weight = {
@@ -48,12 +46,8 @@ gpm_edict_consumer_goods_production  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @Edict1Cost
+			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -70,6 +64,7 @@ gpm_edict_consumer_goods_production  = {
 
 	modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.20
+		planet_artisans_minor_artifacts_upkeep_add = 0.5
 	}
 	
 	ai_weight = {
@@ -81,12 +76,8 @@ gpm_edict_exotic_production  = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
-			minor_artifacts = @arcanetechcost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
-			unity = @Edict1Cost
+			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -100,6 +91,9 @@ gpm_edict_exotic_production  = {
 		country_volatile_motes_produces_mult = 0.20
         country_exotic_gases_produces_mult = 0.20
         country_rare_crystals_produces_mult = 0.20
+		planet_refiners_minor_artifacts_upkeep_add = 0.25
+		planet_translucers_minor_artifacts_upkeep_add = 0.25
+		planet_chemists_minor_artifacts_upkeep_add = 0.25
 	}
 	
 	ai_weight = {
