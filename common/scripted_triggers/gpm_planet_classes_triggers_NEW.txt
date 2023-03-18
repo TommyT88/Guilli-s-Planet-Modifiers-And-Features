@@ -5,12 +5,26 @@ gpm_is_planet_class_normal_uninhabitable = {
 	optimize_memory
 	OR = {
 		is_planet_class = pc_molten					# Vanilla
+		is_planet_class = pc_volcanic				# PD
 		is_planet_class = pc_toxic					# Vanilla
+		is_planet_class = pc_acid					# PD
+		is_planet_class = pc_methane				# PD
+		is_planet_class = pc_ammonia				# PD
+		is_planet_class = pc_hothouse				# PD
+		is_planet_class = pc_ethane_ocean			# PD
+		is_planet_class = pc_sulfur					# PD
+		is_planet_class = pc_acid					# PD
+		is_planet_class = pc_lanthanide				# PD
+		is_planet_class = pc_pd_wasteland_cave		# PD
+		is_planet_class = pc_hydrocarbon			# PD
 		is_planet_class = pc_frozen					# Vanilla
+		is_planet_class = pc_subglacial				# PD
 		is_planet_class = pc_barren					# Vanilla
 		is_planet_class = pc_barren_cold			# Vanilla
-		is_planet_class = pc_rogue					# PD
-		is_planet_class = pc_eyeball				# PD
+		is_planet_class = pc_karst					# PD
+		is_planet_class = pc_barren_cave			# PD
+		is_planet_class = pc_carbon					# PD
+		is_planet_class = pc_iron					# PD
 		is_planet_class = pc_diamond				# PD
 		is_planet_class = pc_chthonian				# PD
 	}
@@ -19,6 +33,7 @@ gpm_is_planet_class_molten = {
 	optimize_memory
 	OR = {
 		is_planet_class = pc_molten					# Vanilla
+		is_planet_class = pc_volcanic				# PD
 	}
 }
 gpm_is_planet_class_toxic = {
@@ -33,12 +48,15 @@ gpm_is_planet_class_toxic = {
 		is_planet_class = pc_sulfur					# PD
 		is_planet_class = pc_acid					# PD
 		is_planet_class = pc_lanthanide				# PD
+		is_planet_class = pc_pd_wasteland_cave		# PD
+		is_planet_class = pc_hydrocarbon			# PD
 	}
 }
 gpm_is_planet_class_frozen = {
 	optimize_memory
 	OR = {
 		is_planet_class = pc_frozen					# Vanilla
+		is_planet_class = pc_subglacial				# PD
 	}
 }
 gpm_is_planet_class_barren = {
@@ -47,6 +65,11 @@ gpm_is_planet_class_barren = {
 		is_planet_class = pc_barren					# Vanilla
 		is_planet_class = pc_barren_cold			# Vanilla
 		is_planet_class = pc_karst					# PD
+		is_planet_class = pc_barren_cave			# PD
+		is_planet_class = pc_carbon					# PD
+		is_planet_class = pc_iron					# PD
+		is_planet_class = pc_diamond				# PD
+		is_planet_class = pc_chthonian				# PD
 	}
 }
 
@@ -67,6 +90,7 @@ gpm_is_planet_class_normal_habitable = {
 		is_planet_class = pc_arctic					# Vanilla
 		is_planet_class = pc_tundra					# Vanilla
 		#is_planet_class = pc_nuked					# Vanilla
+		is_planet_class = pc_flat_world				# GE
 		is_planet_class = pc_aquatic				# PD
 		is_planet_class = pc_aquatichot				# PD
 		is_planet_class = pc_aquaticcold			# PD
@@ -120,7 +144,48 @@ gpm_is_planet_class_normal_habitable = {
 		is_planet_class = pc_lichen					# PD
 		is_planet_class = pc_glacio					# PD
 		is_planet_class = pc_karst					# PD
-		is_planet_class = pc_flat_world				# GE
+		is_planet_class = pc_hot_gaia				# PD
+		is_planet_class = pc_cold_gaia				# PD
+		is_planet_class = pc_coastal				# PD
+		is_planet_class = pc_fog					# PD
+		is_planet_class = pc_snowball				# PD
+		is_planet_class = pc_basalt					# PD
+		is_planet_class = pc_badlands				# PD
+		is_planet_class = pc_cenote					# PD
+		is_planet_class = pc_pd_cold_cave			# PD
+		is_planet_class = pc_pd_dry_cave			# PD
+		is_planet_class = pc_gaia_cave				# PD
+		is_planet_class = pc_hive_cave				# PD
+		is_planet_class = pc_pd_necro_cave			# PD
+		is_planet_class = pc_aquatic_cave			# PD
+		is_planet_class = pc_megaflorahive_cave		# PD
+		is_planet_class = pc_pd_mega_power_cave		# PD
+		is_planet_class = pc_megafloracapital		# PD
+		is_planet_class = pc_megaflorafort			# PD
+		is_planet_class = pc_megaflorahive			# PD
+		is_planet_class = pc_megafloraforge			# PD
+		is_planet_class = pc_pd_cold_superhab		# PD
+		is_planet_class = pc_pd_dry_superhab		# PD
+		is_planet_class = pc_gaia_superhab			# PD
+		is_planet_class = pc_barren_superhab		# PD
+		is_planet_class = pc_hive_superhab			# PD
+		is_planet_class = pc_pd_necro_superhab		# PD
+		is_planet_class = pc_aquatic_superhab		# PD
+		is_planet_class = pc_pd_wasteland_superhab	# PD
+		is_planet_class = pc_megaflorahive_superhab	# PD
+		is_planet_class = pc_wettidallylocked		# PD
+		is_planet_class = pc_tidallygaia			# PD
+		is_planet_class = pc_tidallylocked_barren	# PD
+		is_planet_class = pc_hivetidallylocked		# PD
+		is_planet_class = pc_necrotidallylocked		# PD
+		is_planet_class = pc_tidallyaquatic			# PD
+		is_planet_class = pc_pd_tidally_wasteland	# PD
+		is_planet_class = pc_megaflorahivetl		# PD
+		is_planet_class = pc_pd_zro					# PD
+		is_planet_class = pc_clean_crucible			# PD
+		is_planet_class = pc_shroud_crucible		# PD
+		is_planet_class = pc_crucible				# PD
+		
 	}
 }
 gpm_is_planet_class_nuked = {
@@ -132,6 +197,15 @@ gpm_is_planet_class_nuked = {
 		is_planet_class = pc_graveyard				# PD
 		is_planet_class = pc_eyeball				# PD
 		is_planet_class = pc_lanthanide				# PD
+		is_planet_class = pc_nuked_superhab			# PD
+		is_planet_class = pc_nuked_cave				# PD
+		is_planet_class = pc_nuked_tl				# PD
+		is_planet_class = pc_nuked_relic			# PD
+		is_planet_class = pc_pd_scrapyard			# PD
+		is_planet_class = pc_pd_blue_warform		# PD
+		is_planet_class = pc_pd_red_warform			# PD
+		is_planet_class = pc_pd_orange_warform		# PD
+		is_planet_class = pc_pd_wasteland			# PD
 	}
 }
 
@@ -169,6 +243,8 @@ gpm_is_planet_class_gas_giant = {
 		is_planet_class = pc_habitable_gas_giant	# GE
 		is_planet_class = pc_hot_gas_giant			# PD
 		is_planet_class = pc_cold_gas_giant			# PD
+		is_planet_class = pc_cloudless_gas_giant	# PD
+		is_planet_class = pc_dwarf_gas_giant		# PD
 	}
 }
 gpm_is_planet_class_city = {
@@ -186,6 +262,32 @@ gpm_is_planet_class_city = {
 		is_planet_class = pc_biofort				# PD
 		is_planet_class = pc_technoorganic			# PD
 		is_planet_class = pc_archive				# PD
+		is_planet_class = pc_necrohive				# PD
+		is_planet_class = pc_machine_necropolis		# PD
+		is_planet_class = pc_capitalarc				# PD
+		is_planet_class = pc_palacearc				# PD
+		is_planet_class = pc_milarc					# PD
+		is_planet_class = pc_ecocity				# PD
+		is_planet_class = pc_bioforge				# PD
+		is_planet_class = pc_biofort				# PD
+		is_planet_class = pc_biocapital				# PD
+		is_planet_class = pc_machine_factory		# PD
+		is_planet_class = pc_machine_fort			# PD
+		is_planet_class = pc_milarc_relic			# PD
+		is_planet_class = pc_shroudcity				# PD
+		is_planet_class = pc_shroudecocity			# PD
+		is_planet_class = pc_shroudcapitalarc		# PD
+		is_planet_class = pc_shroudpalacearc		# PD
+		is_planet_class = pc_shroudmilarc			# PD
+		is_planet_class = pc_machine_capital		# PD
+		is_planet_class = pc_corpoarc				# PD
+		is_planet_class = pc_shroudcorpoarc			# PD
+		is_planet_class = pc_necropolis				# PD
+		is_planet_class = pc_necroecocity			# PD
+		is_planet_class = pc_necrocapitalarc		# PD
+		is_planet_class = pc_necropalacearc			# PD
+		is_planet_class = pc_necromilarc			# PD
+		is_planet_class = pc_pd_necro				# PD
 		is_planet_class = pc_ringworld_city			# GE
 	}
 }
@@ -207,12 +309,16 @@ gpm_is_planet_class_hive = {
 		is_planet_class = pc_pdhive1				# PD
 		is_planet_class = pc_pdhive2				# PD
 		is_planet_class = pc_megaflorahive			# PD
+		is_planet_class = pc_hive_cave				# PD
 	}
 }
 gpm_is_planet_class_habitat = {
 	optimize_memory
 	OR = {
 		is_planet_class = pc_habitat				# Vanilla
+		is_planet_class = pc_aquatichab				# PD
+		is_planet_class = pc_aquatichothab			# PD
+		is_planet_class = pc_aquaticcoldhab			# PD
 		is_planet_class = pc_gghab					# PD
 		is_planet_class = pc_tmhab					# PD
 		is_planet_class = pc_tmhab2					# PD

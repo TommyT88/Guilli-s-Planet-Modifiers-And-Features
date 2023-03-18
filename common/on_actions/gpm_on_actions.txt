@@ -429,14 +429,14 @@ on_terraforming_complete = {
 # This = Country
 on_tech_increased = {
 	events = {
-		gpm_colony.9000			# spawn one xenomorph every X years from discovery
+		gpm_colony.9000			# spawn xenomorph army
 	}
 }
 
 on_colonized = {
 	events = {
 		gpm_colony.7000 				# Fallen Empire Colony development Start event. Fires 7100 after 2 years
-		gpm_colony.8000 				# Gives special modifiers to non-machine worlds for machine empires.
+		# gpm_colony.8000 				# Gives special modifiers to non-machine worlds for machine empires.
 		gpm_on_colonize.2				# spawns 4 more pops on colonisation (work around for modifier not working in planet modifier)
 	}
 }
