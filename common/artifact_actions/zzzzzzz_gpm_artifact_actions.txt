@@ -50,11 +50,10 @@ artifact_arcane_deciphering = {
 				id = gpm_artifact.2 days = 3600
 			}
 			random_list = {
-				20 = {
+				10 = {
 					owner = { 
 						country_event = { id = gpm_artifact.1 } # precursor techs
 					}
-					modifier = { factor = 10 owner = { is_ai = yes } }
 				}
 				10 = {
 					owner = {

@@ -984,7 +984,7 @@ decision_gpm_clear_alien_eggs  = {
 					owner = {
 						every_relation = {
 							limit = {
-								is_country_type = default
+								gpm_is_country_type_default = yes
 								has_communications = root.owner
 							}
 							log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"

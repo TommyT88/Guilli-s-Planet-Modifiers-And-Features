@@ -331,12 +331,12 @@ district_gpm_precursor_science = {
 		text = job_archaeo_unit_effect_desc
 	}
 	
-	triggered_desc = {
-		trigger = {
-			exists = owner
-		}
-		text = district_gpm_precursor_scienceTT
-	}
+	# triggered_desc = {
+		# trigger = {
+			# exists = owner
+		# }
+		# text = district_gpm_precursor_scienceTT
+	# }
 
 	ai_weight = {
 		weight = 1000
@@ -398,12 +398,12 @@ district_gpm_precursor_manufactorium = {
 			trigger = {
 				exists = owner
 			}
-			minerals = 1000
-			minor_artifacts = 500
+			minerals = 2000
+			minor_artifacts = 1000
 		}
 		upkeep = {
 			energy = 30
-			minor_artifacts = 0.5
+			minor_artifacts = 1
 		}
 		produces = {
 			trigger = {
@@ -413,7 +413,7 @@ district_gpm_precursor_manufactorium = {
 					is_gestalt = yes
 				}
 			}
-			alloys = 30
+			alloys = 20
 		}
 		produces = {
 			trigger = {
@@ -423,8 +423,8 @@ district_gpm_precursor_manufactorium = {
 					is_gestalt = no
 				}
 			}
-			alloys = 20
-			consumer_goods = 20
+			alloys = 15
+			consumer_goods = 15
 		}
 	}
 
@@ -581,18 +581,18 @@ district_gpm_precursor_power_plant = {
 			trigger = {
 				exists = owner
 			}
-			minerals = 1000
-			minor_artifacts = 500
+			minerals = 2000
+			minor_artifacts = 1000
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = { NOT = { has_deficit = minor_artifacts } }
 			}
-			energy = 50
+			energy = 40
 		}
 		upkeep = {
-			minor_artifacts = 0.25
+			minor_artifacts = 0.5
 		}
 	}
 

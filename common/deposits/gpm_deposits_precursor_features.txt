@@ -6,7 +6,7 @@ gpm_d_planetary_shield_array = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 10
+			physics_research = 15
 		}
 	}	
 
@@ -23,7 +23,7 @@ gpm_d_precursor_planetary_shield = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 20
+			physics_research = 15
 		}
 	}
 
@@ -43,7 +43,7 @@ gpm_d_precursor_planetary_shield = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 2
+			job_gpm_archaeologist_add = 1
 		}
 	}
 	
@@ -59,7 +59,7 @@ gpm_d_precursor_planetary_shield = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 2
+			job_gpm_archaeologist_drone_add = 1
 		}
 	}
 
@@ -101,7 +101,7 @@ gpm_d_precursor_capital_complex = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 2
+			job_gpm_archaeologist_add = 1
 		}
 	}
 	
@@ -117,7 +117,7 @@ gpm_d_precursor_capital_complex = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 2
+			job_gpm_archaeologist_drone_add = 1
 		}
 	}
 
@@ -131,13 +131,13 @@ gpm_d_precursor_ruins_1 = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_buildings_add = 2
+		planet_max_buildings_add = 1
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			alloys = 10
+			alloys = 4
 		}
 	}
 
@@ -152,7 +152,7 @@ gpm_d_precursor_ruins_2 = {
 	
 
 	planet_modifier = {
-		planet_max_buildings_add = 3
+		planet_max_buildings_add = 1
 	}
 
 	resources = {
@@ -174,7 +174,6 @@ gpm_d_precursor_ruins_3 = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_districts_add = 2
 		planet_max_buildings_add = 1
 	}
 
@@ -185,7 +184,7 @@ gpm_d_precursor_ruins_3 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 2
+			job_gpm_archaeologist_add = 1
 		}
 	}
 	
@@ -201,7 +200,7 @@ gpm_d_precursor_ruins_3 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 2
+			job_gpm_archaeologist_drone_add = 1
 		}
 	}
 
@@ -234,7 +233,7 @@ gpm_d_precursor_ruins_4 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 2
+			job_gpm_archaeologist_add = 1
 		}
 	}
 	
@@ -250,18 +249,18 @@ gpm_d_precursor_ruins_4 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 2
+			job_gpm_archaeologist_drone_add = 1
 		}
 	}
 	
 	planet_modifier = {
-		BIOLOGICAL_pop_growth_speed = 0.20
+		BIOLOGICAL_pop_growth_speed = 0.10
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			society_research = 30
+			society_research = 5
 		}
 	}
 
@@ -306,7 +305,7 @@ gpm_d_precursor_ruins_6 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 2
+			job_gpm_archaeologist_add = 1
 		}
 	}
 	
@@ -322,14 +321,14 @@ gpm_d_precursor_ruins_6 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 2
+			job_gpm_archaeologist_drone_add = 1
 		}
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 15
+			physics_research = 5
 		}
 	}
 
@@ -354,7 +353,7 @@ gpm_d_precursor_ruins_7 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_add = 2
+			job_gpm_archaeologist_add = 1
 		}
 	}
 	
@@ -370,14 +369,14 @@ gpm_d_precursor_ruins_7 = {
 			has_ancrel = yes
 		}
 		modifier = {
-			job_gpm_archaeologist_drone_add = 2
+			job_gpm_archaeologist_drone_add = 1
 		}
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			engineering_research = 25
+			engineering_research = 5
 		}
 	}
 
@@ -391,7 +390,7 @@ gpm_d_precursor_ruins_1_distr = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_buildings_add = 2
+		planet_max_buildings_add = 1
 	}
 
 	# weight 0: event added
@@ -405,7 +404,7 @@ gpm_d_precursor_ruins_2_distr = {
 	
 
 	planet_modifier = {
-		planet_max_buildings_add = 3
+		planet_max_buildings_add = 1
 	}
 
 	# weight 0: event added
@@ -419,8 +418,7 @@ gpm_d_precursor_ruins_3_distr = {
 	
 
 	planet_modifier = {
-		planet_max_districts_add = 2
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 2
 	}
 
 	# weight 0: event added
@@ -439,7 +437,7 @@ gpm_d_precursor_ruins_4_distr = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			society_research = 30
+			society_research = 5
 		}
 	}
 
@@ -455,7 +453,7 @@ gpm_d_precursor_ruins_5_distr = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			energy = 15
+			energy = 10
 		}
 	}
 
@@ -471,7 +469,7 @@ gpm_d_precursor_ruins_6_distr = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 15
+			physics_research = 5
 		}
 	}
 
@@ -487,7 +485,7 @@ gpm_d_precursor_ruins_7_distr = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			engineering_research = 25
+			engineering_research = 10
 		}
 	}
 

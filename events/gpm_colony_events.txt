@@ -4408,7 +4408,7 @@ event = {
 				is_capital = yes
 				owner = {
 					NOT = { has_country_flag = gpm_capital_unique_modifiers }
-					is_country_type = default
+					gpm_is_country_type_default = yes
 				}
 				#has_planet_modifier = "capital"
 				num_pops > 0

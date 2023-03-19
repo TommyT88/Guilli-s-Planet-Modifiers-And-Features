@@ -391,9 +391,8 @@ planet_event = {
 		every_country = {
 			limit = {
 				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
+					gpm_is_country_type_default = yes
+					is_fallen_empire = yes
 				}
 			}
 			establish_communications_no_message = event_target:AI_crisis
@@ -797,9 +796,8 @@ planet_event = {
 		every_country = {
 			limit = {
 				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
+					gpm_is_country_type_default = yes
+					is_fallen_empire = yes
 				}
 			}
 			country_event = { id = crisis.2038 }

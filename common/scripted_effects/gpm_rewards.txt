@@ -716,7 +716,7 @@ gpm_random_precursor_tech_reward = {
 gpm_random_reward_precursor_remnants = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -726,7 +726,7 @@ gpm_random_reward_precursor_remnants = {
 			modifier = { factor = 1.001 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_remnants : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -737,7 +737,7 @@ gpm_random_reward_precursor_remnants = {
 			modifier = { factor = 1.002 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_remnants : gpm_precursor_remnants_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -785,7 +785,7 @@ gpm_random_reward_precursor_remnants = {
 gpm_random_reward_precursor_energy_grid = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -795,7 +795,7 @@ gpm_random_reward_precursor_energy_grid = {
 			modifier = { factor = 1.007 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_energy_grid : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -806,7 +806,7 @@ gpm_random_reward_precursor_energy_grid = {
 			modifier = { factor = 1.008 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_energy_grid : gpm_precursor_energy_grid_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -854,7 +854,7 @@ gpm_random_reward_precursor_energy_grid = {
 gpm_random_reward_precursor_satalite_grid = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -864,7 +864,7 @@ gpm_random_reward_precursor_satalite_grid = {
 			modifier = { factor = 1.013 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_satalite_grid : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -875,7 +875,7 @@ gpm_random_reward_precursor_satalite_grid = {
 			modifier = { factor = 1.014 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_satalite_grid : gpm_precursor_satellite_grid_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -923,7 +923,7 @@ gpm_random_reward_precursor_satalite_grid = {
 gpm_random_reward_precursor_city = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -933,7 +933,7 @@ gpm_random_reward_precursor_city = {
 			modifier = { factor = 1.019 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_city : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -944,7 +944,7 @@ gpm_random_reward_precursor_city = {
 			modifier = { factor = 1.020 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_city : gpm_precursor_city_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1004,7 +1004,7 @@ gpm_random_reward_precursor_city = {
 gpm_random_reward_precursor_shipyards = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1014,7 +1014,7 @@ gpm_random_reward_precursor_shipyards = {
 			modifier = { factor = 1.026 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_shipyards : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1025,7 +1025,7 @@ gpm_random_reward_precursor_shipyards = {
 			modifier = { factor = 1.027 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_shipyards : gpm_precursor_shipyards_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1099,7 +1099,7 @@ gpm_random_reward_precursor_shipyards = {
 gpm_random_reward_precursor_planetary_gun = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1109,7 +1109,7 @@ gpm_random_reward_precursor_planetary_gun = {
 			modifier = { factor = 1.033 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_planetary_gun : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1120,7 +1120,7 @@ gpm_random_reward_precursor_planetary_gun = {
 			modifier = { factor = 1.034 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_planetary_gun : gpm_precursor_planetary_gun_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1168,7 +1168,7 @@ gpm_random_reward_precursor_planetary_gun = {
 gpm_random_reward_precursor_bunker_grid = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1178,7 +1178,7 @@ gpm_random_reward_precursor_bunker_grid = {
 			modifier = { factor = 1.039 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_bunker_grid : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1189,7 +1189,7 @@ gpm_random_reward_precursor_bunker_grid = {
 			modifier = { factor = 1.040 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_bunker_grid : gpm_precursor_bunker_grid_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1237,7 +1237,7 @@ gpm_random_reward_precursor_bunker_grid = {
 gpm_random_reward_precursor_mechs = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1247,7 +1247,7 @@ gpm_random_reward_precursor_mechs = {
 			modifier = { factor = 1.045 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_mechs : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1258,7 +1258,7 @@ gpm_random_reward_precursor_mechs = {
 			modifier = { factor = 1.046 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_mechs : gpm_precursor_mechs_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1321,7 +1321,7 @@ gpm_random_reward_precursor_mechs = {
 gpm_random_reward_precursor_planetary_shield = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1331,7 +1331,7 @@ gpm_random_reward_precursor_planetary_shield = {
 			modifier = { factor = 1.052 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_planetary_shield : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1342,7 +1342,7 @@ gpm_random_reward_precursor_planetary_shield = {
 			modifier = { factor = 1.053 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_planetary_shield : gpm_precursor_planetary_shield_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1402,7 +1402,7 @@ gpm_random_reward_precursor_planetary_shield = {
 gpm_random_reward_precursor_floating_city = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1412,7 +1412,7 @@ gpm_random_reward_precursor_floating_city = {
 			modifier = { factor = 1.059 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_floating_city : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1423,7 +1423,7 @@ gpm_random_reward_precursor_floating_city = {
 			modifier = { factor = 1.060 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_floating_city : gpm_precursor_floating_city_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1471,7 +1471,7 @@ gpm_random_reward_precursor_floating_city = {
 gpm_random_reward_precursor_capital_complex = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1481,7 +1481,7 @@ gpm_random_reward_precursor_capital_complex = {
 			modifier = { factor = 1.065 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_capital_complex : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1492,7 +1492,7 @@ gpm_random_reward_precursor_capital_complex = {
 			modifier = { factor = 1.066 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_capital_complex : gpm_precursor_capital_complex_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1558,7 +1558,7 @@ gpm_random_reward_precursor_capital_complex = {
 gpm_random_reward_precursor_communication_hub = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1568,7 +1568,7 @@ gpm_random_reward_precursor_communication_hub = {
 			modifier = { factor = 1.072 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_communication_hub : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1579,7 +1579,7 @@ gpm_random_reward_precursor_communication_hub = {
 			modifier = { factor = 1.073 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_communication_hub : gpm_precursor_communication_hub_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1627,7 +1627,7 @@ gpm_random_reward_precursor_communication_hub = {
 gpm_random_reward_precursor_singularity_drive = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1637,7 +1637,7 @@ gpm_random_reward_precursor_singularity_drive = {
 			modifier = { factor = 1.078 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_singularity_drive : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1648,7 +1648,7 @@ gpm_random_reward_precursor_singularity_drive = {
 			modifier = { factor = 1.079 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_singularity_drive : gpm_precursor_singularity_drive_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1746,7 +1746,7 @@ gpm_random_reward_precursor_singularity_drive = {
 gpm_random_reward_precursor_eternal_fortress = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1756,7 +1756,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 			modifier = { factor = 1.087 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_eternal_fortress : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1767,7 +1767,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 			modifier = { factor = 1.088 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_eternal_fortress : gpm_precursor_eternal_fortress_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1815,7 +1815,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 gpm_random_reward_precursor_prison_planet = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1825,7 +1825,7 @@ gpm_random_reward_precursor_prison_planet = {
 			modifier = { factor = 1.093 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_prison_planet : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1836,7 +1836,7 @@ gpm_random_reward_precursor_prison_planet = {
 			modifier = { factor = 1.094 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_prison_planet : gpm_precursor_prison_planet_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1898,7 +1898,7 @@ gpm_random_reward_precursor_prison_planet = {
 gpm_random_reward_precursor_mines = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1908,7 +1908,7 @@ gpm_random_reward_precursor_mines = {
 			modifier = { factor = 1.100 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_mines : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1919,7 +1919,7 @@ gpm_random_reward_precursor_mines = {
 			modifier = { factor = 1.101 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_mines : gpm_precursor_mines_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1967,7 +1967,7 @@ gpm_random_reward_precursor_mines = {
 gpm_random_reward_precursor_manufactorium = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1977,7 +1977,7 @@ gpm_random_reward_precursor_manufactorium = {
 			modifier = { factor = 1.106 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_manufactorium : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -1988,7 +1988,7 @@ gpm_random_reward_precursor_manufactorium = {
 			modifier = { factor = 1.107 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_manufactorium : gpm_precursor_manufactorium_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2101,7 +2101,7 @@ gpm_random_reward_precursor_manufactorium = {
 gpm_random_reward_precursor_vaults = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2111,7 +2111,7 @@ gpm_random_reward_precursor_vaults = {
 			modifier = { factor = 1.115 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_vaults : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2122,7 +2122,7 @@ gpm_random_reward_precursor_vaults = {
 			modifier = { factor = 1.116 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_vaults : gpm_precursor_vaults_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2198,7 +2198,7 @@ gpm_random_reward_precursor_vaults = {
 gpm_random_reward_precursor_crashed_spacestation = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2208,7 +2208,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 			modifier = { factor = 1.123 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_crashed_spacestation : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2219,7 +2219,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 			modifier = { factor = 1.124 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_crashed_spacestation : gpm_precursor_crashed_spacestation_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2267,7 +2267,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 gpm_random_reward_precursor_battleground_ruins = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2277,7 +2277,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 			modifier = { factor = 1.129 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_battleground_ruins : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2288,7 +2288,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 			modifier = { factor = 1.130 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_battleground_ruins : gpm_precursor_battleground_ruins_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2366,7 +2366,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 gpm_random_reward_precursor_outpost_ruins = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2376,7 +2376,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 			modifier = { factor = 1.137 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_outpost_ruins : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2387,7 +2387,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 			modifier = { factor = 1.138 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_outpost_ruins : gpm_precursor_outpost_ruins_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2435,7 +2435,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 gpm_random_reward_precursor_harbor_ruins = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2445,7 +2445,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 			modifier = { factor = 1.143 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_harbor_ruins : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2456,7 +2456,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 			modifier = { factor = 1.144 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_harbor_ruins : gpm_precursor_harbor_ruins_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2504,7 +2504,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 gpm_random_reward_precursor_ruins = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2514,7 +2514,7 @@ gpm_random_reward_precursor_ruins = {
 			modifier = { factor = 1.149 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_ruins : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2525,7 +2525,7 @@ gpm_random_reward_precursor_ruins = {
 			modifier = { factor = 1.150 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_ruins : gpm_precursor_ruins_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2573,7 +2573,7 @@ gpm_random_reward_precursor_ruins = {
 gpm_random_reward_precursor_obelisks = {
 	### 
 	locked_random_list = {
-		20 = {
+		30 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2583,7 +2583,7 @@ gpm_random_reward_precursor_obelisks = {
 			modifier = { factor = 1.155 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_obelisks : gpm_random_precursor_tech_reward"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2594,7 +2594,7 @@ gpm_random_reward_precursor_obelisks = {
 			modifier = { factor = 1.156 }     # trick to randomise seeded reward choice (hopefully)
 			# log = "gpm_random_reward_precursor_obelisks : gpm_precursor_obelisks_discovery"
 		}
-		10 = {
+		2 = {
 			if = {
 				limit = { has_ancrel = yes }
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
@@ -2657,7 +2657,7 @@ gpm_random_reward_precursor_obelisks = {
 gpm_random_precursor_empire_dig_site_bonus = {
 	### 
 	locked_random_list = {
-		25 = {
+		200 = {
 			owner = {
 				add_monthly_resource_mult = {
 					resource = unity
@@ -2666,15 +2666,15 @@ gpm_random_precursor_empire_dig_site_bonus = {
 					max = 3000
 				}
 			}
-			# log = "gpm_random_precursor_empire_dig_site_bonus - unity"			
+			# log = "gpm_random_precursor_empire_dig_site_bonus - unity"
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
 		}
-		25 = { 
-			owner = { add_resource = { minor_artifacts = 50 } }
-			# log = "gpm_random_precursor_empire_dig_site_bonus - minor_artifacts"			
+		100 = { 
+			owner = { gpm_random_minor_artifacts_precursor_big = yes }
+			# log = "gpm_random_precursor_empire_dig_site_bonus - minor_artifacts"
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
 		}
-		25 = {
+		200 = {
 			owner = {
 				add_monthly_resource_mult = {
 					resource = physics_research
@@ -2698,37 +2698,37 @@ gpm_random_precursor_empire_dig_site_bonus = {
 			# log = "gpm_random_precursor_empire_dig_site_bonus - research"
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_energy_grid_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_energy_grid_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_energy_grid_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_energy_grid_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_energy_grid_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_energy_grid_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_satellite_grid_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_satellite_grid_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_satellite_grid_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_satellite_grid_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_satellite_grid_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_satellite_grid_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_city_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_city_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_city } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_city_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_city_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_city_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_city } } }
@@ -2737,7 +2737,7 @@ gpm_random_precursor_empire_dig_site_bonus = {
 		0 = {
 			owner = { add_modifier = { modifier = gpm_precursor_shipyards_discovery } }
 			modifier = {
-				add = 75
+				add = 20
 				solar_system = {
 					any_system_planet = {
 						has_modifier = gpm_precursor_shipyards
@@ -2750,7 +2750,7 @@ gpm_random_precursor_empire_dig_site_bonus = {
 		0 = {
 			owner = { add_modifier = { modifier = gpm_precursor_shipyards_discovery_2 } }
 			modifier = {
-				add = 75
+				add = 20
 				solar_system = {
 					any_system_planet = {
 						has_modifier = gpm_precursor_shipyards
@@ -2760,229 +2760,229 @@ gpm_random_precursor_empire_dig_site_bonus = {
 			}
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_shipyards_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_planetary_gun_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_planetary_gun_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_gun } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_planetary_gun_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_planetary_gun_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_planetary_gun_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_gun } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_planetary_gun_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_bunker_grid_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_bunker_grid_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_bunker_grid_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_bunker_grid_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_bunker_grid_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_bunker_grid_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_mechs_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_mechs_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mechs } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_mechs_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_mechs_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_mechs_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mechs } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_mechs_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_planetary_shield_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_planetary_shield_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_planetary_shield_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_planetary_shield_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_planetary_shield_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_planetary_shield_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_floating_city_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_floating_city_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_floating_city } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_floating_city_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_floating_city_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_floating_city_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_floating_city } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_floating_city_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_capital_complex_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_capital_complex_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_capital_complex } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_capital_complex_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_capital_complex_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_capital_complex_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_capital_complex } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_capital_complex_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_communication_hub_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_communication_hub_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_communication_hub } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_communication_hub_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_communication_hub_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_communication_hub_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_communication_hub } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_communication_hub_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_singularity_drive_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_singularity_drive_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_singularity_drive } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_singularity_drive_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_singularity_drive_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_singularity_drive_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_singularity_drive } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_singularity_drive_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_eternal_fortress_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_eternal_fortress } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_eternal_fortress_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_eternal_fortress_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_eternal_fortress } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_eternal_fortress_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_prison_planet_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_prison_planet_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_prison_planet } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_prison_planet_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_prison_planet_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_prison_planet_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_prison_planet } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_prison_planet_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_mines_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_mines_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mines } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_mines_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_mines_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_mines_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mines } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_mines_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_manufactorium_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_manufactorium_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_manufactorium } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_manufactorium_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_manufactorium_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_manufactorium_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_manufactorium } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_manufactorium_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_vaults_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_vaults_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_vaults } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_vaults_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_vaults_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_vaults_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_vaults } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_vaults_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_crashed_spacestation_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_crashed_spacestation } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_crashed_spacestation_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_crashed_spacestation_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_crashed_spacestation } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_crashed_spacestation_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_battleground_ruins_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_battleground_ruins_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_battleground_ruins_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_battleground_ruins_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_outpost_ruins_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_outpost_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_outpost_ruins_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_outpost_ruins_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_outpost_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_outpost_ruins_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_harbor_ruins_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_harbor_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_harbor_ruins_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_harbor_ruins_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_harbor_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_harbor_ruins_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_ruins_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_ruins_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_ruins_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_ruins_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_ruins_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_ruins_discovery_2"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_obelisks_discovery } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_obelisks_discovery } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_obelisks_discovery"
 		}
-		50 = {
+		10 = {
 			owner = { add_modifier = { modifier = gpm_precursor_obelisks_discovery_2 } }
 			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_obelisks_discovery_2 } }
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }

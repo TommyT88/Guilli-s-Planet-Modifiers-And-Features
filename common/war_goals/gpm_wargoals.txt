@@ -34,7 +34,7 @@ wg_gpm_r_dragon_trophy = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -92,7 +92,7 @@ wg_gpm_r_dragon_trophy = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -234,7 +234,7 @@ wg_gpm_r_khans_throne = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -292,7 +292,7 @@ wg_gpm_r_khans_throne = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -434,7 +434,7 @@ wg_gpm_r_worm_scales = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -493,7 +493,7 @@ wg_gpm_r_worm_scales = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -623,7 +623,7 @@ wg_gpm_r_rubricator = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -682,7 +682,7 @@ wg_gpm_r_rubricator = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -812,7 +812,7 @@ wg_gpm_r_galaxy = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -871,7 +871,7 @@ wg_gpm_r_galaxy = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -1001,7 +1001,7 @@ wg_gpm_r_omnicodex = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -1060,7 +1060,7 @@ wg_gpm_r_omnicodex = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -1182,7 +1182,7 @@ wg_gpm_r_surveyor = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -1241,7 +1241,7 @@ wg_gpm_r_surveyor = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -1372,7 +1372,7 @@ wg_gpm_r_ancient_sword = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -1431,7 +1431,7 @@ wg_gpm_r_ancient_sword = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -1573,7 +1573,7 @@ wg_gpm_r_severed_head = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -1632,7 +1632,7 @@ wg_gpm_r_severed_head = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -1778,7 +1778,7 @@ wg_gpm_r_prethoryn_queen = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -1837,7 +1837,7 @@ wg_gpm_r_prethoryn_queen = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -1991,7 +1991,7 @@ wg_gpm_r_unbidden_warlock = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -2050,7 +2050,7 @@ wg_gpm_r_unbidden_warlock = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -2196,7 +2196,7 @@ wg_gpm_r_contingency_core = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -2255,7 +2255,7 @@ wg_gpm_r_contingency_core = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -2389,7 +2389,7 @@ wg_gpm_r_zro_crystal = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -2448,7 +2448,7 @@ wg_gpm_r_zro_crystal = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -2578,7 +2578,7 @@ wg_gpm_r_the_last_baol = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -2637,7 +2637,7 @@ wg_gpm_r_the_last_baol = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -2791,7 +2791,7 @@ wg_gpm_r_the_defragmentor = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -2850,7 +2850,7 @@ wg_gpm_r_the_defragmentor = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -2985,7 +2985,7 @@ wg_gpm_r_reality_perforator = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -3044,7 +3044,7 @@ wg_gpm_r_reality_perforator = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -3190,7 +3190,7 @@ wg_gpm_r_pox_sample = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -3249,7 +3249,7 @@ wg_gpm_r_pox_sample = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -3415,7 +3415,7 @@ wg_gpm_r_cryo_core = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -3474,7 +3474,7 @@ wg_gpm_r_cryo_core = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -3600,7 +3600,7 @@ wg_gpm_r_war_forge = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -3659,7 +3659,7 @@ wg_gpm_r_war_forge = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -3829,7 +3829,7 @@ wg_gpm_r_time_displacer = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -3888,7 +3888,7 @@ wg_gpm_r_time_displacer = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -4023,7 +4023,7 @@ wg_gpm_r_alien_eggs = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -4082,7 +4082,7 @@ wg_gpm_r_alien_eggs = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -4227,7 +4227,7 @@ wg_gpm_r_machine_world_core = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -4286,7 +4286,7 @@ wg_gpm_r_machine_world_core = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -4428,7 +4428,7 @@ wg_gpm_r_encyclopedia_galactica = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -4487,7 +4487,7 @@ wg_gpm_r_encyclopedia_galactica = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -4636,7 +4636,7 @@ wg_gpm_r_zero_energy_generator = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -4695,7 +4695,7 @@ wg_gpm_r_zero_energy_generator = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -4824,7 +4824,7 @@ wg_gpm_r_quantum_sphere = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -4883,7 +4883,7 @@ wg_gpm_r_quantum_sphere = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -5024,7 +5024,7 @@ wg_gpm_r_ai_architect = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -5083,7 +5083,7 @@ wg_gpm_r_ai_architect = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -5220,7 +5220,7 @@ wg_gpm_r_encrypted_sct = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -5279,7 +5279,7 @@ wg_gpm_r_encrypted_sct = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -5424,7 +5424,7 @@ wg_gpm_r_experimental_weapon = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -5483,7 +5483,7 @@ wg_gpm_r_experimental_weapon = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -5632,7 +5632,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -5691,7 +5691,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -5828,7 +5828,7 @@ wg_gpm_r_power_core = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -5887,7 +5887,7 @@ wg_gpm_r_power_core = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -6024,7 +6024,7 @@ wg_gpm_r_mysterious_shield_generator = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -6083,7 +6083,7 @@ wg_gpm_r_mysterious_shield_generator = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -6224,7 +6224,7 @@ wg_gpm_r_gravity_engine = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -6283,7 +6283,7 @@ wg_gpm_r_gravity_engine = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -6416,7 +6416,7 @@ wg_gpm_r_codex_administratum = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -6475,7 +6475,7 @@ wg_gpm_r_codex_administratum = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -6616,7 +6616,7 @@ wg_gpm_r_enigmatic_advisor = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -6675,7 +6675,7 @@ wg_gpm_r_enigmatic_advisor = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -6832,7 +6832,7 @@ wg_gpm_r_positronic_microchip = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -6891,7 +6891,7 @@ wg_gpm_r_positronic_microchip = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -7032,7 +7032,7 @@ wg_gpm_r_venerable_dreadnaught = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -7091,7 +7091,7 @@ wg_gpm_r_venerable_dreadnaught = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -7232,7 +7232,7 @@ wg_gpm_r_sentinel_queen = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -7291,7 +7291,7 @@ wg_gpm_r_sentinel_queen = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -7440,7 +7440,7 @@ wg_gpm_r_earthquake_engine = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -7499,7 +7499,7 @@ wg_gpm_r_earthquake_engine = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -7628,7 +7628,7 @@ wg_gpm_r_manufactorium_ship = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -7687,7 +7687,7 @@ wg_gpm_r_manufactorium_ship = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -7836,7 +7836,7 @@ wg_gpm_r_datacube = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -7895,7 +7895,7 @@ wg_gpm_r_datacube = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -8020,7 +8020,7 @@ wg_gpm_r_self_assembly_hub = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -8079,7 +8079,7 @@ wg_gpm_r_self_assembly_hub = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -8204,7 +8204,7 @@ wg_gpm_r_banner_of_the_fallen = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -8267,7 +8267,7 @@ wg_gpm_r_banner_of_the_fallen = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -8420,7 +8420,7 @@ wg_gpm_r_cloaking_device = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -8484,7 +8484,7 @@ wg_gpm_r_cloaking_device = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -8645,7 +8645,7 @@ wg_gpm_r_q_storage_compressor = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -8704,7 +8704,7 @@ wg_gpm_r_q_storage_compressor = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -8829,7 +8829,7 @@ wg_gpm_r_soul_gem = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -8888,7 +8888,7 @@ wg_gpm_r_soul_gem = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
@@ -9037,7 +9037,7 @@ wg_gpm_r_self_repairing_obelisk = {
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				any_owned_planet = {
 					is_colony = yes
 					root = {
@@ -9096,7 +9096,7 @@ wg_gpm_r_self_repairing_obelisk = {
 		# actions on all other countries to remove known relic flags
 		every_relation = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				has_communications = root
 			}
 			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"

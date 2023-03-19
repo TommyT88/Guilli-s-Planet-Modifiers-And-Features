@@ -8,10 +8,10 @@ trade_action_gpm_r_encyclopedia_galactica = {
 
 	potential = {
 		has_relic = gpm_r_encyclopedia_galactica
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_encyclopedia_galactica }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -40,7 +40,7 @@ trade_action_gpm_r_encyclopedia_galactica = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encyclopedia_galactica >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -182,10 +182,10 @@ trade_action_gpm_r_zero_energy_generator = {
 
 	potential = {
 		has_relic = gpm_r_zero_energy_generator
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_zero_energy_generator }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -214,7 +214,7 @@ trade_action_gpm_r_zero_energy_generator = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_zero_energy_generator >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -336,10 +336,10 @@ trade_action_gpm_r_quantum_sphere = {
 
 	potential = {
 		has_relic = gpm_r_quantum_sphere
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_quantum_sphere }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -368,7 +368,7 @@ trade_action_gpm_r_quantum_sphere = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_quantum_sphere >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -502,10 +502,10 @@ trade_action_gpm_r_ai_architect = {
 
 	potential = {
 		has_relic = gpm_r_ai_architect
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_ai_architect }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -534,7 +534,7 @@ trade_action_gpm_r_ai_architect = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_ai_architect >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -664,10 +664,10 @@ trade_action_gpm_r_encrypted_sct = {
 
 	potential = {
 		has_relic = gpm_r_encrypted_sct
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_encrypted_sct }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -696,7 +696,7 @@ trade_action_gpm_r_encrypted_sct = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encrypted_sct >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -834,10 +834,10 @@ trade_action_gpm_r_experimental_weapon = {
 
 	potential = {
 		has_relic = gpm_r_experimental_weapon
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_experimental_weapon }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -866,7 +866,7 @@ trade_action_gpm_r_experimental_weapon = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_experimental_weapon >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -1006,10 +1006,10 @@ trade_action_gpm_r_fallout_emergency_replicator = {
 
 	potential = {
 		has_relic = gpm_r_fallout_emergency_replicator
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_fallout_emergency_replicator }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -1038,7 +1038,7 @@ trade_action_gpm_r_fallout_emergency_replicator = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_fallout_emergency_replicator >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -1168,10 +1168,10 @@ trade_action_gpm_r_power_core = {
 
 	potential = {
 		has_relic = gpm_r_power_core
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_power_core }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -1200,7 +1200,7 @@ trade_action_gpm_r_power_core = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_power_core >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -1330,10 +1330,10 @@ trade_action_gpm_r_mysterious_shield_generator = {
 
 	potential = {
 		has_relic = gpm_r_mysterious_shield_generator
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_mysterious_shield_generator }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -1362,7 +1362,7 @@ trade_action_gpm_r_mysterious_shield_generator = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_mysterious_shield_generator >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -1496,10 +1496,10 @@ trade_action_gpm_r_gravity_engine = {
 
 	potential = {
 		has_relic = gpm_r_gravity_engine
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_gravity_engine }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -1528,7 +1528,7 @@ trade_action_gpm_r_gravity_engine = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_gravity_engine >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -1654,10 +1654,10 @@ trade_action_gpm_r_codex_administratum = {
 
 	potential = {
 		has_relic = gpm_r_codex_administratum
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_codex_administratum }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -1686,7 +1686,7 @@ trade_action_gpm_r_codex_administratum = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_codex_administratum >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -1820,10 +1820,10 @@ trade_action_gpm_r_enigmatic_advisor = {
 
 	potential = {
 		has_relic = gpm_r_enigmatic_advisor
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_enigmatic_advisor }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -1852,7 +1852,7 @@ trade_action_gpm_r_enigmatic_advisor = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_enigmatic_advisor >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2002,10 +2002,10 @@ trade_action_gpm_r_positronic_microchip = {
 
 	potential = {
 		has_relic = gpm_r_positronic_microchip
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_positronic_microchip }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -2034,7 +2034,7 @@ trade_action_gpm_r_positronic_microchip = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_positronic_microchip >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2168,10 +2168,10 @@ trade_action_gpm_r_venerable_dreadnaught = {
 
 	potential = {
 		has_relic = gpm_r_venerable_dreadnaught
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_venerable_dreadnaught }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -2200,7 +2200,7 @@ trade_action_gpm_r_venerable_dreadnaught = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_venerable_dreadnaught >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2334,10 +2334,10 @@ trade_action_gpm_r_sentinel_queen = {
 
 	potential = {
 		has_relic = gpm_r_sentinel_queen
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_sentinel_queen }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -2366,7 +2366,7 @@ trade_action_gpm_r_sentinel_queen = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_sentinel_queen >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2508,10 +2508,10 @@ trade_action_gpm_r_earthquake_engine = {
 
 	potential = {
 		has_relic = gpm_r_earthquake_engine
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_earthquake_engine }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -2540,7 +2540,7 @@ trade_action_gpm_r_earthquake_engine = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_earthquake_engine >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2662,10 +2662,10 @@ trade_action_gpm_r_manufactorium_ship = {
 
 	potential = {
 		has_relic = gpm_r_manufactorium_ship
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_manufactorium_ship }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -2694,7 +2694,7 @@ trade_action_gpm_r_manufactorium_ship = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_manufactorium_ship >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2836,10 +2836,10 @@ trade_action_gpm_r_datacube = {
 
 	potential = {
 		has_relic = gpm_r_datacube
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_datacube }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -2868,7 +2868,7 @@ trade_action_gpm_r_datacube = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_datacube >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -2986,10 +2986,10 @@ trade_action_gpm_r_self_assembly_hub = {
 
 	potential = {
 		has_relic = gpm_r_self_assembly_hub
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_self_assembly_hub }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -3018,7 +3018,7 @@ trade_action_gpm_r_self_assembly_hub = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_assembly_hub >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -3136,10 +3136,10 @@ trade_action_gpm_r_banner_of_the_fallen = {
 
 	potential = {
 		has_relic = gpm_r_banner_of_the_fallen
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_banner_of_the_fallen }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -3175,7 +3175,7 @@ trade_action_gpm_r_banner_of_the_fallen = {
 			}
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -3321,10 +3321,10 @@ trade_action_gpm_r_cloaking_device = {
 
 	potential = {
 		has_relic = gpm_r_cloaking_device
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_cloaking_device }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -3360,7 +3360,7 @@ trade_action_gpm_r_cloaking_device = {
 			}
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -3514,10 +3514,10 @@ trade_action_gpm_r_q_storage_compressor = {
 
 	potential = {
 		has_relic = gpm_r_q_storage_compressor
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_q_storage_compressor }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -3546,7 +3546,7 @@ trade_action_gpm_r_q_storage_compressor = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_q_storage_compressor >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -3664,10 +3664,10 @@ trade_action_gpm_r_soul_gem = {
 
 	potential = {
 		has_relic = gpm_r_soul_gem
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_soul_gem }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -3696,7 +3696,7 @@ trade_action_gpm_r_soul_gem = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_soul_gem >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -3838,10 +3838,10 @@ trade_action_gpm_r_self_repairing_obelisk = {
 
 	potential = {
 		has_relic = gpm_r_self_repairing_obelisk
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_self_repairing_obelisk }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -3870,7 +3870,7 @@ trade_action_gpm_r_self_repairing_obelisk = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_repairing_obelisk >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"

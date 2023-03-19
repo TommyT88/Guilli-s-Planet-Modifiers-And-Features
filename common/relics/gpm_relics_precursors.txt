@@ -80,8 +80,7 @@ gpm_r_encyclopedia_galactica = {
 			every_country = {
 				limit = {
 					OR = {
-						is_country_type = fallen_empire
-						is_country_type = awakened_fallen_empire
+						is_fallen_empire = yes
 					}
 				}
 				add_opinion_modifier = {
@@ -1267,7 +1266,7 @@ gpm_r_q_storage_compressor = {
 		category = relics
 		# Activation cost
 		cost = {
-			energy = 10000
+			energy = 15000
 		}
 	}
 	
@@ -1286,21 +1285,21 @@ gpm_r_q_storage_compressor = {
 
 	active_effect = {
 		random_list = {
-			10 = { add_resource = { minerals = 10000 } }
+			10 = { add_resource = { minerals = 20000 } }
 			10 = { 
 				add_resource = { consumer_goods = 5000 }
 				modifier = { factor = 0 is_machine_empire = yes }
 			}
 			10 = { add_resource = { alloys = 5000 } }
-			10 = { add_resource = { rare_crystals = 1000 } }
-			10 = { add_resource = { volatile_motes = 1000 } }
-			10 = { add_resource = { exotic_gases = 1000 } }
-			10 = { add_resource = { sr_living_metal = 200 } }
-			10 = { add_resource = { sr_zro = 200 } }
-			10 = { add_resource = { sr_dark_matter = 200 } }
-			10 = { add_resource = { nanites = 200 } }
+			10 = { add_resource = { rare_crystals = 1500 } }
+			10 = { add_resource = { volatile_motes = 1500 } }
+			10 = { add_resource = { exotic_gases = 1500 } }
+			10 = { add_resource = { sr_living_metal = 250 } }
+			10 = { add_resource = { sr_zro = 250 } }
+			10 = { add_resource = { sr_dark_matter = 250 } }
+			10 = { add_resource = { nanites = 250 } }
 			10 = { 
-				add_resource = { minor_artifacts = 1000 }
+				add_resource = { minor_artifacts = 5000 }
 				modifier = { factor = 0 has_ancrel = no }
 			}
 		}

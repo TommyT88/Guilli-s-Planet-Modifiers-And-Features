@@ -8,8 +8,8 @@ gpm_added_to_default_empire = {
 		### END DEBUGGING ###
 		modifier = {
 			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
+				gpm_is_country_type_default = yes
+				gpm_is_country_type_awakened_fallen_empire = yes
 			}
 			weight = 1
 		}

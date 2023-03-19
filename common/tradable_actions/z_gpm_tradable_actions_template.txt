@@ -3,10 +3,10 @@
 
 	# potential = {
 		# has_relic = gpm_r_!!0000000000000000000000000
-		# is_country_type = default
+		# gpm_is_country_type_default = yes
 		
 		# from = {
-			# is_country_type = default
+			# gpm_is_country_type_default = yes
 			# not = { has_relic = gpm_r_!!0000000000000000000000000 }
 			
 			# # either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -32,7 +32,7 @@
 			# add_relic = gpm_r_!!0000000000000000000000000
 			# every_relation = {
 				# limit = {
-					# is_country_type = default
+					# gpm_is_country_type_default = yes
 					# has_communications = prev
 				# }
 				# create_message = {

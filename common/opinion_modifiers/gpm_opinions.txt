@@ -6,9 +6,8 @@ opinion_respected_species = {
 			add = 40
 			FROM = {
 				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
+					gpm_is_country_type_default = yes
+					is_fallen_empire = yes
 				}
 				exists = ruler
 				ruler = {
@@ -19,9 +18,8 @@ opinion_respected_species = {
 				}	
 			}
 			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				gpm_is_country_type_default = yes
+				is_fallen_empire = yes
 			}
 			NOT = {
 				exists = ruler

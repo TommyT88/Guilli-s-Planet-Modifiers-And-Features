@@ -3,8 +3,7 @@ gpm_is_planet_fallen_empire = {
 	exists = owner
 	owner = {
 		OR = {
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
+			is_fallen_empire = yes
 		}
 	}
 }
@@ -13,8 +12,7 @@ gpm_is_fallen_empire_space_owner = {
 	exists = space_owner
 	space_owner = {
 		OR = {
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
+			is_fallen_empire = yes
 		}
 	}
 }

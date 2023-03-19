@@ -298,12 +298,12 @@ gpm_designate_wonder_world = {
 }
 
 gpm_make_precursor_ruined_world = {
-	optimize_memory
 	change_pc = pc_gpm_precursor_tomb
 	clear_deposits = yes
 	# clear_planet_modifiers = yes
 	gpm_purge_all_core_modifiers = yes
 	gpm_purge_all_planetary_modifiers = yes
+	gpm_roll_planetary_features_unique = yes
 	# Planet Modifier Scaling
 	if = {
 		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -443,7 +443,6 @@ gpm_colour_planet_name = {
 
 # Remove planet name and icon and reset name to something that makes sense
 gpm_reset_planet_name = {
-	optimize_memory
 	if = { 
 		limit = {
 			OR = {
@@ -1855,7 +1854,6 @@ gpm_create_primitive_relic_world = {
 }
 
 gpm_remove_galaxy_generation_deposits = {
-	optimize_memory
 	if = {
 		limit = {
 			solar_system = {
@@ -1874,8 +1872,8 @@ gpm_remove_galaxy_generation_deposits = {
 		}
 
 		random_list = {
-			85 = { }
-			15 = {
+			75 = { }
+			25 = {
 				if = {
 					limit = { has_deposit = d_minerals_2 }
 					remove_deposit = d_minerals_2

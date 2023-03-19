@@ -357,7 +357,12 @@ gpm_building_manufactory_hub = {
 	category = manufacturing
 
 	potential = {
-		exists = owner
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		has_any_industry_district = yes
 	}
 
 	# destroy_trigger = {
@@ -374,10 +379,31 @@ gpm_building_manufactory_hub = {
 			# }
 		# }
 	# }
-	
-	planet_modifier = {
-		planet_jobs_consumer_goods_produces_mult = 0.15
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_jobs_consumer_goods_produces_mult = 0.20
+		}
+	}	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			planet_jobs_alloys_produces_mult = 0.15
+		}
 	}
+	
+	
+	### Normal Empires ###
 
 
 	triggered_planet_modifier = {
@@ -405,6 +431,48 @@ gpm_building_manufactory_hub = {
 			job_artificer_add = 2
 		}
 	}
+	
+	
+	### Hive Empires ###
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+	
+	### Machine Empires ###
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_catalytic_drone_add = 2
+		}
+	}	
 
 	resources = {
 		category = planet_buildings
@@ -445,61 +513,36 @@ gpm_building_manufactory_hub = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
 		}
-		text = job_artisan_drone_effect_desc
+		text = job_alloy_drone_effect_desc
 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 250
-			OR = {
-				has_building = building_factory_1
-				has_building = building_factory_2
-				has_building = building_factory_3
-			}
-			owner = {
-				OR = {
-					is_gestalt = no
-					has_valid_civic = civic_machine_servitor
-				}
-			}
-		}
-		modifier = {
-			weight = 1000
-			jobs_work_minerals_goods = no
-			owner = {
-				OR = {
-					is_gestalt = no
-					has_valid_civic = civic_machine_servitor
-				}
-			}
-			owner = {
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 20
-				}
-				OR = {
-					has_monthly_income = {
-						resource = food
-						value >= 0
-					}
-					has_resource = {
-						type = food
-						amount > 0
-					}
-				}#Check to see if consumer goods shortage is being caused by a food shortage.
-			}
-		}
-	}
-
-	ai_resource_production = {
-		consumer_goods = 1
+	triggered_desc = {
 		trigger = {
-			always = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
 		}
+		text = job_fabricator_effect_desc
 	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_drone_effect_desc
+	}
+
 }
 
 gpm_building_core_prison = {

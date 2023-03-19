@@ -386,17 +386,15 @@ country_event = {
 		exists = from
 		from = {
 			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-				is_country_type = fallen_empire
+				gpm_is_country_type_default = yes
+				is_fallen_empire = yes
 			}
 		}
 		exists = this
 		this = {
 			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-				is_country_type = fallen_empire
+				gpm_is_country_type_default = yes
+				is_fallen_empire = yes
 			}
 		}
 		# additional preventive check against primitives
@@ -444,7 +442,7 @@ country_event = {
 			every_relation = {
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root
 						has_intel_level = {
 							who = root
@@ -468,7 +466,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root
 						has_intel_level = {
 							who = root
@@ -492,7 +490,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root
 						has_intel_level = {
 							who = root

@@ -702,7 +702,7 @@ country_event = {
 		hidden_effect = {
 			#create custom scientist
 			random_country = {
-				limit = { is_country_type = default }
+				limit = { gpm_is_country_type_default = yes }
 				owner_species = { save_event_target_as = gpm_random_species }
 			}
 			create_leader = {

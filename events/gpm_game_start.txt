@@ -28,7 +28,7 @@ event = {
 
 		# small mineral boost to all countries starting system
 		every_country =  {
-			limit = { is_country_type = default	}
+			limit = { gpm_is_country_type_default = yes	}
 			# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
 			random_owned_planet = {
 				limit = { is_capital = yes }

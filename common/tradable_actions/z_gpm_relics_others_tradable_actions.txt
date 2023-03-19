@@ -8,10 +8,10 @@ trade_action_gpm_r_time_displacer = {
 
 	potential = {
 		has_relic = gpm_r_time_displacer
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_time_displacer }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -40,7 +40,7 @@ trade_action_gpm_r_time_displacer = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_time_displacer >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -164,10 +164,10 @@ trade_action_gpm_r_alien_eggs = {
 
 	potential = {
 		has_relic = gpm_r_alien_eggs
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_alien_eggs }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -196,7 +196,7 @@ trade_action_gpm_r_alien_eggs = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_alien_eggs >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
@@ -334,10 +334,10 @@ trade_action_gpm_r_machine_world_core = {
 
 	potential = {
 		has_relic = gpm_r_machine_world_core
-		is_country_type = default
+		gpm_is_country_type_default = yes
 		
 		from = {
-			is_country_type = default
+			gpm_is_country_type_default = yes
 			not = { has_relic = gpm_r_machine_world_core }
 			
 			# either the "buyer" knows about the relic, is the overlord of the seller, or has enough intel
@@ -366,7 +366,7 @@ trade_action_gpm_r_machine_world_core = {
 			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
-					is_country_type = default
+					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
 				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"

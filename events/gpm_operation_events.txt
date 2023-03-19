@@ -8,7 +8,7 @@ country_event = {
 	immediate = {
 		owner = {
 			every_country = {
-				limit = { is_country_type = default }
+				limit = { gpm_is_country_type_default = yes }
 
 				# give relics
 				random_list = {
@@ -540,7 +540,7 @@ espionage_operation_event = {
 		# Other known empires with sufficient intelligence are notified a relic has been stolen
 		every_country = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				AND = {
 					has_communications = root.from
 					has_communications = root.owner
@@ -635,7 +635,7 @@ country_event = {
 				limit = { num_owned_relics = 1 }
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					log = "<< RELICS >> | RELIC STOLEN <<< create message on THIS = [THIS.GetName]; every relation notifcation"
@@ -656,7 +656,7 @@ country_event = {
 				limit = { num_owned_relics > 1 }
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					log = "<< RELICS >> | RELIC STOLEN <<< create message on THIS = [THIS.GetName]; every relation notifcation"
@@ -718,7 +718,7 @@ country_event = {
 			every_relation = {
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 						has_intel_level = {
 							who = root.owner
@@ -742,7 +742,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 						has_intel_level = {
 							who = root.owner
@@ -766,7 +766,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 						has_intel_level = {
 							who = root.owner
@@ -840,7 +840,7 @@ country_event = {
 		}
 		every_country = {
 			limit = {
-				is_country_type = default
+				gpm_is_country_type_default = yes
 				NOT = { is_country = fromfrom }
 				OR = {
 					is_overlord_to = fromfrom
@@ -876,7 +876,7 @@ country_event = {
 			every_relation = {
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 						has_intel_level = {
 							who = root.owner
@@ -900,7 +900,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 						has_intel_level = {
 							who = root.owner
@@ -924,7 +924,7 @@ country_event = {
 				}
 				if = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 						has_intel_level = {
 							who = root.owner

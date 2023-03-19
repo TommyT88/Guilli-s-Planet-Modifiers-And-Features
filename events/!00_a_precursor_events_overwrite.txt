@@ -257,7 +257,7 @@ ship_event = {
 				log = "<< RELICS >> | ADD_RELIC <<< r_reality_perforator >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					create_message = {
@@ -362,7 +362,7 @@ ship_event = {
 				log = "<< RELICS >> | ADD_RELIC <<< r_cryo_core >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					create_message = {
@@ -558,7 +558,7 @@ ship_event = {
 				log = "<< RELICS >> | ADD_RELIC <<< r_pox_sample >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					create_message = {
@@ -685,7 +685,7 @@ ship_event = {
 				log = "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					create_message = {
@@ -754,7 +754,7 @@ ship_event = {
 				log = "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					create_message = {
@@ -826,7 +826,7 @@ ship_event = {
 				log = "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
-						is_country_type = default
+						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
 					create_message = {

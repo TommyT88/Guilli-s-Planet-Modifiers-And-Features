@@ -1,10 +1,27 @@
-is_terraforming_candidate = {
-	optimize_memory
-	# OR = {
-		has_modifier = terraforming_candidate
-		# has_modifier = terraforming_candidate_precursor
-	# }
+
+
+# custom trigger for mod-compatibility. Replace this if your mod adds more playable country types
+gpm_is_country_type_default = {
+	is_country_type = default
 }
+# custom trigger for mod-compatibility. Replace this if your mod adds more fallen empire country types 
+gpm_is_country_type_awakened_fallen_empire = {
+	is_country_type = awakened_fallen_empire
+}
+gpm_is_country_type_fallen_empire = {
+	is_country_type = fallen_empire
+}
+
+
+
+
+# is_terraforming_candidate = {
+# 	optimize_memory
+# 	# OR = {
+# 		has_modifier = terraforming_candidate
+# 		# has_modifier = terraforming_candidate_precursor
+# 	# }
+# }
 
 gpm_engine_forbidden_planets = {
 	optimize_memory

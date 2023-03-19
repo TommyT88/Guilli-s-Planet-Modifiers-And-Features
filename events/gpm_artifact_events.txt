@@ -28,6 +28,7 @@ country_event = {
 						has_technology = tech_zero_point_power
 					}
 				}
+				# AI empires get a boost to spice things up
 				modifier = { factor = 10 is_ai = yes }
 			}
 			1 = {
@@ -44,6 +45,7 @@ country_event = {
 						has_technology = tech_cold_fusion_power
 					}
 				}
+				# AI empires get a boost to spice things up
 				modifier = { factor = 10 is_ai = yes }
 			}
 			1 = {
@@ -60,10 +62,11 @@ country_event = {
 						has_technology = tech_cold_fusion_power
 					}
 				}
+				# AI empires get a boost to spice things up
 				modifier = { factor = 10 is_ai = yes }
 			}
 			# precursor tech
-			97 = {
+			80 = {
 				locked_random_list = {
 					10 = {
 						add_research_option = tech_gpm_precursor_remnants_discovery

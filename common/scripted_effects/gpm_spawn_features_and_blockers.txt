@@ -7,7 +7,7 @@ gpm_roll_planetary_features = {
 	# set unique features
 	if = {
 		limit = {
-			OR = { 
+			OR = {
 				gpm_is_planet_class_normal_habitable = yes
 				gpm_is_planet_class_nuked = yes
 				gpm_is_planet_class_city = yes
@@ -83,7 +83,7 @@ gpm_roll_planetary_features = {
 		}
 		# roll blockers
 		gpm_roll_planetary_blockers = yes
-		
+
 	}
 	# roll city features
 	if = {
@@ -155,7 +155,7 @@ gpm_roll_planetary_blockers = {
 		}
 		if = {
 			limit = {
-				planet_size > 10 
+				planet_size > 10
 				planet_size < 16
 				free_district_slots >= 3
 			}
@@ -207,7 +207,7 @@ gpm_roll_planetary_features_unique = {
 	if = {
 		limit = {
 			AND = {
-				has_modifier = gpm_android_pleasure_palace 
+				has_modifier = gpm_android_pleasure_palace
 				NOT = { has_deposit = gpm_d_android_pleasure_palace }
 			}
 		}
@@ -216,7 +216,7 @@ gpm_roll_planetary_features_unique = {
 	if = {
 		limit = {
 			AND = {
-				has_modifier = gpm_precursor_planetary_shield 
+				has_modifier = gpm_precursor_planetary_shield
 				NOT = { has_deposit = gpm_d_precursor_planetary_shield }
 			}
 		}
@@ -225,7 +225,7 @@ gpm_roll_planetary_features_unique = {
 	if = {
 		limit = {
 			AND = {
-				has_modifier = gpm_precursor_capital_complex 
+				has_modifier = gpm_precursor_capital_complex
 				NOT = { has_deposit = gpm_d_precursor_capital_complex }
 			}
 		}
@@ -234,7 +234,7 @@ gpm_roll_planetary_features_unique = {
 	if = {
 		limit = {
 			AND = {
-				has_modifier = gpm_temple_of_the_ancient_one 
+				has_modifier = gpm_temple_of_the_ancient_one
 				NOT = { has_deposit = gpm_d_temple_of_the_ancient_one }
 			}
 		}
@@ -543,8 +543,8 @@ gpm_roll_planetary_features_normal_habitable = {
 				10 = { gpm_remove_random_vanilla_energy_planetary_feature = yes }
 				10 = { gpm_remove_random_vanilla_food_planetary_feature = yes }
 			}
-			modifier = { factor = 0 
-				NOR = { 
+			modifier = { factor = 0
+				NOR = {
 					has_modifier = gpm_magma_ocean
 					has_modifier = unstable_tectonics
 					has_modifier = gpm_unstable_tectonics_2
@@ -559,8 +559,8 @@ gpm_roll_planetary_features_normal_habitable = {
 				10 = { gpm_remove_random_vanilla_mineral_planetary_feature = yes }
 				10 = { gpm_remove_random_vanilla_food_planetary_feature = yes }
 			}
-			modifier = { factor = 0 
-				NOR = { 
+			modifier = { factor = 0
+				NOR = {
 					has_modifier = gpm_toxic_gas
 					has_modifier = gpm_magma_ocean
 					has_modifier = unstable_tectonics
@@ -576,8 +576,8 @@ gpm_roll_planetary_features_normal_habitable = {
 				10 = { gpm_remove_random_vanilla_energy_planetary_feature = yes }
 				10 = { gpm_remove_random_vanilla_food_planetary_feature = yes }
 			}
-			modifier = { factor = 0 
-				NOR = { 
+			modifier = { factor = 0
+				NOR = {
 					has_modifier = gpm_subterranean_eco_system
 					has_modifier = gpm_extensive_cavern_system
 				}
@@ -786,8 +786,8 @@ gpm_roll_planetary_features_normal_habitable = {
 				10 = { gpm_remove_random_vanilla_energy_planetary_feature = yes }
 				10 = { gpm_remove_random_vanilla_food_planetary_feature = yes }
 			}
-			modifier = { factor = 0 
-				NAND = { 
+			modifier = { factor = 0
+				NAND = {
 					has_modifier = gpm_dunes
 					gpm_is_planet_dry_hot = yes
 				}
@@ -810,9 +810,9 @@ gpm_roll_planetary_features_normal_habitable = {
 				10 = { gpm_remove_random_vanilla_mineral_planetary_feature = yes }
 				10 = { gpm_remove_random_vanilla_food_planetary_feature = yes }
 			}
-			modifier = { factor = 0 
-				NOR = { 
-					has_modifier = gpm_beautiful_lakes 
+			modifier = { factor = 0
+				NOR = {
+					has_modifier = gpm_beautiful_lakes
 					has_modifier = gpm_warm_water_lakes
 				}
 			}
@@ -951,7 +951,7 @@ gpm_roll_planetary_blockers_normal_habitable = {
 		limit = {
 			gpm_is_planet_wet_cold = yes
 			NOT = { is_planet_class = pc_ocean }
-			free_district_slots > 2 
+			free_district_slots > 2
 		}
 		add_deposit = gpm_tb_forest_resources
 	}
@@ -959,26 +959,26 @@ gpm_roll_planetary_blockers_normal_habitable = {
 		limit = {
 			gpm_is_planet_wet_hot = yes
 			NOT = { is_planet_class = pc_ocean }
-			free_district_slots > 2 
+			free_district_slots > 2
 		}
 		add_deposit = gpm_tb_swamp_resources
 	}
 	if = {
 		limit = {
 			gpm_is_planet_dry_cold = yes
-			free_district_slots > 2 
+			free_district_slots > 2
 		}
 		add_deposit = gpm_tb_crystal_growth_resources
 	}
 	if = {
 		limit = {
 			gpm_is_planet_dry_hot = yes
-			free_district_slots > 2 
+			free_district_slots > 2
 		}
 		add_deposit = gpm_tb_lethal_overgrowth_resources
 	}
 	if = {
-		limit = { 
+		limit = {
 			OR = {
 				has_modifier = gpm_ruined_battlefield
 				has_modifier = gpm_spaceship_graveyard
@@ -1010,53 +1010,53 @@ gpm_roll_planetary_blockers_normal_habitable = {
 				add_deposit =  d_mountain_range
 				modifier = { factor = 0 planet_size < 10 }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_active_volcano
 				modifier = { factor = 0 planet_size < 10 }
 			}
 			5 = {
 				add_deposit =  d_dangerous_wildlife_blocker
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_dense_jungle
 				modifier = { factor = 0 gpm_is_planet_wet_hot = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_toxic_kelp
 				modifier = { factor = 0 gpm_is_planet_water = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_deep_sinkhole
 				modifier = { factor = 0 gpm_is_planet_dry_hot = no }
 			}
-			10 = { 
+			10 = {
 				add_deposit =  d_quicksand_basin
 				modifier = { factor = 0 gpm_is_planet_dry_hot = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_noxious_swamp
 				modifier = { factor = 0 gpm_is_planet_wet_hot = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_massive_glacier
 				modifier = { factor = 0 gpm_is_planet_wet_cold = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_radioactive_wasteland
 				modifier = { factor = 0 gpm_is_planet_class_nuked = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_city_ruins
 				modifier = { factor = 0 gpm_is_planet_class_nuked = no }
 			}
-			5 = { 
+			5 = {
 				add_deposit =  d_bomb_crater
 				modifier = { factor = 0 gpm_is_planet_class_nuked = no }
 				modifier = { factor = 2 has_modifier = gpm_ruined_battlefield }
 			}
 			5 = {
 				add_deposit =  d_crater
-				modifier = { factor = 0 
+				modifier = { factor = 0
 					NOR = {
 						has_modifier = asteroid_impacts
 						has_modifier = gpm_asteroid_impacts_2
@@ -1171,21 +1171,21 @@ gpm_roll_planetary_features_city = {
 					75 = { }
 					25 = { add_deposit =  gpm_d_relic_roaming_killbots }
 				}
-			}				
+			}
 			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
-		}		
+		}
 		10 = {
 			add_deposit =  gpm_d_relic_post_apocalyptic_housing
 			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
 			# modifier = { factor = 0 has_owner = no }
-		}		
+		}
 		10 = {
 			add_deposit =  gpm_d_relic_post_apocalyptic_scrapyards
 			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
 			# modifier = { factor = 0 has_owner = no }
 		}
 	}
-}	
+}
 
 # roll hive features
 gpm_roll_planetary_features_hive = {
@@ -1194,7 +1194,7 @@ gpm_roll_planetary_features_hive = {
 	random_list = {
 		10 = { }
 		10 = { }
-	}	
+	}
 }
 
 # roll machine world features
@@ -1204,7 +1204,7 @@ gpm_roll_planetary_features_machine = {
 	random_list = {
 		10 = { }
 		10 = { }
-	}	
+	}
 }
 
 # roll habitat features
@@ -1213,7 +1213,7 @@ gpm_roll_planetary_features_habitat = {
 	random_list = {
 		10 = { }
 		10 = { }
-	}	
+	}
 }
 
 # roll ringworld features
@@ -1222,7 +1222,7 @@ gpm_roll_planetary_features_ringworld = {
 	random_list = {
 		10 = { }
 		10 = { }
-	}	
+	}
 }
 
 
@@ -1231,12 +1231,13 @@ gpm_spawn_precursor_features = {
 	optimize_memory
 	if = {
 		limit = {
-			OR = { 
+			OR = {
 				gpm_is_planet_class_normal_habitable = yes
 				gpm_is_planet_class_nuked = yes
 				gpm_is_planet_class_city = yes
 				gpm_is_planet_class_machine = yes
-				gpm_is_planet_class_hive = yes			
+				gpm_is_planet_class_hive = yes
+				is_planet_class = pc_gpm_precursor_tomb
 			}
 		}
 		if = {
