@@ -180,7 +180,7 @@ ship_event = {
 						has_modifier = gpm_terraform_speed_three
 					}
 				}
-				country_event = { id = gpm_survey.2 }
+				root.owner = { country_event = { id = gpm_survey.2 } }
 			}
 		}
 	}
@@ -1342,9 +1342,9 @@ ship_event = {
 				PREVPREV = {
 					if = {
 						limit = {
-							leader = { not = { has_trait = leader_trait_scientist_psionic } }
+							leader = { not = { has_trait = leader_trait_psionic } }
 						}
-						leader = { add_trait = leader_trait_scientist_psionic }
+						leader = { add_trait = leader_trait_psionic }
 					}
 					else_if = {
 						limit = {
@@ -5932,7 +5932,7 @@ ship_event = {
 					}
 				}
 			}
-			FROM = { NOT = { owner = exists } }
+			FROM = { NOT = { space_owner = exists } }
 		}
 		name = gpm_survey.31.fire
 		# fire fire fire

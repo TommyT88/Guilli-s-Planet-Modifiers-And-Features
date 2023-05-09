@@ -15,9 +15,12 @@ gpm_spy_policy_steal_relic = {
 		# Weigts bases on oppinion levels. We dont steal from friends.
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = excellent
+				OR = {
+					is_friendly_to = root.target
+					is_loyal_to = root.target
+					is_protective_to = root.target
+					is_patronizing_to = root.target
+					is_custodial_to = root.target
 				}
 			}
 			factor = 0
@@ -25,27 +28,36 @@ gpm_spy_policy_steal_relic = {
 		
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = good
+				OR = {
+					is_neutral_to = root.target
+					is_dismissive_to = root.target
+					is_cordial_to = root.target
+					is_enigmatic_to = root.target
+					is_arrogant_to = root.target
 				}
 			}
 			factor = 0.5
 		}
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = poor
+				OR = {
+					is_unfriendly_to = root.target
+					is_disloyal_to = root.target
+					is_threatened_to = root.target
+					is_angry_to = root.target
+					is_domineering_to = root.target
+					is_imperious_to = root.target	
 				}
 			}
 			factor = 1.5
 		}
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = terrible
+				OR = {
+					is_hostile_to = root.target
+					is_belligerent_to = root.target
+					is_berserker_to = root.target
+					is_disloyal_to = root.target
 				}
 			}
 			factor = 2
@@ -231,36 +243,48 @@ gpm_spy_policy_rival = {
 		# Weigts bases on oppinion levels. We dont steal from friends.
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = excellent
+				OR = {
+					is_friendly_to = root.target
+					is_protective_to = root.target
+					is_patronizing_to = root.target
+					is_custodial_to = root.target
+					is_loyal_to = root.target
 				}
 			}
 			factor = 0
 		}
+		
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = good
+				OR = {
+					is_neutral_to = root.target
+					is_dismissive_to = root.target
+					is_cordial_to = root.target
+					is_arrogant_to = root.target
+					is_enigmatic_to = root.target
 				}
 			}
 			factor = 0.5
 		}
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = poor
+				OR = {
+					is_unfriendly_to = root.target
+					is_threatened_to = root.target
+					is_angry_to = root.target
+					is_domineering_to = root.target
+					is_imperious_to = root.target	
 				}
 			}
 			factor = 1.5
 		}
 		modifier = {
 			owner = {
-				opinion_level = {
-					who = root.target
-					level = terrible
+				OR = {
+					is_hostile_to = root.target
+					is_belligerent_to = root.target
+					is_berserker_to = root.target
+					is_disloyal_to = root.target
 				}
 			}
 			factor = 2

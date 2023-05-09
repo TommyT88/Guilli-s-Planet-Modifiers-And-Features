@@ -250,7 +250,7 @@ country_event = {
 	immediate = {
 		from = {
 			if = {
-				limit = { leader_class = ruler }
+				limit = { is_ruler = yes }
 				add_trait = trait_gpm_historian
 			}
 		}

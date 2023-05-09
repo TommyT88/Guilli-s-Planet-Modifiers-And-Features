@@ -2170,13 +2170,13 @@ gpm_random_reward_precursor_vaults = {
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
 				custom_tooltip = gpm_survey_reward_new_line
 			}
-			root = { leader = { add_trait = leader_trait_scientist_brainslug } }
-			modifier = { factor = 0 root = { leader = { has_trait = leader_trait_scientist_brainslug } } }
+			root = { leader = { add_trait = leader_trait_brainslug } }
+			modifier = { factor = 0 root = { leader = { has_trait = leader_trait_brainslug } } }
 			modifier = { factor = 0 root = { NOT = { exists = leader } } }
 			modifier = { factor = 0 root = { leader = { NOT = { leader_class = scientist } } } }
 			modifier = { factor = 0 is_machine_empire = yes }
 			modifier = { factor = 1.121 }     # trick to randomise seeded reward choice (hopefully)
-			# log = "gpm_random_reward_precursor_vaults : leader_trait_scientist_brainslug"
+			# log = "gpm_random_reward_precursor_vaults : leader_trait_brainslug"
 		}
 		10 = {
 			if = {
@@ -2184,13 +2184,13 @@ gpm_random_reward_precursor_vaults = {
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
 				custom_tooltip = gpm_survey_reward_new_line
 			}
-			root = { leader = { add_trait = leader_trait_cataloger } }
-			modifier = { factor = 0 root = { leader = { has_trait = leader_trait_cataloger } } }
+			root = { leader = { add_trait = leader_trait_xeno_cataloger } }
+			modifier = { factor = 0 root = { leader = { has_trait = leader_trait_xeno_cataloger } } }
 			modifier = { factor = 0 root = { NOT = { exists = leader } } }
 			modifier = { factor = 0 root = { leader = { NOT = { leader_class = scientist } } } }
 			modifier = { factor = 0 is_machine_empire = no }
 			modifier = { factor = 1.122 }     # trick to randomise seeded reward choice (hopefully)
-			# log = "gpm_random_reward_precursor_vaults : leader_trait_cataloger"
+			# log = "gpm_random_reward_precursor_vaults : leader_trait_xeno_cataloger"
 		}
 	}
 }
@@ -2642,13 +2642,13 @@ gpm_random_reward_precursor_obelisks = {
 				gpm_random_minor_artifacts_precursor = yes # random small amount of artifacts
 				custom_tooltip = gpm_survey_reward_new_line
 			}
-			root = { leader = { add_trait = leader_trait_scientist_psionic } }
-			modifier = { factor = 0 root = { leader = { has_trait = leader_trait_scientist_psionic } } }
+			root = { leader = { add_trait = leader_trait_psionic } }
+			modifier = { factor = 0 root = { leader = { has_trait = leader_trait_psionic } } }
 			modifier = { factor = 0 root = { NOT = { exists = leader } } }
 			modifier = { factor = 0 root = { leader = { NOT = { leader_class = scientist } } } }
 			modifier = { factor = 0 is_machine_empire = yes }
 			modifier = { factor = 1.161 }     # trick to randomise seeded reward choice (hopefully)
-			# log = "gpm_random_reward_precursor_obelisks : leader_trait_scientist_psionic"
+			# log = "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
 		}
 	}
 }
@@ -2995,28 +2995,53 @@ gpm_random_precursor_building_reward = {
 	### 
 	locked_random_list = {
 		2 = {
-			hidden_effect = { owner = { change_variable = { which = nano_forge_build_count value = 1 } } }
+			hidden_effect = {
+				owner = {
+					change_variable = { which = nano_forge_build_count value = 1 }
+					set_country_flag = nano_forge_can_build
+				}
+			}
 			custom_tooltip = gpm_unlock_one_nano_forge_build_count
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_unlock_one_nano_forge_build_count"
 		}
 		2 = {
-			hidden_effect = { owner = { change_variable = { which = skydome_build_count value = 1 } } }
+			hidden_effect = { 
+				owner = { 
+					change_variable = { which = skydome_build_count value = 1 }
+					set_country_flag = skydome_can_build
+				}
+			}
 			custom_tooltip = gpm_unlock_one_skydome_build_count
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_unlock_one_skydome_build_count"
 		}
 		2 = {
-			hidden_effect = { owner = { change_variable = { which = dimensional_fabricator_build_count value = 1 } } }
+			hidden_effect = { 
+				owner = { 
+					change_variable = { which = dimensional_fabricator_build_count value = 1 }
+					set_country_flag = dimensional_fabricator_can_build
+				}
+			}
 			custom_tooltip = gpm_unlock_one_dimensional_fabricator_build_count
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_unlock_one_dimensional_fabricator_build_count"
 		}
 		2 = {
-			hidden_effect = { owner = { change_variable = { which = affluence_center_build_count value = 1 } } }
+			hidden_effect = { 
+				owner = { 
+					change_variable = { which = affluence_center_build_count value = 1 }
+					set_country_flag = affluence_center_can_build
+				}
+			}
 			custom_tooltip = gpm_unlock_one_affluence_center_build_count
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_unlock_one_affluence_center_build_count"
 			modifier = { factor = 0 owner = { is_gestalt = yes } }
 		}
 		2 = {
-			hidden_effect = { owner = { change_variable = { which = nourishment_center_build_count value = 1 } } }
+			hidden_effect = { 
+				owner = { 
+					change_variable = { which = nourishment_center_build_count value = 1 }
+					set_country_flag = nourishment_center_can_build
+				}
+			}
 			custom_tooltip = gpm_unlock_one_nourishment_center_build_count
 			modifier = { factor = 0 owner = { is_machine_empire = yes } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_unlock_one_nourishment_center_build_count"

@@ -5,13 +5,13 @@ decision_gpm_machine_world_core_relic = {
 	#enactment_time = 0
 
     potential = {
+		exists = space_owner
+		space_owner = { has_country_flag = relic_machine_world_core_activated }
 		OR = {
 			gpm_is_planet_class_normal_uninhabitable = yes
 			gpm_is_planet_class_gas_giant = yes
 			is_planet_class = pc_broken
 		}
-		exists = space_owner
-		space_owner = { has_country_flag = relic_machine_world_core_activated }
 	}
 	
 	allow = {

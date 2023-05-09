@@ -101,15 +101,18 @@ operation_gpm_steal_relic = {
 	}
 
 	spy_power_cost = 70
-	potential = { }
+	potential = { 
+		target = { is_primitive = no }
+	}
 	allow = {
 		custom_tooltip = {
+			num_owned_relics > 0
 			target = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes
 					gpm_has_modded_precursor_relic = yes
 					gpm_has_modded_non_precursor_relic = yes
-					gpm_has_other_mod_relic = yes
+					gpm_has_other_mod_relic = yes						# only availible for supported relics for now
 				}
 			}
 			fail_text = gpm_target_has_no_relics_operation
@@ -221,6 +224,7 @@ operation_gpm_steal_minor_artifacts = {
 	spy_power_cost = 30
 	potential = {
 		always = no # disabled for now
+		target = { is_primitive = no }
 		#TEMP TO DEV TEST
 		owner = { is_ai = no }
 		owner = { has_ancrel = yes }
@@ -293,6 +297,7 @@ operation_gpm_sabotage_planet = {
 
 	potential = {
 		always = no # disabled for now
+		target = { is_primitive = no }
 		#TEMP TO DEV TEST
 		owner = { is_ai = no }
 

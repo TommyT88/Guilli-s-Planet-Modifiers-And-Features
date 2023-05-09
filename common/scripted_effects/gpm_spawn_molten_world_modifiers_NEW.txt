@@ -43,23 +43,6 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_silicon_crystals" }
-			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_silicon_crystals" }
-			# Not on these planets
-			# Never in these systems
-			# Tweaks		
-			random_list = {
-				100 = {	}
-				95 = { add_deposit = d_minerals_2 }
-				4 = { add_deposit = d_rare_crystals_1 }
-				1 = { add_deposit = d_rare_crystals_2 }
-			}
-			# Galaxy age setting modifier
-			# Weight Factor
-			modifier = { factor = @uncommon }
-		}
-		100 = {
 			add_modifier = { modifier = "gpm_lava_geysers" }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_lava_geysers" }

@@ -37,8 +37,11 @@ gpm_spawn_RES = {
 	#################################
 	if = {
 		limit = {
-			NOT = { has_global_flag = "has_system_scale_mod" }
-			NOT = { exists = space_owner }
+			NOR = {
+				has_global_flag = "has_system_scale_mod"
+				has_global_flag = "gpm_planetary_rings_disabled"
+				exists = space_owner
+			}
 		}
 
 		### BIG RINGS ###
@@ -1638,7 +1641,10 @@ gpm_spawn_RES = {
 	if = {
 		limit = {
 			has_global_flag = "has_system_scale_mod"
-			NOT = { exists = space_owner }
+			NOR = {
+				has_global_flag = "gpm_planetary_rings_disabled"
+				exists = space_owner
+			}
 		}
 		
 		### BIG RINGS ###

@@ -28,40 +28,7 @@ gpm_tech_ringworld_parabolic_forcefield = {
 
 	weight_modifier = {
 		factor = 0.5
-		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = society
-				has_level > 2
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = society
-				has_level > 3
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = society
-				has_level > 4
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
+			modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -81,13 +48,6 @@ gpm_tech_ringworld_parabolic_forcefield = {
 			factor = 3
 			has_ethic = "ethic_fanatic_spiritualist"
 		}
-		modifier = {
-			factor = 4
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_maniacal"
-			}
-		}
 	}
 
 	ai_weight = {
@@ -95,13 +55,6 @@ gpm_tech_ringworld_parabolic_forcefield = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 	}
 }
@@ -138,39 +91,6 @@ gpm_tech_ringworld_neural_nexus = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = physics
-				has_level > 2
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = physics
-				has_level > 3
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = physics
-				has_level > 4
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -189,13 +109,6 @@ gpm_tech_ringworld_neural_nexus = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
 		}
 	}
 }
@@ -226,39 +139,6 @@ gpm_tech_ringworld_idyllic_gardens = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_biology"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = society
-				has_level > 2
-				has_trait = "leader_trait_expertise_biology"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = society
-				has_level > 3
-				has_trait = "leader_trait_expertise_biology"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = society
-				has_level > 4
-				has_trait = "leader_trait_expertise_biology"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -269,13 +149,6 @@ gpm_tech_ringworld_idyllic_gardens = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
 		}
 	}
 }
@@ -306,39 +179,6 @@ gpm_tech_ringworld_xeno_zoo = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_new_worlds"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = society
-				has_level > 2
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = society
-				has_level > 3
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = society
-				has_level > 4
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -349,13 +189,6 @@ gpm_tech_ringworld_xeno_zoo = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
 		}
 	}
 }
@@ -389,39 +222,6 @@ gpm_tech_ringworld_simulators = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = physics
-				has_level > 2
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = physics
-				has_level > 3
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = physics
-				has_level > 4
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -440,13 +240,6 @@ gpm_tech_ringworld_simulators = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
 		}
 	}
 }
@@ -477,39 +270,6 @@ gpm_tech_ringworld_endless_oceans = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_new_worlds"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = society
-				has_level > 2
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = society
-				has_level > 3
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = society
-				has_level > 4
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -520,13 +280,6 @@ gpm_tech_ringworld_endless_oceans = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
 		}
 	}
 }
@@ -556,39 +309,6 @@ gpm_tech_ringworld_mass_transit = {
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
-			factor = 0.50
-			NOT = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_materials"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = engineering
-				has_level > 2
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = engineering
-				has_level > 3
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = engineering
-				has_level > 4
-				has_trait = "leader_trait_expertise_materials"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -599,13 +319,6 @@ gpm_tech_ringworld_mass_transit = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
 		}
 	}
 }

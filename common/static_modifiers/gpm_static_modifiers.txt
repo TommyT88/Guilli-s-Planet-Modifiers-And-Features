@@ -29,6 +29,16 @@
 # gpm_resonant_twins
 # artifact_sell_collector_cooldown
 
+
+# Fallen Empire detection range modifier
+# Fallen Empires get extra detection range techs/stuff from this mod so we give them a modifier to reduce it. This prevents Fallen Empires from starting communications with you from across the galaxy
+gpm_fallen_empire_detection_tweak = {
+	ship_sensor_range_add = -3
+	ship_hyperlane_range_add = -3
+}
+
+
+
 # ship balance modifier
 gpm_ship_balancer_leviathan = {
 	ship_fire_rate_mult = -0.5

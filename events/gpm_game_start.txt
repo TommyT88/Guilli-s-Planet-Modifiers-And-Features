@@ -28,34 +28,45 @@ event = {
 
 		# small mineral boost to all countries starting system
 		every_country =  {
-			limit = { gpm_is_country_type_default = yes	}
-			# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
-			random_owned_planet = {
-				limit = { is_capital = yes }
-				solar_system = {
-					random_system_planet = {
-						limit = {
-							has_deposit = no
-							NOT = { has_modifier = terraforming_candidate }
-							OR = {
-								gpm_is_planet_class_normal_uninhabitable = yes
-								gpm_is_planet_class_asteroid = yes
+			if = {
+				limit = { gpm_is_country_type_default = yes	}
+				# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					solar_system = {
+						random_system_planet = {
+							limit = {
+								has_deposit = no
+								NOT = { has_modifier = terraforming_candidate }
+								OR = {
+									gpm_is_planet_class_normal_uninhabitable = yes
+									gpm_is_planet_class_asteroid = yes
+								}
 							}
+							add_deposit = d_minerals_5
 						}
-						add_deposit = d_minerals_5
-					}
-					random_system_planet = {
-						limit = {
-							has_deposit = no
-							NOT = { has_modifier = terraforming_candidate }
-							OR = {
-								gpm_is_planet_class_normal_uninhabitable = yes
-								gpm_is_planet_class_asteroid = yes
+						random_system_planet = {
+							limit = {
+								has_deposit = no
+								NOT = { has_modifier = terraforming_candidate }
+								OR = {
+									gpm_is_planet_class_normal_uninhabitable = yes
+									gpm_is_planet_class_asteroid = yes
+								}
 							}
+							add_deposit = d_minerals_3
 						}
-						add_deposit = d_minerals_3
 					}
 				}
+			}
+			if = {
+				limit = {
+					OR = {
+						gpm_is_country_type_fallen_empire = yes
+						gpm_is_country_type_awakened_fallen_empire = yes
+					}
+				}
+				add_modifier = { modifier = gpm_fallen_empire_detection_tweak }
 			}
 		}
 

@@ -288,7 +288,7 @@ gpm_pleasant_weather = {
 	icon_frame = 1
 }
 gpm_unusual_formations = {
-	planet_building_build_speed_mult = -0.40
+	planet_building_build_speed_mult = -0.30
 	icon = "gfx/interface/icons/planet_modifiers/gpm_unusual_formations.dds"
 	icon_frame = 3
 }
@@ -856,6 +856,11 @@ gpm_aeromatic_attraction = {
 gpm_fractal_formations = {
 	planet_jobs_engineering_research_produces_mult = 0.20
 	icon = "gfx/interface/icons/planet_modifiers/gpm_fractal_formations.dds"
+	icon_frame = 1
+}
+gpm_silicon_crystals = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_silicon_crystals.dds"
+	planet_metallurgists_alloys_produces_add = 1
 	icon_frame = 1
 }
 

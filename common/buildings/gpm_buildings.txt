@@ -70,7 +70,8 @@ gpm_building_mining_nanite_nexus = {
 	}
 		
 	planet_modifier = {
-		planet_miners_minerals_produces_mult = 0.10
+		planet_miners_minerals_produces_add = 2
+		planet_miners_energy_upkeep_add = 2		
 	}
 
 	triggered_planet_modifier = {
@@ -78,7 +79,7 @@ gpm_building_mining_nanite_nexus = {
 			exists = owner
 		}
 		modifier = {
-			district_mining_max = 3
+			district_mining_max = 10
 		}
 	}
 	
@@ -151,6 +152,20 @@ gpm_precursor_research_center = {
 		upkeep = {
 			energy = 10
 		}
+	}
+	
+	country_modifier = {
+		country_resource_max_minor_artifacts_add = 1000
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		country_resource_max_minor_artifacts_add = 2000
 	}
 	
 	triggered_planet_modifier = {

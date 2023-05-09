@@ -1667,14 +1667,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 		}
 		# deposit
@@ -1759,14 +1753,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 		}
 		# Special Megacorp RP text
@@ -1887,14 +1875,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 		}
 		# deposit
@@ -1996,14 +1978,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 		}
 		# deposit
@@ -2088,14 +2064,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 		}
 		# deposit
@@ -2194,14 +2164,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 		}
 		# deposit
@@ -2747,8 +2711,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -2810,8 +2774,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -2869,8 +2833,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -2946,8 +2910,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -3006,8 +2970,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -3061,8 +3025,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -3132,8 +3096,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -3206,8 +3170,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -3278,8 +3242,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -7750,14 +7714,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -7768,8 +7726,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -7833,14 +7791,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -7851,8 +7803,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -7931,14 +7883,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -7949,8 +7895,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -8022,14 +7968,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -8040,8 +7980,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -8102,14 +8042,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -8120,8 +8054,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -8198,14 +8132,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -8216,8 +8144,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -9582,14 +9510,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -9600,8 +9522,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -9664,14 +9586,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -9682,8 +9598,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -9762,14 +9678,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -9780,8 +9690,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -9855,14 +9765,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -9873,8 +9777,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -9945,14 +9849,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -9963,8 +9861,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {
@@ -10024,14 +9922,8 @@ ship_event = {
 				root.leader = { gpm_random_experience = yes }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_archaeologist_ancrel }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist_ancrel } }
-				modifier = { factor = 0 root.owner = { has_ancrel = no } }
-			}
-			10 = {
 				root.leader = {	add_trait = leader_trait_archaeologist }
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 0 root.owner = { has_ancrel = yes } }
 			}
 			10 = {
 				root.leader = {	add_trait = leader_trait_meticulous }
@@ -10042,8 +9934,8 @@ ship_event = {
 				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_inspired_surveyor } }
 			}
 			10 = {
-				root.leader = {	add_trait = leader_trait_cataloger }
-				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_cataloger } }
+				root.leader = {	add_trait = leader_trait_xeno_cataloger }
+				modifier = { factor = 0 root.leader = {	has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
 			}
 			10 = {

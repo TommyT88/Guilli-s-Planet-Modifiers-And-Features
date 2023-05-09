@@ -1494,6 +1494,7 @@ gpm_spawn_planet_ring_modifier = {
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
 			# Tweaks
+			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			# modifier = { factor = 0
 			# 	distance = {
 			# 		source = solar_system.star
@@ -1531,6 +1532,7 @@ gpm_spawn_planet_ring_modifier = {
 			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
 			# Tweaks
 			modifier = { factor = 10 gpm_is_planet_class_gas_giant = yes }
+			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			# modifier = { factor = 0
 			# 	distance = {
 			# 		source = solar_system.star

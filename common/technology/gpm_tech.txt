@@ -34,13 +34,6 @@ tech_gpm_tb_seasonal_flooding = {
 			}
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
 			factor = 0
 			num_owned_planets < 2
 		}
@@ -56,13 +49,6 @@ tech_gpm_tb_seasonal_flooding = {
 				any_owned_planet = {
 					has_deposit = "gpm_tb_seasonal_flooding"
 				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
 		modifier = {
@@ -108,13 +94,6 @@ tech_gpm_tb_locust_plagues = {
 			}
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
 			factor = 0
 			num_owned_planets < 2
 		}
@@ -130,13 +109,6 @@ tech_gpm_tb_locust_plagues = {
 				any_owned_planet = {
 					has_deposit = "gpm_tb_locust_plagues"
 				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
 		modifier = {
@@ -182,13 +154,6 @@ tech_gpm_tb_toxic_gas = {
 			}
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
-		modifier = {
 			factor = 0
 			num_owned_planets < 2
 		}
@@ -204,13 +169,6 @@ tech_gpm_tb_toxic_gas = {
 				any_owned_planet = {
 					has_deposit = "gpm_tb_toxic_gas"
 				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
 			}
 		}
 		modifier = {
@@ -250,23 +208,9 @@ gpm_tech_arcane_research = {
 			factor = 0
 			has_ancrel = no
 		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
 	}
 }
 
