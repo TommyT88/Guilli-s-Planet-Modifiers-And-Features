@@ -1,4 +1,4 @@
-# 3.7 compatible
+# 3.8 compatible
 
 namespace = mega
 # we overwrite this message event so mod compatibility is kept with other mods that might tweak the main Arcology Project decision
@@ -23,7 +23,6 @@ planet_event = {
 		remove_modifier = engineered_environment
 		remove_modifier = engineered_environment_gaia
 		#
-
 
 		set_planet_flag = gpm_is_new_ecumenopolis
 		planet_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.

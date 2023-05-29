@@ -106,7 +106,7 @@ operation_gpm_steal_relic = {
 	}
 	allow = {
 		custom_tooltip = {
-			num_owned_relics > 0
+			target = { num_owned_relics > 0 } # first check separate for performance(?) This was a tip I've received. 
 			target = {
 				OR = {
 					gpm_has_vanilla_precursor_relic = yes

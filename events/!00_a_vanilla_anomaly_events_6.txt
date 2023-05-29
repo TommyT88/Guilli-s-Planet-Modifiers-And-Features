@@ -1,4 +1,4 @@
-# 3.7 compatible
+# 3.8 compatible
 
 #################################
 #
@@ -52,9 +52,9 @@ ship_event = {
 			# prevent_anomaly = yes
 			# clear_deposits = yes
 			random_list = {
-				32 = { add_deposit = d_minerals_2 }
-				16 = { add_deposit = d_minerals_3 }
-				8 = { add_deposit = d_minerals_4 }
+				10 = { add_deposit = d_minerals_2 }
+				8 = { add_deposit = d_minerals_3 }
+				6 = { add_deposit = d_minerals_4 }
 				4 = { add_deposit = d_minerals_5 }
 				2 = { add_deposit = d_minerals_6 }
 			}
@@ -101,9 +101,10 @@ ship_event = {
 			# prevent_anomaly = yes
 			# clear_deposits = yes
 			random_list = {
-				32 = { add_deposit = d_minerals_2 }
-				8 = { add_deposit = d_minerals_3 }
-				2 = { add_deposit = d_minerals_4 }
+				10 = { add_deposit = d_energy_2 }
+				8 = { add_deposit = d_energy_3 }
+				2 = { add_deposit = d_energy_4 }
+				1 = { add_deposit = d_energy_5 }
 			}
 		}
 	}

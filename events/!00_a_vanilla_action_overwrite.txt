@@ -1,8 +1,8 @@
-# 3.7 compatible
+# 3.8 compatible
 
 namespace = action
 
-# Planet is turned into tomb world by Armageddon bombing stance
+# Planet is turned into tomb world by special bombing stance
 planet_event = {
 	id = action.81
 	hide_window = yes
@@ -17,7 +17,9 @@ planet_event = {
 		from = {
 			OR = {
 				gpm_is_country_type_default = yes
-				is_fallen_empire = yes
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
 			}
 		}
 		habitable_planet = yes

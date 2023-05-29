@@ -9,7 +9,7 @@ tech_gpm_precursor_remnants_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_anomaly_research_speed_mult = 0.20
+		ship_anomaly_research_speed_mult = 0.40
 		ship_anomaly_fail_risk = -0.10
 	}
 	
@@ -28,7 +28,7 @@ tech_gpm_precursor_remnants_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		science_ship_survey_speed = 0.20
+		science_ship_survey_speed = 0.40
 		ship_anomaly_generation_chance_mult = 0.5
 	}
 	
@@ -49,6 +49,7 @@ tech_gpm_precursor_energy_grid_discovery = {
 	modifier = {
 		starbases_upkeep_mult = -0.20
 		stations_upkeep_mult = -0.20
+		ship_military_station_small_upkeep_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -86,7 +87,7 @@ tech_gpm_precursor_satellite_grid_discovery = {
 
 	modifier = {
 		add_base_country_intel = 10
-		station_observers_produces_mult = 1
+		station_observers_produces_mult = 2
 	}
 	
 	weight_modifier = {
@@ -123,7 +124,7 @@ tech_gpm_precursor_city_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_buildings_minerals_cost_add = -50
+		planet_buildings_cost_mult = -0.2
 		planet_amenities_add = 10
 	}
 	
@@ -142,7 +143,7 @@ tech_gpm_precursor_city_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_districts_minerals_cost_add = -50
+		planet_districts_cost_mult = -0.2
 		planet_max_buildings_add = 1
 	}
 	
@@ -162,6 +163,7 @@ tech_gpm_precursor_shipyards_discovery = {
 
 	modifier = {
 		ship_components_alloys_cost_mult = -0.10
+		ship_components_minor_artifacts_cost_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -179,8 +181,8 @@ tech_gpm_precursor_shipyards_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		ship_upgrades_cost_mult = -0.10
-		ship_orbit_upkeep_mult = -0.10
+		ship_upgrades_cost_mult = -0.20
+		ship_orbit_upkeep_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -199,6 +201,7 @@ tech_gpm_precursor_planetary_gun_discovery = {
 
 	modifier = {
 		ship_weapon_range_mult = 0.12
+		ship_engagement_range_mult = 0.12
 	}
 	
 	weight_modifier = {
@@ -309,6 +312,7 @@ tech_gpm_precursor_planetary_shield_discovery = {
 
 	modifier = {
 		ship_shield_mult = 0.20
+		ship_shield_hardening_add = 0.20
 	}
 	
 	weight_modifier = {
@@ -344,7 +348,7 @@ tech_gpm_precursor_floating_city_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_max_buildings_add = 1
+		planet_max_buildings_add = 2
 	}
 	
 	weight_modifier = {
@@ -380,7 +384,7 @@ tech_gpm_precursor_capital_complex_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_decision_enact_speed_mult = 0.50
+		planet_decision_enact_speed_mult = 1.00
 	}
 	
 	weight_modifier = {
@@ -435,6 +439,7 @@ tech_gpm_precursor_communication_hub_discovery_2 = {
 
 	modifier = {
 		planet_colony_development_speed_mult = 1
+		fleet_mia_time_mult = -0.5
 	}
 	
 	weight_modifier = {
@@ -507,8 +512,8 @@ tech_gpm_precursor_eternal_fortress_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		army_defense_damage_mult = 0.20
-		army_defense_health_mult = 0.20
+		army_defense_damage_mult = 0.30
+		army_defense_health_mult = 0.30
 	}
 	
 	weight_modifier = {
@@ -527,6 +532,7 @@ tech_gpm_precursor_prison_planet_discovery = {
 
 	modifier = {
 		planet_crime_mult = -0.20
+		planet_stability_add = 5
 	}
 	
 	weight_modifier = {
@@ -542,6 +548,10 @@ tech_gpm_precursor_prison_planet_discovery_2 = {
 	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
+
+	potential = {
+		is_gestalt = no
+	}
 
 	modifier = {
 		pop_factions_unity_produces_mult = 0.30
@@ -599,7 +609,8 @@ tech_gpm_precursor_manufactorium_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.15
+		planet_metallurgists_alloys_produces_add = 1
+		planet_metallurgists_minerals_upkeep_add = -1
 	}
 	
 	weight_modifier = {
@@ -617,7 +628,8 @@ tech_gpm_precursor_manufactorium_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_jobs_consumer_goods_produces_mult = 0.15
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_minerals_upkeep_add = -1
 	}
 	
 	weight_modifier = {
@@ -636,6 +648,7 @@ tech_gpm_precursor_vaults_discovery = {
 
 	modifier = {
 		country_base_minor_artifacts_produces_add = 2
+		weapon_archaeotech_weapon_damage_mult = 0.2
 	}
 	
 	weight_modifier = {
@@ -675,6 +688,7 @@ tech_gpm_precursor_crashed_spacestation_discovery = {
 	modifier = {
 		starbase_modules_cost_mult = -0.30
 		starbase_buildings_cost_mult = -0.30
+		ship_military_station_small_cost_mult = -0.15
 	}
 	
 	weight_modifier = {
@@ -692,9 +706,9 @@ tech_gpm_precursor_crashed_spacestation_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		starbase_constructions_food_produces_mult = 0.50
-		starbase_constructions_energy_produces_mult = 0.50
-		starbase_constructions_minerals_produces_mult = 0.50
+		starbase_constructions_food_produces_mult = 1.00
+		starbase_constructions_energy_produces_mult = 1.00
+		starbase_constructions_minerals_produces_mult = 1.00
 	}
 	
 	weight_modifier = {
@@ -749,6 +763,7 @@ tech_gpm_precursor_outpost_ruins_discovery = {
 
 	modifier = {
 		ship_hyperlane_range_add = 3
+		ship_cloaking_detection_add = 1
 	}
 	
 	weight_modifier = {
@@ -782,6 +797,10 @@ tech_gpm_precursor_harbor_ruins_discovery = {
 	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
+
+	potential = {
+		is_machine_empire = no
+	}
 
 	modifier = {
 		pc_ocean_habitability = 0.10
@@ -821,7 +840,7 @@ tech_gpm_precursor_ruins_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_archaeological_site_clues_add = 1
+		ship_archaeological_site_clues_add = 2
 		ship_archaeological_site_excavation_speed_mult = 0.33
 	}
 	
@@ -858,8 +877,8 @@ tech_gpm_precursor_obelisks_discovery = {
 	weight = 1
 
 	modifier = {
-		terraform_speed_mult = 0.20
-		terraforming_cost_mult = -0.20
+		terraform_speed_mult = 0.50
+		terraforming_cost_mult = -0.30
 	}
 	
 	weight_modifier = {
@@ -877,7 +896,8 @@ tech_gpm_precursor_obelisks_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_jobs_upkeep_mult = -0.10
+		planet_jobs_upkeep_mult = -0.05
+		leader_trait_selection_options_add = 1
 	}
 	
 	weight_modifier = {
@@ -895,7 +915,7 @@ tech_gpm_very_hot_core_discovery = {
 	weight = 1
 
 	modifier = {
-		terraform_speed_mult = 0.40
+		terraform_speed_mult = 0.50
 	}
 	
 	weight_modifier = {
@@ -931,7 +951,7 @@ tech_gpm_gaia_world_discovery = {
 	weight = 1
 
 	modifier = {
-		pop_environment_tolerance = 0.10
+		pop_environment_tolerance = 0.05
 	}
 	
 	weight_modifier = {
@@ -947,6 +967,10 @@ tech_gpm_gaia_world_discovery_2 = {
 	is_rare = yes
 	ai_update_type = all
 	weight = 1
+
+	potential = {
+		is_machine_empire = no
+	}
 
 	modifier = {
 		planet_jobs_food_produces_mult = 0.30
@@ -1081,7 +1105,7 @@ tech_gpm_spaceship_graveyard_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_sections_alloys_cost_mult = -0.10
+		ship_sections_alloys_cost_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -1135,7 +1159,7 @@ tech_gpm_artificial_water_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_metallurgists_alloys_produces_add = 0.25
+		planet_metallurgists_alloys_produces_add = 0.5
 	}
 	
 	weight_modifier = {
@@ -1151,6 +1175,10 @@ tech_gpm_android_pleasure_palace_discovery = {
 	is_rare = no
 	ai_update_type = all
 	weight = 1
+
+	potential = {
+		is_gestalt = no
+	}
 
 	modifier = {
 		biological_pop_happiness = 0.10
@@ -1261,7 +1289,7 @@ tech_gpm_plasmoid_life_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_armor_penetration_mult = 0.10
+		ship_armor_penetration_mult = 0.20
 	}
 	
 	weight_modifier = {
@@ -1332,6 +1360,10 @@ tech_gpm_proto_forests_discovery = {
 	ai_update_type = all
 	weight = 1
 
+	potential = {
+		is_machine_empire = no
+	}
+
 	modifier = {
 		planet_farmers_food_produces_add = 1
 	}
@@ -1349,6 +1381,10 @@ tech_gpm_proto_forests_discovery_2 = {
 	is_rare = yes
 	ai_update_type = all
 	weight = 1
+
+	potential = {
+		is_gestalt = no
+	}
 
 	modifier = {
 		job_healthcare_per_pop = 0.05
@@ -1443,6 +1479,7 @@ tech_gpm_giant_worm_discovery = {
 
 	modifier = {
 		ship_armor_mult = 0.20
+		ship_armor_hardening_add = 0.2
 	}
 	
 	weight_modifier = {
@@ -1512,6 +1549,10 @@ tech_gpm_surface_of_bones_discovery = {
 	is_rare = yes
 	ai_update_type = all
 	weight = 1
+
+	potential = {
+		is_gestalt = no
+	}
 
 	modifier = {
 		pop_government_ethic_attraction = 0.10
@@ -1587,6 +1628,10 @@ tech_gpm_mushroom_forest_discovery = {
 	ai_update_type = all
 	weight = 1
 
+	potential = {
+		is_machine_empire = no
+	}
+
 	modifier = {
 		planet_farmers_food_produces_mult = 0.20
 	}
@@ -1605,6 +1650,10 @@ tech_gpm_mushroom_forest_discovery_2 = {
 	ai_update_type = all
 	weight = 1
 
+	potential = {
+		is_machine_empire = no
+	}
+
 	modifier = {
 		pop_growth_speed = 0.08
 	}
@@ -1620,12 +1669,12 @@ tech_gpm_supermaterials_precursor = {
 	cost = @tier2cost1
 	category = { materials }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
 	modifier = {
-		
+		ship_military_station_small_cost_mult = -0.2
 	}
 	
 	weight_modifier = {
@@ -1638,7 +1687,7 @@ tech_gpm_manufactory_hub = {
 	cost = @tier2cost1
 	category = { industry }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 
@@ -1655,12 +1704,13 @@ tech_gpm_enigmatic_power_relays = {
 	cost = @tier2cost1
 	category = { particles }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 	is_reverse_engineerable = no
 
 	modifier = {
+		ship_military_station_small_upkeep_mult = -0.2
 	}
 	
 	weight_modifier = {
@@ -1674,7 +1724,7 @@ tech_gpm_singularity_matrix = {
 	cost = @tier2cost1
 	category = { computing }
 	tier = 2
-	is_rare = yes
+	is_custom_tech_3 = yes
 	ai_update_type = all
 	weight = 1
 	is_reverse_engineerable = no

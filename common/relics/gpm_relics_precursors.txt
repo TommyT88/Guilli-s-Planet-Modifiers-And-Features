@@ -70,6 +70,7 @@ gpm_r_encyclopedia_galactica = {
 			always = yes
 		}
 		num_tech_alternatives_add = 4
+		assist_research_mult = 1.00
 	}
 
 	score = 1000
@@ -131,6 +132,7 @@ gpm_r_zero_energy_generator = {
 		}
 		starbases_energy_upkeep_mult = -0.5
 		stations_energy_upkeep_mult = -0.5
+		ship_military_station_small_upkeep_mult = -0.5
 		
 	}
 
@@ -281,6 +283,7 @@ gpm_r_encrypted_sct = {
 			always = yes
 		}
 		starbase_shipyard_build_speed_mult = 0.20
+		shipsize_military_station_small_build_speed_mult = 0.20
 	}
 
 	score = 1000
@@ -331,6 +334,13 @@ gpm_r_experimental_weapon = {
 		}
 		ship_weapon_range_mult = 0.20
 		ship_engagement_range_mult = 0.20
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			has_ancrel = yes
+		}
+		weapon_archaeotech_weapon_damage_mult = 0.33
 	}
 
 	score = 1000
@@ -448,7 +458,7 @@ gpm_r_power_core = {
 		potential = {
 			always = yes
 		}
-		station_gatherers_energy_produces_mult = 0.5
+		station_gatherers_energy_produces_mult = 0.5		
 	}
 
 	score = 1000
@@ -506,7 +516,7 @@ gpm_r_mysterious_shield_generator = {
 		potential = {
 			always = yes
 		}
-		ship_shield_mult = 0.20
+		ship_shield_mult = 0.30
 	}
 
 	score = 1000
@@ -553,7 +563,9 @@ gpm_r_gravity_engine = {
 		potential = {
 			always = yes
 		}
-		planet_max_buildings_add = 3
+		planet_max_buildings_add = 2
+		catapult_range_mult = 1.00
+		catapult_spread_mult = -0.33
 	}
 
 	score = 1000
@@ -600,7 +612,8 @@ gpm_r_codex_administratum = {
 		potential = {
 			always = yes
 		}
-		country_government_civic_points_add = 2
+		country_government_civic_points_add = 1
+		country_leader_cap_add = 5
 	}
 
 	score = 1000
@@ -660,6 +673,7 @@ gpm_r_enigmatic_advisor = {
 			always = yes
 		}
 		envoys_add = 3
+		council_agenda_progress_speed = 0.30
 	}
 
 	score = 1000
@@ -1121,6 +1135,7 @@ gpm_r_self_assembly_hub = {
 		potential = {
 			always = yes
 		}
+		megastructure_build_speed_mult = 0.33
 		country_megastructure_build_cap_add = 1
 	}
 
@@ -1279,6 +1294,7 @@ gpm_r_q_storage_compressor = {
 			always = yes
 		}
 		country_resource_max_add = 50000
+		country_resource_max_minor_artifacts_add = 25000
 	}
 
 	score = 1000

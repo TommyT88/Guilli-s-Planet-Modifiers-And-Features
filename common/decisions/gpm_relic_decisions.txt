@@ -25,6 +25,14 @@ decision_gpm_machine_world_core_relic = {
 		hidden_effect = {
 			reset_planet = yes
 			clear_deposits = yes
+			# switch "fixable" negative modifiers with their fixed variant
+			gpm_switch_fixable_modifiers = yes
+			# Remove bad modifiers where is makes sense
+			gpm_remove_negative_modifiers = yes
+			# Remove neutral modifiers where it makes sense
+			gpm_remove_neutral_modifiers = yes
+			# Remove good modifiers where it makes sense
+			gpm_remove_positive_modifiers = yes
 		}
 		change_planet_size = 5
 	}

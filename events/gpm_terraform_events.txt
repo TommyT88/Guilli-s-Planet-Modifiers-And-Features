@@ -85,6 +85,14 @@ planet_event = {
 			#######################################################
 
 
+			# incase an already terraformed world gets turned into a city world. We remove the terraforming tier modifier
+			if = {
+				limit = { gpm_is_planet_class_city = yes }
+				remove_modifier = gpm_terraforming_world_engineering
+				remove_modifier = gpm_terraforming_world_engineering_shaper
+				remove_modifier = gpm_terraforming_world_engineering_mastery
+				remove_modifier = gpm_terraforming_world_engineering_shaper_mastery
+			}
 
 			# Remove valuable world/terraform candidate modifier  (this gets removed trough the terraform links, but in some edge cases it doesn't, so this way it does get removed).
 			if = {
@@ -93,11 +101,11 @@ planet_event = {
 			}
 			if = {
 				limit = { has_modifier = frozen_terraforming_candidate }
-				remove_modifier = terraforming_candidate
+				remove_modifier = frozen_terraforming_candidate
 			}
 			if = {
 				limit = { has_modifier = toxic_terraforming_candidate }
-				remove_modifier = terraforming_candidate
+				remove_modifier = toxic_terraforming_candidate
 			}
 
 			# Machine world modifiers
@@ -191,6 +199,7 @@ planet_event = {
 						gpm_is_planet_class_normal_habitable = yes
 						gpm_is_planet_class_hive = yes
 					}
+					NOT = { gpm_is_planet_class_city = yes }
 				}
 				gpm_spawn_terraform_tier_modifier = yes
 			}
