@@ -22,7 +22,7 @@ gpm_frequent_thunderstorms = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_physics_research_produces_mult = 0.20
 	planet_jobs_energy_produces_mult = 0.20
-	district_generator_max = 4
+	district_generator_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_frequent_thunderstorms.dds"
 	icon_frame = 2
 }
@@ -30,7 +30,7 @@ gpm_global_thunderstorms = {
 	pop_environment_tolerance = -0.15
 	planet_jobs_physics_research_produces_mult = 0.40
 	planet_jobs_energy_produces_mult = 0.40
-	district_generator_max = 6
+	district_generator_max = 10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_global_thunderstorms.dds"
 	icon_frame = 2
 }
@@ -54,7 +54,7 @@ gpm_single_biome = {
 }
 gpm_hyper_complex_biome = {
 	planet_researchers_society_research_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_complex_biome.dds"
 	icon_frame = 1
 }
@@ -67,7 +67,7 @@ gpm_thin_atmospheres = {
 }
 gpm_dense_atmospheres = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_dense_atmosphere.dds"
 	icon_frame = 1
 }
@@ -75,7 +75,7 @@ gpm_strong_volcanism = {
 	pop_environment_tolerance = -0.10
 	planet_districts_cost_mult = 0.40
 	planet_buildings_cost_mult = 0.40
-	district_mining_max = 7
+	district_mining_max = 10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_strong_volcanism.dds"
 	icon_frame = 2
 }
@@ -88,7 +88,7 @@ gpm_weak_magnetic_field_2 = {
 }
 gpm_strong_magnetic_field_2 = {
 	planet_jobs_energy_produces_mult = 0.40
-	district_generator_max = 6
+	district_generator_max = 10
 	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
 	icon_frame = 1
 }
@@ -103,19 +103,19 @@ gpm_unstable_tectonics_2 = {
 gpm_asteroid_impacts_2 = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 4
+	district_mining_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
 	icon_frame = 2
 }
 gpm_mineral_rich_2 = {
 	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 6
+	district_mining_max = 10
 	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
 	icon_frame = 1
 }
 gpm_ultra_rich_2 = {
 	planet_jobs_minerals_produces_mult = 0.40
-	district_mining_max = 8
+	district_mining_max = 12
 	icon = "gfx/interface/icons/planet_modifiers/pm_ultra_rich.dds"
 	icon_frame = 1
 }
@@ -142,7 +142,7 @@ gpm_floating_islands = {
 }
 gpm_hostile_flora = {
 	planet_pops_organics_food_upkeep_mult = 0.20
-	district_farming_max = -4
+	district_farming_max = -6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_hostile_flora.dds"
 	icon_frame = 3
 }
@@ -155,7 +155,7 @@ gpm_toxic_gas = {
 }
 gpm_extensive_cavern_system = {
 	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 4
+	district_mining_max = 8
 	planet_max_districts_add = 4
 	icon = "gfx/interface/icons/planet_modifiers/gpm_extensive_caverns.dds"
 	icon_frame = 1
@@ -182,20 +182,20 @@ gpm_atmospheric_stimulant = {
 }
 gpm_unusual_seasons = {
 	planet_farmers_food_produces_add = -3
-	district_farming_max = -4
+	district_farming_max = -6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_unusual_seasons.dds"
 	icon_frame = 3
 }
 gpm_perfect_seasons = {
 	planet_farmers_food_produces_mult = 0.40
-	district_farming_max = 4
+	district_farming_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_perfect_seasons.dds"
 	icon_frame = 1
 }
 gpm_living_planet = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.40
-	district_farming_max = -6
+	district_farming_max = -8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_living_world.dds"
 	icon_frame = 3
 }
@@ -213,21 +213,21 @@ gpm_ideal_for_life = {
 }
 gpm_endless_fish = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 3
+	district_farming_max = 7
 	icon = "gfx/interface/icons/planet_modifiers/gpm_endless_fish.dds"
 	icon_frame = 1
 }
 gpm_artificial_water = {
 	planet_jobs_engineering_research_produces_mult = 0.40
 	planet_farmers_food_produces_add = -3
-	district_farming_max = -8
+	district_farming_max = -10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_artificial_water.dds"
 	icon_frame = 2
 }
 gpm_clear_skies = {
 	biological_pop_happiness = 0.05
 	planet_researchers_physics_research_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_clear_skies.dds"
 	icon_frame = 1
 }
@@ -252,13 +252,13 @@ gpm_small_islands = {
 gpm_windy = {
 	planet_buildings_cost_mult = 0.20
 	planet_jobs_energy_produces_mult = 0.20
-	district_generator_max = 4
+	district_generator_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_windy.dds"
 	icon_frame = 2
 }
 gpm_simple_organisms = {
 	planet_jobs_food_produces_mult = -0.20
-	district_farming_max = -4
+	district_farming_max = -8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_simple_organisms.dds"
 	icon_frame = 3
 }
@@ -270,7 +270,7 @@ gpm_newly_evolved_complex_organisms = {
 gpm_delicious_ingredients = {
 	planet_artisans_consumer_goods_produces_add = 1
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_delicious_ingredients.dds"
 	icon_frame = 1
 }
@@ -283,7 +283,7 @@ gpm_friendly_wildlife = {
 gpm_pleasant_weather = {
 	pop_environment_tolerance = 0.05
 	pop_amenities_usage_mult = -0.10
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_pleasant_weather.dds"
 	icon_frame = 1
 }
@@ -295,14 +295,14 @@ gpm_unusual_formations = {
 gpm_flat_terrain = {
 	planet_buildings_cost_mult = -0.40
 	planet_jobs_minerals_produces_mult = -0.20
-	district_mining_max = -4
+	district_mining_max = -8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_flat_terrain.dds"
 	icon_frame = 2
 }
 gpm_rugged_terrain = {
 	planet_buildings_cost_mult = 0.40
 	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 5
+	district_mining_max = 9
 	icon = "gfx/interface/icons/planet_modifiers/gpm_rugged_terrain.dds"
 	icon_frame = 2
 }
@@ -314,13 +314,13 @@ gpm_many_extremophiles = {
 gpm_great_temperature_variation = {
 	planet_pops_consumer_goods_upkeep_mult = 0.40
 	planet_pops_organics_food_upkeep_mult = 0.40
-	district_farming_max = -8
+	district_farming_max = -10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_great_temperature_variation.dds"
 	icon_frame = 3
 }
 gpm_gorgeous_sky = {
 	pop_happiness = 0.05
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_gorgeous_sky.dds"
 	icon_frame = 1
 }
@@ -328,7 +328,7 @@ gpm_ice_age = {
 	planet_jobs_physics_research_produces_mult = 0.20
 	planet_jobs_food_produces_mult = -0.40
 	planet_pops_organics_food_upkeep_mult = 0.60
-	district_farming_max = -6
+	district_farming_max = -8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_ice_age.dds"
 	icon_frame = 2
 }
@@ -350,21 +350,21 @@ gpm_perpendicular_axis = {
 gpm_radioactive_mantle = {
 	planet_metallurgists_alloys_produces_add = 1
 	planet_jobs_energy_produces_mult = 0.40
-	district_generator_max = 5
+	district_generator_max = 9
 	icon = "gfx/interface/icons/planet_modifiers/gpm_radioactive_mantle.dds"
 	icon_frame = 1
 }
 gpm_locust_plagues = {
 	planet_emigration_push_mult = 0.40
 	planet_jobs_food_produces_mult = -0.40
-	district_farming_max = -6
+	district_farming_max = -8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_locust_plagues.dds"
 	icon_frame = 3
 }
 gpm_acidic_seas = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.60
-	district_farming_max = -8
+	district_farming_max = -10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_acidic_seas.dds"
 	icon_frame = 3
 }
@@ -377,20 +377,20 @@ gpm_empathic_life = {
 gpm_seasonal_flooding = {
 	pop_environment_tolerance = -0.05
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_seasonal_flooding.dds"
 	icon_frame = 2
 }
 gpm_thin_ozone_layer = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_energy_produces_mult = 0.20
-	district_generator_max = 4
+	district_generator_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_thin_ozone_layer.dds"
 	icon_frame = 2
 }
 gpm_thin_ozone_layer_fixed = {
 	planet_jobs_energy_produces_mult = 0.20
-	district_generator_max = 4
+	district_generator_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
 	icon_frame = 7
 }
@@ -409,7 +409,7 @@ gpm_resilent_parasites = {
 gpm_ice_flora = {
 	pop_happiness = 0.05
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_ice_flora.dds"
 	icon_frame = 1
 }
@@ -420,7 +420,7 @@ gpm_strange_ice_river = {
 }
 gpm_juggernaut_manta_rays = {
 	planet_jobs_society_research_produces_mult = 0.10
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_juggernaut_manta_rays.dds"
 	icon_frame = 1
 }
@@ -459,14 +459,14 @@ gpm_dunes = {
 }
 gpm_extensive_reef_systems = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 3
+	district_farming_max = 7
 	icon = "gfx/interface/icons/planet_modifiers/gpm_extensive_reef_systems.dds"
 	icon_frame = 1
 }
 gpm_trubbles = {
 	planet_pops_food_upkeep_mult = -0.40
 	pop_happiness = 0.10
-	district_farming_max = -6
+	district_farming_max = -10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_trubbles.dds"
 	icon_frame = 2
 }
@@ -486,25 +486,25 @@ gpm_temple_of_the_ancient_one = {
 gpm_beautiful_lakes = {
 	pop_happiness = 0.05
 	planet_jobs_food_produces_mult = 0.10
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_beautiful_lakes.dds"
 	icon_frame = 1
 }
 gpm_proto_forests = {
 	planet_jobs_society_research_produces_mult = 0.10
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_proto_forests.dds"
 	icon_frame = 1
 }
 gpm_dense_forests = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_dense_forests.dds"
 	icon_frame = 1
 }
 gpm_planetwide_forest = {
 	planet_jobs_food_produces_mult = 0.40
-	district_farming_max = 4
+	district_farming_max = 8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_planetwide_forest.dds"
 	icon_frame = 1
 }
@@ -578,26 +578,26 @@ gpm_spirals_of_ice = {
 gpm_furry_packs = {
 	planet_pops_consumer_goods_upkeep_mult = 0.10
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 4
 	icon = "gfx/interface/icons/planet_modifiers/gpm_furry_packs.dds"
 	icon_frame = 2
 }
 gpm_blizzards = {
 	planet_pops_consumer_goods_upkeep_mult = 0.10
-	district_farming_max = -4
+	district_farming_max = -8
 	planet_pops_organics_food_upkeep_mult = 0.20
 	icon = "gfx/interface/icons/planet_modifiers/gpm_blizzards.dds"
 	icon_frame = 3
 }
 gpm_abominable_predators = {
 	pop_environment_tolerance = -0.10
-	district_farming_max = -4
+	district_farming_max = -8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_abominable_predators.dds"
 	icon_frame = 3
 }
 gpm_rich_soil = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 3
+	district_farming_max = 5
 	icon = "gfx/interface/icons/planet_modifiers/gpm_rich_soil.dds"
 	icon_frame = 1
 }
@@ -623,7 +623,7 @@ gpm_carnivorous_flies = {
 }
 gpm_algae_boom = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_algae_boom.dds"
 	icon_frame = 1
 }
@@ -646,7 +646,7 @@ gpm_torrential_rainstorms = {
 }
 gpm_ocean_currents = {
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_ocean_currents.dds"
 	icon_frame = 1
 }
@@ -661,7 +661,7 @@ gpm_ocean_trenches = {
 }
 gpm_unique_marine_habitats = {	
 	planet_jobs_food_produces_mult = 0.20
-	district_farming_max = 2
+	district_farming_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_unique_marine_habitats.dds"
 	icon_frame = 1
 }
@@ -715,7 +715,7 @@ gpm_odd_cloud_shapes = {
 }
 gpm_colossal_cliffs = {	
 	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 4
+	district_mining_max = 8
 	planet_max_districts_add = 2
 	icon = "gfx/interface/icons/planet_modifiers/gpm_colossal_cliffs.dds"
 	icon_frame = 1
@@ -732,7 +732,7 @@ gpm_strange_alien_eggs = {
 }
 gpm_mushroom_forest = {
 	planet_farmers_food_produces_mult = 0.60
-	district_farming_max = 6
+	district_farming_max = 10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_mushroom_forest.dds"
 	icon_frame = 1
 }
@@ -753,13 +753,13 @@ gpm_sunken_cities = {
 }
 gpm_titanic_geo_form = {	
 	planet_miners_minerals_produces_mult = 0.40
-	district_mining_max = 6
+	district_mining_max = 10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_titanic_geo_form.dds"
 	icon_frame = 1
 }
 gpm_tidally_active = {
 	planet_technician_energy_produces_mult = 0.20
-	district_generator_max = 2
+	district_generator_max = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_tidally_active.dds"
 	icon_frame = 1
 }
@@ -804,7 +804,7 @@ gpm_mineral_pools = {
 }
 gpm_rich_equator = {
 	planet_miners_minerals_produces_add = 4
-	district_mining_max = 5
+	district_mining_max = 9
 	icon = "gfx/interface/icons/planet_modifiers/gpm_rich_equator.dds"
 	icon_frame = 1
 }

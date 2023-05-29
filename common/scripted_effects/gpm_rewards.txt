@@ -2988,6 +2988,18 @@ gpm_random_precursor_empire_dig_site_bonus = {
 			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_obelisks_discovery_2"
 		}
+		10 = {
+			owner = { add_modifier = { modifier = gpm_precursor_remnants_discovery } }
+			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_remnants_discovery } }
+			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
+			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery"
+		}
+		10 = {
+			owner = { add_modifier = { modifier = gpm_precursor_remnants_discovery_2 } }
+			modifier = { factor = 0 owner = { has_modifier = gpm_precursor_remnants_discovery_2 } }
+			modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
+			# log = "gpm_random_precursor_empire_dig_site_bonus - gpm_precursor_remnants_discovery_2"
+		}
 	}
 }
 
