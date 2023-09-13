@@ -6,6 +6,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		# crash = no
 		owner = {
 			every_country = {
 				limit = { gpm_is_country_type_default = yes }
@@ -329,6 +330,7 @@ espionage_operation_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# We set a timed flag so the AI doens't spam relic heist too frequently
 		owner = { set_timed_country_flag = { flag = gpm_recent_heist days = 5400 } }
 		from = { set_timed_country_flag = { flag = gpm_recent_heist days = 5400 } }
@@ -384,6 +386,7 @@ espionage_operation_event = {
 	}
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -461,6 +464,7 @@ espionage_operation_event = {
 	}
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -513,6 +517,7 @@ espionage_operation_event = {
 	}
 
 	immediate = {
+		# crash = no
 		log = "<< RELICS >> | STEAL_RELIC Operation.4 GETAWAY Finished on target ROOT.FROM = [root.from.GetName] by ROOT.OWNER = [root.owner.GetName]"
 	}
 
@@ -615,6 +620,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.5 (The Getaway GOOD) triggered by FROM.OWNER = [from.owner.GetName] on FROMFROM = [fromfrom.GetName]"
 		#### ##################
@@ -695,6 +701,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.5 (The Getaway ENRAGED) triggered by FROM.OWNER = [from.owner.GetName] on FROMFROM = [fromfrom.GetName]"
 		#### ##################
@@ -815,6 +822,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.5 (The Getaway ALLIES) triggered by FROM.OWNER = [from.owner.GetName] on FROMFROM = [fromfrom.GetName]"
 		#### ##################
@@ -972,6 +980,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.8 (Information Message event NO RELICS) triggered by FROM.OWNER = [from.owner.GetName] about relic FROM = [fromfrom.GetName]"
 		#### ##################
@@ -999,6 +1008,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.80 (The Getaway good NOTIFICATION) triggered on FROM.OWNER = [from.owner.GetName] about relic FROMFROM = [fromfrom.GetName]"
 		#### ##################
@@ -1023,6 +1033,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.81 (The Getaway good NOTIFICATION) triggered on FROM.OWNER = [from.owner.GetName] about relic FROMFROM = [fromfrom.GetName]"
 		#### ##################
@@ -1047,6 +1058,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		#### DEBUG LOGGING ####
 		log = "<< RELICS >> | STEAL_RELIC gpm_operation.82 (The Getaway good NOTIFICATION) triggered on FROM.OWNER = [from.owner.GetName] about relic FROMFROM = [fromfrom.GetName]"
 		#### ##################
@@ -1068,6 +1080,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		log = "<< RELICS >> | RELIC SUBJUGATION - ROOT = [root.GetName] became subject of FROM = [from.GetName]"
 
 		# (country scope)

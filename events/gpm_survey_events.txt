@@ -110,6 +110,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		ship_event = {
 			id = progress.2
 		}
@@ -130,6 +131,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		owner = {
 			add_research_option = tech_mine_betharian
 			add_tech_progress = {
@@ -162,6 +164,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		FROM = { save_event_target_as = "hot_core_world"}
 		owner = {
 			if = {
@@ -715,6 +718,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_gaia
@@ -1049,6 +1053,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_holy_world
@@ -1417,6 +1422,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_floating_islands
@@ -1845,6 +1851,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_ruined_battlefield
@@ -2197,6 +2204,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_spaceship_graveyard
@@ -2549,6 +2557,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_artificial_water
@@ -2983,6 +2992,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_pleasure_palace
@@ -3451,6 +3461,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_ancient_temple
@@ -3798,6 +3809,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_moon_palace
@@ -4125,6 +4137,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_plasmoid_life
@@ -4477,6 +4490,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_ancient_one
@@ -5016,6 +5030,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_proto_forest
@@ -5358,6 +5373,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_hive_world
@@ -5712,6 +5728,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_spiders
@@ -6110,6 +6127,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_giant_worm
@@ -6442,6 +6460,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_artificial_core
@@ -6769,6 +6788,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_surface_of_bones
@@ -7101,6 +7121,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_alien_eggs
@@ -7496,6 +7517,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		root = {
 			owner = {
 				set_country_flag = gpm_discover_mushroom_forest
@@ -7815,6 +7837,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		FROM = {
 			if = {
 				limit = {
@@ -7865,6 +7888,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		FROM = {
 			if = {
 				limit = {
@@ -7960,6 +7984,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		FROM = {
 			if = {
 				limit = {
@@ -8001,6 +8026,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		owner = {
 			log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 			create_message = {
@@ -8083,6 +8109,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		if = {
 			limit = {
 				has_event_chain = "vultaum_chain"

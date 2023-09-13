@@ -16,6 +16,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# set planet flag to tell scripts this planet is now a terraformed machine world
 		set_planet_flag = gpm_is_upgraded_machine_world
 	}
@@ -61,6 +62,7 @@ planet_event = {
 
 
 	immediate = {
+		# crash = no
 		THIS = {
 			# set planet flag to tell scripts this planet is now a terraformed planet (used to limit removing vanilla features
 			set_planet_flag = gpm_is_terraformed_world

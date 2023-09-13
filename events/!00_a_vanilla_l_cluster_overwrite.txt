@@ -12,6 +12,7 @@ country_event = {
 	fire_only_once = yes
 
 	immediate = {
+		# crash = no
 		set_spawn_system_batch = begin
 		# batch-processes the spawn_system effects between "begin" and "end",
 		# so caches are recalculated only once rather than for every system spawned

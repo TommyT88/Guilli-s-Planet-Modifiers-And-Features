@@ -28,6 +28,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		# global target to hook variables and stuff to for galaxy gen mechanics
 		save_global_event_target_as = gpm_host_country_event_target
 		set_variable = { which = gpm_galaxy_setting_habitable_worlds_scale value = 1 }
@@ -419,6 +420,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		if = {
 			limit = { gpm_is_planet_class_star = yes }
 			random_list = {
@@ -757,6 +759,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 
 		## STARS
 		if = {
@@ -1022,6 +1025,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		gpm_roll_star_modifiers = yes
 	}
 }
@@ -1037,6 +1041,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		gpm_roll_asteroid_modifiers = yes
 
 		# remove % of base energy and mineral deposits
@@ -1055,6 +1060,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = {
@@ -1129,6 +1135,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
@@ -1220,6 +1227,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
@@ -1293,6 +1301,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
@@ -1406,6 +1415,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1435,6 +1445,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1463,6 +1474,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1485,6 +1497,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
@@ -1569,6 +1582,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		gpm_roll_habitat_modifiers = yes
 	}
 }
@@ -1591,6 +1605,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# gpm_roll_ringworld_modifiers = yes
 		# deprecated - to review
 	}
@@ -1611,6 +1626,7 @@ planet_event = {
 	}
 
 	immediate = {
+		# crash = no
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
@@ -1684,6 +1700,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		random_galaxy_planet = {
 			limit = {
 				is_moon = no

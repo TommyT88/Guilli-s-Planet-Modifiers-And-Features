@@ -19,6 +19,7 @@ event = {
 		is_ai = no                                              # stop this from running on AI
 	}
 	immediate = {
+		# crash = no
 		set_global_flag = gpm_initialisation_menu       		# safety to prevent additional runs
 		set_global_flag = gpm_modifier_amount_normal    		# for my mod I set a base amount too to get amount cycle option working (has to have a base to check with)
 		set_global_flag = gpm_galaxy_age_default				# for my mod I set the default galaxy ag to get the age cycle option working ^
@@ -114,6 +115,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		random_owned_planet = {
 			limit = { is_capital = yes }
 			set_planet_size = 25
@@ -148,6 +150,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		random_owned_planet ={
 			limit = { is_capital = yes }
 			gpm_run_origin_precursor_world_planet_gen = yes
@@ -166,6 +169,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		random_owned_planet ={
 			limit = { is_capital = yes }
 			gpm_run_origin_fallen_empire_planet_gen = yes
@@ -184,6 +188,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		random_owned_planet ={
 			limit = { is_capital = yes }
 			gpm_run_scion_planet_gen = yes

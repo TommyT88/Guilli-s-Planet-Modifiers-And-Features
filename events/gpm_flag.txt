@@ -12,7 +12,10 @@ event = {
 		}
 	}
 
-	immediate = { set_global_flag = has_guillis_planet_modifiers_mod }
+	immediate = {
+		# crash = no 
+		set_global_flag = has_guillis_planet_modifiers_mod 
+	}
 }
 event = {
 	id = gpm_flag.2
@@ -26,5 +29,8 @@ event = {
 		}
 	}
 
-	immediate = { set_global_flag = guillis_planet_modifiers_active }
+	immediate = {
+		# crash = no 
+		set_global_flag = guillis_planet_modifiers_active 
+	}
 }

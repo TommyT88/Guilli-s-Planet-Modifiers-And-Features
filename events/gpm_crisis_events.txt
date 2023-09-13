@@ -12,6 +12,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		# log = "---- Fired Event gpm_crisis.1 ----"
 		# log = "---- Turning infested into barren world ----"
 		# we also remove wondrous planet modifier and make sure the colour is set to default.
@@ -51,6 +52,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		# log = "---- Fired Event gpm_crisis.2 ----"
 		# log = "---- Purging world (scourge) ----"
 		if = {
@@ -104,6 +106,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		# log = "---- Fired Event gpm_crisis.3 ----"
 		# log = "---- Colonized world (scourge) ----"
 		if = {
@@ -161,6 +164,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		# log = "---- Fired Event gpm_crisis.10 ----"
 		# log = "---- Bombarded world (unbidden) turn to random world ----"
 		if = {

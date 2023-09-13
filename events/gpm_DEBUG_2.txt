@@ -7,6 +7,7 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		# crash = no
 		owner = {
 
 			# give relics
@@ -315,6 +316,7 @@ event = {
 
 planet_event = { id = gpm_iddqd.2 hide_window = yes is_triggered_only = yes
 	immediate = {
+		# crash = no
 		add_modifier = { days = -1 modifier = gpm_precursor_remnants }
 		add_modifier = { days = -1 modifier = gpm_precursor_energy_grid }
 		add_modifier = { days = -1 modifier = gpm_precursor_satalite_grid }
@@ -344,6 +346,7 @@ planet_event = { id = gpm_iddqd.2 hide_window = yes is_triggered_only = yes
 
 planet_event = { id = gpm_iddqd.3 hide_window = yes is_triggered_only = yes
 	immediate = {
+		# crash = no
 		add_modifier = { days = -1 modifier = gpm_sandstorms }
 		add_modifier = { days = -1 modifier = gpm_arachnophobia }
 		add_modifier = { days = -1 modifier = hazardous_weather }
@@ -362,6 +365,7 @@ planet_event = { id = gpm_iddqd.3 hide_window = yes is_triggered_only = yes
 
 country_event = { id = gpm_iddqd.4 hide_window = yes is_triggered_only = yes
 	immediate = {
+		# crash = no
 		force_add_civic = civic_exalted_priesthood
 		force_add_civic = civic_environmentalist
 		force_add_civic = civic_agrarian_idyll

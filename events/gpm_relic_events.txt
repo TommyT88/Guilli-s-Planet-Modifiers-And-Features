@@ -15,6 +15,7 @@ country_event = {
 
 
 	immediate = {
+		# crash = no
 		every_pool_leader = {
 			if = {
 				limit = {
@@ -52,6 +53,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		from = {
 			if = {
 				limit = { leader_class = admiral }
@@ -78,6 +80,7 @@ country_event = {
 
 
 # 	immediate = {
+#		# crash = no
 # 		leader = {
 # 			if = {
 # 				limit = {
@@ -119,6 +122,7 @@ country_event = {
 
 
 # 	immediate = {
+#		# crash = no
 # 		every_pool_leader = {
 # 			if = {
 # 				limit = {
@@ -149,6 +153,7 @@ country_event = {
 # 	}
 
 # 	immediate = {
+#		# crash = no
 # 		from = {
 # 			add_trait = leader_trait_gpm_shared_soul
 # 		}
@@ -169,6 +174,7 @@ country_event = {
 
 
 	immediate = {
+		# crash = no
 		every_pool_leader = {
 			if = {
 				limit = {
@@ -203,6 +209,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		from = {
 			if = {
 				limit = { leader_class = admiral }
@@ -226,6 +233,7 @@ country_event = {
 
 
 	immediate = {
+		# crash = no
 		leader = {
 			if = {
 				limit = {
@@ -248,6 +256,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		from = {
 			if = {
 				limit = { is_ruler = yes }
@@ -271,6 +280,7 @@ country_event = {
 
 
 	immediate = {
+		# crash = no
 		every_pool_leader = {
 			if = {
 				limit = {
@@ -305,6 +315,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		from = {
 			if = {
 				limit = { leader_class = general }
@@ -328,6 +339,7 @@ country_event = {
 
 
 	immediate = {
+		# crash = no
 		every_pool_leader = {
 			if = {
 				limit = {
@@ -362,6 +374,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		from = {
 			if = {
 				limit = { leader_class = general }
@@ -406,6 +419,7 @@ country_event = {
 	}
 
 	immediate = {
+		# crash = no
 		from = { country_event = { id = gpm_relics.1001 } }
 		this = { save_event_target_as = gpm_relic_destroyed_country }
 	}
@@ -421,6 +435,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 		log = "<< RELICS >> | RELIC CONQUEST <<< ROOT = [root.GetName] destroyed FROM = [from.GetName] >>>"
 		if = {
 			limit = {

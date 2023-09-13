@@ -262,6 +262,10 @@ building_affluence_center = {
 			energy = 10
 		}
 	}
+	
+	destroy_trigger = {
+		always = no
+	}
 
 	on_queued = {
 		owner = {
@@ -320,6 +324,10 @@ building_nourishment_center = {
 		upkeep = {
 			energy = 20
 		}
+	}
+	
+	destroy_trigger = {
+		always = no
 	}
 
 	on_queued = {
@@ -392,6 +400,10 @@ building_dimensional_fabricator = {
 			energy = 20
 		}
 	}
+	
+	destroy_trigger = {
+		always = no
+	}
 
 	on_queued = {
 		owner = {
@@ -449,6 +461,10 @@ building_class_4_singularity = {
 	}
 
 	upgrades = {
+	}
+	
+	destroy_trigger = {
+		always = no
 	}
 
 	on_queued = {
@@ -508,6 +524,10 @@ building_nano_forge = {
 	}
 
 	upgrades = {
+	}
+	
+	destroy_trigger = {
+		always = no
 	}
 
 	on_queued = {

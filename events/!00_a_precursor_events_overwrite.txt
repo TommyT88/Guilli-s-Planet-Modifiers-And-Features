@@ -36,6 +36,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -74,6 +75,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -112,6 +114,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -150,6 +153,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -188,6 +192,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# crash = no
 	}
 
 	option = {
@@ -225,6 +230,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		owner = {
 			set_country_flag = vultaum_world_found
 			set_global_flag = vultaum_homeworld_found
@@ -326,6 +332,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		set_global_flag = yuht_homeworld_found
 		owner = {
 			set_country_flag = yuht_world_found
@@ -426,6 +433,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		owner = {
 			set_country_flag = league_world_found
 			set_global_flag = first_league_homeworld_found
@@ -526,6 +534,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		owner = {
 			set_country_flag = irassian_world_found
 			set_global_flag = irassian_homeworld_found
@@ -622,6 +631,7 @@ ship_event = {
 	}
 
 	immediate = {
+		# crash = no
 		owner = {
 			set_country_flag = cybrex_world_found
 			if = {
