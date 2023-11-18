@@ -12,7 +12,7 @@ planet_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		# log = "Guardian event has run"
 		if = {
 			limit = {
@@ -113,7 +113,7 @@ country_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		fromfrom = { save_event_target_as = gpm_ego }
 		random_system = {
 			limit = {
@@ -183,7 +183,7 @@ ship_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		FROMFROM = { set_country_flag = gpm_ego_first_meet }
 		solar_system = {
 			random_system_planet = {
@@ -292,7 +292,7 @@ country_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		set_global_flag = gpm_ego_chain_completed
 	}
 
@@ -635,7 +635,7 @@ country_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		set_country_flag = gpm_ego_friendly_reward
 	}
 
@@ -823,7 +823,7 @@ country_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		THIS = {
 			set_country_flag = gpm_ego_first_fleet_destroyed
 		}

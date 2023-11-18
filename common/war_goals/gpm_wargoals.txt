@@ -3794,8 +3794,2406 @@ wg_gpm_r_war_forge = {
 		}
 	}
 }
+# r_vacuum_flower
+wg_gpm_r_vacuum_flower = {
+	casus_belli = cb_gpm_r_vacuum_flower
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
 
 
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_vacuum_flower } }
+			steal_relic = {
+				target = FROM
+				relic = r_vacuum_flower
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_vacuum_flower >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_toxic_god
+wg_gpm_r_toxic_god = {
+	casus_belli = cb_gpm_r_toxic_god
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_toxic_god } }
+			steal_relic = {
+				target = FROM
+				relic = r_toxic_god
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_toxic_god >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_odryskan_crystal
+wg_gpm_r_odryskan_crystal = {
+	casus_belli = cb_gpm_r_odryskan_crystal
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_odryskan_crystal } }
+			steal_relic = {
+				target = FROM
+				relic = r_odryskan_crystal
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_odryskan_crystal >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_wormhole_key
+wg_gpm_r_wormhole_key = {
+	casus_belli = cb_gpm_r_wormhole_key
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_wormhole_key } }
+			steal_relic = {
+				target = FROM
+				relic = r_wormhole_key
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_wormhole_key >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_ever_spinning_top
+wg_gpm_r_ever_spinning_top = {
+	casus_belli = cb_gpm_r_ever_spinning_top
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_ever_spinning_top } }
+			steal_relic = {
+				target = FROM
+				relic = r_ever_spinning_top
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_ever_spinning_top >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_celestial_tear
+wg_gpm_r_celestial_tear = {
+	casus_belli = cb_gpm_r_celestial_tear
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_celestial_tear } }
+			steal_relic = {
+				target = FROM
+				relic = r_celestial_tear
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_celestial_tear >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_plasmic_core
+wg_gpm_r_plasmic_core = {
+	casus_belli = cb_gpm_r_plasmic_core
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_plasmic_core } }
+			steal_relic = {
+				target = FROM
+				relic = r_plasmic_core
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_plasmic_core >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_infinity_root
+wg_gpm_r_infinity_root = {
+	casus_belli = cb_gpm_r_infinity_root
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_infinity_root } }
+			steal_relic = {
+				target = FROM
+				relic = r_infinity_root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_infinity_root >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_time_crystal
+wg_gpm_r_time_crystal = {
+	casus_belli = cb_gpm_r_time_crystal
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_time_crystal } }
+			steal_relic = {
+				target = FROM
+				relic = r_time_crystal
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_time_crystal >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_daedalus_seal
+wg_gpm_r_daedalus_seal = {
+	casus_belli = cb_gpm_r_daedalus_seal
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_daedalus_seal } }
+			steal_relic = {
+				target = FROM
+				relic = r_daedalus_seal
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_daedalus_seal >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_continuum
+wg_gpm_r_continuum = {
+	casus_belli = cb_gpm_r_continuum
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_continuum } }
+			steal_relic = {
+				target = FROM
+				relic = r_continuum
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_continuum >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
+# r_eternal_throne
+wg_gpm_r_eternal_throne = {
+	casus_belli = cb_gpm_r_eternal_throne
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+	threat_multiplier = 2.0
+	war_exhaustion = 2.0
+	# cede_claims = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = 20
+
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				gpm_is_country_type_default = yes
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = gpm_recent_relic_war_ended
+				years = 20
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		# Relic switches hands
+		if = {
+			limit = { from = { has_relic = r_eternal_throne } }
+			steal_relic = {
+				target = FROM
+				relic = r_eternal_throne
+			}
+			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_eternal_throne >>> from FROM = [from.GetName] >>>"
+		}
+		# Defender is humiliated
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+		# actions on all other countries to remove known relic flags
+		every_relation = {
+			limit = {
+				gpm_is_country_type_default = yes
+				has_communications = root
+			}
+			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			create_message = {
+				type = GPM_MESSAGE_RELIC_WAR
+				localization = GPM_MESSAGE_RELIC_WAR_DESC
+				days = 30
+				target = root.capital_scope
+				variable = {
+					type = name
+					localization = COUNTRY
+					scope = root
+				}
+				variable = {
+					type = name
+					localization = COUNTRY_TARGET
+					scope = root.from
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_flag = gpm_recent_relic_war_ended
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
+		modifier = {
+			opinion_level = {
+				who = from
+				level <= neutral
+			}
+			factor = 1.5
+		}
+		modifier = {
+			num_owned_relics = 1
+			factor = 1.2
+		}
+		modifier = {
+			num_owned_relics = 2
+			factor = 1.4
+		}
+		modifier = {
+			num_owned_relics = 3
+			factor = 1.6
+		}
+		modifier = {
+			num_owned_relics = 4
+			factor = 1.8
+		}
+		modifier = {
+			num_owned_relics = 5
+			factor = 2
+		}
+		modifier = {
+			num_owned_relics >= 6
+			factor = 2.2
+		}
+		modifier = {
+			has_ethic = ethic_militarist
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_militarist
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 1.5
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_pacifist
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_pacifist
+			factor = 0.5
+		}
+		modifier = {
+			is_megacorp = yes
+			factor = 0.6
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_xenophile
+			factor = 0.75
+		}
+		modifier = {
+			has_ethic = ethic_xenophile
+			factor = 0.5
+		}
+	}
+}
 
 ## GPM RELIC WAR GOALS ##
 

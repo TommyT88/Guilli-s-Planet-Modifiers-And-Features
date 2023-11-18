@@ -4,7 +4,7 @@
 ## BASE GAME RELICS ##
 ##### CASUS BELLI ####
 
-# gpm_r_dragon_trophy
+# r_dragon_trophy
 cb_gpm_r_dragon_trophy = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -34,7 +34,7 @@ cb_gpm_r_dragon_trophy = {
 	}
 }
 
-# gpm_r_khans_throne
+# r_khans_throne
 cb_gpm_r_khans_throne = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -64,7 +64,7 @@ cb_gpm_r_khans_throne = {
 	}
 }
 
-# gpm_r_worm_scales
+# r_worm_scales
 cb_gpm_r_worm_scales = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -94,7 +94,7 @@ cb_gpm_r_worm_scales = {
 	}
 }
 
-# gpm_r_rubricator
+# r_rubricator
 cb_gpm_r_rubricator = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -124,7 +124,7 @@ cb_gpm_r_rubricator = {
 	}
 }
 
-# gpm_r_galaxy
+# r_galaxy
 cb_gpm_r_galaxy = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -154,7 +154,7 @@ cb_gpm_r_galaxy = {
 	}
 }
 
-# gpm_r_omnicodex
+# r_omnicodex
 cb_gpm_r_omnicodex = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -184,7 +184,7 @@ cb_gpm_r_omnicodex = {
 	}
 }
 
-# gpm_r_surveyor
+# r_surveyor
 cb_gpm_r_surveyor = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -214,7 +214,7 @@ cb_gpm_r_surveyor = {
 	}
 }
 
-# gpm_r_ancient_sword
+# r_ancient_sword
 cb_gpm_r_ancient_sword = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -244,7 +244,7 @@ cb_gpm_r_ancient_sword = {
 	}
 }
 
-# gpm_r_severed_head
+# r_severed_head
 cb_gpm_r_severed_head = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -274,7 +274,7 @@ cb_gpm_r_severed_head = {
 	}
 }
 
-# gpm_r_prethoryn_queen
+# r_prethoryn_queen
 cb_gpm_r_prethoryn_queen = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -304,7 +304,7 @@ cb_gpm_r_prethoryn_queen = {
 	}
 }
 
-# gpm_r_unbidden_warlock
+# r_unbidden_warlock
 cb_gpm_r_unbidden_warlock = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -334,7 +334,7 @@ cb_gpm_r_unbidden_warlock = {
 	}
 }
 
-# gpm_r_contingency_core
+# r_contingency_core
 cb_gpm_r_contingency_core = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -364,7 +364,7 @@ cb_gpm_r_contingency_core = {
 	}
 }
 
-# gpm_r_zro_crystal
+# r_zro_crystal
 cb_gpm_r_zro_crystal = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -394,7 +394,7 @@ cb_gpm_r_zro_crystal = {
 	}
 }
 
-# gpm_r_the_last_baol
+# r_the_last_baol
 cb_gpm_r_the_last_baol = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -424,7 +424,7 @@ cb_gpm_r_the_last_baol = {
 	}
 }
 
-# gpm_r_the_defragmentor
+# r_the_defragmentor
 cb_gpm_r_the_defragmentor = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -454,7 +454,7 @@ cb_gpm_r_the_defragmentor = {
 	}
 }
 
-# gpm_r_reality_perforator
+# r_reality_perforator
 cb_gpm_r_reality_perforator = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -484,7 +484,7 @@ cb_gpm_r_reality_perforator = {
 	}
 }
 
-# gpm_r_cryo_core
+# r_cryo_core
 cb_gpm_r_cryo_core = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -514,7 +514,7 @@ cb_gpm_r_cryo_core = {
 	}
 }
 
-# gpm_r_pox_sample
+# r_pox_sample
 cb_gpm_r_pox_sample = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -544,7 +544,7 @@ cb_gpm_r_pox_sample = {
 	}
 }
 
-# gpm_r_war_forge
+# r_war_forge
 cb_gpm_r_war_forge = {
 	show_in_diplomacy = yes
 	show_notification = yes
@@ -573,6 +573,367 @@ cb_gpm_r_war_forge = {
 		}
 	}
 }
+
+# r_vacuum_flower
+cb_gpm_r_vacuum_flower = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_vacuum_flower }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_toxic_god
+cb_gpm_r_toxic_god = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_toxic_god }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_odryskan_crystal
+cb_gpm_r_odryskan_crystal = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_odryskan_crystal }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_wormhole_key
+cb_gpm_r_wormhole_key = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_wormhole_key }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_ever_spinning_top
+cb_gpm_r_ever_spinning_top = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_ever_spinning_top }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_celestial_tear
+cb_gpm_r_celestial_tear = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_celestial_tear }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_plasmic_core
+cb_gpm_r_plasmic_core = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_plasmic_core }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_infinity_root
+cb_gpm_r_infinity_root = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_infinity_root }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_time_crystal
+cb_gpm_r_time_crystal = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_time_crystal }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_daedalus_seal
+cb_gpm_r_daedalus_seal = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_daedalus_seal }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_continuum
+cb_gpm_r_continuum = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_continuum }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# r_eternal_throne
+cb_gpm_r_eternal_throne = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			gpm_is_country_type_default = yes
+			
+			gpm_is_country_type_awakened_fallen_empire = yes
+			is_berserk_fallen_machine_empire = yes
+		}
+		NOT = { is_in_federation_with = from }
+		is_neighbor_of = from
+		has_intel_level = {
+			who = FROM
+			category = government
+			level >= 2
+		}
+		from = { has_relic = r_eternal_throne }
+	}
+	is_valid = {
+		# has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
 
 ## GPM RELICS ##
 ## CASUS BELLI #

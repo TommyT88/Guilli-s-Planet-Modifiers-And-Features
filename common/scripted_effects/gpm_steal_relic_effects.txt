@@ -301,6 +301,78 @@ gpm_steal_random_relic = {
 			FROMFROM = { set_country_flag = gpm_r_self_repairing_obelisk_relic_stolen }
 			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = gpm_r_self_repairing_obelisk } } }
 			log = "<< RELICS >> | STEAL_RELIC <<< gpm_r_self_repairing_obelisk >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}		
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_vacuum_flower }
+			FROMFROM = { set_country_flag = r_vacuum_flower_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_vacuum_flower } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_vacuum_flower >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_toxic_god }
+			FROMFROM = { set_country_flag = r_toxic_god_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_toxic_god } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_toxic_god >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_odryskan_crystal }
+			FROMFROM = { set_country_flag = r_odryskan_crystal_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_odryskan_crystal } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_odryskan_crystal >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_wormhole_key }
+			FROMFROM = { set_country_flag = r_wormhole_key_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_wormhole_key } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_wormhole_key >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_ever_spinning_top }
+			FROMFROM = { set_country_flag = r_ever_spinning_top_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_ever_spinning_top } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_ever_spinning_top >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_celestial_tear }
+			FROMFROM = { set_country_flag = r_celestial_tear_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_celestial_tear } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_celestial_tear >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_plasmic_core }
+			FROMFROM = { set_country_flag = r_plasmic_core_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_plasmic_core } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_plasmic_core >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_infinity_root }
+			FROMFROM = { set_country_flag = r_infinity_root_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_infinity_root } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_infinity_root >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_time_crystal }
+			FROMFROM = { set_country_flag = r_time_crystal_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_time_crystal } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_time_crystal >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_daedalus_seal }
+			FROMFROM = { set_country_flag = r_daedalus_seal_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_daedalus_seal } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_daedalus_seal >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_continuum }
+			FROMFROM = { set_country_flag = r_continuum_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_continuum } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_continuum >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
+		}
+		10 = {
+			steal_relic = { target = FROMFROM relic = r_eternal_throne }
+			FROMFROM = { set_country_flag = r_eternal_throne_relic_stolen }
+			modifier = { factor = 0 FROMFROM = { NOT = { has_relic = r_eternal_throne } } }
+			log = "<< RELICS >> | STEAL_RELIC <<< r_eternal_throne >>> from FROMFROM = [fromfrom.GetName] giving it to ROOT.OWNER = [root.owner.GetName]"
 		}
 	}
 }
@@ -545,5 +617,65 @@ gpm_steal_relic_event_notifaction_tooltips = {
 		limit = { has_country_flag = gpm_r_self_repairing_obelisk_relic_stolen }
 		remove_country_flag = gpm_r_self_repairing_obelisk_relic_stolen
 		FROMFROM = { custom_tooltip = gpm_operation_getaway_gpm_r_self_repairing_obeliskTT }
+	}
+	if = {
+		limit = { has_country_flag = r_vacuum_flower_relic_stolen }
+		remove_country_flag = r_vacuum_flower_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_vacuum_flowerTT }
+	}
+	if = {
+		limit = { has_country_flag = r_toxic_god_relic_stolen }
+		remove_country_flag = r_toxic_god_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_toxic_godTT }
+	}
+	if = {
+		limit = { has_country_flag = r_odryskan_crystal_relic_stolen }
+		remove_country_flag = r_odryskan_crystal_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_odryskan_crystalTT }
+	}
+	if = {
+		limit = { has_country_flag = r_wormhole_key_relic_stolen }
+		remove_country_flag = r_wormhole_key_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_wormhole_keyTT }
+	}
+	if = {
+		limit = { has_country_flag = r_ever_spinning_top_relic_stolen }
+		remove_country_flag = r_ever_spinning_top_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_ever_spinning_topTT }
+	}
+	if = {
+		limit = { has_country_flag = r_celestial_tear_relic_stolen }
+		remove_country_flag = r_celestial_tear_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_celestial_tearTT }
+	}
+	if = {
+		limit = { has_country_flag = r_plasmic_core_relic_stolen }
+		remove_country_flag = r_plasmic_core_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_plasmic_coreTT }
+	}
+	if = {
+		limit = { has_country_flag = r_infinity_root_relic_stolen }
+		remove_country_flag = r_infinity_root_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_infinity_rootTT }
+	}
+	if = {
+		limit = { has_country_flag = r_time_crystal_relic_stolen }
+		remove_country_flag = r_time_crystal_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_time_crystalTT }
+	}
+	if = {
+		limit = { has_country_flag = r_daedalus_seal_relic_stolen }
+		remove_country_flag = r_daedalus_seal_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_daedalus_sealTT }
+	}
+	if = {
+		limit = { has_country_flag = r_continuum_relic_stolen }
+		remove_country_flag = r_continuum_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_continuumTT }
+	}
+	if = {
+		limit = { has_country_flag = r_eternal_throne_relic_stolen }
+		remove_country_flag = r_eternal_throne_relic_stolen
+		FROMFROM = { custom_tooltip = gpm_operation_getaway_r_eternal_throneTT }
 	}
 }

@@ -26,8 +26,8 @@ gpm_time_lost_digsite = {
 	max_instances = 1
 	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		default_site_visible_trigger = yes
@@ -63,8 +63,8 @@ gpm_precursor_generic_digsite = {
 	max_instances = 999
 	weight = 0
 	allow = {
-		is_ship_class = shipclass_science_ship
 		exists = leader
+		leader = { leader_class = scientist }
 	}
 	visible = {
 		default_site_visible_trigger = yes

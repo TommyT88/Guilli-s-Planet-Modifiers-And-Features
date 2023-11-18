@@ -7,11 +7,14 @@ leader_trait_gpm_guilli = {
 		always = no
 	}
 	
+	councilor_modifier = {
+		all_technology_research_speed = 0.10
+		category_psionics_research_speed_mult = 0.50
+		category_psionics_draw_chance_mult = 1.0
+	}
+	
 	icon = "gfx/interface/icons/traits/trait_gpm_guilli.dds"
 	immortal_leaders = yes
-	modifier = {
-		all_technology_research_speed = 0.15
-	}
 	leader_class = { scientist }
 
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
@@ -25,10 +28,15 @@ leader_trait_gpm_shared_soul = {
 	leader_potential_add = {
 		always = no
 	}
+	councilor_modifier = {
+		country_power_projection_influence_produces_add = 1
+		intel_decryption_add = 2
+		envoys_add = 1
+	}
 	
 	icon = "gfx/interface/icons/traits/leader_trait_gpm_shared_soul.dds"
 	immortal_leaders = yes
-	leader_class = { scientist admiral general governor}
+	leader_class = { scientist commander official}
 	
 }
 
@@ -44,9 +52,9 @@ leader_trait_gpm_stealth_tactician = {
 	icon = "gfx/interface/icons/traits/leader_trait_gpm_stealth_tactician.dds"
 	modifier = {
 		ship_evasion_mult = 0.05
-		ship_jumpdrive_cooldown_mult = -0.25
+		ship_jumpdrive_cooldown_mult = -0.50
 	}
-	leader_class = { admiral }
+	leader_class = { commander }
 }
 
 leader_trait_gpm_precursor_expert = {
@@ -59,13 +67,10 @@ leader_trait_gpm_precursor_expert = {
 	
 
 	modifier = {
-		ship_archaeological_site_excavation_speed_mult = 0.35
+		ship_archaeological_site_excavation_speed_mult = 0.40
 	}
 	leader_class = { scientist }
 
-	ai_categories = {
-		survey
-	}
 
 	ai_weight = {
 		weight = 50
@@ -90,9 +95,9 @@ leader_trait_gpm_fallen_heraldry = {
 	
 	modifier = {
 		ship_experience_gain_mult = 1.00
-		ship_weapon_damage = 0.05
+		ship_weapon_damage = 0.10
 	}
-	leader_class = { admiral }
+	leader_class = { commander }
 	
 	ai_weight = {
 		weight = 100
@@ -117,7 +122,7 @@ leader_trait_gpm_personal_mech = {
 	# leader_potential_add = {
 	# 	from = { has_country_flag = gpm_personal_mech_trait_rewarded }
 	# }
-	leader_class = { general }
+	leader_class = { commander }
 }
 
 leader_trait_gpm_battle_standards = {
@@ -138,7 +143,7 @@ leader_trait_gpm_battle_standards = {
 	# leader_potential_add = {
 	# 	from = { has_country_flag = gpm_battle_standards_trait_rewarded }
 	# }
-	leader_class = { general }
+	leader_class = { commander }
 }
 
 gpm_leader_trait_collector = {
@@ -156,10 +161,6 @@ gpm_leader_trait_collector = {
 	
 	leader_class = { scientist }
 	# higher chance to generate techs in category archaeostudies (done in tech-script)
-
-	ai_categories = {
-		survey
-	}
 
 	ai_weight = {
 		weight = 25

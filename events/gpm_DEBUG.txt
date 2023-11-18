@@ -7,7 +7,7 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		# crash = no
+		
 		set_global_flag = gpm_spider_features_disabled
 		every_galaxy_planet = {
 			if = {

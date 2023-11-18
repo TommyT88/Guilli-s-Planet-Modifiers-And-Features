@@ -24,10 +24,9 @@ gpm_exploration_policy = {
 		}
 
 		modifier = {
-			ship_anomaly_generation_chance_mult = 0.05
-			ship_anomaly_research_speed_mult = 0.30
-			science_ship_survey_speed = -0.60
-			shipsize_science_energy_upkeep_add = 2
+			ship_anomaly_research_speed_mult = 0.20
+			science_ship_survey_speed = -0.50
+			shipsize_science_energy_upkeep_add = 4
 		}
 
 		AI_weight = {
@@ -71,7 +70,9 @@ gpm_exploration_policy = {
 		name = "gpm_to_boldly_go"
 
 		modifier = {
-			science_ship_survey_speed = 0.10
+			shipclass_science_ship_build_cost_mult = -0.25
+			shipclass_science_ship_build_speed_mult = 0.25
+			shipclass_science_ship_disengage_mult = 0.25
 		}
 
 		AI_weight = {
@@ -126,8 +127,8 @@ gpm_exploration_policy = {
 		}
 
 		modifier = {
-			science_ship_survey_speed = 1.00
-			shipsize_science_upkeep_mult = -0.8			
+			science_ship_survey_speed = 0.50
+			shipsize_science_upkeep_mult = -0.8
 		}
 
 		AI_weight = {

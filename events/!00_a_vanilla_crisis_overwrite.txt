@@ -16,7 +16,7 @@ planet_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		set_planet_flag = previously_infested
 		every_owned_pop = {
 			kill_pop = yes
@@ -47,7 +47,7 @@ planet_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		controller = { save_event_target_as = swarm }
 		if = {
 			limit = {
@@ -142,7 +142,7 @@ planet_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		every_owned_pop = { kill_pop = yes }
 		if = {
 			limit = {
@@ -203,7 +203,7 @@ planet_event = {
 # 	}
 
 # 	immediate = {
-#		# crash = no
+#		
 # 		add_threat = { who = from amount = 2 }
 # 		while = {
 # 			limit = {
@@ -296,7 +296,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# crash = no
+		
 		set_crisis_sound = ai_empire_ambient_stage_1
 		set_crisis_stage_1 = yes
 		create_species = {
@@ -455,7 +455,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# crash = no
+		
 		random_country = {
 			limit = { is_country_type = ai_empire }
 			save_event_target_as = AI_crisis
@@ -524,7 +524,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# crash = no
+		
 		random_country = {
 			limit = { is_country_type = ai_empire }
 			save_event_target_as = AI_crisis
@@ -594,7 +594,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# crash = no
+		
 		random_country = {
 			limit = { is_country_type = ai_empire }
 			save_event_target_as = AI_crisis
@@ -694,7 +694,7 @@ planet_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		destroy_machine_world = yes
 		gpm_purge_all_planetary_modifiers = yes		# -guilli
 		gpm_purge_all_core_modifiers = yes			# -guilli
@@ -709,7 +709,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# crash = no
+		
 		set_global_flag = ai_invasion_defeated
 		event_target:final_machine_world_destroyer = { set_country_flag = does_not_compute }
 		event_target:final_machine_world_destroyer = { set_country_flag = with_great_power_achievement }

@@ -69,8 +69,9 @@ gpm_r_encyclopedia_galactica = {
 		potential = {
 			always = yes
 		}
-		num_tech_alternatives_add = 4
-		assist_research_mult = 1.00
+		num_tech_alternatives_add = 2
+		leader_trait_selection_options_add = 2
+		councilor_exp_gain = 0.2		
 	}
 
 	score = 1000
@@ -1358,7 +1359,7 @@ gpm_r_soul_gem = {
 		potential = {
 			is_machine_empire = no
 		}
-		leader_age = 100
+		leader_lifespan_add = 50
 	}
 	
 	triggered_country_modifier = {

@@ -24,7 +24,7 @@ country_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		# log = "000000000 run event gpm_habitat.2 in 1 day"
 		country_event = { id = gpm_habitat.2 days = 1 }
 	}
@@ -42,7 +42,7 @@ country_event = {
 	}
 
 	immediate = {
-		# crash = no
+		
 		# log = "000000000 from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
 		fromfrom.solar_system = {
 			every_system_planet = {

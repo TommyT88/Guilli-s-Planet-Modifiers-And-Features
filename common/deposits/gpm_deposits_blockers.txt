@@ -10,8 +10,25 @@ gpm_tb_toxic_gas = {
 		}
 	}
 	
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+	
 	planet_modifier = {
 		district_farming_max = -2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_large_production
 	}
 
 	all_blocker_swap_types = yes
@@ -61,6 +78,14 @@ gpm_tb_locust_plagues = {
 	
 	planet_modifier = {
 		district_farming_max = -2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	on_cleared = {
@@ -127,6 +152,14 @@ gpm_tb_seasonal_flooding = {
 	planet_modifier = {
 		district_farming_max = -2
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
 
 	all_blocker_swap_types = yes
 
@@ -152,8 +185,25 @@ gpm_tb_xenomorph_blocker = {
 		}
 	}
 	
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+	
 	planet_modifier = { 
 		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_large_production
 	}
 
 	all_blocker_swap_types = yes
@@ -215,6 +265,14 @@ gpm_tb_deep_caverns = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_large_production
 	}
 
 	on_cleared = {
@@ -304,6 +362,14 @@ gpm_tb_volatile_gasses = {
 	planet_modifier = {
 		planet_max_districts_add = -1
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_small_production
+	}
 
 	all_blocker_swap_types = yes
 
@@ -345,6 +411,14 @@ gpm_tb_volatile_motes = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -388,6 +462,14 @@ gpm_tb_volatile_crystals = {
 	planet_modifier = {
 		planet_max_districts_add = -1
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
 
 	all_blocker_swap_types = yes
 
@@ -429,6 +511,14 @@ gpm_tb_swamp_resources = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -473,6 +563,14 @@ gpm_tb_ocean_resources = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	on_cleared = {
@@ -526,6 +624,14 @@ gpm_tb_forest_resources = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -603,6 +709,14 @@ gpm_tb_crystal_growth_resources = {
 	planet_modifier = {
 		planet_max_districts_add = -1
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_small_production
+	}
 
 	all_blocker_swap_types = yes
 
@@ -650,6 +764,14 @@ gpm_tb_lethal_overgrowth_resources = {
 	planet_modifier = {
 		planet_max_districts_add = -1
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+	}
 
 	all_blocker_swap_types = yes
 
@@ -683,8 +805,25 @@ gpm_tb_xenomorph_blocker_empty = {
 		}
 	}
 	
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+	
 	planet_modifier = { 
 		planet_max_districts_add = -2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	# all_blocker_swap_types = no
@@ -751,6 +890,14 @@ gpm_d_webbing = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes

@@ -48,6 +48,14 @@ gpm_d_spaceship_graveyard = {
 	planet_modifier = {
 		district_mining_max = 3
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -102,6 +110,14 @@ gpm_d_unusual_formations = {
 	planet_modifier = {
 		district_mining_max = 3
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -115,6 +131,14 @@ gpm_d_ice_flora = {
 
 	planet_modifier = {
 		district_farming_max = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	# weight 0: event added
@@ -130,6 +154,14 @@ gpm_d_planetwide_forest = {
 	planet_modifier = {
 		district_farming_max = 3
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -144,6 +176,14 @@ gpm_d_dense_forests = {
 	planet_modifier = {
 		district_farming_max = 2
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -157,6 +197,14 @@ gpm_d_proto_forests = {
 
 	planet_modifier = {
 		district_farming_max = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	# weight 0: event added
@@ -228,6 +276,14 @@ gpm_d_dunes = {
 	planet_modifier = {
 		district_generator_max = 3
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -241,6 +297,14 @@ gpm_d_mushroom_forest = {
 
 	planet_modifier = {
 		district_farming_max = 4
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 4
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	# weight 0: event added
@@ -256,6 +320,14 @@ gpm_d_floating_rocks = {
 	planet_modifier = {
 		district_mining_max = 3
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -269,6 +341,14 @@ gpm_d_oasis = {
 
 	planet_modifier = {
 		district_farming_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	# weight 0: event added
@@ -328,6 +408,14 @@ gpm_d_small_wildlife = {
 		district_farming_max = 2
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -341,6 +429,14 @@ gpm_d_massive_wildlife = {
 	
 	planet_modifier = { 
 		district_farming_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -358,6 +454,14 @@ gpm_d_super_volcano = {
 		district_mining_max = 4
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 4
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -371,6 +475,14 @@ gpm_d_obsidian_fields = {
 	
 	planet_modifier = { 
 		district_mining_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -388,6 +500,14 @@ gpm_d_magnetic_mountains = {
 		district_generator_max = 5
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 5
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -401,6 +521,14 @@ gpm_d_magnetic_fields = {
 	
 	planet_modifier = { 
 		district_generator_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -418,6 +546,14 @@ gpm_d_rich_crater = {
 		district_mining_max = 3
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -431,6 +567,14 @@ gpm_d_surface_mineral_veins = {
 	
 	planet_modifier = { 
 		district_mining_max = 4
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 4
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -448,6 +592,14 @@ gpm_d_dense_metal_veins = {
 		district_mining_max = 5
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 5
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -461,6 +613,14 @@ gpm_d_iron_mountain = {
 	
 	planet_modifier = { 
 		district_mining_max = 5
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 5
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -509,6 +669,14 @@ gpm_d_carnivorous_jungle = {
 		pop_growth_speed = -0.05
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -525,6 +693,14 @@ gpm_d_carnivorous_forest = {
 		pop_growth_speed = -0.04
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -539,6 +715,14 @@ gpm_d_carnivorous_kelp = {
 	planet_modifier = { 
 		district_farming_max = 2
 		pop_growth_speed = -0.02
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -586,6 +770,14 @@ gpm_d_colossal_subterranean_cavern = {
 		planet_max_districts_add = 2
 		district_mining_max = 3
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
 
 	# weight 0: event added
 	drop_weight = {
@@ -600,6 +792,14 @@ gpm_d_titanic_hunting_ground = {
 	
 	planet_modifier = { 
 		district_farming_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	# weight 0: event added
@@ -806,6 +1006,14 @@ gpm_d_colossal_fish = {
 		district_farming_max = 3
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -820,6 +1028,14 @@ gpm_d_sprawling_archipelago = {
 	planet_modifier = { 
 		planet_max_districts_add = 1
 		district_farming_max = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -870,6 +1086,14 @@ gpm_d_garbage_patch = {
 		district_mining_max = 3
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -886,6 +1110,15 @@ gpm_d_industrial_ruins= {
 		district_mining_max = 2
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		district_mining_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -899,6 +1132,14 @@ gpm_d_radioactive_dump = {
 	
 	planet_modifier = { 
 		district_generator_max = 5
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 5
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -923,6 +1164,14 @@ gpm_d_ice_flower_field = {
 		district_farming_max = 2
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -945,6 +1194,14 @@ gpm_d_white_forest = {
 		district_farming_max = 2
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -960,6 +1217,14 @@ gpm_d_strange_ice_river = {
 		district_farming_max = 2
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -973,6 +1238,14 @@ gpm_d_massive_ray_school = {
 	
 	planet_modifier = { 
 		district_farming_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1083,6 +1356,14 @@ gpm_d_grand_reef = {
 		district_farming_max = 3
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -1096,6 +1377,14 @@ gpm_d_glistening_lake = {
 	
 	planet_modifier = {
 		district_farming_max = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1113,6 +1402,14 @@ gpm_d_fossilized_egg_sacks = {
 		district_mining_max = 3
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -1126,6 +1423,14 @@ gpm_d_fossilized_structures = {
 	
 	planet_modifier = {
 		district_mining_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1143,6 +1448,14 @@ gpm_d_fossilized_creep = {
 		district_mining_max = 5
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 5
+		mult = value:district_amount_mastery_of_nature
+	}
+	
 	# weight 0: event added
 	drop_weight = {
 		weight = 0
@@ -1156,6 +1469,14 @@ gpm_d_giant_skeleton = {
 	
 	planet_modifier = {
 		district_mining_max = 3
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1171,6 +1492,14 @@ gpm_d_resonating_ice = {
 	
 	planet_modifier = {
 		district_generator_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1203,7 +1532,15 @@ gpm_d_fertile_field = {
 	category = deposit_cat_food
 	
 	planet_modifier = {
-		district_Farming_max = 3
+		district_farming_max = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1251,7 +1588,15 @@ gpm_d_colossal_coral_life = {
 	category = deposit_cat_food
 	
 	planet_modifier = {
-		district_Farming_max = 4
+		district_farming_max = 4
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 4
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1266,7 +1611,15 @@ gpm_d_salt_flats = {
 	category = deposit_cat_energy
 	
 	planet_modifier = {
-		district_Generator_max = 4
+		district_generator_max = 4
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 4
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
@@ -1505,6 +1858,14 @@ gpm_d_empty_nest = {
 	planet_modifier = {
 		district_mining_max = 2
 		building_crystal_mines_max = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 	
 	# weight 0: event added
