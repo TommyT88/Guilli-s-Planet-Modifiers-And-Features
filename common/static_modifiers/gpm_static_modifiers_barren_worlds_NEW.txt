@@ -23,8 +23,9 @@
 # gpm_carbon_planet
 # gpm_stellar_irradiation
 # gpm_salt_flats
-
-
+# gpm_dust_storms
+# gpm_diamond_planet
+# gpm_red_planet
 
 gpm_oppertunity = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_tidal_locked.dds"
@@ -37,12 +38,12 @@ gpm_hydrogen_mist = {
 }
 gpm_iron_planet = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_iron_planet.dds"
-	district_mining_max = 6
+	district_mining_max_add = 6
 	icon_frame = 1
 }
 gpm_carbon_planet = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_carbon_planet.dds"
-	district_mining_max = 4
+	district_mining_max_add = 4
 	icon_frame = 1
 }
 gpm_stellar_irradiation = {
@@ -51,7 +52,7 @@ gpm_stellar_irradiation = {
 }
 gpm_salt_flats = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_salt_flats.dds"
-	district_mining_max = 2
+	district_mining_max_add = 2
 	icon_frame = 1
 }
 gpm_dust_storms = {

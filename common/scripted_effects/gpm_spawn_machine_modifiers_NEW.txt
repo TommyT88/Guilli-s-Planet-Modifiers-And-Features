@@ -213,6 +213,12 @@ gpm_roll_machine_world_modifiers = {
 				75 = { gpm_spawn_machine_world_random_modifier = yes }
 			}
 		}
+		gpm_modifier_amount_extra_high = {
+			random_list = {
+				25 = { }
+				75 = { gpm_spawn_machine_world_random_modifier = yes }
+			}
+		}
 		default = { }
 	}
 }

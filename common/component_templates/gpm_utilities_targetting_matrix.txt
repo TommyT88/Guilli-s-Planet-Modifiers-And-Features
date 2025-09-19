@@ -1,0 +1,83 @@
+# Updated v3.6
+
+
+#############
+#	COST	#
+#############
+
+@cost_1 = 15
+@cost_2 = 20
+@cost_3 = 25
+@cost_4 = 50
+@cost_5 = 100
+
+#########################
+# DAMAGE ORBITAL BOMB	#
+#########################
+
+@damage_1S = 0.10
+@damage_2S = 0.20
+@damage_3S = 0.30
+@damage_4S = 0.50
+@damage_5S = 1.00
+
+#####################
+# DAMAGE V STARBASE	#
+#####################
+
+@damage_starbase_1S = 0.10
+@damage_starbase_2S = 0.20
+@damage_starbase_3S = 0.30
+@damage_starbase_4S = 0.50
+@damage_starbase_5S = 1.00
+
+#############
+#	POWER	#
+#############
+
+@power_S1 = -20
+@power_S2 = -40
+@power_S3 = -60
+@power_S4 = -100
+@power_S5 = -150
+
+
+# ####################
+#  acc mods
+# ####################
+
+
+# +Targeting Matrix I
+
+utility_component_template = {
+	key = "GPM_TARGETTING_COMPUTER_1"
+	size = aux
+	icon = "GFX_C_ship_part_targeting_computer_1"
+	icon_frame = 1
+	power = @power_S1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+			sr_zro = 1
+		}
+	}
+	ship_modifier = {
+		ship_damage_against_starbases_mult = 0.50
+		ship_orbital_bombardment_mult = 0.50
+	}
+	
+	ship_limit = 1
+	prerequisites = { tech_gpm_crystalis_targeting_matrix_1 }
+	component_set = "GPM_TARGETTING_COMPUTER_1"
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+	
+	ai_weight = { weight = 10 }
+}

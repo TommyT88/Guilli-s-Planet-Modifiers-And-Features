@@ -26,36 +26,41 @@
 
 gpm_extinct_species= {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_extinct_species.dds"
-	planet_immigration_pull_mult = 1.00
+	planet_resettlement_unemployed_mult = 1.00
 	icon_frame = 7
 }
 gpm_terraforming_world_engineering = {
-	district_generator_max = 2
-	district_mining_max = 2
-	district_farming_max = 2
+	planet_resettlement_unemployed_mult = 0.5
+	district_generator_max_add = 2
+	district_mining_max_add = 2
+	district_farming_max_add = 2
 	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
 	icon_frame = 7
 }
 gpm_terraforming_world_engineering_shaper= {
+	planet_resettlement_unemployed_mult = 0.5
 	planet_max_districts_add = 1
-	district_generator_max = 2
-	district_mining_max = 2
-	district_farming_max = 2
+	district_generator_max_add = 2
+	district_mining_max_add = 2
+	district_farming_max_add = 2
 	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
 	icon_frame = 7
 }
 gpm_terraforming_world_engineering_mastery= {
-	district_generator_max = 3
-	district_mining_max = 3
-	district_farming_max = 3
+	planet_resettlement_unemployed_mult = 0.75
+	planet_max_districts_add = 1
+	district_generator_max_add = 2
+	district_mining_max_add = 2
+	district_farming_max_add = 2
 	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
 	icon_frame = 7
 }
 gpm_terraforming_world_engineering_shaper_mastery = {
+	planet_resettlement_unemployed_mult = 1.0
 	planet_max_districts_add = 1
-	district_generator_max = 3
-	district_mining_max = 3
-	district_farming_max = 3
+	district_generator_max_add = 3
+	district_mining_max_add = 3
+	district_farming_max_add = 3
 	icon = "gfx/interface/icons/planet_modifiers/gpm_terraforming_world_engineering.dds"
 	icon_frame = 7
 }
@@ -67,20 +72,21 @@ gpm_placated_arachnids = {
 gpm_controlled_storms = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_wild_storms.dds"
 	planet_technician_energy_produces_mult = 0.20
-	district_generator_max = 4
+	district_generator_max_add = 4
 	planet_jobs_physics_research_produces_mult = 0.20
-	icon_frame = 1
+	icon_frame = 7
 }
 gpm_artificial_polar_ice = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_melted_ice_caps.dds"
 	pop_environment_tolerance = 0.10
 	planet_max_districts_add = 2
 	planet_jobs_physics_research_produces_mult = 0.10
-	icon_frame = 1
+	icon_frame = 7
 }
 gpm_artificial_weather_systems = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
-	pop_environment_tolerance = 0.15
+	pop_environment_tolerance = 0.10
+	planet_technician_energy_produces_mult = 0.25
 	planet_districts_energy_upkeep_mult = -0.25
-	icon_frame = 1
+	icon_frame = 7
 }

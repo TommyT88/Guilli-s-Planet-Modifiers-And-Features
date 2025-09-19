@@ -1,77 +1,31 @@
 ###############################
 ###       Fortresses	    ###
 ###############################
-gpm_building_stronghold = {
-	base_buildtime = 180
-	base_cap_amount = 1
-
-	category = army
-
-	planet_modifier = {
-		planet_housing_add = 2
-		planet_orbital_bombardment_damage = -0.5
-	}
-
-	# gestalts get bunker drones
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_ethic = ethic_gestalt_consciousness }
-		}
-		modifier = {
-			job_gpm_bunker_drone_add = 2
-		}
-	}
-
-	# rest get bunker armies
-	triggered_planet_modifier = {
-		potential = {
-			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
-		}
-		modifier = {
-			job_gpm_bunker_army_add = 2
-		}
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 200
-			alloys = 100
-		}		
-		upkeep = {
-			energy = 2
-		}
-	}
-	
-	potential = {
-		planet = {
-			has_modifier = "gpm_precursor_bunker_grid"
-		}	
-	}
-	
-	ai_weight = {
-		weight = 0.5
-	}
-}
 
 gpm_building_mining_nanite_nexus = {
-	base_buildtime = 360
-	base_cap_amount = 1
+	base_buildtime = @b1_time
+	planet_limit = 1
 	category = resource
 	
+	building_sets = {
+		mining
+	}
+	
 	potential = {
+		owner = { is_wilderness_empire = no }
 		NOT = { has_modifier = resort_colony }
-		NOR = { # Ringworlds don't have mines
+		NOT = { # Ringworlds don't have mines
 			is_planet_class = pc_ringworld_habitable
 			is_planet_class = pc_cybrex
 			is_planet_class = pc_habitat
 			is_planet_class = pc_city
 		}
+		has_any_mining_district_or_building = yes
 	}
 		
 	planet_modifier = {
 		planet_miners_minerals_produces_add = 2
-		planet_miners_energy_upkeep_add = 2		
+		planet_miners_energy_upkeep_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -79,18 +33,17 @@ gpm_building_mining_nanite_nexus = {
 			exists = owner
 		}
 		modifier = {
-			district_mining_max = 10
+			district_mining_max_add = 4
 		}
 	}
 	
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 300
-			alloys = 100
+			minerals = 600
 		}
 		upkeep = {
-			energy = 10
+			energy = 2
 		}
 	}
 	
@@ -108,166 +61,171 @@ gpm_building_mining_nanite_nexus = {
 	}
 
 	ai_resource_production = {
-		minerals = 1
+   		minerals = 10
+
 		trigger = {
-			always = yes
+			has_any_mining_zone = yes
 		}
 	}
 }
 
-gpm_precursor_research_center = {
-	base_buildtime = @b2_time
-	base_cap_amount = 1
+# gpm_precursor_research_center = { 
+	# base_buildtime = @b2_time
+	# planet_limit = 1
 
-	category = research
+	# category = research
 
-	potential = {
-		exists = owner
-		# owner = { has_country_flag = gpm_artifact_research_centre_unlocked }
-		has_ancrel = yes
-		gpm_is_a_precursor_world = yes
-	}
+	# potential = {
+		# exists = owner
+		# # owner = { has_country_flag = gpm_artifact_research_centre_unlocked }
+		# has_ancrel = yes
+		# gpm_is_a_precursor_world = yes
+	# }
 
-	prerequisites = {
-		# gpm_tech_arcane_research
-		tech_archaeostudies
-	}
+	# prerequisites = {
+		# # gpm_tech_arcane_research
+		# tech_archaeostudies
+	# }
 
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			minor_artifacts = 35
-		}
-		produces = {
-			minor_artifacts = 0.25
-		}
-		produces = {
-			trigger = {
-				owner = { has_technology = gpm_tech_arcane_research }
-			}
-			minor_artifacts = 0.25
-		}
-		upkeep = {
-			energy = 10
-		}
-	}
+	# resources = {
+		# category = planet_buildings
+		# cost = {
+			# minerals = @b2_minerals
+			# minor_artifacts = 35
+		# }
+		# produces = {
+			# minor_artifacts = 0.25
+		# }
+		# produces = {
+			# trigger = {
+				# owner = { has_technology = gpm_tech_arcane_research }
+			# }
+			# minor_artifacts = 0.25
+		# }
+		# upkeep = {
+			# energy = 10
+		# }
+	# }
 	
-	country_modifier = {
-		country_resource_max_minor_artifacts_add = 1000
-	}
+	# country_modifier = {
+		# country_resource_max_minor_artifacts_add = 1000
+	# }
 
-	triggered_country_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		country_resource_max_minor_artifacts_add = 2000
-	}
+	# triggered_country_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = {
+				# has_ascension_perk = ap_archaeoengineers
+			# }
+		# }
+		# country_resource_max_minor_artifacts_add = 2000
+	# }
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_archaeoengineers_add = 2
-		}
-	}
+	# triggered_planet_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = { is_gestalt = no }
+		# }
+		# modifier = {
+			# job_archaeoengineers_add = 2
+		# }
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_archaeo_drone_add = 2
-		}
-	}
+	# triggered_planet_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = { is_hive_empire = yes }
+		# }
+		# modifier = {
+			# job_archaeo_drone_add = 2
+		# }
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_archaeo_unit_add = 2
-		}
-	}
+	# triggered_planet_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = { is_machine_empire = yes }
+		# }
+		# modifier = {
+			# job_archaeo_unit_add = 2
+		# }
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				is_gestalt = no
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		modifier = {
-			job_archaeoengineers_add = 1
-		}
-	}
+	# triggered_planet_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = { 
+				# is_gestalt = no
+				# has_ascension_perk = ap_archaeoengineers
+			# }
+		# }
+		# modifier = {
+			# job_archaeoengineers_add = 1
+		# }
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		modifier = {
-			job_archaeo_drone_add = 1
-		}
-	}
+	# triggered_planet_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = {
+				# is_hive_empire = yes
+				# has_ascension_perk = ap_archaeoengineers
+			# }
+		# }
+		# modifier = {
+			# job_archaeo_drone_add = 1
+		# }
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		modifier = {
-			job_archaeo_unit_add = 1
-		}
-	}
+	# triggered_planet_modifier = {
+		# potential = {
+			# exists = owner
+			# owner = {
+				# is_machine_empire = yes
+				# has_ascension_perk = ap_archaeoengineers
+			# }
+		# }
+		# modifier = {
+			# job_archaeo_unit_add = 1
+		# }
+	# }
 	
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_archaeoengineers_effect_desc
-	}
+	# triggered_desc = {
+		# trigger = {
+			# exists = owner
+			# owner = { is_gestalt = no }
+		# }
+		# text = job_archaeoengineers_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_archaeo_drone_effect_desc
-	}
+	# triggered_desc = {
+		# trigger = {
+			# exists = owner
+			# owner = { is_hive_empire = yes }
+		# }
+		# text = job_archaeo_drone_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_archaeo_unit_effect_desc
-	}
-	triggered_desc = {
-		text = gpm_building_precursor_research_center_effect
-	}
-}
+	# triggered_desc = {
+		# trigger = {
+			# exists = owner
+			# owner = { is_machine_empire = yes }
+		# }
+		# text = job_archaeo_unit_effect_desc
+	# }
+	# triggered_desc = {
+		# text = gpm_building_precursor_research_center_effect
+	# }
+# }
 
 gpm_building_ascension_tower = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+	planet_limit = 1
+	
+	building_sets = {
+		unity
+	}
 
 	category = amenity
 
@@ -282,8 +240,8 @@ gpm_building_ascension_tower = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 20
-		planet_amenities_add = 10
+		planet_housing_add = 2000
+		planet_jobs_unity_produces_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
@@ -294,23 +252,31 @@ gpm_building_ascension_tower = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 500
 		}
 	}
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
 		cost = {
-			minerals = 1000
-			alloys = 200
+			minerals = 1200
 		}
 		upkeep = {
-			energy = 10
+			energy = 2
 		}
 	}
 
 	prerequisites = {
 		tech_gpm_supermaterials_precursor
+	}
+	
+	triggered_desc = {
+		text = building_autochthon_monument_effect
 	}
 
 	ai_weight = {
@@ -325,7 +291,11 @@ gpm_building_ascension_tower = {
 
 gpm_building_exotic_park = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
+	
+	building_sets = {
+		unity
+	}
 
 	category = amenity
 
@@ -340,7 +310,7 @@ gpm_building_exotic_park = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 15
+		planet_amenities_add = 2500
 		biological_pop_happiness = 0.05
 		lithoid_pop_happiness = 0.05
 	}
@@ -348,11 +318,11 @@ gpm_building_exotic_park = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 450
+			minerals = 400
 			food = 200
 		}
 		upkeep = {
-			energy = 3
+			energy = 1
 		}
 	}
 
@@ -360,14 +330,19 @@ gpm_building_exotic_park = {
 		weight = 0
 		modifier = {
 			weight = 10000 #High weight to gurantee that if the below is true then the AI should build it
-			num_pops > 10 #Prevents the AI from hogging the first planet building slots
+			pop_amount > 1000 #Prevents the AI from hogging the first planet building slots
 		}
 	}
 }
 
 gpm_building_manufactory_hub = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	planet_limit = 1
+	
+	building_sets = {
+		industrial
+		foundry
+	}
 
 	category = manufacturing
 
@@ -375,25 +350,30 @@ gpm_building_manufactory_hub = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
-		has_any_industry_district = yes
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			# has_any_industry_district = yes
+		}
 	}
 
-	# destroy_trigger = {
-		# OR = {
-			# has_modifier = resort_colony
-			# has_modifier = slave_colony
-
-			# AND = {
-				# owner = {
-					# is_ai = yes
-					# is_gestalt = yes
-					# NOT = { has_valid_civic = civic_machine_servitor }
-				# }
-			# }
-		# }
-	# }
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				# has_any_industry_district = no
+			}
+		}
+	}
+	
+	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -402,9 +382,10 @@ gpm_building_manufactory_hub = {
 			}
 		}
 		modifier = {
-			planet_jobs_consumer_goods_produces_mult = 0.20
+			planet_metallurgists_alloys_produces_add = 2
+			planet_artisans_consumer_goods_produces_add = 2
 		}
-	}	
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -413,69 +394,9 @@ gpm_building_manufactory_hub = {
 			}
 		}
 		modifier = {
-			planet_jobs_alloys_produces_mult = 0.15
+			planet_metallurgists_alloys_produces_add = 3
 		}
 	}
-	
-	
-	### Normal Empires ###
-
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		modifier = {
-			job_artificer_add = 2
-		}
-	}
-	
-	
-	### Hive Empires ###
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_alloy_drone_add = 2
-		}
-	}
-	
-	### Machine Empires ###
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_fabricator_add = 2
-		}
-	}
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -485,84 +406,61 @@ gpm_building_manufactory_hub = {
 			}
 		}
 		modifier = {
-			job_catalytic_drone_add = 2
+			planet_metallurgists_alloys_produces_add = 3
 		}
-	}	
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ancrel = yes
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_metallurgists_minor_artifacts_upkeep_add = 0.01
+			planet_artisans_minor_artifacts_upkeep_add = 0.01
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ancrel = yes
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			planet_metallurgists_minor_artifacts_upkeep_add = 0.02
+		}
+	}
 
+	
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b2_minerals
+			minerals = 600
 		}
 		upkeep = {
-			alloys = 4
+			energy = 2
 		}
 	}
 
 	prerequisites = {
 		tech_gpm_manufactory_hub
 	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		text = job_artificer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
-	}
-
 }
 
 gpm_building_core_prison = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	planet_limit = 1
+	
+	building_sets = {
+		urban
+		government
+	}
 
 	category = government
 
@@ -582,7 +480,7 @@ gpm_building_core_prison = {
 			minerals = @b2_minerals
 		}
 		upkeep = {
-			energy = 3
+			energy = 2
 		}
 	}
 

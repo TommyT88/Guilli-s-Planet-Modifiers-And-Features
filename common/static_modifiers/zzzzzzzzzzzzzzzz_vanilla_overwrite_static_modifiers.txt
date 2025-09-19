@@ -43,44 +43,53 @@ toxic_terraforming_candidate = {
 }
 
 carbon_world = {
-	planet_jobs_minerals_produces_mult = 0.15
-	district_mining_max = 4
+	planet_miners_minerals_produces_mult = 0.10
+	district_mining_max_add = 4
 	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
 	icon_frame = 1
 }
 mineral_rich = {
 	planet_miners_minerals_produces_add = 1
-	district_mining_max = 4
+	district_mining_max_add = 4
 	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
 	icon_frame = 1
 }
 
 ultra_rich = {
 	planet_miners_minerals_produces_add = 2
-	district_mining_max = 8
+	district_mining_max_add = 8
 	icon = "gfx/interface/icons/planet_modifiers/pm_ultra_rich.dds"
 	icon_frame = 1
 }
 mineral_poor = {
 	planet_miners_minerals_produces_add = -1
-	district_mining_max = -4
+	district_mining_max_add = -4
 	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_poor.dds"
 	icon_frame = 3
 }
 low_gravity = {
-	planet_buildings_cost_mult = -0.1
-	planet_jobs_minerals_produces_mult = 0.05
-	district_mining_max = 2
+	planet_buildings_cost_mult = -0.20
+	pop_environment_tolerance = -0.05
+	planet_max_districts_add = 2
 	icon = "gfx/interface/icons/planet_modifiers/pm_low_gravity.dds"
 	icon_frame = 1
 }
 
 high_gravity = {
-	planet_jobs_alloys_produces_mult = 0.05
-	planet_buildings_cost_mult = 0.10
-	pop_environment_tolerance = -0.10
-	district_mining_max = -2
+	planet_structures_minerals_cost_mult = 0.40
+	planet_max_districts_add = -2
+	planet_metallurgists_alloys_produces_mult = 0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_high_gravity.dds"
-	icon_frame = 2
+	icon_frame = 3
+}
+
+weak_magnetic_field = {
+	pop_environment_tolerance = -0.05
+	# logistic_growth_mult = -0.05
+	pop_physicist_bonus_workforce_mult = 0.10
+	pop_technician_bonus_workforce_mult = -0.05
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_weak_magnetic_field.dds"
+	icon_frame = 3
 }

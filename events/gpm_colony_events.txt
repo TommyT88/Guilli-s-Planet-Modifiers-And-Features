@@ -80,7 +80,7 @@ planet_event = {
 
 
 	trigger = {
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_spaceship_graveyard"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_country_ship_event }
@@ -978,7 +978,7 @@ planet_event = {
 		is_capital = no
 	}
 	trigger = {
-		num_pops > 3
+		pop_amount > 300
 		has_modifier = "gpm_strange_alien_eggs"
 		NOT = {
 			owner = { has_country_flag  = gpm_colony_xenomorph_event }
@@ -1006,7 +1006,7 @@ planet_event = {
 		}
 		name = gpm_colony.20.a
 		locked_random_list = {
-			10 = { random_owned_pop = { kill_pop = yes } }
+			10 = { random_owned_pop_group = { kill_single_pop = yes } }
 			10 = { add_planet_devastation = 25 }
 			10 = {
 				remove_district = district_farming
@@ -1029,7 +1029,7 @@ planet_event = {
 		trigger = {	owner = { has_authority = auth_hive_mind } }
 		name = gpm_colony.20.hive
 		locked_random_list = {
-			10 = { random_owned_pop = { kill_pop = yes } }
+			10 = { random_owned_pop_group = { kill_single_pop = yes } }
 			10 = { add_planet_devastation = 25 }
 			10 = {
 				remove_district = district_farming
@@ -1052,7 +1052,7 @@ planet_event = {
 		trigger = {	owner = { has_authority = auth_machine_intelligence } }
 		name = gpm_colony.20.mach
 		locked_random_list = {
-			10 = { random_owned_pop = { kill_pop = yes } }
+			10 = { random_owned_pop_group = { kill_single_pop = yes } }
 			10 = { add_planet_devastation = 25 }
 			10 = {
 				remove_district = district_farming
@@ -1106,7 +1106,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "mineral_poor"
 		NOT = {
 			owner = { has_country_flag  = gpm_colony_mineral_upgrade_event }
@@ -1193,7 +1193,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "mineral_rich"
 			has_modifier = "gpm_mineral_rich_2"
@@ -1292,7 +1292,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_seasonal_flooding_dmg_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_seasonal_flooding"
 	}
 
@@ -1398,7 +1398,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_seasonal_flooding_upg_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_seasonal_flooding"
 	}
 
@@ -1484,7 +1484,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_locust_plagues_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_locust_plagues"
 	}
 
@@ -1559,7 +1559,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_acidic_seas_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_acidic_seas"
 	}
 
@@ -1634,7 +1634,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_carnivorous_flies_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_carnivorous_flies"
 	}
 
@@ -1709,7 +1709,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_lingering_pollution_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_lingering_pollution"
 	}
 
@@ -1784,7 +1784,7 @@ planet_event = {
 		NOT = {
 			owner = { has_country_flag = gpm_resilent_parasites_event }
 		}
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_resilent_parasites"
 	}
 
@@ -1839,7 +1839,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "gpm_frequent_thunderstorms"
 			has_modifier = "gpm_global_thunderstorms"
@@ -1905,7 +1905,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_highly_charged_air_particles"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_charged_event }
@@ -2002,7 +2002,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "unstable_tectonics"
 			has_modifier = "gpm_unstable_tectonics_2"
@@ -2031,24 +2031,24 @@ planet_event = {
 		}
 		name = gpm_colony.130.a
 		# custom_tooltip = gpm_colony.130.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_hive_mind } }
 		name = gpm_colony.130.hive
 		# custom_tooltip = gpm_colony.130.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_machine_intelligence } }
 		name = gpm_colony.130.mach
 		# custom_tooltip = gpm_colony.130.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 
@@ -2087,7 +2087,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "asteroid_impacts"
 			has_modifier = "gpm_asteroid_impacts_2"
@@ -2116,24 +2116,24 @@ planet_event = {
 		}
 		name = gpm_colony.140.a
 		# custom_tooltip = gpm_colony.140.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_hive_mind } }
 		name = gpm_colony.140.hive
 		# custom_tooltip = gpm_colony.140.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_machine_intelligence } }
 		name = gpm_colony.140.mach
 		# custom_tooltip = gpm_colony.140.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 }
@@ -2171,7 +2171,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "mineral_rich"
 			has_modifier = "gpm_mineral_rich_2"
@@ -2273,7 +2273,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_hostile_flora"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_hostile_flora_event }
@@ -2300,8 +2300,8 @@ planet_event = {
 		name = gpm_colony.160.a
 		custom_tooltip = gpm_colony.160.b
 		hidden_effect = {
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 	}
@@ -2310,8 +2310,8 @@ planet_event = {
 		name = gpm_colony.160.hive
 		custom_tooltip = gpm_colony.160.b
 		hidden_effect = {
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 	}
@@ -2320,8 +2320,8 @@ planet_event = {
 		name = gpm_colony.160.mach
 		custom_tooltip = gpm_colony.160.c
 		hidden_effect = {
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 	}
@@ -2361,7 +2361,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "gpm_titanic_predators"
 			has_modifier = "gpm_abominable_predators"
@@ -2390,24 +2390,24 @@ planet_event = {
 		}
 		name = gpm_colony.170.a
 		# custom_tooltip = gpm_colony.170.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_hive_mind } }
 		name = gpm_colony.170.hive
 		# custom_tooltip = gpm_colony.170.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_machine_intelligence } }
 		name = gpm_colony.170.mach
 		# custom_tooltip = gpm_colony.170.b
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 	}
 }
@@ -2445,7 +2445,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_endless_fish"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_endless_fish_event }
@@ -2590,7 +2590,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_gemstones"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_gemstones_event }
@@ -2714,7 +2714,7 @@ planet_event = {
 				}
 			}
 		}
-		num_pops > 0
+		pop_amount > 0
 
 		has_modifier = "gpm_android_pleasure_palace"
 		NOT = {
@@ -2752,7 +2752,8 @@ planet_event = {
 					trait = "trait_mechanical"
 				}
 			}
-			create_pop = {
+			create_pop_group = {
+				size = 100
 				species = last_created
 			}
 		}
@@ -2772,7 +2773,8 @@ planet_event = {
 					trait = "trait_mechanical"
 				}
 			}
-			create_pop = {
+			create_pop_group = {
+				size = 100
 				species = last_created
 			}
 		}
@@ -2792,7 +2794,8 @@ planet_event = {
 					trait = "trait_mechanical"
 				}
 			}
-			create_pop = {
+			create_pop_group = {
+				size = 100
 				species = last_created
 			}
 		}
@@ -2823,7 +2826,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_windy"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_windy_event }
@@ -2881,7 +2884,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_radioactive_mantle"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_betharian_stone_event }
@@ -2956,7 +2959,7 @@ planet_event = {
 	}
 	trigger = {
 		NOT = { owner = { has_authority = auth_machine_intelligence } }
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_locust_plagues"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_locust_farm_event }
@@ -3034,7 +3037,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_trubbles"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_hungry_trubbles_event }
@@ -3088,7 +3091,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_strange_voices"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_cultist_event }
@@ -3224,12 +3227,16 @@ planet_event = {
 		name = gpm_colony.250.a
 		custom_tooltip = gpm_colony.250.b
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_same_species = FROM
 					NOT = { has_ethic = ethic_fanatic_spiritualist }
 				}
-				pop_change_ethic = ethic_fanatic_spiritualist
+				pop_group_transfer_ethic = {
+					POP_GROUP = this
+					ETHOS = ethic_fanatic_spiritualist
+					AMOUNT = 100%
+				}
 			}
 		}
 	}
@@ -3238,12 +3245,16 @@ planet_event = {
 		name = gpm_colony.250.mach
 		custom_tooltip = gpm_colony.250.c
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_same_species = FROM
 					NOT = { has_ethic = ethic_fanatic_spiritualist }
 				}
-				pop_change_ethic = ethic_fanatic_spiritualist
+				pop_group_transfer_ethic = {
+					POP_GROUP = this
+					ETHOS = ethic_fanatic_spiritualist
+					AMOUNT = 100%
+				}
 			}
 		}
 	}
@@ -3265,7 +3276,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_planetwide_forest"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_forest_growth_event }
@@ -3343,7 +3354,7 @@ planet_event = {
 
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_hiveworld"
 		NOT = {
 			owner = { has_country_flag = gpm_hive_event }
@@ -3436,7 +3447,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_arachnophobia"
 		NOT = { owner = { has_country_flag = gpm_colony_loose_arachnids_event } }
 	}
@@ -3510,7 +3521,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_giant_worm"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_worm_attack_event }
@@ -3551,8 +3562,8 @@ planet_event = {
 				modifier = { factor = 0 NOT = { has_district = district_generator } }
 			}
 		}
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 
 	}
@@ -3578,8 +3589,8 @@ planet_event = {
 				modifier = { factor = 0 NOT = { has_district = district_generator } }
 			}
 		}
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 
 	}
@@ -3619,7 +3630,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_carnivorous_flies"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_carnivorous_flies_event }
@@ -3645,19 +3656,19 @@ planet_event = {
 		}
 		name = gpm_colony.300.a
 		#custom_tooltip = gpm_colony.300.b
-		random_owned_pop = { kill_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_hive_mind } }
 		name = gpm_colony.300.hive
 		#custom_tooltip = gpm_colony.300.b
-		random_owned_pop = { kill_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
 	}
 	option = {
 		trigger = {	owner = { has_authority = auth_machine_intelligence } }
 		name = gpm_colony.300.mach
 		#custom_tooltip = gpm_colony.300.b
-		random_owned_pop = { kill_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
 	}
 
 }
@@ -3677,7 +3688,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_mushroom_forest"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_mushroom_forest_event }
@@ -3725,7 +3736,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			has_modifier = "gpm_proto_forests"
 			has_modifier = "gpm_dense_forests"
@@ -3922,7 +3933,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_planetwide_forest"
 
 		NOT = {
@@ -4001,21 +4012,21 @@ planet_event = {
 		}
 		if = {
 			limit = {
-				num_pops > 1
+				pop_amount > 1
 			}
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 		while = {
 			count = 3
 			if = {
 				limit = {
-					num_pops > 1
+					pop_amount > 1
 				}
 				locked_random_list = {
 					10 = {}
-					10 = { random_owned_pop = { kill_pop = yes } }
+					10 = { random_owned_pop_group = { kill_single_pop = yes } }
 				}
 			}
 		}
@@ -4097,21 +4108,21 @@ planet_event = {
 		}
 		if = {
 			limit = {
-				num_pops > 1
+				pop_amount > 1
 			}
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 		while = {
 			count = 3
 			if = {
 				limit = {
-					num_pops > 1
+					pop_amount > 1
 				}
 				locked_random_list = {
 					10 = {}
-					10 = { random_owned_pop = { kill_pop = yes } }
+					10 = { random_owned_pop_group = { kill_single_pop = yes } }
 				}
 			}
 		}
@@ -4148,7 +4159,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_resilent_parasites"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_ancient_one_event }
@@ -4185,7 +4196,7 @@ planet_event = {
 	}
 	trigger = {
 
-		num_pops > 0
+		pop_amount > 0
 		has_modifier = "gpm_resilent_parasites"
 		NOT = {
 			owner = { has_country_flag = gpm_colony_artificial_core_event }
@@ -4458,7 +4469,7 @@ event = {
 					gpm_is_country_type_default = yes
 				}
 				#has_planet_modifier = "capital"
-				num_pops > 0
+				pop_amount > 0
 			}
 			# authoritarian
 			if = {
@@ -4574,7 +4585,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4617,7 +4628,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4660,7 +4671,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4702,7 +4713,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4744,7 +4755,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4795,7 +4806,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4839,7 +4850,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4882,7 +4893,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4931,7 +4942,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -4982,7 +4993,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5026,7 +5037,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5070,7 +5081,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5113,7 +5124,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5156,7 +5167,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5199,7 +5210,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5250,7 +5261,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5294,7 +5305,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5338,7 +5349,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5381,7 +5392,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5432,7 +5443,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5475,7 +5486,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5518,7 +5529,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5562,7 +5573,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5606,7 +5617,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5657,7 +5668,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5701,7 +5712,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5744,7 +5755,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5787,7 +5798,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5830,7 +5841,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5881,7 +5892,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5924,7 +5935,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -5967,7 +5978,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6010,7 +6021,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6054,7 +6065,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6098,7 +6109,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6141,7 +6152,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6192,7 +6203,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6233,7 +6244,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			has_ethic = ethic_fanatic_xenophile
 		}
@@ -6270,7 +6281,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6313,7 +6324,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6356,7 +6367,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6407,7 +6418,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6451,7 +6462,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6495,7 +6506,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6538,7 +6549,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6581,7 +6592,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6632,7 +6643,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6676,7 +6687,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6720,7 +6731,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6763,7 +6774,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}
@@ -6806,7 +6817,7 @@ planet_event = {
 
 
 		#has_planet_modifier = "capital"
-		num_pops > 0
+		pop_amount > 0
 		owner = {
 			NOT = { has_country_flag = gpm_capital_unique_modifiers }
 		}

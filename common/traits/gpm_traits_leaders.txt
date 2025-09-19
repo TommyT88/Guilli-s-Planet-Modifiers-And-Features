@@ -58,7 +58,15 @@ leader_trait_gpm_stealth_tactician = {
 }
 
 leader_trait_gpm_precursor_expert = {
-	cost = 0
+inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		# ICON = "gfx/interface/icons/traits/leader_trait_gpm_precursor_expert.dds"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# cost = 0
 	icon = "gfx/interface/icons/traits/leader_trait_gpm_precursor_expert.dds"
 
 	leader_potential_add = {
@@ -67,10 +75,18 @@ leader_trait_gpm_precursor_expert = {
 	
 
 	modifier = {
-		ship_archaeological_site_excavation_speed_mult = 0.40
+		ship_archaeological_site_excavation_speed_mult = 0.70
 	}
 	leader_class = { scientist }
 
+	selectable_weight = {
+		weight = @class_trait_weight
+		inline_script = paragon/pilot_weight_mult
+		inline_script = {
+			script = paragon/subclass_weight_mult
+			SUBCLASS = scientist_scholar
+		}
+	}
 
 	ai_weight = {
 		weight = 50
@@ -147,22 +163,67 @@ leader_trait_gpm_battle_standards = {
 }
 
 gpm_leader_trait_collector = {
-	cost = 1
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		# ICON = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_archaeostudies.dds"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# cost = 1
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_archaeostudies.dds"
 	leader_potential_add = {
 		from = { has_ancrel = yes }
+		is_ruler = no
 	}
 	modifier = {
-		ship_archaeological_site_excavation_speed_mult = -0.20
+		ship_archaeological_site_excavation_speed_mult = -0.30
+		ship_archaeological_site_clues_add = 1
 	}
 	
-	custom_tooltip = gpm_leader_trait_collectorTT
+	custom_tooltip_with_modifiers = gpm_leader_trait_collectorTT
 	# show_only_custom_tooltip = no
 	
 	leader_class = { scientist }
 	# higher chance to generate techs in category archaeostudies (done in tech-script)
+	
+	selectable_weight = {
+		weight = @class_trait_weight
+		inline_script = paragon/pilot_weight_mult
+		inline_script = {
+			script = paragon/subclass_weight_mult
+			SUBCLASS = scientist_scholar
+		}
+	}
 
 	ai_weight = {
 		weight = 25
+	}
+}
+
+trait_gpm_historian = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_gpm_historian.dds"
+	
+	initial = no
+	randomized = no
+
+	leader_potential_add = {
+		always = no
+	}
+	
+	
+	# leader_potential_add = {
+	# 	from = { has_country_flag = gpm_historian_trait_rewarded }
+	# }
+	modifier = {
+		ship_archaeological_site_clues_add = 1
+	}
+	
+	leader_class = { scientist }
+	
+	ai_weight = {
+		weight = 15
 	}
 }

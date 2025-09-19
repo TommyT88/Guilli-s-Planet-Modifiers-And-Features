@@ -217,6 +217,11 @@
  gpm_survey.REANIMATOR:0 "Can we..?"
  gpm_survey.MACHINE:0 "00111111"
 
+ gpm_survey.ROGUESERVITOR_1:0 "Biotrophies love music!"
+ gpm_survey.ROGUESERVITOR_2:0 "Jewelry for our Biothrophies!"
+ gpm_survey.ROGUESERVITOR_3:0 "Plan a biotrophy tourists attraction."
+ gpm_survey.ROGUESERVITOR_4:0 "Designation: Recycle"
+
  
  
  #######################################
@@ -582,168 +587,168 @@
  gpm_unknown_precursor_empire:0 "§L先驱者§!"
   
  #10 gpm_precursor_remnants discovery
- gpm_survey_precursors.10.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的残迹！"
- gpm_survey_precursors.10.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个世界上还残留着大量的基础设施，是由上古星际帝国§L[this.owner.gpm_precursor_empire_name]§!建造的。"
+ gpm_survey_precursors.10.name:0 "发现：§LPrecursor§!的残迹！"
+ gpm_survey_precursors.10.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个世界上还残留着大量的基础设施，是由上古星际帝国§LPrecursor§!建造的。"
  	# hive mind
- gpm_survey_precursors.10.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个世界上还残留着大量的基础设施，是由上古星际帝国§L[this.owner.gpm_precursor_empire_name]§!建造的。"
+ gpm_survey_precursors.10.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个世界上还残留着大量的基础设施，是由上古星际帝国§LPrecursor§!建造的。"
  	# machine empire
- gpm_survey_precursors.10.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个世界上还残留着大量的基础设施，是由上古星际帝国§L[this.owner.gpm_precursor_empire_name]§!建造的。"
+ gpm_survey_precursors.10.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个世界上还残留着大量的基础设施，是由上古星际帝国§LPrecursor§!建造的。"
 #20 gpm_precursor_energy_grid discovery
- gpm_survey_precursors.20.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的能源网络！"
+ gpm_survey_precursors.20.name:0 "发现：§LPrecursor§!的能源网络！"
  gpm_survey_precursors.20.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！虽然从太空中已经可以看到这些巨大的能源网，但事实证明，这些巨大的能源网相当神秘。在巨大的能源网络周围，是摇摇欲坠的建筑废墟，以及断断续续的道路，并没有什么其他的东西。很显然，这个世界上曾经居住着一个庞大而强大的文明，他们不仅利用这些能源网将能量从一个城市传递到另一个城市，还利用这些能源网将能量传递到其他一切地方，从路灯到每个人的房间。正因为如此，即使是在轨道上，也能看到这些结构。\n\n尽管经过彻底的调查，我们的科学家还是无法确定这些网络是由什么材料组成的。它似乎是有一个半透明材料的核心，其周围有一层液态的晶体层，外层有某种形式的超抗性外层，由未知成分制成。\n\n通过初步的研究，我们确信这些巨大的网络是由地壳深处的巨型热电厂提供动力的。遗憾的是，这些网络最终通向的巨大热源喷口太深，太热，目前还无法探索。我们的科学家们确信，这些网络只需稍作修改，即可与我们自己的能源系统兼容。"
  	# hive mind
  gpm_survey_precursors.20.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！虽然从太空中已经可以看到这些巨大的能源网，但事实证明，这些巨大的能源网相当神秘。在巨大的能源网络周围，是摇摇欲坠的建筑废墟，以及断断续续的道路，并没有什么其他的东西。很显然，这个世界上曾经居住着一个庞大而强大的文明，他们不仅利用这些能源网将能量从一个城市传递到另一个城市，还利用这些能源网将能量传递到其他一切地方，从路灯到每个人的房间。正因为如此，即使是在轨道上，也能看到这些结构。\n\n尽管经过彻底的调查，我们的科学家还是无法确定这些网络是由什么材料组成的。它似乎是有一个半透明材料的核心，其周围有一层液态的晶体层，外层有某种形式的超抗性外层，由未知成分制成。\n\n通过初步的研究，我们确信这些巨大的网络是由地壳深处的巨型热电厂提供动力的。遗憾的是，这些网络最终通向的巨大热源喷口太深，太热，目前还无法探索。我们确信，这些网络只需稍作修改，即可与我们自己的能源系统兼容。"
  	# machine empire
  gpm_survey_precursors.20.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！虽然从太空中已经可以看到这些巨大的能源网，但事实证明，这些巨大的能源网相当神秘。在巨大的能源网络周围，是摇摇欲坠的建筑废墟，以及断断续续的道路，并没有什么其他的东西。很显然，这个世界上曾经居住着一个庞大而强大的文明，他们不仅利用这些能源网将能量从一个城市传递到另一个城市，还利用这些能源网将能量传递到其他一切地方，从路灯到每个人的房间。正因为如此，即使是在轨道上，也能看到这些结构。\n\n尽管经过彻底的调查，我们的科学家还是无法确定这些网络是由什么材料组成的。它似乎是有一个半透明材料的核心，其周围有一层液态的晶体层，外层有某种形式的超抗性外层，由未知成分制成。\n\n通过初步的研究，我们确信这些巨大的网络是由地壳深处的巨型热电厂提供动力的。遗憾的是，这些网络最终通向的巨大热源喷口太深，太热，目前还无法探索。我们的科学单元确信，这些网络只需稍作修改，即可与我们自己的能源系统兼容。"
 #30 Precursor_Satellite_Grid discovery
- gpm_survey_precursors.30.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的卫星网！"
- gpm_survey_precursors.30.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球有数以百计的小型§L[this.owner.gpm_precursor_empire_name]§!卫星，它们以一种处于非常高效轨道的方式排成阵列。尚不清楚它们是用于通信还是监视，但我们的科学家相信，从研究中我们可以学到很多东西。"
+ gpm_survey_precursors.30.name:0 "发现：§LPrecursor§!的卫星网！"
+ gpm_survey_precursors.30.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球有数以百计的小型§LPrecursor§!卫星，它们以一种处于非常高效轨道的方式排成阵列。尚不清楚它们是用于通信还是监视，但我们的科学家相信，从研究中我们可以学到很多东西。"
  	# hive mind
- gpm_survey_precursors.30.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球有数以百计的小型§L[this.owner.gpm_precursor_empire_name]§!卫星，它们以一种处于非常高效轨道的方式排成阵列。尚不清楚它们是用于通信还是监视，但我们的科学子个体相信，从研究中我们可以学到很多东西。"
+ gpm_survey_precursors.30.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球有数以百计的小型§LPrecursor§!卫星，它们以一种处于非常高效轨道的方式排成阵列。尚不清楚它们是用于通信还是监视，但我们的科学子个体相信，从研究中我们可以学到很多东西。"
  	# machine empire
- gpm_survey_precursors.30.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球有数以百计的小型§L[this.owner.gpm_precursor_empire_name]§!卫星，它们以一种处于非常高效轨道的方式排成阵列。尚不清楚它们是用于通信还是监视，但我们的科学家相信，从研究中我们可以学到很多东西。"
+ gpm_survey_precursors.30.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球有数以百计的小型§LPrecursor§!卫星，它们以一种处于非常高效轨道的方式排成阵列。尚不清楚它们是用于通信还是监视，但我们的科学家相信，从研究中我们可以学到很多东西。"
 #40 gpm_precursor_city discovery
- gpm_survey_precursors.40.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的城市！"
- gpm_survey_precursors.40.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上可以找到星际帝国§L[this.owner.gpm_precursor_empire_name]§!的远古城市。尽管我们的科学家坚持认为，这座城市本应在很久以前就因时间与气候的侵蚀而化为尘土，但它看上去几乎完好无损。尽管这些废墟仍然存在，但住在这里的人们似乎已经完全消失了。"
+ gpm_survey_precursors.40.name:0 "发现：§LPrecursor§!的城市！"
+ gpm_survey_precursors.40.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上可以找到星际帝国§LPrecursor§!的远古城市。尽管我们的科学家坚持认为，这座城市本应在很久以前就因时间与气候的侵蚀而化为尘土，但它看上去几乎完好无损。尽管这些废墟仍然存在，但住在这里的人们似乎已经完全消失了。"
  	# hive mind
- gpm_survey_precursors.40.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上可以找到星际帝国§L[this.owner.gpm_precursor_empire_name]§!的远古城市。尽管我们的科学子个体坚持认为，这座城市本应在很久以前就因时间与气候的侵蚀而化为尘土，但它看上去几乎完好无损。尽管这些废墟仍然存在，但住在这里的人们似乎已经完全消失了。 "
+ gpm_survey_precursors.40.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上可以找到星际帝国§LPrecursor§!的远古城市。尽管我们的科学子个体坚持认为，这座城市本应在很久以前就因时间与气候的侵蚀而化为尘土，但它看上去几乎完好无损。尽管这些废墟仍然存在，但住在这里的人们似乎已经完全消失了。 "
  	# machine empire
- gpm_survey_precursors.40.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上可以找到星际帝国§L[this.owner.gpm_precursor_empire_name]§!的远古城市。尽管我们的科学家坚持认为，这座城市本应在很久以前就因时间与气候的侵蚀而化为尘土，但它看上去几乎完好无损。尽管这些废墟仍然存在，但住在这里的人们似乎已经完全消失了。"
+ gpm_survey_precursors.40.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上可以找到星际帝国§LPrecursor§!的远古城市。尽管我们的科学家坚持认为，这座城市本应在很久以前就因时间与气候的侵蚀而化为尘土，但它看上去几乎完好无损。尽管这些废墟仍然存在，但住在这里的人们似乎已经完全消失了。"
 #50 gpm_precursor_shipyards discovery
- gpm_survey_precursors.50.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的船坞！"
- gpm_survey_precursors.50.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n环绕着这个星球的，是§L[this.owner.gpm_precursor_empire_name]§!的几座古老而强大的船坞。有些似乎已经破损严重，而另一些看起来还能正常使用。因为这些站点里没有发现任何舰船或资源，所以我们的工程团队认为它们可能采用了完全自主的系统。有些区域是专门为在真空环境中卸载大量物料而设计的。每一个这些巨大站点的内部都深藏着强大的引力动力核心，虽然我们对这种技术并不完全了解，但这似乎是它的力量之源，也是它能在轨道上停留这么久的原因。也许有一天，我们可以将其据为己有。"
+ gpm_survey_precursors.50.name:0 "发现：§LPrecursor§!的船坞！"
+ gpm_survey_precursors.50.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n环绕着这个星球的，是§LPrecursor§!的几座古老而强大的船坞。有些似乎已经破损严重，而另一些看起来还能正常使用。因为这些站点里没有发现任何舰船或资源，所以我们的工程团队认为它们可能采用了完全自主的系统。有些区域是专门为在真空环境中卸载大量物料而设计的。每一个这些巨大站点的内部都深藏着强大的引力动力核心，虽然我们对这种技术并不完全了解，但这似乎是它的力量之源，也是它能在轨道上停留这么久的原因。也许有一天，我们可以将其据为己有。"
  	# hive mind
- gpm_survey_precursors.50.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n环绕着这个星球的，是§L[this.owner.gpm_precursor_empire_name]§!的几座古老而强大的船坞。有些似乎已经破损严重，而另一些看起来还能正常使用。因为这些站点里没有发现任何舰船或资源，所以我们的工程团队认为它们可能采用了完全自主的系统。有些区域是专门为在真空环境中卸载大量物料而设计的。每一个这些巨大站点的内部都深藏着强大的引力动力核心，虽然我们对这种技术并不完全了解，但这似乎是它的力量之源，也是它能在轨道上停留这么久的原因。也许有一天，我们可以将其据为己有。"
+ gpm_survey_precursors.50.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n环绕着这个星球的，是§LPrecursor§!的几座古老而强大的船坞。有些似乎已经破损严重，而另一些看起来还能正常使用。因为这些站点里没有发现任何舰船或资源，所以我们的工程团队认为它们可能采用了完全自主的系统。有些区域是专门为在真空环境中卸载大量物料而设计的。每一个这些巨大站点的内部都深藏着强大的引力动力核心，虽然我们对这种技术并不完全了解，但这似乎是它的力量之源，也是它能在轨道上停留这么久的原因。也许有一天，我们可以将其据为己有。"
  	# machine empire
- gpm_survey_precursors.50.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n环绕着这个星球的，是§L[this.owner.gpm_precursor_empire_name]§!的几座古老而强大的船坞。有些似乎已经破损严重，而另一些看起来还能正常使用。因为这些站点里没有发现任何舰船或资源，所以我们的工程团队认为它们可能采用了完全自主的系统。有些区域是专门为在真空环境中卸载大量物料而设计的。每一个这些巨大站点的内部都深藏着强大的引力动力核心，虽然我们对这种技术并不完全了解，但这似乎是它的力量之源，也是它能在轨道上停留这么久的原因。也许有一天，我们可以将其据为己有。"
+ gpm_survey_precursors.50.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n环绕着这个星球的，是§LPrecursor§!的几座古老而强大的船坞。有些似乎已经破损严重，而另一些看起来还能正常使用。因为这些站点里没有发现任何舰船或资源，所以我们的工程团队认为它们可能采用了完全自主的系统。有些区域是专门为在真空环境中卸载大量物料而设计的。每一个这些巨大站点的内部都深藏着强大的引力动力核心，虽然我们对这种技术并不完全了解，但这似乎是它的力量之源，也是它能在轨道上停留这么久的原因。也许有一天，我们可以将其据为己有。"
 #60 gpm_precursor_planetary_gun discovery
- gpm_survey_precursors.60.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的行星机枪！"
+ gpm_survey_precursors.60.name:0 "发现：§LPrecursor§!的行星机枪！"
  gpm_survey_precursors.60.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上遍布着大量的武器。它们具有向轨道空间开火的能力，是数百万年前建造的。我们的武器技术人员建议进一步研究这些技术。与此同时，获得对它们的控制可以为我们的航路提供充分的防御。\n\n调查小队的进一步研究表明，该星系曾被其原来的占领者战略性地用作防御工事，以及巡逻飞行的起点。不过，他们一直在捍卫和寻找的东西是什么，仍然是个谜。"
  	# hive mind
  gpm_survey_precursors.60.hive.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上遍布着大量的武器。它们具有向轨道空间开火的能力，是数百万年前建造的。我们的武器技术人员建议进一步研究这些技术。与此同时，获得对它们的控制可以为我们的航路提供充分的防御。\n\n调查小队的进一步研究表明，该星系曾被其原来的占领者战略性地用作防御工事，以及巡逻飞行的起点。不过，他们一直在捍卫和寻找的东西是什么，仍然是个谜。"
  	# machine empire
  gpm_survey_precursors.60.mach.desc:0 "由科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球上遍布着大量的武器。它们具有向轨道空间开火的能力，是数百万年前建造的。我们的武器技术人员建议进一步研究这些技术。与此同时，获得对它们的控制可以为我们的航路提供充分的防御。\n\n调查小队的进一步研究表明，该星系曾被其原来的占领者战略性地用作防御工事，以及巡逻飞行的起点。不过，他们一直在捍卫和寻找的东西是什么，仍然是个谜。 "
 #70 gpm_precursor_bunker_grid discovery
- gpm_survey_precursors.70.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的掩体网络！"
+ gpm_survey_precursors.70.name:0 "发现：§LPrecursor§!的掩体网络！"
  gpm_survey_precursors.70.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个古老的先驱者文明只给我们留下了一个遍布整个星球的巨大掩体系统。我们的科学家推测它们是跨星系冲突的残留的见证。我们可以确定，这里的居民不是冲突的胜利者。"
  	# hive mind
  gpm_survey_precursors.70.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个古老的先驱者文明只给我们留下了一个遍布整个星球的巨大掩体系统。我们的科学子个体推测它们是跨星系冲突的残留的见证。我们可以确定，这里的居民不是冲突的胜利者。 "
  	# machine empire
  gpm_survey_precursors.70.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个古老的先驱者文明只给我们留下了一个遍布整个星球的巨大掩体系统。我们的科学家推测它们是跨星系冲突的残留的见证。我们可以确定，这里的居民不是冲突的胜利者。"
 #80 gpm_precursor_mechs discovery
- gpm_survey_precursors.80.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的机甲！"
+ gpm_survey_precursors.80.name:0 "发现：§LPrecursor§!的机甲！"
  gpm_survey_precursors.80.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n被遗弃的巨大机甲军团横亘在这个星球的表面，等待着被重新激活。他们厚厚的盔甲和庞大的身体表明它们可能主要是用于防御。尽管他们已历经沧桑，但几乎没有风化或功能丧失的迹象。\n\n经过仔细检查，我们的科学家认为这些机甲的使命可能是要用于某类掩体世界。鉴于他们的功能倾向于防御，他们可能会对那里发生的任何战斗都产生重大的影响。"
  	# hive mind
  gpm_survey_precursors.80.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n被遗弃的巨大机甲军团横亘在这个星球的表面，等待着被重新激活。他们厚厚的盔甲和庞大的身体表明它们可能主要是用于防御。尽管他们已历经沧桑，但几乎没有风化或功能丧失的迹象。\n\n经过仔细检查，我们的科学子个体认为这些机甲的使命可能是要用于某类掩体世界。鉴于他们的功能倾向于防御，他们可能会对那里发生的任何战斗都产生重大的影响。"
  	# machine empire
  gpm_survey_precursors.80.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n被遗弃的巨大机甲军团横亘在这个星球的表面，等待着被重新激活。他们厚厚的盔甲和庞大的身体表明它们可能主要是用于防御。尽管他们已历经沧桑，但几乎没有风化或功能丧失的迹象。\n\n经过仔细检查，我们的科学家认为这些机甲的使命可能是要用于某类掩体世界。鉴于他们的功能倾向于防御，他们可能会对那里发生的任何战斗都产生重大的影响。"
 #90 gpm_precursor_planetary_shield discovery
- gpm_survey_precursors.90.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的行星护盾！"
+ gpm_survey_precursors.90.name:0 "发现：§LPrecursor§!的行星护盾！"
  gpm_survey_precursors.90.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个令人印象深刻的护盾系统分布在星球各地，尽管重新激活它需要大量的能量，但它可以为所有人提供一个避风港。"
  	# hive mind
  gpm_survey_precursors.90.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个令人印象深刻的护盾系统分布在星球各地，尽管重新激活它需要大量的能量，但它可以为所有人提供一个避风港。 "
  	# machine empire
  gpm_survey_precursors.90.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个令人印象深刻的护盾系统分布在星球各地，尽管重新激活它需要大量的能量，但它可以为所有人提供一个避风港。 "
 #100 gpm_precursor_floating_city discovery
- gpm_survey_precursors.100.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的浮空城市！"
+ gpm_survey_precursors.100.name:0 "发现：§LPrecursor§!的浮空城市！"
  gpm_survey_precursors.100.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球上漂浮着几座自给自足的城市。尽管有一些轻微的损坏，但它们似乎运作良好。其他建筑物和基础设施的残骸散布在星球地表。它们究竟是漂浮在其上的城市的前身，还是以前的城市本身，我们可能永远不会知道。"
  	# hive mind
  gpm_survey_precursors.100.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球上漂浮着几座自给自足的城市。尽管有一些轻微的损坏，但它们似乎运作良好。其他建筑物和基础设施的残骸散布在星球地表。它们究竟是漂浮在其上的城市的前身，还是以前的城市本身，我们可能永远不会知道。"
  	# machine empire
  gpm_survey_precursors.100.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球上漂浮着几座自给自足的城市。尽管有一些轻微的损坏，但它们似乎运作良好。其他建筑物和基础设施的残骸散布在星球地表。它们究竟是漂浮在其上的城市的前身，还是以前的城市本身，我们可能永远不会知道。"
 #110 gpm_precursor_capital_complex discovery
- gpm_survey_precursors.110.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的复合型首都！"
- gpm_survey_precursors.110.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个§L[this.owner.gpm_precursor_empire_name]§!的先进大都市的废墟横亘在这个星球上。在它的周围有一个巨大的建筑，这个曾经精雕细刻建筑，使我们相信这是一个消失已久的文明的首都，这个文明甚至可能是一个帝国。"
+ gpm_survey_precursors.110.name:0 "发现：§LPrecursor§!的复合型首都！"
+ gpm_survey_precursors.110.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个§LPrecursor§!的先进大都市的废墟横亘在这个星球上。在它的周围有一个巨大的建筑，这个曾经精雕细刻建筑，使我们相信这是一个消失已久的文明的首都，这个文明甚至可能是一个帝国。"
  	# hive mind
- gpm_survey_precursors.110.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个§L[this.owner.gpm_precursor_empire_name]§!的先进大都市的废墟横亘在这个星球上。在它的周围有一个巨大的建筑，这个曾经精雕细刻建筑，使我们相信这是一个消失已久的文明的首都，这个文明甚至可能是一个帝国。"
+ gpm_survey_precursors.110.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个§LPrecursor§!的先进大都市的废墟横亘在这个星球上。在它的周围有一个巨大的建筑，这个曾经精雕细刻建筑，使我们相信这是一个消失已久的文明的首都，这个文明甚至可能是一个帝国。"
  	# machine empire
- gpm_survey_precursors.110.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个§L[this.owner.gpm_precursor_empire_name]§!的先进大都市的废墟横亘在这个星球上。在它的周围有一个巨大的建筑，这个曾经精雕细刻建筑，使我们相信这是一个消失已久的文明的首都，这个文明甚至可能是一个帝国。"
+ gpm_survey_precursors.110.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个§LPrecursor§!的先进大都市的废墟横亘在这个星球上。在它的周围有一个巨大的建筑，这个曾经精雕细刻建筑，使我们相信这是一个消失已久的文明的首都，这个文明甚至可能是一个帝国。"
 #120 gpm_precursor_communication_hub discovery
- gpm_survey_precursors.120.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的通讯中心！"
+ gpm_survey_precursors.120.name:0 "发现：§LPrecursor§!的通讯中心！"
  gpm_survey_precursors.120.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的废墟中，只见一座巨大的尖塔耸立着。这座高塔仍然发出强烈的光束，从中心向上一直延伸到轨道上。卫星网的遗迹让我们相信，它们曾经是连在一起的。它依然有大部分功能维持正常，我们也许可以用它来进行通信或监控。 "
  	# hive mind
  gpm_survey_precursors.120.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的废墟中，只见一座巨大的尖塔耸立着。这座高塔仍然发出强烈的光束，从中心向上一直延伸到轨道上。卫星网的遗迹让我们相信，它们曾经是连在一起的。它依然有大部分功能维持正常，我们也许可以用它来进行通信或监控。"
  	# machine empire
  gpm_survey_precursors.120.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的废墟中，只见一座巨大的尖塔耸立着。这座高塔仍然发出强烈的光束，从中心向上一直延伸到轨道上。卫星网的遗迹让我们相信，它们曾经是连在一起的。它依然有大部分功能维持正常，我们也许可以用它来进行通信或监控。"
 #130 gpm_precursor_singularity_drive discovery
- gpm_survey_precursors.130.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的奇点驱动器！"
+ gpm_survey_precursors.130.name:0 "发现：§LPrecursor§!的奇点驱动器！"
  gpm_survey_precursors.130.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球似乎有类似于实验室或实验设施的地下区域，这一区域通向一个中央的房间，里面有一个巨大的奇点驱动装置，可以产生能量共振。房间遍布着自动机，它们经常互相散开，互相修复，它们没有具有辨识度的行为模式。\n\n科学团队成功建立了一个观察继电器，以监视奇异点驱动器的效用和能力。尽管如此，我们仍未找到任何该驱动器过往用途的提示。在发现其用途前，科学团队建议在考虑构建此类技术时要保持谨慎。"
  	# hive mind
  gpm_survey_precursors.130.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球似乎有类似于实验室或实验设施的地下区域，这一区域通向一个中央的房间，里面有一个巨大的奇点驱动装置，可以产生能量共振。房间遍布着自动机，它们经常互相散开，互相修复，它们没有具有辨识度的行为模式。\n\n科学子个体成功建立了一个观察继电器，以监视奇异点驱动器的效用和能力。尽管如此，我们仍未找到任何该驱动器过往用途的提示。在发现其用途前，科学团队建议在考虑构建此类技术时要保持谨慎。"
  	# machine empire
  gpm_survey_precursors.130.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n这个星球似乎有类似于实验室或实验设施的地下区域，这一区域通向一个中央的房间，里面有一个巨大的奇点驱动装置，可以产生能量共振。房间遍布着自动机，它们经常互相散开，互相修复，它们没有具有辨识度的行为模式。\n\n科学团队成功建立了一个观察继电器，以监视奇异点驱动器的效用和能力。尽管如此，我们仍未找到任何该驱动器过往用途的提示。在发现其用途前，科学团队建议在考虑构建此类技术时要保持谨慎。"
 #140 gpm_precursor_eternal_fortress discovery
- gpm_survey_precursors.140.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的永恒要塞！"
+ gpm_survey_precursors.140.name:0 "发现：§LPrecursor§!的永恒要塞！"
  gpm_survey_precursors.140.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队在这个星球发现了一座孤独的要塞。它似乎已经被遗弃了很久，但完美地保留了原本的模样。要塞周围区域显示出严重损坏的迹象，但要塞本身似乎未受任何破坏。"
  	# hive mind
  gpm_survey_precursors.140.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队在这个星球发现了一座孤独的要塞。它似乎已经被遗弃了很久，但完美地保留了原本的模样。要塞周围区域显示出严重损坏的迹象，但要塞本身似乎未受任何破坏。"
  	# machine empire
  gpm_survey_precursors.140.mach.desc:0 "科研船§H[Root.GetName]§!上的科学子个体§H[Root.GetLeaderName]§!领导的无人机科研飞行在这个星球发现了一座孤独的要塞。它似乎已经被遗弃了很久，但完美地保留了原本的模样。要塞周围区域显示出严重损坏的迹象，但要塞本身似乎未受任何破坏。"
 #150 gpm_precursor_prison_planet discovery
- gpm_survey_precursors.150.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的监狱星球！"
+ gpm_survey_precursors.150.name:0 "发现：§LPrecursor§!的监狱星球！"
  gpm_survey_precursors.150.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的地表上，散落着成千上万的军营式建筑，而在地表下则是一个巨大的监狱系统的遗迹。牢房和隔离区就建在基岩中，其目的非常明确。\n\n只要稍作努力，我们的工程师便能将这些设施化为己用。同时，我们的考古团队已开始搜索有关以前囚禁在这里的物体类型的信息。如果说必须让某样东西保持闭锁已经很糟了，比它更糟的则是必须将这些东西放出来。"
  	# hive mind
  gpm_survey_precursors.150.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的地表上，散落着成千上万的军营式建筑，而在地表下则是一个巨大的监狱系统的遗迹。牢房和隔离区就建在基岩中，其目的非常明确。\n\n只要稍作努力，我们的子个体便能将这些设施化为己用。同时，我们的专家子个体已开始搜索有关以前囚禁在这里的物体类型的信息。如果说必须让某样东西保持闭锁已经很糟了，比它更糟的则是必须将这些东西放出来。 "
  	# machine empire
      gpm_survey_precursors.150.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的地表上，散落着成千上万的军营式建筑，而在地表下则是一个巨大的监狱系统的遗迹。牢房和隔离区就建在基岩中，其目的非常明确。\n\n只要稍作努力，我们的建筑单元便能将这些设施化为己用。同时，我们的考古单元已开始搜索有关以前囚禁在这里的物体类型的信息。如果说必须让某样东西保持闭锁已经很糟了，比它更糟的则是必须将这些东西放出来。"
 #160 gpm_precursor_mines discovery
- gpm_survey_precursors.160.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的矿脉！"
+ gpm_survey_precursors.160.name:0 "发现：§LPrecursor§!的矿脉！"
  gpm_survey_precursors.160.desc:0 "科学家§H[Root.GetLeaderName]§!及科研船§H[Root.GetName]§!上他的舰载团队偶然发现了庞大的古代矿脉网络。这些矿脉似乎已经完全实现了自动化，且仍显示出一些活动迹象。这些超级结构，以及其中的隧道，只能是由比我们更先进的帝国建造的。"
  	# hive mind
  gpm_survey_precursors.160.hive.desc:0 "科学家§H[Root.GetLeaderName]§!及科研船§H[Root.GetName]§!上他的舰载团队偶然发现了庞大的古代矿脉网络。这些矿脉似乎已经完全实现了自动化，且仍显示出一些活动迹象。这些超级结构，以及其中的隧道，只能是由比我们更先进的帝国建造的"
  	# machine empire
  gpm_survey_precursors.160.mach.desc:0 "科研船§H[Root.GetName]§!上的科学子个体§H[Root.GetLeaderName]§!偶然发现了庞大的古代矿脉网络。这些矿脉似乎已经完全实现了自动化，且仍显示出一些活动迹象。这些超级结构，以及其中的隧道，只能是由比我们更先进的帝国建造的
 #170 gpm_precursor_manufactorium discovery
- gpm_survey_precursors.170.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的制造中心！"
+ gpm_survey_precursors.170.name:0 "发现：§LPrecursor§!的制造中心！"
  gpm_survey_precursors.170.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n对星球表面的深层扫描后，我们发现了一个由隧道和地窖组成的网络。地表上的通道最终通向行星地核周围的大型工业综合体。先进文明的陈旧科技，曾经让这个综合体耗尽了地核的能量，以供给其庞大的生产线。\n\n尽管工程团队无法解密该设备最初在制造什么，但他们已经确定该设备可以被改造以适应我们的需求。多亏了这个复合体创造者的巧夺天工，这个星球的地核似乎不太可能发生灾难性的破坏。但我们的工程师确实注意到发生了一些奇怪的事情。"
  	# hive mind
  gpm_survey_precursors.170.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n对星球表面的深层扫描后，我们发现了一个由隧道和地窖组成的网络。地表上的通道最终通向行星地核周围的大型工业综合体。先进文明的陈旧科技，曾经让这个综合体耗尽了地核的能量，以供给其庞大的生产线。\n\n尽管工程子个体无法解密该设备最初在制造什么，但他们已经确定该设备可以被改造以适应我们的需求。多亏了这个复合体创造者的巧夺天工，这个星球的地核似乎不太可能发生灾难性的破坏。但我们的子个体确实注意到发生了一些奇怪的事情。"
  	# machine empire
  gpm_survey_precursors.170.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n对星球表面的深层扫描后，我们发现了一个由隧道和地窖组成的网络。地表上的通道最终通向行星地核周围的大型工业综合体。先进文明的陈旧科技，曾经让这个综合体耗尽了地核的能量，以供给其庞大的生产线。\n\n尽管建筑单元无法解密该设备最初在制造什么，但他们已经确定该设备可以被改造以适应我们的需求。多亏了这个复合体创造者的巧夺天工，这个星球的地核似乎不太可能发生灾难性的破坏。但我们的单元确实注意到发生了一些奇怪的事情。"
 #180 gpm_precursor_vaults discovery
- gpm_survey_precursors.180.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的黯窖！"
+ gpm_survey_precursors.180.name:0 "发现：§LPrecursor§!的黯窖！"
  gpm_survey_precursors.180.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n似乎有一些小型的哨站散落在这个世界的山头上。进一步的调查发现，这里有各种隐藏的入口，可以进入大型的储存设施。大多数储存设施都是空的，要么是被洗劫一空，要么是从未被填满。然而，有几个地方却蕴藏着难以言喻的宝藏，无论是考古学意义上的，还是科技研究意义上的。\n\n调查团队报告说，黯窖外的哨站仍然可以正常运行，并且可以轻松地转换为我们的技术。如果能进一步研究，黯窖也许能带来其他科学进步，或是揭示其他科学的秘密。"
  	# hive mind
  gpm_survey_precursors.180.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n似乎有一些小型的哨站散落在这个世界的山头上。进一步的调查发现，这里有各种隐藏的入口，可以进入大型的储存设施。大多数储存设施都是空的，要么是被洗劫一空，要么是从未被填满。然而，有几个地方却蕴藏着难以言喻的宝藏，无论是考古学意义上的，还是科技研究意义上的。\n\n调查子个体报告说，黯窖外的哨站仍然可以正常运行，并且可以轻松地转换为我们的技术。如果能进一步研究，黯窖也许能带来其他科学进步，或是揭示其他科学的秘密。"
  	# machine empire
  gpm_survey_precursors.180.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n似乎有一些小型的哨站散落在这个世界的山头上。进一步的调查发现，这里有各种隐藏的入口，可以进入大型的储存设施。大多数储存设施都是空的，要么是被洗劫一空，要么是从未被填满。然而，有几个地方却蕴藏着难以言喻的宝藏，无论是考古学意义上的，还是科技研究意义上的。\n\n分析单元报告说，黯窖外的哨站仍然可以正常运行，并且可以轻松地转换为我们的技术。如果能进一步研究，黯窖也许能带来其他科学进步，或是揭示其他科学的秘密。"
 #190 gpm_precursor_crashed_spacestation discovery
- gpm_survey_precursors.190.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!坠毁的轨道天体！"
+ gpm_survey_precursors.190.name:0 "发现：§LPrecursor§!坠毁的轨道天体！"
  gpm_survey_precursors.190.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个巨大的陨石坑成为了这颗不起眼星球的标志，里面有一个古老空间站的残骸。由于受损严重，我们的科学家怀疑它是属于一个湮灭于时间的帝国。\n\n研究撞击的影响可以使我们对速度、物理学以及巨型建筑和行星的耐久性有更多的了解。我们的工程师已经建立了一个基础哨站，以继续进行实验。"
  	# hive mind
  gpm_survey_precursors.190.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个巨大的陨石坑成为了这颗不起眼星球的标志，里面有一个古老空间站的残骸。由于受损严重，我们的科学子个体怀疑它是属于一个湮灭于时间的帝国。\n\n研究撞击的影响可以使我们对速度、物理学以及巨型建筑和行星的耐久性有更多的了解。我们的子个体已经建立了一个基础哨站，以继续进行实验。"
  	# machine empire
  gpm_survey_precursors.190.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n一个巨大的陨石坑成为了这颗不起眼星球的标志，里面有一个古老空间站的残骸。由于受损严重，我们的科学家怀疑它是属于一个湮灭于时间的帝国。\n\n研究撞击的影响可以使我们对速度、物理学以及巨型建筑和行星的耐久性有更多的了解。我们的建筑单元已经建立了一个基础哨站，以继续进行实验。"
 #200 gpm_precursor_battleground_ruins discovery
- gpm_survey_precursors.200.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的战场！"
+ gpm_survey_precursors.200.name:0 "发现：§LPrecursor§!的战场！"
  gpm_survey_precursors.200.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n行星坠落后，我们的研究者开始彻底探查其表面。\n\n烧焦的痕迹、半残的建筑，以及无数武器的残骸，是这个星球的全部遗存。经过仔细检查，我们的调查人员确定，一场大规模的战斗见证了曾经居住在这个地方的文明的终结。\n\n借助这些具有数千年历史的武器装备和战斗数据，我们可以继续在现有武器上展开成倍的创新。 "
  	# hive mind
  gpm_survey_precursors.200.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n行星坠落后，我们的子个体开始彻底探查其表面。\n\n烧焦的痕迹、半残的建筑，以及无数武器的残骸，是这个星球的全部遗存。经过仔细检查，我们的调查人员确定，一场大规模的战斗见证了曾经居住在这个地方的文明的终结。\n\n借助这些具有数千年历史的武器装备和战斗数据，我们可以继续在现有武器上展开成倍的创新。"
  	# machine empire
  gpm_survey_precursors.200.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n行星坠落后，我们的先锋单元开始彻底探查其表面。\n\n烧焦的痕迹、半残的建筑，以及无数武器的残骸，是这个星球的全部遗存。经过仔细检查，我们的分析单元确定，一场大规模的战斗见证了曾经居住在这个地方的文明的终结。\n\n借助这些具有数千年历史的武器装备和战斗数据，我们的军械单元可以继续在现有武器上展开成倍的创新。"
 #210 gpm_precursor_outpost_ruins discovery
- gpm_survey_precursors.210.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的哨站！"
+ gpm_survey_precursors.210.name:0 "发现：§LPrecursor§!的哨站！"
  gpm_survey_precursors.210.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n着陆后,我们发现除了一座孤零零地躺在森林中心地带的建筑，这个星球还没有被人染指过。这座建筑仍有动力，仅包含少量房间。显示屏的表面上闪烁着一些与符文大同小异的奇怪标记。这可能是一种古老语言的残余。或者是一个早已死去的疯子的呓语。\n\语言学家断言，对该符文语言的持续研究可能会导致在理解异星社会结构和习惯用语语方面的重大进步。即使那些外星人早已消失也是如此。"
  	# hive mind
  gpm_survey_precursors.210.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n着陆后,我们发现除了一座孤零零地躺在森林中心地带的建筑，这个星球还没有被人染指过。这座建筑仍有动力，仅包含少量房间。显示屏的表面上闪烁着一些与符文大同小异的奇怪标记。这可能是一种古老语言的残余。或者是一个早已死去的疯子的呓语。\n\语言学子个体断言，对该符文语言的持续研究可能会导致在理解异星社会结构和习惯用语语方面的重大进步。即使那些外星人早已消失也是如此。"
  	# machine empire
  gpm_survey_precursors.210.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n着陆后,我们发现除了一座孤零零地躺在森林中心地带的建筑，这个星球还没有被人染指过。这座建筑仍有动力，仅包含少量房间。显示屏的表面上闪烁着一些与符文大同小异的奇怪标记。这可能是一种古老语言的残余。或者是一个早已死去的疯子的呓语。\n\语法单元断言，对该符文语言的持续研究可能会导致在理解异星社会结构和习惯用语语方面的重大进步。即使那些外星人早已消失也是如此。"
 #220 gpm_precursor_harbor_ruins discovery
- gpm_survey_precursors.220.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的港口遗迹！"
+ gpm_survey_precursors.220.name:0 "发现：§LPrecursor§!的港口遗迹！"
  gpm_survey_precursors.220.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的许多海岸上，坐落着复杂港口系统的遗迹。早在几百年前，不管是谁占领了这个星球，他们都通过高效的捕鱼和加工设施，最大限度地利用了这个世界的财富。\n\n在银河系中,很少见到将星球当作「牧场」的，但我们的研究人员并不认为这否认了海港的用途。不幸的是，我们可能需要数百年的时间才能确定它可能还包含哪些秘密。"
  	# hive mind
  gpm_survey_precursors.220.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的许多海岸上，坐落着复杂港口系统的遗迹。早在几百年前，不管是谁占领了这个星球，他们都通过高效的捕鱼和加工设施，最大限度地利用了这个世界的财富。\n\n在银河系中,很少见到将星球当作「牧场」的，但我们并不认为这否认了海港的用途。不幸的是，我们可能需要数百年的时间才能确定它可能还包含哪些秘密。"
  	# machine empire
  gpm_survey_precursors.220.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n在这个星球的许多海岸上，坐落着复杂港口系统的遗迹。早在几百年前，不管是谁占领了这个星球，他们都通过高效的捕鱼和加工设施，最大限度地利用了这个世界的财富。\n\n在银河系中,很少见到将星球当作「牧场」的，但我们的水生单元并不认为这否认了海港的用途。不幸的是，我们可能需要数百年的时间才能确定它可能还包含哪些秘密。 "
 #230 gpm_precursor_ruins discovery
- gpm_survey_precursors.230.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的遗迹！"
+ gpm_survey_precursors.230.name:0 "发现：§LPrecursor§!的遗迹！"
  gpm_survey_precursors.230.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n上方无情的高温和下方可怖的沙地使这个世界变成了活生生的地狱。尽管如此，其表面上仍有一些被遗弃的古怪建筑。勘测人员报告说，这些建筑可能具有宗教性质，并认为这些居民可能是生物技术的始作俑者。\n\n在进一步研究了这些「庙宇」之一之后，调查小组发现了演化的证据。 目前尚不清楚是寺庙本身的演化还是先前居民的演化。"
  	# hive mind
  gpm_survey_precursors.230.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n上方无情的高温和下方可怖的沙地使这个世界变成了活生生的地狱。尽管如此，其表面上仍有一些被遗弃的古怪建筑。勘测人员报告说，这些建筑可能具有宗教性质，并认为这些居民可能是生物技术的始作俑者。\n\n在进一步研究了这些「庙宇」之一之后，我们发现了演化的证据。 目前尚不清楚是寺庙本身的演化还是先前居民的演化。 "
  	# machine empire
  gpm_survey_precursors.230.mach.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n上方无情的高温和下方可怖的沙地使这个世界变成了活生生的地狱。尽管如此，其表面上仍有一些被遗弃的古怪建筑。勘测人员报告说，这些建筑可能具有宗教性质，并认为这些居民可能是生物技术的始作俑者。\n\n在进一步研究了这些「庙宇」之一之后，分析单元发现了演化的证据。 目前尚不清楚是寺庙本身的演化还是先前居民的演化。 "
 #240 gpm_precursor_obelisks discovery
- gpm_survey_precursors.240.name:0 "发现：§L[this.owner.gpm_precursor_empire_name]§!的方尖碑！"
+ gpm_survey_precursors.240.name:0 "发现：§LPrecursor§!的方尖碑！"
  gpm_survey_precursors.240.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n三座方尖碑被放置在特定的地理位置上，这是这个世界上居住者留下的所有遗迹。当夜幕降临，方尖碑会发出心灵能量的光芒，照亮刻在上面的各种印记。我们推测，这些方尖碑可能是理解灵能和星门技术的关键。\n\n研究小组已在每个方尖碑上建立了科学设施，并将继续对其进行监视和研究，以获取其他信息。"
  	# hive mind
  gpm_survey_precursors.240.hive.desc:0 "科研船§H[Root.GetName]§!上的§H[Root.GetLeaderName]§!领导的科学考察队发现了一些了不起的东西！\n三座方尖碑被放置在特定的地理位置上，这是这个世界上居住者留下的所有遗迹。当夜幕降临，方尖碑会发出心灵能量的光芒，照亮刻在上面的各种印记。我们推测，这些方尖碑可能是理解灵能和星门技术的关键。\n\n我们已在每个方尖碑上建立了科学设施，并将继续对其进行监视和研究，以获取其他信息。"

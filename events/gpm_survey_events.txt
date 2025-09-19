@@ -189,7 +189,7 @@ ship_event = {
 	}
 }
 # give terraform 1/3 bonus
-ship_event = {
+country_event = {
 	id = gpm_survey.2
 	title = "gpm_survey.2.name"
 	desc = {
@@ -257,9 +257,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root.owner = { has_authority = auth_corporate } }
-		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = trade value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.3_CORP
-		root.owner = { add_resource = { energy = -250 } }
+		root.owner = { add_resource = { trade = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.2.spec_project
 		hidden_effect = {
@@ -375,9 +375,9 @@ country_event = {
 	}
 	option = {
 		trigger = { root.owner = { has_authority = auth_corporate } }
-		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = trade value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.4_CORP
-		root.owner = { add_resource = { energy = -250 } }
+		root.owner = { add_resource = { trade = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.3.spec_project
 		root.owner = { 
@@ -495,9 +495,9 @@ country_event = {
 	}
 	option = {
 		trigger = { root.owner = { has_authority = auth_corporate } }
-		allow = { root.owner = { resource_stockpile_compare = { resource = energy value > 250 } } }
+		allow = { root.owner = { resource_stockpile_compare = { resource = trade value > 250 } } }
 		name =  gpm_survey.INVESTIGATE.5_CORP
-		root.owner = { add_resource = { energy = -250 } }
+		root.owner = { add_resource = { trade = -250 } }
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.4.spec_project
 		root.owner = { 
@@ -826,9 +826,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.7_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -1169,9 +1169,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.6_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -1578,9 +1578,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.7_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -1967,9 +1967,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.8_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -2320,9 +2320,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.1_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -2713,9 +2713,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.2_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -3100,9 +3100,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.3_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -3243,11 +3243,8 @@ ship_event = {
 		owner = {
 			random_owned_planet ={
 				limit = { is_capital = yes }
-				create_pop = {
-					species = owner_main_species
-					ethos = { ethic = ethic_fanatic_xenophile }
-				}
-				create_pop = {
+				create_pop_group = {
+					size = 200
 					species = owner_main_species
 					ethos = { ethic = ethic_fanatic_xenophile }
 				}
@@ -3292,13 +3289,8 @@ ship_event = {
 		owner = {
 			random_owned_planet ={
 				limit = { is_capital = yes }
-				create_pop = {
-					species = owner_main_species
-				}
-				create_pop = {
-					species = owner_main_species
-				}
-				create_pop = {
+				create_pop_group = {
+					size = 300
 					species = owner_main_species
 				}
 			}
@@ -3577,9 +3569,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.4_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# ExploratiOn Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -3917,9 +3909,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.5_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -4245,9 +4237,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.6_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -4702,9 +4694,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.7_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -5142,9 +5134,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.8_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -5481,9 +5473,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.1_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -5836,9 +5828,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.2_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -6235,9 +6227,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.3_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -6568,9 +6560,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.4_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -6896,9 +6888,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.5_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -7237,9 +7229,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.6_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -7625,9 +7617,9 @@ ship_event = {
 	}
 	option = {
 		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_authority = auth_corporate } } }
-		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = trade value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.7_CORP
-		owner = { add_resource = { energy = -250 } }
+		owner = { add_resource = { trade = -250 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -7896,7 +7888,13 @@ ship_event = {
 				}
 				set_planet_flag = "gpm_is_surveyed"
 				set_planet_flag = "gpm_is_wondrous_planet"
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 			}
 		}
 		owner = {
@@ -7992,7 +7990,13 @@ ship_event = {
 				}
 				set_planet_flag = "gpm_is_surveyed"
 				set_planet_flag = "gpm_is_wondrous_planet"
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 			}
 		}
 		owner = {

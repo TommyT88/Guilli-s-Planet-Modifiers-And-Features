@@ -44,9 +44,9 @@ gpm_d_time_displaced_planet = {
 	resources = {
 		category = orbital_research_deposits
 		produces = {
-			physics_research = 8
-			society_research = 8
-			engineering_research = 8
+			physics_research = 12
+			society_research = 12
+			engineering_research = 12
 		}
 	}
 	station = shipclass_research_station
@@ -219,7 +219,7 @@ gpm_d_unity_deposit = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 2
+			job_brain_drone_physicist_add = 2
 		}
 	}
 	
@@ -229,7 +229,7 @@ gpm_d_unity_deposit = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {	
-			job_calculator_add = 2
+			job_calculator_physicist_add = 2
 		}
 	}
 	
@@ -410,10 +410,12 @@ gpm_d_unity_space_deposit_15 = {
 }
 
 gpm_d_trade_deposit = {
-	planet_modifier = {
-		trade_value_add = 20
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 20
+		}
 	}
-	station = shipclass_mining_station
 	is_for_colonizable = no
 
 	potential = { always = no }
@@ -801,6 +803,246 @@ gpm_d_alloys_9 = {
 		category = orbital_mining_deposits
 		produces = {
 			alloys = 9
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_consumer_goods_5 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = 5
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_consumer_goods_6 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = 6
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_consumer_goods_7 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = 7
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_consumer_goods_8 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = 8
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_consumer_goods_9 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = 9
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_consumer_goods_10 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = 10
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_1 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 1
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_2 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 2
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_3 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 3
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_4 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 4
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_5 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 5
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_6 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 6
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_7 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 7
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_8 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 8
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_9 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 9
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+gpm_d_trade_value_10 = {
+	icon = "unused/d_strategic_resources"
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trade = 10
 		}
 	}
 

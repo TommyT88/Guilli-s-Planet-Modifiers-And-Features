@@ -764,10 +764,24 @@ gpm_roll_terraform_modifiers = {
 			}
 		}
 		gpm_modifier_amount_high = {
-			if = {
-				limit = { num_modifiers = 0 }
-				gpm_spawn_terraform_modifier = yes
+			gpm_spawn_terraform_modifier = yes
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_terraform_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
 			}
+		}
+		gpm_modifier_amount_extra_high = {
+			gpm_spawn_terraform_modifier = yes
 			while = {
 				count = 3
 				if = {

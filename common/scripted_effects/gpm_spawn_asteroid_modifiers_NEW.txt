@@ -5,6 +5,7 @@
 # Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
 
 # Abundancy Settings and factors used for tweaking
+@very_rare = 0.05
 @rare = 0.25
 @uncommon = 0.5
 @default = 1
@@ -87,7 +88,8 @@ gpm_spawn_asteroid_modifier = {
 			clear_deposits = yes
 			change_pc = pc_rare_crystal_asteroid
 			random_list = {
-				90 = { add_deposit = d_rare_crystals_1 }
+				50 = { add_deposit = d_minerals_3 }
+				40 = { add_deposit = d_rare_crystals_1 }
 				10 = { add_deposit = d_rare_crystals_2 }
 			}
 			# Not with these modifiers
@@ -99,11 +101,12 @@ gpm_spawn_asteroid_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_v_type_asteroid" }
 			# Not on these planets
 			# Tweaks
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
-			modifier = { factor = @rare }
+			modifier = { factor = @very_rare }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_abandoned_mining_platforms" }
@@ -219,60 +222,189 @@ gpm_roll_asteroid_modifiers = {
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers = 0 }
-				random_list = {
-					85 = { }
-					15 = { gpm_spawn_asteroid_modifier = yes }
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							5 = { }
+							95 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.10 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 1
+					if = {
+						limit = { num_modifiers < 1 }
+						random_list = {
+							10 = { }
+							90 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.10 num_modifiers = 2 }
+							}
+						}
+					}
 				}
 			}
 		}
 		gpm_modifier_amount_low = {
-			while = {
-				count = 2
-				if = {
-					limit = { num_modifiers < 2 }
-					random_list = {
-						95 = { }
-						5 = { 
-							gpm_spawn_asteroid_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.35 num_modifiers = 2 }
+								modifier = { factor = 0.15 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.35 num_modifiers = 1 }
+								modifier = { factor = 0.15 num_modifiers = 2 }
+							}
 						}
 					}
 				}
 			}
 		}
 		gpm_modifier_amount_normal = {
-			while = {
-				count = 3
-				if = {
-					limit = { num_modifiers < 2 }
-					random_list = {
-						85 = { }
-						15 = { 
-							gpm_spawn_asteroid_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
-							modifier = { factor = 0.25 num_modifiers > 2 }
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.10 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.10 num_modifiers = 2 }
+							}
 						}
 					}
 				}
 			}
 		}
 		gpm_modifier_amount_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			gpm_spawn_asteroid_modifier = yes
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers = 0 }
-				gpm_spawn_asteroid_modifier = yes
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 2 }
+								modifier = { factor = 0.075 num_modifiers = 3 }
+							}
+						}
+					}
+				}
 			}
-			while = {
-				count = 2
-				if = {
-					limit = { num_modifiers < 2 }
-					random_list = {
-						75 = { }
-						25 = {
-							gpm_spawn_asteroid_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
-							modifier = { factor = 0.25 num_modifiers > 2 }
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 1 }
+								modifier = { factor = 0.075 num_modifiers = 2 }
+							}
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_extra_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			gpm_spawn_asteroid_modifier = yes
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 2 }
+								modifier = { factor = 0.075 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_asteroid_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 1 }
+								modifier = { factor = 0.075 num_modifiers = 2 }
+							}
 						}
 					}
 				}
@@ -281,3 +413,73 @@ gpm_roll_asteroid_modifiers = {
 		default = { }
 	}
 }
+
+
+##### pre 4.0 backup #####
+# gpm_roll_asteroid_modifiers = {
+# 	optimize_memory
+# 	switch = {
+# 		trigger = has_global_flag
+# 		gpm_modifier_amount_max_one = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				random_list = {
+# 					85 = { }
+# 					15 = { gpm_spawn_asteroid_modifier = yes }
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_low = {
+# 			while = {
+# 				count = 2
+# 				if = {
+# 					limit = { num_modifiers < 2 }
+# 					random_list = {
+# 						95 = { }
+# 						5 = { 
+# 							gpm_spawn_asteroid_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_normal = {
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = { num_modifiers < 2 }
+# 					random_list = {
+# 						85 = { }
+# 						15 = { 
+# 							gpm_spawn_asteroid_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_high = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				gpm_spawn_asteroid_modifier = yes
+# 			}
+# 			while = {
+# 				count = 2
+# 				if = {
+# 					limit = { num_modifiers < 2 }
+# 					random_list = {
+# 						75 = { }
+# 						25 = {
+# 							gpm_spawn_asteroid_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		default = { }
+# 	}
+# }

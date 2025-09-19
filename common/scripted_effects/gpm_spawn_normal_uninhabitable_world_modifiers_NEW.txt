@@ -14,6 +14,7 @@
 # Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
 
 # Abundancy Settings and factors used for tweaking
+@very_rare = 0.10
 @rare = 0.25
 @uncommon = 0.5
 @default = 1
@@ -199,7 +200,7 @@ gpm_spawn_normal_uninhabitabe_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
-			modifier = { factor = @uncommon }
+			modifier = { factor = @very_rare }
 		}
 		100 = {
 			add_modifier = { modifier = gpm_old_world }
@@ -256,7 +257,7 @@ gpm_spawn_normal_uninhabitabe_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
-			modifier = { factor = @default }
+			modifier = { factor = @uncommon }
 		}
 	}
 }

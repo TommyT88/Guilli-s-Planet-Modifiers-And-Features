@@ -12,6 +12,13 @@ gpm_refinery_ruined = {
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	entity_offset = { x = @entity_x y = @entity_y }
+	
+	resources = {
+		category = megastructures
+		produces = {
+			unity = 10
+		}
+	}
 
 	potential = {
 		always = no
@@ -32,30 +39,15 @@ gpm_refinery_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			trigger = {
-				from = {
-					has_ancrel = no
-				}
-			}
-			alloys = 500
-		}
-		cost = {
-			trigger = {
-				from = {
-					has_ancrel = yes
-				}
-			}
-			alloys = 500
-			minor_artifacts = 250
+			minerals = 10000
 		}
 
 		upkeep = {
-			minerals = 10
+			minerals = 50
 		}
 		produces = {
-			energy = 50
-			exotic_gases = 5
-			unity = 10
+			energy = 30
+			unity = 20
 		}
 		produces = {
 			trigger = {
@@ -97,17 +89,17 @@ gpm_refinery_restored = {
 	}
 
 	possible = {
-		OR = {
-			from = {
-				has_ancrel = yes
-				resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				resource_stockpile_compare = { resource = alloys value >= 500 }
-			}
-			from = {
-				has_ancrel = no
-				resource_stockpile_compare = { resource = alloys value >= 500 }
-			}
-		}
+		# OR = {
+			# from = {
+				# has_ancrel = yes
+				# resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
+				# resource_stockpile_compare = { resource = alloys value >= 500 }
+			# }
+			# from = {
+				# has_ancrel = no
+				# resource_stockpile_compare = { resource = alloys value >= 500 }
+			# }
+		# }
 	}
 
 	on_build_start = {
@@ -118,10 +110,64 @@ gpm_refinery_restored = {
 
 	on_build_complete = {
 		fromfrom = { set_name = gpm_refinery_restored }
+		# clear debris effect
 		every_system_ambient_object = {
 			limit = { has_ambient_object_flag = gpm_ambient_ruined_refinery_debris }
 			destroy_ambient_object = this
 		}
+		# spawn extra deposits effect
+		every_system_planet = {
+			if = {
+				limit = { has_deposit_for = shipclass_mining_station }
+				switch = {
+					trigger = has_deposit
+					d_energy_1 = { add_deposit = d_energy_1 }
+					d_energy_2 = { add_deposit = d_energy_2 }
+					d_energy_3 = { add_deposit = d_energy_3 }
+					d_energy_4 = { add_deposit = d_energy_4 }
+					d_energy_5 = { add_deposit = d_energy_5 }
+					d_energy_6 = { add_deposit = d_energy_6 }
+					d_energy_7 = { add_deposit = d_energy_7 }
+					d_energy_8 = { add_deposit = d_energy_8 }
+					d_energy_9 = { add_deposit = d_energy_9 }
+					d_energy_10 = { add_deposit = d_energy_10 }
+					gpm_d_energy_11 = { add_deposit = gpm_d_energy_11 }
+					gpm_d_energy_12 = { add_deposit = gpm_d_energy_12 }
+					gpm_d_energy_13 = { add_deposit = gpm_d_energy_13 }
+					gpm_d_energy_14 = { add_deposit = gpm_d_energy_14 }
+					gpm_d_energy_15 = { add_deposit = gpm_d_energy_15 }
+					d_guardian_dragon_hoard = { add_deposit = d_energy_10 }
+					gpm_d_sun_energy_deposit = { add_deposit = gpm_d_sun_energy_deposit }
+				}
+				random_list = {
+					90 = { }
+					10 = { add_deposit = d_exotic_gases_1 }
+					10 = { add_deposit = d_exotic_gases_2 }
+					10 = { add_deposit = d_exotic_gases_3 }
+					10 = { add_deposit = d_volatile_motes_1 }
+					10 = { add_deposit = d_volatile_motes_2 }
+					10 = { add_deposit = d_volatile_motes_3 }
+				}
+			}
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					10 = { add_deposit = d_energy_2 }
+					10 = { add_deposit = d_energy_3 }
+					10 = { add_deposit = d_energy_4 }
+					10 = { add_deposit = d_energy_5 }
+					10 = { add_deposit = d_energy_6 }
+					10 = { add_deposit = d_energy_7 }
+					10 = { add_deposit = d_energy_8 }
+					10 = { add_deposit = d_energy_9 }
+					10 = { add_deposit = d_exotic_gases_1 }
+					10 = { add_deposit = d_exotic_gases_2 }
+					10 = { add_deposit = d_exotic_gases_3 }
+				}
+			}
+		}
+		
+		
 		# from = {
 		# 	set_country_flag = has_built_or_repaired_megastructure
 		# 	country_event = { id = gpm_mega.1 }
@@ -143,6 +189,8 @@ gpm_refinery_restored = {
 
 	country_modifier = {
 		ship_speed_mult = 0.1
+		custom_tooltip = gpm_refinery_restored_effectTT
+		show_only_custom_tooltip = no
 	}
 }
 
@@ -156,6 +204,13 @@ gpm_mining_facility_ruined = {
 	place_entity_on_planet_plane = yes
 	show_galactic_map_icon = yes
 	entity_offset = { x = @entity_x y = @entity_y }
+	
+	resources = {
+		category = megastructures
+		produces = {
+			unity = 10
+		}
+	}
 
 	potential = {
 		always = no
@@ -176,26 +231,15 @@ gpm_mining_facility_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			trigger = {
-				from = { has_ancrel = no }
-			}
-			minerals = 1000
-		}
-		cost = {
-			trigger = {
-				from = { has_ancrel = yes }
-			}
-			minerals = 1000
-			minor_artifacts = 250
+			minerals = 5000
 		}
 
 		upkeep = {
-			energy = 10
+			energy = 25
 		}
 		produces = {
 			minerals = 50
-			rare_crystals = 5
-			unity = 10
+			unity = 20			
 		}
 		produces = {
 			trigger = {
@@ -291,17 +335,13 @@ gpm_mining_facility_restored = {
 	}
 
 	possible = {
-		OR = {
-			from = {
-				has_ancrel = yes
-				resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				resource_stockpile_compare = { resource = minerals value >= 1000 }
-			}
-			from = {
-				has_ancrel = no
-				resource_stockpile_compare = { resource = minerals value >= 1000 }
-			}
-		}
+		exists = owner
+	}
+	
+	country_modifier = {
+		station_gatherers_produces_mult = 0.10
+		custom_tooltip = gpm_mining_facility_restored_effectTT
+		show_only_custom_tooltip = no
 	}
 
 	on_build_start = {
@@ -312,10 +352,61 @@ gpm_mining_facility_restored = {
 
 	on_build_complete = {
 		fromfrom = { set_name = gpm_mining_facility_restored }
+		# clear debris effect
 		every_system_ambient_object = {
 			limit = { has_ambient_object_flag = gpm_ambient_ruined_mining_facility_debris }
 			destroy_ambient_object = this
 		}
+		# spawn extra deposits effect
+		every_system_planet = {
+			if = {
+				limit = { has_deposit_for = shipclass_mining_station }
+				switch = {
+					trigger = has_deposit
+					d_minerals_1 = { add_deposit = d_minerals_1 }
+					d_minerals_2 = { add_deposit = d_minerals_2 }
+					d_minerals_3 = { add_deposit = d_minerals_3 }
+					d_minerals_4 = { add_deposit = d_minerals_4 }
+					d_minerals_5 = { add_deposit = d_minerals_5 }
+					d_minerals_6 = { add_deposit = d_minerals_6 }
+					d_minerals_7 = { add_deposit = d_minerals_7 }
+					d_minerals_8 = { add_deposit = d_minerals_8 }
+					d_minerals_9 = { add_deposit = d_minerals_9 }
+					d_minerals_10 = { add_deposit = d_minerals_10 }
+					gpm_d_minerals_11 = { add_deposit = gpm_d_minerals_11 }
+					gpm_d_minerals_12 = { add_deposit = gpm_d_minerals_12 }
+					gpm_d_minerals_13 = { add_deposit = gpm_d_minerals_13 }
+					gpm_d_minerals_14 = { add_deposit = gpm_d_minerals_14 }
+					gpm_d_minerals_15 = { add_deposit = gpm_d_minerals_15 }
+					d_guardian_dragon_hoard = { add_deposit = d_minerals_10 }
+				}
+				random_list = {
+					90 = { }
+					10 = { add_deposit = d_rare_crystals_1 }
+					10 = { add_deposit = d_rare_crystals_1 }
+					10 = { add_deposit = d_rare_crystals_1 }
+					10 = { add_deposit = d_alloys_1 }
+					10 = { add_deposit = d_alloys_2 }
+					10 = { add_deposit = d_alloys_3 }
+				}
+			}
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					10 = { add_deposit = d_minerals_2 }
+					10 = { add_deposit = d_minerals_3 }
+					10 = { add_deposit = d_minerals_4 }
+					10 = { add_deposit = d_minerals_5 }
+					10 = { add_deposit = d_minerals_6 }
+					10 = { add_deposit = d_minerals_7 }
+					10 = { add_deposit = d_minerals_8 }
+					10 = { add_deposit = d_minerals_9 }
+				}
+			}
+		}
+		
+		
+		
 		# from = {
 		# 	country_event = { id = gpm_mega.2 }
 		# }
@@ -332,11 +423,7 @@ gpm_mining_facility_restored = {
 				}
 			}
 		}
-	}
-
-	country_modifier = {
-		station_gatherers_produces_mult = 0.10
-	}
+	}	
 }
 
 
@@ -349,6 +436,13 @@ gpm_observation_station_ruined = {
 
 	place_entity_on_planet_plane = no
 	entity_offset = { x = @entity_x y = @entity_y }
+	
+	resources = {
+		category = megastructures
+		produces = {
+			unity = 10
+		}
+	}
 
 	potential = {
 		always = no
@@ -369,26 +463,16 @@ gpm_observation_station_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			trigger = {
-				from = { has_ancrel = no }
-			}
-			alloys = 500
-		}
-		cost = {
-			trigger = {
-				from = { has_ancrel = yes }
-			}
-			alloys = 500
-			minor_artifacts = 250
+			minerals = 10000
 		}
 		upkeep = {
-			energy = 10
+			energy = 25
 		}
 		produces = {
 			society_research = 30
 			engineering_research = 30
 			physics_research = 30
-			unity = 10
+			unity = 20
 		}
 		produces = {
 			trigger = {
@@ -538,17 +622,17 @@ gpm_observation_station_restored = {
 	}
 
 	possible = {
-		OR = {
-			from = {
-				has_ancrel = yes
-				resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				resource_stockpile_compare = { resource = alloys value >= 500 }
-			}
-			from = {
-				has_ancrel = no
-				resource_stockpile_compare = { resource = alloys value >= 500 }
-			}
-		}
+		# OR = {
+			# from = {
+				# has_ancrel = yes
+				# resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
+				# resource_stockpile_compare = { resource = alloys value >= 500 }
+			# }
+			# from = {
+				# has_ancrel = no
+				# resource_stockpile_compare = { resource = alloys value >= 500 }
+			# }
+		# }
 	}
 
 	on_build_start = {
@@ -559,10 +643,101 @@ gpm_observation_station_restored = {
 
 	on_build_complete = {
 		fromfrom = { set_name = gpm_observation_station_restored }
+		# clear debris effect
 		every_system_ambient_object = {
 			limit = { has_ambient_object_flag = gpm_ambient_ruined_observation_station_debris }
 			destroy_ambient_object = this
 		}
+		# spawn extra deposits effect
+		every_system_planet = {
+			if = {
+				limit = { has_deposit_for = shipclass_research_station }
+				switch = {
+					trigger = has_deposit
+					d_society_1 = { add_deposit = d_society_1 }
+					d_society_2 = { add_deposit = d_society_2 }
+					d_society_3 = { add_deposit = d_society_3 }
+					d_society_4 = { add_deposit = d_society_4 }
+					d_society_5 = { add_deposit = d_society_5 }
+					d_society_6 = { add_deposit = d_society_6 }
+					d_society_7 = { add_deposit = d_society_7 }
+					d_society_8 = { add_deposit = d_society_8 }
+					d_society_9 = { add_deposit = d_society_9 }
+					d_society_10 = { add_deposit = d_society_10 }
+					d_society_15 = { add_deposit = d_society_15 }
+				}
+				switch = {
+					trigger = has_deposit
+					d_physics_1 = { add_deposit = d_physics_1 }
+					d_physics_2 = { add_deposit = d_physics_2 }
+					d_physics_3 = { add_deposit = d_physics_3 }
+					d_physics_4 = { add_deposit = d_physics_4 }
+					d_physics_5 = { add_deposit = d_physics_5 }
+					d_physics_6 = { add_deposit = d_physics_6 }
+					d_physics_7 = { add_deposit = d_physics_7 }
+					d_physics_8 = { add_deposit = d_physics_8 }
+					d_physics_9 = { add_deposit = d_physics_9 }
+					d_physics_10 = { add_deposit = d_physics_10 }
+				}
+				switch = {
+					trigger = has_deposit
+					d_engineering_1 = { add_deposit = d_engineering_1 }
+					d_engineering_2 = { add_deposit = d_engineering_2 }
+					d_engineering_3 = { add_deposit = d_engineering_3 }
+					d_engineering_4 = { add_deposit = d_engineering_4 }
+					d_engineering_5 = { add_deposit = d_engineering_5 }
+					d_engineering_6 = { add_deposit = d_engineering_6 }
+					d_engineering_7 = { add_deposit = d_engineering_7 }
+					d_engineering_8 = { add_deposit = d_engineering_8 }
+					d_engineering_9 = { add_deposit = d_engineering_9 }
+					d_engineering_10 = { add_deposit = d_engineering_10 }
+				}
+				switch = {
+					trigger = has_deposit
+					gpm_d_proto_molecule_deposit = { add_deposit = gpm_d_proto_molecule_deposit }
+					gpm_d_time_displaced_planet = { add_deposit = gpm_d_time_displaced_planet }
+					gpm_d_triple_science = { add_deposit = gpm_d_triple_science }
+					gpm_d_double_science_phy_soc = { add_deposit = gpm_d_double_science_phy_soc }
+					gpm_d_double_science_soc_phy = { add_deposit = gpm_d_double_science_soc_phy }
+					gpm_d_double_science_phy_eng = { add_deposit = gpm_d_double_science_phy_eng }
+					gpm_d_double_science_eng_phy = { add_deposit = gpm_d_double_science_eng_phy }
+					gpm_d_double_science_soc_eng = { add_deposit = gpm_d_double_science_soc_eng }
+					gpm_d_double_science_eng_soc = { add_deposit = gpm_d_double_science_eng_soc }
+					gpm_d_pulsar_clock = { add_deposit = gpm_d_pulsar_clock }
+				}				
+			}
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					90 = { }
+					10 = { add_deposit = gpm_d_triple_science }
+					10 = { add_deposit = gpm_d_double_science_phy_soc }
+					10 = { add_deposit = gpm_d_double_science_soc_phy }
+					10 = { add_deposit = gpm_d_double_science_phy_eng }
+					10 = { add_deposit = gpm_d_double_science_eng_phy }
+					10 = { add_deposit = gpm_d_double_science_soc_eng }
+					10 = { add_deposit = gpm_d_double_science_eng_soc }
+					10 = { add_deposit = gpm_d_double_science_soc_eng }
+					10 = { add_deposit = d_engineering_3 }
+					10 = { add_deposit = d_engineering_4 }
+					10 = { add_deposit = d_engineering_5 }
+					10 = { add_deposit = d_engineering_6 }
+					10 = { add_deposit = d_engineering_7 }
+					10 = { add_deposit = d_physics_3 }
+					10 = { add_deposit = d_physics_4 }
+					10 = { add_deposit = d_physics_5 }
+					10 = { add_deposit = d_physics_6 }
+					10 = { add_deposit = d_physics_7 }
+					10 = { add_deposit = d_society_3 }
+					10 = { add_deposit = d_society_4 }
+					10 = { add_deposit = d_society_5 }
+					10 = { add_deposit = d_society_6 }
+					10 = { add_deposit = d_society_7 }
+				}
+			}
+		}
+		
+		
 		# from = {
 		# 	set_country_flag = has_built_or_repaired_megastructure
 		# 	country_event = { id = gpm_mega.3 }
@@ -583,7 +758,9 @@ gpm_observation_station_restored = {
 	}
 
 	country_modifier = {
-		megastructure_build_speed_mult = 0.10
+		station_researchers_produces_mult = 0.10
+		custom_tooltip = gpm_observation_station_restored_effectTT
+		show_only_custom_tooltip = no
 	}
 }
 
@@ -595,6 +772,13 @@ gpm_silo_ruined = {
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	build_outside_gravity_well = yes
+	
+	resources = {
+		category = megastructures
+		produces = {
+			unity = 10
+		}
+	}
 
 	potential = {
 		always = no
@@ -612,17 +796,17 @@ gpm_silo_restored = {
 	show_galactic_map_icon = yes
 
 	possible = {
-		OR = {
-			from = {
-				has_ancrel = yes
-				resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				resource_stockpile_compare = { resource = alloys value >= 1000 }
-			}
-			from = {
-				has_ancrel = no
-				resource_stockpile_compare = { resource = alloys value >= 1000 }
-			}
-		}
+		# OR = {
+			# from = {
+				# has_ancrel = yes
+				# resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
+				# resource_stockpile_compare = { resource = alloys value >= 1000 }
+			# }
+			# from = {
+				# has_ancrel = no
+				# resource_stockpile_compare = { resource = alloys value >= 1000 }
+			# }
+		# }
 	}
 
 	upgrade_from = {
@@ -632,24 +816,14 @@ gpm_silo_restored = {
 	resources = {
 		category = megastructures
 		cost = {
-			trigger = {
-				from = { has_ancrel = no }
-			}
-			alloys = 1000
-		}
-		cost = {
-			trigger = {
-				from = { has_ancrel = yes }
-			}
-			alloys = 1000
-			minor_artifacts = 250
+			minerals = 10000
 		}
 
 		upkeep = {
-			energy = 10
+			energy = 20
 		}
 		produces = {
-			unity = 10
+			unity = 20
 		}
 	}
 
@@ -661,6 +835,7 @@ gpm_silo_restored = {
 
 	on_build_complete = {
 		fromfrom = { set_name = gpm_silo_restored }
+		# clear debris effect
 		every_system_ambient_object = {
 			limit = { has_ambient_object_flag = gpm_ambient_ruined_silo_debris }
 			destroy_ambient_object = this
@@ -686,6 +861,6 @@ gpm_silo_restored = {
 
 	country_modifier = {
 		country_resource_max_add = 25000
-		planet_max_buildings_add = 1
+		country_naval_cap_add = 30
 	}
 }

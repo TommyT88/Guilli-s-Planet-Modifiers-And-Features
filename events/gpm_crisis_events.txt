@@ -21,7 +21,13 @@ planet_event = {
 			remove_modifier = gpm_planet_wonder_discovered
 		}
 		gpm_reset_planet_name = yes
-		gpm_colour_planet_name = yes
+		# colour planet names unless this is disabled through game option
+		if = { 
+			limit = { 
+				NOT = { has_global_flag = gpm_coloured_names_disabled }
+			}
+			gpm_colour_planet_name = yes
+		}
 		gpm_purge_all_planetary_modifiers = yes
 		random_list = {
 			50 = { change_pc = pc_barren }
@@ -179,8 +185,14 @@ planet_event = {
 				limit = { has_modifier = gpm_planet_wonder_discovered }
 				remove_modifier = gpm_planet_wonder_discovered
 			}
-			gpm_reset_planet_name = yes
-			gpm_colour_planet_name = yes
+			# colour planet names unless this is disabled through game option
+			if = { 
+				limit = { 
+					NOT = { has_global_flag = gpm_coloured_names_disabled }
+				}
+				gpm_reset_planet_name = yes
+				gpm_colour_planet_name = yes
+			}
 			gpm_purge_all_planetary_modifiers = yes
 			random_list = {
 				30 = { change_pc = pc_barren }

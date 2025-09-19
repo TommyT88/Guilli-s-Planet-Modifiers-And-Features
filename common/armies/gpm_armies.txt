@@ -118,37 +118,6 @@ gpm_precursor_mech_army = {
 		}
 	}
 }
-gpm_precursor_bunker_army = {
-	defensive = yes
-	is_pop_spawned = yes
-	damage = 3
-	health = 4
-	morale = 4
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 # No WE from defense armies
-	icon = GFX_army_type_defensive
-	has_species = yes
-	
-	potential = {
-		planet = {
-			has_modifier = "gpm_precursor_bunker_grid"
-			has_building = gpm_building_stronghold
-		}
-		owner = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
-		}
-	}
-	
-	allow = {
-		custom_tooltip = {
-			text = precursor_bunker_army_trigger_tooltip
-			planet = {
-				has_modifier = "gpm_precursor_bunker_grid"
-				has_building = gpm_building_stronghold
-			}
-		}
-	}
-}
 gpm_giant_arachnid_army = {
 	damage = 2.0
 	morale_damage = 4.0
@@ -232,37 +201,6 @@ gpm_precursor_mech_army_machine = {
 			text = precursor_mech_army_machine_trigger_tooltip
 			planet = {
 				has_modifier = "gpm_precursor_mechs"
-			}
-		}
-	}
-}
-gpm_precursor_bunker_army_machine = {
-	defensive = yes
-	is_pop_spawned = yes
-	damage = 3
-	health = 4
-	morale = 4
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 # No WE from defense armies
-	icon = GFX_army_type_defensive
-	has_species = yes
-	
-	potential = {
-		planet = {
-			has_modifier = "gpm_precursor_bunker_grid"
-			has_building = gpm_building_stronghold
-		}
-		owner = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-	}
-	
-	allow = {
-		custom_tooltip = {
-			text = precursor_bunker_army_machine_trigger_tooltip
-			planet = {
-				has_modifier = "gpm_precursor_bunker_grid"
-				has_building = gpm_building_stronghold
 			}
 		}
 	}

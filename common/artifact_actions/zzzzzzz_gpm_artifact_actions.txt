@@ -19,6 +19,14 @@ artifact_arcane_deciphering = {
 			factor = 0
 			has_resource = { type = minor_artifacts amount < 750 }
 		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_materialist
+		}
 	}
 
 	potential = {
@@ -50,38 +58,30 @@ artifact_arcane_deciphering = {
 				id = gpm_artifact.2 days = 3600
 			}
 			random_list = {
-				10 = {
+				15 = {
 					owner = { 
 						country_event = { id = gpm_artifact.1 } # precursor techs
 					}
+					modifier = { factor = 2 owner = { has_ascension_perk = ap_archaeoengineers } }
 				}
-				10 = {
+				5 = {
 					owner = {
 						country_event = { id = ancrel.10001 } # random repeatable
 					}
 				}
-				10 = {
+				5 = {
 					owner = {
 						country_event = { id = ancrel.10002 } # monthly research x3 and arcane insight
 					}
 				}
-				10 = {
+				5 = {
 					owner = {
 						country_event = { id = ancrel.10003 } # a random research x3
 					}
 				}
-				1 = {
-					owner = {
-						random_list = {
-							10 = { country_event = { id = ancrel.10004 } }
-							10 = { country_event = { id = ancrel.10005 } }
-							10 = { country_event = { id = ancrel.10006 } }
-							10 = { country_event = { id = ancrel.10007 } }
-							10 = { country_event = { id = ancrel.10008 } }
-							10 = { country_event = { id = ancrel.10009 } }
-						}
-					}
-					modifier = { factor = 10 owner = { is_ai = yes } }
+				5 = {
+					modifier = { factor = 2 owner = { has_ascension_perk = ap_archaeoengineers } }
+					owner = { grant_random_fe_building = yes }
 				}
 			}
 		}

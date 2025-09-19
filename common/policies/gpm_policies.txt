@@ -26,7 +26,7 @@ gpm_exploration_policy = {
 		modifier = {
 			ship_anomaly_research_speed_mult = 0.20
 			science_ship_survey_speed = -0.50
-			shipsize_science_energy_upkeep_add = 4
+			shipsize_science_energy_upkeep_add = 3
 		}
 
 		AI_weight = {
@@ -73,6 +73,7 @@ gpm_exploration_policy = {
 			shipclass_science_ship_build_cost_mult = -0.25
 			shipclass_science_ship_build_speed_mult = 0.25
 			shipclass_science_ship_disengage_mult = 0.25
+			shipsize_science_energy_upkeep_add = 1
 		}
 
 		AI_weight = {
@@ -128,7 +129,7 @@ gpm_exploration_policy = {
 
 		modifier = {
 			science_ship_survey_speed = 0.50
-			shipsize_science_upkeep_mult = -0.8
+			shipclass_science_ship_disengage_mult = 1.00
 		}
 
 		AI_weight = {
@@ -197,3 +198,349 @@ gpm_exploration_policy = {
 	}
 }
 
+gpm_economy_tweaks_policy = {
+	potential = {
+		is_country_type = default
+		has_global_flag = gpm_econ_balance_tweak_enabled
+	}
+	allow = {
+		has_global_flag = gpm_econ_balance_tweak_enabled
+	}
+	option = {
+		name = "gpm_economy_tweaks_standard_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = no
+			is_machine_empire = no
+			is_lithoid_empire = no
+			is_ai = no
+		}
+		valid = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = no
+			is_machine_empire = no
+			is_lithoid_empire = no
+			is_ai = no
+		}
+		modifier = {
+			country_base_food_produces_add = 25
+			country_base_minerals_produces_add = 20
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			station_gatherers_minerals_cost_add = 100
+			station_researchers_minerals_cost_add = 100
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_lithoid_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			is_lithoid_empire = yes
+			is_ai = no
+		}
+		valid = {
+			is_lithoid_empire = yes
+			is_ai = no
+		}
+		modifier = {
+			country_base_minerals_produces_add = 60
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			station_gatherers_minerals_cost_add = 100
+			station_researchers_minerals_cost_add = 100
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4
+			planet_pops_organics_minerals_upkeep_add = 0.5
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_machine_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			is_machine_empire = yes
+			NOT = { has_civic = civic_machine_servitor }
+			is_ai = no
+		}
+		valid = {
+			is_machine_empire = yes
+			NOT = { has_civic = civic_machine_servitor }
+			is_ai = no
+		}
+		modifier = {
+			# country_base_food_produces_add = 15
+			country_base_minerals_produces_add = 20
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			station_gatherers_minerals_cost_add = 100
+			station_researchers_minerals_cost_add = 100
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_rogue_servitor_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			is_machine_empire = yes
+			has_civic = civic_machine_servitor
+			is_ai = no
+		}
+		valid = {
+			is_machine_empire = yes			
+			has_civic = civic_machine_servitor
+			is_ai = no
+		}
+		modifier = {
+			country_base_food_produces_add = 15
+			country_base_minerals_produces_add = 20
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			station_gatherers_minerals_cost_add = 100
+			station_researchers_minerals_cost_add = 100
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_catalytic_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = yes
+			is_ai = no
+		}
+		valid = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = yes
+			is_ai = no
+		}
+		modifier = {
+			country_base_food_produces_add = 15
+			country_base_minerals_produces_add = 20
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			station_gatherers_minerals_cost_add = 100
+			station_researchers_minerals_cost_add = 100
+			planet_metallurgists_food_upkeep_add = 4
+			planet_artisans_food_upkeep_add = 4
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_bio_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			country_uses_bio_ships = yes
+			is_ai = no
+		}
+		valid = {
+			country_uses_bio_ships = yes
+			is_ai = no
+		}
+		modifier = {
+			country_base_food_produces_add = 10
+			country_base_minerals_produces_add = 20
+			planet_buildings_minerals_cost_add = 400
+			station_gatherers_food_cost_add = 100
+			station_researchers_food_cost_add = 100
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	
+	###########################################################################
+	############################ AI VERSIONS ##################################
+	###########################################################################
+	option = {
+		name = "gpm_economy_tweaks_standard_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = no
+			is_machine_empire = no
+			is_lithoid_empire = no
+			is_ai = yes
+		}
+		valid = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = no
+			is_machine_empire = no
+			is_lithoid_empire = no
+			is_ai = yes
+		}
+		modifier = {
+			country_base_food_produces_add = 100
+			country_base_energy_produces_add = 100
+			country_base_minerals_produces_add = 200
+			country_base_trade_produces_add = 100
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			# station_gatherers_minerals_cost_add = 100
+			# station_researchers_minerals_cost_add = 100			
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4			
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_lithoid_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			is_lithoid_empire = yes
+			is_ai = yes
+		}
+		valid = {
+			is_lithoid_empire = yes
+			is_ai = yes
+		}
+		modifier = {
+			# country_base_food_produces_add = 200
+			country_base_energy_produces_add = 100
+			country_base_minerals_produces_add = 300
+			country_base_trade_produces_add = 100
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			# station_gatherers_minerals_cost_add = 100
+			# station_researchers_minerals_cost_add = 100			
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4			
+			planet_pops_organics_minerals_upkeep_add = 0.5
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_machine_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			is_machine_empire = yes
+			NOT = { has_civic = civic_machine_servitor }
+			is_ai = yes
+		}
+		valid = {
+			is_machine_empire = yes			
+			NOT = { has_civic = civic_machine_servitor }
+			is_ai = yes
+		}
+		modifier = {
+			country_base_food_produces_add = 100
+			country_base_energy_produces_add = 200
+			country_base_minerals_produces_add = 200
+			country_base_trade_produces_add = 100
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			# station_gatherers_minerals_cost_add = 100
+			# station_researchers_minerals_cost_add = 100			
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4			
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_rogue_servitor_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			is_machine_empire = yes
+			has_civic = civic_machine_servitor
+			is_ai = yes
+		}
+		valid = {
+			is_machine_empire = yes			
+			has_civic = civic_machine_servitor
+			is_ai = yes
+		}
+		modifier = {
+			country_base_food_produces_add = 100
+			country_base_energy_produces_add = 100
+			country_base_minerals_produces_add = 200
+			country_base_trade_produces_add = 100
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			# station_gatherers_minerals_cost_add = 100
+			# station_researchers_minerals_cost_add = 100			
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4			
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_catalytic_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = yes
+			is_ai = yes
+		}
+		valid = {
+			country_uses_bio_ships = no
+			is_catalytic_empire = yes
+			is_ai = yes
+		}
+		modifier = {
+			country_base_food_produces_add = 200
+			country_base_energy_produces_add = 100
+			country_base_minerals_produces_add = 200
+			country_base_trade_produces_add = 100
+			planet_buildings_minerals_cost_add = 400
+			planet_buildings_energy_upkeep_add = 1
+			# station_gatherers_minerals_cost_add = 100
+			# station_researchers_minerals_cost_add = 100
+			planet_metallurgists_food_upkeep_add = 4
+			planet_artisans_food_upkeep_add = 4			
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+	option = {
+		name = "gpm_economy_tweaks_bio_empire"
+		icon = "GFX_diplomatic_stance_belligerent"
+		
+		potential = {
+			country_uses_bio_ships = yes
+			is_ai = yes
+		}
+		valid = {
+			country_uses_bio_ships = yes
+			is_ai = yes
+		}
+		modifier = {
+			country_base_food_produces_add = 200
+			country_base_energy_produces_add = 100
+			country_base_minerals_produces_add = 200
+			country_base_trade_produces_add = 100
+			planet_buildings_minerals_cost_add = 400
+			# station_gatherers_food_cost_add = 100
+			# station_researchers_food_cost_add = 100
+			planet_metallurgists_minerals_upkeep_add = 4
+			planet_artisans_minerals_upkeep_add = 4			
+			planet_pops_organics_food_upkeep_add = 1
+		}
+		ai_weight = {}
+	}
+}

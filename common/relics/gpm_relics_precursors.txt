@@ -234,7 +234,7 @@ gpm_r_ai_architect = {
 		potential = {
 			always = yes
 		}
-		planet_housing_mult = 0.15
+		planet_building_capacity_add = 2
 	}
 
 	score = 1000
@@ -564,7 +564,7 @@ gpm_r_gravity_engine = {
 		potential = {
 			always = yes
 		}
-		planet_max_buildings_add = 2
+		planet_max_districts_add = 2
 		catapult_range_mult = 1.00
 		catapult_spread_mult = -0.33
 	}
@@ -614,7 +614,7 @@ gpm_r_codex_administratum = {
 			always = yes
 		}
 		country_government_civic_points_add = 1
-		country_leader_cap_add = 5
+		country_leader_cap_add = 2
 	}
 
 	score = 1000
@@ -918,7 +918,7 @@ gpm_r_earthquake_engine = {
 			always = yes
 		}
 		planet_non_artificial_max_districts_add = 2
-		district_mining_max = 4
+		district_mining_max_add = 4
 	}
 
 	score = 1000
@@ -973,14 +973,14 @@ gpm_r_manufactorium_ship = {
 		potential = {
 			is_gestalt = no
 		}
-		planet_jobs_consumer_goods_produces_mult = 0.10
-		planet_jobs_alloys_produces_mult = 0.10
+		country_base_consumer_goods_produces_add = 30
+		country_base_alloys_produces_add = 30
 	}
 	triggered_country_modifier = {
 		potential = {
 			is_gestalt = yes
 		}
-		planet_jobs_alloys_produces_mult = 0.20
+		country_base_alloys_produces_add = 50
 	}
 
 	score = 1000
@@ -1294,7 +1294,7 @@ gpm_r_q_storage_compressor = {
 		potential = {
 			always = yes
 		}
-		country_resource_max_add = 50000
+		country_resource_max_add = 100000
 		country_resource_max_minor_artifacts_add = 25000
 	}
 

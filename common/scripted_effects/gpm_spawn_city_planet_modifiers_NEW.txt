@@ -78,7 +78,15 @@ gpm_roll_city_planet_modifiers = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {
 			if = {
-				limit = { num_modifiers = 0 }
+				limit = {
+					OR = {
+						num_modifiers = 0
+						AND = {
+							num_modifiers = 1
+							gpm_has_pd_planet_modifier = yes
+						}
+					}
+				}
 				random_list = {
 					50 = { }
 					50 = { gpm_spawn_city_planet_modifier = yes }
@@ -89,7 +97,15 @@ gpm_roll_city_planet_modifiers = {
 			while = {
 				count = 1
 				if = {
-					limit = { num_modifiers < 2 }
+					limit = {
+						OR = {
+							num_modifiers < 2
+							AND = {
+								num_modifiers < 3
+								gpm_has_pd_planet_modifier = yes
+							}
+						}
+					}
 					random_list = {
 						50 = { }
 						50 = { 
@@ -104,7 +120,15 @@ gpm_roll_city_planet_modifiers = {
 			while = {
 				count = 2
 				if = {
-					limit = { num_modifiers < 3 }
+					limit = {
+						OR = {
+							num_modifiers < 3
+							AND = {
+								num_modifiers < 4
+								gpm_has_pd_planet_modifier = yes
+							}
+						}
+					}
 					random_list = {
 						50 = { }
 						50 = { 
@@ -117,14 +141,44 @@ gpm_roll_city_planet_modifiers = {
 			}
 		}
 		gpm_modifier_amount_high = {
-			if = {
-				limit = { num_modifiers = 0 }
-				gpm_spawn_city_planet_modifier = yes
-			}
+			gpm_spawn_city_planet_modifier = yes
 			while = {
 				count = 2
 				if = {
-					limit = { num_modifiers < 3 }
+					limit = {
+						OR = {
+							num_modifiers < 3
+							AND = {
+								num_modifiers < 4
+								gpm_has_pd_planet_modifier = yes
+							}
+						}
+					}
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_city_planet_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_extra_high = {
+			gpm_spawn_city_planet_modifier = yes
+			while = {
+				count = 3
+				if = {
+					limit = {
+						OR = {
+							num_modifiers < 3
+							AND = {
+								num_modifiers < 4
+								gpm_has_pd_planet_modifier = yes
+							}
+						}
+					}
 					random_list = {
 						50 = { }
 						50 = { 

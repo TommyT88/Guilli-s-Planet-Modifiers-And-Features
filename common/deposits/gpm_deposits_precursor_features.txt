@@ -36,31 +36,8 @@ gpm_d_precursor_planetary_shield = {
 	# 	}
 	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 1
 	}
 
 	# weight 0: event added
@@ -94,31 +71,8 @@ gpm_d_precursor_capital_complex = {
 	# }
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_building_capacity_add = 1
 	}
 
 	# weight 0: event added
@@ -131,7 +85,7 @@ gpm_d_precursor_ruins_1 = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_districts_add = 1
 	}
 
 	resources = {
@@ -152,7 +106,7 @@ gpm_d_precursor_ruins_2 = {
 	
 
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_districts_add = 1
 	}
 
 	resources = {
@@ -174,42 +128,19 @@ gpm_d_precursor_ruins_3 = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_districts_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 1
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 5
-			society_research = 5
-			engineering_research = 5
+			physics_research = 3
+			society_research = 3
+			engineering_research = 9
 		}
 	}
 
@@ -226,41 +157,18 @@ gpm_d_precursor_ruins_4 = {
 	# 	district_gpm_precursor_science_standard_max = 1
 	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_biologists_society_research_produces_add = 1
 	}
 	
 	planet_modifier = {
-		BIOLOGICAL_pop_growth_speed = 0.10
+		BIOLOGICAL_logistic_growth_mult = 0.10
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			society_research = 5
+			society_research = 7
 		}
 	}
 
@@ -275,7 +183,7 @@ gpm_d_precursor_ruins_5 = {
 	
 
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
 
 	resources = {
@@ -298,37 +206,14 @@ gpm_d_precursor_ruins_6 = {
 	# 	district_gpm_precursor_science_standard_max = 1
 	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 1
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 5
+			physics_research = 9
 		}
 	}
 
@@ -346,37 +231,14 @@ gpm_d_precursor_ruins_7 = {
 	# }
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-			has_ancrel = yes
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 1
 	}
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			engineering_research = 5
+			engineering_research = 9
 		}
 	}
 
@@ -390,7 +252,7 @@ gpm_d_precursor_ruins_1_distr = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_districts_add = 1
 	}
 
 	# weight 0: event added
@@ -404,7 +266,7 @@ gpm_d_precursor_ruins_2_distr = {
 	
 
 	planet_modifier = {
-		planet_max_buildings_add = 1
+		planet_max_districts_add = 1
 	}
 
 	# weight 0: event added
@@ -418,7 +280,7 @@ gpm_d_precursor_ruins_3_distr = {
 	
 
 	planet_modifier = {
-		planet_max_buildings_add = 2
+		planet_max_districts_add = 2
 	}
 
 	# weight 0: event added
@@ -437,7 +299,7 @@ gpm_d_precursor_ruins_4_distr = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			society_research = 5
+			society_research = 7
 		}
 	}
 
@@ -469,7 +331,7 @@ gpm_d_precursor_ruins_6_distr = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			physics_research = 5
+			physics_research = 10
 		}
 	}
 

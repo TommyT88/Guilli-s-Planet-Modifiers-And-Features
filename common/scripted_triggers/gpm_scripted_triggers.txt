@@ -14,8 +14,6 @@ gpm_is_country_type_fallen_empire = {
 }
 
 
-
-
 # is_terraforming_candidate = {
 # 	optimize_memory
 # 	# OR = {
@@ -26,7 +24,7 @@ gpm_is_country_type_fallen_empire = {
 
 gpm_engine_forbidden_planets = {
 	optimize_memory
-	NOR = {
+	OR = {
 		solar_system = {
 			exists = space_owner
 			space_owner = { has_origin = origin_gpm_death_world }

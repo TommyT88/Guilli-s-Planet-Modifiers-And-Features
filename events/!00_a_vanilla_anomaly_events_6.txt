@@ -18,10 +18,11 @@ ship_event = {
 
 	trigger = {
 		from = {
-			NOT = { exists = space_owner }
 			gpm_is_planet_class_normal_habitable = no
+			NOT = {
+				has_planet_flag = deposit_added
+			}
 			is_colonizable = no
-			gpm_has_precursor_modifiers = no
 			has_deposit_for = shipclass_mining_station
 			OR = {
 				has_modifier = chthonian_planet
@@ -50,7 +51,7 @@ ship_event = {
 	immediate = {
 		
 		from = {
-			# prevent_anomaly = yes
+			prevent_anomaly = yes
 			# clear_deposits = yes
 			random_list = {
 				10 = { add_deposit = d_minerals_2 }
@@ -72,7 +73,9 @@ ship_event = {
 
 	trigger = {
 		from = {
-			NOT = { exists = space_owner }
+			NOT = {
+				has_planet_flag = deposit_added
+			}
 			gpm_is_planet_class_normal_habitable = no
 			is_colonizable = no
 			gpm_has_precursor_modifiers = no

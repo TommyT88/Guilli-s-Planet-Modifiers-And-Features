@@ -226,8 +226,10 @@ fleet_event = {
 				max = @tier1researchmax
 			}
 		}
-		medium_artifact_reward = yes
-		gpm_random_precursor_empire_dig_site_bonus = yes
+		owner = {
+			medium_artifact_reward = yes
+			gpm_random_precursor_empire_dig_site_bonus = yes
+		}
 	}
 }
 # PrecDig 4 - secondary team
@@ -1579,7 +1581,7 @@ fleet_event = {
 				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2557,7 +2559,7 @@ fleet_event = {
 				hidden_effect = {
 					set_global_flag = gpm_enigmatic_hack_happened
 					owner = {
-						every_owned_pop = {
+						every_owned_pop_group = {
 							limit = {
 								is_robot_pop = yes
 							}
@@ -2615,7 +2617,7 @@ fleet_event = {
 				hidden_effect = {
 					set_global_flag = gpm_enigmatic_hack_happened
 					owner = {
-						every_owned_pop = {
+						every_owned_pop_group = {
 							limit = {
 								is_robot_pop = yes
 							}

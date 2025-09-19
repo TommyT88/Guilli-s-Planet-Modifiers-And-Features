@@ -58,7 +58,7 @@ decision_gpm_habitat_stadium = {
 	}
 	
 	allow = {
-		num_pops > 40
+		pop_amount > 4000
 	}
 
     effect = {
@@ -87,7 +87,7 @@ decision_gpm_habitat_stadium = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -130,7 +130,7 @@ decision_gpm_habitat_trade_docks = {
 	}
 	
 	allow = {
-		solar_system = { has_collected_system_trade_value >= 100 }
+		# solar_system = { has_collected_system_trade_value >= 100 }
 	}
 
     effect = {
@@ -172,7 +172,7 @@ decision_gpm_habitat_trade_docks = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -216,7 +216,7 @@ decision_gpm_habitat_hub = {
 	}
 	
 	allow = {
-		solar_system = { has_collected_system_trade_value >= 200 }
+		# solar_system = { has_collected_system_trade_value >= 200 }
 		solar_system = {
 			any_system_planet = {
 				NOT = { has_modifier = gpm_habitat_spaceroute_hub }
@@ -264,7 +264,7 @@ decision_gpm_habitat_hub = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -311,7 +311,7 @@ decision_gpm_habitat_holo_entertainment = {
 	
 	allow = {
 		# NOT = { has_modifier = gpm_habitat_holonet_entertainment_systems }
-		num_pops > 10
+		pop_amount > 1000
 	}
 
     effect = {
@@ -340,7 +340,7 @@ decision_gpm_habitat_holo_entertainment = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -413,7 +413,7 @@ decision_gpm_habitat_replicators = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -499,7 +499,7 @@ decision_gpm_habitat_moon_mining = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -595,7 +595,7 @@ decision_gpm_habitat_belt_mining = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -681,7 +681,7 @@ decision_gpm_habitat_thunderstorm_research = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -767,7 +767,7 @@ decision_gpm_habitat_radioactive_mining = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -853,7 +853,7 @@ decision_gpm_habitat_asteroid_catchers = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -939,7 +939,7 @@ decision_gpm_habitat_particle_collectors = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1025,7 +1025,7 @@ decision_gpm_habitat_expedition_section = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1097,7 +1097,7 @@ decision_gpm_habitat_food_recyclers = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1183,7 +1183,7 @@ decision_gpm_habitat_chronoton_sensors = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1269,7 +1269,7 @@ decision_gpm_habitat_mining_bays = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1356,7 +1356,7 @@ decision_gpm_habitat_archaeology_section = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1433,7 +1433,7 @@ decision_gpm_habitat_pleasure_palace = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1519,7 +1519,7 @@ decision_gpm_habitat_spice_markets = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1602,7 +1602,7 @@ decision_gpm_habitat_gambling_licence = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1688,7 +1688,7 @@ decision_gpm_habitat_egg_containment_facility = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1774,7 +1774,7 @@ decision_gpm_habitat_hydrogen_extraction = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1860,7 +1860,7 @@ decision_gpm_habitat_nitrogen_extraction = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -1946,7 +1946,7 @@ decision_gpm_habitat_chlorine_extraction = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -2032,7 +2032,7 @@ decision_gpm_habitat_phospherus_extraction = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -2117,7 +2117,7 @@ decision_gpm_habitat_sulfur_extraction = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0
@@ -2190,7 +2190,7 @@ decision_gpm_habitat_iron_extraction = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 0

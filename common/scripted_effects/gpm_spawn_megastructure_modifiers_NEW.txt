@@ -1176,10 +1176,23 @@ gpm_roll_habitat_modifiers = {
 			}
 			gpm_modifier_amount_high = {
 				gpm_spawn_constructed_habitat_modifier = yes
-				if = {
-					limit = { num_modifiers = 0 }
-					gpm_spawn_constructed_habitat_modifier = yes
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { }
+							75 = { 
+								gpm_spawn_constructed_habitat_modifier = yes
+								modifier = { factor = 0.5 num_modifiers > 1 }
+								modifier = { factor = 0.25 num_modifiers > 2 }
+							}
+						}
+					}
 				}
+			}
+			gpm_modifier_amount_extra_high = {
+				gpm_spawn_constructed_habitat_modifier = yes
 				while = {
 					count = 2
 					if = {
@@ -1245,10 +1258,24 @@ gpm_roll_constructed_ringworld_modifiers = {
 			}
 		}
 		gpm_modifier_amount_high = {
-			if = {
-				limit = { num_modifiers = 0 }
-				gpm_spawn_constructed_ringworld_modifier = yes
+			gpm_spawn_constructed_ringworld_modifier = yes
+			while = {
+				count = 3
+				if = {
+					limit = { num_modifiers < 3 }
+					random_list = {
+						50 = { }
+						50 = { 
+							gpm_spawn_constructed_ringworld_modifier = yes
+							modifier = { factor = 0.5 num_modifiers > 1 }
+							modifier = { factor = 0.25 num_modifiers > 2 }
+						}
+					}
+				}
 			}
+		}
+		gpm_modifier_amount_extra_high = {
+			gpm_spawn_constructed_ringworld_modifier = yes
 			while = {
 				count = 3
 				if = {

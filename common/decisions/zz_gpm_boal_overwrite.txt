@@ -1,4 +1,4 @@
-# 3.7 compatible
+# 4.0 compatible
 
 decision_baol_life_seed = {
 	owned_planets_only = yes
@@ -8,30 +8,21 @@ decision_baol_life_seed = {
 	enactment_time = 720
 
 	potential = {
-		if = {
-			limit = { has_global_flag = planetarydiversity }
-			NOR = {
-				is_planet_class = pc_pdshroud
-				is_planet_class = pc_milarc_relic
-			}
-		}
 		is_artificial = no
-		if = {
-			limit = { has_global_flag = planetarydiversity }
-			is_pd_unique = no
-			is_pd_arcology = no
-		}
 		gpm_is_planet_class_city = no
 		gpm_is_planet_class_hive = no
-		NOT = { is_planet_class = pc_relic }
-		NOT = { is_planet_class = pc_gpm_precursor_tomb }
 		gpm_is_planet_class_machine = no
+		NOR = {
+			is_planet_class = pc_relic
+			is_planet_class = pc_gaia
+		}
 
 		exists = owner
 		owner = { has_country_flag = relic_last_baol_activated }
 		owner = {
 			has_country_flag = not_activated_baol
 		}
+		NOT = { has_designation = col_nanotech_world }
 	}
 
 	allow = { }
@@ -82,13 +73,11 @@ decision_baol_life_seed = {
 					create_nu_baol_effect = yes
 				}
 			}
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:nu_baol_species
-					ethos = {
-						ethic = "ethic_pacifist"
-					}
+			create_pop_group = {
+				size = 400
+				species = event_target:nu_baol_species
+				ethos = {
+					ethic = "ethic_pacifist"
 				}
 			}
 
@@ -182,18 +171,16 @@ decision_baol_life_seed_enhance = {
 					create_nu_baol_effect = yes
 				}
 			}
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:nu_baol_species
-					ethos = {
-						ethic = "ethic_pacifist"
-					}
+			create_pop_group = {
+				size = 400
+				species = event_target:nu_baol_species
+				ethos = {
+					ethic = "ethic_pacifist"
 				}
 			}
 			while = {
 				count = 10
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						NOR = {
 							is_robot_pop = yes

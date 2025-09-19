@@ -18,16 +18,16 @@ country_event = {
 				add_research_option = tech_extradimensional_weapon_1
 				add_tech_progress = { tech = tech_extradimensional_weapon_1 progress = 0.05 }
 				modifier = { factor = 0 has_technology = tech_extradimensional_weapon_1 }
-				modifier = { factor = 0
-					OR = {
-						has_technology = tech_plasma_3
-						has_technology = tech_disruptors_3
-						has_technology = tech_energy_torpedoes_2
-						has_technology = tech_lasers_5
-						has_technology = tech_shields_5
-						has_technology = tech_zero_point_power
-					}
-				}
+				# modifier = { factor = 0
+					# NOR = {
+						# has_technology = tech_plasma_3
+						# has_technology = tech_disruptors_3
+						# has_technology = tech_energy_torpedoes_2
+						# has_technology = tech_lasers_5
+						# has_technology = tech_shields_5
+						# has_technology = tech_zero_point_power
+					# }
+				# }
 				# AI empires get a boost to spice things up
 				modifier = { factor = 10 is_ai = yes }
 			}
@@ -35,16 +35,16 @@ country_event = {
 				add_research_option = null_void_beam
 				add_tech_progress = { tech = null_void_beam progress = 0.05 }
 				modifier = { factor = 0 has_technology = null_void_beam }
-				modifier = { factor = 0
-					OR = {
-						has_technology = tech_plasma_2
-						has_technology = tech_disruptors_2
-						has_technology = tech_energy_torpedoes_1
-						has_technology = tech_lasers_3
-						has_technology = tech_shields_3
-						has_technology = tech_cold_fusion_power
-					}
-				}
+				# modifier = { factor = 0
+					# NOR = {
+						# has_technology = tech_plasma_2
+						# has_technology = tech_disruptors_2
+						# has_technology = tech_energy_torpedoes_1
+						# has_technology = tech_lasers_3
+						# has_technology = tech_shields_3
+						# has_technology = tech_cold_fusion_power
+					# }
+				# }
 				# AI empires get a boost to spice things up
 				modifier = { factor = 10 is_ai = yes }
 			}
@@ -52,16 +52,16 @@ country_event = {
 				add_research_option = tech_space_cloud_weapon_1
 				add_tech_progress = { tech = tech_space_cloud_weapon_1 progress = 0.05 }
 				modifier = { factor = 0 has_technology = tech_space_cloud_weapon_1 }
-				modifier = { factor = 0
-					OR = {
-						has_technology = tech_plasma_2
-						has_technology = tech_disruptors_2
-						has_technology = tech_energy_torpedoes_1
-						has_technology = tech_lasers_3
-						has_technology = tech_shields_3
-						has_technology = tech_cold_fusion_power
-					}
-				}
+				# modifier = { factor = 0
+					# NOR = {
+						# has_technology = tech_plasma_2
+						# has_technology = tech_disruptors_2
+						# has_technology = tech_energy_torpedoes_1
+						# has_technology = tech_lasers_3
+						# has_technology = tech_shields_3
+						# has_technology = tech_cold_fusion_power
+					# }
+				# }
 				# AI empires get a boost to spice things up
 				modifier = { factor = 10 is_ai = yes }
 			}
@@ -311,6 +311,16 @@ country_event = {
 						add_research_option = tech_gpm_precursor_obelisks_discovery_2
 						add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery_2 progress = 0.25 }
 						modifier = { factor = 0 has_technology = tech_gpm_precursor_obelisks_discovery_2 }
+					}
+					10 = {
+						add_research_option = tech_gpm_crystalis_targeting_matrix_1
+						add_tech_progress = { tech = tech_gpm_crystalis_targeting_matrix_1 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_crystalis_targeting_matrix_1 }
+					}
+					10 = {
+						add_research_option = tech_gpm_hangar_1
+						add_tech_progress = { tech = tech_gpm_hangar_1 progress = 0.25 }
+						modifier = { factor = 0 has_technology = tech_gpm_hangar_1 }
 					}
 				}
 			}

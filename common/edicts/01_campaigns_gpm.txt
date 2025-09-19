@@ -71,32 +71,32 @@ gpm_edict_consumer_goods_production  = {
 		weight = 5
 	}
 }
-gpm_edict_exotic_production  = {
-	length = @campaignDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = campaigns
-		upkeep = {
-			unity = @Edict2Cost
-			multiplier = value:edict_size_effect
-		}
-	}
+# gpm_edict_exotic_production  = {
+# 	length = @campaignDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = campaigns
+# 		upkeep = {
+# 			unity = @Edict2Cost
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		has_technology = tech_arcane_deciphering
-		has_ancrel = yes
-	}
+# 	potential = {
+# 		has_technology = tech_arcane_deciphering
+# 		has_ancrel = yes
+# 	}
 
-	modifier = {
-        planet_refiners_exotic_gases_produces_add = 2
-        planet_translucers_rare_crystals_produces_add = 2
-		planet_chemists_volatile_motes_produces_add = 2
-		planet_refiners_minor_artifacts_upkeep_add = 0.25
-		planet_translucers_minor_artifacts_upkeep_add = 0.25
-		planet_chemists_minor_artifacts_upkeep_add = 0.25
-	}
+# 	modifier = {
+#         planet_jobs_exotic_gases_produces_add = 2
+#         planet_jobs_rare_crystals_produces_add = 2
+# 		planet_jobs_volatile_motes_produces_add = 2
+# 		planet_refiners_minor_artifacts_upkeep_add = 0.25
+# 		planet_translucers_minor_artifacts_upkeep_add = 0.25
+# 		planet_chemists_minor_artifacts_upkeep_add = 0.25
+# 	}
 	
-	ai_weight = {
-		weight = 5
-	}
-}
+# 	ai_weight = {
+# 		weight = 5
+# 	}
+# }

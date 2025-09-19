@@ -1,4 +1,4 @@
-# 3.8 compatible
+# 4.0 compatible
 
 namespace = crisis
 
@@ -18,9 +18,6 @@ planet_event = {
 	immediate = {
 		
 		set_planet_flag = previously_infested
-		every_owned_pop = {
-			kill_pop = yes
-		}
 		destroy_colony = yes
 		random_list = {
 			50 = { change_pc = pc_barren }
@@ -41,7 +38,9 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		num_pops = 1 # Last Pop is still alive when this event is fired
+		fromfrom = {
+			pop_group_size > 1	# Last Pop is still alive when this event is fired
+		}
 		exists = controller
 		controller = { is_country_type = "swarm" }
 	}
@@ -70,9 +69,6 @@ planet_event = {
 					is_planet_class = pc_ringworld_habitable
 					gpm_is_planet_class_ringworld = yes # -guilli
 				}
-			}
-			every_owned_pop = {
-				kill_pop = yes
 			}
 			destroy_colony = yes
 			change_pc = pc_ringworld_habitable_damaged
@@ -143,7 +139,7 @@ planet_event = {
 
 	immediate = {
 		
-		every_owned_pop = { kill_pop = yes }
+		every_owned_pop_group = { kill_all_pop = yes }
 		if = {
 			limit = {
 				NOR = {
@@ -373,7 +369,7 @@ planet_event = {
 				save_event_target_as = AI_crisis
 			}
 		}
-		every_owned_pop = { kill_pop = yes }
+		every_owned_pop_group = { kill_all_pop = yes }
 		change_pc = pc_ai
 		reset_planet = yes
 		gpm_purge_all_planetary_modifiers = yes			# -guilli
@@ -486,6 +482,39 @@ planet_event = {
 				event_chain = "ai_crisis_chain"
 				counter = "active_machine_worlds"
 				amount = 1
+			}
+		}
+		if = {
+			limit = {
+				has_planet_flag = has_arc_furnace
+			}
+			set_planet_entity = { entity = pc_molten }
+			remove_planet_flag = has_megastructure
+			remove_planet_flag = has_arc_furnace
+			solar_system = {
+				every_system_planet = {
+					limit = {
+						OR = {
+							has_modifier = orbital_arc_furnace_1_mod
+							has_modifier = orbital_arc_furnace_2_mod
+							has_modifier = orbital_arc_furnace_3_mod
+							has_modifier = orbital_arc_furnace_4_mod
+						}
+					}
+					dismantle_arc_furnace_effect = yes
+				}
+				random_system_megastructure = {
+					limit = {
+						OR = {
+							is_megastructure_type = orbital_arc_furnace_1
+							is_megastructure_type = orbital_arc_furnace_2
+							is_megastructure_type = orbital_arc_furnace_3
+							is_megastructure_type = orbital_arc_furnace_4
+							is_megastructure_type = orbital_arc_furnace_restored
+						}
+					}
+					remove_megastructure = this
+				}
 			}
 		}
 		solar_system = {
@@ -770,9 +799,6 @@ planet_event = {
 					has_planet_flag = planet_devolved
 				}
 			}
-			every_owned_pop = {
-				kill_pop = yes
-			}
 			destroy_colony = yes
 			change_pc = pc_broken
 			reset_planet = yes
@@ -782,7 +808,7 @@ planet_event = {
 		every_country = {
 			limit = { has_notification_modifier = ghost_signal_1 }
 			remove_notification_modifier = ghost_signal_1
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = { has_modifier = "pop_ghost_signal_1" }
 				remove_modifier = "pop_ghost_signal_1"
 			}
@@ -823,7 +849,7 @@ planet_event = {
 		}
 		every_country = {
 			limit = {
-				is_fallen_machine_empire = yes
+				is_fallen_empire_machine = yes
 			}
 			country_event = { id = fallen_machine_empire.3 days = 1 }
 		}

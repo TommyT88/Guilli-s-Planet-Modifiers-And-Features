@@ -167,7 +167,7 @@ gpm_habitat_stadium = {
 	icon_frame = 11
 }
 gpm_habitat_trade_docks = {
-	trade_value_mult = 0.20
+	planet_jobs_trade_produces_mult = 0.20
 	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_trade_docks.dds"
 	icon_frame = 11
 }
@@ -182,7 +182,7 @@ gpm_habitat_replicator_systems = {
 	icon_frame = 11
 }
 gpm_habitat_spaceroute_hub = {
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 	job_merchant_per_pop = 0.05
 	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_spaceroute_hub.dds"
 	icon_frame = 11
@@ -230,7 +230,7 @@ gpm_habitat_ancient_temple_expeditions = {
 	icon_frame = 11
 }
 gpm_habitat_experimental_food_recycling = {
-	planet_pops_food_upkeep_mult = -0.10
+	planet_pops_organics_food_upkeep_add = -0.10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_experimental_food_recycling.dds"
 	icon_frame = 11
 }
@@ -257,7 +257,7 @@ gpm_habitat_surface_expeditions = {
 }
 
 gpm_habitat_android_pleasure_palace_tourism = {
-	planet_amenities_add = 40
+	planet_amenities_add = 4000
 	icon = "gfx/interface/icons/planet_modifiers/gpm_habitat_android_pleasure_palace_tourism.dds"
 	icon_frame = 11
 }

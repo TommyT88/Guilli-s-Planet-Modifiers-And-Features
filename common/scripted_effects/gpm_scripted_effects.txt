@@ -47,67 +47,67 @@ gpm_scale_planet_modifiers = {
 		# get planet size as variable
 		if = { 
 			limit = { planet_size < 12 }
-			set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.25 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.75 } # 0.25
 		}
 		if = { 
 			limit = { planet_size > 11 planet_size < 16 }
-			set_variable = { which = gpm_planet_size_multiplier_wonders value = 0.5 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 } # 0.5
 		}
 		if = { 
 			limit = { planet_size > 15 planet_size < 20 }
-			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.25 } # 1
 		}
 		if = { 
 			limit = { planet_size > 19 planet_size < 24 }
-			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.50 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 1.5 } # 1.5
 		}
 		if = { 
 			limit = { planet_size > 23 }
-			set_variable = { which = gpm_planet_size_multiplier_wonders value = 2 }
+			set_variable = { which = gpm_planet_size_multiplier_wonders value = 2 } # 2
 		}
 
 		# Precursor Modifiers
 		if = {
 			limit = { planet_size < 12 }
-			set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.5 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.75 } # 0.5
 		}
 		if = { 
 			limit = { planet_size > 11 planet_size < 16 }
-			set_variable = { which = gpm_planet_size_multiplier_precursor value = 0.75 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 } # 0.75
 		}
 		if = { 
 			limit = { planet_size > 15 planet_size < 20 }
-			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.25 } # 1
 		}
 		if = { 
 			limit = { planet_size > 19 planet_size < 24 }
-			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.5 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 1.5 } # 1.5
 		}
 		if = { 
 			limit = { planet_size > 23 }
-			set_variable = { which = gpm_planet_size_multiplier_precursor value = 2 }
+			set_variable = { which = gpm_planet_size_multiplier_precursor value = 2 } #2
 		}
 
 		# General Modifiers
 		if = {
 			limit = { planet_size < 12 }
-			set_variable = { which = gpm_planet_size_multiplier value = 0.5 }
+			set_variable = { which = gpm_planet_size_multiplier value = 0.75 } # 0.5
 		}
 		if = { 
 			limit = { planet_size > 11 planet_size < 16 }
-			set_variable = { which = gpm_planet_size_multiplier value = 0.75 }
+			set_variable = { which = gpm_planet_size_multiplier value = 1 } # 0.75
 		}
 		if = { 
 			limit = { planet_size > 15 planet_size < 20 }
-			set_variable = { which = gpm_planet_size_multiplier value = 1 }
+			set_variable = { which = gpm_planet_size_multiplier value = 1.25 } # 1
 		}
 		if = {
 			limit = { planet_size > 19 planet_size < 24 }
-			set_variable = { which = gpm_planet_size_multiplier value = 1.50 }
+			set_variable = { which = gpm_planet_size_multiplier value = 1.50 } #1.5
 		}
 		if = { 
 			limit = { planet_size > 23 }
-			set_variable = { which = gpm_planet_size_multiplier value = 2 }
+			set_variable = { which = gpm_planet_size_multiplier value = 2 } #2
 		}
 	}
 
@@ -297,120 +297,6 @@ gpm_designate_wonder_world = {
 	set_planet_flag = unique_world					# Real Space mod request
 }
 
-gpm_make_precursor_ruined_world = {
-	change_pc = pc_gpm_precursor_tomb
-	clear_deposits = yes
-	# clear_planet_modifiers = yes
-	gpm_purge_all_core_modifiers = yes
-	gpm_purge_all_planetary_modifiers = yes
-	gpm_roll_planetary_features_unique = yes
-	# Planet Modifier Scaling
-	if = {
-		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
-		gpm_scale_planet_modifiers = yes
-	}
-	if = {
-		limit = { has_global_flag = gpm_scaling_multiplier_disabled }
-		set_variable = { which = gpm_planet_size_multiplier value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-		set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
-	}
-	if = {
-		limit = { has_modifier = terraforming_candidate }
-		remove_modifier = terraforming_candidate	
-	}
-	if = {
-		limit = { planet_size < 8 }
-		# add_deposit = d_archaeological_site
-		add_deposit = d_city_ruins
-		while = {
-			count = 2
-			random_list = {
-				# 10 = { add_deposit = d_archaeological_site }
-				10 = { add_deposit = d_city_ruins }
-				10 = { add_deposit = d_infestation }
-				10 = { add_deposit = gpm_tb_automated_turrets_empty }
-				10 = { add_deposit = gpm_tb_xenomorph_blocker_empty }
-			}
-		}
-	}
-	if = { 
-		limit = { planet_size > 7 planet_size < 13 }
-		# add_deposit = d_archaeological_site
-		add_deposit = d_city_ruins
-		while = {
-			count = 3
-			random_list = {
-				# 10 = { add_deposit = d_archaeological_site }
-				10 = { add_deposit = d_city_ruins }
-				10 = { add_deposit = d_infestation }
-				10 = { add_deposit = gpm_tb_automated_turrets_empty }
-				10 = { add_deposit = gpm_tb_xenomorph_blocker_empty }
-			}
-		}
-	}
-	if = { 
-		limit = { planet_size > 12 planet_size < 16 }
-		# add_deposit = d_archaeological_site
-		add_deposit = d_city_ruins
-		while = {
-			count = 5
-			random_list = {
-				# 10 = { add_deposit = d_archaeological_site }
-				10 = { add_deposit = d_city_ruins }
-				10 = { add_deposit = d_infestation }
-				10 = { add_deposit = gpm_tb_automated_turrets_empty }
-				10 = { add_deposit = gpm_tb_xenomorph_blocker_empty }
-			}
-		}
-	}
-	if = { 
-		limit = { planet_size > 15 planet_size < 20 }
-		# add_deposit = d_archaeological_site
-		add_deposit = d_city_ruins
-		while = {
-			count = 6
-			random_list = {
-				# 10 = { add_deposit = d_archaeological_site }
-				10 = { add_deposit = d_city_ruins }
-				10 = { add_deposit = d_infestation }
-				10 = { add_deposit = gpm_tb_automated_turrets_empty }
-				10 = { add_deposit = gpm_tb_xenomorph_blocker_empty }
-			}
-		}
-	}
-	if = { 
-		limit = { planet_size > 19 planet_size < 24 }
-		# add_deposit = d_archaeological_site
-		add_deposit = d_city_ruins
-		while = {
-			count = 8
-			random_list = {
-				# 10 = { add_deposit = d_archaeological_site }
-				10 = { add_deposit = d_city_ruins }
-				10 = { add_deposit = d_infestation }
-				10 = { add_deposit = gpm_tb_automated_turrets_empty }
-				10 = { add_deposit = gpm_tb_xenomorph_blocker_empty }
-			}
-		}
-	}
-	if = { 
-		limit = { planet_size > 23 }
-		# add_deposit = d_archaeological_site
-		add_deposit = d_city_ruins
-		while = {
-			count = 9
-			random_list = {
-				# 10 = { add_deposit = d_archaeological_site }
-				10 = { add_deposit = d_city_ruins }
-				10 = { add_deposit = d_infestation }
-				10 = { add_deposit = gpm_tb_automated_turrets_empty }
-				10 = { add_deposit = gpm_tb_xenomorph_blocker_empty }
-			}
-		}
-	}	
-}
-
 gpm_colour_planet_name = {
 	optimize_memory
 	if = {
@@ -528,80 +414,6 @@ gpm_random_dangerous_modifiers = {
 			modifier = { factor = 0 has_modifier = gpm_strange_alien_eggs }
 		}
 	}
-}
-
-gpm_random_res_metallic_ring_deposit = {
-	random_list = {
-		20 = {
-			clear_deposits = yes
-			random_list = {
-				13 = { add_deposit = d_minerals_3 }
-				11 = { add_deposit = d_minerals_4 }
-				9 = { add_deposit = d_minerals_5 }
-				7 = { add_deposit = d_minerals_6 }
-				5 = { add_deposit = d_minerals_7 }
-				3 = { add_deposit = d_minerals_8 }
-				1 = { add_deposit = d_minerals_9 }
-			}
-		}
-		2 = {
-			clear_deposits = yes
-			random_list = {
-				9 = { add_deposit = d_alloys_2 }
-				6 = { add_deposit = d_alloys_3 }
-				3 = { add_deposit = d_alloys_4 }
-				1 = { add_deposit = d_alloys_5 }
-			}
-		}
-		1 = {
-			clear_deposits = yes
-			random_list = {
-				9 = { add_deposit = d_rare_crystals_1 }
-				7 = { add_deposit = d_rare_crystals_2 }
-				5 = { add_deposit = d_rare_crystals_3 }
-				3 = { add_deposit = d_rare_crystals_4 }
-				1 = { add_deposit = d_rare_crystals_5 }
-			}
-		}
-		1 = {
-			clear_deposits = yes
-			random_list = {
-				9 = { add_deposit = d_volatile_motes_1 }
-				7 = { add_deposit = d_volatile_motes_2 }
-				5 = { add_deposit = d_volatile_motes_3 }
-				3 = { add_deposit = d_volatile_motes_4 }
-				1 = { add_deposit = d_volatile_motes_5 }
-			}
-		}
-	}	
-	gpm_d_random_trade_small = yes
-}
-
-gpm_random_res_ice_ring_deposit = {
-	random_list = {
-		9 = {
-			clear_deposits = yes
-			random_list = {
-				95 = { add_deposit = d_energy_2 }
-				5 = { add_deposit = d_exotic_gases_1 }
-			}
-		}
-		4 = {
-			clear_deposits = yes
-			random_list = {
-				95 = { add_deposit = d_energy_3 }
-				5 = { add_deposit = d_exotic_gases_2 }
-			}
-		}
-		1 = {
-			clear_deposits = yes
-			random_list = {
-				95 = { add_deposit = d_energy_4 }
-				5 = { add_deposit = d_exotic_gases_3 }
-			}
-		}
-	}
-	gpm_d_random_trade_small = yes
 }
 
 gpm_create_tiyanki_resident = {
@@ -1835,117 +1647,29 @@ gpm_create_primitive_relic_world = {
 	set_pre_ftl_origin = yes
 	set_owner = last_created_country
 	set_capital = yes
+	create_pop_group = {
+		size = 1000
+		species = last_created
+	}
 	while = {
 		count = 30
 		random_list = {
 			40 = {}
 			60 = {
-				create_pop = {
+				create_pop_group = {
+					size = 100
 					species = last_created
 				}
 			}
-		}		
+		}
 	}
-	add_building = building_primitive_power_plant
-	add_building = building_primitive_mine
+	remove_building = building_colony_shelter
+	add_primitive_farm_or_mine = yes
 	add_building = building_primitive_factory
-	add_building = building_primitive_dwellings
-	add_building = building_primitive_dwellings
-}
-
-gpm_remove_galaxy_generation_deposits = {
-	if = {
-		limit = {
-			solar_system = {
-				NOR = {
-					has_star_flag = drone_home_system
-					has_star_flag = tiyanki_spawn_system
-					has_star_flag = pirate_home_system
-					has_star_flag = amoeba_home_system
-					has_star_flag = gpm_precursor_machine_system
-					exists = space_owner
-				}
-			}
-			NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
-			gpm_engine_forbidden_planets = no
-			gpm_is_planet_class_asteroid = no
-		}
-
-		random_list = {
-			75 = { }
-			25 = {
-				if = {
-					limit = { has_deposit = d_minerals_2 }
-					remove_deposit = d_minerals_2
-				}
-				if = { 
-					limit = { has_deposit = d_minerals_3 }
-					remove_deposit = d_minerals_3
-				}
-				if = { 
-					limit = { has_deposit = d_minerals_4 }
-					remove_deposit = d_minerals_4
-				}
-				if = { 
-					limit = { has_deposit = d_energy_2 }
-					remove_deposit = d_energy_2
-				}
-				if = { 
-					limit = { has_deposit = d_energy_3 }
-					remove_deposit = d_energy_3
-				}
-				if = { 
-					limit = { has_deposit = d_energy_4 }
-					remove_deposit = d_energy_4
-				}
-				modifier = { factor = 200
-					OR = {
-						galaxy_size = large
-						galaxy_size = huge
-					}
-					any_system = {
-						distance = {
-							source = this
-							use_bypasses = no
-							max_jumps = 2
-						}
-						any_system_planet = {
-							is_capital = yes
-						}
-					}
-				}
-				modifier = { factor = 150
-					galaxy_size = medium
-					any_system = {
-						distance = {
-							source = this
-							use_bypasses = no
-							max_jumps = 2
-						}
-						any_system_planet = {
-							is_capital = yes
-						}
-					}
-				}
-				modifier = { factor = 100
-					OR = {
-						galaxy_size = tiny
-						galaxy_size = small
-					}
-					any_system = {
-						distance = {
-							source = this
-							use_bypasses = no
-							max_jumps = 2
-						}
-						any_system_planet = {
-							is_capital = yes
-						}
-					}
-				}
-			}
-		}
-	}
+	add_building = building_primitive_mine
+	add_building = building_primitive_power_plant
+	add_building = building_primitive_capital
+	add_building = building_urban_dwellings
 }
 
 gpm_spawn_ruined_observation_station = {

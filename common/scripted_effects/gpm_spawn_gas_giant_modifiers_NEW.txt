@@ -258,56 +258,189 @@ gpm_roll_gas_giant_modifiers = {
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers = 0 }
-				random_list = {
-					95 = { }
-					5 = { gpm_spawn_gas_giant_modifier = yes }
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							5 = { }
+							95 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.10 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 1
+					if = {
+						limit = { num_modifiers < 1 }
+						random_list = {
+							10 = { }
+							90 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.10 num_modifiers = 2 }
+							}
+						}
+					}
 				}
 			}
 		}
 		gpm_modifier_amount_low = {
-			while = {
-				count = 2
-				if = {
-					limit = { num_modifiers < 2 }
-					random_list = {
-						95 = { }
-						5 = { 
-							gpm_spawn_gas_giant_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.35 num_modifiers = 2 }
+								modifier = { factor = 0.15 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.35 num_modifiers = 1 }
+								modifier = { factor = 0.15 num_modifiers = 2 }
+							}
 						}
 					}
 				}
 			}
 		}
 		gpm_modifier_amount_normal = {
-			while = {
-				count = 3
-				if = {
-					limit = { num_modifiers < 3 }
-					random_list = {
-						85 = { }
-						15 = { 
-							gpm_spawn_gas_giant_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
-							modifier = { factor = 0.25 num_modifiers > 2 }
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.10 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.10 num_modifiers = 2 }
+							}
 						}
 					}
 				}
 			}
 		}
 		gpm_modifier_amount_high = {
-			while = {
-				count = 3
-				if = {
-					limit = { num_modifiers < 3 }
-					random_list = {
-						75 = { }
-						25 = { 
-							gpm_spawn_gas_giant_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
-							modifier = { factor = 0.25 num_modifiers > 2 }
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			gpm_spawn_gas_giant_modifier = yes
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 2 }
+								modifier = { factor = 0.075 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 1 }
+								modifier = { factor = 0.075 num_modifiers = 2 }
+							}
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_extra_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			gpm_spawn_gas_giant_modifier = yes
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 2 }
+								modifier = { factor = 0.075 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							20 = { }
+							80 = {
+								gpm_spawn_gas_giant_modifier = yes
+								modifier = { factor = 0.15 num_modifiers = 1 }
+								modifier = { factor = 0.075 num_modifiers = 2 }
+							}
 						}
 					}
 				}
@@ -316,3 +449,100 @@ gpm_roll_gas_giant_modifiers = {
 		default = { }
 	}
 }
+
+##### pre 4.0 backup #####
+# gpm_roll_gas_giant_modifiers = {
+# 	optimize_memory
+# 	switch = {
+# 		trigger = has_global_flag
+# 		gpm_modifier_amount_max_one = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						num_modifiers = 0
+# 						AND = {
+# 							num_modifiers = 1
+# 							gpm_has_pd_planet_modifier = yes
+# 						}
+# 					}
+# 				}
+# 				random_list = {
+# 					95 = { }
+# 					5 = { gpm_spawn_gas_giant_modifier = yes }
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_low = {
+# 			while = {
+# 				count = 2
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							num_modifiers < 2
+# 							AND = {
+# 								num_modifiers < 3
+# 								gpm_has_pd_planet_modifier = yes
+# 							}
+# 						}
+# 					}
+# 					random_list = {
+# 						95 = { }
+# 						5 = { 
+# 							gpm_spawn_gas_giant_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_normal = {
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							num_modifiers < 3
+# 							AND = {
+# 								num_modifiers < 4
+# 								gpm_has_pd_planet_modifier = yes
+# 							}
+# 						}
+# 					}
+# 					random_list = {
+# 						85 = { }
+# 						15 = { 
+# 							gpm_spawn_gas_giant_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_high = {
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							num_modifiers < 3
+# 							AND = {
+# 								num_modifiers < 4
+# 								gpm_has_pd_planet_modifier = yes
+# 							}
+# 						}
+# 					}
+# 					random_list = {
+# 						75 = { }
+# 						25 = { 
+# 							gpm_spawn_gas_giant_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		default = { }
+# 	}
+# }

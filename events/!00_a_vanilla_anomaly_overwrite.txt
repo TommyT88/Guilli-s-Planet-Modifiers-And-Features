@@ -1,4 +1,4 @@
-# 3.8 compatible
+# 4.0 compatible
 
 namespace = anomaly
 
@@ -115,7 +115,7 @@ ship_event = {
 			clear_planet_modifiers = yes
 			change_pc = pc_barren
 			reset_planet = yes
-			change_planet_size = 25
+			change_planet_size = 30  # was 25 in vanilla, this seems cooler
 			reroll_planet_modifiers = yes		# -guilli
 			gpm_remove_precursor_modifiers = yes 	# -guilli
 		}

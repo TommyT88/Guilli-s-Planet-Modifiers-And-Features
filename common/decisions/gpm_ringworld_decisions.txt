@@ -83,19 +83,19 @@ decision_gpm_ringworld_parabolic_forcefield = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 5
-			num_pops > 20
+			pop_amount > 2000
 		}
 		modifier = {
 			factor = 20
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 	}
 }
@@ -151,19 +151,19 @@ decision_gpm_ringworld_neural_nexus = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 5
-			num_pops > 20
+			pop_amount > 2000
 		}
 		modifier = {
 			factor = 20
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0
@@ -194,7 +194,7 @@ decision_gpm_ringworld_idyllic_gardens = {
 	}
 	
 	allow = {
-		num_pops > 50
+		pop_amount > 5000
 		NOT = { has_modifier = gpm_ringworld_badlands }
 	}
 
@@ -224,11 +224,11 @@ decision_gpm_ringworld_idyllic_gardens = {
 		}
 		modifier = {
 			factor = 50
-			num_pops > 75
+			pop_amount > 7500
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0
@@ -288,19 +288,19 @@ decision_gpm_ringworld_xeno_zoo = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 5
-			num_pops > 20
+			pop_amount > 2000
 		}
 		modifier = {
 			factor = 20
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0
@@ -374,19 +374,19 @@ decision_gpm_ringworld_badlands = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 5
-			num_pops > 20
+			pop_amount > 2000
 		}
 		modifier = {
 			factor = 20
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0
@@ -446,19 +446,19 @@ decision_gpm_ringworld_simulators = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 5
-			num_pops > 20
+			pop_amount > 2000
 		}
 		modifier = {
 			factor = 20
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0
@@ -523,19 +523,19 @@ decision_gpm_ringworld_endless_oceans = {
 		}
 		modifier = {
 			factor = 0
-			num_pops < 10
+			pop_amount < 1000
 		}
 		modifier = {
 			factor = 5
-			num_pops > 20
+			pop_amount > 2000
 		}
 		modifier = {
 			factor = 20
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 100
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0
@@ -566,7 +566,7 @@ decision_gpm_ringworld_mass_transit = {
 	}
 	
 	allow = {
-		num_pops > 100
+		pop_amount > 10000
 	}
 
 	effect = {
@@ -595,19 +595,19 @@ decision_gpm_ringworld_mass_transit = {
 		}
 		modifier = {
 			factor = 10
-			num_pops > 125
+			pop_amount > 12500
 		}
 		modifier = {
 			factor = 25
-			num_pops > 150
+			pop_amount > 15000
 		}
 		modifier = {
 			factor = 50
-			num_pops > 175
+			pop_amount > 17500
 		}
 		modifier = {
 			factor = 100
-			num_pops > 200
+			pop_amount > 20000
 		}
 		modifier = {
 			factor = 0

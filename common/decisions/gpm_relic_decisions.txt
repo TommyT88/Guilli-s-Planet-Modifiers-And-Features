@@ -78,7 +78,6 @@ decision_gpm_shield_generator_arrays = {
 			gpm_is_planet_class_city = yes
 			gpm_is_planet_class_machine = yes
 			gpm_is_planet_class_hive = yes
-			is_planet_class = pc_gpm_precursor_tomb
 		}
 	}
 	
@@ -108,23 +107,23 @@ decision_gpm_shield_generator_arrays = {
 		}
 		modifier = {
 			factor = 1.25
-			num_pops > 15
+			pop_amount > 1500
 		}
 		modifier = {
 			factor = 2.5
-			num_pops > 25
+			pop_amount > 2500
 		}
 		modifier = {
 			factor = 5
-			num_pops > 50
+			pop_amount > 5000
 		}
 		modifier = {
 			factor = 10
-			num_pops > 100
+			pop_amount > 10000
 		}
 		modifier = {
 			factor = 0.5
-			planet_size < 20
+			planet_size < 2000
 		}
 	}
 }
@@ -157,7 +156,6 @@ decision_gpm_Floating_Island_Housing = {
 			gpm_is_planet_class_city = yes
 			gpm_is_planet_class_machine = yes
 			gpm_is_planet_class_hive = yes
-			is_planet_class = pc_gpm_precursor_tomb
 		}
 	}
 	
@@ -195,7 +193,7 @@ decision_gpm_Floating_Island_Housing = {
 		modifier = {
 			factor = 50
 			AND = {
-				num_pops > 20
+				pop_amount > 2000
 				free_district_slots < 3
 			}
 		}

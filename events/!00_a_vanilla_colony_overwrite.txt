@@ -1,4 +1,4 @@
-# 3.8 compatible
+# 4.0 compatible
 
 namespace = colony
 
@@ -523,7 +523,7 @@ planet_event = {
 		if = { #Destroys colony if no planet pops can live on Tomb Worlds
 			limit = {
 				NOT = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
 							has_trait = trait_pc_nuked_preference
 							has_trait = trait_mechanical
@@ -536,7 +536,7 @@ planet_event = {
 		}
 		else = { #Kills only planet pops that cannot live on Tomb Worlds
 			hidden_effect = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						NOR = {
 							has_trait = trait_pc_nuked_preference
@@ -544,7 +544,7 @@ planet_event = {
 							has_trait = trait_machine_unit
 						}
 					}
-					kill_pop = yes
+					kill_all_pop = yes
 				}
 			}
 			custom_tooltip = colony.107.a.tooltip

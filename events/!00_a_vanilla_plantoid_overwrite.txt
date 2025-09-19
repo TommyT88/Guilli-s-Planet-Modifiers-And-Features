@@ -1,4 +1,4 @@
-# 3.8 compatible
+# 4.0 compatible
 
 namespace = plant
 
@@ -26,8 +26,7 @@ planet_event = {
 		planet_event = { id = gpm_terraform.78871 }
 		## Guilli End ##
 
-		# Remove Gaia Seed building.
-		remove_building = building_gaiaseeders_4
+		set_planet_flag = gaia_seeder_bloom
 	}
 
 	option = {
@@ -53,7 +52,17 @@ planet_event = {
 	after = {
 		tooltip = {
 			change_pc = pc_gaia
-			remove_building = building_gaiaseeders_4
+		}
+		hidden_effect = {
+			planet_event = {
+				id = plant.115
+				days = 180
+			}
+			set_saved_date = {
+				key = gaia_seeder_bloom_timer
+				days_from_present = 180
+				expires = 180
+			}
 		}
 	}
 }

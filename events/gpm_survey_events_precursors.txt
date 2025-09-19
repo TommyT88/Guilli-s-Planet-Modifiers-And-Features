@@ -43,17 +43,17 @@ ship_event = {
 		
 		log = "Spawning precursor dig site on [from.GetName] in the [fromfrom.GetName] system"
 		locked_random_list = {
-			30 = {
+			60 = {
 				FROM = { set_planet_flag = gpm_already_rolled_for_prec_dig_site }
 				# modifier = { factor = 0 root.owner = { is_ai = yes } }
 			}
-			70 = {
+			40 = {
 				FROM = {
 					create_archaeological_site = gpm_precursor_generic_digsite
 					set_planet_flag = gpm_already_rolled_for_prec_dig_site
 				}
 				# set by the "extra fun" game option. Mostly for multiplayer by request
-				modifier = { factor = 100 has_global_flag = gpm_multiplayer_fun_enabled }
+				modifier = { factor = 200 has_global_flag = gpm_multiplayer_fun_enabled }
 			}
 		}
 	}
@@ -103,7 +103,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -251,7 +257,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -399,7 +411,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -547,7 +565,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -695,7 +719,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -843,7 +873,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -991,7 +1027,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -1139,7 +1181,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -1287,7 +1335,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -1435,7 +1489,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -1583,7 +1643,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -1731,7 +1797,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -1879,7 +1951,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2027,7 +2105,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2175,7 +2259,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2323,7 +2413,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2471,7 +2567,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2619,7 +2721,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2767,7 +2875,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -2915,7 +3029,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -3063,7 +3183,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -3211,7 +3337,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -3359,7 +3491,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -3507,7 +3645,13 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = { NOT = { has_planet_flag = "gpm_is_surveyed" }	}
-				gpm_colour_planet_name = yes
+				# colour planet names unless this is disabled through game option
+				if = { 
+					limit = { 
+						NOT = { has_global_flag = gpm_coloured_names_disabled }
+					}
+					gpm_colour_planet_name = yes
+				}
 				set_planet_flag = "gpm_is_surveyed"
 			}
 			save_event_target_as = precursor_planet
@@ -3611,3 +3755,30 @@ ship_event = {
 		}
 	}
 }
+
+
+
+
+
+#### TESTING #####
+# country_event = {
+# 	id = gpm_survey_precursors.1000
+# 	hide_window = yes
+
+# 	is_triggered_only = yes
+
+
+# 	trigger = {
+
+# 	}
+
+
+# 	immediate = {
+# 		locked_random_list = {
+# 			10 = { give_specimen = { key = gpm_precursor_manufactorium_discovery_specimen } }
+# 			10 = { give_specimen = { key = gpm_precursor_manufactorium_discovery_2_specimen } }
+# 		}
+		
+	
+# 	}
+# }

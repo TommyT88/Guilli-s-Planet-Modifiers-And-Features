@@ -13,7 +13,7 @@
 # Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
 
 # Abundancy Settings and factors used for tweaking
-@veryrare = 0.4 			
+@veryrare = 0.3 			
 @rare = 0.6 				# 0.2
 @uncommon = 0.8 			# 0.6
 @default = 1 				# 1.2
@@ -56,6 +56,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.2 planet_size < 7 }
 			modifier = { factor = 0.5 planet_size > 19 }
 			modifier = { factor = 2 is_moon = yes }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -87,6 +88,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.2 planet_size < 7 }
 			modifier = { factor = 0.5 planet_size > 19 }
 			modifier = { factor = 2 is_moon = yes }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -119,6 +121,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.2 is_moon = yes }
 			modifier = { factor = 5 has_modifier = "gpm_massive_world" }
 			modifier = { factor = 2 has_modifier = "gpm_rich_equator" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -151,6 +154,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.2 is_moon = yes }
 			modifier = { factor = 5 has_modifier = "gpm_massive_world" }
 			modifier = { factor = 1.5 has_modifier = "gpm_rich_equator" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -172,6 +176,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.2 has_modifier = "low_gravity" }
 			modifier = { factor = 0.1 has_modifier = "gpm_high_gravity_2" }
 			modifier = { factor = 1.2 has_modifier = "gpm_low_gravity_2" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -264,6 +269,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Galaxy "food" Tweak
 			modifier = { factor = @galaxyfoodtweak }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Weight Factor
 			modifier = { factor = @default }
 		}
@@ -304,6 +310,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0.2 is_moon = yes }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -323,6 +330,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	is_planet_class = pc_ocean }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -350,6 +358,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_low_gravity_2"
 				}
 			}
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -548,6 +557,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_low_gravity_2"
 				}
 			}
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -570,6 +580,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_biolumen }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			# Weight Factor
@@ -621,6 +632,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -641,6 +653,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -763,6 +776,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -832,6 +846,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_crystal
 				}
 			}
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
@@ -862,6 +877,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -879,6 +895,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
@@ -900,6 +917,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
@@ -961,6 +979,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Tweaks
 			modifier = { factor = 1.5 is_moon = yes }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
@@ -981,6 +1000,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0.2 is_moon = yes }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1086,6 +1106,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -1140,6 +1161,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 2 is_planet_class = pc_alpine }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1188,6 +1210,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 1.2 has_modifier = "high_gravity" }
 			modifier = { factor = 1.2 has_modifier = "gpm_high_gravity_2" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1206,6 +1229,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_ocean }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1256,6 +1280,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -1286,6 +1311,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1344,9 +1370,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
-			modifier = { factor = @rare }
+			modifier = { factor = @very_rare }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_perpendicular_axis" multiplier = gpm_planet_size_multiplier }
@@ -1376,9 +1403,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_graveyard
 				}
 			}
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
-			modifier = { factor = @rare }
+			modifier = { factor = @very_rare }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_radioactive_mantle" multiplier = gpm_planet_size_multiplier }
@@ -1413,6 +1441,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_gaia }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1431,6 +1460,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_alpine }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -1481,6 +1511,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
@@ -1494,6 +1525,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -1529,6 +1561,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -1626,6 +1659,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
@@ -1643,6 +1677,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
@@ -1663,6 +1698,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
@@ -1790,6 +1826,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Tweaks
 			modifier = { factor = 2	has_modifier = "gpm_strange_alien_eggs" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -1920,6 +1957,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -1933,6 +1971,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -1968,6 +2007,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 2 is_moon = yes }
 			modifier = { factor = 0 has_global_flag = "gpm_spider_features_disabled" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -1982,6 +2022,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2000,6 +2041,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -2021,6 +2063,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
+			# disable for these mods:
+			modifier = { factor = 0 has_global_flag = planetarydiversity }
+			modifier = { factor = 0 has_global_flag = has_real_space_mod }
+			modifier = { factor = 0 has_global_flag = has_real_space_mc_mod }
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
@@ -2045,6 +2092,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -2057,6 +2105,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -2086,6 +2135,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2137,6 +2187,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -2161,6 +2212,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -2178,6 +2230,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -2254,6 +2307,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2315,6 +2369,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_gaia }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -2398,6 +2453,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 2 is_planet_class = pc_ocean }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2415,45 +2471,48 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
 		}
+		# 100 = {
+		# 	add_modifier = { modifier = "gpm_ghost_ships" }
+		# 	# Not with these modifiers
+		# 	modifier = { factor = 0 has_modifier = "gpm_ghost_ships" }
+		# 	# (Not) on these planets
+		# 	modifier = { factor = 0
+		# 		NOR = {
+		# 			gpm_is_planet_wet_hot = yes
+		# 			gpm_is_planet_wet_cold = yes
+		# 		}
+		# 	}
+		# 	### like this to make sure it does spawn on primite worlds
+		# 	modifier = { factor = 0
+		# 		has_owner = yes
+		# 		is_capital = yes
+		# 		owner = { gpm_is_country_type_default = yes }
+		# 	}
+		# 	modifier = { factor = 0 is_planet_class = pc_alpine }
+		# 	# Never in these systems
+		# 	modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+		# 	# Tweaks
+		# 	modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
+		# 	modifier = { factor = 2 is_planet_class = pc_ocean }
+		# 	# Galaxy age setting modifier
+		# 	# Weight Factor
+		# 	modifier = { factor = @rare }
+		# }
 		100 = {
-			add_modifier = { modifier = "gpm_ghost_ships" }
+			add_modifier = { modifier = "gpm_ominous_fog" }
 			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_ghost_ships" }
-			# (Not) on these planets
-			modifier = { factor = 0
-				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
-				}
-			}
-			### like this to make sure it does spawn on primite worlds
-			modifier = { factor = 0
-				has_owner = yes
-				is_capital = yes
-				owner = { gpm_is_country_type_default = yes }
-			}
-			modifier = { factor = 0 is_planet_class = pc_alpine }
-			# Never in these systems
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
-			# Tweaks
-			modifier = { factor = 2 is_planet_class = pc_ocean }
-			# Galaxy age setting modifier
-			# Weight Factor
-			modifier = { factor = @rare }
-		}
-		100 = {
-			add_modifier = { modifier = "gpm_omnious_fog" }
-			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_omnious_fog" }
+			modifier = { factor = 0 has_modifier = "gpm_ominous_fog" }
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2549,6 +2608,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 2 has_modifier = "gpm_dense_atmospheres" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2603,6 +2663,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2720,23 +2781,24 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Weight Factor
 			modifier = { factor = @default }
 		}
-		100 = {
-			add_modifier = { modifier = "gpm_cursed_world" }
-			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_cursed_world" }
-			# (Not) on these planets			
-			### like this to make sure it does spawn on primite worlds
-			modifier = { factor = 0
-				has_owner = yes
-				is_capital = yes
-				owner = { gpm_is_country_type_default = yes }
-			}
-			# Never in these systems
-			# Tweaks
-			# Galaxy age setting modifier
-			# Weight Factor
-			modifier = { factor = @rare }
-		}
+		# 100 = {
+		# 	add_modifier = { modifier = "gpm_cursed_world" }
+		# 	# Not with these modifiers
+		# 	modifier = { factor = 0 has_modifier = "gpm_cursed_world" }
+		# 	# (Not) on these planets			
+		# 	### like this to make sure it does spawn on primite worlds
+		# 	modifier = { factor = 0
+		# 		has_owner = yes
+		# 		is_capital = yes
+		# 		owner = { gpm_is_country_type_default = yes }
+		# 	}
+		# 	# Never in these systems
+		# 	# Tweaks
+		# 	modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
+		# 	# Galaxy age setting modifier
+		# 	# Weight Factor
+		# 	modifier = { factor = @rare }
+		# }
 		100 = {
 			add_modifier = { modifier = "gpm_sunken_cities" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
@@ -2796,6 +2858,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0 num_moons > 0 }
 			modifier = { factor = 0 is_moon = yes }
+			# disable for these mods:
+			modifier = { factor = 0 has_global_flag = planetarydiversity }
+			modifier = { factor = 0 has_global_flag = has_real_space_mod }
+			modifier = { factor = 0 has_global_flag = has_real_space_mc_mod }
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
@@ -2822,6 +2888,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Tweaks
 			modifier = { factor = 0 has_global_flag = "gpm_spider_features_disabled" }
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
@@ -2842,6 +2909,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -2862,6 +2930,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				owner = { gpm_is_country_type_default = yes }
 			}
 			# Tweaks
+			modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -2969,6 +3038,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
@@ -2981,6 +3051,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 gpm_is_planet_primitive = no }
 			# Never in these systems
 			# Tweaks
+			modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
@@ -3015,11 +3086,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 		100 = {
 			add_modifier = { modifier = "gpm_massive_world" }
 			random_list = {
-				10 = { set_planet_size = 30 }
-				10 = { set_planet_size = 31 }
-				10 = { set_planet_size = 32 }
-				10 = { set_planet_size = 33 }
-				10 = { set_planet_size = 34 }
+				17 = { set_planet_size = 30 }
+				17 = { set_planet_size = 31 }
+				17 = { set_planet_size = 32 }
+				17 = { set_planet_size = 33 }
+				17 = { set_planet_size = 34 }
+				17 = { set_planet_size = 35 }
+				1 = { set_planet_size = 40 }
 			}
 			# Not with these modifiers
 			modifier = { factor = 0
@@ -3052,83 +3125,361 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 	}
 }
-
 gpm_roll_normal_habitable_modifiers = {
 	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers = 0 }
-				random_list = {
-					25 = { }
-					75 = { gpm_spawn_normal_habitable_world_modifier = yes }
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							40 = { }
+							60 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0.75 num_modifiers = 2 }
+								modifier = { factor = 0.50 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 1
+					if = {
+						limit = { num_modifiers < 1 }
+						random_list = {
+							40 = { }
+							60 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0.75 num_modifiers = 1 }
+								modifier = { factor = 0.50 num_modifiers = 2 }
+							}
+						}
+					}
 				}
 			}
 		}
 		gpm_modifier_amount_low = {
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers < 2 }
-				random_list = {
-					5 = { }
-					90 = { gpm_spawn_normal_habitable_world_modifier = yes }
-				}
+				limit = { gpm_has_pd_planet_modifier = yes }
 				while = {
-					count = 1
-					if = {
-						limit = { num_modifiers < 2 }
-						random_list = {
-							70 = { }
-							30 = { gpm_spawn_normal_habitable_world_modifier = yes }
-						}
-					}
-				}
-			}			
-		}
-		gpm_modifier_amount_normal = {
-			if = {
-				limit = { num_modifiers < 3 }
-				random_list = {
-					5 = { }
-					90 = { gpm_spawn_normal_habitable_world_modifier = yes }
-				}
-				while = {
-					count = 2
+					count = 3
 					if = {
 						limit = { num_modifiers < 3 }
 						random_list = {
-							50 = { }
-							50 = { 
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
 								gpm_spawn_normal_habitable_world_modifier = yes
-								modifier = { factor = 0.5 num_modifiers >= 1 }
-								modifier = { factor = 0.33 num_modifiers >= 2 }
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
 							}
 						}
 					}
 				}
 			}
-			
-		}
-		gpm_modifier_amount_high = {
 			if = {
-				limit = { num_modifiers <= 1 }
-				gpm_spawn_normal_habitable_world_modifier = yes
+				limit = { gpm_has_pd_planet_modifier = no }
 				while = {
 					count = 2
 					if = {
-						limit = { num_modifiers < 3 }
+						limit = { num_modifiers < 2 }
 						random_list = {
-							50 = { }
-							50 = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
 								gpm_spawn_normal_habitable_world_modifier = yes
-								modifier = { factor = 0.5 num_modifiers >= 1 }
-								modifier = { factor = 0.33 num_modifiers >= 2 }
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
 							}
 						}
 					}
 				}
-			}			
+			}
+		}
+		gpm_modifier_amount_normal = {
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			gpm_spawn_normal_habitable_world_modifier = yes
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							40 = { }
+							60 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							40 = { }
+							60 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_extra_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				gpm_spawn_normal_habitable_world_modifier = yes
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				gpm_spawn_normal_habitable_world_modifier = yes
+				gpm_spawn_normal_habitable_world_modifier = yes
+			}
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							25 = { }
+							75 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { }
+							75 = {
+								gpm_spawn_normal_habitable_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
+						}
+					}
+				}
+			}
 		}
 		default = { }
 	}
+	# cleanup
+	remove_planet_flag = gpm_no_modifier_rolled
 }
+
+
+##### pre 4.0 backup #####
+# gpm_roll_normal_habitable_modifiers = {
+# 	optimize_memory
+# 	switch = {
+# 		trigger = has_global_flag
+# 		gpm_modifier_amount_max_one = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						num_modifiers = 0
+# 						AND = {
+# 							num_modifiers = 1
+# 							gpm_has_pd_planet_modifier = yes
+# 						}
+# 					}
+# 				}
+# 				random_list = {
+# 					25 = { }
+# 					75 = { gpm_spawn_normal_habitable_world_modifier = yes }
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_low = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						num_modifiers < 2
+# 						AND = {
+# 							num_modifiers < 3
+# 							gpm_has_pd_planet_modifier = yes
+# 						}
+# 					}
+# 				}
+# 				random_list = {
+# 					5 = { }
+# 					90 = { 
+# 						gpm_spawn_normal_habitable_world_modifier = yes
+# 						modifier = { factor = 1.2 gpm_has_pd_planet_modifier = yes }
+# 					}
+# 				}
+# 				while = {
+# 					count = 2
+# 					if = {
+# 						limit = {
+# 							OR = {
+# 								num_modifiers < 2
+# 								AND = {
+# 									num_modifiers < 3
+# 									gpm_has_pd_planet_modifier = yes
+# 								}
+# 							}
+# 						}
+# 						random_list = {
+# 							70 = { }
+# 							30 = {
+# 								gpm_spawn_normal_habitable_world_modifier = yes
+# 								modifier = { factor = 1.3 gpm_has_pd_planet_modifier = yes }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}			
+# 		}
+# 		gpm_modifier_amount_normal = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						num_modifiers < 3
+# 						AND = {
+# 							num_modifiers < 4
+# 							gpm_has_pd_planet_modifier = yes
+# 						}
+# 					}
+# 				}
+# 				random_list = {
+# 					5 = { }
+# 					90 = { 
+# 						gpm_spawn_normal_habitable_world_modifier = yes
+# 						modifier = { factor = 1.2 gpm_has_pd_planet_modifier = yes }
+# 					}
+# 				}
+# 				while = {
+# 					count = 3
+# 					if = {
+# 						limit = {
+# 							OR = {
+# 								num_modifiers < 3
+# 								AND = {
+# 									num_modifiers < 4
+# 									gpm_has_pd_planet_modifier = yes
+# 								}
+# 							}
+# 						}
+# 						random_list = {
+# 							20 = { }
+# 							80 = { 
+# 								gpm_spawn_normal_habitable_world_modifier = yes
+# 								modifier = { factor = 0.5 num_modifiers >= 1 }
+# 								modifier = { factor = 0.33 num_modifiers >= 2 }
+# 								modifier = { factor = 1.5 gpm_has_pd_planet_modifier = yes }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}			
+# 		}
+# 		gpm_modifier_amount_high = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						num_modifiers = 0
+# 						AND = {
+# 							num_modifiers = 1
+# 							gpm_has_pd_planet_modifier = yes
+# 						}
+# 					}
+# 				}
+# 				gpm_spawn_normal_habitable_world_modifier = yes
+# 				while = {
+# 					count = 3
+# 					if = {
+# 						limit = {
+# 							OR = {
+# 								num_modifiers < 3
+# 								AND = {
+# 									num_modifiers < 4
+# 									gpm_has_pd_planet_modifier = yes
+# 								}
+# 							}
+# 						}
+# 						random_list = {
+# 							15 = { }
+# 							85 = {
+# 								gpm_spawn_normal_habitable_world_modifier = yes
+# 								modifier = { factor = 0.5 num_modifiers >= 1 }
+# 								modifier = { factor = 0.33 num_modifiers >= 2 }
+# 								modifier = { factor = 2 gpm_has_pd_planet_modifier = yes }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}			
+# 		}
+# 		default = { }
+# 	}
+# }

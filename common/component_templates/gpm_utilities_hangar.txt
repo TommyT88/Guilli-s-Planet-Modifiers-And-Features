@@ -1,0 +1,74 @@
+########
+#	COST	  #
+########
+@cost_1 = 15
+@cost_2 = 20
+@cost_3 = 25
+@cost_4 = 30
+@cost_5 = 35
+
+#########
+#	POWER   #
+#########
+@power_1 = -10
+@power_2 = -15
+@power_3 = -20
+@power_4 = -25
+@power_5 = -30
+
+#########
+#	DAMAGE #
+#########
+@damage_1 = 0.10
+@damage_2 = 0.15
+@damage_3 = 0.25
+@damage_4 = 0.35
+@damage_5 = 0.50
+
+#############
+#	FLIGHTSPEED  #
+#############
+@flightspeed_1 = 0.10
+@flightspeed_2 = 0.15
+@flightspeed_3 = 0.25
+@flightspeed_4 = 0.35
+@flightspeed_5 = 0.50
+
+# Hangar Bays
+utility_component_template = {
+	key = "GPM_HANGAR_1"
+	size = aux
+	icon = "GFX_C_ship_part_hangar_1"
+	icon_frame = 1
+	power = @power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+			exotic_gases = 1
+		}
+	}
+	
+	ship_modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.50
+		weapon_type_strike_craft_speed_mult = 0.50
+	}
+	
+	ship_limit = 1
+	
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+	
+	prerequisites = { "tech_gpm_hangar_1" }
+	component_set = "GPM_HANGAR_1"
+	#size_restriction = { cruiser battleship titan military_station_large }
+}

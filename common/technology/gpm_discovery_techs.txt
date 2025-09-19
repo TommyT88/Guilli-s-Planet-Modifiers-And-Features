@@ -9,7 +9,7 @@ tech_gpm_precursor_remnants_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_anomaly_research_speed_mult = 0.40
+		ship_anomaly_research_speed_mult = 0.60
 		ship_anomaly_fail_risk = -0.10
 	}
 	
@@ -29,7 +29,7 @@ tech_gpm_precursor_remnants_discovery_2 = {
 
 	modifier = {
 		science_ship_survey_speed = 0.40
-		ship_anomaly_generation_chance_mult = 0.5
+		ship_anomaly_generation_chance_mult = 0.05
 	}
 	
 	weight_modifier = {
@@ -125,7 +125,7 @@ tech_gpm_precursor_city_discovery = {
 
 	modifier = {
 		planet_buildings_cost_mult = -0.2
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 	
 	weight_modifier = {
@@ -144,7 +144,7 @@ tech_gpm_precursor_city_discovery_2 = {
 
 	modifier = {
 		planet_districts_cost_mult = -0.2
-		planet_max_buildings_add = 1
+		planet_non_artificial_max_districts_add = 1
 	}
 	
 	weight_modifier = {
@@ -348,7 +348,7 @@ tech_gpm_precursor_floating_city_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_max_buildings_add = 2
+		planet_non_artificial_max_districts_add = 2
 	}
 	
 	weight_modifier = {
@@ -475,8 +475,8 @@ tech_gpm_precursor_singularity_drive_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		scientist_skill_levels = 1
-		species_leader_exp_gain = 0.33
+		leaders_upkeep_mult = -0.10
+		species_leader_exp_gain = 0.30
 	}
 	
 	weight_modifier = {
@@ -591,7 +591,7 @@ tech_gpm_precursor_mines_discovery_2 = {
 
 	modifier = {
 		# Building: Mining Nanite Nexus
-		#    district_mining_max = 5
+		#    district_mining_max_add = 5
 	}
 	
 	weight_modifier = {
@@ -1031,7 +1031,7 @@ tech_gpm_floating_islands_discovery = {
 
 	modifier = {
 		planet_non_artificial_max_districts_add = 1
-		planet_housing_add = 10
+		planet_housing_add = 1000
 		# show_only_custom_tooltip = yes
 		# custom_tooltip = tech_gpm_floating_islands_discovery_tt
 	}
@@ -1141,7 +1141,7 @@ tech_gpm_artificial_water_discovery = {
 	weight = 1
 
 	modifier = {
-		country_base_nanites_produces_add = 1
+		country_base_nanites_produces_add = 2
 	}
 	
 	weight_modifier = {
@@ -1159,7 +1159,7 @@ tech_gpm_artificial_water_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_metallurgists_alloys_produces_add = 0.5
+		planet_metallurgists_alloys_produces_add = 1.0
 	}
 	
 	weight_modifier = {
@@ -1199,7 +1199,7 @@ tech_gpm_android_pleasure_palace_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		pop_amenities_usage_mult = -0.10
+		pop_amenities_usage_mult = -0.20
 	}
 	
 	weight_modifier = {
@@ -1253,7 +1253,7 @@ tech_gpm_crystal_moon_palace_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_translucers_rare_crystals_produces_add = 0.5
+		planet_metallurgists_rare_crystals_produces_add = 0.05
 	}
 	
 	weight_modifier = {
@@ -1307,7 +1307,7 @@ tech_gpm_plasmoid_life_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_chemists_volatile_motes_produces_add = 0.5
+		planet_metallurgists_volatile_motes_produces_add = 0.05
 	}
 	
 	weight_modifier = {
@@ -1365,7 +1365,7 @@ tech_gpm_proto_forests_discovery = {
 	}
 
 	modifier = {
-		planet_farmers_food_produces_add = 1
+		planet_farmers_food_produces_add = 2
 	}
 	
 	weight_modifier = {
@@ -1387,7 +1387,7 @@ tech_gpm_proto_forests_discovery_2 = {
 	}
 
 	modifier = {
-		job_healthcare_per_pop = 0.05
+		planet_doctors_unity_produces_add = 10
 	}
 	
 	weight_modifier = {
@@ -1423,7 +1423,7 @@ tech_gpm_hiveworld_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_refiners_exotic_gases_produces_add = 0.5
+		planet_metallurgists_exotic_gases_produces_add = 0.05
 	}
 	
 	weight_modifier = {
@@ -1460,7 +1460,7 @@ tech_gpm_arachnophobia_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_researchers_society_research_produces_add = 1
+		planet_biologists_society_research_produces_add = 2
 	}
 	
 	weight_modifier = {
@@ -1497,7 +1497,7 @@ tech_gpm_giant_worm_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_miners_minerals_produces_add = 1
+		planet_miners_minerals_produces_add = 2
 	}
 	
 	weight_modifier = {
@@ -1555,7 +1555,7 @@ tech_gpm_surface_of_bones_discovery = {
 	}
 
 	modifier = {
-		pop_government_ethic_attraction = 0.10
+		pop_government_ethic_attraction = 0.20
 	}
 	
 	weight_modifier = {
@@ -1655,7 +1655,7 @@ tech_gpm_mushroom_forest_discovery_2 = {
 	}
 
 	modifier = {
-		pop_growth_speed = 0.08
+		BIOLOGICAL_logistic_growth_mult = 0.15
 	}
 	
 	weight_modifier = {

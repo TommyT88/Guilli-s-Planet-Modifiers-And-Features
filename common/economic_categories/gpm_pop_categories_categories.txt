@@ -1,0 +1,262 @@
+planet_pops = {
+	parent = planets
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop_group
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_robotics
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_robot_pop_group = yes
+		}
+	}
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_cyborgs
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_trait = trait_cybernetic
+		}
+	}
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_organics
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_robot_pop_group = no
+		}
+	}
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_unemployed
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_unemployed = yes
+		}
+	}
+}
+
+unemployment_resources = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop_group
+}
+
+planet_disconnected_drones = {
+	parent = unemployment_resources
+	# generate_add_modifiers = {
+	# 	produces
+	# }
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_precursor = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_xeno_ward = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_pre_sapients = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_purge = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_bio_trophy = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_slave = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_robot = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_drones = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_maintenance_drones = {
+	parent = pop_category_drones
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_workers = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_specialists = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_rulers = {
+	parent = planet_pops
+
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = pop_group
+}
+
+pop_category_civilians = {
+	parent = planet_pops
+	modifier_category = pop_group
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}
+
+pop_category_assimilation = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		upkeep
+		produces
+	}
+}

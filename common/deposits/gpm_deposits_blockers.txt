@@ -1,3 +1,6 @@
+@ranger_small_production = 0.5
+@ranger_large_production = 1
+
 gpm_tb_toxic_gas = {
     time = 270
 	is_for_colonizable = yes
@@ -20,7 +23,7 @@ gpm_tb_toxic_gas = {
 	}
 	
 	planet_modifier = {
-		district_farming_max = -2
+		district_farming_max_add =-2
 	}
 	
 	triggered_planet_modifier = {
@@ -77,7 +80,7 @@ gpm_tb_locust_plagues = {
 	}
 	
 	planet_modifier = {
-		district_farming_max = -2
+		district_farming_max_add =-2
 	}
 	
 	triggered_planet_modifier = {
@@ -150,7 +153,7 @@ gpm_tb_seasonal_flooding = {
 	}
 	
 	planet_modifier = {
-		district_farming_max = -2
+		district_farming_max_add =-2
 	}
 	
 	triggered_planet_modifier = {

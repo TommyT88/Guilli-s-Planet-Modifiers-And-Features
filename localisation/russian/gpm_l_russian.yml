@@ -1,9 +1,9 @@
-﻿l_russian:
+﻿# l_english:
 # l_spanish:
 # l_german:
 # l_french:
 # l_polish:
-# l_russian:
+l_russian:
 # l_braz_por:
 # l_simp_chinese:
 # l_korean:
@@ -44,7 +44,7 @@
  #### Map Mode
  #######################################
  gpm_relic_map_mode:1 "Ancient Relic Map Mode"
- gpm_relic_map_mode_desc:1 "Empire borders will be colored based on owning an ancient relic or not."
+ gpm_relic_map_mode_desc:1 "Empire borders will be colored based on owning an ancient relic or not." 
  GPM_MAP_MODE_NOT_HAS_RELIC:1 "Has no §YAncient Relics§!"
  GPM_MAP_MODE_HAS_RELIC:1 "Has an §YAncient Relic§!"
  GPM_MAP_MODE_HAS_RELIC_2:1 "Has 2 §YAncient Relics§!"
@@ -106,6 +106,7 @@
  NAME_primitive_world_name_7:0 "Tron"
  NAME_Fen_Habbanis_IIIa:0 "Fen Habbanis IIIa"
  TECH_IS_CUSTOM_TECH_3:0 "§BPrecursor Discovery§!"
+
  
 
  #######################################
@@ -285,7 +286,7 @@
  gpm_building_mining_nanite_nexus:0 "Mining Nanite Nexus"
  gpm_building_mining_nanite_nexus_desc:0 "Storage and control centre for our mining nanites. These nanites, once released, will dig smooth large tunnels towards any otherwise unreachable mineral veins."
 
- gpm_precursor_research_center:0 "Precursor Institute"
+ gpm_precursor_research_center:0 "Precursor Institute" 
  gpm_precursor_research_center_desc:0 "Specialised research facilities to assist in researching the ancient and powerful precursor civilisations."
  gpm_building_precursor_research_center_effect:0 "\n§BCan only be build on a precursor world§!\nIf built on a §YRelic World§!:\n Research Speed (Archaeostudies): §G+50%§!\n £minor_artifacts£ Minor Artifacts from £job_researcher£ Archaeoengineers: §G+0.3§!\nIf built on an §YAncient Archaeopolis World§!:\n Research Speed (Archaeostudies): §G+100%§!\n £minor_artifacts£ Minor Artifacts from £job_researcher£ Archaeoengineers: §G+0.6§!"
  
@@ -666,106 +667,121 @@
  #######################################
  #### Modifier localisations
  #######################################
+ mod_terraforming_energy_cost_mult:0 "Terraforming £energy£ Energy Cost"
+ mod_edicts_influence_cost_mult:0 "Edict £influence£ Influence Cost"
+ mod_megastructures_alloys_cost_mult:0 "Megastructure Alloy Cost"
+ mod_ROBOT_species_trait_picks_add:1 "Robot $SPECIES_TRAIT_PICKS$"
+
+ mod_planet_structures_minerals_cost_mult:0 "Planet Infrastructure £minerals£ Mineral Cost"
+
  mod_planet_districts_minerals_cost_add:0 "Planet District £minerals£ Mineral Cost"
- mod_planet_buildings_minerals_cost_add:0 "Planet Building £minerals£ Mineral Cost"
- mod_planet_buildings_minerals_cost_mult:0 "Planet Building £minerals£ Mineral Cost"
- mod_ship_components_alloys_cost_add:0 "Ship Components £alloys£ Alloy Cost"
- mod_ship_components_alloys_cost_mult:0 "Ship Components £alloys£ Alloy Cost"
- mod_ship_upgrades_alloys_cost_mult:0 "Ship £alloys£ Alloy Upgrade Cost"
- mod_starbase_outpost_influence_cost_add:0 "Starbase Outpost £influence£ Influence Cost"
- mod_station_observer_missions_society_research_produces_mult:0 "Primitive Observation £society_research£ Society Research"
- mod_stations_energy_upkeep_mult:0 "Station £energy£ Energy Upkeep"
- mod_planet_buildings_energy_upkeep_mult:0 "Building £energy£ Energy Upkeep"
  mod_planet_districts_energy_upkeep_mult:0 "Districts £energy£ Energy Upkeep"
  mod_planet_districts_time_cost_mult:0 "Districts £time£ Buildtime"
- mod_ship_upgrades_time_cost_mult:0 "Ship Upgrade £time£ Time:"
- mod_planet_pops_food_upkeep_mult:0 "Pop £food£ Food Upkeep"
- mod_edicts_influence_cost_mult:0 "Edict £influence£ Influence Cost:"
- MOD_SHIP_ARMOR_ADD:0 "Ship £armor£ Armor Hit Points"
- MOD_SHIP_ARMOR_MULT:0 "Ship £armor£ Armor Hit Points"
- mod_pop_ethic_fanatic_spiritualist_attraction_mult:0 "Fanatic Spiritualist Ethic Attraction"
  mod_planet_districts_minerals_cost_mult: "District £minerals£ Mineral Cost"
- mod_ship_sections_alloys_cost_mult:0 "Ship Section £alloys£ Alloy Cost"
- mod_country_base_physics_research_produces_add:0 "Monthly £physics_research£ Physics Research"
- mod_country_base_society_research_produces_add:0 "Monthly £society_research£ Society Research"
- mod_country_base_engineering_research_produces_add:0 "Monthly £engineering_research£ Engineering Research"
- mod_country_base_minor_artifacts_produces_add:0 "Monthly £minor_artifacts£ Minor Artifacts"
- mod_country_base_nanites_produces_add:0 "Monthly £nanites£ Nanites"
- mod_ship_sections_alloy_cost_multi:0 "Ship Section £alloys£ Alloy Cost"
- mod_planet_refiners_exotic_gases_produces_add:0 "£exotic_gases£ Exotic Gases from £job_gas_refiner£ Refiners"
- mod_planet_chemists_volatile_motes_produces_add:0 "£volatile_motes£ Volatile Motes from £job_chemist£ Chemists"
- mod_planet_translucers_rare_crystals_produces_add:0 "£rare_crystals£ Rare Crystals from £job_translucer£ Translucers"
- mod_planet_translucers_rare_crystals_produces_mult:0 "£rare_crystals£ Rare Crystals from £job_translucer£ Translucers"
- mod_planet_jobs_specialist_rare_crystals_produces_mult:0 "£rare_crystals£ Rare Crystals from specialists"
- mod_planet_jobs_specialist_volatile_motes_produces_mult:0 "£volatile_motes£ Volatile Motes from specialists"
- mod_planet_jobs_specialist_exotic_gases_produces_mult:0 "£exotic_gases£ Exotic Gases from specialists"
- mod_ship_upgrades_cost_mult:0 "Ship Upgrade Cost"
- mod_weapon_role_anti_armor_weapon_damage_mult:0 "Anti-Armor Weapon Damage" 
- mod_weapon_role_anti_shield_weapon_damage_mult:0 "Anti-Shield Weapon Damage" 
- mod_planet_soldiers_unity_produces_add:0 "£unity£ Unity from £job_soldier£ Soldier"
- mod_starbases_energy_upkeep_mult:0 "Starbase £energy£ Energy Upkeep"
- mod_weapon_type_point_defense_weapon_fire_rate_mult:0 "Point Defence Weapon Fire Rate"
- mod_shipclass_starbase_build_speed_mult:0 "Starbase £time£ Buildspeed"
- mod_country_resource_max_energy_add:0 "Energy Storage Capacity"
- mod_job_gpm_bunker_drone_add:0 "$job_gpm_bunker_drone$ Jobs"
- mod_job_gpm_bunker_army_add:0 "$job_gpm_bunker_army$ Jobs"
- mod_job_gpm_moon_miner_add:0 "$job_gpm_moon_miner$ Jobs"
- mod_job_gpm_moon_miner_drone_add:0 "$job_gpm_moon_miner_drone$ Jobs"
- mod_job_gpm_asteroid_miner_add:0 "$job_gpm_asteroid_miner$ Jobs"
- mod_job_gpm_asteroid_miner_drone_add:0 "$job_gpm_asteroid_miner_drone$ Jobs"
- mod_job_gpm_orbital_researcher_add:0 "$job_gpm_orbital_researcher$ Jobs"
- mod_job_gpm_orbital_researcher_drone_add:0 "$job_gpm_orbital_researcher_drone$ Jobs"
- mod_job_gpm_archaeologist_add:0 "$job_gpm_archaeologist$ Jobs"
- mod_job_gpm_archaeologist_drone_add:0 "$job_gpm_archaeologist_drone$ Jobs"
- mod_job_gpm_precursor_archaeologist_add:0 "$job_gpm_precursor_archaeologist$ Jobs"
- mod_job_gpm_precursor_archaeologist_drone_add:0 "$job_gpm_precursor_archaeologist_drone$ Jobs"
- mod_job_gpm_orbital_alloy_miner_add:0 "$job_gpm_orbital_alloy_miner$ Jobs"
- mod_job_gpm_orbital_alloy_miner_drone_add:0 "$job_gpm_orbital_alloy_miner_drone$ Jobs"
- mod_job_gpm_orbital_mineral_miner_add:0 "$job_gpm_orbital_mineral_miner$ Jobs"
- mod_job_gpm_orbital_mineral_miner_drone_add:0 "$job_gpm_orbital_mineral_miner_drone$ Jobs"
- mod_job_gpm_orbital_particle_collector_add:0 "$job_gpm_orbital_particle_collector$ Jobs"
- mod_job_gpm_orbital_particle_collector_drone_add:0 "$job_gpm_orbital_particle_collector_drone$ Jobs"
- mod_job_gpm_orbital_spicer_add:0 "$job_gpm_orbital_spicer$ Jobs"
- mod_job_gpm_orbital_spicer_drone_add:0 "$job_gpm_orbital_spicer_drone$ Jobs"
- mod_job_gpm_android_entertainer_add:0 "$job_gpm_android_entertainer$ Jobs"
- mod_megastructures_alloys_cost_mult:0 "Megastructure Alloy Cost"
- mod_country_base_alloys_produces_add:0 "Monthly £alloys£ Alloys"
- mod_country_base_consumer_goods_produces_add:0 "Monthly £consumer_goods£ Consumer Goods"
- mod_job_gpm_orbital_spicer_per_pop:0 "§G+1§! $job_gpm_orbital_spicer$ Job per $VALUE$ Pops"
- mod_job_gpm_orbital_spicer_drone_per_pop:0 "§G+1§! $job_gpm_orbital_spicer_drone$ Job per $VALUE$ Pops"
- mod_planet_bureaucrats_unity_produces_add:0 "£unity£ Unity from £job_bureaucrat£ Bureaucrats"
- mod_planet_necro_apprentices_produces_mult:0 "£job_necro_apprentice£ $job_necro_apprentice_plural$ Output"
- mod_planet_merchants_produces_mult:0 "£job_merchant£ $job_merchant_plural$ Output"
- mod_planet_entertainers_produces_mult:0 "£job_entertainer£ $job_entertainer_plural$ Output"
- mod_planet_necromancers_produces_mult:0 "£job_necromancer£ $job_necromancer_plural$ Output"
- mod_planet_telepaths_produces_mult:0 "£job_telepath£ $job_telepath_plural$ Output"
- mod_planet_metallurgists_minerals_upkeep_add:0 "£job_foundry£ Metallurgists Mineral Upkeep"
- mod_planet_artisans_minerals_upkeep_add:0 "£job_artisan£ Artisan Mineral Upkeep"
- mod_station_gatherers_minerals_cost_add:1 "Mining Station Mineral Cost"
- mod_station_researchers_minerals_cost_add:1 "Research Station Mineral Cost"
- mod_planet_district_gpm_precursor_housing_build_speed_mult:1 "$district_gpm_precursor_housing$ Build Speed"
- mod_planet_district_gpm_precursor_science_build_speed_mult:1 "$district_gpm_precursor_science$ Build Speed"
- mod_planet_district_gpm_precursor_manufactorium_build_speed_mult:1 "$district_gpm_precursor_manufactorium$ Build Speed"
- mod_planet_district_gpm_precursor_power_plant_build_speed_mult:1 "$district_gpm_precursor_power_plant$ Build Speed"
- mod_ROBOT_species_trait_picks_add:1 "Robot $SPECIES_TRAIT_PICKS$"
- mod_job_criminal_per_pop:1 "§G+1§! $job_criminal$ Job per $VALUE$ Pops"
- mod_shipsize_science_influence_upkeep_add:0 "Science Ship Influence Upkeep"
- mod_shipsize_science_energy_upkeep_add:0 "Science Ship Energy Upkeep"
- mod_planet_researchers_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts from reseachers"
+
+ mod_planet_buildings_minerals_cost_add:0 "Planet Building £minerals£ Mineral Cost"
+ mod_planet_buildings_minerals_cost_mult:0 "Planet Building £minerals£ Mineral Cost"
+ mod_planet_buildings_energy_upkeep_add:0 "Buildings £energy£ Energy Upkeep"
+ mod_planet_buildings_energy_upkeep_mult:0 "Building £energy£ Energy Upkeep"
+
  mod_ships_physics_research_produces_add:0 "£physics_research£ Physics Research produced"
  mod_ships_society_research_produces_add:0 "£society_research£ Society Research produced"
  mod_ships_engineering_research_produces_add:0 "£engineering_research£ Engineering Research produced"
  mod_ships_consumer_goods_produces_add:0 "£consumer_goods£ Consumer Goods produced"
  mod_ships_alloys_produces_add:0 "£alloys£ Alloys produced"
  mod_ships_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts produced"
- mod_planet_researchers_minor_artifacts_upkeep_add:0 "£job_researcher£ Researchers £minor_artifacts£ Minor Artifacts upkeep"
+
+ mod_shipsize_science_influence_upkeep_add:0 "Science Ship £influence£ Influence Upkeep"
+ mod_shipsize_science_energy_upkeep_add:0 "Science Ship £energy£ Energy Upkeep"
+
+ mod_shipclass_starbase_build_speed_mult:0 "Starbase £time£ Buildspeed"
+
+ mod_ship_sections_alloys_cost_mult:0 "Ship Section £alloys£ Alloy Cost"
+
+ mod_ship_components_alloys_cost_add:0 "Ship Components £alloys£ Alloy Cost"
+ mod_ship_components_alloys_cost_mult:0 "Ship Components £alloys£ Alloy Cost"
+
+ MOD_SHIP_ARMOR_ADD:0 "Ship £armor£ Armor Hit Points"
+ MOD_SHIP_ARMOR_MULT:0 "Ship £armor£ Armor Hit Points"
+
+ mod_weapon_role_anti_armor_weapon_damage_mult:0 "Anti-Armor Weapon Damage" 
+ mod_weapon_role_anti_shield_weapon_damage_mult:0 "Anti-Shield Weapon Damage" 
+ mod_weapon_type_point_defense_weapon_fire_rate_mult:0 "Point Defence Weapon Fire Rate"
+
+ mod_ship_upgrades_alloys_cost_mult:0 "Ship £alloys£ Alloy Upgrade Cost"
+ mod_ship_upgrades_time_cost_mult:0 "Ship Upgrade £time£ Time:"
+ mod_ship_upgrades_cost_mult:0 "Ship Upgrade Cost"
+
+ mod_starbase_outpost_influence_cost_add:0 "Starbase Outpost £influence£ Influence Cost"
+ mod_starbases_energy_upkeep_mult:0 "Starbase £energy£ Energy Upkeep"
  mod_starbases_minor_artifacts_upkeep_add:0 "Starbase £minor_artifacts£ Minor Artifacts upkeep"
- mod_planet_metallurgists_minor_artifacts_upkeep_add:0 "£job_foundry£ Metallurgists £minor_artifacts£ Minor Artifacts upkeep"
- mod_planet_artisans_minor_artifacts_upkeep_add:0 "£job_artisan£ Artisans £minor_artifacts£ Minor Artifacts upkeep"
- mod_planet_refiners_minor_artifacts_upkeep_add:0 "£job_gas_refiner£ Refiners £minor_artifacts£ Minor Artifacts upkeep"
- mod_planet_translucers_minor_artifacts_upkeep_add:0 "£job_translucer£ Translucers £minor_artifacts£ Minor Artifacts upkeep"
- mod_planet_chemists_minor_artifacts_upkeep_add:0 "£job_chemist£ Chemists £minor_artifacts£ Minor Artifacts upkeep"
- mod_planet_pop_assemblers_minor_artifacts_upkeep_add:0 "£job_roboticist£ Roboticists £minor_artifacts£ Minor Artifacts upkeep"
+
+ mod_stations_energy_upkeep_mult:0 "Station £energy£ Energy Upkeep"
+ mod_station_observer_missions_society_research_produces_mult:0 "Primitive Observation £society_research£ Society Research"
+ mod_station_gatherers_minerals_cost_add:1 "Mining Station £minerals£ Minerals Cost"
+ mod_station_researchers_minerals_cost_add:1 "Research Station £minerals£ Minerals Cost"
+ mod_station_gatherers_food_cost_add:1 "Mining Station £food£ Food Cost"
+ mod_station_researchers_food_cost_add:1 "Research Station £food£ Food Cost"
+ 
+ mod_country_base_alloys_produces_add:0 "Monthly £alloys£ Alloys"
+ mod_country_base_consumer_goods_produces_add:0 "Monthly £consumer_goods£ Consumer Goods"
+ mod_country_base_physics_research_produces_add:0 "Monthly £physics_research£ Physics Research"
+ mod_country_base_society_research_produces_add:0 "Monthly £society_research£ Society Research"
+ mod_country_base_engineering_research_produces_add:0 "Monthly £engineering_research£ Engineering Research"
+ mod_country_base_minor_artifacts_produces_add:0 "Monthly £minor_artifacts£ Minor Artifacts"
+ mod_country_base_nanites_produces_add:0 "Monthly £nanites£ Nanites"
+ mod_country_resource_max_energy_add:0 "£energy£ Energy Storage Capacity"
+
+ mod_planet_technician_society_research_produces_add:0 "£society_research£ Society Research per $pop_group_unit$ [technician.GetIcon] [GetTechnicianPlural]"
+ mod_planet_miners_trade_produces_add:0 "£trade£ Trade per $pop_group_unit$ [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_miners_food_produces_add:0 "£food£ Food per $pop_group_unit$ [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_miners_exotic_gases_produces_add:0 "£exotic_gases£ Exotic Gases per $pop_group_unit$ [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_miners_sr_living_metal_produces_add:0 "£sr_living_metal£ Living Metal per $pop_group_unit$ [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_farmers_engineering_research_produces_add:0 "£engineering_research£ Engineering Research per $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+ mod_planet_farmers_rare_crystals_produces_add:0 "£rare_crystals£ Rare Crystals per $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+ mod_planet_farmers_trade_produces_add:0 "£trade£ Trade per $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ mod_planet_researchers_sr_living_metal_produces_add:0 "£sr_living_metal£ Living Metal per $pop_group_unit$ [researcher.GetIcon] [GetResearcherPlural]"
+ mod_planet_researchers_sr_zro_produces_add:0 "£sr_zro£ Zro per $pop_group_unit$ [researcher.GetIcon] [GetResearcherPlural]"
+ mod_planet_researchers_minor_artifacts_produces_add:0 "£minor_artifacts£ Minor Artifacts per $pop_group_unit$ [researcher.GetIcon] [GetResearcherPlural]"
+ mod_planet_researchers_minor_artifacts_upkeep_add:0 "£minor_artifacts£ Minor Artifacts Upkeep per $pop_group_unit$ [researcher.GetIcon] [GetResearcherPlural]"
+
+ mod_planet_physicists_exotic_gases_produces_add:0 "£exotic_gases£ Exotic Gases per $pop_group_unit$ [physicist.GetIcon] Physicists"
+ mod_planet_physicists_volatile_motes_produces_add:0 "£volatile_motes£ Volatile Motes per $pop_group_unit$ [physicist.GetIcon] Physicists"
+ mod_planet_physicists_rare_crystals_produces_add:0 "£rare_crystals£ Rare Crystals per $pop_group_unit$ [physicist.GetIcon] Physicists"
+ mod_planet_biologists_unity_produces_add:0 "£unity£ Unity per $pop_group_unit$ [biologist.GetIcon] Biologists"
+ mod_planet_biologists_sr_zro_produces_add:0 "£sr_zro£ Zro per $pop_group_unit$ [biologist.GetIcon] Biologists"
+ mod_planet_engineers_trade_produces_add:0 "£trade£ Trade per $pop_group_unit$ [engineer.GetIcon] [GetEngineerPlural]"
+ mod_planet_engineers_sr_dark_matter_produces_add:0 "£sr_dark_matter£ Dark Matter per $pop_group_unit$ [engineer.GetIcon] [GetEngineerPlural]"
+ mod_planet_engineers_sr_living_metal_produces_add:0 "£sr_living_metal£ Living Metal per $pop_group_unit$ [engineer.GetIcon] [GetEngineerPlural]"
+ mod_planet_engineers_nanites_produces_add:0 "£nanites£ Nanites per $pop_group_unit$ [engineer.GetIcon] [GetEngineerPlural]"
+
+ mod_planet_metallurgists_minerals_upkeep_add:0 "£minerals£ Mineral Upkeep per $pop_group_unit$ [metallurgist.GetIcon] [GetMetallurgistPlural]"
+ mod_planet_metallurgists_sr_living_metal_produces_add:0 "£sr_living_metal£ Living Metal per $pop_group_unit$ [metallurgist.GetIcon] [GetMetallurgistPlural]"
+ mod_planet_metallurgists_minor_artifacts_upkeep_add:0 "£minor_artifacts£ Minor Artifacts Upkeep per $pop_group_unit$ [metallurgist.GetIcon] [GetMetallurgistPlural]"
+ mod_planet_artisans_minerals_upkeep_add:0 "£minerals£ Mineral Upkeep per $pop_group_unit$ [artisan.GetIcon] [GetArtisanPlural]"
+ mod_planet_artisans_minor_artifacts_upkeep_add:0 "£minor_artifacts£ Minor Artifacts Upkeep per $pop_group_unit$ [artisan.GetIcon] [GetArtisanPlural]"
+ mod_planet_artisans_sr_living_metal_produces_add:0 "£sr_living_metal£ Living Metal per $pop_group_unit$ [artisan.GetIcon] [GetArtisanPlural]"
+
+ mod_planet_enforcers_trade_produces_add:0 "£trade£ Trade per $pop_group_unit$ [enforcer.GetIcon] Enforcers"
+ mod_planet_soldiers_unity_produces_add:0 "£unity£ Unity per $pop_group_unit$ [soldier.GetIcon] [GetSoldierPlural]"
+
+ mod_planet_bureaucrats_unity_produces_add:0 "£unity£ Unity per $pop_group_unit$ [bureaucrat.GetIcon] [GetBureaucratPlural]"
+ mod_planet_entertainers_produces_mult:0 "£job_entertainer£ $job_entertainer_plural$ Output"
+ mod_planet_merchants_produces_mult:0 "£job_merchant£ $job_merchant_plural$ Output"
+ mod_planet_traders_trade_produces_mult:0 "[trader.GetIcon] Traders Output"
+ mod_planet_doctors_produces_mult:0 "£job_healthcare£ Medical Worker Output" 
+ mod_planet_telepath_produces_mult:0 "£job_telepath£ $job_telepath_plural$ Output"
+ mod_planet_necromancers_produces_mult:0 "£job_necromancer£ $job_necromancer_plural$ Output"
+ mod_planet_necro_apprentices_produces_mult:0 "£job_necro_apprentice£ $job_necro_apprentice_plural$ Output"
+
+ mod_planet_jobs_slave_consumer_goods_produces_add:0 "£consumer_goods£ Consumer Goods per £job_slave_overseer£ $pop_cat_slave_plural$"
+ mod_job_criminal_per_pop:1 "§G+1§! $job_criminal$ Job per $VALUE$ Pops"
+ mod_planet_pops_organics_food_upkeep_add:0 "Organic Pops £food£ Food Upkeep"
+ mod_planet_pops_organics_minerals_upkeep_add:0 "Organic Pops £minerals£ Mineral Upkeep"
+ mod_pop_ethic_fanatic_spiritualist_attraction_mult:0 "Fanatic Spiritualist Ethic Attraction"
+ mod_pop_technician_workforce_mult:0 "[technician.GetIcon] [GetTechnicianPlural] Efficiency"
+ 
 
  #######################################
  #### Opinions
@@ -796,6 +812,24 @@
  gpm_to_boldly_go_desc:0 "Science ships will only send one away team as they survey every world.\n\n"
  gpm_long_range_scans:0 "Orbital Mapping"
  gpm_long_range_scans_desc:0 "No away teams are sent when our science ships are surveying the galaxy. A quick scan of every world we encounter is all the information we need. \n\n§RNo survey discoveries§!\n\n"
+
+ policy_gpm_economy_tweaks_policy:0 "Economic Inefficiency Game Setting"
+ policy_gpm_economy_tweaks_policy_desc:0 "§LExploring and expanding in outer space is a very inefficient endevour.\n\nThis is added by the economic tweaks game start option from Guilli's Planet Modifiers, you chose this!§!"
+
+ gpm_economy_tweaks_standard_empire:0 "Standard Civilisation"
+ gpm_economy_tweaks_standard_empire_desc:0 "§LStandard Civilisations:§!"
+
+ gpm_economy_tweaks_machine_empire:0 "Machine Civilisation"
+ gpm_economy_tweaks_machine_empire_desc:0 "§LMachine Civilisations:§!"
+
+ gpm_economy_tweaks_rogue_servitor_empire:0 "Servitor Civilisation"
+ gpm_economy_tweaks_rogue_servitor_empire_desc:0 "§LServitor Civilisations:§!"
+
+ gpm_economy_tweaks_catalytic_empire:0 "Catalystic Civilisation"
+ gpm_economy_tweaks_catalytic_empire_desc:0 "§LCatalystic Civilisations:§!"
+
+ gpm_economy_tweaks_bio_empire:0 "Biological Civilisation"
+ gpm_economy_tweaks_bio_empire_desc:0 "§LBioligical Civilisations:§!"
  
  #######################################
  #### R.E.S.
@@ -862,6 +896,13 @@
  GPM_ORBITAL_FABRICATOR_DESC:0 "An ancient mobile manufactory capable of slowly producing resources." 
  gpm_orbital_fabricator_tt:0 "Produces:  £alloys£ 2"
  
+ GPM_TARGETTING_COMPUTER_1:0 "Chrono-Refractive Matrix"
+ GPM_TARGETTING_COMPUTER_1_DESC:0 "This targeting computer runs a future predicting enigmatic chrono-algorithm allowing the ship to fire with more devastating effect at larger targets."
+
+ GPM_HANGAR_1:0 "Autonomous Maintanance Bay"
+ GPM_HANGAR_1_DESC:0 "Autonomous maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
+ 
+ 
  #######################################
  #### Starbase Buildings and Modules
  #######################################
@@ -871,26 +912,39 @@
  #######################################
  #### Start Menu
  #######################################
- gpm_start_menu.1.name:0 "Guilli's Planet Modifiers"
- gpm_start_menu.1.desc:0 "§YNEW:§!\n - Small ruined megastructures can be found\n - Precursor Archaeopolis Planet\n - New Spy Operation: §HGather Relic Intel§!\n - New Spy Operation: §HSteal Relic§!\n - And more, see the 3.4 changelog!\n\n New Small Mod: §YGuilli's Exploration and Expansion Tweaks§!. Check it out!\n\n§HTips:§!\n  §Y- Make sure to set the options you want in the§! £options_icon §HOptions§! £options_icon  §Ymenu before clicking start§!\n  §Y- Modifiers will spawn after you unpause over §H2§! to §H20§! ingame days.§!"
+
+ gpm_start_menu.1.name:0 "Guilli's Planet Modifiers and Features"
+ gpm_start_menu.1.desc:0 "Welcome to §HGuilli's Planet Modifiers and Features§!\n\n§YMake sure to set the options you want in the§! £options_icon §HOptions§! £options_icon  §Ymenu before clicking start§!\n\n§HMajor Changes:§!\n- Improved planet modifier variance at galaxy generation\n- Improved space deposits variance at galaxy generation\n- Updates to many planet modifiers\n- Various QOL improvements\n\n§RRemoved:§!\n- Precursor Archaeopolis Planet\n- Custom Modded Pop Jobs\n\n§LSee 4.0 changelog for all changes§!\n§LGame version 4.0+§!"
+
+ gpm_start_menu.1.options:0 "£options_icon  §YOptions - Features§! £options_icon"
+ gpm_start_menu.1.optionsTT:0 "Set various §Yfeature options§! for Guilli's Planet Modifiers mod. You can disable or enable various features of the mod here.\n\n§YMake sure to set any options you want before starting the game!§!"
+
+ gpm_start_menu.1.options2:0 "£options_icon  §YOptions - Other§! £options_icon"
+ gpm_start_menu.1.options2TT:0 "Set various §Yquality of life options§! for Guilli's Planet Modifiers mod. You can disable or enable various QOL features of the mod here.\n\n§YMake sure to set any options you want before starting the game!§!"
+
+ gpm_start_menu.2.back:0 "§HBack to main menu§!"
+ gpm_start_menu.2.backTT:0 "Return to the main menu to start."
 
  # §HThe mod might takes a few moments after unpausing to spawn everything during which the game may act slow or freeze for a second.§!
 
  gpm_start_menu.1.START:0 "Start the game"
  gpm_start_menu.1.STARTTT:0 "This will start the game. Any settings you selected will be applied and cannot be undone without starting a new game!"
  
- gpm_start_menu.1.max_one:0 "§YNumber of Modifiers:§! Max One"
- gpm_start_menu.1.max_oneTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§W 0-1 per planet§! §G(currently selected)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!"
-
  # number of modifiers option
+ gpm_start_menu.1.max_one:0 "§YNumber of Modifiers:§! Max One"
+ gpm_start_menu.1.max_oneTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§W 0-1 per planet§! §G(currently selected)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!"
+
  gpm_start_menu.1.low:0 "§YNumber of Modifiers:§! Low"
- gpm_start_menu.1.lowTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§W 0-2 per planet§! §G(currently selected)§!\n§L 0-3 per planet (default)§!\n§L 0-4 per planet (high)§!"
+ gpm_start_menu.1.lowTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§W 0-2 per planet§! §G(currently selected)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!"
 
  gpm_start_menu.1.normal:0 "§YNumber of Modifiers:§! Default (§GRecommended§!)"
- gpm_start_menu.1.normalTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§W 0-3 per planet§! §G(currently selected)§!\n§L 1-3 per planet (high)§!"
+ gpm_start_menu.1.normalTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§W 0-3 per planet§! §G(currently selected)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!"
 
  gpm_start_menu.1.high:0 "§YNumber of Modifiers:§! High"
- gpm_start_menu.1.highTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§W 1-3 per planet§! §G(currently selected)§!"
+ gpm_start_menu.1.highTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§W 1-3 per planet§! §G(currently selected)§!\n§L 2-3 per planet (extra high)§!"
+
+ gpm_start_menu.1.extrahigh:0 "§YNumber of Modifiers:§! Extra High"
+ gpm_start_menu.1.extrahighTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§W 2-3 per planet§! §G(currently selected)§!\n\n§LIncrease above high option applies only for habitable worlds and for natural planet modifiers.§!"
  
  # age of galaxy option
  
@@ -902,6 +956,8 @@
  
  gpm_start_menu.1.old_galaxy_age:0 "§YGalaxy Age:§! Old"
  gpm_start_menu.1.old_galaxy_ageTT:0 "§HClick to Cycle§! through the settings that determine the age of the galaxy. This determines the spawn chance of planet modifiers. An old galaxy will have more ruins and signs of previous civilisations.\n-----§HGalaxy Age:§!:-----\n§L Young§! \n§L Normal (default)§!\n§W Old§G(currently selected)§!\n\n§HEffects:§!\nPrecursor Planet Modifiers: §G+30%§! spawn chance\nNormal non-natural Planet Modifiers: §G+30%§! spawn chance\nNormal natural Planet Modifiers: §R-30%§! spawn chance"
+
+ # scaling option
 
  gpm_start_menu.1.default_scaling:0 "§YScaling:§! Planet Size"
  gpm_start_menu.1.default_scalingTT:0 "§HClick to Cycle§! through the settings that determine how planet modifiers scale.\n-----§HScaling:§!:-----\n§W On Planet Size§! §G(currently selected)§!\n§L Random§!\n§L Random+§!\n§L Off§!"
@@ -915,51 +971,84 @@
  gpm_start_menu.1.scaling_off:0 "§YScaling:§! Off"
  gpm_start_menu.1.scaling_offTT:0 "§HClick to Cycle§! through the settings that determine how planet modifiers scale.\n-----§HScaling:§!:-----\n§L On Planet Size§!\n§L Random§!\n§L Random+§!\n§R Off§! §G(currently selected)§!"
  
- # various options
- gpm_start_menu.1.options:0 "£options_icon  §YOptions§! £options_icon"
- gpm_start_menu.1.optionsTT:0 "Set various options for Guilli's Planet Modifiers mod. You can disable or enable various features of the mod here.\n\n§YMake sure to set any options you want before choosing the amount of modifiers!§!"
-
- gpm_start_menu.2.enabled_homeworld:0 "£options_icon  §GEnable Capital Modifiers§!"
+ # various options - features
+ gpm_start_menu.2.enabled_homeworld:0 "£options_icon  §YCapital Modifiers:§! §Roff§!"
  gpm_start_menu.2.enabled_homeworldTT:0 "§HClick this to enable Capital Modifiers§!\nThis will spawn §Hrandom§! planet modifiers on your capital planet.\n\n§RWARNING: This can be challenging!§!"
- gpm_start_menu.2.disable_homeworld:0 "£options_icon  §RDisable Capital Modifiers§!"
+ gpm_start_menu.2.disable_homeworld:0 "£options_icon  §YCapital Modifiers:§! §Gon§!"
  gpm_start_menu.2.disable_homeworldTT:0 "§HClick this to disable Capital Modifiers§!\nThis will prevent modifiers from spawning on your capital planet."
 
- gpm_start_menu.2.disable_precursor:1 "£options_icon  §RDisable Precursor Modifiers and Relics§!"
- gpm_start_menu.2.enable_precursor:1 "£options_icon  §GEnable Precursor Modifiers and Relics§!"
- gpm_start_menu.2.disable_fallen_empire:0 "£options_icon  §RDisable Fallen Empire Modifiers§!"
- gpm_start_menu.2.enable_fallen_empire:0 "£options_icon  §GEnable Fallen Empire Modifiers§!"
- gpm_start_menu.2.disable_wonders:0 "£options_icon  §RDisable Planetary Wonders§!"
- gpm_start_menu.2.enable_wonders:0 "£options_icon  §GEnable Planetary Wonders§!"
- gpm_start_menu.2.disable_planetary_rings:0 "£options_icon  §RDisable Planetary Rings§!"
- gpm_start_menu.2.enable_planetary_rings:0 "£options_icon  §GEnable Planetary Rings§!"
-
+ gpm_start_menu.2.disable_precursor:1 "£options_icon  §YPrecursor Modifiers and Relics:§! §Gon§!"
  gpm_start_menu.2.disable_precursorTT:1 "§HClick this to disable Precursor Modifiers and Relics§!\nThis will prevent precursor modifiers and Relics from spawning in the galaxy."
+ gpm_start_menu.2.enable_precursor:1 "£options_icon  §YPrecursor Modifiers and Relics:§! §Roff§!"
  gpm_start_menu.2.enable_precursorTT:1 "§HClick this to enable Precursor Modifiers and Relics§!"
+
+ gpm_start_menu.2.disable_fallen_empire:0 "£options_icon  §YFallen Empire Modifiers:§! §Gon§!"
  gpm_start_menu.2.disable_fallen_empireTT:0 "§HClick this to disable Fallen Empire Modifiers§!\nThis will prevent fallen empire modifiers from spawning in the galaxy."
+ gpm_start_menu.2.enable_fallen_empire:0 "£options_icon  §YFallen Empire Modifiers:§! §Roff§!"
  gpm_start_menu.2.enable_fallen_empireTT:0 "§HClick this to enable Fallen Empire Modifiers§!"
+
+ gpm_start_menu.2.disable_wonders:0 "£options_icon  §YPlanetary Wonders:§! §Gon§!"
  gpm_start_menu.2.disable_wondersTT:0 "§HClick this to disable Planetary Wonders§!\nThis will prevent planetary wonder modifiers and tileblockers from spawning in the galaxy."
+ gpm_start_menu.2.enable_wonders:0 "£options_icon  §YPlanetary Wonders:§! §Roff§!"
  gpm_start_menu.2.enable_wondersTT:0 "§HClick this to enable Planetary Wonders§!"
+
+ gpm_start_menu.2.disable_planetary_rings:0 "£options_icon  §YPlanetary Rings:§! §Gon§!"
  gpm_start_menu.2.disable_planetary_ringsTT:0 "§HClick this to disable Planetary Rings§!\nThis will prevent planetary rings and their rich resources from spawning in the galaxy."
+ gpm_start_menu.2.enable_planetary_rings:0 "£options_icon  §YPlanetary Rings:§! §Roff§!"
  gpm_start_menu.2.enable_planetary_ringsTT:0 "§HClick this to enable Planetary Rings§!"
 
- gpm_start_menu.2.back:0 "§YBack to main menu§!"
- gpm_start_menu.2.backTT:0 "Return to the main menu to start."
- 
- gpm_start_menu.2.disable_relic_AI_heists:1 "£options_icon  §RDisable AI Relic Heists§"
+ gpm_start_menu.2.disable_relic_AI_heists:1 "£options_icon  §YAI Relic Heists:§! §Gon§!"
  gpm_start_menu.2.disable_relic_AI_heistsTT:1 "§HClick this to disable Steal Relic spy operations for AI§!\nThis will prevent the AI from using §YSteal Relic§! Spy Operations on players."
- gpm_start_menu.2.enabled_relic_AI_heists:1 "£options_icon  §GEnable AI Relic Heists§!"
+ gpm_start_menu.2.enabled_relic_AI_heists:1 "£options_icon  §YAI Relic Heists:§! §Roff§!"
  gpm_start_menu.2.enable_relic_AI_heistsTT:1 "§HClick this to enable Steal Relic spy operations for AI§!\nThis will allow the AI to use §YSteal Relic§! Spy Operations on players."
 
- gpm_start_menu.2.enabled_mp_fun:1 "£options_icon  §GEnable Increased Presursor 'drops'§!"
- gpm_start_menu.2.enabled_mp_funTT:1 "§HClick this to increase the chance of precursor dig sites and increase their special rewards§!\nGreatly increases the chance of precursor dig sites appearing during the game.\nGreatly increases the chance precursor dig sites give special or unique rewards such as relics, ships, components,..\n\n§TAlso works in single player!§!"
- gpm_start_menu.2.disable_mp_fun:1 "£options_icon  §RDisable Increased Presursor 'drops'§!"
- gpm_start_menu.2.disable_mp_funTT:1 "§HClick this to reset the chance of precursor dig sites and reset their special rewards§!\nResets the chance of precursor dig sites appearing during the game to their default values.\nResets the chance precursor digsites give special rewards to their default values"
-
- gpm_start_menu.2.enabled_mini_structures:0 "£options_icon  §GEnable Mini Megastructures§!"
+ gpm_start_menu.2.enabled_mini_structures:0 "£options_icon  §YMini Megastructures:§! §Roff§!"
  gpm_start_menu.2.enable_mini_structuresTT:0 "§HClick this to allow Mini Megastructures to spawn§!\nMini megastructures will spawn randomly across the galaxy."
- gpm_start_menu.2.disable_mini_structures:0 "£options_icon  §RDisable Mini Megastructures§!"
+ gpm_start_menu.2.disable_mini_structures:0 "£options_icon  §YMini Megastructures:§! §Gon§!"
  gpm_start_menu.2.disable_mini_structuresTT:0 "§HClick this to forbid Mini Megastructures to spawn§!\nMini megastructures will §Rnot§! spawn randomly across the galaxy."
  
+ # various options - QOL
+
+ gpm_start_menu.3.disable_coloured_names:0 "£options_icon §YColoured Planet Names:§! §Gon§!"
+ gpm_start_menu.3.disable_coloured_namesTT:0 "§HClick this to disable planet names from changing colour.§!\nThis will prevent galaxy generation and events from changing precursor world names to blue, wondrous world names to orange and infested world names to red."
+ gpm_start_menu.3.enable_coloured_names:0 "£options_icon §YColoured Planet Names:§! §Roff§!"
+ gpm_start_menu.3.enable_coloured_namesTT:0 "§HClick this to anable colour for planet names§!\nThis will enable galaxy generation and events to change the colour of precursor world names to blue, wondrous world names to orange and infested world names to red."
+
+ gpm_start_menu.3.disable_arachnophobia_mode:0 "£options_icon §YArachnophobia Mode:§! §Roff§!"
+ gpm_start_menu.3.disable_arachnophobia_modeTT:0 "§HClick this to enable arachnophobia mode.§!\nThis will prevent all arachnid like planet modifiers, deposits, features and events from appearing."
+ gpm_start_menu.3.enable_arachnophobia_mode:0 "£options_icon §YArachnophobia Mode:§! §Gon§!"
+ gpm_start_menu.3.enable_arachnophobia_modeTT:0 "§HClick this to disable arachnophobia mode.§!\nThis will enable the spawning of all arachnid like planet modifiers, deposits, features and events."
+ 
+ gpm_start_menu.3.enabled_mp_fun:1 "£options_icon  §YIncreased Presursor 'drops':§! §Roff§!"
+ gpm_start_menu.3.enabled_mp_funTT:1 "§HClick this to increase the chance of precursor dig sites and increase their special rewards§!\nGreatly increases the chance of precursor dig sites appearing during the game.\nGreatly increases the chance precursor dig sites give special or unique rewards such as relics, ships, components,.."
+ gpm_start_menu.3.disable_mp_fun:1 "£options_icon  §YIncreased Presursor 'drops':§! §Gon§!"
+ gpm_start_menu.3.disable_mp_funTT:1 "§HClick this to reset the chance of precursor dig sites and reset their special rewards§!\nResets the chance of precursor dig sites appearing during the game to their default values.\nResets the chance precursor digsites give special rewards to their default values"
+
+ gpm_start_menu.3.econ_tweak_off:0 "£options_icon  §YEconomy Tweaks:§! §Roff§!"
+ gpm_start_menu.3.econ_tweak_offTT:0 "§HClick to turn§! §GON§!\n\nAdds a few economy tweaks to balance the extra resource deposits and planet modifiers along with the base game Once the base game has been better balenced this will be reviewd or removed.\n\n§E - Planet Building £minerals£ §YMineral§! Cost increased by §R400§!§!\n§E - Buildings £energy£ §YEnergy§! Upkeep increased by §R1§!§!\n§E - Mining and Research Station £minerals£ §YMinerals§! increased by §R100§!§!\n§E - Mettalurgist and Artisans £minerals£ §YMineral§! Upkeep increased by §R4§!§!\n      §ECataclystic Empires: §R+4§! £food£ §YFood§! instead of §R+4§! £minerals£ §YMinerals§!§!\n§E - Organic Pops £food£ §YFood§! Upkeep increased by §R1§!§!\n      §EExcept for non-Rogue Servitor Machine Empires§!\n\n§LThese settings will be added as an unchangable policy.§!\n§LHighy recommended until the base game economy gets a balance update.§!"
+ gpm_start_menu.3.econ_tweak_on:0 "£options_icon  §YEconomy Tweaks:§! §Gon§!"
+ gpm_start_menu.3.econ_tweak_onTT:0 "§HClick to turn§! §ROFF§!\n\nAdds a few economy tweaks to balance the extra resource deposits and planet modifiers along with the base game Once the base game has been better balenced this will be reviewd or removed.\n\n§E - Planet Building £minerals£ §YMineral§! Cost increased by §R400§!§!\n§E - Buildings £energy£ §YEnergy§! Upkeep increased by §R1§!§!\n§E - Mining and Research Station £minerals£ §YMinerals§! increased by §R100§!§!\n§E - Mettalurgist and Artisans £minerals£ §YMineral§! Upkeep increased by §R4§!§!\n      §ECataclystic Empires: §R+4§! £food£ §YFood§! instead of §R+4§! £minerals£ §YMinerals§!§!\n§E - Organic Pops £food£ §YFood§! Upkeep increased by §R1§!§!\n      §EExcept for non-Rogue Servitor Machine Empires§!\n\n§LThese settings will be added as an unchangable policy.§!\n§LHighy recommended until the base game economy gets a balance update.§!"
+
+ # deposit amounts
+ gpm_start_menu.3.deposits_gal_gen_none:0 "§YSpace Deposits:§! Vanilla"
+ gpm_start_menu.3.deposits_gal_gen_noneTT:0 "§HClick to Cycle§! through the settings that determine the amount of §Yspace deposits§! at galaxy generation.\n\n-----§HSpace Deposits§!:-----\n§W Vanilla§! §G(currently selected)§!\n§L 100%§!\n§L 50%§!\n§L 25%§!\n\n§v25% is probably closer to the base game.§!" 
+
+ gpm_start_menu.3.deposits_gal_gen_default:0 "§YSpace Deposits:§! 100%"
+ gpm_start_menu.3.deposits_gal_gen_defaultTT:0 "§HClick to Cycle§! through the settings that determine the amount of §Yspace deposits§! at galaxy generation, and their overall size when added by survey events.\n\n-----§HSpace Deposits§!:-----\n§L Vanilla%§!\n§W 100%§! §G(currently selected)§!\n§L 50%§!\n§L 25%§!\n\n§v25% is probably closer to the base game.§!"
+
+ gpm_start_menu.3.deposits_gal_gen_half:0 "§YSpace Deposits:§! 50%"
+ gpm_start_menu.3.deposits_gal_gen_halfTT:0 "§HClick to Cycle§! through the settings that determine the amount of §Yspace deposits§! at galaxy generation, and their overall size when added by survey events.\n\n-----§HSpace Deposits:§!:-----\n§L Vanilla%§!\n§L 100% (default)§!\n§W 50%§! §G(currently selected)§!\n§L 25%§!\n\n§v25% is probably closer to the base game.§!"
+ 
+ gpm_start_menu.3.deposits_gal_gen_quarter:0 "§YSpace Deposits:§! 25%"
+ gpm_start_menu.3.deposits_gal_gen_quarterTT:0 "§HClick to Cycle§! through the settings that determine the amount of §Yspace deposits§! at galaxy generation, and their overall size when added by survey events.\n\n-----§HSpace Deposits:§!:-----\n§L Vanilla%§!\n§L 100% (default)§!\n§L 25%§!\n§W 25%§! §G(currently selected)§!\n\n§v25% is probably closer to the base game.§!"
+ 
+ gpm_start_menu.2.back:0 "§HBack to main menu§!"
+ gpm_start_menu.2.backTT:0 "Return to the main menu to start."
+
+ gpm_start_menu.2.back:0 "§HBack to main menu§!"
+ gpm_start_menu.2.backTT:0 "Return to the main menu to start."
+
+
  #######################################
  #### Techologies
  #######################################
@@ -1326,6 +1415,13 @@
  tech_gpm_station_researchers_build_cost:1 "Modular Research Sections"
  tech_gpm_station_researchers_build_cost_desc:1 "Pre-designed specialised research sections greatly speeds up our ability to observe the universe."
 
+ tech_gpm_crystalis_targeting_matrix_1:0 "Chrono-Refractive Matrix"
+ tech_gpm_crystalis_targeting_matrix_1_desc:0 "Improves ship accuracy on larger targets by predicting the effects of fire in the immediate future using an enigmatic chrono-algorithm.\n\n"
+ 
+ tech_gpm_hangar_1:0 "Autonomous Maintanance Bay"
+ tech_gpm_hangar_1_desc:0 "$GPM_HANGAR_1_DESC$\n"
+ 
+ 
  #######################################
  #### Traits
  #######################################
@@ -1370,7 +1466,7 @@
 
  gpm_leader_trait_collector:0 "Collector of Artifacts"
  gpm_leader_trait_collector_desc:0 "This leader has a habit of staying behind collecting anything worthwhile."
- gpm_leader_trait_collectorTT:0 "Chance of finding £minor_artifacts£ §YMinor Artifacts§! or §YAncient Relics§!: §G+20%§!\nArchaeology Excavation Speed: §R-20%§!"
+ gpm_leader_trait_collectorTT:0 "Chance of finding £minor_artifacts£ §YMinor Artifacts§! or §YAncient Relics§!: §G+20%§!"
 
 
  #######################################
@@ -1493,7 +1589,6 @@
  war_goal_wg_gpm_r_continuum_desc:0 "War is waged to take the $r_continuum$"
  war_goal_wg_gpm_r_eternal_throne:0 "Take Relic"
  war_goal_wg_gpm_r_eternal_throne_desc:0 "War is waged to take the $r_eternal_throne$"
- 
  
  #######################################
  #### war Names

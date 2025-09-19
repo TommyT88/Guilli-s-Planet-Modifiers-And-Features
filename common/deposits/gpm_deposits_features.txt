@@ -10,29 +10,8 @@ gpm_d_ruined_battlefield = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_biologists_society_research_produces_add = 1
 	}
 
 	# weight 0: event added
@@ -46,15 +25,13 @@ gpm_d_spaceship_graveyard = {
 	category = deposit_cat_minerals
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -73,7 +50,7 @@ gpm_d_android_pleasure_palace = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_gpm_android_entertainer_add = 2
+			biological_pop_happiness = 0.2
 		}
 	}
 	
@@ -83,7 +60,7 @@ gpm_d_android_pleasure_palace = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 2
+			BIOLOGICAL_logistic_growth_mult = 1
 		}
 	}
 	
@@ -93,7 +70,7 @@ gpm_d_android_pleasure_palace = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {	
-			planet_pop_assembly_mult = 0.05
+			planet_pop_assembly_add = 1
 		}
 	}
 
@@ -108,15 +85,13 @@ gpm_d_unusual_formations = {
 	category = deposit_cat_minerals
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -130,15 +105,13 @@ gpm_d_ice_flora = {
 	category = deposit_cat_food
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 
 	# weight 0: event added
@@ -152,15 +125,13 @@ gpm_d_planetwide_forest = {
 	category = deposit_cat_food
 
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -174,15 +145,13 @@ gpm_d_dense_forests = {
 	category = deposit_cat_food
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 
 	# weight 0: event added
@@ -196,15 +165,13 @@ gpm_d_proto_forests = {
 	category = deposit_cat_food
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 
 	# weight 0: event added
@@ -224,29 +191,8 @@ gpm_d_temple_of_the_ancient_one = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_biologists_society_research_produces_add = 1
 	}
 
 	# weight 0: event added
@@ -274,15 +220,13 @@ gpm_d_dunes = {
 	category = deposit_cat_energy
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_generator_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -296,15 +240,13 @@ gpm_d_mushroom_forest = {
 	category = deposit_cat_food
 
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add = 4
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 4
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 1
 	}
 
 	# weight 0: event added
@@ -318,15 +260,13 @@ gpm_d_floating_rocks = {
 	category = deposit_cat_minerals
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -340,15 +280,13 @@ gpm_d_oasis = {
 	category = deposit_cat_food
 
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -368,29 +306,8 @@ gpm_d_ancient_temple = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 1
 	}
 
 	# weight 0: event added
@@ -404,16 +321,14 @@ gpm_d_small_wildlife = {
 	
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 2
+	planet_modifier = {
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -427,16 +342,14 @@ gpm_d_massive_wildlife = {
 	
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 3
+	planet_modifier = {
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -450,16 +363,14 @@ gpm_d_super_volcano = {
 	
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 4
+	planet_modifier = {
+		district_mining_max_add = 4
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 4
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 1
 	}
 	
 	# weight 0: event added
@@ -473,16 +384,14 @@ gpm_d_obsidian_fields = {
 	
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 3
+planet_modifier = {
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -496,16 +405,14 @@ gpm_d_magnetic_mountains = {
 	
 	category = deposit_cat_energy
 	
-	planet_modifier = { 
-		district_generator_max = 5
+	planet_modifier = {
+		district_generator_max_add = 5
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 5
-		mult = value:district_amount_mastery_of_nature
+		district_generator_max_add = 1.25
 	}
 	
 	# weight 0: event added
@@ -519,16 +426,14 @@ gpm_d_magnetic_fields = {
 	
 	category = deposit_cat_energy
 	
-	planet_modifier = { 
-		district_generator_max = 3
+	planet_modifier = {
+		district_generator_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_generator_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -542,16 +447,14 @@ gpm_d_rich_crater = {
 	
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 3
+	planet_modifier = {
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -565,16 +468,14 @@ gpm_d_surface_mineral_veins = {
 	
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 4
+	planet_modifier = {
+		district_mining_max_add = 4
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 4
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 1
 	}
 	
 	# weight 0: event added
@@ -588,16 +489,14 @@ gpm_d_dense_metal_veins = {
 	
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 5
+	planet_modifier = {
+		district_mining_max_add = 5
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 5
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 1.25
 	}
 	
 	# weight 0: event added
@@ -611,16 +510,14 @@ gpm_d_iron_mountain = {
 	
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 5
+	planet_modifier = {
+		district_mining_max_add = 5
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 5
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 1.25
 	}
 	
 	# weight 0: event added
@@ -665,16 +562,14 @@ gpm_d_carnivorous_jungle = {
 	category = deposit_cat_food
 	
 	planet_modifier = { 
-		district_farming_max = 2
-		pop_growth_speed = -0.05
+		district_farming_max_add = 2
+		BIOLOGICAL_logistic_growth_mult = -0.05
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -689,16 +584,14 @@ gpm_d_carnivorous_forest = {
 	category = deposit_cat_food
 	
 	planet_modifier = { 
-		district_farming_max = 2
-		pop_growth_speed = -0.04
+		district_farming_max_add = 2
+		BIOLOGICAL_logistic_growth_mult = -0.04
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -713,16 +606,14 @@ gpm_d_carnivorous_kelp = {
 	category = deposit_cat_food
 	
 	planet_modifier = { 
-		district_farming_max = 2
-		pop_growth_speed = -0.02
+		district_farming_max_add = 2
+		BIOLOGICAL_logistic_growth_mult = -0.02
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -737,7 +628,7 @@ gpm_d_magma_ocean = {
 	category = deposit_cat_rare
 	
 	planet_modifier = { 
-		building_gas_extractors_max = 1
+		planet_miners_exotic_gases_produces_add = 0.1
 	}
 	
 	# weight 0: event added
@@ -752,7 +643,7 @@ gpm_d_toxic_vent = {
 	category = deposit_cat_rare
 	
 	planet_modifier = { 
-		building_gas_extractors_max = 1
+		planet_miners_exotic_gases_produces_add = 0.1
 	}
 	
 	# weight 0: event added
@@ -768,15 +659,13 @@ gpm_d_colossal_subterranean_cavern = {
 	
 	planet_modifier = { 
 		planet_max_districts_add = 2
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -790,16 +679,14 @@ gpm_d_titanic_hunting_ground = {
 	
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 3
+	planet_modifier = {
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 
 	# weight 0: event added
@@ -814,7 +701,7 @@ gpm_d_unnatural_crystals = {
 	category = deposit_cat_rare
 	
 	planet_modifier = { 
-		building_crystal_mines_max = 1
+		planet_miners_rare_crystals_produces_add = 0.1
 	}
 
 	# weight 0: event added
@@ -835,29 +722,8 @@ gpm_d_ancient_battlefield = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_biologists_society_research_produces_add = 1
 	}
 
 	
@@ -879,29 +745,8 @@ gpm_d_buried_remains = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 1
 	}
 	
 	# weight 0: event added
@@ -988,7 +833,7 @@ gpm_d_crystal_hills = {
 	category = deposit_cat_rare
 	
 	planet_modifier = { 
-		building_crystal_mines_max = 1
+		planet_miners_rare_crystals_produces_add = 0.1
 	}
 	
 	# weight 0: event added
@@ -1002,16 +847,14 @@ gpm_d_colossal_fish = {
 
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 3
+	planet_modifier = {
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1027,15 +870,13 @@ gpm_d_sprawling_archipelago = {
 	
 	planet_modifier = { 
 		planet_max_districts_add = 1
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -1050,7 +891,7 @@ gpm_d_spice_fields = {
 	category = deposit_cat_rare
 	
 	planet_modifier = { 
-		building_mote_harvesters_max = 1
+		planet_miners_volatile_motes_produces_add = 0.1
 	}
 	
 	# weight 0: event added
@@ -1082,16 +923,14 @@ gpm_d_garbage_patch = {
 
 	category = deposit_cat_minerals
 	
-	planet_modifier = { 
-		district_mining_max = 3
+	planet_modifier = {
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1106,17 +945,14 @@ gpm_d_industrial_ruins= {
 	category = deposit_cat_energy
 	
 	planet_modifier = { 
-		district_generator_max = 3
-		district_mining_max = 2
+		district_generator_max_add = 3
+		district_mining_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 3
-		district_mining_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -1130,16 +966,14 @@ gpm_d_radioactive_dump = {
 
 	category = deposit_cat_energy
 	
-	planet_modifier = { 
-		district_generator_max = 5
+	planet_modifier = {
+		district_generator_max_add = 5
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 5
-		mult = value:district_amount_mastery_of_nature
+		district_generator_max_add = 1.25
 	}
 	
 	# weight 0: event added
@@ -1160,16 +994,14 @@ gpm_d_ice_flower_field = {
 		}
 	}
 	
-	planet_modifier = { 
-		district_farming_max = 2
+	planet_modifier = {
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -1190,16 +1022,14 @@ gpm_d_white_forest = {
 		}
 	}
 	
-	planet_modifier = { 
-		district_farming_max = 2
+	planet_modifier = {
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -1213,16 +1043,14 @@ gpm_d_strange_ice_river = {
 
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 2
+	planet_modifier = {
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -1236,16 +1064,14 @@ gpm_d_massive_ray_school = {
 
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 3
+	planet_modifier = {
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1283,29 +1109,8 @@ gpm_d_sprawling_prestine_ruins = {
 		planet_max_districts_add = 2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gpm_archaeologist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				OR = {
-					is_hive_empire = yes
-					is_machine_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_gpm_archaeologist_drone_add = 1
-		}
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 1
 	}
 	
 	# weight 0: event added
@@ -1352,16 +1157,14 @@ gpm_d_grand_reef = {
 
 	category = deposit_cat_food
 	
-	planet_modifier = { 
-		district_farming_max = 3
+	planet_modifier = {
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1376,15 +1179,13 @@ gpm_d_glistening_lake = {
 	category = deposit_cat_food
 	
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.5
 	}
 	
 	# weight 0: event added
@@ -1399,15 +1200,13 @@ gpm_d_fossilized_egg_sacks = {
 	category = deposit_cat_minerals
 	
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1422,15 +1221,13 @@ gpm_d_fossilized_structures = {
 	category = deposit_cat_minerals
 	
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1445,15 +1242,13 @@ gpm_d_fossilized_creep = {
 	category = deposit_cat_minerals
 	
 	planet_modifier = {
-		district_mining_max = 5
+		district_mining_max_add = 5
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 5
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 1.25
 	}
 	
 	# weight 0: event added
@@ -1468,15 +1263,13 @@ gpm_d_giant_skeleton = {
 	category = deposit_cat_minerals
 	
 	planet_modifier = {
-		district_mining_max = 3
-	}	
-	
+		district_mining_max_add = 3
+	}
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1491,15 +1284,13 @@ gpm_d_resonating_ice = {
 	category = deposit_cat_energy
 	
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_generator_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1532,15 +1323,13 @@ gpm_d_fertile_field = {
 	category = deposit_cat_food
 	
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 0.75
 	}
 	
 	# weight 0: event added
@@ -1588,15 +1377,13 @@ gpm_d_colossal_coral_life = {
 	category = deposit_cat_food
 	
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add = 4
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_farming_max = 4
-		mult = value:district_amount_mastery_of_nature
+		district_farming_max_add = 1
 	}
 	
 	# weight 0: event added
@@ -1611,15 +1398,13 @@ gpm_d_salt_flats = {
 	category = deposit_cat_energy
 	
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_generator_max = 4
-		mult = value:district_amount_mastery_of_nature
+		district_generator_max_add = 1
 	}
 	
 	# weight 0: event added
@@ -1635,7 +1420,7 @@ gpm_d_floating_islands_housing = {
 	
 	planet_modifier = {
 		planet_non_artificial_max_districts_add = 4
-		planet_housing_add = 40
+		planet_housing_add = 4000
 	}
 	
 	# weight 0: event added
@@ -1650,7 +1435,7 @@ gpm_d_restored_infrastructure = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_housing_add = 8
+		planet_housing_add = 800
 	}
 	
 	# weight 0: event added
@@ -1822,7 +1607,7 @@ gpm_d_relic_post_apocalyptic_housing = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_housing_add = 12
+		planet_housing_add = 1200
 	}
 	
 	# weight 0: event added
@@ -1856,16 +1641,14 @@ gpm_d_empty_nest = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_mining_max = 2
-		building_crystal_mines_max = 1
+		district_mining_max_add = 2
+		planet_miners_volatile_motes_produces_add = 0.1
 	}
-	
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			has_modifier = mastery_of_nature
 		}
-		district_mining_max = 2
-		mult = value:district_amount_mastery_of_nature
+		district_mining_max_add = 0.5
 	}
 	
 	# weight 0: event added

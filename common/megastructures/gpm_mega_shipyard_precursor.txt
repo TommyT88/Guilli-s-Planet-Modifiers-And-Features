@@ -10,6 +10,18 @@ gpm_mega_shipyard_ruined_precursor = {
 	entity_offset = { x = -27 y = -37 }
 	upgrade_from = {
 	}
+	resources = {
+		category = megastructures
+		produces = {
+			unity = 10
+		}
+		produces = {
+			trigger = { 
+				from = { has_ancrel = yes }
+			}
+			minor_artifacts = 1
+		}
+	}
 
 	potential = {
 		always = no
@@ -29,17 +41,7 @@ gpm_mega_shipyard_restored_precursor = {
 	resources = {
 		category = megastructures
 		cost = {
-			trigger = {
-				from = { has_ancrel = no }
-			}
-			alloys = 5000
-		}
-		cost = {
-			trigger = {
-				from = { has_ancrel = yes }
-			}
-			alloys = 5000
-			minor_artifacts = 2000
+			alloys = 7500
 		}
 
 		upkeep = {
@@ -59,16 +61,16 @@ gpm_mega_shipyard_restored_precursor = {
 	
 	possible = {
 		from = { has_technology = tech_mega_engineering }
-		OR = { 
-			has_ancrel = no
-			AND = {
-				from = {
-					has_ancrel = yes
-					resource_stockpile_compare = { resource = minor_artifacts value >= 2000 }
-				}
-			}
-		}
-		from = { resource_stockpile_compare = { resource = alloys value >= 5000 } }
+		# OR = { 
+			# has_ancrel = no
+			# AND = {
+				# from = {
+					# has_ancrel = yes
+					# resource_stockpile_compare = { resource = minor_artifacts value >= 2000 }
+				# }
+			# }
+		# }
+		# from = { resource_stockpile_compare = { resource = alloys value >= 5000 } }
 	}
 	
 	ship_modifier = {
@@ -80,7 +82,7 @@ gpm_mega_shipyard_restored_precursor = {
 	}
 
 	country_modifier = {
-		starbase_shipyard_build_cost_mult = -0.05
+		starbase_shipyard_build_cost_mult = -0.10
 	}
 
 	on_build_start = {

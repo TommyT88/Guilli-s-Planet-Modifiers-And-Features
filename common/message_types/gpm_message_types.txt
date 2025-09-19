@@ -37,7 +37,7 @@ message_type = {
 	name = "GPM_MESSAGE_VALUABLE_WORLD_TITLE"
 	sound = "discovery"
 	ping = "ping_notification_green"
-	# auto_opens = none
+	default_toast = yes
 }
 # Wondrous World Discovered
 message_type = {
@@ -48,7 +48,7 @@ message_type = {
 	name = "GPM_MESSAGE_WONDROUS_WORLD_TITLE"
 	sound = "discovery"
 	ping = "ping_notification_green"
-	# auto_opens = none
+	default_toast = yes
 }
 
 ## Mini Megastructures ##
@@ -61,7 +61,7 @@ message_type = {
 	name = "GPM_MESSAGE_MINIMEGA_REFINERY_COMPLETE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-	auto_opens = player
+	default_toast = yes
 }
 # Mini megastructure complete: miningg facility
 message_type = {
@@ -72,7 +72,7 @@ message_type = {
 	name = "GPM_MESSAGE_MINIMEGA_MINING_FACILITY_COMPLETE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-	auto_opens = player
+	default_toast = yes
 }
 # Mini megastructure complete: station
 message_type = {
@@ -83,7 +83,7 @@ message_type = {
 	name = "GPM_MESSAGE_MINIMEGA_STATION_COMPLETE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-	auto_opens = player
+	default_toast = yes
 }
 # Mini megastructure complete: silo
 message_type = {
@@ -94,7 +94,7 @@ message_type = {
 	name = "GPM_MESSAGE_MINIMEGA_SILO_COMPLETE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-	auto_opens = player
+	default_toast = yes
 }
 
 
@@ -112,7 +112,7 @@ message_type = {
 	name = "GPM_MESSAGE_STEAL_RELIC_WARNING_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-	auto_opens = player
+	default_toast = yes
 }
 
 
@@ -166,7 +166,7 @@ message_type = {
 	name = "GPM_MESSAGE_RELIC_STOLEN_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-	auto_opens = player
+	default_toast = yes
 }
 
 

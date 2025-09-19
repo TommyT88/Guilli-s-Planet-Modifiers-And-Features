@@ -41,7 +41,6 @@ gpm_spawn_precursor_modifier = {
 			gpm_set_precursor_energy_grid = yes
 			modifier = { factor = @rare }
 			# On these planets #
-			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
 			# TWeaks #
 			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
 			modifier = { factor = 0.5
@@ -79,7 +78,6 @@ gpm_spawn_precursor_modifier = {
 			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier_precursor }
 			modifier = { factor = @rare }
 			# On these planets #
-			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
 			# TWeaks #
 			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
 			modifier = { factor = 0.5
@@ -103,7 +101,6 @@ gpm_spawn_precursor_modifier = {
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
 			# TWeaks #
-			modifier = { factor = 1.5 is_planet_class = pc_gpm_precursor_tomb }
 			modifier = { factor = 0.5
 				OR = {
 					gpm_is_planet_class_barren = yes
@@ -409,7 +406,6 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
-			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
 			# TWeaks #
 			modifier = { factor = 0.5
 				OR = {
@@ -429,7 +425,6 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
-			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
 			# TWeaks #
 			modifier = { factor = 0.5
 				OR = {
@@ -526,7 +521,6 @@ gpm_spawn_precursor_modifier = {
 			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier_precursor }
 			modifier = { factor = @rare }
 			# On these planets #
-			modifier = { factor = 0 is_planet_class = pc_gpm_precursor_tomb }
 			# TWeaks #
 			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
 			# Galaxy age setting modifier
@@ -555,7 +549,6 @@ gpm_spawn_precursor_modifier = {
 			# On these planets #
 			modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
 			# TWeaks #
-			modifier = { factor = 1.5 is_planet_class = pc_gpm_precursor_tomb }
 			modifier = { factor = 0 NOT = { planet_size < 15 } }
 			modifier = { factor = 0.5
 				OR = {
@@ -830,17 +823,16 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_low = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				95 = { }
-				5 = {
+				90 = { }
+				10 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 1.5 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 2 gpm_is_planet_class_nuked = yes }
-					modifier = { factor = 3 is_planet_class = pc_gpm_precursor_tomb }
 				}
 			}
 			# precursor worlds are juicy
 			if = {
-				limit = { is_planet_class = pc_gpm_precursor_tomb }
+				limit = { is_planet_class = pc_relic }
 				gpm_spawn_precursor_modifier = yes
 				## SPAGHETTI CODE ## normal done in engine
 				# spawn precursor features 
@@ -850,17 +842,16 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_normal = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				90 = { }
-				10 = {
+				85 = { }
+				15 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
-					modifier = { factor = 6 is_planet_class = pc_gpm_precursor_tomb }
 				}
 			}
 			# precursor worlds are juicy
 			if = {
-				limit = { is_planet_class = pc_gpm_precursor_tomb }
+				limit = { is_planet_class = pc_relic }
 				gpm_spawn_precursor_modifier = yes
 				## SPAGHETTI CODE ## normal done in engine
 				# spawn precursor features 
@@ -870,17 +861,35 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_high = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				88 = { }
-				12 = {
+				80 = { }
+				20 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
-					modifier = { factor = 6 is_planet_class = pc_gpm_precursor_tomb }
 				}
 			}
 			# precursor worlds are juicy
 			if = {
-				limit = { is_planet_class = pc_gpm_precursor_tomb }
+				limit = { is_planet_class = pc_relic }
+				gpm_spawn_precursor_modifier = yes
+				## SPAGHETTI CODE ## normal done in engine
+				# spawn precursor features 
+				gpm_spawn_precursor_features = yes
+			}
+		}
+		gpm_modifier_amount_extra_high = {
+			gpm_spawn_precursor_modifier = yes
+			random_list = {
+				80 = { }
+				20 = {
+					gpm_spawn_precursor_modifier = yes
+					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
+				}
+			}
+			# precursor worlds are juicy
+			if = {
+				limit = { is_planet_class = pc_relic }
 				gpm_spawn_precursor_modifier = yes
 				## SPAGHETTI CODE ## normal done in engine
 				# spawn precursor features 

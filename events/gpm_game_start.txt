@@ -14,7 +14,7 @@ event = {
 
 	trigger = {
 		NOT = {
-			has_global_flag = gpm_initialisation_menu           # safery check, we apply this flag immediately on this same event below
+			has_global_flag = gpm_initialisation_menu           # safety check, we apply this flag immediately on this same event below
 		}
 		is_ai = no                                              # stop this from running on AI
 	}
@@ -22,7 +22,8 @@ event = {
 		
 		set_global_flag = gpm_initialisation_menu       		# safety to prevent additional runs
 		set_global_flag = gpm_modifier_amount_normal    		# for my mod I set a base amount too to get amount cycle option working (has to have a base to check with)
-		set_global_flag = gpm_galaxy_age_default				# for my mod I set the default galaxy ag to get the age cycle option working ^
+		set_global_flag = gpm_galaxy_age_default				# for my mod I set the default galaxy age to get the age cycle option working
+		set_global_flag = gpm_deposits_gal_gen_none				# for my mod I set the default galaxy deposit amounts
 		set_global_flag = gpm_scaling_base_modifier_option		# set base scaling option
 
 		country_event = { id = gpm_start_menu.1 }       # this is the actual start menu
@@ -32,6 +33,7 @@ event = {
 			if = {
 				limit = { gpm_is_country_type_default = yes	}
 				# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
+
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					solar_system = {
@@ -122,7 +124,7 @@ country_event = {
 			gpm_run_origin_death_world_planet_gen = yes
 
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				species = {
 					NOT = { has_trait = trait_gpm_mega_adaptive	}

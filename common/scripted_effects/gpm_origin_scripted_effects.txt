@@ -289,7 +289,7 @@ gpm_run_origin_precursor_world_planet_gen = {
 			10 = {
 				add_modifier = { modifier = gpm_precursor_harbor_ruins multiplier = 0.5 } # only on wet planets
 				modifier = { factor = 0 has_modifier = gpm_precursor_harbor_ruins }
-				modifier = { factor = 0 NOR = { gpm_is_planet_water = yes } }
+				modifier = { factor = 0 NOT = { gpm_is_planet_water = yes } }
 			}
 			10 = {
 				add_modifier = { modifier = gpm_precursor_obelisks multiplier = 0.5 }

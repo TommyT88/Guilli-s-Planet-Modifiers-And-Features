@@ -774,9 +774,9 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_omnious_fog" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_ominous_fog" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_omnious_fog" }
+			modifier = { factor = 0 has_modifier = "gpm_ominous_fog" }
 			# (Not) on these planets
 			# Never in these systems
 			# Tweaks
@@ -969,65 +969,207 @@ gpm_spawn_tomb_world_modifier = {
 	}
 }
 
+
 gpm_roll_tomb_world_modifiers = {
 	optimize_memory
 	switch = {
 		trigger = has_global_flag
 		gpm_modifier_amount_max_one = {
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers = 0 }
-				random_list = {
-					50 = { }
-					50 = { gpm_spawn_tomb_world_modifier = yes }
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							25 = { }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0.75 num_modifiers = 2 }
+								modifier = { factor = 0.50 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 1
+					if = {
+						limit = { num_modifiers < 1 }
+						random_list = {
+							25 = { }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0.75 num_modifiers = 1 }
+								modifier = { factor = 0.50 num_modifiers = 2 }
+							}
+						}
+					}
 				}
 			}
 		}
 		gpm_modifier_amount_low = {
-			while = {
-				count = 2
-				if = {
-					limit = { num_modifiers < 2 }
-					random_list = {
-						50 = { }
-						50 = { 
-							gpm_spawn_tomb_world_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 2
+					if = {
+						limit = { num_modifiers < 2 }
+						random_list = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
 						}
 					}
 				}
 			}
 		}
 		gpm_modifier_amount_normal = {
-			while = {
-				count = 3
-				if = {
-					limit = { num_modifiers < 3 }
-					random_list = {
-						50 = { }
-						50 = { 
-							gpm_spawn_tomb_world_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
-							modifier = { factor = 0.25 num_modifiers > 2 }
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { set_planet_flag = gpm_no_modifier_rolled }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0 has_planet_flag = gpm_no_modifier_rolled }
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
 						}
 					}
 				}
 			}
 		}
 		gpm_modifier_amount_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			gpm_spawn_tomb_world_modifier = yes
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
 			if = {
-				limit = { num_modifiers = 0 }
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							40 = { }
+							60 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							40 = { }
+							60 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
+						}
+					}
+				}
+			}
+		}
+		gpm_modifier_amount_extra_high = {
+			# guarantee a modifier and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
 				gpm_spawn_tomb_world_modifier = yes
 			}
-			while = {
-				count = 3
-				if = {
-					limit = { num_modifiers < 3 }
-					random_list = {
-						50 = { }
-						50 = { 
-							gpm_spawn_tomb_world_modifier = yes
-							modifier = { factor = 0.5 num_modifiers > 1 }
-							modifier = { factor = 0.25 num_modifiers > 2 }
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				gpm_spawn_tomb_world_modifier = yes
+				gpm_spawn_tomb_world_modifier = yes
+			}
+			# spawn random modifiers and ignore PD clasification modifiers in the counting
+			if = {
+				limit = { gpm_has_pd_planet_modifier = yes }
+				while = {
+					count = 4
+					if = {
+						limit = { num_modifiers < 4 }
+						random_list = {
+							25 = { }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 2 }
+								modifier = { factor = 0.125 num_modifiers = 3 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { gpm_has_pd_planet_modifier = no }
+				while = {
+					count = 3
+					if = {
+						limit = { num_modifiers < 3 }
+						random_list = {
+							25 = { }
+							75 = {
+								gpm_spawn_tomb_world_modifier = yes
+								modifier = { factor = 0.25 num_modifiers = 1 }
+								modifier = { factor = 0.125 num_modifiers = 2 }
+							}
 						}
 					}
 				}
@@ -1035,4 +1177,108 @@ gpm_roll_tomb_world_modifiers = {
 		}
 		default = { }
 	}
+	# cleanup
+	remove_planet_flag = gpm_no_modifier_rolled
 }
+
+
+##### pre 4.0 backup #####
+# gpm_roll_tomb_world_modifiers = {
+# 	optimize_memory
+# 	switch = {
+# 		trigger = has_global_flag
+# 		gpm_modifier_amount_max_one = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						num_modifiers = 0
+# 						AND = {
+# 							num_modifiers = 1
+# 							gpm_has_pd_planet_modifier = yes
+# 						}
+# 					}
+# 				}
+# 				random_list = {
+# 					50 = { }
+# 					50 = { gpm_spawn_tomb_world_modifier = yes }
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_low = {
+# 			while = {
+# 				count = 2
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							num_modifiers < 2
+# 							AND = {
+# 								num_modifiers < 3
+# 								gpm_has_pd_planet_modifier = yes
+# 							}
+# 						}
+# 					}
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_tomb_world_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_normal = {
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							num_modifiers < 3
+# 							AND = {
+# 								num_modifiers < 4
+# 								gpm_has_pd_planet_modifier = yes
+# 							}
+# 						}
+# 					}
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_tomb_world_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gpm_modifier_amount_high = {
+# 			if = {
+# 				limit = { num_modifiers = 0 }
+# 				gpm_spawn_tomb_world_modifier = yes
+# 			}
+# 			while = {
+# 				count = 3
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							num_modifiers < 3
+# 							AND = {
+# 								num_modifiers < 4
+# 								gpm_has_pd_planet_modifier = yes
+# 							}
+# 						}
+# 					}
+# 					random_list = {
+# 						50 = { }
+# 						50 = { 
+# 							gpm_spawn_tomb_world_modifier = yes
+# 							modifier = { factor = 0.5 num_modifiers > 1 }
+# 							modifier = { factor = 0.25 num_modifiers > 2 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		default = { }
+# 	}
+# }

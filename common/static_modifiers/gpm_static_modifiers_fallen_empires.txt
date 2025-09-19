@@ -47,7 +47,7 @@ gpm_utopian_services = {
 	icon_frame = 9
 }
 gpm_primitive_reserve = {
-	planet_amenities_add = 50
+	planet_amenities_add = 5000
 	icon = "gfx/interface/icons/planet_modifiers/gpm_primitive_reserve.dds"
 	icon_frame = 9
 }
@@ -93,7 +93,7 @@ gpm_culture_of_games = {
 }
 gpm_weather_control = {
 	pop_environment_tolerance = 0.50
-	district_farming_max = 10
+	district_farming_max_add =10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_weather_control.dds"
 	icon_frame = 9
 }
@@ -103,7 +103,7 @@ gpm_subterranean_paradise = {
 	icon_frame = 9
 }
 gpm_space_elevators = {
-	trade_value_mult = 1.00
+	planet_jobs_trade_produces_mult = 1.00
 	icon = "gfx/interface/icons/planet_modifiers/gpm_space_elevators.dds"
 	icon_frame = 9
 }

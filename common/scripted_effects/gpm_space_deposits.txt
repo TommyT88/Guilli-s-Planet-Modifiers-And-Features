@@ -1,100 +1,2111 @@
-gpm_add_space_deposit = {
-	optimize_memory
-	# Asteroid modifiers
-	if = {
-		limit = { gpm_is_planet_class_asteroid= yes }
-		switch = {
-			trigger = has_modifier
-			gpm_large_asteroid = { gpm_d_random_minerals = yes }
-			gpm_asteroid_moon = { gpm_d_random_minerals = yes }
-			gpm_metal_asteroid = { gpm_d_random_minerals = yes }
-			gpm_dense_core = { gpm_d_random_minerals = yes }
-			gpm_crystallized_structure = { gpm_d_random_minerals = yes }
-			gpm_abandoned_mining_platforms = { gpm_d_random_minerals = yes }
-			gpm_m_type_asteroid = { gpm_d_random_minerals = yes }
-			gpm_v_type_asteroid = { gpm_d_random_minerals = yes }
-			default = { }
-		}
-	}	
+# Galaxy generation deposit abundancy Settings and factors used for tweaking
+@global_tweak = 0.65
+@minerals_default = 0.45
+@minerals_rare = 0.35
+@energy_default = 0.30
+@energy_rare = 0.15
+@food_default = 1
+@food_rare = 0.5
+@alloys_default = 1
+@alloys_rare = 0.5
+@unity_default = 1
+@unity_rare = 0.5
+@trade_default = 1
+@trade_rare = 0.5
+@science_default = 0.5
+@science_rare = 0.35
+@crystals_default = 0.20
+@crystals_rare = 0.10
+@gasses_default = 0.5
+@gasses_rare = 0.25
+@motes_default = 0.5
+@motes_rare = 0.25
 
-	# Star modifiers
+@stars = 3
+@asteroids = 1
+@gasgiants = 1
+@toxicworlds = 1
+@frozenworlds = 1
+@barrenworlds = 1
+@moltenworlds = 1
+
+@modifier_amount_max_one = 1.3 
+@modifier_amount_low = 1.2
+@modifier_amount_normal = 1.1
+@modifier_amount_high = 1
+
+
+gpm_random_res_metallic_ring_deposit = {
+	# 100% deposit amounts (default)
 	if = {
-		limit = { gpm_is_planet_class_star = yes }
-		switch = {
-			trigger = has_modifier
-			gpm_unusual_sun_spots = { gpm_d_random_energy = yes }
-			gpm_unusual_bright_sun = { gpm_d_random_energy = yes }
-			gpm_plasma_tornadoes = { gpm_d_random_energy = yes }
-			gpm_violent_sun = { gpm_d_random_energy = yes }
-			default = { }
+		limit = {
+			# OR-NOR to catch this within save games where the default was not set. In future reduce to just default flag check -v4.0.11
+			OR = {
+				has_global_flag = gpm_deposits_gal_gen_default
+				NOR = {
+					has_global_flag = gpm_deposits_gal_gen_half
+					has_global_flag = gpm_deposits_gal_gen_quarter
+				}
+			}
+		}
+		random_list = {
+			20 = {
+				clear_deposits = yes
+				random_list = {
+					13 = { add_deposit = d_minerals_3 }
+					11 = { add_deposit = d_minerals_4 }
+					9 = { add_deposit = d_minerals_5 }
+					7 = { add_deposit = d_minerals_6 }
+					5 = { add_deposit = d_minerals_7 }
+					3 = { add_deposit = d_minerals_8 }
+					1 = { add_deposit = d_minerals_9 }
+				}
+			}
+			2 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_alloys_2 }
+					6 = { add_deposit = d_alloys_3 }
+					3 = { add_deposit = d_alloys_4 }
+					1 = { add_deposit = d_alloys_5 }
+				}
+			}
+			1 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_rare_crystals_1 }
+					7 = { add_deposit = d_rare_crystals_2 }
+					5 = { add_deposit = d_rare_crystals_3 }
+					3 = { add_deposit = d_rare_crystals_4 }
+					1 = { add_deposit = d_rare_crystals_5 }
+				}
+			}
+			1 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_volatile_motes_1 }
+					7 = { add_deposit = d_volatile_motes_2 }
+					5 = { add_deposit = d_volatile_motes_3 }
+					3 = { add_deposit = d_volatile_motes_4 }
+					1 = { add_deposit = d_volatile_motes_5 }
+				}
+			}
 		}
 	}
-
-	# Gas Giants
+	# 50% deposit amounts (default)
 	if = {
-		limit = { gpm_is_planet_class_gas_giant= yes }
-		switch = {
-			trigger = has_modifier
-			gpm_geometrical_polar_storm = { gpm_d_random_physics = yes }
-			gpm_everlasting_tornadoes = { gpm_d_random_physics = yes }
-			gpm_shrinking_giant = { gpm_d_random_physics = yes }
-			gpm_thin_atmospheres_gas_giant = { gpm_d_random_physics = yes }
-			gpm_weak_magnetic_field_gas_giant = { gpm_d_random_physics = yes }
-			gpm_strong_magnetic_field_gas_giant = { gpm_d_random_physics = yes }
-			gpm_radiation_storms = { gpm_d_random_engineering = yes }
-			gpm_super_heated_atmosphere = { gpm_d_random_engineering = yes }
-			gpm_floating_forest = { gpm_d_random_society = yes }
-			gpm_aeroplankton_clouds = { gpm_d_random_society = yes }
-			gpm_floating_kelp = { gpm_d_random_society = yes }
-			gpm_floatig_behemothaurs = { add_deposit = d_society_5 }
-			gpm_viscous_gas_layer = { gpm_d_random_energy = yes }			
-			gpm_charged_atmosphere = { gpm_d_random_energy = yes }			
-			gpm_abandoned_refineries = { gpm_d_random_energy = yes }
-			gpm_global_thunderstorms_gas_giant = { gpm_d_random_energy = yes }
-			default = { }
+		limit = { has_global_flag = gpm_deposits_gal_gen_half }
+		random_list = {
+			20 = {
+				clear_deposits = yes
+				random_list = {
+					13 = { add_deposit = d_minerals_3 }
+					11 = { add_deposit = d_minerals_4 }
+					9 = { add_deposit = d_minerals_5 }
+					7 = { add_deposit = d_minerals_6 }
+					# 5 = { add_deposit = d_minerals_7 }
+					# 3 = { add_deposit = d_minerals_8 }
+					# 1 = { add_deposit = d_minerals_9 }
+				}
+			}
+			2 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_alloys_2 }
+					6 = { add_deposit = d_alloys_3 }
+					3 = { add_deposit = d_alloys_4 }
+					# 1 = { add_deposit = d_alloys_5 }
+				}
+			}
+			1 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_rare_crystals_1 }
+					7 = { add_deposit = d_rare_crystals_2 }
+					5 = { add_deposit = d_rare_crystals_3 }
+					# 3 = { add_deposit = d_rare_crystals_4 }
+					# 1 = { add_deposit = d_rare_crystals_5 }
+				}
+			}
+			1 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_volatile_motes_1 }
+					7 = { add_deposit = d_volatile_motes_2 }
+					5 = { add_deposit = d_volatile_motes_3 }
+					# 3 = { add_deposit = d_volatile_motes_4 }
+					# 1 = { add_deposit = d_volatile_motes_5 }
+				}
+			}
 		}
 	}
-
-	# Normal Uninhabitable modifiers
+	# 25% deposit amounts (default)
 	if = {
-		limit = { gpm_is_planet_class_normal_uninhabitable= yes }
-		switch = {
-			trigger = has_modifier
-			strong_magnetic_field = { gpm_d_random_physics = yes }
-			gpm_subterranean_eco_system = { gpm_d_random_society = yes }
-			gpm_old_world = { gpm_d_random_society = yes }
-			gpm_hiveworld = { gpm_d_random_society = yes }
-			gpm_abundant_natural_radioactivity = { gpm_d_random_engineering = yes }
-			mineral_rich = { gpm_d_random_minerals = yes }
-			ultra_rich = { gpm_d_random_minerals = yes }
-			gpm_periodic_meteor_showers = { gpm_d_random_minerals = yes }
-			# barren
-			gpm_hydrogen_mist = { gpm_d_random_energy = yes }
-			# frozen
-			gpm_water_pockets = { gpm_d_random_physics = yes }
-			gpm_hydrogen_ice = { gpm_d_random_energy = yes }
-			gpm_nitrogen_ice = { gpm_d_random_energy = yes }
-			# toxic
-			gpm_heavy_metal_coral = { gpm_d_random_alloys = yes }
-			gpm_toxic_garbage = { gpm_d_random_alloys = yes }
-			gpm_decomposing_leviathan = { gpm_d_random_society = yes }
-			gpm_mushroom_forest_toxic_world = { gpm_d_random_society = yes }
-			gpm_giant_mold_blobs = { gpm_d_random_society = yes }
-			gpm_garbage_dump = { gpm_d_random_society = yes }
-			gpm_toxic_flora_fauna = { gpm_d_random_society = yes }
-			gpm_corrosive_atmosphere = { gpm_d_random_engineering = yes }
-			gpm_acid_rain = { gpm_d_random_engineering = yes }
+		limit = { has_global_flag = gpm_deposits_gal_gen_quarter }
+		random_list = {
+			20 = {
+				clear_deposits = yes
+				random_list = {
+					13 = { add_deposit = d_minerals_3 }
+					11 = { add_deposit = d_minerals_4 }
+					# 9 = { add_deposit = d_minerals_5 }
+					# 7 = { add_deposit = d_minerals_6 }
+					# 5 = { add_deposit = d_minerals_7 }
+					# 3 = { add_deposit = d_minerals_8 }
+					# 1 = { add_deposit = d_minerals_9 }
+				}
+			}
+			2 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_alloys_2 }
+					6 = { add_deposit = d_alloys_3 }
+					# 3 = { add_deposit = d_alloys_4 }
+					# 1 = { add_deposit = d_alloys_5 }
+				}
+			}
+			1 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_rare_crystals_1 }
+					7 = { add_deposit = d_rare_crystals_2 }
+					# 5 = { add_deposit = d_rare_crystals_3 }
+					# 3 = { add_deposit = d_rare_crystals_4 }
+					# 1 = { add_deposit = d_rare_crystals_5 }
+				}
+			}
+			1 = {
+				clear_deposits = yes
+				random_list = {
+					9 = { add_deposit = d_volatile_motes_1 }
+					7 = { add_deposit = d_volatile_motes_2 }
+					# 5 = { add_deposit = d_volatile_motes_3 }
+					# 3 = { add_deposit = d_volatile_motes_4 }
+					# 1 = { add_deposit = d_volatile_motes_5 }
+				}
+			}
+		}
+	}
+	
+	# gpm_d_random_trade_small = yes
+}
 
-			# molten
-			gpm_heavy_elements = { gpm_d_random_alloys = yes }
-			gpm_rare_metals = { gpm_d_random_alloys = yes }	
-			gpm_silicon_crystals = { gpm_d_random_minerals = yes }
-			gpm_crystaline_deposits = { gpm_d_random_crystals = yes }
-			gpm_searing_fumes = { gpm_d_random_gasses = yes }
-			gpm_stable_geodes = { gpm_d_random_motes = yes }
-			gpm_magma_ocean = { gpm_d_random_physics = yes }	
-			default = { }
+gpm_random_res_ice_ring_deposit = {
+	random_list = {
+		90 = {
+			clear_deposits = yes
+			random_list = {
+				95 = { add_deposit = d_energy_2 }
+				5 = { add_deposit = d_exotic_gases_1 }
+			}
+		}
+		40 = {
+			clear_deposits = yes
+			random_list = {
+				95 = { add_deposit = d_energy_3 }
+				5 = { add_deposit = d_exotic_gases_2 }
+			}
+			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+		}
+		10 = {
+			clear_deposits = yes
+			random_list = {
+				95 = { add_deposit = d_energy_4 }
+				5 = { add_deposit = d_exotic_gases_3 }
+			}
+			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_half }
+			modifier = { factor = 0 has_global_flag = gpm_deposits_gal_gen_quarter }
+		}
+	}
+	# gpm_d_random_trade_small = yes
+}
+
+gpm_remove_galaxy_generation_deposits = {
+	if = {
+		limit = {
+			solar_system = {
+				NOR = {
+					has_star_flag = drone_home_system
+					has_star_flag = tiyanki_spawn_system
+					has_star_flag = pirate_home_system
+					has_star_flag = amoeba_home_system
+					has_star_flag = gpm_precursor_machine_system
+					exists = space_owner
+				}
+			}
+			NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
+			gpm_engine_forbidden_planets = no
+		}
+
+		random_list = {
+			70 = {
+			}
+			30 = {
+				# deposit galaxy gen setting
+				modifier = { factor = 1.15 has_global_flag = gpm_deposits_gal_gen_half } # not 1:1 with setting duo to cummulating effects of spawning effects
+				modifier = { factor = 1.30 has_global_flag = gpm_deposits_gal_gen_quarter } # not 1:1 with setting duo to cummulating effects of spawning effects
+				if = {
+					limit = { has_deposit = d_minerals_2 }
+					remove_deposit = d_minerals_2
+				}
+				if = { 
+					limit = { has_deposit = d_minerals_3 }
+					remove_deposit = d_minerals_3
+				}
+				if = { 
+					limit = { has_deposit = d_minerals_4 }
+					remove_deposit = d_minerals_4
+				}
+				if = { 
+					limit = { has_deposit = d_energy_2 }
+					remove_deposit = d_energy_2
+				}
+				if = { 
+					limit = { has_deposit = d_energy_3 }
+					remove_deposit = d_energy_3
+				}
+				if = { 
+					limit = { has_deposit = d_energy_4 }
+					remove_deposit = d_energy_4
+				}
+				# modifier = { factor = 200
+				# 	NOR = {
+				# 		galaxy_size = medium
+				# 		galaxy_size = tiny
+				# 		galaxy_size = small
+				# 	}
+				# 	any_system = {
+				# 		distance = {
+				# 			source = this
+				# 			use_bypasses = no
+				# 			max_jumps = 3
+				# 		}
+				# 		is_capital_system = yes
+				# 	}
+				# }
+				# modifier = { factor = 200
+				# 	galaxy_size = medium
+				# 	any_system = {
+				# 		distance = {
+				# 			source = this
+				# 			use_bypasses = no
+				# 			max_jumps = 2
+				# 		}
+				# 		is_capital_system = yes
+				# 	}
+				# }
+				# modifier = { factor = 200
+				# 	OR = {
+				# 		galaxy_size = tiny
+				# 		galaxy_size = small
+				# 	}
+				# 	any_system = {
+				# 		distance = {
+				# 			source = this
+				# 			use_bypasses = no
+				# 			max_jumps = 2
+				# 		}
+				# 		is_capital_system = yes
+				# 	}
+				# }
+			}
 		}
 	}
 }
+
+gpm_add_galaxy_generation_deposits = {
+	if = {
+		limit = {
+			solar_system = {
+				NOR = {
+					# has_star_flag = drone_home_system
+					# has_star_flag = tiyanki_spawn_system
+					# has_star_flag = pirate_home_system
+					# has_star_flag = amoeba_home_system
+					has_star_flag = gpm_precursor_machine_system
+					exists = space_owner
+				}
+			}
+			NOT = { has_planet_flag = forbid_guillis_planet_modifiers }
+			gpm_engine_forbidden_planets = no
+		}
+
+		# gpm_d_random_minerals
+		# gpm_d_random_minerals_med
+		# gpm_d_random_minerals_big
+		# gpm_d_random_energy
+		# gpm_d_random_energy_med
+		# gpm_d_random_energy_big
+		# gpm_d_random_food
+		# gpm_d_random_food_big
+		# gpm_d_random_alloys
+		# gpm_d_random_trade_small
+		# gpm_d_random_trade
+		# gpm_d_random_physics
+		# gpm_d_random_society
+		# gpm_d_random_engineering
+		# gpm_d_random_research
+		# gpm_d_random_crystals
+		# gpm_d_random_gasses
+		# gpm_d_random_motes
+		# gpm_d_random_unity_deposit
+		# gpm_d_random_unity_deposit_big
+
+
+		# Normal Habitable modifiers (some of them can spawn)
+		if = {
+			limit = {
+				has_modifier = gpm_radioactive_mantle
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					gpm_d_random_alloys_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @alloys_default }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					modifier = { factor = @stars gpm_is_planet_class_star = yes }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+
+		# Normal Uninhabitable modifiers
+		if = {
+			limit = {
+				has_modifier = gpm_fast_rotation
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_hot_geysers
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				75 = { }
+				25 = {
+					gpm_d_random_research = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_cryogeysers
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_very_hot_core
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_solidified_core
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = gpm_lunar_dance
+		# 		NOT = { has_deposit_for = shipclass_mining_station }
+		# 	}
+		# 	random_list = {
+		# 		50 = { }
+		# 		50 = { gpm_d_random_unity_deposit = yes }
+		# 			modifier = { factor = @global_tweak }
+		# 			modifier = { factor = @unity_default }
+		# 			modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+		# 			modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+		# 			modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+		# 			modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+		# 			# nr of modifiers setting factors as more modifiers = more deposits
+		# 			modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+		# 			modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+		# 			modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+		# 			modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+		# 			# deposit galaxy gen setting
+		# 			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+		# 			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+		# 	}
+		# }
+		if = {
+			limit = {
+				has_modifier = gpm_subterranean_eco_system
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_abundant_natural_radioactivity
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = strong_magnetic_field
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_old_world
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = { 
+					gpm_d_random_engineering_gal_gen = yes
+					# gpm_d_random_trade = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @trade_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_hiveworld
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = mineral_rich
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_mineral_rich_2
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = ultra_rich
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_ultra_rich_2
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_periodic_meteor_showers
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		
+
+		# Molten modifiers
+		if = {
+			limit = {
+				has_modifier = gpm_magma_ocean
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_rare }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_silicon_crystals
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				80 = { }
+				20 = {
+					gpm_d_random_crystals = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @crystals_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_lava_geysers
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_thin_planetary_crust
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_heavy_elements
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					gpm_d_random_alloys_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @alloys_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_rare_metals
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					gpm_d_random_alloys_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @alloys_rare }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_crystaline_deposits
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				80 = { }
+				20 = {
+					gpm_d_random_crystals = yes
+					gpm_d_random_alloys_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @alloys_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_searing_fumes
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				80 = { }
+				20 = {
+					gpm_d_random_gasses = yes
+					gpm_d_random_alloys_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @gasses_default }
+					modifier = { factor = @alloys_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_modifier = gpm_stable_geodes
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_rare }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_proto_planet
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_mercury_atmosphere
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_default }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_shearing_winds
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @moltenworlds gpm_is_planet_class_molten = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		
+		# Asteroid modifiers
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_large_asteroid
+					has_modifier = gpm_asteroid_moon
+					has_modifier = gpm_dense_core
+					has_modifier = gpm_metal_asteroid
+					has_modifier = gpm_c_type_asteroid
+					has_modifier = gpm_s_type_asteroid
+					has_modifier = gpm_m_type_asteroid
+					has_modifier = gpm_v_type_asteroid
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_rare }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_hollow_structure
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_crystallized_structure
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				90 = { }
+				10 = {
+					gpm_d_random_crystals = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @crystals_default }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_abandoned_mining_platforms
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					# gpm_d_random_unity_deposit = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @unity_default }
+					modifier = { factor = @minerals_default }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_spherical_asteroid
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_binary_asteroids
+					has_modifier = gpm_trojan_asteroid
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @asteroids gpm_is_planet_class_asteroid = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		# Star modifiers
+		if = {
+			limit = {
+				has_modifier = gpm_unusual_sun_spots
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen_big = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_default }
+					modifier = { factor = @stars gpm_is_planet_class_star = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_low_metallicity
+					has_modifier = gpm_high_metallicity
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @stars gpm_is_planet_class_star = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_plasmoid_life
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = { 
+					gpm_d_random_physics_gal_gen = yes
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @stars gpm_is_planet_class_star = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_plasma_tornadoes
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen_big = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_default }
+					modifier = { factor = @stars gpm_is_planet_class_star = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = gpm_singing_star
+		# 		NOT = { has_deposit_for = shipclass_mining_station }
+		# 	}
+		# 	random_list = {
+		# 		50 = { }
+		# 		50 = {
+		# 			gpm_d_random_unity_deposit_big = yes
+		# 			modifier = { factor = @global_tweak }
+		# 			modifier = { factor = @unity_default }
+		# 			modifier = { factor = @stars gpm_is_planet_class_star = yes }
+		# 			# nr of modifiers setting factors as more modifiers = more deposits
+		# 			modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+		# 			modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+		# 			modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+		# 			modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+		# 			# deposit galaxy gen setting
+		# 			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+		# 			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+		# 		}
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		has_modifier = gpm_precursor_star_filter
+		# 		NOT = { has_deposit_for = shipclass_mining_station }
+		# 	}
+		# 	random_list = {
+		# 		0 = { } # special
+		# 		100 = {
+		# 			gpm_d_random_unity_deposit_big = yes
+		# 			# gpm_d_random_trade = yes
+		# 			# modifier = { factor = @global_tweak }
+		# 			# modifier = { factor = @unity_default }
+		# 			# modifier = { factor = @trade_default }
+		# 			# modifier = { factor = @stars gpm_is_planet_class_star = yes }
+		# 		}
+		# 	}
+		# }
+		if = {
+			limit = {
+				has_modifier = gpm_violent_sun
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen_big = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_default }
+					modifier = { factor = @stars gpm_is_planet_class_star = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+
+		# Frozen Modifiers
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_water_pockets
+					has_modifier = gpm_deep_aquifer
+					has_modifier = gpm_subsurface_ocean
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_hydrogen_ice
+					has_modifier = gpm_nitrogen_ice
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_rare }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_cracking_surface
+					has_modifier = gpm_absolute_zero
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_hot_ice
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @frozenworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+
+		# Toxic Modifiers
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_diamond_rain
+					has_modifier = gpm_garbage_dump
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					# gpm_d_random_trade = yes
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @trade_default }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_mushroom_forest_toxic_world
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_food_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @food_default }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_decomposing_leviathan
+					has_modifier = gpm_giant_mold_blobs
+					has_modifier = gpm_toxic_flora_fauna
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_toxic_garbage
+					has_modifier = gpm_corrosive_atmosphere
+					has_modifier = gpm_acid_rain
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_radioactive_biome
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_heavy_metal_coral
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					gpm_d_random_alloys_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @alloys_rare }
+					modifier = { factor = @toxicworlds gpm_is_planet_class_frozen = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+
+		# Barren Modifiers
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_chlorine_planet
+					has_modifier = gpm_phosphorus_planet
+					has_modifier = gpm_sulfur_planet
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_iron_planet
+					has_modifier = gpm_carbon_planet
+					has_modifier = gpm_red_planet
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_minerals_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @minerals_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_hydrogen_mist
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_rare }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_stellar_irradiation
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_salt_flats
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_dust_storms
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = gpm_diamond_planet
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					# gpm_d_random_trade = yes
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @trade_default }
+					modifier = { factor = @barrenworlds gpm_is_planet_class_barren = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		
+		# Gas Giants Modifiers
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_charged_atmosphere
+					has_modifier = gpm_global_thunderstorms_gas_giant
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_energy_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @energy_default }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_floating_kelp
+					has_modifier = gpm_floating_forest
+				}
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_food_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @food_default }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_geometrical_polar_storm
+					has_modifier = gpm_weak_magnetic_field_gas_giant
+					has_modifier = gpm_strong_magnetic_field_gas_giant
+					has_modifier = gpm_supersonic_winds
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_physics_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_aeroplankton_clouds
+					has_modifier = gpm_floatig_behemothaurs
+					has_modifier = gpm_shrinking_giant
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				50 = { }
+				50 = {
+					gpm_d_random_society_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_abandoned_refineries
+					has_modifier = gpm_radiation_storms
+					has_modifier = gpm_super_heated_atmosphere
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				0 = { }
+				100 = {
+					gpm_d_random_engineering_gal_gen = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_default }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_everlasting_tornadoes
+					has_modifier = gpm_thin_atmospheres_gas_giant
+				}
+				NOT = { has_deposit_for = shipclass_mining_station }
+			}
+			random_list = {
+				25 = { }
+				75 = {
+					gpm_d_random_research = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @science_rare }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = gpm_beautiful_storms
+		# 		NOT = { has_deposit_for = shipclass_mining_station }
+		# 	}
+		# 	random_list = {
+		# 		50 = { }
+		# 		50 = {
+		# 			gpm_d_random_unity_deposit = yes
+		# 			modifier = { factor = @global_tweak }
+		# 			modifier = { factor = @unity_default }
+		# 			modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+		# 			# nr of modifiers setting factors as more modifiers = more deposits
+		# 			modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+		# 			modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+		# 			modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+		# 			modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+		# 			# deposit galaxy gen setting
+		# 			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+		# 			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+		# 		}
+		# 	}
+		# }
+		if = {
+			limit = {
+				has_modifier = gpm_viscous_gas_layer
+				NOT = { has_deposit_for = shipclass_research_station }
+			}
+			random_list = {
+				80 = { }
+				20 = {
+					gpm_d_random_gasses = yes
+					modifier = { factor = @global_tweak }
+					modifier = { factor = @gasses_default }
+					modifier = { factor = @gasgiants gpm_is_planet_class_gas_giant = yes }
+					# nr of modifiers setting factors as more modifiers = more deposits
+					modifier = { factor = @modifier_amount_max_one has_global_flag = gpm_modifier_amount_max_one }
+					modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
+					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
+					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
+					# deposit galaxy gen setting
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
 

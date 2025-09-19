@@ -52,12 +52,12 @@ country_event = {
 		}
 
 		# event to spawn primitive relic worlds
-		random_country = {
-			limit = { is_ai = yes }
-			country_event = {
-				id = gpm_engine.999
-			}
-		}
+		# random_country = {
+		# 	limit = { is_ai = yes }
+		# 	country_event = {
+		# 		id = gpm_engine.999
+		# 	}
+		# }
 
 		# Planet Wonders
 		# Guaranteed wonders, one per planet class
@@ -393,7 +393,7 @@ planet_event = {
 			has_planet_flag = forbid_guillis_precursor_modifiers
 			solar_system = { has_star_flag = gpm_guardians_ego_system }
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 		# Ego system
 		
 		# forbid space creature home systems
@@ -525,108 +525,7 @@ planet_event = {
 					# spawn precursor features
 					# gpm_spawn_precursor_features = yes
 					# chance to turn into precursor ruined world
-					random_list = {
-						40 = {}
-						60 = {
-							gpm_make_precursor_ruined_world = yes
-							event_target:gpm_host_country_event_target = {
-								change_variable = { which = gpm_precursor_archaeopolis_amount value = 1 }
-							}
-							# add a factor scale based on number of habitable worlds galaxy setting. Higher setting = more chance for a habitable precursor ruined world.
-							modifier = { factor = gpm_galaxy_setting_habitable_worlds_scale } # scale chance bases on galaxy setting
-							# not if you dont have ancrel DLC
-							modifier = { factor = 0 has_ancrel = no }
-							remove_modifier = terraforming_candidate
-							modifier = { factor = 0
-								any_system = {
-									distance = {
-										source = this
-										use_bypasses = no
-										min_jumps = 2
-									}
-									any_system_planet = {
-										is_capital = yes
-									}
-								}
-							}
-							modifier = { factor = 0
-								any_system = {
-									distance = {
-										source = this
-										use_bypasses = no
-										min_jumps = 4
-									}
-									any_system_planet = {
-										is_planet_class = pc_gpm_precursor_tomb
-									}
-								}
-							}
-							modifier = { factor = 0
-								OR = {
-									AND = {
-										galaxy_size = tiny
-										event_target:gpm_host_country_event_target = {
-											check_variable = {
-												which = gpm_precursor_archaeopolis_amount
-												value >= 2
-											}
-										}
-									}
-									AND = {
-										galaxy_size = small
-										event_target:gpm_host_country_event_target = {
-											check_variable = {
-												which = gpm_precursor_archaeopolis_amount
-												value >= 3
-											}
-										}
-									}
-									AND = {
-										galaxy_size = medium
-										event_target:gpm_host_country_event_target = {
-											check_variable = {
-												which = gpm_precursor_archaeopolis_amount
-												value >= 4
-											}
-										}
-									}
-									AND = {
-										galaxy_size = large
-										event_target:gpm_host_country_event_target = {
-											check_variable = {
-												which = gpm_precursor_archaeopolis_amount
-												value >= 5
-											}
-										}
-									}
-									AND = {
-										galaxy_size = huge
-										event_target:gpm_host_country_event_target = {
-											check_variable = {
-												which = gpm_precursor_archaeopolis_amount
-												value >= 6
-											}
-										}
-									}
-									AND = {
-										NOR = {
-											galaxy_size = tiny
-											galaxy_size = small
-											galaxy_size = medium
-											galaxy_size = large
-											galaxy_size = huge
-										}
-										event_target:gpm_host_country_event_target = {
-											check_variable = {
-												which = gpm_precursor_archaeopolis_amount
-												value >= 6
-											}
-										}
-									}
-								}
-							}
-						}
-					}
+						# removed since 4.0
 					# roll precursor modifiers
 					gpm_roll_precursor_modifiers = yes
 					# spawn precursor features
@@ -640,7 +539,6 @@ planet_event = {
 								gpm_is_planet_class_city = yes
 								gpm_is_planet_class_normal_habitable = yes
 							}
-							NOT = { is_planet_class = pc_gpm_precursor_tomb }
 							OR = {
 								has_deposit_for = shipclass_research_station
 								has_deposit = no
@@ -652,7 +550,6 @@ planet_event = {
 						limit = {
 							host_has_dlc = "Ancient Relics Story Pack"
 							NOR = {
-								is_planet_class = pc_gpm_precursor_tomb
 								gpm_is_planet_class_hive = yes
 								gpm_is_planet_class_machine = yes
 								gpm_is_planet_class_city = yes
@@ -668,7 +565,7 @@ planet_event = {
 					modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }		# GALAXY AGE: YOUNG  -25% spawn chance
 					modifier = { factor = 1 has_global_flag = gpm_galaxy_age_young } 		# GALAXY AGE: NORMAL
 					modifier = { factor = 1.25 has_global_flag = gpm_galaxy_age_old }		# GALAXY AGE: OLD # +25% spawn chance
-					modifier = { factor = gpm_galaxy_setting_habitable_worlds_scale }		# Scaler based on galaxy nr of habitable worlds setting# spawn a random mini megastructure to repair
+					modifier = { factor = gpm_galaxy_setting_habitable_worlds_scale }		# Scaler based on galaxy nr of habitable worlds setting
 				}
 			}
 		}
@@ -1025,12 +922,20 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
 		
 		gpm_roll_star_modifiers = yes
+
+		# add resource deposits based on planet modifiers
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_add_galaxy_generation_deposits = yes
+			}
+		}
 	}
 }
 
@@ -1041,7 +946,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1049,7 +954,20 @@ planet_event = {
 		gpm_roll_asteroid_modifiers = yes
 
 		# remove % of base energy and mineral deposits
-		gpm_remove_galaxy_generation_deposits = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_remove_galaxy_generation_deposits = yes
+			}
+		}
+
+		# add resource deposits based on planet modifiers
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_add_galaxy_generation_deposits = yes
+			}
+		}
 	}
 }
 
@@ -1060,7 +978,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1110,6 +1028,8 @@ planet_event = {
 					# Galaxy age setting modifier
 					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
 					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1117,7 +1037,20 @@ planet_event = {
 		gpm_roll_gas_giant_modifiers = yes
 
 		# remove % of base energy and mineral deposits
-		gpm_remove_galaxy_generation_deposits = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_remove_galaxy_generation_deposits = yes
+			}
+		}
+
+		# add resource deposits based on planet modifiers
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_add_galaxy_generation_deposits = yes
+			}
+		}
 	}
 }
 
@@ -1135,7 +1068,7 @@ planet_event = {
 				has_global_flag = gpm_modifiers_homeworld_enabled
 			}
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1180,6 +1113,8 @@ planet_event = {
 					# Galaxy age setting modifier
 					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
 					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1209,7 +1144,20 @@ planet_event = {
 		}
 
 		# remove % of base energy and mineral deposits
-		gpm_remove_galaxy_generation_deposits = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_remove_galaxy_generation_deposits = yes
+			}
+		}
+
+		# add resource deposits based on planet modifiers
+		if = {
+			limit = {
+				NOT = { has_global_flag = gpm_deposits_gal_gen_none }
+				gpm_add_galaxy_generation_deposits = yes
+			}
+		}
 	}
 }
 
@@ -1227,7 +1175,7 @@ planet_event = {
 				has_global_flag = gpm_modifiers_homeworld_enabled
 			}
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1272,6 +1220,8 @@ planet_event = {
 					# Galaxy age setting modifier
 					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
 					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1301,7 +1251,7 @@ planet_event = {
 				has_global_flag = gpm_modifiers_homeworld_enabled
 			}
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1346,6 +1296,8 @@ planet_event = {
 					# Galaxy age setting modifier
 					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
 					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1415,7 +1367,7 @@ planet_event = {
 				has_global_flag = gpm_modifiers_homeworld_enabled
 			}
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1445,7 +1397,7 @@ planet_event = {
 				has_global_flag = gpm_modifiers_homeworld_enabled
 			}
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1542,6 +1494,8 @@ planet_event = {
 					# Galaxy age setting modifier
 					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
 					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1586,8 +1540,10 @@ planet_event = {
 	}
 
 	immediate = {
-		
-		gpm_roll_habitat_modifiers = yes
+		if = { 
+			limit = { exists = owner }
+			gpm_roll_habitat_modifiers = yes
+		}
 	}
 }
 
@@ -1626,7 +1582,7 @@ planet_event = {
 			gpm_is_planet_class_ringworld = yes
 			gpm_is_planet_class_habitat = yes
 		}
-		gpm_engine_forbidden_planets = yes
+		gpm_engine_forbidden_planets = no
 	}
 
 	immediate = {
@@ -1671,6 +1627,8 @@ planet_event = {
 					# Galaxy age setting modifier
 					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
 					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
+					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}

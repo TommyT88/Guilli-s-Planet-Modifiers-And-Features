@@ -185,7 +185,7 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops < 10
+				pop_amount < 1000
 			}
 			unity = 25
 			consumer_goods = 250
@@ -193,8 +193,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 10
-				num_pops < 20
+				pop_amount >= 1000
+				pop_amount < 2000
 			}
 			unity = 50
 			consumer_goods = 500
@@ -202,8 +202,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 20
-				num_pops < 30
+				pop_amount >= 2000
+				pop_amount < 3000
 			}
 			unity = 75
 			consumer_goods = 750
@@ -211,8 +211,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 30
-				num_pops < 40
+				pop_amount >= 3000
+				pop_amount < 4000
 			}
 			unity = 100
 			consumer_goods = 1000
@@ -220,8 +220,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 40
-				num_pops < 50
+				pop_amount >= 4000
+				pop_amount < 5000
 			}
 			unity = 125
 			consumer_goods = 1250
@@ -229,8 +229,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 50
-				num_pops < 60
+				pop_amount >= 5000
+				pop_amount < 6000
 			}
 			unity = 150
 			consumer_goods = 1500
@@ -238,8 +238,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 60
-				num_pops < 70
+				pop_amount >= 6000
+				pop_amount < 7000
 			}
 			unity = 175
 			consumer_goods = 1750
@@ -247,8 +247,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 70
-				num_pops < 85
+				pop_amount >= 7000
+				pop_amount < 8500
 			}
 			unity = 200
 			consumer_goods = 2000
@@ -256,8 +256,8 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 85
-				num_pops < 100
+				pop_amount >= 8500
+				pop_amount < 10000
 			}
 			unity = 225
 			consumer_goods = 2250
@@ -265,7 +265,7 @@ decision_gpm_resilent_parasites = {
 		cost = {
 			trigger = {
 				owner = { is_regular_empire = yes }
-				num_pops >= 100
+				pop_amount >= 10000
 			}
 			unity = 250
 			consumer_goods = 2500
@@ -974,8 +974,8 @@ decision_gpm_clear_alien_eggs  = {
 				add_deposit = gpm_tb_xenomorph_blocker_empty
 			}
 			10 = {
-				random_owned_pop = {
-					kill_pop = yes
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 			5 = {
@@ -1181,5 +1181,46 @@ decision_gpm_bleak_fertilize_world = {
 	
 	ai_weight = {
 		weight = 100
+	}
+}
+
+decision_gpm_dark_skies = {
+    owned_planets_only = yes
+	sound = event_construction
+	icon = decision_satellite_in_orbit
+	enactment_time = 360
+
+    resources = {
+		category = decisions
+		cost = {
+			trade = 1000
+			exotic_gases = 100
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_dark_skies
+	}
+	
+	allow = {
+	}
+
+    effect = {
+		remove_modifier = gpm_dark_skies
+		custom_tooltip = decision_gpm_dark_skiesTT
+		hidden_effect = {
+			random_list = {
+				10 = { add_modifier = { modifier = gpm_clear_skies } }
+				10 = { add_modifier = { modifier = gpm_pleasant_weather } }
+				10 = { add_modifier = { modifier = gpm_rich_soil } }
+				10 = { add_modifier = { modifier = gpm_misty } }
+				10 = { add_modifier = { modifier = gpm_odd_cloud_shapes } }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
 	}
 }

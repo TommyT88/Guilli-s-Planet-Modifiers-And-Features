@@ -20,7 +20,7 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_GPM_ENIGMATIC_POWER_RELAY"
 	icon_frame = 1
-	power = @power1
+	power = 20
 	resources = {
 		category = ship_components
 		cost = {
@@ -51,27 +51,34 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_GPM_SINGULARITY_MATRIX"
 	icon_frame = 1
-	power = @power1
+	power = -10
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 10
 			energy = 30
 		}
+		produces = {
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
 	}
 	
 	prerequisites = { "tech_gpm_singularity_matrix" }
 	component_set = "GPM_SINGULARITY_MATRIX"
 	
-	modifier = {
-		ship_fire_rate_mult = 0.05
+	ship_limit = 1
+	# modifier = {
 		# custom_tooltip = gpm_singularity_matrix_tt
 		# show_only_custom_tooltip = no
-	}
+	# }
 	ship_modifier = {
-		ships_physics_research_produces_add = 2
-		ships_society_research_produces_add = 2
-		ships_engineering_research_produces_add = 2
+		ship_experience_gain_mult = 0.20
+		# these produces modifiers dont work (see resources section) but leaving them here so they appear in the tooltip
+		ships_physics_research_produces_add = 1
+		ships_society_research_produces_add = 1
+		ships_engineering_research_produces_add = 1
 	}
 	
 	ai_weight = {
@@ -83,12 +90,16 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_GPM_ORBITAL_FABRICATOR"
 	icon_frame = 1
-	power = @power1
+	power = -10
 	hidden = yes
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 50
+		}
+		produces = {
+			alloys = 2
+			minor_artifacts = 0.1
 		}
 	}
 	
@@ -99,6 +110,7 @@ utility_component_template = {
 		# show_only_custom_tooltip = no
 	# }
 	ship_modifier = {
+		# these produces modifiers dont work (see resources section) but leaving them here so they appear in the tooltip
 		ships_alloys_produces_add = 2
 		ships_minor_artifacts_produces_add = 0.1
 	}
