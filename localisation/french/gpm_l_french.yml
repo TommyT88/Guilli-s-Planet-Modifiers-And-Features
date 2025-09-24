@@ -695,6 +695,8 @@ l_french:
  mod_shipsize_science_energy_upkeep_add:0 "Science Ship £energy£ Energy Upkeep"
 
  mod_shipclass_starbase_build_speed_mult:0 "Starbase £time£ Buildspeed"
+ mod_shipclass_science_ship_build_cost_mult:0 "Science Ship Build Cost"
+ mod_shipclass_science_ship_build_speed_mult:0 "Science Ship £time£ Construction Speed"
 
  mod_ship_sections_alloys_cost_mult:0 "Ship Section £alloys£ Alloy Cost"
 
@@ -914,7 +916,7 @@ l_french:
  #######################################
 
  gpm_start_menu.1.name:0 "Guilli's Planet Modifiers and Features"
- gpm_start_menu.1.desc:0 "Welcome to §HGuilli's Planet Modifiers and Features§!\n\n§YMake sure to set the options you want in the§! £options_icon §HOptions§! £options_icon  §Ymenu before clicking start§!\n\n§HMajor Changes:§!\n- Improved planet modifier variance at galaxy generation\n- Improved space deposits variance at galaxy generation\n- Updates to many planet modifiers\n- Various QOL improvements\n\n§RRemoved:§!\n- Precursor Archaeopolis Planet\n- Custom Modded Pop Jobs\n\n§LSee 4.0 changelog for all changes§!\n§LGame version 4.0+§!"
+ gpm_start_menu.1.desc:0 "Welcome to §HGuilli's Planet Modifiers and Features§!\n\n§YMake sure to set the options you want in the§! £options_icon §HOptions§!£options_icon  §Ymenu before clicking§! §Wstart the game§!§Y.§!\n\n§HImportant:§!\n- The first three months of gametime will be slower because the mod needs to check every planet and add the planet modifiers and features.§!"
 
  gpm_start_menu.1.options:0 "£options_icon  §YOptions - Features§! £options_icon"
  gpm_start_menu.1.optionsTT:0 "Set various §Yfeature options§! for Guilli's Planet Modifiers mod. You can disable or enable various features of the mod here.\n\n§YMake sure to set any options you want before starting the game!§!"
@@ -932,19 +934,19 @@ l_french:
  
  # number of modifiers option
  gpm_start_menu.1.max_one:0 "§YNumber of Modifiers:§! Max One"
- gpm_start_menu.1.max_oneTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§W 0-1 per planet§! §G(currently selected)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!"
+ gpm_start_menu.1.max_oneTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can be added to planet.\n-----§HNumber of Modifiers§!:-----\n§W 0-1 per planet§! §G(currently selected)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!\n\n§LUninhabitable worlds have a reduced chance to spawn multiple planet modifiers.§!"
 
  gpm_start_menu.1.low:0 "§YNumber of Modifiers:§! Low"
- gpm_start_menu.1.lowTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§W 0-2 per planet§! §G(currently selected)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!"
+ gpm_start_menu.1.lowTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can be added to a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§W 0-2 per planet§! §G(currently selected)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!\n\n§LUninhabitable worlds have a reduced chance to spawn multiple planet modifiers.§!"
 
  gpm_start_menu.1.normal:0 "§YNumber of Modifiers:§! Default (§GRecommended§!)"
- gpm_start_menu.1.normalTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§W 0-3 per planet§! §G(currently selected)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!"
+ gpm_start_menu.1.normalTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can be added to a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§W 0-3 per planet§! §G(currently selected)§!\n§L 1-3 per planet (high)§!\n§L 2-3 per planet (extra high)§!\n\n§LUninhabitable worlds have a reduced chance to spawn multiple planet modifiers.§!"
 
  gpm_start_menu.1.high:0 "§YNumber of Modifiers:§! High"
- gpm_start_menu.1.highTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§W 1-3 per planet§! §G(currently selected)§!\n§L 2-3 per planet (extra high)§!"
+ gpm_start_menu.1.highTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can be added to a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§W 1-3 per planet§! §G(currently selected)§!\n§L 2-3 per planet (extra high)§!\n\n§LUninhabitable worlds will adhere to the minimum amount of planet modifiers but have a reduced chance to spawn multiple planet modifiers.§!"
 
  gpm_start_menu.1.extrahigh:0 "§YNumber of Modifiers:§! Extra High"
- gpm_start_menu.1.extrahighTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can spawn on a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§W 2-3 per planet§! §G(currently selected)§!\n\n§LIncrease above high option applies only for habitable worlds and for natural planet modifiers.§!"
+ gpm_start_menu.1.extrahighTT:0 "§HClick to Cycle§! through the settings that determine the minimum and maximum number of modifiers that can be added to a planet.\n-----§HNumber of Modifiers§!:-----\n§L 0-1 per planet (max one)§!\n§L 0-2 per planet (low)§!\n§L 0-3 per planet (default)§!\n§L 1-3 per planet (high)§!\n§W 2-3 per planet§! §G(currently selected)§!\n\n§LUninhabitable worlds will adhere to the minimum amount of planet modifiers but have a reduced chance to spawn multiple planet modifiers.§!"
  
  # age of galaxy option
  

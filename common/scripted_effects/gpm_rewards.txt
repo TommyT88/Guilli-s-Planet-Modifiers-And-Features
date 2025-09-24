@@ -356,10 +356,9 @@ gpm_d_random_alloys_gal_gen = {
 gpm_d_random_trade_small = {
 	### 
 	locked_random_list = {
-		10 = { add_deposit = gpm_d_trade_value_1 }
-		10 = { add_deposit = gpm_d_trade_value_2 }
-		10 = { add_deposit = gpm_d_trade_value_3 }
-		10 = { add_deposit = gpm_d_trade_value_4 }
+		29 = { add_deposit = d_trade_value_3 }
+		22 = { add_deposit = d_trade_value_4 }
+		16 = { add_deposit = d_trade_value_5 }
 	}
 }
 
@@ -380,16 +379,16 @@ gpm_random_trade_small_lump_sum = {
 gpm_d_random_trade = {
 	### 
 	locked_random_list = {
-		46 = { add_deposit = gpm_d_trade_value_1 }
-		37 = { add_deposit = gpm_d_trade_value_2 }
-		29 = { add_deposit = gpm_d_trade_value_3 }
-		22 = { add_deposit = gpm_d_trade_value_4 }
-		16 = { add_deposit = gpm_d_trade_value_5 }
-		11 = { add_deposit = gpm_d_trade_value_6 }
-		7 = { add_deposit = gpm_d_trade_value_7 }
-		4 = { add_deposit = gpm_d_trade_value_8 }
-		2 = { add_deposit = gpm_d_trade_value_9 }
-		1 = { add_deposit = gpm_d_trade_value_10 }
+		# 46 = { add_deposit = d_trade_value_1 }
+		# 37 = { add_deposit = d_trade_value_2 }
+		# 29 = { add_deposit = d_trade_value_3 }
+		# 22 = { add_deposit = d_trade_value_4 }
+		# 16 = { add_deposit = d_trade_value_5 }
+		11 = { add_deposit = d_trade_value_6 }
+		7 = { add_deposit = d_trade_value_7 }
+		4 = { add_deposit = d_trade_value_8 }
+		2 = { add_deposit = d_trade_value_9 }
+		1 = { add_deposit = d_trade_value_10 }
 	}
 }
 
@@ -410,9 +409,10 @@ gpm_random_trade_lump_sum = {
 gpm_d_random_physics_gal_gen = {
 	### 
 	locked_random_list = {
-		16 = { add_deposit = d_physics_2 }
-		8 = { add_deposit = d_physics_3 }
-		4 = { add_deposit = d_physics_4 }
+		46 = { add_deposit = d_physics_1 }
+		32 = { add_deposit = d_physics_2 }
+		16 = { add_deposit = d_physics_3 }
+		8 = { add_deposit = d_physics_4 }
 		2 = { add_deposit = d_physics_5 }
 		1 = { add_deposit = d_physics_6 }
 	}
@@ -422,9 +422,10 @@ gpm_d_random_physics_gal_gen = {
 gpm_d_random_society_gal_gen = {
 	### 
 	locked_random_list = {
-		16 = { add_deposit = d_society_2 }
-		8 = { add_deposit = d_society_3 }
-		4 = { add_deposit = d_society_4 }
+		46 = { add_deposit = d_society_1 }
+		32 = { add_deposit = d_society_2 }
+		16 = { add_deposit = d_society_3 }
+		8 = { add_deposit = d_society_4 }
 		2 = { add_deposit = d_society_5 }
 		1 = { add_deposit = d_society_6 }
 	}
@@ -433,9 +434,10 @@ gpm_d_random_society_gal_gen = {
 gpm_d_random_engineering_gal_gen = {
 	### 
 	locked_random_list = {
-		16 = { add_deposit = d_engineering_2 }
-		8 = { add_deposit = d_engineering_3 }
-		4 = { add_deposit = d_engineering_4 }
+		46 = { add_deposit = d_engineering_1 }
+		32 = { add_deposit = d_engineering_2 }
+		16 = { add_deposit = d_engineering_3 }
+		8 = { add_deposit = d_engineering_4 }
 		2 = { add_deposit = d_engineering_5 }
 		1 = { add_deposit = d_engineering_6 }
 	}
@@ -444,7 +446,8 @@ gpm_d_random_engineering_gal_gen = {
 gpm_d_random_physics = {
 	### 
 	locked_random_list = {
-		70 = { add_deposit = d_physics_2 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
+		46 = { add_deposit = d_physics_1 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
+		32 = { add_deposit = d_physics_2 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
 		16 = { add_deposit = d_physics_3 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
 		8 = { add_deposit = d_physics_4 }
 		4 = { add_deposit = d_physics_5 }
@@ -455,7 +458,8 @@ gpm_d_random_physics = {
 gpm_d_random_society = {
 	### 
 	locked_random_list = {
-		70 = { add_deposit = d_society_2 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
+		46 = { add_deposit = d_society_1 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
+		32 = { add_deposit = d_society_2 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
 		16 = { add_deposit = d_society_3 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
 		8 = { add_deposit = d_society_4 }
 		4 = { add_deposit = d_society_5 }
@@ -466,7 +470,8 @@ gpm_d_random_society = {
 gpm_d_random_engineering = {
 	### 
 	locked_random_list = {
-		70 = { add_deposit = d_engineering_2 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
+		46 = { add_deposit = d_engineering_1 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
+		32 = { add_deposit = d_engineering_2 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
 		16 = { add_deposit = d_engineering_3 modifier = { factor = 2 has_global_flag = gpm_deposits_gal_gen_half } modifier = { factor = 1.5 has_global_flag = gpm_deposits_gal_gen_quarter } }
 		8 = { add_deposit = d_engineering_4 }
 		4 = { add_deposit = d_engineering_5 }
@@ -628,6 +633,7 @@ gpm_random_experience = {
 gpm_exploration_policy_away_teams_reward = {
 	custom_tooltip = gpm_survey_reward_bonus
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = { root.leader = { gpm_random_experience_big = yes } }
 		2 = { 
@@ -723,6 +729,7 @@ gpm_exploration_policy_away_teams_reward = {
 
 gpm_exploration_policy_extra_reward = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			add_random_research_option = {
@@ -798,6 +805,7 @@ gpm_exploration_policy_extra_reward = {
 
 gpm_random_precursor_tech_reward = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			add_monthly_resource_mult = {
@@ -868,6 +876,7 @@ gpm_random_precursor_tech_reward = {
 # Random reward list for precursor remnants
 gpm_random_reward_precursor_remnants = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -897,7 +906,7 @@ gpm_random_reward_precursor_remnants = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_remnants_discovery }
+				add_modifier = { modifier = gpm_precursor_remnants_discovery }
 			# }
 		}
 		2 = {
@@ -919,7 +928,7 @@ gpm_random_reward_precursor_remnants = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_remnants_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_remnants_discovery_2 }
 			# }
 		}
 		10 = {
@@ -955,6 +964,7 @@ gpm_random_reward_precursor_remnants = {
 # Random reward list for precursor energy grid
 gpm_random_reward_precursor_energy_grid = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -984,7 +994,7 @@ gpm_random_reward_precursor_energy_grid = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_energy_grid_discovery }
+				add_modifier = { modifier = gpm_precursor_energy_grid_discovery }
 			# }
 		}
 		2 = {
@@ -1006,7 +1016,7 @@ gpm_random_reward_precursor_energy_grid = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_energy_grid_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_energy_grid_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1042,6 +1052,7 @@ gpm_random_reward_precursor_energy_grid = {
 # Random reward list for precursor satellite grid
 gpm_random_reward_precursor_satalite_grid = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1071,7 +1082,7 @@ gpm_random_reward_precursor_satalite_grid = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_satellite_grid_discovery }
+				add_modifier = { modifier = gpm_precursor_satellite_grid_discovery }
 			# }
 		}
 		2 = {
@@ -1093,7 +1104,7 @@ gpm_random_reward_precursor_satalite_grid = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_satellite_grid_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_satellite_grid_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1129,6 +1140,7 @@ gpm_random_reward_precursor_satalite_grid = {
 # Random reward list for precursor city
 gpm_random_reward_precursor_city = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1158,7 +1170,7 @@ gpm_random_reward_precursor_city = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_city_discovery }
+				add_modifier = { modifier = gpm_precursor_city_discovery }
 			# }
 		}
 		2 = {
@@ -1180,7 +1192,7 @@ gpm_random_reward_precursor_city = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_city_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_city_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1227,6 +1239,7 @@ gpm_random_reward_precursor_city = {
 # Random reward list for precursor shipyards
 gpm_random_reward_precursor_shipyards = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1256,7 +1269,7 @@ gpm_random_reward_precursor_shipyards = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_shipyards_discovery }
+				add_modifier = { modifier = gpm_precursor_shipyards_discovery }
 			# }
 		}
 		2 = {
@@ -1278,7 +1291,7 @@ gpm_random_reward_precursor_shipyards = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_shipyards_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_shipyards_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1339,6 +1352,7 @@ gpm_random_reward_precursor_shipyards = {
 # Random reward list for precursor planetary gun
 gpm_random_reward_precursor_planetary_gun = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1368,7 +1382,7 @@ gpm_random_reward_precursor_planetary_gun = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_planetary_gun_discovery }
+				add_modifier = { modifier = gpm_precursor_planetary_gun_discovery }
 			# }
 		}
 		2 = {
@@ -1390,7 +1404,7 @@ gpm_random_reward_precursor_planetary_gun = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_planetary_gun_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_planetary_gun_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1425,7 +1439,8 @@ gpm_random_reward_precursor_planetary_gun = {
 }
 # Random reward list for precursor bunker grid
 gpm_random_reward_precursor_bunker_grid = {
-	### 
+	###
+	#Reroll_random = yes	
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1455,7 +1470,7 @@ gpm_random_reward_precursor_bunker_grid = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_bunker_grid_discovery }
+				add_modifier = { modifier = gpm_precursor_bunker_grid_discovery }
 			# }
 		}
 		2 = {
@@ -1477,7 +1492,7 @@ gpm_random_reward_precursor_bunker_grid = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_bunker_grid_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_bunker_grid_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1513,6 +1528,7 @@ gpm_random_reward_precursor_bunker_grid = {
 # Random reward list for precursor mechs
 gpm_random_reward_precursor_mechs = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1542,7 +1558,7 @@ gpm_random_reward_precursor_mechs = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_mechs_discovery }
+				add_modifier = { modifier = gpm_precursor_mechs_discovery }
 			# }
 		}
 		2 = {
@@ -1564,7 +1580,7 @@ gpm_random_reward_precursor_mechs = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_mechs_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_mechs_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1614,6 +1630,7 @@ gpm_random_reward_precursor_mechs = {
 # Random reward list for precursor planetary shields
 gpm_random_reward_precursor_planetary_shield = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1643,7 +1660,7 @@ gpm_random_reward_precursor_planetary_shield = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_planetary_shield_discovery }
+				add_modifier = { modifier = gpm_precursor_planetary_shield_discovery }
 			# }
 		}
 		2 = {
@@ -1665,7 +1682,7 @@ gpm_random_reward_precursor_planetary_shield = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_planetary_shield_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_planetary_shield_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1712,6 +1729,7 @@ gpm_random_reward_precursor_planetary_shield = {
 # Random reward list for precursor floating city
 gpm_random_reward_precursor_floating_city = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1741,7 +1759,7 @@ gpm_random_reward_precursor_floating_city = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_floating_city_discovery }
+				add_modifier = { modifier = gpm_precursor_floating_city_discovery }
 			# }
 		}
 		2 = {
@@ -1763,7 +1781,7 @@ gpm_random_reward_precursor_floating_city = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_floating_city_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_floating_city_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1799,6 +1817,7 @@ gpm_random_reward_precursor_floating_city = {
 # Random reward list for precursor capital complex
 gpm_random_reward_precursor_capital_complex = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1828,7 +1847,7 @@ gpm_random_reward_precursor_capital_complex = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_capital_complex_discovery }
+				add_modifier = { modifier = gpm_precursor_capital_complex_discovery }
 			# }
 		}
 		2 = {
@@ -1850,7 +1869,7 @@ gpm_random_reward_precursor_capital_complex = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_capital_complex_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_capital_complex_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1903,6 +1922,7 @@ gpm_random_reward_precursor_capital_complex = {
 # Random reward list for precursor communication hub
 gpm_random_reward_precursor_communication_hub = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -1932,7 +1952,7 @@ gpm_random_reward_precursor_communication_hub = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_communication_hub_discovery }
+				add_modifier = { modifier = gpm_precursor_communication_hub_discovery }
 			# }
 		}
 		2 = {
@@ -1954,7 +1974,7 @@ gpm_random_reward_precursor_communication_hub = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_communication_hub_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_communication_hub_discovery_2 }
 			# }
 		}
 		10 = {
@@ -1990,6 +2010,7 @@ gpm_random_reward_precursor_communication_hub = {
 # Random reward list for precursor singularity drive
 gpm_random_reward_precursor_singularity_drive = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2019,7 +2040,7 @@ gpm_random_reward_precursor_singularity_drive = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_singularity_drive_discovery }
+				add_modifier = { modifier = gpm_precursor_singularity_drive_discovery }
 			# }
 		}
 		2 = {
@@ -2041,7 +2062,7 @@ gpm_random_reward_precursor_singularity_drive = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_singularity_drive_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_singularity_drive_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2124,6 +2145,7 @@ gpm_random_reward_precursor_singularity_drive = {
 # Random reward list for precursor eternal fortress
 gpm_random_reward_precursor_eternal_fortress = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2153,7 +2175,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery }
+				add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery }
 			# }
 		}
 		2 = {
@@ -2175,7 +2197,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_eternal_fortress_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2211,6 +2233,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 # Random reward list for precursor prison planet
 gpm_random_reward_precursor_prison_planet = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2240,7 +2263,7 @@ gpm_random_reward_precursor_prison_planet = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_prison_planet_discovery }
+				add_modifier = { modifier = gpm_precursor_prison_planet_discovery }
 			# }
 		}
 		2 = {
@@ -2262,7 +2285,7 @@ gpm_random_reward_precursor_prison_planet = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_prison_planet_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_prison_planet_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2311,6 +2334,7 @@ gpm_random_reward_precursor_prison_planet = {
 # Random reward list for precursor mines
 gpm_random_reward_precursor_mines = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2340,7 +2364,7 @@ gpm_random_reward_precursor_mines = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_mines_discovery }
+				add_modifier = { modifier = gpm_precursor_mines_discovery }
 			# }
 		}
 		2 = {
@@ -2362,7 +2386,7 @@ gpm_random_reward_precursor_mines = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_mines_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_mines_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2398,6 +2422,7 @@ gpm_random_reward_precursor_mines = {
 # Random reward list for precursor manufactorium
 gpm_random_reward_precursor_manufactorium = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2427,7 +2452,7 @@ gpm_random_reward_precursor_manufactorium = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_manufactorium_discovery }
+				add_modifier = { modifier = gpm_precursor_manufactorium_discovery }
 			# }
 		}
 		2 = {
@@ -2449,7 +2474,7 @@ gpm_random_reward_precursor_manufactorium = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_manufactorium_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_manufactorium_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2547,6 +2572,7 @@ gpm_random_reward_precursor_manufactorium = {
 # Random reward list for precursor vaults
 gpm_random_reward_precursor_vaults = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2576,7 +2602,7 @@ gpm_random_reward_precursor_vaults = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_vaults_discovery }
+				add_modifier = { modifier = gpm_precursor_vaults_discovery }
 			# }
 		}
 		2 = {
@@ -2598,7 +2624,7 @@ gpm_random_reward_precursor_vaults = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_vaults_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_vaults_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2660,6 +2686,7 @@ gpm_random_reward_precursor_vaults = {
 # Random reward list for precursor crashed spacestation
 gpm_random_reward_precursor_crashed_spacestation = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2689,7 +2716,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery }
+				add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery }
 			# }
 		}
 		2 = {
@@ -2711,7 +2738,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_crashed_spacestation_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2747,6 +2774,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 # Random reward list for precursor battleground ruins
 gpm_random_reward_precursor_battleground_ruins = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2776,7 +2804,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery }
+				add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery }
 			# }
 		}
 		2 = {
@@ -2798,7 +2826,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_battleground_ruins_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2862,6 +2890,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 # Random reward list for precursor outpost ruins
 gpm_random_reward_precursor_outpost_ruins = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2891,7 +2920,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery }
+				add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery }
 			# }
 		}
 		2 = {
@@ -2913,7 +2942,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_outpost_ruins_discovery_2 }
 			# }
 		}
 		10 = {
@@ -2949,6 +2978,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 # Random reward list for precursor harbor ruins
 gpm_random_reward_precursor_harbor_ruins = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -2978,7 +3008,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery }
+				add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery }
 			# }
 		}
 		2 = {
@@ -3000,7 +3030,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_harbor_ruins_discovery_2 }
 			# }
 		}
 		10 = {
@@ -3036,6 +3066,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 # Random reward list for precursor ruins
 gpm_random_reward_precursor_ruins = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -3065,7 +3096,7 @@ gpm_random_reward_precursor_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_ruins_discovery }
+				add_modifier = { modifier = gpm_precursor_ruins_discovery }
 			# }
 		}
 		2 = {
@@ -3087,7 +3118,7 @@ gpm_random_reward_precursor_ruins = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_ruins_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_ruins_discovery_2 }
 			# }
 		}
 		10 = {
@@ -3123,6 +3154,7 @@ gpm_random_reward_precursor_ruins = {
 # Random reward list for precursor obelisks
 gpm_random_reward_precursor_obelisks = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
 			if = {
@@ -3152,7 +3184,7 @@ gpm_random_reward_precursor_obelisks = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_obelisks_discovery }
+				add_modifier = { modifier = gpm_precursor_obelisks_discovery }
 			# }
 		}
 		2 = {
@@ -3174,7 +3206,7 @@ gpm_random_reward_precursor_obelisks = {
 			# }
 			# else_if = {
 				# limit = { has_grand_archive_dlc = no }
-				# add_modifier = { modifier = gpm_precursor_obelisks_discovery_2 }
+				add_modifier = { modifier = gpm_precursor_obelisks_discovery_2 }
 			# }
 		}
 		10 = {
@@ -3224,6 +3256,7 @@ gpm_random_reward_precursor_obelisks = {
 
 gpm_random_precursor_empire_dig_site_bonus = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		50 = {
 			owner = {
@@ -3585,6 +3618,7 @@ gpm_random_precursor_empire_dig_site_bonus = {
 
 gpm_random_precursor_building_reward = {
 	### 
+	#Reroll_random = yes
 	locked_random_list = {
 		2 = {
 			owner = {

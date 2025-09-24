@@ -77,7 +77,7 @@ country_event = {
 		}
 		name = gpm_start_menu.1.high
 		custom_tooltip = gpm_start_menu.1.highTT
-		set_global_flag = gpm_modifier_amount_max_one   # gpm_modifier_amount_extra_high
+		set_global_flag = gpm_modifier_amount_extra_high   # gpm_modifier_amount_extra_high
 		remove_global_flag = gpm_modifier_amount_high
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
@@ -85,18 +85,18 @@ country_event = {
 	}
 
 	# extra high amount of modifiers 2-3   (disabled duo to counting bugs)
-	# option = {
-	# 	trigger = {
-	# 		has_global_flag = gpm_modifier_amount_extra_high
-	# 	}
-	# 	name = gpm_start_menu.1.extrahigh
-	# 	custom_tooltip = gpm_start_menu.1.extrahighTT
-	# 	set_global_flag = gpm_modifier_amount_max_one
-	# 	remove_global_flag = gpm_modifier_amount_extra_high
-	# 	hidden_effect = {
-	# 		country_event = { id = gpm_start_menu.1  }
-	# 	}
-	# }
+	option = {
+		trigger = {
+			has_global_flag = gpm_modifier_amount_extra_high
+		}
+		name = gpm_start_menu.1.extrahigh
+		custom_tooltip = gpm_start_menu.1.extrahighTT
+		set_global_flag = gpm_modifier_amount_max_one
+		remove_global_flag = gpm_modifier_amount_extra_high
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
 
 
 	##############################################

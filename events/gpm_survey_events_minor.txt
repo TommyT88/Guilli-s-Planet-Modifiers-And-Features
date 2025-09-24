@@ -126,28 +126,42 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
 			}
 		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
+			}
+		}
+		
 		# bonus rewards
 		OWNER = {
 			if = {
@@ -507,26 +521,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -768,26 +795,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# other rewards
@@ -1282,26 +1322,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -1462,26 +1515,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -1747,26 +1813,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# other rewards
@@ -2328,26 +2407,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -2620,26 +2712,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -2768,26 +2873,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -3370,26 +3488,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -3607,26 +3738,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -3727,26 +3871,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -3863,26 +4020,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -4304,26 +4474,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# other rewards
@@ -4818,26 +5001,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -5400,26 +5596,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -5542,26 +5751,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -6374,26 +6596,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -6568,26 +6803,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -7073,26 +7321,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -7572,26 +7833,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -7817,26 +8091,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# other rewards
@@ -8294,26 +8581,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -8654,26 +8954,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -8978,26 +9291,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -9104,26 +9430,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -9336,26 +9675,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -9554,27 +9906,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 			NOT = { gpm_is_planet_class_normal_habitable = yes }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -9754,26 +10118,39 @@ ship_event = {
 		}
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# other rewards
@@ -10232,26 +10609,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -10474,26 +10864,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -10850,27 +11253,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 			NOT = { gpm_is_planet_class_normal_habitable = yes }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		# bonus rewards
@@ -11023,27 +11438,39 @@ ship_event = {
 		root.leader = { gpm_random_experience = yes }
 		# Special Megacorp RP text
 		custom_tooltip = gpm_survey_reward_deposit_megacorp
-		# deposit
-		# FROM = {
-		# 	if = {
-		# 		limit = {
-		# 			NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 			NOT = { gpm_is_planet_class_normal_habitable = yes }
-		# 		}
-		# 		gpm_d_random_trade = yes
-		# 		hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
-		# 	}
-		# }
-		# trade
-		OWNER = {
-			locked_random_list = {
-				7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
-				10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
-				9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
-				8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
-				7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						gpm_is_planet_class_normal_habitable = no
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_mining_station
+						}
+					}
+				}
+			}
+			FROM = {
+				locked_random_list = {
+					90 = { gpm_d_random_trade_small = yes }
+					10 = { gpm_d_random_trade = yes }
+				}
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+		}
+		else = {
+			OWNER = {
+				locked_random_list = {
+					7 = { add_resource = { trade = 100 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 125 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 135 multiplier = value:gpm_leader_level_value } }
+					10 = { add_resource = { trade = 150 multiplier = value:gpm_leader_level_value } }
+					9 = { add_resource = { trade = 165 multiplier = value:gpm_leader_level_value } }
+					8 = { add_resource = { trade = 175 multiplier = value:gpm_leader_level_value } }
+					7 = { add_resource = { trade = 200 multiplier = value:gpm_leader_level_value } }
+				}
 			}
 		}
 		locked_random_list = {

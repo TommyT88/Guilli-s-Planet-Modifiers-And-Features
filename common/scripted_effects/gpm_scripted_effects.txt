@@ -29,6 +29,20 @@ gpm_reapply_vanilla_planet_modifiers = {
 	if = { limit = { has_modifier = lush_planet } remove_modifier = lush_planet add_modifier = { modifier = lush_planet multiplier = gpm_planet_size_multiplier } }
 	if = { limit = { has_modifier = bleak_planet } remove_modifier = bleak_planet add_modifier = { modifier = bleak_planet multiplier = gpm_planet_size_multiplier } }
 	if = { limit = { has_modifier = irradiated_planet } remove_modifier = irradiated_planet add_modifier = { modifier = irradiated_planet multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = abundant_geothermal_activity } remove_modifier = abundant_geothermal_activity add_modifier = { modifier = abundant_geothermal_activity multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = subterranean_wildlife } remove_modifier = subterranean_wildlife add_modifier = { modifier = subterranean_wildlife multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = rich_mircoflora } remove_modifier = rich_mircoflora add_modifier = { modifier = rich_mircoflora multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = acid_jungles } remove_modifier = acid_jungles add_modifier = { modifier = acid_jungles multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = hostile_environment } remove_modifier = hostile_environment add_modifier = { modifier = hostile_environment multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = irradiated_wasteland } remove_modifier = irradiated_wasteland add_modifier = { modifier = irradiated_wasteland multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = liquid_sands } remove_modifier = liquid_sands add_modifier = { modifier = liquid_sands multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = gas_rich_planet_fo_realz } remove_modifier = gas_rich_planet_fo_realz add_modifier = { modifier = gas_rich_planet_fo_realz multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = food_rich_planet } remove_modifier = food_rich_planet add_modifier = { modifier = food_rich_planet multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = shifting_sands } remove_modifier = shifting_sands add_modifier = { modifier = shifting_sands multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = stratovents } remove_modifier = stratovents add_modifier = { modifier = stratovents multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = obsidian_lakes } remove_modifier = obsidian_lakes add_modifier = { modifier = obsidian_lakes multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = docile_fauna } remove_modifier = docile_fauna add_modifier = { modifier = docile_fauna multiplier = gpm_planet_size_multiplier } }
+	if = { limit = { has_modifier = hyper_ecosystem } remove_modifier = hyper_ecosystem add_modifier = { modifier = hyper_ecosystem multiplier = gpm_planet_size_multiplier } }
 }
 
 # Planet Modifier Scaling based on planet size:
