@@ -69,6 +69,7 @@ gpm_remove_planetary_features = {
         if = { limit = { is_deposit_type = gpm_d_hot_springs } remove_deposit = gpm_d_hot_springs }
         if = { limit = { is_deposit_type = gpm_d_colossal_coral_life } remove_deposit = gpm_d_colossal_coral_life }
         if = { limit = { is_deposit_type = gpm_d_salt_flats } remove_deposit = gpm_d_salt_flats }
+        if = { limit = { is_deposit_type = gpm_d_dead_forests } remove_deposit = gpm_d_dead_forests }
     }
 }
 

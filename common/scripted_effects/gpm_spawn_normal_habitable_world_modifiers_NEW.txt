@@ -13,7 +13,7 @@
 # Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
 
 # Abundancy Settings and factors used for tweaking
-@veryrare = 0.3 			
+@very_rare = 0.3 			
 @rare = 0.6 				# 0.2
 @uncommon = 0.8 			# 0.6
 @default = 1 				# 1.2
@@ -281,6 +281,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_single_biome"
 					has_modifier = "gpm_hyper_complex_biome"
 					has_modifier = "gpm_simple_organisms"
+					has_modifier = "gpm_dead_forests"
 				}
 			}
 			# (Not) on these planets
@@ -711,6 +712,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			add_modifier = { modifier = "gpm_living_planet" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_living_planet" }
+			modifier = { factor = 0 has_modifier = "gpm_dead_forests" }
 			# (Not) on these planets
 			modifier = { factor = 0 is_planet_class = pc_arctic }
 			# Never in these systems
@@ -741,6 +743,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_locust_plagues"
 					has_modifier = "gpm_hostile_flora"
 					has_modifier = "gpm_great_temperature_variation"
+					has_modifier = "gpm_dead_forests"
 				}
 			}
 			# (Not) on these planets
@@ -1854,6 +1857,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_planetwide_forest"
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
+					has_modifier = "gpm_dead_forests"
 				}
 			}
 			# (Not) on these planets
@@ -1891,6 +1895,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_planetwide_forest"
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
+					has_modifier = "gpm_dead_forests"
 				}
 			}
 			# (Not) on these planets
@@ -1920,6 +1925,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_planetwide_forest"
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
+					has_modifier = "gpm_dead_forests"
 				}
 			}
 			# (Not) on these planets
@@ -3122,6 +3128,28 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_dead_forests" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_dead_forests"
+					has_modifier = "gpm_hyper_complex_biome"
+					has_modifier = "gpm_living_planet"
+					has_modifier = "gpm_ideal_for_life"
+					has_modifier = "gpm_proto_forests"
+					has_modifier = "gpm_dense_forests"
+					has_modifier = "gpm_planetwide_forest"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
 		}
 	}
 }

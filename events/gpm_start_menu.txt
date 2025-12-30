@@ -734,66 +734,6 @@ country_event = {
 	# }
 
 	##############################################
-	############## Space Deposits ##############
-	##############################################
-
-	# Deposits Tweak Default
-	option = {
-		trigger = {
-			has_global_flag = gpm_deposits_gal_gen_none
-		}
-		name = gpm_start_menu.3.deposits_gal_gen_none
-		custom_tooltip = gpm_start_menu.3.deposits_gal_gen_noneTT
-		set_global_flag = gpm_deposits_gal_gen_default
-		remove_global_flag = gpm_deposits_gal_gen_none
-		hidden_effect = {
-			country_event = { id = gpm_start_menu.3  }
-		}
-	}
-
-	option = {
-		trigger = {
-			has_global_flag = gpm_deposits_gal_gen_default
-		}
-		name = gpm_start_menu.3.deposits_gal_gen_default
-		custom_tooltip = gpm_start_menu.3.deposits_gal_gen_defaultTT
-		set_global_flag = gpm_deposits_gal_gen_half
-		remove_global_flag = gpm_deposits_gal_gen_default
-		hidden_effect = {
-			country_event = { id = gpm_start_menu.3  }
-		}
-	}
-
-	# Deposits Tweak 50%
-	option = {
-		trigger = {
-			has_global_flag = gpm_deposits_gal_gen_half
-		}
-		name = gpm_start_menu.3.deposits_gal_gen_half
-		custom_tooltip = gpm_start_menu.3.deposits_gal_gen_halfTT
-		set_global_flag = gpm_deposits_gal_gen_quarter
-		remove_global_flag = gpm_deposits_gal_gen_half
-		hidden_effect = {
-			country_event = { id = gpm_start_menu.3  }
-		}
-	}
-
-	# Deposits Tweak 25%
-	option = {
-		trigger = {
-			has_global_flag = gpm_deposits_gal_gen_quarter
-		}
-		name = gpm_start_menu.3.deposits_gal_gen_quarter
-		custom_tooltip = gpm_start_menu.3.deposits_gal_gen_quarterTT
-		set_global_flag = gpm_deposits_gal_gen_default
-		remove_global_flag = gpm_deposits_gal_gen_quarter
-		hidden_effect = {
-			country_event = { id = gpm_start_menu.3  }
-		}
-	}
-
-
-	##############################################
 	############ BACK TO MAIN MENU ###############
 	##############################################
 

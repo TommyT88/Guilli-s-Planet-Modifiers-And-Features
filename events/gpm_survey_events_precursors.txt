@@ -212,6 +212,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_remnants_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #20 gpm_precursor_energy_grid discovery
 ship_event = {
@@ -363,6 +373,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_energy_grid_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -520,6 +540,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_satellite_grid_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #40 gpm_precursor_city discovery
 ship_event = {
@@ -671,6 +701,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_city_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -828,6 +868,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_shipyards_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #60 gpm_precursor_planetary_gun discovery
 ship_event = {
@@ -979,6 +1029,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_planetary_gun_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -1136,6 +1196,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_bunker_grid_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #80 gpm_precursor_mechs discovery
 ship_event = {
@@ -1290,6 +1360,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_mechs_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #90 gpm_precursor_planetary_shield discovery
 ship_event = {
@@ -1330,7 +1410,6 @@ ship_event = {
 	}
 
 	immediate = {
-		
 		root = { owner = { set_country_flag = gpm_discover_precursor_planetary_shield } }
 		FROM = {
 			if = {
@@ -1441,6 +1520,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_planetary_shield_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -1598,6 +1687,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_floating_city_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #110 gpm_precursor_capital_complex discovery
 ship_event = {
@@ -1749,6 +1848,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_capital_complex_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -1906,6 +2015,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_communication_hub_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #130 gpm_precursor_singularity_drive discovery
 ship_event = {
@@ -2057,6 +2176,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_singularity_drive_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -2214,6 +2343,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_eternal_fortress_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #150 gpm_precursor_prison_planet discovery
 ship_event = {
@@ -2365,6 +2504,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_prison_planet_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -2522,6 +2671,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_mines_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #170 gpm_precursor_manufactorium discovery
 ship_event = {
@@ -2673,6 +2832,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_manufactorium_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -2830,6 +2999,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_vaults_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #190 gpm_precursor_crashed_spacestation discovery
 ship_event = {
@@ -2981,6 +3160,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_crashed_spacestation_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -3138,6 +3327,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_battleground_ruins_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #210 gpm_precursor_outpost_ruins discovery
 ship_event = {
@@ -3289,6 +3488,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_outpost_ruins_discovery_specimen }
+				}
 			}
 		}
 	}
@@ -3446,6 +3655,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_harbor_ruins_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #230 gpm_precursor_ruins discovery
 ship_event = {
@@ -3600,6 +3819,16 @@ ship_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_ruins_discovery_specimen }
+				}
+			}
+		}
+	}
 }
 #240 gpm_precursor_obelisks discovery
 ship_event = {
@@ -3751,6 +3980,16 @@ ship_event = {
 				limit = { has_policy_flag = gpm_more_discovery_rewards }
 				custom_tooltip = gpm_survey_reward_bonus
 				gpm_exploration_policy_extra_reward = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = { has_grand_archive_dlc = yes }
+			root = {
+				owner = {
+					give_specimen = { key = gpm_precursor_obelisks_specimen }
+				}
 			}
 		}
 	}

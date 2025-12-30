@@ -135,6 +135,20 @@ planet_districts = {
 	modifier_category = planet
 }
 
+planet_districts_cities = {
+	parent = planet_districts
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}
+
 planet_structures = {
 	parent = planets
 	hidden = yes

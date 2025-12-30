@@ -1,0 +1,190 @@
+# Planet District Zones
+
+zone_gpm_precursor_science = {
+	icon = GFX_district_specialization_research
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		exists = owner
+		gpm_has_precursor_modifiers = yes
+		has_ancrel = yes
+		is_wilderness_empire = no
+	}
+	planet_limit = {
+		base = 1
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		urban
+		polytechnic
+	}
+
+	included_building_sets = {
+		research
+		urban_automation
+		origin
+	}
+	
+	inline_script = {
+		script = jobs/zone_researchers_add
+		AMOUNT = $AMOUNT$
+	}
+	
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_researchers_energy_upkeep_add = 0.5
+			planet_physicists_minor_artifacts_produces_add = 0.05
+			planet_biologists_minor_artifacts_produces_add = 0.05
+			planet_engineers_minor_artifacts_produces_add = 0.05
+		}
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+	
+	
+
+	# max_buildings = 3
+
+	# triggered_desc = {
+		# trigger = {
+			# always = yes
+		# }
+		# text = zone_trade_triggered_desc
+	# }
+	
+	ai_resource_production = {
+		physics_research = 5
+		society_research = 5
+		engineering_research = 5
+		minor_artifacts = 5
+
+		trigger = {
+			has_any_research_zone = yes
+		}
+	}
+	
+	ai_weight_coefficient = 1.5
+	ai_priority = 20
+}
+
+zone_gpm_precursor_manufactorium = {
+	icon = GFX_district_specialization_foundry
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		exists = owner
+		# gpm_has_precursor_modifiers = yes
+		has_modifier = gpm_precursor_manufactorium
+		has_ancrel = yes
+		is_wilderness_empire = no
+	}
+	planet_limit = {
+		base = 1
+	}
+
+
+	# unlock = { # planet scope
+	# }
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+			minor_artifacts = 1000
+		}
+		upkeep = {
+			energy = 10
+			minor_artifacts = 1
+		}
+		# produces = {
+			# trigger = {
+				# exists = owner
+				# owner = { is_machine_empire = yes }
+			# }
+			# alloys = 5
+			# mult = value:count_districts|TYPE|nexus|
+		# }
+		# produces = {
+			# trigger = {
+				# exists = owner
+				# owner = { is_machine_empire = no }
+			# }
+			# alloys = 5
+			# mult = value:count_districts|TYPE|city|
+		# }
+	}
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	included_building_sets = {
+		foundry
+		urban_automation
+		origin
+	}
+	
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			industrial_jobs_are_catalytic_trigger = no
+		}
+		planet_districts_cities_minerals_upkeep_add = 10
+		planet_districts_cities_alloys_produces_add = 5
+	}
+	
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_districts_cities_alloys_food_upkeep_add = 10
+		planet_districts_cities_alloys_produces_add = 5
+	}
+	
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+	
+	
+
+	# max_buildings = 3
+
+	# triggered_desc = {
+		# trigger = {
+			# always = yes
+		# }
+		# text = dummy_tooltip
+	# }
+	
+	ai_resource_production = {
+		alloys = 20
+
+		trigger = {
+			has_any_foundry_zone = yes
+		}
+	}
+	
+	ai_weight_coefficient = 1.5
+	ai_priority = 20
+}

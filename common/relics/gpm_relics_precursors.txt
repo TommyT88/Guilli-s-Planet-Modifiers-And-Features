@@ -459,7 +459,8 @@ gpm_r_power_core = {
 		potential = {
 			always = yes
 		}
-		station_gatherers_energy_produces_mult = 0.5		
+		country_base_energy_produces_add = 50
+		weapon_type_energy_weapon_damage_mult = 0.3
 	}
 
 	score = 1000
@@ -566,7 +567,7 @@ gpm_r_gravity_engine = {
 		}
 		planet_max_districts_add = 2
 		catapult_range_mult = 1.00
-		catapult_spread_mult = -0.33
+		catapult_spread_mult = 0.33
 	}
 
 	score = 1000

@@ -728,12 +728,12 @@ ship_event = {
 
 	option = {
 		name = gpm_survey.BEAUTY
-		owner = {
+		OWNER = {
 			add_monthly_resource_mult = {
 				resource = society_research
-				value = @tier2researchreward
-				min = @tier2researchmin
-				max = @tier2researchmax
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
 			}
 		}
 		# Exploration Policy Reward integration
@@ -985,11 +985,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 1000 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 			if = { limit = { has_country_flag = "gpm_discovery_reward_7" }
@@ -1788,11 +1788,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 500 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -2141,11 +2141,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 500 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -2494,11 +2494,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 350 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -2929,11 +2929,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 350 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -3390,11 +3390,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 400 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -3738,11 +3738,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 150 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -4066,11 +4066,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 400 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -4139,12 +4139,40 @@ ship_event = {
 
 	option = {
 		name = gpm_survey.UNBELIEVABLE
-		owner = {
-			add_monthly_resource_mult = {
-				resource = physics_research
-				value = @tier2researchreward
-				min = @tier2researchmin
-				max = @tier2researchmax
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_research_station
+						}
+					}
+				}
+			}
+			FROM = {
+				gpm_d_random_physics_big = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		else = {
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier4researchreward
+					min = @tier4researchmin
+					max = @tier4researchmax
+				}
 			}
 		}
 		# Exploration Policy Reward integration
@@ -4419,11 +4447,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 250 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -4959,11 +4987,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 350 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -5085,7 +5113,7 @@ ship_event = {
 		if = {
 			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 			custom_tooltip = gpm_survey_reward_bonus
-			leader = { add_experience = 200 }
+			root.leader = { gpm_random_experience_big = yes }
 			## Additional Reward ##
 			owner = {
 				locked_random_list = {
@@ -5118,7 +5146,7 @@ ship_event = {
 		}
 		else_if = {
 			limit = { owner = { NOT = { has_policy_flag = gpm_more_discovery_rewards } } }
-			leader = { add_experience = 100 }
+			root.leader = { gpm_random_experience_big = yes }
 		}
 		custom_tooltip = gpm_survey.EXPEDITION
 		custom_tooltip = gpm_survey.29.spec_project
@@ -5302,11 +5330,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 250 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -5375,12 +5403,53 @@ ship_event = {
 
 	option = {
 		name = gpm_survey.HORRIFYING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier2researchreward
-				min = @tier2researchmin
-				max = @tier2researchmax
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_research_station
+						}
+					}
+				}
+			}
+			FROM = {
+				gpm_d_random_society_big = yes
+				gpm_d_random_engineering_big = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		else = {
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier4researchreward
+					min = @tier4researchmin
+					max = @tier4researchmax
+				}
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier4researchreward
+					min = @tier4researchmin
+					max = @tier4researchmax
+				}
 			}
 		}
 		# Exploration Policy Reward integration
@@ -5657,11 +5726,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 700 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -6056,11 +6125,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 500 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -6129,12 +6198,40 @@ ship_event = {
 
 	option = {
 		name = gpm_survey.MASSIVE
-		owner = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier2researchreward
-				min = @tier2researchmin
-				max = @tier2researchmax
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
+					OR = {
+						has_deposit = no
+						AND = {
+							has_deposit = yes
+							has_deposit_for = shipclass_research_station
+						}
+					}
+				}
+			}
+			FROM = {
+				gpm_d_random_society_big = yes
+				hidden_effect = { set_planet_flag = gpm_has_been_deposit_explored_flag }
+			}
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		else = {
+			OWNER = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier4researchreward
+					min = @tier4researchmin
+					max = @tier4researchmax
+				}
 			}
 		}
 		# Exploration Policy Reward integration
@@ -6389,11 +6486,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 450 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -6721,7 +6818,7 @@ ship_event = {
 					min = @tier3unitymin
 					max = @tier3unitymax
 				}
-				root.leader = { add_experience = 950 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -7050,11 +7147,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 575 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}
@@ -7422,11 +7519,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 750 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 			if = { limit = { has_country_flag = "gpm_discovery_reward_7" }
@@ -7791,11 +7888,11 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_6" }
 				add_monthly_resource_mult = {
 					resource = unity
-					value = @tier4unityreward
-					min = @tier4unitymin
-					max = @tier4unitymax
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
-				root.leader = { add_experience = 450 }
+				root.leader = { gpm_random_experience_big = yes }
 				remove_country_flag = "gpm_discovery_reward_6"
 			}
 		}

@@ -45,7 +45,7 @@
 
 # gpm_precursor_remnants_discovery
 gpm_precursor_remnants_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_remnants_discovery_specimen"
 	type = historical_item
 	
 
@@ -72,9 +72,9 @@ gpm_precursor_remnants_discovery_2_specimen = {
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -85,7 +85,7 @@ gpm_precursor_remnants_discovery_2_specimen = {
 
 # gpm_precursor_energy_grid_discovery
 gpm_precursor_energy_grid_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_energy_grid_discovery_specimen"
 	type = historical_item
 	
 
@@ -93,13 +93,13 @@ gpm_precursor_energy_grid_discovery_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_districts_energy_upkeep_mult = -0.05
+		technician_jobs_bonus_workforce_mult = 0.1
 	}
 }
 
@@ -113,8 +113,8 @@ gpm_precursor_energy_grid_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -125,22 +125,21 @@ gpm_precursor_energy_grid_discovery_2_specimen = {
 
 # gpm_precursor_satellite_grid_discovery
 gpm_precursor_satellite_grid_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_satellite_grid_discovery_specimen"
 	type = historical_item
 	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		first_contact_clues_add = 2
-		first_contact_defense_add = 2
+		enforcer_jobs_bonus_workforce_mult = 0.1
 	}
 }
 
@@ -154,8 +153,8 @@ gpm_precursor_satellite_grid_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -166,44 +165,25 @@ gpm_precursor_satellite_grid_discovery_2_specimen = {
 
 # gpm_precursor_city_discovery
 gpm_precursor_city_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
-	type = historical_item	
-
-	inline_script = {
-		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
-		# RARITY = rare
-		# RARITY = epic
-		# RARITY = exceptional
-	}
-
-	triggered_country_modifier = {
-		mult = value:historical_item_specimens_modifiers_mult
-		planet_building_build_speed_mult = 0.20
-	}
-}
-
-# gpm_precursor_city_discovery_2
-gpm_precursor_city_discovery_2_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_city_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_buildings_cost_mult = -0.20
+		planet_building_build_speed_mult = 0.30
 	}
 }
 
-# gpm_precursor_shipyards_discovery
-gpm_precursor_shipyards_discovery_specimen = {
+# gpm_precursor_city_discovery_2
+gpm_precursor_city_discovery_2_specimen = {
 	icon = "GFX_specimen_acidic_spores"
 	type = historical_item	
 
@@ -217,7 +197,26 @@ gpm_precursor_shipyards_discovery_specimen = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		ship_upgrades_cost_mult = -0.10
+		planet_buildings_cost_mult = -0.20
+	}
+}
+
+# gpm_precursor_shipyards_discovery
+gpm_precursor_shipyards_discovery_specimen = {
+	icon = "GFX_gpm_precursor_shipyards_discovery_specimen"
+	type = historical_item	
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		# RARITY = common
+		# RARITY = rare
+		# RARITY = epic
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		starbase_shipyard_build_speed_mult = 0.15
 	}
 }
 
@@ -230,8 +229,8 @@ gpm_precursor_shipyards_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -242,7 +241,7 @@ gpm_precursor_shipyards_discovery_2_specimen = {
 
 # gpm_precursor_planetary_gun_discovery
 gpm_precursor_planetary_gun_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_planetary_gun_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
@@ -280,44 +279,25 @@ gpm_precursor_planetary_gun_discovery_2_specimen = {
 
 # gpm_precursor_bunker_grid_discovery
 gpm_precursor_bunker_grid_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_bunker_grid_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		ship_orbital_bombardment_mult = 0.10
+		pop_soldier_bonus_workforce_mult = 0.10
 	}
 }
 
 # gpm_precursor_bunker_grid_discovery_2
 gpm_precursor_bunker_grid_discovery_2_specimen = {
-	icon = "GFX_specimen_acidic_spores"
-	type = historical_item	
-
-	inline_script = {
-		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
-		# RARITY = rare
-		# RARITY = epic
-		# RARITY = exceptional
-	}
-
-	triggered_country_modifier = {
-		mult = value:historical_item_specimens_modifiers_mult
-		army_defense_health_mult = 0.10
-	}
-}
-
-# gpm_precursor_mechs_discovery
-gpm_precursor_mechs_discovery_specimen = {
 	icon = "GFX_specimen_acidic_spores"
 	type = historical_item	
 
@@ -331,7 +311,26 @@ gpm_precursor_mechs_discovery_specimen = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		weapon_type_energy_weapon_damage_mult = 0.20
+		army_defense_health_mult = 0.10
+	}
+}
+
+# gpm_precursor_mechs_discovery
+gpm_precursor_mechs_discovery_specimen = {
+	icon = "GFX_gpm_precursor_mechs_discovery_specimen"
+	type = historical_item	
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		# RARITY = common
+		# RARITY = rare
+		# RARITY = epic
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		weapon_type_explosive_weapon_damage_mult = 0.20
 	}
 }
 
@@ -344,8 +343,8 @@ gpm_precursor_mechs_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -356,7 +355,7 @@ gpm_precursor_mechs_discovery_2_specimen = {
 
 # gpm_precursor_planetary_shield_discovery
 gpm_precursor_planetary_shield_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_planetary_shield_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
@@ -369,7 +368,9 @@ gpm_precursor_planetary_shield_discovery_specimen = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		weapon_type_kinetic_weapon_damage_mult = 0.20
+		rare_tech_research_speed_mult = 0.10
+		custom_tech_3_research_speed_mult = 0.20
+		dangerous_tech_research_speed_mult = 0.50
 	}
 }
 
@@ -382,8 +383,8 @@ gpm_precursor_planetary_shield_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -394,6 +395,25 @@ gpm_precursor_planetary_shield_discovery_2_specimen = {
 
 # gpm_precursor_floating_city_discovery
 gpm_precursor_floating_city_discovery_specimen = {
+	icon = "GFX_gpm_precursor_floating_city_discovery_specimen"
+	type = historical_item	
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		# RARITY = common
+		# RARITY = rare
+		# RARITY = epic
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		starbase_defense_platform_capacity_add = 8
+	}
+}
+
+# gpm_precursor_floating_city_discovery_2
+gpm_precursor_floating_city_discovery_2_specimen = {
 	icon = "GFX_specimen_acidic_spores"
 	type = historical_item	
 
@@ -407,45 +427,26 @@ gpm_precursor_floating_city_discovery_specimen = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_non_artificial_max_districts_add = 1
-	}
-}
-
-# gpm_precursor_floating_city_discovery_2
-gpm_precursor_floating_city_discovery_2_specimen = {
-	icon = "GFX_specimen_acidic_spores"
-	type = historical_item	
-
-	inline_script = {
-		script = "grand_archive/set_specimen_rarity"
-		# RARITY = common
-		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
-	}
-
-	triggered_country_modifier = {
-		mult = value:historical_item_specimens_modifiers_mult
 		ship_speed_mult = 0.10
 	}
 }
 
 # gpm_precursor_capital_complex_discovery
 gpm_precursor_capital_complex_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_capital_complex_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 50
+		empire_size_colonies_mult = -0.10
 	}
 }
 
@@ -458,8 +459,8 @@ gpm_precursor_capital_complex_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -470,15 +471,15 @@ gpm_precursor_capital_complex_discovery_2_specimen = {
 
 # gpm_precursor_communication_hub_discovery
 gpm_precursor_communication_hub_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_communication_hub_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -496,8 +497,8 @@ gpm_precursor_communication_hub_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -507,7 +508,26 @@ gpm_precursor_communication_hub_discovery_2_specimen = {
 }
 
 # gpm_precursor_singularity_drive_discovery
-gpm_gpm_precursor_singularity_drive_discovery_specimen = {
+gpm_precursor_singularity_drive_discovery_specimen = {
+	icon = "GFX_gpm_precursor_singularity_drive_discovery_specimen"
+	type = historical_item	
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		# RARITY = common
+		# RARITY = rare
+		# RARITY = epic
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		pop_researcher_bonus_workforce_mult = 0.06
+	}
+}
+
+# gpm_precursor_singularity_drive_discovery_2
+gpm_precursor_singularity_drive_discovery_2_specimen = {
 	icon = "GFX_specimen_acidic_spores"
 	type = historical_item	
 
@@ -515,27 +535,8 @@ gpm_gpm_precursor_singularity_drive_discovery_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
-	}
-
-	triggered_country_modifier = {
-		mult = value:historical_item_specimens_modifiers_mult
-		intel_decryption_add = 2
-	}
-}
-
-# gpm_precursor_singularity_drive_discovery_2
-gpm_gpm_precursor_singularity_drive_discovery_2_specimen = {
-	icon = "GFX_specimen_acidic_spores"
-	type = historical_item	
-
-	inline_script = {
-		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
-		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -546,20 +547,20 @@ gpm_gpm_precursor_singularity_drive_discovery_2_specimen = {
 
 # gpm_precursor_eternal_fortress_discovery
 gpm_precursor_eternal_fortress_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_eternal_fortress_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_orbital_bombardment_damage = -0.10
+		ship_orbital_bombardment_mult = 0.15
 	}
 }
 
@@ -572,8 +573,8 @@ gpm_precursor_eternal_fortress_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -584,20 +585,20 @@ gpm_precursor_eternal_fortress_discovery_2_specimen = {
 
 # gpm_precursor_prison_planet_discovery
 gpm_precursor_prison_planet_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_prison_planet_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_buildings_minerals_cost_mult = -0.10
+		planet_crime_add = -10
 	}
 }
 
@@ -608,10 +609,10 @@ gpm_precursor_prison_planet_discovery_2_specimen = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
+		# RARITY = common
 		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -622,20 +623,20 @@ gpm_precursor_prison_planet_discovery_2_specimen = {
 
 # gpm_precursor_mines_discovery
 gpm_precursor_mines_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_mines_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.10
+		planet_miners_minerals_produces_add = 0.1
 	}
 }
 
@@ -648,8 +649,8 @@ gpm_precursor_mines_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -660,20 +661,20 @@ gpm_precursor_mines_discovery_2_specimen = {
 
 # gpm_precursor_manufactorium_discovery
 gpm_precursor_manufactorium_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_manufactorium_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_jobs_alloys_produces_mult = 0.10
+		planet_amenities_add = 500
 	}
 }
 
@@ -686,8 +687,8 @@ gpm_precursor_manufactorium_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -698,20 +699,20 @@ gpm_precursor_manufactorium_discovery_2_specimen = {
 
 # gpm_precursor_vaults_discovery
 gpm_precursor_vaults_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_vaults_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
+		# RARITY = common
 		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		ship_archaeological_site_excavation_speed_mult = 0.10
+		country_base_trade_produces_add = 50
 	}
 }
 
@@ -723,9 +724,9 @@ gpm_precursor_vaults_discovery_2_specimen = {
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -736,20 +737,20 @@ gpm_precursor_vaults_discovery_2_specimen = {
 
 # gpm_precursor_crashed_spacestation_discovery
 gpm_precursor_crashed_spacestation_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_crashed_spacestation_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_starbase_capacity_add = 2
+		ship_speed_mult = 0.10
 	}
 }
 
@@ -761,9 +762,9 @@ gpm_precursor_crashed_spacestation_discovery_2_specimen = {
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -774,20 +775,20 @@ gpm_precursor_crashed_spacestation_discovery_2_specimen = {
 
 # gpm_precursor_battleground_ruins_discovery
 gpm_precursor_battleground_ruins_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_battleground_ruins_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		army_damage_mult = 0.10
+		army_morale_damage_mult = 0.20
 	}
 }
 
@@ -799,9 +800,9 @@ gpm_precursor_battleground_ruins_discovery_2_specimen = {
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -812,20 +813,20 @@ gpm_precursor_battleground_ruins_discovery_2_specimen = {
 
 # gpm_precursor_outpost_ruins_discovery
 gpm_precursor_outpost_ruins_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_outpost_ruins_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_naval_cap_add = 10
+		planet_colony_development_speed_mult = 0.15
 	}
 }
 
@@ -838,8 +839,8 @@ gpm_precursor_outpost_ruins_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -850,20 +851,20 @@ gpm_precursor_outpost_ruins_discovery_2_specimen = {
 
 # gpm_precursor_harbor_ruins_discovery
 gpm_precursor_harbor_ruins_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_harbor_ruins_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
+		# RARITY = common
 		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		planet_colony_development_speed_mult = 0.25
+		pop_farmer_bonus_workforce_mult = 0.10
 	}
 }
 
@@ -876,8 +877,8 @@ gpm_precursor_harbor_ruins_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -888,15 +889,15 @@ gpm_precursor_harbor_ruins_discovery_2_specimen = {
 
 # gpm_precursor_ruins_discovery
 gpm_precursor_ruins_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_ruins_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
+		# RARITY = common
 		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -914,8 +915,8 @@ gpm_precursor_ruins_discovery_2_specimen = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
@@ -926,20 +927,20 @@ gpm_precursor_ruins_discovery_2_specimen = {
 
 # gpm_precursor_obelisks_discovery
 gpm_precursor_obelisks_discovery_specimen = {
-	icon = "GFX_specimen_acidic_spores"
+	icon = "GFX_gpm_precursor_obelisks_discovery_specimen"
 	type = historical_item	
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
 		# RARITY = rare
-		RARITY = epic
-		# RARITY = exceptional
+		# RARITY = epic
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		commander_skill_levels = 2
+		ship_armor_regen_add_perc = 0.1
 	}
 }
 
@@ -951,9 +952,9 @@ gpm_precursor_obelisks_discovery_2_specimen = {
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
 		# RARITY = common
-		RARITY = rare
+		# RARITY = rare
 		# RARITY = epic
-		# RARITY = exceptional
+		RARITY = exceptional
 	}
 
 	triggered_country_modifier = {

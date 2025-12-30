@@ -9,17 +9,33 @@ gpm_refinery_ruined = {
 	entity = "gpm_refinery_damaged_entity"
 	portrait = "GFX_gpm_ruined_refinery_background"
 
+	show_in_outliner = yes
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1000
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
+
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	entity_offset = { x = @entity_x y = @entity_y }
 	
-	resources = {
-		category = megastructures
-		produces = {
-			unity = 10
-		}
-	}
-
 	potential = {
 		always = no
 	}
@@ -35,19 +51,41 @@ gpm_refinery_restored = {
 	show_galactic_map_icon = yes
 	show_in_outliner = no
 	entity_offset = { x = @entity_x y = @entity_y }
-	build_time = 1200
+	build_time = 2520
+	
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1500
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 1500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 	resources = {
 		category = megastructures
 		cost = {
-			minerals = 10000
+			minerals = 2000
 		}
 
 		upkeep = {
-			minerals = 50
+			minerals = 5
 		}
 		produces = {
 			energy = 30
-			unity = 20
+			unity = 10
 		}
 		produces = {
 			trigger = {
@@ -80,7 +118,7 @@ gpm_refinery_restored = {
 					}
 				}
 			}
-			energy = 10
+			energy = 5
 		}
 	}
 
@@ -140,29 +178,29 @@ gpm_refinery_restored = {
 					gpm_d_sun_energy_deposit = { add_deposit = gpm_d_sun_energy_deposit }
 				}
 				random_list = {
-					90 = { }
-					10 = { add_deposit = d_exotic_gases_1 }
-					10 = { add_deposit = d_exotic_gases_2 }
-					10 = { add_deposit = d_exotic_gases_3 }
-					10 = { add_deposit = d_volatile_motes_1 }
-					10 = { add_deposit = d_volatile_motes_2 }
-					10 = { add_deposit = d_volatile_motes_3 }
+					64 = { }
+					32 = { add_deposit = d_exotic_gases_1 }
+					8 = { add_deposit = d_exotic_gases_2 }
+					6 = { add_deposit = d_exotic_gases_3 }
+					4 = { add_deposit = d_volatile_motes_1 }
+					2 = { add_deposit = d_volatile_motes_2 }
+					1 = { add_deposit = d_volatile_motes_3 }
 				}
 			}
 			if = {
 				limit = { has_deposit = no }
 				random_list = {
-					10 = { add_deposit = d_energy_2 }
-					10 = { add_deposit = d_energy_3 }
-					10 = { add_deposit = d_energy_4 }
-					10 = { add_deposit = d_energy_5 }
-					10 = { add_deposit = d_energy_6 }
-					10 = { add_deposit = d_energy_7 }
-					10 = { add_deposit = d_energy_8 }
-					10 = { add_deposit = d_energy_9 }
-					10 = { add_deposit = d_exotic_gases_1 }
-					10 = { add_deposit = d_exotic_gases_2 }
-					10 = { add_deposit = d_exotic_gases_3 }
+					128 = { add_deposit = d_energy_2 }
+					64 = { add_deposit = d_energy_3 }
+					32 = { add_deposit = d_energy_4 }
+					16 = { add_deposit = d_energy_5 }
+					8 = { add_deposit = d_energy_6 }
+					4 = { add_deposit = d_energy_7 }
+					2 = { add_deposit = d_energy_8 }
+					1 = { add_deposit = d_energy_9 }
+					4 = { add_deposit = d_exotic_gases_1 }
+					2 = { add_deposit = d_exotic_gases_2 }
+					1 = { add_deposit = d_exotic_gases_3 }
 				}
 			}
 		}
@@ -201,17 +239,33 @@ gpm_mining_facility_ruined = {
 	entity = "gpm_mining_facility_damaged_entity"
 	portrait = "GFX_gpm_ruined_mining_station_background"
 
+	show_in_outliner = yes
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1000
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
+
 	place_entity_on_planet_plane = yes
 	show_galactic_map_icon = yes
 	entity_offset = { x = @entity_x y = @entity_y }
 	
-	resources = {
-		category = megastructures
-		produces = {
-			unity = 10
-		}
-	}
-
 	potential = {
 		always = no
 	}
@@ -227,19 +281,41 @@ gpm_mining_facility_restored = {
 	show_galactic_map_icon = yes
 	show_in_outliner = no
 	entity_offset = { x = @entity_x y = @entity_y }
-	build_time = 900
+	build_time = 2520
+	
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1500
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 1500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 	resources = {
 		category = megastructures
 		cost = {
-			minerals = 5000
+			minerals = 1000
 		}
 
 		upkeep = {
-			energy = 25
+			energy = 5
 		}
 		produces = {
-			minerals = 50
-			unity = 20			
+			minerals = 30
+			unity = 10
 		}
 		produces = {
 			trigger = {
@@ -304,7 +380,7 @@ gpm_mining_facility_restored = {
 					}
 				}
 			}
-			food = 15
+			food = 8
 		}
 		produces = {
 			trigger = {
@@ -326,7 +402,7 @@ gpm_mining_facility_restored = {
 					}
 				}
 			}
-			minerals = 10
+			minerals = 5
 		}
 	}
 
@@ -381,26 +457,27 @@ gpm_mining_facility_restored = {
 					d_guardian_dragon_hoard = { add_deposit = d_minerals_10 }
 				}
 				random_list = {
-					90 = { }
-					10 = { add_deposit = d_rare_crystals_1 }
-					10 = { add_deposit = d_rare_crystals_1 }
-					10 = { add_deposit = d_rare_crystals_1 }
-					10 = { add_deposit = d_alloys_1 }
-					10 = { add_deposit = d_alloys_2 }
-					10 = { add_deposit = d_alloys_3 }
+					64 = { }
+					16 = { add_deposit = d_rare_crystals_1 }
+					4 = { add_deposit = d_rare_crystals_2 }
+					1 = { add_deposit = d_rare_crystals_3 }
+					16 = { add_deposit = d_alloys_1 }
+					4 = { add_deposit = d_alloys_2 }
+					1 = { add_deposit = d_alloys_3 }
 				}
 			}
 			if = {
 				limit = { has_deposit = no }
 				random_list = {
-					10 = { add_deposit = d_minerals_2 }
-					10 = { add_deposit = d_minerals_3 }
-					10 = { add_deposit = d_minerals_4 }
-					10 = { add_deposit = d_minerals_5 }
-					10 = { add_deposit = d_minerals_6 }
-					10 = { add_deposit = d_minerals_7 }
-					10 = { add_deposit = d_minerals_8 }
-					10 = { add_deposit = d_minerals_9 }
+					64 = { add_deposit = d_minerals_1 }
+					128 = { add_deposit = d_minerals_2 }
+					64 = { add_deposit = d_minerals_3 }
+					32 = { add_deposit = d_minerals_4 }
+					16 = { add_deposit = d_minerals_5 }
+					8 = { add_deposit = d_minerals_6 }
+					4 = { add_deposit = d_minerals_7 }
+					2 = { add_deposit = d_minerals_8 }
+					1 = { add_deposit = d_minerals_9 }
 				}
 			}
 		}
@@ -432,18 +509,34 @@ gpm_mining_facility_restored = {
 gpm_observation_station_ruined = {
 	entity = "gpm_observation_station_damaged_entity"
 	portrait = "GFX_gpm_ruined_station_background"
+
+	show_in_outliner = yes
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1000
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 	show_galactic_map_icon = yes
 
 	place_entity_on_planet_plane = no
 	entity_offset = { x = @entity_x y = @entity_y }
 	
-	resources = {
-		category = megastructures
-		produces = {
-			unity = 10
-		}
-	}
-
 	potential = {
 		always = no
 	}
@@ -459,20 +552,42 @@ gpm_observation_station_restored = {
 	place_entity_on_planet_plane = no
 	show_in_outliner = no
 	entity_offset = { x = @entity_x y = @entity_y }
-	build_time = 750
+	build_time = 2520
+	
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1500
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 1500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 	resources = {
 		category = megastructures
 		cost = {
-			minerals = 10000
+			minerals = 2000
 		}
 		upkeep = {
-			energy = 25
+			energy = 5
 		}
 		produces = {
-			society_research = 30
-			engineering_research = 30
-			physics_research = 30
-			unity = 20
+			society_research = 15
+			engineering_research = 15
+			physics_research = 15
+			unity = 10
 		}
 		produces = {
 			trigger = {
@@ -489,7 +604,7 @@ gpm_observation_station_restored = {
 					}
 				}
 			}
-			society_research = 10
+			society_research = 5
 		}
 		produces = {
 			trigger = {
@@ -506,7 +621,7 @@ gpm_observation_station_restored = {
 					}
 				}
 			}
-			society_research = 10
+			society_research = 5
 		}
 		# produces = {
 			# trigger = {
@@ -533,9 +648,9 @@ gpm_observation_station_restored = {
 					}
 				}
 			}
-			physics_research = 20
-			engineering_research = 20
-			society_research = 20
+			physics_research = 5
+			engineering_research = 5
+			society_research = 5
 		}
 		produces = {
 			trigger = {
@@ -553,7 +668,7 @@ gpm_observation_station_restored = {
 					}
 				}
 			}
-			society_research = 10
+			society_research = 5
 		}
 		produces = {
 			trigger = {
@@ -566,7 +681,7 @@ gpm_observation_station_restored = {
 					}
 				}
 			}
-			physics_research = 10
+			physics_research = 5
 		}
 		produces = {
 			trigger = {
@@ -581,7 +696,7 @@ gpm_observation_station_restored = {
 					}
 				}
 			}
-			engineering_research = 10
+			engineering_research = 5
 		}
 		# produces = {
 			# trigger = {
@@ -709,30 +824,33 @@ gpm_observation_station_restored = {
 			if = {
 				limit = { has_deposit = no }
 				random_list = {
-					90 = { }
-					10 = { add_deposit = gpm_d_triple_science }
-					10 = { add_deposit = gpm_d_double_science_phy_soc }
-					10 = { add_deposit = gpm_d_double_science_soc_phy }
-					10 = { add_deposit = gpm_d_double_science_phy_eng }
-					10 = { add_deposit = gpm_d_double_science_eng_phy }
-					10 = { add_deposit = gpm_d_double_science_soc_eng }
-					10 = { add_deposit = gpm_d_double_science_eng_soc }
-					10 = { add_deposit = gpm_d_double_science_soc_eng }
-					10 = { add_deposit = d_engineering_3 }
-					10 = { add_deposit = d_engineering_4 }
-					10 = { add_deposit = d_engineering_5 }
-					10 = { add_deposit = d_engineering_6 }
-					10 = { add_deposit = d_engineering_7 }
-					10 = { add_deposit = d_physics_3 }
-					10 = { add_deposit = d_physics_4 }
-					10 = { add_deposit = d_physics_5 }
-					10 = { add_deposit = d_physics_6 }
-					10 = { add_deposit = d_physics_7 }
-					10 = { add_deposit = d_society_3 }
-					10 = { add_deposit = d_society_4 }
-					10 = { add_deposit = d_society_5 }
-					10 = { add_deposit = d_society_6 }
-					10 = { add_deposit = d_society_7 }
+					128 = { }
+					1 = { add_deposit = gpm_d_triple_science }
+					2 = { add_deposit = gpm_d_double_science_phy_soc }
+					2 = { add_deposit = gpm_d_double_science_soc_phy }
+					2 = { add_deposit = gpm_d_double_science_phy_eng }
+					2 = { add_deposit = gpm_d_double_science_eng_phy }
+					2 = { add_deposit = gpm_d_double_science_soc_eng }
+					2 = { add_deposit = gpm_d_double_science_eng_soc }
+					2 = { add_deposit = gpm_d_double_science_soc_eng }
+					32 = { add_deposit = d_engineering_2 }
+					16 = { add_deposit = d_engineering_3 }
+					8 = { add_deposit = d_engineering_4 }
+					4 = { add_deposit = d_engineering_5 }
+					2 = { add_deposit = d_engineering_6 }
+					1 = { add_deposit = d_engineering_7 }
+					32 = { add_deposit = d_physics_2 }
+					16 = { add_deposit = d_physics_3 }
+					8 = { add_deposit = d_physics_4 }
+					4 = { add_deposit = d_physics_5 }
+					2 = { add_deposit = d_physics_6 }
+					1 = { add_deposit = d_physics_7 }
+					32 = { add_deposit = d_society_2 }
+					16 = { add_deposit = d_society_3 }
+					8 = { add_deposit = d_society_4 }
+					4 = { add_deposit = d_society_5 }
+					2 = { add_deposit = d_society_6 }
+					1 = { add_deposit = d_society_7 }
 				}
 			}
 		}
@@ -769,16 +887,32 @@ gpm_observation_station_restored = {
 gpm_silo_ruined = {
 	entity = "gpm_silo_damaged_entity"
 	portrait = "GFX_gpm_ruined_silo_background"
+
+	show_in_outliner = yes
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1000
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	build_outside_gravity_well = yes
-	
-	resources = {
-		category = megastructures
-		produces = {
-			unity = 10
-		}
-	}
 
 	potential = {
 		always = no
@@ -812,18 +946,40 @@ gpm_silo_restored = {
 	upgrade_from = {
 		gpm_silo_ruined
 	}
-	build_time = 1800
+	build_time = 2520
+	
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 1500
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				minerals = 1500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 	resources = {
 		category = megastructures
 		cost = {
-			minerals = 10000
+			minerals = 2000
 		}
 
 		upkeep = {
-			energy = 20
+			energy = 10
 		}
 		produces = {
-			unity = 20
+			unity = 10
 		}
 	}
 
@@ -861,6 +1017,6 @@ gpm_silo_restored = {
 
 	country_modifier = {
 		country_resource_max_add = 25000
-		country_naval_cap_add = 30
+		country_naval_cap_add = 40
 	}
 }

@@ -32,12 +32,14 @@
  # R.E.S.
  # Ships
  # Ship Components
+ # Specimen
  # Starbase Buildings and Modules
  # Start Menu
  # Techologies
  # Traits
  # War Goals
  # war Names
+ # Zones
  #######################################
 
  #######################################
@@ -679,6 +681,12 @@
  mod_planet_districts_time_cost_mult:0 "Districts £time£ Buildtime"
  mod_planet_districts_minerals_cost_mult: "District £minerals£ Mineral Cost"
 
+ mod_planet_districts_cities_minerals_upkeep_add:0 "£minerals£ upkeep Per £district£District"
+ mod_planet_districts_cities_alloys_food_upkeep_add:0 "£food£ upkeep Per £district£District"
+ mod_planet_districts_cities_alloys_produces_add:0 "£alloys£ produced Per £district£District"
+
+ 
+
  mod_planet_buildings_minerals_cost_add:0 "Planet Building £minerals£ Mineral Cost"
  mod_planet_buildings_minerals_cost_mult:0 "Planet Building £minerals£ Mineral Cost"
  mod_planet_buildings_energy_upkeep_add:0 "Buildings £energy£ Energy Upkeep"
@@ -907,6 +915,201 @@
  GPM_HANGAR_1:0 "Autonomous Maintanance Bay"
  GPM_HANGAR_1_DESC:0 "Autonomous maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
  
+ #######################################
+ #### Specimen
+ #######################################
+
+ gpm_precursor_remnants_discovery_specimen:0 "Ancient Binary Code"
+ gpm_precursor_remnants_discovery_specimen_desc_short:0 ""
+ gpm_precursor_remnants_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_remnants_discovery_2_specimen:0 ""
+ gpm_precursor_remnants_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_remnants_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_energy_grid_discovery_specimen:0 "Zero Resistance Ammeter"
+ gpm_precursor_energy_grid_discovery_specimen_desc_short:0 ""
+ gpm_precursor_energy_grid_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_energy_grid_discovery_2_specimen:0 ""
+ gpm_precursor_energy_grid_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_energy_grid_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_satellite_grid_discovery_specimen:0 "Low Orbit Surveillance Drone"
+ gpm_precursor_satellite_grid_discovery_specimen_desc_short:0 ""
+ gpm_precursor_satellite_grid_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_satellite_grid_discovery_2_specimen:0 ""
+ gpm_precursor_satellite_grid_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_satellite_grid_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_city_discovery_specimen:0 "Ancient Concrete"
+ gpm_precursor_city_discovery_specimen_desc_short:0 ""
+ gpm_precursor_city_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_city_discovery_2_specimen:0 ""
+ gpm_precursor_city_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_city_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_shipyards_discovery_specimen:0 "Vacuum Alloy Printer"
+ gpm_precursor_shipyards_discovery_specimen_desc_short:0 ""
+ gpm_precursor_shipyards_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_shipyards_discovery_2_specimen:0 ""
+ gpm_precursor_shipyards_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_shipyards_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_planetary_gun_discovery_specimen:0 "Penetrator Rounds"
+ gpm_precursor_planetary_gun_discovery_specimen_desc_short:0 ""
+ gpm_precursor_planetary_gun_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_planetary_gun_discovery_2_specimen:0 ""
+ gpm_precursor_planetary_gun_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_planetary_gun_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_bunker_grid_discovery_specimen:0 "Organic Barbed Wire"
+ gpm_precursor_bunker_grid_discovery_specimen_desc_short:0 ""
+ gpm_precursor_bunker_grid_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_bunker_grid_discovery_2_specimen:0 ""
+ gpm_precursor_bunker_grid_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_bunker_grid_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_mechs_discovery_specimen:0 "Jumping Warhead"
+ gpm_precursor_mechs_discovery_specimen_desc_short:0 ""
+ gpm_precursor_mechs_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_mechs_discovery_2_specimen:0 ""
+ gpm_precursor_mechs_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_mechs_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_planetary_shield_discovery_specimen:0 "Shielded Laboratory"
+ gpm_precursor_planetary_shield_discovery_specimen_desc_short:0 ""
+ gpm_precursor_planetary_shield_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_planetary_shield_discovery_2_specimen:0 ""
+ gpm_precursor_planetary_shield_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_planetary_shield_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_floating_city_discovery_specimen:0 "Ancient Thruster"
+ gpm_precursor_floating_city_discovery_specimen_desc_short:0 ""
+ gpm_precursor_floating_city_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_floating_city_discovery_2_specimen:0 ""
+ gpm_precursor_floating_city_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_floating_city_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_capital_complex_discovery_specimen:0 "Indestructible Flag"
+ gpm_precursor_capital_complex_discovery_specimen_desc_short:0 ""
+ gpm_precursor_capital_complex_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_capital_complex_discovery_2_specimen:0 ""
+ gpm_precursor_capital_complex_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_capital_complex_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_communication_hub_discovery_specimen:0 "Miniature Uplink"
+ gpm_precursor_communication_hub_discovery_specimen_desc_short:0 ""
+ gpm_precursor_communication_hub_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_communication_hub_discovery_2_specimen:0 ""
+ gpm_precursor_communication_hub_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_communication_hub_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_singularity_drive_discovery_specimen:0 "Random Access Memory Unit"
+ gpm_precursor_singularity_drive_discovery_specimen_desc_short:0 ""
+ gpm_precursor_singularity_drive_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_singularity_drive_discovery_2_specimen:0 ""
+ gpm_precursor_singularity_drive_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_singularity_drive_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_eternal_fortress_discovery_specimen:0 "Unexploded Warhead"
+ gpm_precursor_eternal_fortress_discovery_specimen_desc_short:0 ""
+ gpm_precursor_eternal_fortress_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_eternal_fortress_discovery_2_specimen:0 ""
+ gpm_precursor_eternal_fortress_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_eternal_fortress_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_prison_planet_discovery_specimen:0 "Strange Mineral Sample"
+ gpm_precursor_prison_planet_discovery_specimen_desc_short:0 ""
+ gpm_precursor_prison_planet_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_prison_planet_discovery_2_specimen:0 ""
+ gpm_precursor_prison_planet_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_prison_planet_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_mines_discovery_specimen:0 ""
+ gpm_precursor_mines_discovery_specimen_desc_short:0 ""
+ gpm_precursor_mines_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_mines_discovery_2_specimen:0 ""
+ gpm_precursor_mines_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_mines_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_manufactorium_discovery_specimen:0 "Magical Card Game"
+ gpm_precursor_manufactorium_discovery_specimen_desc_short:0 ""
+ gpm_precursor_manufactorium_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_manufactorium_discovery_2_specimen:0 ""
+ gpm_precursor_manufactorium_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_manufactorium_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_vaults_discovery_specimen:0 "Kalandra's Mirror"
+ gpm_precursor_vaults_discovery_specimen_desc_short:0 ""
+ gpm_precursor_vaults_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_vaults_discovery_2_specimen:0 ""
+ gpm_precursor_vaults_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_vaults_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_crashed_spacestation_discovery_specimen:0 "Momentum Wheel"
+ gpm_precursor_crashed_spacestation_discovery_specimen_desc_short:0 ""
+ gpm_precursor_crashed_spacestation_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_crashed_spacestation_discovery_2_specimen:0 ""
+ gpm_precursor_crashed_spacestation_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_crashed_spacestation_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_battleground_ruins_discovery_specimen:0 "Reconnaissance Drone"
+ gpm_precursor_battleground_ruins_discovery_specimen_desc_short:0 ""
+ gpm_precursor_battleground_ruins_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_battleground_ruins_discovery_2_specimen:0 ""
+ gpm_precursor_battleground_ruins_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_battleground_ruins_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_outpost_ruins_discovery_specimen:0 "Moisture Pylon"
+ gpm_precursor_outpost_ruins_discovery_specimen_desc_short:0 ""
+ gpm_precursor_outpost_ruins_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_outpost_ruins_discovery_2_specimen:0 ""
+ gpm_precursor_outpost_ruins_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_outpost_ruins_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_harbor_ruins_discovery_specimen:0 "Wireless Fishing Rod"
+ gpm_precursor_harbor_ruins_discovery_specimen_desc_short:0 ""
+ gpm_precursor_harbor_ruins_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_harbor_ruins_discovery_2_specimen:0 ""
+ gpm_precursor_harbor_ruins_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_harbor_ruins_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_ruins_discovery_specimen:0 "Extensively Aged Intoxicating Beverages"
+ gpm_precursor_ruins_discovery_specimen_desc_short:0 ""
+ gpm_precursor_ruins_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_ruins_discovery_2_specimen:0 ""
+ gpm_precursor_ruins_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_ruins_discovery_2_specimen_desc_details:0 ""
+
+ gpm_precursor_obelisks_discovery_specimen:0 ""
+ gpm_precursor_obelisks_discovery_specimen_desc_short:0 ""
+ gpm_precursor_obelisks_discovery_specimen_desc_details:0 ""
+
+ gpm_precursor_obelisks_discovery_2_specimen:0 "Piece Of The Obelisk"
+ gpm_precursor_obelisks_discovery_2_specimen_desc_short:0 ""
+ gpm_precursor_obelisks_discovery_2_specimen_desc_details:0 ""
  
  #######################################
  #### Starbase Buildings and Modules
@@ -1627,7 +1830,15 @@
  gpm_war_of_the_cryo_core:0 "The Cryo Wars"
  gpm_war_of_the_war_forge:0 "War of the Forge"
  
+ #######################################
+ #### Zones
+ #######################################
+ zone_gpm_precursor_science:0 "Archaeological Zone"
+ zone_gpm_precursor_science_desc:0 "Designate a sector as an important archaeological site"
  
+ zone_gpm_precursor_manufactorium:0 "Autonomous Manufactorium Zone"
+ zone_gpm_precursor_manufactorium_desc:0 "A fully restored autonomous manufactorium zone can produce unseen quantities of resources"
+
  
  
  

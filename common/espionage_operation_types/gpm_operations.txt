@@ -122,10 +122,10 @@ operation_gpm_steal_relic = {
 			fail_text = operation_one_at_a_time
 		}
 		# Forbid if not neighbours
-		custom_tooltip = {
-			target = { is_neighbor_of = root.owner }
-			fail_text = gpm_operation_not_neighbours
-		}
+		# custom_tooltip = {
+		# 	target = { is_neighbor_of = root.owner }
+		# 	fail_text = gpm_operation_not_neighbours
+		# }
 		
 		# forbid for overlords and their subjects if both arent AI
 		custom_tooltip = {

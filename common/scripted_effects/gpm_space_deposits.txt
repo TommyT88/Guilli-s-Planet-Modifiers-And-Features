@@ -1,5 +1,5 @@
 # Galaxy generation deposit abundancy Settings and factors used for tweaking
-@global_tweak = 0.65
+@global_tweak = 0.15
 @minerals_default = 0.45
 @minerals_rare = 0.35
 @energy_default = 0.30
@@ -37,185 +37,73 @@
 
 gpm_random_res_metallic_ring_deposit = {
 	# 100% deposit amounts (default)
-	if = {
-		limit = {
-			# OR-NOR to catch this within save games where the default was not set. In future reduce to just default flag check -v4.0.11
-			OR = {
-				has_global_flag = gpm_deposits_gal_gen_default
-				NOR = {
-					has_global_flag = gpm_deposits_gal_gen_half
-					has_global_flag = gpm_deposits_gal_gen_quarter
-				}
-			}
-		}
-		random_list = {
-			20 = {
-				clear_deposits = yes
-				random_list = {
-					13 = { add_deposit = d_minerals_3 }
-					11 = { add_deposit = d_minerals_4 }
-					9 = { add_deposit = d_minerals_5 }
-					7 = { add_deposit = d_minerals_6 }
-					5 = { add_deposit = d_minerals_7 }
-					3 = { add_deposit = d_minerals_8 }
-					1 = { add_deposit = d_minerals_9 }
-				}
-			}
-			2 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_alloys_2 }
-					6 = { add_deposit = d_alloys_3 }
-					3 = { add_deposit = d_alloys_4 }
-					1 = { add_deposit = d_alloys_5 }
-				}
-			}
-			1 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_rare_crystals_1 }
-					7 = { add_deposit = d_rare_crystals_2 }
-					5 = { add_deposit = d_rare_crystals_3 }
-					3 = { add_deposit = d_rare_crystals_4 }
-					1 = { add_deposit = d_rare_crystals_5 }
-				}
-			}
-			1 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_volatile_motes_1 }
-					7 = { add_deposit = d_volatile_motes_2 }
-					5 = { add_deposit = d_volatile_motes_3 }
-					3 = { add_deposit = d_volatile_motes_4 }
-					1 = { add_deposit = d_volatile_motes_5 }
-				}
-			}
-		}
-	}
-	# 50% deposit amounts (default)
-	if = {
-		limit = { has_global_flag = gpm_deposits_gal_gen_half }
-		random_list = {
-			20 = {
-				clear_deposits = yes
-				random_list = {
-					13 = { add_deposit = d_minerals_3 }
-					11 = { add_deposit = d_minerals_4 }
-					9 = { add_deposit = d_minerals_5 }
-					7 = { add_deposit = d_minerals_6 }
-					# 5 = { add_deposit = d_minerals_7 }
-					# 3 = { add_deposit = d_minerals_8 }
-					# 1 = { add_deposit = d_minerals_9 }
-				}
-			}
-			2 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_alloys_2 }
-					6 = { add_deposit = d_alloys_3 }
-					3 = { add_deposit = d_alloys_4 }
-					# 1 = { add_deposit = d_alloys_5 }
-				}
-			}
-			1 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_rare_crystals_1 }
-					7 = { add_deposit = d_rare_crystals_2 }
-					5 = { add_deposit = d_rare_crystals_3 }
-					# 3 = { add_deposit = d_rare_crystals_4 }
-					# 1 = { add_deposit = d_rare_crystals_5 }
-				}
-			}
-			1 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_volatile_motes_1 }
-					7 = { add_deposit = d_volatile_motes_2 }
-					5 = { add_deposit = d_volatile_motes_3 }
-					# 3 = { add_deposit = d_volatile_motes_4 }
-					# 1 = { add_deposit = d_volatile_motes_5 }
-				}
-			}
-		}
-	}
-	# 25% deposit amounts (default)
-	if = {
-		limit = { has_global_flag = gpm_deposits_gal_gen_quarter }
-		random_list = {
-			20 = {
-				clear_deposits = yes
-				random_list = {
-					13 = { add_deposit = d_minerals_3 }
-					11 = { add_deposit = d_minerals_4 }
-					# 9 = { add_deposit = d_minerals_5 }
-					# 7 = { add_deposit = d_minerals_6 }
-					# 5 = { add_deposit = d_minerals_7 }
-					# 3 = { add_deposit = d_minerals_8 }
-					# 1 = { add_deposit = d_minerals_9 }
-				}
-			}
-			2 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_alloys_2 }
-					6 = { add_deposit = d_alloys_3 }
-					# 3 = { add_deposit = d_alloys_4 }
-					# 1 = { add_deposit = d_alloys_5 }
-				}
-			}
-			1 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_rare_crystals_1 }
-					7 = { add_deposit = d_rare_crystals_2 }
-					# 5 = { add_deposit = d_rare_crystals_3 }
-					# 3 = { add_deposit = d_rare_crystals_4 }
-					# 1 = { add_deposit = d_rare_crystals_5 }
-				}
-			}
-			1 = {
-				clear_deposits = yes
-				random_list = {
-					9 = { add_deposit = d_volatile_motes_1 }
-					7 = { add_deposit = d_volatile_motes_2 }
-					# 5 = { add_deposit = d_volatile_motes_3 }
-					# 3 = { add_deposit = d_volatile_motes_4 }
-					# 1 = { add_deposit = d_volatile_motes_5 }
-				}
-			}
-		}
-	}
-	
-	# gpm_d_random_trade_small = yes
-}
-
-gpm_random_res_ice_ring_deposit = {
 	random_list = {
 		90 = {
 			clear_deposits = yes
 			random_list = {
-				95 = { add_deposit = d_energy_2 }
-				5 = { add_deposit = d_exotic_gases_1 }
+				13 = { add_deposit = d_minerals_3 }
+				11 = { add_deposit = d_minerals_4 }
+				9 = { add_deposit = d_minerals_5 }
+				7 = { add_deposit = d_minerals_6 }
+				5 = { add_deposit = d_minerals_7 }
+				3 = { add_deposit = d_minerals_8 }
+				1 = { add_deposit = d_minerals_9 }
 			}
 		}
-		40 = {
+		8 = {
 			clear_deposits = yes
 			random_list = {
-				95 = { add_deposit = d_energy_3 }
-				5 = { add_deposit = d_exotic_gases_2 }
+				9 = { add_deposit = d_alloys_2 }
+				6 = { add_deposit = d_alloys_3 }
+				3 = { add_deposit = d_alloys_4 }
+				1 = { add_deposit = d_alloys_5 }
 			}
-			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
+		}
+		1 = {
+			clear_deposits = yes
+			random_list = {
+				9 = { add_deposit = d_rare_crystals_1 }
+				7 = { add_deposit = d_rare_crystals_2 }
+				5 = { add_deposit = d_rare_crystals_3 }
+				3 = { add_deposit = d_rare_crystals_4 }
+				1 = { add_deposit = d_rare_crystals_5 }
+			}
+		}
+		1 = {
+			clear_deposits = yes
+			random_list = {
+				9 = { add_deposit = d_volatile_motes_1 }
+				7 = { add_deposit = d_volatile_motes_2 }
+				5 = { add_deposit = d_volatile_motes_3 }
+				3 = { add_deposit = d_volatile_motes_4 }
+				1 = { add_deposit = d_volatile_motes_5 }
+			}
+		}
+	}
+}
+
+gpm_random_res_ice_ring_deposit = {
+	random_list = {
+		85 = {
+			clear_deposits = yes
+			random_list = {
+				97 = { add_deposit = d_energy_2 }
+				3 = { add_deposit = d_exotic_gases_1 }
+			}
 		}
 		10 = {
 			clear_deposits = yes
 			random_list = {
-				95 = { add_deposit = d_energy_4 }
-				5 = { add_deposit = d_exotic_gases_3 }
+				97 = { add_deposit = d_energy_3 }
+				3 = { add_deposit = d_exotic_gases_2 }
 			}
-			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_half }
-			modifier = { factor = 0 has_global_flag = gpm_deposits_gal_gen_quarter }
+		}
+		5 = {
+			clear_deposits = yes
+			random_list = {
+				97 = { add_deposit = d_energy_4 }
+				3 = { add_deposit = d_exotic_gases_3 }
+			}
 		}
 	}
 	# gpm_d_random_trade_small = yes
@@ -239,12 +127,8 @@ gpm_remove_galaxy_generation_deposits = {
 		}
 
 		random_list = {
-			70 = {
-			}
-			30 = {
-				# deposit galaxy gen setting
-				modifier = { factor = 1.15 has_global_flag = gpm_deposits_gal_gen_half } # not 1:1 with setting duo to cummulating effects of spawning effects
-				modifier = { factor = 1.30 has_global_flag = gpm_deposits_gal_gen_quarter } # not 1:1 with setting duo to cummulating effects of spawning effects
+			85 = { }
+			15 = {
 				if = {
 					limit = { has_deposit = d_minerals_2 }
 					remove_deposit = d_minerals_2
@@ -379,9 +263,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -408,9 +289,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -435,9 +313,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -462,9 +337,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -489,9 +361,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -516,9 +385,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -541,9 +407,6 @@ gpm_add_galaxy_generation_deposits = {
 		# 			modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
 		# 			modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 		# 			modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
-		# 			# deposit galaxy gen setting
-		# 			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-		# 			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 		# 	}
 		# }
 		if = {
@@ -567,9 +430,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -594,9 +454,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -621,9 +478,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -650,9 +504,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -677,9 +528,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -704,9 +552,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -731,9 +576,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -758,9 +600,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -785,9 +624,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -812,9 +648,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -839,9 +672,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -863,9 +693,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -887,9 +714,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -911,9 +735,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -936,9 +757,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -961,9 +779,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -986,9 +801,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1012,9 +824,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1037,9 +846,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1061,9 +867,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1085,9 +888,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1109,9 +909,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1144,9 +941,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1168,9 +962,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1192,9 +983,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1218,9 +1006,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1242,9 +1027,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1269,9 +1051,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1294,9 +1073,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1321,9 +1097,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1346,9 +1119,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1370,9 +1140,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1393,9 +1160,6 @@ gpm_add_galaxy_generation_deposits = {
 		# 			modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
 		# 			modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 		# 			modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
-		# 			# deposit galaxy gen setting
-		# 			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-		# 			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 		# 		}
 		# 	}
 		# }
@@ -1434,9 +1198,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1464,9 +1225,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1491,9 +1249,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1518,9 +1273,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1542,9 +1294,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1572,9 +1321,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1596,9 +1342,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1624,9 +1367,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1652,9 +1392,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1676,9 +1413,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1701,9 +1435,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1731,9 +1462,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1759,9 +1487,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1783,9 +1508,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1807,9 +1529,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1831,9 +1550,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1855,9 +1571,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1880,9 +1593,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1909,9 +1619,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1936,9 +1643,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1965,9 +1669,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -1993,9 +1694,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -2021,9 +1719,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -2048,9 +1743,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}
@@ -2071,9 +1763,6 @@ gpm_add_galaxy_generation_deposits = {
 		# 			modifier = { factor = @modifier_amount_low has_global_flag = gpm_modifier_amount_low }
 		# 			modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 		# 			modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
-		# 			# deposit galaxy gen setting
-		# 			modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-		# 			modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 		# 		}
 		# 	}
 		# }
@@ -2095,9 +1784,6 @@ gpm_add_galaxy_generation_deposits = {
 					modifier = { factor = @modifier_amount_normal has_global_flag = gpm_modifier_amount_normal }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_high }
 					modifier = { factor = @modifier_amount_high has_global_flag = gpm_modifier_amount_extra_high }
-					# deposit galaxy gen setting
-					modifier = { factor = 0.5 has_global_flag = gpm_deposits_gal_gen_half }
-					modifier = { factor = 0.25 has_global_flag = gpm_deposits_gal_gen_quarter }
 				}
 			}
 		}

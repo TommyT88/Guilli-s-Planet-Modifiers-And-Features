@@ -8,7 +8,7 @@ artifact_arcane_deciphering = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 750
+			minor_artifacts = 500
 			# multiplier = value:edict_size_effect
 		}
 	}
@@ -17,7 +17,7 @@ artifact_arcane_deciphering = {
 		weight = 500
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 750 }
+			has_resource = { type = minor_artifacts amount < 500 }
 		}
 		modifier = {
 			factor = 1.5

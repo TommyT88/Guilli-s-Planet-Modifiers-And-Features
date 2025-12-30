@@ -71,7 +71,10 @@ decision_gpm_shield_generator_arrays = {
 				value > 0
 			}
 		}
-		NOT = { has_deposit = gpm_d_planetary_shield_array }
+		NOR = { 
+			has_deposit = gpm_d_planetary_shield_array
+			has_modifier = gpm_precursor_planetary_shield
+		}
 		OR = {
 			gpm_is_planet_class_normal_habitable = yes
 			gpm_is_planet_class_nuked = yes

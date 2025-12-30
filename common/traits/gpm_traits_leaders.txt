@@ -1,69 +1,122 @@
 leader_trait_gpm_guilli = {
-	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "gfx/interface/icons/traits/trait_gpm_guilli.dds"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
 	initial = no
 	randomized = no
 		
-	leader_potential_add = {
-		always = no
+	# leader_potential_add = {
+	# 	always = no
+	# }
+
+	modifier = {
+		ship_anomaly_research_speed_mult = 1
+		science_ship_survey_speed = 1
+		ship_archaeological_site_excavation_speed_mult = 1
 	}
-	
-	councilor_modifier = {
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
 		all_technology_research_speed = 0.10
 		category_psionics_research_speed_mult = 0.50
 		category_psionics_draw_chance_mult = 1.0
 	}
-	
-	icon = "gfx/interface/icons/traits/trait_gpm_guilli.dds"
-	immortal_leaders = yes
 	leader_class = { scientist }
 
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	# allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 }
 
 leader_trait_gpm_shared_soul = {
-	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "gfx/interface/icons/traits/leader_trait_gpm_shared_soul.dds"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
 	initial = no
 	randomized = no
 	
 	leader_potential_add = {
 		always = no
 	}
-	councilor_modifier = {
+
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+		}
+		leader_lifespan_add = 100
+	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
 		country_power_projection_influence_produces_add = 1
 		intel_decryption_add = 2
 		envoys_add = 1
 	}
-	
-	icon = "gfx/interface/icons/traits/leader_trait_gpm_shared_soul.dds"
-	immortal_leaders = yes
 	leader_class = { scientist commander official}
 	
 }
 
 leader_trait_gpm_stealth_tactician = {
-	cost = 0
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "gfx/interface/icons/traits/leader_trait_gpm_stealth_tactician.dds"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
 	initial = no
 	randomized = no
 	
 	leader_potential_add = {
 		from = { has_relic = gpm_r_cloaking_device }
 	}
-	
-	icon = "gfx/interface/icons/traits/leader_trait_gpm_stealth_tactician.dds"
-	modifier = {
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+			exists = owner
+		}
 		ship_evasion_mult = 0.05
-		ship_jumpdrive_cooldown_mult = -0.50
+		ship_cloaking_strength_add = 3
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		ship_cloaking_strength_add = 1
+		ship_jumpdrive_cooldown_mult = -0.25
 	}
 	leader_class = { commander }
 }
 
 leader_trait_gpm_precursor_expert = {
-inline_script = {
+	inline_script = {
 		script = trait/icon
 		CLASS = scientist
 		# ICON = "gfx/interface/icons/traits/leader_trait_gpm_precursor_expert.dds"
 		RARITY = common
-		COUNCIL = no
+		COUNCIL = triggered
 		TIER = 1
 	}
 	# cost = 0
@@ -74,9 +127,26 @@ inline_script = {
 	}
 	
 
-	modifier = {
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+			exists = owner
+		}
+		ship_archaeological_site_excavation_speed_mult = 0.35
+		ship_archaeological_site_clues_add = 1
+	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
 		ship_archaeological_site_excavation_speed_mult = 0.70
 	}
+
+
 	leader_class = { scientist }
 
 	selectable_weight = {
@@ -94,11 +164,14 @@ inline_script = {
 }
 
 leader_trait_gpm_fallen_heraldry = {
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_gpm_fallen_heraldry.dds"
-	
-	initial = no
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "gfx/interface/icons/traits/leader_trait_gpm_fallen_heraldry.dds"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
 	
 	leader_potential_add = {
 		always = no
@@ -109,10 +182,25 @@ leader_trait_gpm_fallen_heraldry = {
 	# 	from = { has_country_flag = gpm_fallen_heraldry_trait_rewarded }
 	# }
 	
-	modifier = {
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+			exists = owner
+		}
 		ship_experience_gain_mult = 1.00
 		ship_weapon_damage = 0.10
 	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+		}
+		ship_experience_gain_mult = 0.50
+		ship_weapon_damage = 0.05
+	}
+
 	leader_class = { commander }
 	
 	ai_weight = {
@@ -121,19 +209,37 @@ leader_trait_gpm_fallen_heraldry = {
 }
 
 leader_trait_gpm_personal_mech = {
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_gpm_personal_mech.dds"
-	
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "gfx/interface/icons/traits/leader_trait_gpm_personal_mech.dds"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
 	initial = no
 	randomized = no
 	
 	leader_potential_add = {
 		always = no
 	}
-	
-	modifier = {	
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
 		army_morale_damage_mult = 0.25
 		army_collateral_damage_mult = 0.25
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_morale_damage_mult = 0.50
+		army_collateral_damage_mult = 0.50
 	}
 	# leader_potential_add = {
 	# 	from = { has_country_flag = gpm_personal_mech_trait_rewarded }
@@ -142,19 +248,37 @@ leader_trait_gpm_personal_mech = {
 }
 
 leader_trait_gpm_battle_standards = {
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_gpm_battle_standards.dds"
-	
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "gfx/interface/icons/traits/leader_trait_gpm_battle_standards.dds"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
 	initial = no
 	randomized = no
 	
 	leader_potential_add = {
 		always = no
 	}
-	
-	modifier = {	
-		army_morale = 0.30
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		army_morale = 0.15
 		army_damage_mult = 0.15
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_morale = 0.30
+		army_damage_mult = 0.30
 	}
 	# leader_potential_add = {
 	# 	from = { has_country_flag = gpm_battle_standards_trait_rewarded }
@@ -175,11 +299,22 @@ gpm_leader_trait_collector = {
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_archaeostudies.dds"
 	leader_potential_add = {
 		from = { has_ancrel = yes }
-		is_ruler = no
 	}
-	modifier = {
-		ship_archaeological_site_excavation_speed_mult = -0.30
-		ship_archaeological_site_clues_add = 1
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		ship_archaeological_site_excavation_speed_mult = -0.35
+		ship_archaeological_site_clues_add = 3
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		specimens_produces_mult = 0.15
 	}
 	
 	custom_tooltip_with_modifiers = gpm_leader_trait_collectorTT
@@ -203,9 +338,14 @@ gpm_leader_trait_collector = {
 }
 
 trait_gpm_historian = {
-	cost = 0
-	icon = "gfx/interface/icons/traits/trait_gpm_historian.dds"
-	
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "gfx/interface/icons/traits/trait_gpm_historian.dds"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
 	initial = no
 	randomized = no
 
@@ -217,8 +357,23 @@ trait_gpm_historian = {
 	# leader_potential_add = {
 	# 	from = { has_country_flag = gpm_historian_trait_rewarded }
 	# }
-	modifier = {
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		ship_archaeological_site_excavation_speed_mult = 0.2
 		ship_archaeological_site_clues_add = 1
+	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		ship_archaeological_site_excavation_speed_mult = 0.1
+		historical_item_specimens_produces_mult = 0.25
 	}
 	
 	leader_class = { scientist }

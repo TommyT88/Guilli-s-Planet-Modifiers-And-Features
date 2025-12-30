@@ -2921,7 +2921,16 @@ ship_event = {
 	#### FOOD OPTION ####
 	#####################
 	option = {
-		trigger = { }
+		trigger = {
+			OWNER = {
+				NOR = {
+					has_civic = civic_machine_servitor
+					has_civic = civic_hive_devouring_swarm
+					has_civic = civic_machine_terminator
+					has_civic = civic_agrarian_idyll
+				}
+			}
+		}
 		name = gpm_survey.FOOD_1
 		# leader experience
 		locked_random_list = {
@@ -3142,25 +3151,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 6
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 12
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 24
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -4209,25 +4218,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 5
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 10
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 20
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -5283,25 +5292,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 5
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 10
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 20
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -6009,25 +6018,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 5
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 10
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 20
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -6097,25 +6106,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 6
-						min = 40
-						max = 400
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 12
-						min = 80
-						max = 800
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 24
-						min = 150
-						max = 1500
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -6225,25 +6234,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 5
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 10
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 20
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -6295,25 +6304,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 5
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 10
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 20
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -9059,25 +9068,25 @@ ship_event = {
 				20 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 5
-						min = 40
-						max = 200
+						value = 2
+						min = 20
+						max = 100
 					}
 				}
 				10 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 10
-						min = 80
-						max = 400
+						value = 6
+						min = 40
+						max = 200
 					}
 				}
 				5 = {
 					add_monthly_resource_mult = {
 						resource = unity
-						value = 20
-						min = 150
-						max = 750
+						value = 8
+						min = 80
+						max = 400
 					}
 				}
 			}
@@ -9762,25 +9771,25 @@ ship_event = {
 					20 = {
 						add_monthly_resource_mult = {
 							resource = unity
-							value = 8
-							min = 40
-							max = 200
+							value = 2
+							min = 20
+							max = 100
 						}
 					}
 					10 = {
 						add_monthly_resource_mult = {
 							resource = unity
-							value = 16
-							min = 80
-							max = 400
+							value = 6
+							min = 40
+							max = 200
 						}
 					}
 					5 = {
 						add_monthly_resource_mult = {
 							resource = unity
-							value = 32
-							min = 150
-							max = 750
+							value = 8
+							min = 80
+							max = 400
 						}
 					}
 				}
@@ -10989,25 +10998,25 @@ ship_event = {
 					20 = {
 						add_monthly_resource_mult = {
 							resource = unity
-							value = 6
-							min = 40
-							max = 200
+							value = 2
+							min = 20
+							max = 100
 						}
 					}
 					10 = {
 						add_monthly_resource_mult = {
 							resource = unity
-							value = 12
-							min = 80
-							max = 400
+							value = 6
+							min = 40
+							max = 200
 						}
 					}
 					5 = {
 						add_monthly_resource_mult = {
 							resource = unity
-							value = 24
-							min = 150
-							max = 750
+							value = 8
+							min = 80
+							max = 400
 						}
 					}
 				}
