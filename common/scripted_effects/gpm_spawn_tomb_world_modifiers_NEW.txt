@@ -13,11 +13,11 @@
 # Distributed Spawn_chance = 10   			-- overwritten for standard planet modifiers: useing rarity factors below
 
 # Abundancy Settings and factors used for tweaking
-@rare = 0.25
-@uncommon = 0.5
+@rare = 0.5
+@uncommon = 0.75
 @default = 1
-@plenty = 1.5
-@everywhere = 2
+@plenty = 1.25
+@everywhere = 1.5
 
 # Planetary Ring Adjuster
 @ringfactor = 1.35
@@ -982,8 +982,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 1
 					random_list = {
-						25 = { }
-						75 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 2 }
 						}
@@ -995,8 +995,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 2
 					random_list = {
-						25 = { }
-						75 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 3 }
 						}
@@ -1027,8 +1027,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 2
 					random_list = {
-						35 = { }
-						65 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 4 }
 							modifier = { factor = 0.25 num_modifiers = 3 }
@@ -1051,8 +1051,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 1
 					random_list = {
-						35 = { }
-						65 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 4 }
 						}
@@ -1071,8 +1071,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 1
 					random_list = {
-						25 = { }
-						75 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 1 }
 						}
@@ -1084,8 +1084,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 2
 					random_list = {
-						25 = { }
-						75 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 2 }
 						}
@@ -1116,8 +1116,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 2
 					random_list = {
-						35 = { }
-						65 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 3 }
 							modifier = { factor = 0.25 num_modifiers = 2 }
@@ -1140,8 +1140,8 @@ gpm_roll_tomb_world_modifiers = {
 				while = {
 					count = 1
 					random_list = {
-						35 = { }
-						65 = {
+						30 = { }
+						70 = {
 							gpm_spawn_tomb_world_modifier = yes
 							modifier = { factor = 0 num_modifiers >= 3 }
 						}
