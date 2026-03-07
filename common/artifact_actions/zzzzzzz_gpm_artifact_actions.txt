@@ -59,29 +59,21 @@ artifact_arcane_deciphering = {
 			}
 			random_list = {
 				15 = {
-					owner = { 
-						country_event = { id = gpm_artifact.1 } # precursor techs
-					}
-					modifier = { factor = 2 owner = { has_ascension_perk = ap_archaeoengineers } }
+					country_event = { id = gpm_artifact.1 } # precursor techs
+					modifier = { factor = 2 has_ascension_perk = ap_archaeoengineers }
 				}
 				5 = {
-					owner = {
-						country_event = { id = ancrel.10001 } # random repeatable
-					}
+					country_event = { id = ancrel.10001 } # random repeatable
 				}
 				5 = {
-					owner = {
-						country_event = { id = ancrel.10002 } # monthly research x3 and arcane insight
-					}
+					country_event = { id = ancrel.10002 } # monthly research x3 and arcane insight
 				}
 				5 = {
-					owner = {
-						country_event = { id = ancrel.10003 } # a random research x3
-					}
+					country_event = { id = ancrel.10003 } # a random research x3
 				}
 				5 = {
-					modifier = { factor = 2 owner = { has_ascension_perk = ap_archaeoengineers } }
-					owner = { grant_random_fe_building = yes }
+					modifier = { factor = 2 has_ascension_perk = ap_archaeoengineers }
+					grant_random_fe_building = yes
 				}
 			}
 		}

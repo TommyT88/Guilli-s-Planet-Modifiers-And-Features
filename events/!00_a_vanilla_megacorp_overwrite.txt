@@ -20,11 +20,6 @@ planet_event = {
 
 	immediate = {
 		
-		# PD compatibility
-		remove_modifier = engineered_environment
-		remove_modifier = engineered_environment_gaia
-		#
-
 		set_planet_flag = gpm_is_new_ecumenopolis
 		planet_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
 	}

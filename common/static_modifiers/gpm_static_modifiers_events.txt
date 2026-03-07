@@ -153,12 +153,23 @@ gpm_tiyanki_feeding_grounds = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_tiyanki_feeding_grounds.dds"
 	icon_frame = 4
 }
-
 gpm_precursor_studies_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_tiyanki_feeding_grounds.dds"
 	planet_biologists_minor_artifacts_produces_add = 0.1
 	planet_physicists_physics_research_produces_add = 2
 	planet_biologists_society_research_produces_add = 2
 	planet_engineers_engineering_research_produces_add = 2
-	icon = "gfx/interface/icons/planet_modifiers/gpm_tiyanki_feeding_grounds.dds"
+	icon_frame = 1
+}
+gpm_abandoned_shroud_extractor = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_abandoned_shroud_extractor.dds"
+	planet_physicists_sr_zro_produces_add = 0.15
+	icon_frame = 1
+}
+gpm_ancient_sunken_capital_ship = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_ancient_sunken_capital_ship.dds"
+	planet_miners_alloys_produces_add = 0.10
+	planet_miners_engineering_research_produces_add = 0.20
+	planet_engineers_engineering_research_produces_mult = 0.20
 	icon_frame = 1
 }

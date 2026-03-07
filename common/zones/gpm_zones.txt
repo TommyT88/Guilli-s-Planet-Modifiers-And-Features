@@ -7,7 +7,7 @@ zone_gpm_precursor_science = {
 		exists = owner
 		gpm_has_precursor_modifiers = yes
 		has_ancrel = yes
-		is_wilderness_empire = no
+		owner = { is_wilderness_empire = no }
 	}
 	planet_limit = {
 		base = 1
@@ -90,7 +90,7 @@ zone_gpm_precursor_manufactorium = {
 		# gpm_has_precursor_modifiers = yes
 		has_modifier = gpm_precursor_manufactorium
 		has_ancrel = yes
-		is_wilderness_empire = no
+		owner = { is_wilderness_empire = no }
 	}
 	planet_limit = {
 		base = 1
@@ -157,7 +157,7 @@ zone_gpm_precursor_manufactorium = {
 			exists = owner
 			industrial_jobs_are_catalytic_trigger = yes
 		}
-		planet_districts_cities_alloys_food_upkeep_add = 10
+		planet_districts_cities_food_upkeep_add = 10
 		planet_districts_cities_alloys_produces_add = 5
 	}
 	

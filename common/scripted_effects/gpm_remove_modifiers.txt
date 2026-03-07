@@ -165,9 +165,21 @@ gpm_remove_negative_modifiers = {
 		limit = { has_modifier = gpm_giant_scorpioids }
 		remove_modifier = gpm_giant_scorpioids
 	}
+	if = {
+		limit = { has_modifier = gpm_ash_barrens }
+		remove_modifier = gpm_ash_barrens
+	}
+	if = {
+		limit = { has_modifier = gpm_bacterial_dominance }
+		remove_modifier = gpm_bacterial_dominance
+	}
 }
 gpm_remove_neutral_modifiers = {
 	optimize_memory
+	if = {
+		limit = { gpm_is_planet_class_molten = no }
+		remove_modifier = gpm_infernal_caverns
+	}
 	if = {
 		limit = {
 			gpm_is_planet_class_city = yes
@@ -175,19 +187,6 @@ gpm_remove_neutral_modifiers = {
 		if = {
 			limit = { has_modifier = gpm_salt_flats }
 			remove_modifier = gpm_salt_flats
-		}
-	}
-	if = {
-		limit = {
-			gpm_is_planet_water = no
-		}
-		if = {
-			limit = { has_modifier = gpm_giant_ocean_snakes }
-			remove_modifier = gpm_giant_ocean_snakes
-		}
-		if = {
-			limit = { has_modifier = gpm_ocean_trenches }
-			remove_modifier = gpm_ocean_trenches
 		}
 	}
 	if = {
@@ -205,6 +204,14 @@ gpm_remove_neutral_modifiers = {
 		if = {
 			limit = { has_modifier = gpm_unique_marine_habitats }
 			remove_modifier = gpm_unique_marine_habitats
+		}
+		if = {
+			limit = { has_modifier = gpm_giant_ocean_snakes }
+			remove_modifier = gpm_giant_ocean_snakes
+		}
+		if = {
+			limit = { has_modifier = gpm_ocean_trenches }
+			remove_modifier = gpm_ocean_trenches
 		}
 	}
 	if = {
@@ -237,6 +244,10 @@ gpm_remove_neutral_modifiers = {
 		if = {
 			limit = { has_modifier = gpm_misty }
 			remove_modifier = gpm_misty
+		}
+		if = {
+			limit = { has_modifier = gpm_oily_riverbeds }
+			remove_modifier = gpm_oily_riverbeds
 		}
 	}
 	if = {
@@ -290,6 +301,14 @@ gpm_remove_neutral_modifiers = {
 			limit = { has_modifier = gpm_silicon_crystals }
 			remove_modifier = gpm_silicon_crystals
 		}
+		if = {
+			limit = { has_modifier = gpm_scoured_barrens }
+			remove_modifier = gpm_scoured_barrens
+		}
+		if = {
+			limit = { has_modifier = gpm_super_dry_atmosphere }
+			remove_modifier = gpm_super_dry_atmosphere
+		}
 	}
 	if = {
 		limit = { has_modifier = gpm_great_temperature_variation }
@@ -317,9 +336,17 @@ gpm_remove_neutral_modifiers = {
 	remove_modifier = gpm_sulfur_planet
 	remove_modifier = gpm_stellar_irradiation
 	remove_modifier = gpm_dead_forests
+	remove_modifier = gpm_blighted_lands
+	remove_modifier = gpm_flesh_eating_swamp
 }
 gpm_remove_positive_modifiers = {
 	optimize_memory
+	if = {
+		limit = { gpm_is_planet_class_molten = no }
+		remove_modifier = gpm_blue_magma
+		remove_modifier = gpm_fire_resistant_flora
+		remove_modifier = gpm_magma_wyrms
+	}
 	if = {
 		limit = {
 			gpm_is_planet_water = no
@@ -356,6 +383,34 @@ gpm_remove_positive_modifiers = {
 			limit = { has_modifier = gpm_tidally_active }
 			remove_modifier = gpm_tidally_active
 		}
+		if = {
+			limit = { has_modifier = gpm_ancient_sunken_capital_ship }
+			remove_modifier = gpm_ancient_sunken_capital_ship
+		}
+		if = {
+			limit = { has_modifier = gpm_immortal_coral }
+			remove_modifier = gpm_immortal_coral
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				gpm_is_planet_wet_hot = no
+				gpm_is_planet_dry_hot = no
+			}
+		}
+		if = {
+			limit = { has_modifier = gpm_cooling_vistas }
+			remove_modifier = gpm_cooling_vistas
+		}
+		if = {
+			limit = { has_modifier = gpm_golden_fields }
+			remove_modifier = gpm_golden_fields
+		}
+		if = {
+			limit = { has_modifier = gpm_towering_cacti }
+			remove_modifier = gpm_towering_cacti
+		}
 	}
 	if = {
 		limit = {
@@ -368,7 +423,15 @@ gpm_remove_positive_modifiers = {
 			limit = { has_modifier = gpm_heart_of_the_forest }
 			remove_modifier = gpm_heart_of_the_forest
 		}
-	}	
+		if = {
+			limit = { has_modifier = gpm_atmospheric_roots }
+			remove_modifier = gpm_atmospheric_roots
+		}
+		if = {
+			limit = { has_modifier = gpm_gargantuan_canopies }
+			remove_modifier = gpm_gargantuan_canopies
+		}
+	}
 	if = {
 		limit = {
 			AND = { 
@@ -439,6 +502,7 @@ gpm_remove_positive_modifiers = {
 		remove_modifier = gpm_terraforming_world_engineering_shaper_mastery
 	}
 	remove_modifier = gpm_melted_ice_caps
+	remove_modifier = gpm_geometric_landscapes
 }
 gpm_remove_precursor_modifiers = {
 	optimize_memory
@@ -937,6 +1001,36 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_artificial_polar_ice
 	remove_modifier = gpm_artificial_weather_systems
 	remove_modifier = gpm_dead_forests
+	remove_modifier = gpm_golden_fields
+	remove_modifier = gpm_runic_carvings
+	remove_modifier = gpm_blue_magma
+	remove_modifier = gpm_scoured_barrens
+	remove_modifier = gpm_crystal_cliffs
+	remove_modifier = gpm_white_world
+	remove_modifier = gpm_ash_barrens
+	remove_modifier = gpm_ethereal_clouds
+	remove_modifier = gpm_bacterial_dominance
+	remove_modifier = gpm_blighted_lands
+	remove_modifier = gpm_flesh_eating_swamp
+	remove_modifier = gpm_cooling_vistas
+	remove_modifier = gpm_abandoned_shroud_extractor
+	remove_modifier = gpm_calcification_pools
+	remove_modifier = gpm_atmospheric_roots
+	remove_modifier = gpm_fire_resistant_flora
+	remove_modifier = gpm_ancient_sunken_capital_ship
+	remove_modifier = gpm_oily_riverbeds
+	remove_modifier = gpm_crystaline_fauna
+	remove_modifier = gpm_infernal_caverns
+	remove_modifier = gpm_immortal_coral
+	remove_modifier = gpm_shroud_storms
+	remove_modifier = gpm_magma_wyrms
+	remove_modifier = gpm_gargantuan_canopies
+	remove_modifier = gpm_jeweled_flowers
+	remove_modifier = gpm_towering_cacti
+	remove_modifier = gpm_geometric_landscapes
+	remove_modifier = gpm_lonely_mountain
+	remove_modifier = gpm_super_dry_atmosphere
+	remove_modifier = gpm_mineral_rich_waters
 
 	
 	# special mangement modfifiers 

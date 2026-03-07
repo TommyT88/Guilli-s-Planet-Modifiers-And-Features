@@ -189,12 +189,62 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
-		}		
+		}
 		100 = {
 			add_modifier = { modifier = "gpm_very_hot_core" }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_very_hot_core" }
 			# (Not) on these planets
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_blue_magma" }
+			set_planet_entity = { entity = "gpm_molten_planet_blue_2_entity" }
+			add_deposit = d_blue_lava
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_blue_magma" }
+			# (Not) on these planets
+			modifier = { factor = 0 NOT = { is_planet_class = pc_volcanic } }
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_fire_resistant_flora" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_fire_resistant_flora" }
+			# (Not) on these planets
+			modifier = { factor = 0 NOT = { is_planet_class = pc_volcanic } }
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_infernal_caverns" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_infernal_caverns" }
+			# (Not) on these planets
+			modifier = { factor = 0 NOT = { is_planet_class = pc_volcanic } }
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_magma_wyrms" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_magma_wyrms" }
+			# (Not) on these planets
+			modifier = { factor = 0 NOT = { is_planet_class = pc_volcanic } }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier

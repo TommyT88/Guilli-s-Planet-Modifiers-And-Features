@@ -79,6 +79,33 @@ gpm_shearing_winds = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_shearing_winds.dds"
 	icon_frame = 4
 }
+gpm_blue_magma = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_blue_magma.dds"
+	planet_miners_minerals_produces_mult = 0.20
+	planet_miners_engineering_research_produces_add = 0.20
+	icon_frame = 1
+}
+gpm_fire_resistant_flora = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_fire_resistant_flora.dds"
+	planet_farmers_volatile_motes_produces_add = 0.10
+	planet_engineers_engineering_research_produces_mult = 0.20
+	icon_frame = 1
+}
+gpm_infernal_caverns = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_infernal_caverns.dds"
+	planet_miners_minerals_produces_mult = 0.20
+	planet_technician_energy_produces_mult = 0.20
+	planet_max_districts_add = 4
+	planet_structures_minerals_cost_mult = 0.30
+	icon_frame = 2
+}
+gpm_magma_wyrms = {
+	icon = "gfx/interface/icons/planet_modifiers/gpm_magma_wyrms.dds"
+	planet_biologists_society_research_produces_mult = 0.40
+	planet_engineers_engineering_research_produces_mult = 0.20
+	planet_resettlement_unemployed_destination_mult = 0.40
+	icon_frame = 1
+}
 
 
 

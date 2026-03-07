@@ -258,6 +258,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_single_biome"
 					has_modifier = "gpm_hyper_complex_biome"
 					has_modifier = "gpm_simple_organisms"
+					has_modifier = "gpm_golden_fields"
 				}
 			}
 			# (Not) on these planets
@@ -574,6 +575,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_living_planet"
 					has_modifier = "gpm_ideal_for_life"
 					has_modifier = "gpm_rich_soil"
+					has_modifier = "gpm_golden_fields"
 				}
 			}
 			# (Not) on these planets
@@ -695,6 +697,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_unusual_seasons"
 					has_modifier = "gpm_blizzards"
 					has_modifier = "gpm_great_temperature_variation"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_ash_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}			
 			# (Not) on these planets
@@ -711,8 +716,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 		100 = {
 			add_modifier = { modifier = "gpm_living_planet" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_living_planet" }
-			modifier = { factor = 0 has_modifier = "gpm_dead_forests" }
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_living_planet"
+					has_modifier = "gpm_dead_forests"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
+				}
+			}	
 			# (Not) on these planets
 			modifier = { factor = 0 is_planet_class = pc_arctic }
 			# Never in these systems
@@ -744,6 +755,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_hostile_flora"
 					has_modifier = "gpm_great_temperature_variation"
 					has_modifier = "gpm_dead_forests"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_ash_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}
 			# (Not) on these planets
@@ -781,7 +795,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Galaxy "food" Tweak
 			modifier = { factor = @galaxyfoodtweak }
@@ -900,8 +914,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
 		}
@@ -922,8 +936,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
 		}
@@ -984,10 +998,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.5 is_moon = yes }
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
-			modifier = { factor = @veryrare }
+			modifier = { factor = @very_rare }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_melted_ice_caps" multiplier = gpm_planet_size_multiplier }
@@ -1080,8 +1094,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# Tweaks
 			# Galaxy age setting modifier
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -1516,8 +1530,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -1548,6 +1562,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks			
 			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -1566,6 +1582,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
 		}
@@ -1584,6 +1602,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 2 is_moon = yes }
 			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Galaxy "food" Tweak
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
@@ -1682,8 +1702,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
 		}
@@ -1703,8 +1723,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
 		}
@@ -1858,6 +1878,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
 					has_modifier = "gpm_dead_forests"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}
 			# (Not) on these planets
@@ -1881,8 +1903,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
-			modifier = { factor = 1.66 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 0.33 has_global_flag = gpm_galaxy_age_old }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
 		}
@@ -1896,6 +1918,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
 					has_modifier = "gpm_dead_forests"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}
 			# (Not) on these planets
@@ -1926,6 +1950,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
 					has_modifier = "gpm_dead_forests"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}
 			# (Not) on these planets
@@ -2030,6 +2056,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -2153,6 +2181,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 				OR = {
 					has_modifier = "gpm_never_ending_aurora"
 					has_modifier = "gpm_solidified_core"
+					has_modifier = "gpm_white_world"
 				}
 			}
 			# (Not) on these planets
@@ -2250,6 +2279,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 				OR = {
 					has_modifier = "gpm_rich_soil"
 					has_modifier = "bleak_planet"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}
 			# (Not) on these planets
@@ -2265,6 +2296,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			add_modifier = { modifier = "gpm_otherworldly_colours" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_otherworldly_colours" }
+			modifier = { factor = 0 has_modifier = "gpm_white_world" }
 			# (Not) on these planets
 			### like this to make sure it does spawn on primite worlds
 			modifier = { factor = 0
@@ -2292,7 +2324,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 		100 = {
 			add_modifier = { modifier = "gpm_ecological_nervous_system" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_ecological_nervous_system" }
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_ecological_nervous_system"
+					has_modifier = "gpm_blighted_lands"
+				}
+			}	
 			# (Not) on these planets
 			### like this to make sure it does spawn on primite worlds
 			modifier = { factor = 0
@@ -2303,6 +2341,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
 		}
@@ -2421,6 +2461,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Tweaks
 			modifier = { factor = 2 is_planet_class = pc_ocean }
 			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
 		}
@@ -2747,6 +2789,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 					has_modifier = "gpm_planetwide_forest"
 					has_modifier = "gpm_dense_forests"
 					has_modifier = "gpm_mushroom_forest"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
 				}
 			}
 			# (Not) on these planets			
@@ -2760,6 +2804,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Galaxy "food" Tweak
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
@@ -2946,7 +2992,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 		100 = {
 			add_modifier = { modifier = "gpm_heart_of_the_forest" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
-			modifier = { factor = 0 has_modifier = "gpm_heart_of_the_forest" }
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_heart_of_the_forest"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
+				}
+			}	
 			# (Not) on these planets
 			modifier = { factor = 0 
 				NOR = { 
@@ -3145,11 +3197,565 @@ gpm_spawn_normal_habitable_world_modifier = {
 			}
 			# (Not) on these planets
 			modifier = { factor = 0	is_planet_class = pc_ocean }
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			# Never in these systems
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_golden_fields" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_golden_fields"
+					has_modifier = "gpm_single_biome"
+					has_modifier = "bleak_planet"
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_blighted_lands"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_runic_carvings" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_runic_carvings" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_scoured_barrens" multiplier = gpm_planet_size_multiplier }
+			while = {
+				count = 3
+				if = {
+					limit = {
+						OR = {
+							has_deposit = d_lichen_fields
+							has_deposit = d_bountiful_plains
+							has_deposit = d_rugged_woods
+							has_deposit = d_green_hills
+							has_deposit = d_forgiving_tundra
+							has_deposit = d_boggy_fens
+							has_deposit = d_nutritious_mudland
+							has_deposit = d_fungal_caves
+							has_deposit = d_lush_jungle
+							has_deposit = d_fertile_lands
+							has_deposit = d_great_river
+							has_deposit = d_fungal_caves
+							has_deposit = d_fungal_caves
+						}
+					}
+					random_deposit = {
+						limit = {
+							is_deposit_type = d_lichen_fields
+							is_deposit_type = d_bountiful_plains
+							is_deposit_type = d_rugged_woods
+							is_deposit_type = d_green_hills
+							is_deposit_type = d_forgiving_tundra
+							is_deposit_type = d_boggy_fens
+							is_deposit_type = d_nutritious_mudland
+							is_deposit_type = d_fungal_caves
+							is_deposit_type = d_lush_jungle
+							is_deposit_type = d_fertile_lands
+							is_deposit_type = d_great_river
+							is_deposit_type = d_fungal_caves
+							is_deposit_type = d_fungal_caves
+						}
+						remove_deposit = yes
+					}
+					random_list = {
+						20 = { add_deposit = d_arid_highlands }
+						20 = { add_deposit = d_searing_desert }
+						5 = { add_deposit = d_hot_springs }
+					}
+				}
+			}
+			# Not with these modifiers
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_scoured_barrens"
+					has_modifier = "gpm_perfect_seasons"
+					has_modifier = "gpm_living_planet"
+					has_modifier = "gpm_ideal_for_life"
+					has_modifier = "gpm_proto_forests"
+					has_modifier = "gpm_dense_forests"
+					has_modifier = "gpm_planetwide_forest"
+					has_modifier = "gpm_rich_soil"
+					has_modifier = "gpm_ecological_nervous_system"
+					has_modifier = "gpm_mushroom_forest"
+					has_modifier = "gpm_heart_of_the_forest"
+					has_modifier = "gpm_golden_fields"
+					has_modifier = "gpm_blighted_lands"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			modifier = { factor = 0
+				OR = {
+					gpm_is_planet_wet_hot = yes
+					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_water = yes
+				}
+			}
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_crystal_cliffs" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_crystal_cliffs" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_white_world" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_white_world"
+					has_modifier = "gpm_never_ending_aurora"
+					has_modifier = "gpm_otherworldly_colours"
+				}
+			}
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_ash_barrens" multiplier = gpm_planet_size_multiplier }
+			while = {
+				count = 3
+				if = {
+					limit = {
+						OR = {
+							has_deposit = d_lichen_fields
+							has_deposit = d_bountiful_plains
+							has_deposit = d_rugged_woods
+							has_deposit = d_green_hills
+							has_deposit = d_forgiving_tundra
+							has_deposit = d_boggy_fens
+							has_deposit = d_nutritious_mudland
+							has_deposit = d_fungal_caves
+							has_deposit = d_lush_jungle
+							has_deposit = d_fertile_lands
+							has_deposit = d_great_river
+							has_deposit = d_fungal_caves
+							has_deposit = d_fungal_caves
+						}
+					}
+					random_deposit = {
+						limit = {
+							is_deposit_type = d_lichen_fields
+							is_deposit_type = d_bountiful_plains
+							is_deposit_type = d_rugged_woods
+							is_deposit_type = d_green_hills
+							is_deposit_type = d_forgiving_tundra
+							is_deposit_type = d_boggy_fens
+							is_deposit_type = d_nutritious_mudland
+							is_deposit_type = d_fungal_caves
+							is_deposit_type = d_lush_jungle
+							is_deposit_type = d_fertile_lands
+							is_deposit_type = d_great_river
+							is_deposit_type = d_fungal_caves
+							is_deposit_type = d_fungal_caves
+						}
+						remove_deposit = yes
+					}
+					random_list = {
+						20 = { add_deposit = d_arid_highlands }
+						20 = { add_deposit = d_searing_desert }
+						5 = { add_deposit = d_hot_springs }
+					}
+				}
+			}
+			# Not with these modifiers
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_ash_barrens"
+					has_modifier = "gpm_perfect_seasons"
+					has_modifier = "gpm_ideal_for_life"
+					has_modifier = "gpm_blighted_lands"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			modifier = { factor = 0
+				OR = {
+					gpm_is_planet_wet_hot = yes
+					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_water = yes
+				}
+			}
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			modifier = { factor = 2 
+				OR = {
+					has_modifier = "gpm_frequent_thunderstorms"
+					has_modifier = "gpm_global_thunderstorms"
+					has_modifier = "gpm_highly_charged_air_particles"
+				}
+			}
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_ethereal_clouds" }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_ethereal_clouds" }
+			# (Not) on these planets
+			### like this to make sure it does spawn on primite worlds
+			modifier = { factor = 0
+				has_owner = yes
+				is_capital = yes
+				owner = { gpm_is_country_type_default = yes }
+			}
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_bacterial_dominance" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0
+				OR = {
+					has_modifier = "gpm_bacterial_dominance"
+					has_modifier = "lush_planet"
+					has_modifier = "gpm_hyper_complex_biome"
+					has_modifier = "gpm_living_planet"
+					has_modifier = "gpm_ideal_for_life"
+					has_modifier = "gpm_rich_soil"
+					has_modifier = "gpm_golden_fields"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			# Never in these systems
+			# Tweaks
+			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_blighted_lands" multiplier = gpm_planet_size_multiplier }
+			while = {
+				count = 3
+				if = {
+					limit = {
+						OR = {
+							has_deposit = d_lichen_fields
+							has_deposit = d_bountiful_plains
+							has_deposit = d_rugged_woods
+							has_deposit = d_green_hills
+							has_deposit = d_forgiving_tundra
+							has_deposit = d_boggy_fens
+							has_deposit = d_nutritious_mudland
+							has_deposit = d_fungal_caves
+							has_deposit = d_lush_jungle
+							has_deposit = d_fertile_lands
+							has_deposit = d_great_river
+							has_deposit = d_fungal_caves
+							has_deposit = d_fungal_caves
+						}
+					}
+					random_deposit = {
+						limit = {
+							is_deposit_type = d_lichen_fields
+							is_deposit_type = d_bountiful_plains
+							is_deposit_type = d_rugged_woods
+							is_deposit_type = d_green_hills
+							is_deposit_type = d_forgiving_tundra
+							is_deposit_type = d_boggy_fens
+							is_deposit_type = d_nutritious_mudland
+							is_deposit_type = d_fungal_caves
+							is_deposit_type = d_lush_jungle
+							is_deposit_type = d_fertile_lands
+							is_deposit_type = d_great_river
+							is_deposit_type = d_fungal_caves
+							is_deposit_type = d_fungal_caves
+						}
+						remove_deposit = yes
+					}
+					random_list = {
+						20 = { add_deposit = d_tempestous_mountain }
+						20 = { add_deposit = d_rich_mountain }
+						20 = { add_deposit = d_ore_rich_caverns }
+						20 = { add_deposit = d_mineral_fields }
+					}
+				}
+			}
+			# Not with these modifiers
+			modifier = { factor = 0 
+				OR = {
+					has_modifier = "gpm_blighted_lands"
+					has_modifier = "gpm_perfect_seasons"
+					has_modifier = "gpm_living_planet"
+					has_modifier = "gpm_ideal_for_life"
+					has_modifier = "gpm_proto_forests"
+					has_modifier = "gpm_dense_forests"
+					has_modifier = "gpm_planetwide_forest"
+					has_modifier = "gpm_rich_soil"
+					has_modifier = "gpm_ecological_nervous_system"
+					has_modifier = "gpm_mushroom_forest"
+					has_modifier = "gpm_heart_of_the_forest"
+					has_modifier = "gpm_golden_fields"
+				}
+			}
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_flesh_eating_swamp" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_flesh_eating_swamp" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_cooling_vistas" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_cooling_vistas" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_calcification_pools" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_calcification_pools" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_atmospheric_roots" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_atmospheric_roots" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_oily_riverbeds" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_oily_riverbeds" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_crystaline_fauna" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_crystaline_fauna" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_immortal_coral" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_immortal_coral" }
+			# (Not) on these planets
+			modifier = { factor = 0	gpm_is_planet_water = no }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_shroud_storms" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_shroud_storms" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_gargantuan_canopies" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_gargantuan_canopies" }
+			# (Not) on these planets
+			modifier = { factor = 0	is_planet_class = pc_ocean }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_jeweled_flowers" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_jeweled_flowers" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			modifier = { factor = 3 is_planet_class = pc_gaia }
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_towering_cacti" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_towering_cacti" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
+			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_geometric_landscapes" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_geometric_landscapes" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_lonely_mountain" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_lonely_mountain" }
+			# (Not) on these planets
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @very_rare }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_super_dry_atmosphere" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_super_dry_atmosphere" }
+			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_gaia }
+			modifier = { factor = 0	gpm_is_planet_water = yes }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @uncommon }
+		}
+		100 = {
+			add_modifier = { modifier = "gpm_mineral_rich_waters" multiplier = gpm_planet_size_multiplier }
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_mineral_rich_waters" }
+			# (Not) on these planets
+			modifier = { factor = 0	 gpm_is_planet_water = no }
+			# Never in these systems
+			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
+			# Tweaks
+			# Galaxy age setting modifier
+			# Weight Factor
+			modifier = { factor = @default }
 		}
 	}
 }

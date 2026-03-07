@@ -19,7 +19,10 @@ country_event = {
 			# }
 		# }
 		from = {
-			is_megastructure_type = habitat_0
+			OR = {
+				is_megastructure_type = habitat_central_complex
+				is_megastructure_type = habitat_central_complex_restored
+			}
 		}
 	}
 

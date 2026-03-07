@@ -156,15 +156,28 @@ country_event = {
 	##############################################
 
 
-	# Scaling on (default)
+	# Scaling - planet size (default)
 	option = {
 		trigger = {
 			has_global_flag = gpm_scaling_base_modifier_option
 		}
 		name = gpm_start_menu.1.default_scaling
 		custom_tooltip = gpm_start_menu.1.default_scalingTT
-		set_global_flag = gpm_scaling_random_modifier_option
+		set_global_flag = gpm_scaling_base_modifier_plus_option
 		remove_global_flag = gpm_scaling_base_modifier_option
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+	# Scaling - planet size plus 
+	option = {
+		trigger = {
+			has_global_flag = gpm_scaling_base_modifier_plus_option
+		}
+		name = gpm_start_menu.1.default_scaling_plus
+		custom_tooltip = gpm_start_menu.1.default_scaling_plusTT
+		set_global_flag = gpm_scaling_random_modifier_option
+		remove_global_flag = gpm_scaling_base_modifier_plus_option
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
 		}
@@ -202,8 +215,22 @@ country_event = {
 		}
 		name = gpm_start_menu.1.scaling_off
 		custom_tooltip = gpm_start_menu.1.scaling_offTT
-		set_global_flag = gpm_scaling_base_modifier_option
+		set_global_flag = gpm_scaling_multiplier_disabled_half_values
 		remove_global_flag = gpm_scaling_multiplier_disabled
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+
+	# scaling off - half values
+	option = {
+		trigger = {
+			has_global_flag = gpm_scaling_multiplier_disabled_half_values
+		}
+		name = gpm_start_menu.1.scaling_off_half
+		custom_tooltip = gpm_start_menu.1.scaling_off_halfTT
+		set_global_flag = gpm_scaling_base_modifier_option
+		remove_global_flag = gpm_scaling_multiplier_disabled_half_values
 		hidden_effect = {
 			country_event = { id = gpm_start_menu.1  }
 		}

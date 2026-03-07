@@ -14,14 +14,6 @@ gpm_is_country_type_fallen_empire = {
 }
 
 
-# is_terraforming_candidate = {
-# 	optimize_memory
-# 	# OR = {
-# 		has_modifier = terraforming_candidate
-# 		# has_modifier = terraforming_candidate_precursor
-# 	# }
-# }
-
 gpm_engine_forbidden_planets = {
 	optimize_memory
 	OR = {
@@ -48,11 +40,8 @@ gpm_engine_forbidden_planets = {
 
 gpm_has_required_terraform_modifier = {
 	optimize_memory
-	# OR = {
-		has_modifier = terraforming_candidate
-		NOT = { has_planet_flag = gpm_solidified_planet_core }
-		# has_modifier = terraforming_candidate_precursor
-	# }
+	has_modifier = terraforming_candidate
+	NOT = { has_planet_flag = gpm_solidified_planet_core }
 }
 
 gpm_are_precursors_enabled = {
@@ -431,6 +420,10 @@ gpm_has_positive_energy_planet_modifier = {
 		has_modifier = gpm_tidally_active
 		has_modifier = gpm_steam_vents
 		has_modifier = gpm_controlled_storms
+		has_modifier = gpm_scoured_barrens
+		has_modifier = gpm_oily_riverbeds
+		has_modifier = gpm_magma_wyrms
+		has_modifier = gpm_super_dry_atmosphere
 		# Deposits
 		has_deposit = gpm_d_discharging_field
 	}
@@ -448,6 +441,7 @@ gpm_has_negative_energy_planet_modifier = {
 		has_modifier = gpm_sandstorms
 		has_modifier = gpm_sand_tornadoes
 		has_modifier = gpm_cursed_world
+		has_modifier = gpm_gargantuan_canopies
 		# Deposits		
 	}
 }
@@ -476,6 +470,11 @@ gpm_has_positive_mineral_planet_modifier = {
 		has_modifier = gpm_titanic_geo_form
 		has_modifier = gpm_rich_equator
 		has_modifier = gpm_iron_oceans
+		has_modifier = gpm_dead_forests
+		has_modifier = gpm_crystal_cliffs
+		has_modifier = gpm_calcification_pools
+		has_modifier = gpm_infernal_caverns
+		has_modifier = gpm_mineral_rich_waters
 		# Deposits
 		has_deposit = gpm_d_gargantuan_sinkhole
 		has_deposit = gpm_d_howling_peaks
@@ -526,6 +525,8 @@ gpm_has_positive_food_planet_modifier = {
 		has_modifier = gpm_unique_marine_habitats
 		has_modifier = gpm_mushroom_forest
 		has_modifier = gpm_invasive_stalks
+		has_modifier = gpm_golden_fields
+		has_modifier = gpm_towering_cacti
 		# Deposits
 		has_deposit = gpm_d_giant_trees
 		has_deposit = gpm_d_mega_fungi
@@ -558,6 +559,7 @@ gpm_has_negative_food_planet_modifier = {
 		has_modifier = gpm_blizzards
 		has_modifier = gpm_cursed_world
 		has_modifier = gpm_iron_oceans
+		has_modifier = gpm_crystaline_fauna
 		# Deposits
 	}
 }

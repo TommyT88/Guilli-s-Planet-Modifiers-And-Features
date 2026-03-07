@@ -4219,233 +4219,233 @@ planet_event = {
 }
 
 # The Crystal Beasts 1 - Crystalline Cave
-planet_event = {
-	id = gpm_colony.360
-	title = "gpm_colony.360.name"
-	desc = "gpm_colony.360.desc"
-	picture = GFX_evt_gpm_crystalline_cave
-	show_sound = event_conversation
-	location = ROOT
+# planet_event = {
+# 	id = gpm_colony.360
+# 	title = "gpm_colony.360.name"
+# 	desc = "gpm_colony.360.desc"
+# 	picture = GFX_evt_gpm_crystalline_cave
+# 	show_sound = event_conversation
+# 	location = ROOT
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	pre_triggers = {
-		has_owner = yes
-	}
-	trigger = {
-		has_deposit = d_crystal_forest
-		NOT = {
-			owner = { has_country_flag = gpm_colony_the_crystal_beasts_event }
-		}
-	}
+# 	pre_triggers = {
+# 		has_owner = yes
+# 	}
+# 	trigger = {
+# 		has_deposit = d_crystal_forest
+# 		NOT = {
+# 			owner = { has_country_flag = gpm_colony_the_crystal_beasts_event }
+# 		}
+# 	}
 
-	immediate = {
+# 	immediate = {
 		
-		owner = { set_country_flag = gpm_colony_the_crystal_beasts_event }
-	}
+# 		owner = { set_country_flag = gpm_colony_the_crystal_beasts_event }
+# 	}
 
-	option = {
-		name = gpm_colony.360.a
-		owner = { add_resource = { rare_crystals = 150 } }
-	}
-	option = {
-		name = gpm_colony.360.b
-		enable_special_project = {
-			name = "GPM_CRYSTALINE_BEASTS_RESEARCH"
-			location = this
-			owner = this.owner
-		}
-	}
-}
+# 	option = {
+# 		name = gpm_colony.360.a
+# 		owner = { add_resource = { rare_crystals = 150 } }
+# 	}
+# 	option = {
+# 		name = gpm_colony.360.b
+# 		enable_special_project = {
+# 			name = "GPM_CRYSTALINE_BEASTS_RESEARCH"
+# 			location = this
+# 			owner = this.owner
+# 		}
+# 	}
+# }
 
 # The Crystal Beasts 2 - The Crystal Beast
-planet_event = {
-	id = gpm_colony.361
-	title = "gpm_colony.361.name"
-	desc = "gpm_colony.361.desc"
-	picture = GFX_evt_gpm_crystalline_cave
-	show_sound = event_conversation
-	location = ROOT
+# planet_event = {
+# 	id = gpm_colony.361
+# 	title = "gpm_colony.361.name"
+# 	desc = "gpm_colony.361.desc"
+# 	picture = GFX_evt_gpm_crystalline_cave
+# 	show_sound = event_conversation
+# 	location = ROOT
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	pre_triggers = {
-		has_owner = yes
-	}
+# 	pre_triggers = {
+# 		has_owner = yes
+# 	}
 
-	option = {
-		name = gpm_colony.361.a
-		owner = { add_resource = { rare_crystals = 50 } }
-		add_deposit = d_crystalline_caverns
-		hidden_effect = {
-			planet_event = { id = gpm_colony.362 }
-		}
-	}
-	option = {
-		name = gpm_colony.361.b
-		owner = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier1researchreward
-				min = @tier1researchmin
-				max = @tier1researchmax
-			}
-		}
-		enable_special_project = {
-			name = "GPM_CRYSTALIZATION_RESEARCH"
-			location = this
-			owner = this.owner
-		}
-	}
-}
+# 	option = {
+# 		name = gpm_colony.361.a
+# 		owner = { add_resource = { rare_crystals = 50 } }
+# 		add_deposit = d_crystalline_caverns
+# 		hidden_effect = {
+# 			planet_event = { id = gpm_colony.362 }
+# 		}
+# 	}
+# 	option = {
+# 		name = gpm_colony.361.b
+# 		owner = {
+# 			add_monthly_resource_mult = {
+# 				resource = society_research
+# 				value = @tier1researchreward
+# 				min = @tier1researchmin
+# 				max = @tier1researchmax
+# 			}
+# 		}
+# 		enable_special_project = {
+# 			name = "GPM_CRYSTALIZATION_RESEARCH"
+# 			location = this
+# 			owner = this.owner
+# 		}
+# 	}
+# }
 
 # The Crystal Beasts 3 - Unbridled Fury
-planet_event = {
-	id = gpm_colony.362
-	title = "gpm_colony.362.name"
-	desc = "gpm_colony.362.desc"
-	picture = GFX_evt_gpm_crystalline_cave
-	show_sound = event_conversation
-	location = ROOT
+# planet_event = {
+# 	id = gpm_colony.362
+# 	title = "gpm_colony.362.name"
+# 	desc = "gpm_colony.362.desc"
+# 	picture = GFX_evt_gpm_crystalline_cave
+# 	show_sound = event_conversation
+# 	location = ROOT
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	pre_triggers = {
-		has_owner = yes
-	}
+# 	pre_triggers = {
+# 		has_owner = yes
+# 	}
 
-	option = {
-		name = gpm_colony.362.a
-		custom_tooltip = gpm_colony.362.spacecreature
-		hidden_effect = {
-			random_list = {
-				10 = {
-					random_country = {
-						limit = { is_country_type = crystal }
-						create_fleet = {
-							name = "NAME_Crystalline_Entity"
-							settings = {
-								spawn_debris = no
-								is_boss = yes
-							}
-							effect = {
-								set_owner = event_target:crystal_country
-								create_ship = {
-									name = "NAME_Delta"
-									design = "NAME_GPM_Large_Crystal_Entity_Blue_Elite"
-								}
-								set_location = FROM
-								set_fleet_stance = aggressive
-								set_aggro_range_measure_from = self
-								set_aggro_range = 150
-							}
-						}
-					}
-				}
-				10 = {
-					random_country = {
-						limit = { is_country_type = crystal }
-						create_fleet = {
-							name = "NAME_Crystalline_Entity"
-							settings = {
-								spawn_debris = no
-								is_boss = yes
-							}
-							effect = {
-								set_owner = event_target:crystal_country
-								create_ship = {
-									name = "NAME_Delta"
-									design = "NAME_GPM_Large_Crystal_Entity_Green_Elite"
-								}
-								set_location = FROM
-								set_fleet_stance = aggressive
-								set_aggro_range_measure_from = self
-								set_aggro_range = 150
-							}
-						}
-					}
-				}
-				10 = {
-					random_country = {
-						limit = { is_country_type = crystal }
-						create_fleet = {
-							name = "NAME_Crystalline_Entity"
-							settings = {
-								spawn_debris = no
-								is_boss = yes
-							}
-							effect = {
-								set_owner = event_target:crystal_country
-								create_ship = {
-									name = "NAME_Delta"
-									design = "NAME_GPM_Large_Crystal_Entity_Yellow_Elite"
-								}
-								set_location = FROM
-								set_fleet_stance = aggressive
-								set_aggro_range_measure_from = self
-								set_aggro_range = 150
-							}
-						}
-					}
-				}
-				10 = {
-					random_country = {
-						limit = { is_country_type = crystal }
-						create_fleet = {
-							name = "NAME_Crystalline_Entity"
-							settings = {
-								spawn_debris = no
-								is_boss = yes
-							}
-							effect = {
-								set_owner = event_target:crystal_country
-								create_ship = {
-									name = "NAME_Delta"
-									design = "NAME_GPM_Large_Crystal_Entity_Red_Elite"
-								}
-								set_location = FROM
-								set_fleet_stance = aggressive
-								set_aggro_range_measure_from = self
-								set_aggro_range = 150
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+# 	option = {
+# 		name = gpm_colony.362.a
+# 		custom_tooltip = gpm_colony.362.spacecreature
+# 		hidden_effect = {
+# 			random_list = {
+# 				10 = {
+# 					random_country = {
+# 						limit = { is_country_type = crystal }
+# 						create_fleet = {
+# 							name = "NAME_Crystalline_Entity"
+# 							settings = {
+# 								spawn_debris = no
+# 								is_boss = yes
+# 							}
+# 							effect = {
+# 								set_owner = event_target:crystal_country
+# 								create_ship = {
+# 									name = "NAME_Delta"
+# 									design = "NAME_GPM_Large_Crystal_Entity_Blue_Elite"
+# 								}
+# 								set_location = FROM
+# 								set_fleet_stance = aggressive
+# 								set_aggro_range_measure_from = self
+# 								set_aggro_range = 150
+# 							}
+# 						}
+# 					}
+# 				}
+# 				10 = {
+# 					random_country = {
+# 						limit = { is_country_type = crystal }
+# 						create_fleet = {
+# 							name = "NAME_Crystalline_Entity"
+# 							settings = {
+# 								spawn_debris = no
+# 								is_boss = yes
+# 							}
+# 							effect = {
+# 								set_owner = event_target:crystal_country
+# 								create_ship = {
+# 									name = "NAME_Delta"
+# 									design = "NAME_GPM_Large_Crystal_Entity_Green_Elite"
+# 								}
+# 								set_location = FROM
+# 								set_fleet_stance = aggressive
+# 								set_aggro_range_measure_from = self
+# 								set_aggro_range = 150
+# 							}
+# 						}
+# 					}
+# 				}
+# 				10 = {
+# 					random_country = {
+# 						limit = { is_country_type = crystal }
+# 						create_fleet = {
+# 							name = "NAME_Crystalline_Entity"
+# 							settings = {
+# 								spawn_debris = no
+# 								is_boss = yes
+# 							}
+# 							effect = {
+# 								set_owner = event_target:crystal_country
+# 								create_ship = {
+# 									name = "NAME_Delta"
+# 									design = "NAME_GPM_Large_Crystal_Entity_Yellow_Elite"
+# 								}
+# 								set_location = FROM
+# 								set_fleet_stance = aggressive
+# 								set_aggro_range_measure_from = self
+# 								set_aggro_range = 150
+# 							}
+# 						}
+# 					}
+# 				}
+# 				10 = {
+# 					random_country = {
+# 						limit = { is_country_type = crystal }
+# 						create_fleet = {
+# 							name = "NAME_Crystalline_Entity"
+# 							settings = {
+# 								spawn_debris = no
+# 								is_boss = yes
+# 							}
+# 							effect = {
+# 								set_owner = event_target:crystal_country
+# 								create_ship = {
+# 									name = "NAME_Delta"
+# 									design = "NAME_GPM_Large_Crystal_Entity_Red_Elite"
+# 								}
+# 								set_location = FROM
+# 								set_fleet_stance = aggressive
+# 								set_aggro_range_measure_from = self
+# 								set_aggro_range = 150
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 # The Crystal Beasts 4 - Perfected Harmonization
-planet_event = {
-	id = gpm_colony.363
-	title = "gpm_colony.363.name"
-	desc = "gpm_colony.363.desc"
-	picture = GFX_evt_gpm_crystalline_cave
-	show_sound = event_conversation
-	location = ROOT
+# planet_event = {
+# 	id = gpm_colony.363
+# 	title = "gpm_colony.363.name"
+# 	desc = "gpm_colony.363.desc"
+# 	picture = GFX_evt_gpm_crystalline_cave
+# 	show_sound = event_conversation
+# 	location = ROOT
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	pre_triggers = {
-		has_owner = yes
-	}
+# 	pre_triggers = {
+# 		has_owner = yes
+# 	}
 
-	option = {
-		name = INCREDIBLE
-		owner = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier2researchreward
-				min = @tier2researchmin
-				max = @tier2researchmax
-			}
-		}
-		add_deposit = d_crystalline_caverns
-		add_deposit = d_crystalline_caverns
-		add_deposit = d_crystalline_caverns
-	}
-}
+# 	option = {
+# 		name = INCREDIBLE
+# 		owner = {
+# 			add_monthly_resource_mult = {
+# 				resource = society_research
+# 				value = @tier2researchreward
+# 				min = @tier2researchmin
+# 				max = @tier2researchmax
+# 			}
+# 		}
+# 		add_deposit = d_crystalline_caverns
+# 		add_deposit = d_crystalline_caverns
+# 		add_deposit = d_crystalline_caverns
+# 	}
+# }
 
 # Capital Event - ethos unique modifier spawning list
 event = {

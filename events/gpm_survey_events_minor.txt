@@ -313,9 +313,15 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = {
-					OR = {
+					AND = {
 						gpm_is_planet_class_normal_habitable = no
-						has_deposit = no
+						OR = {
+							has_deposit = no
+							AND = {
+								has_deposit = yes
+								has_deposit_for = shipclass_mining_station
+							}
+						}
 						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					}
 				}
@@ -352,9 +358,15 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = {
-					OR = {
+					AND = {
 						gpm_is_planet_class_normal_habitable = no
-						has_deposit = no
+						OR = {
+							has_deposit = no
+							AND = {
+								has_deposit = yes
+								has_deposit_for = shipclass_research_station
+							}
+						}
 						NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					}
 				}
@@ -401,12 +413,14 @@ ship_event = {
 			if = {
 				limit = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					OR = {
+					AND = {
 						gpm_is_planet_class_normal_habitable = no
-						has_deposit = no
-						AND = {
-							has_deposit = yes
-							has_deposit_for = shipclass_research_station
+						OR = {
+							has_deposit = no
+							AND = {
+								has_deposit = yes
+								has_deposit_for = shipclass_research_station
+							}
 						}
 					}
 				}
@@ -496,6 +510,12 @@ ship_event = {
 					value = @tier1researchreward_half
 					min = @tier1researchmin_half
 					max = @tier1researchmax_half
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
 			}
 		}
@@ -3472,6 +3492,12 @@ ship_event = {
 					value = @tier1researchreward_half
 					min = @tier1researchmin_half
 					max = @tier1researchmax_half
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
 			}
 		}
@@ -6787,6 +6813,12 @@ ship_event = {
 					5 = { add_resource = { alloys = 370 multiplier = value:gpm_leader_level_value } }
 					3 = { add_resource = { alloys = 410 multiplier = value:gpm_leader_level_value } }
 					1 = { add_resource = { alloys = 450 multiplier = value:gpm_leader_level_value } }
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier2unityreward
+					min = @tier2unitymin
+					max = @tier2unitymax
 				}
 			}
 		}
