@@ -823,8 +823,8 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_low = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				90 = { }
-				10 = {
+				95 = { }
+				5 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 1.5 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 2 gpm_is_planet_class_nuked = yes }
@@ -842,8 +842,8 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_normal = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				85 = { }
-				15 = {
+				95 = { }
+				5 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
@@ -861,8 +861,8 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_high = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				80 = { }
-				20 = {
+				95 = { }
+				5 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
@@ -880,8 +880,8 @@ gpm_roll_precursor_modifiers = {
 		gpm_modifier_amount_extra_high = {
 			gpm_spawn_precursor_modifier = yes
 			random_list = {
-				80 = { }
-				20 = {
+				95 = { }
+				5 = {
 					gpm_spawn_precursor_modifier = yes
 					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }

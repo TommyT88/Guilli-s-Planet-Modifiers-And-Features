@@ -31,6 +31,16 @@ gpm_is_planet_class_normal_uninhabitable = {
 		is_planet_class = pc_iron
 		is_planet_class = pc_diamond
 		is_planet_class = pc_chthonian
+		#STNC
+        is_planet_class = pc_barren_cold_sub
+        is_planet_class = pc_barren_restored
+        is_planet_class = pc_barren_cold
+        is_planet_class = pc_planet_remnant
+        is_planet_class = pc_adaptable
+        is_planet_class = pc_adaptable_cold
+		is_planet_class = pc_methane
+		is_planet_class = pc_methane_warm
+        is_planet_class = pc_methane_cold
 	}
 }
 gpm_is_planet_class_molten = {
@@ -38,6 +48,10 @@ gpm_is_planet_class_molten = {
 	OR = {
 		is_planet_class = pc_molten					# Vanilla
 		is_planet_class = pc_volcanic				# PD
+		#STNC
+		is_planet_class = pc_geomorteus
+        is_planet_class = pc_geothermal
+        is_planet_class = pc_geoplastic
 	}
 }
 gpm_is_planet_class_toxic = {
@@ -51,6 +65,12 @@ gpm_is_planet_class_toxic = {
 		is_planet_class = pc_hydrocarbon
 		is_planet_class = pc_hothouse
 		is_planet_class = pc_ethane_ocean
+		#STNC
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_methane_warm
+        is_planet_class = pc_methane_cold
 	}
 }
 gpm_is_planet_class_frozen = {
@@ -72,6 +92,9 @@ gpm_is_planet_class_barren = {
 		is_planet_class = pc_iron
 		is_planet_class = pc_diamond
 		is_planet_class = pc_chthonian
+		#STNC
+		is_planet_class = pc_adaptable
+        is_planet_class = pc_adaptable_cold
 	}
 }
 
@@ -185,6 +208,12 @@ gpm_is_planet_class_normal_habitable = {
 		is_planet_class = pc_pd_sinkhole
 		is_planet_class = pc_pd_dry_tidally_locked
 		is_planet_class = pc_pd_dry_gaia_tidally_locked
+		#STNC
+		is_planet_class = pc_marsh
+		is_planet_class = pc_demon
+		is_planet_class = pc_sulphur
+        is_planet_class = pc_geocrystalline	
+        is_planet_class = pc_primal
 
 		
 	}
@@ -232,6 +261,11 @@ gpm_is_planet_class_star = {
 		is_planet_class = pc_habitable_m_star		# GE
 		is_planet_class = pc_habitable_k_star		# GE
 		is_planet_class = pc_habitable_g_star		# GE
+		#STNC
+		is_planet_class = pc_d_star
+		is_planet_class = pc_collapsar
+		is_planet_class = pc_protostar
+		is_planet_class = pc_o_star
 	}
 }
 gpm_is_planet_class_asteroid = {
@@ -251,6 +285,9 @@ gpm_is_planet_class_gas_giant = {
 		is_planet_class = pc_cold_gas_giant
 		is_planet_class = pc_dwarf_gas_giant
 		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_ice_giant				#STNC
+		is_planet_class = pc_super_giant			#STNC
+		is_planet_class = pc_ultra_giant			#STNC
 	}
 }
 gpm_is_planet_class_city = {

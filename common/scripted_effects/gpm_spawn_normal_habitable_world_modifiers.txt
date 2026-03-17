@@ -3684,6 +3684,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_jeweled_flowers" }
 			# (Not) on these planets
+			modifier = { factor = 0 is_planet_class = pc_volcanic }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks

@@ -26,20 +26,22 @@
 
 
 gpm_relic_factories = {
-	planet_metallurgists_alloys_produces_add = 2
-	planet_artisans_consumer_goods_produces_add = 2
+	planet_metallurgists_alloys_produces_add = 1
+	planet_metallurgists_minerals_upkeep_add = 2
+	planet_artisans_consumer_goods_produces_add = 1
+	planet_artisans_minerals_upkeep_add = 2
 	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_factories.dds"
 	icon_frame = 1
 }
 gpm_relic_generators = {
-	planet_technician_energy_produces_add = 3
+	planet_technician_energy_produces_add = 1
 	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_generators.dds"
 	icon_frame = 1
 }
 gpm_relic_laboratories = {
-	planet_physicists_physics_research_produces_add = 2
-	planet_engineers_engineering_research_produces_add = 2
-	planet_biologists_society_research_produces_add = 2
+	planet_physicists_physics_research_produces_add = 0.5
+	planet_engineers_engineering_research_produces_add = 0.5
+	planet_biologists_society_research_produces_add = 0.5
 	icon = "gfx/interface/icons/planet_modifiers/gpm_relic_laboratories.dds"
 	icon_frame = 1
 }

@@ -31,6 +31,7 @@ artifact_arcane_deciphering = {
 
 	potential = {
 		has_technology = tech_arcane_deciphering
+		NOT = { has_global_flag = "star_trek_new_civilisations" }
 	}
 	
 	allow = {

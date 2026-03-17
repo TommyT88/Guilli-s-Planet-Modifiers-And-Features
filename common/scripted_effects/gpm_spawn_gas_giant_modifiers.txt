@@ -27,6 +27,16 @@ gpm_spawn_gas_giant_modifier = {
 	random_list = {
 		100 = {
 			add_modifier = { modifier = "gpm_supersonic_winds" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_supersonic_winds" }
 			# Not on these planets
@@ -38,6 +48,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_geometrical_polar_storm" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_geometrical_polar_storm" }
 			modifier = { factor = 0 has_modifier = "gpm_shrinking_giant" }
@@ -73,6 +93,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_everlasting_tornadoes" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_everlasting_tornadoes" }
 			# Not on these planets
@@ -83,6 +113,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_shrinking_giant" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			change_planet_size = -10
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_shrinking_giant" }
@@ -131,6 +171,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_beautiful_storms" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_beautiful_storms" }
 			modifier = { factor = 0 has_modifier = "gpm_radiation_storms" }
@@ -185,6 +235,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_global_thunderstorms_gas_giant" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_global_thunderstorms_gas_giant" }
 			# Not on these planets
@@ -196,6 +256,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_weak_magnetic_field_gas_giant" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_weak_magnetic_field_gas_giant" }
 			modifier = { factor = 0 has_modifier = "gpm_strong_magnetic_field_gas_giant" }
@@ -208,6 +278,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_strong_magnetic_field_gas_giant" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_strong_magnetic_field_gas_giant" }
 			modifier = { factor = 0 has_modifier = "gpm_weak_magnetic_field_gas_giant" }
@@ -220,6 +300,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_super_heated_atmosphere" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_super_heated_atmosphere" }
 			modifier = { factor = 0 has_modifier = "gpm_aeroplankton_clouds" }
@@ -233,6 +323,16 @@ gpm_spawn_gas_giant_modifier = {
 		}
 		50 = {
 			add_modifier = { modifier = "gpm_floatig_behemothaurs" }
+			if = {
+				limit = { has_deposit = no }
+				random_list = {
+					84 = { }
+					5 = { gpm_d_random_physics_gal_gen = yes }
+					5 = { gpm_d_random_society_gal_gen = yes }
+					5 = { gpm_d_random_engineering_gal_gen = yes }
+					1 = { gpm_d_random_research = yes }
+				}
+			}
 			clear_deposits = yes
 			add_deposit = d_society_6
 			# Not with these modifiers

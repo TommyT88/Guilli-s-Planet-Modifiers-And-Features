@@ -15,11 +15,23 @@ gpm_switch_fixable_modifiers = {
 		limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
 		gpm_scale_planet_modifiers = yes
 	}
-
+	
 	if = {
 		limit = { has_modifier = gpm_thin_ozone_layer }
 		remove_modifier = gpm_thin_ozone_layer
 		add_modifier = { modifier = gpm_thin_ozone_layer_fixed multiplier = gpm_planet_size_multiplier }
+	}
+	
+	if = {
+		limit = { has_modifier = gpm_weak_magnetic_field_gas_giant }
+		remove_modifier = gpm_weak_magnetic_field_gas_giant
+		add_modifier = { modifier = weak_magnetic_field multiplier = gpm_planet_size_multiplier }
+	}
+
+	if = {
+		limit = { has_modifier = gpm_strong_magnetic_field_gas_giant }
+		remove_modifier = gpm_strong_magnetic_field_gas_giant
+		add_modifier = { modifier = strong_magnetic_field multiplier = gpm_planet_size_multiplier }
 	}
 	if = {
 		limit = { has_modifier = gpm_unusual_seasons }

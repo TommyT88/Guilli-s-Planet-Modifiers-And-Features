@@ -1370,7 +1370,6 @@ gpm_spawn_planet_ring_modifier = {
 				}
 			}
 			# (Not) on these planets
-			modifier = { factor = 0 is_moon = yes }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
@@ -1386,12 +1385,7 @@ gpm_spawn_planet_ring_modifier = {
 			modifier = { factor = 1.2 planet_size > 15 }
 			modifier = { factor = 1.4 planet_size > 20 }
 			modifier = { factor = 2 planet_size > 25 }
-			# modifier = { factor = 0 num_moons > 1 }
-			modifier = { factor = 0.4 num_moons = 1 }
-			modifier = { factor = 1.5 num_moons = 0 }
 			# Galaxy age setting modifier
-			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 		}
 		5 = {
@@ -1407,7 +1401,6 @@ gpm_spawn_planet_ring_modifier = {
 				}
 			}
 			# (Not) on these planets
-			modifier = { factor = 0 is_moon = yes }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
@@ -1424,12 +1417,7 @@ gpm_spawn_planet_ring_modifier = {
 			modifier = { factor = 1.2 planet_size > 15 }
 			modifier = { factor = 1.4 planet_size > 20 }
 			modifier = { factor = 2 planet_size > 25 }
-			# modifier = { factor = 0 num_moons > 1 }
-			modifier = { factor = 0.4 num_moons = 1 }
-			modifier = { factor = 1.5 num_moons = 0 }
 			# Galaxy age setting modifier
-			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
-			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 		}
 	}

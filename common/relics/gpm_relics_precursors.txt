@@ -459,8 +459,8 @@ gpm_r_power_core = {
 		potential = {
 			always = yes
 		}
-		country_base_energy_produces_add = 50
-		weapon_type_energy_weapon_damage_mult = 0.3
+		# country_base_energy_produces_add = 50
+		weapon_type_energy_weapon_damage_mult = 0.35
 	}
 
 	score = 1000
@@ -518,7 +518,7 @@ gpm_r_mysterious_shield_generator = {
 		potential = {
 			always = yes
 		}
-		ship_shield_mult = 0.30
+		ship_shield_mult = 0.50
 	}
 
 	score = 1000
@@ -624,7 +624,7 @@ gpm_r_codex_administratum = {
 		if = {
 			limit = { is_machine_empire = yes }
 			add_modifier = {
-				modifier = "relay_network_stability_edict_modifier" multiplier = 3.34
+				modifier = "relay_network_stability_edict_modifier" multiplier = 5
 				days = @triumph_duration
 			}
 		}
@@ -724,29 +724,31 @@ gpm_r_positronic_microchip = {
 		potential = {
 			is_machine_empire = yes
 		}
-		MACHINE_species_trait_points_add = 3
-		MACHINE_species_trait_picks_add = 2
+		MACHINE_species_trait_points_add = 2
+		MACHINE_species_trait_picks_add = 4
 	}
 	triggered_country_modifier = {
 		potential = {
 			is_hive_empire = yes
 		}
 		BIOLOGICAL_species_trait_points_add = 2
-		BIOLOGICAL_species_trait_picks_add = 1
-		LITHOID_species_trait_points_add = 2
-		LITHOID_species_trait_picks_add = 1
+		BIOLOGICAL_species_trait_picks_add = 4
+		# LITHOID_species_trait_points_add = 2
+		# LITHOID_species_trait_picks_add = 1
+		# ROBOT_species_trait_points_add = 3
+		# ROBOT_species_trait_picks_add = 3
 	}
 	triggered_country_modifier = {
 		potential = {
 			is_machine_empire = no
 			is_hive_empire = no
 		}
-		ROBOT_species_trait_points_add = 2
-		ROBOT_species_trait_picks_add = 1
 		BIOLOGICAL_species_trait_points_add = 2
-		BIOLOGICAL_species_trait_picks_add = 1
-		LITHOID_species_trait_points_add = 2
-		LITHOID_species_trait_picks_add = 1
+		BIOLOGICAL_species_trait_picks_add = 4
+		# LITHOID_species_trait_points_add = 2
+		# LITHOID_species_trait_picks_add = 1
+		ROBOT_species_trait_points_add = 2
+		ROBOT_species_trait_picks_add = 4
 	}
 
 	score = 1000
@@ -962,7 +964,7 @@ gpm_r_manufactorium_ship = {
 			trigger = {
 				has_ancrel = yes
 			}
-			minor_artifacts = 500
+			minor_artifacts = 250
 		}
 	}
 	
@@ -974,22 +976,22 @@ gpm_r_manufactorium_ship = {
 		potential = {
 			is_gestalt = no
 		}
-		country_base_consumer_goods_produces_add = 30
-		country_base_alloys_produces_add = 30
+		country_base_consumer_goods_produces_add = 20
+		country_base_alloys_produces_add = 20
 	}
 	triggered_country_modifier = {
 		potential = {
 			is_gestalt = yes
 		}
-		country_base_alloys_produces_add = 50
+		country_base_alloys_produces_add = 20
 	}
 
 	score = 1000
 
 	active_effect = {
-		add_resource = { rare_crystals = 2000 }
-		add_resource = { volatile_motes = 2000 }
-		add_resource = { exotic_gases = 2000 }
+		add_resource = { rare_crystals = 1000 }
+		add_resource = { volatile_motes = 1000 }
+		add_resource = { exotic_gases = 1000 }
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
@@ -1187,7 +1189,7 @@ gpm_r_banner_of_the_fallen = {
 		potential = {
 			always = yes
 		}
-		country_war_exhaustion_mult = -0.10
+		country_war_exhaustion_mult = -0.15
 	}
 
 	score = 1000
@@ -1236,7 +1238,7 @@ gpm_r_cloaking_device = {
 		potential = {
 			has_first_contact_dlc = yes
 		}
-		ship_cloaking_strength_add = 3
+		ship_cloaking_strength_add = 5
 		show_only_custom_tooltip = no
 		custom_tooltip = "gpm_r_cloaking_device_passive_effect_tooltip"
 	}
@@ -1296,7 +1298,7 @@ gpm_r_q_storage_compressor = {
 			always = yes
 		}
 		country_resource_max_add = 100000
-		country_resource_max_minor_artifacts_add = 25000
+		country_resource_max_minor_artifacts_add = 10000
 	}
 
 	score = 1000
@@ -1358,16 +1360,9 @@ gpm_r_soul_gem = {
 	
 	triggered_country_modifier = {
 		potential = {
-			is_machine_empire = no
+			always = yes
 		}
 		leader_lifespan_add = 50
-	}
-	
-	triggered_country_modifier = {
-		potential = {
-			is_machine_empire = yes
-		}
-		country_physics_research_produces_mult = 0.15
 	}
 
 	score = 1000

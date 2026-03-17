@@ -244,6 +244,9 @@ country_event = {
 
 	# additional options menu - features
 	option = {
+		trigger = {
+			NOT = { has_global_flag = star_trek_new_civilisations }
+		}
 		name = gpm_start_menu.1.options
 		custom_tooltip = gpm_start_menu.1.optionsTT
 		hidden_effect = {
@@ -643,7 +646,7 @@ country_event = {
 	############ Disable Coloured planet names ############
 	#######################################################
 
-	# Disable Spider like features
+	# Disable coloured planet names
 	option = {
 		trigger = {
 			NOT = { has_global_flag = gpm_coloured_names_disabled }
@@ -655,7 +658,7 @@ country_event = {
 			country_event = { id = gpm_start_menu.3  }
 		}
 	}
-	# Enable Spider like features
+	# Disable coloured planet names
 	option = {
 		trigger = {
 			has_global_flag = gpm_coloured_names_disabled
@@ -709,6 +712,7 @@ country_event = {
 	option = {
 		trigger = {
 			NOT = { has_global_flag = gpm_multiplayer_fun_enabled }
+			NOT = { has_global_flag = star_trek_new_civilisations }
 		}
 		name = gpm_start_menu.3.enabled_mp_fun
 		custom_tooltip = gpm_start_menu.3.enabled_mp_funTT

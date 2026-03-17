@@ -26,11 +26,14 @@ gpm_time_lost_digsite = {
 	max_instances = 1
 	weight = 0
 	allow = {
+		is_ship_class = shipclass_science_ship
 		exists = leader
-		leader = { leader_class = scientist }
 	}
 	visible = {
 		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
 	}
 	stage = {
 		difficulty = 4
@@ -60,19 +63,26 @@ gpm_precursor_generic_digsite = {
 	desc = gpm_precursor_generic_digsite_desc
 	picture = GFX_evt_gpm_precursor_artifact_discovery
 	stages = 6
-	max_instances = 999
 	weight = 0
 	allow = {
+		is_ship_class = shipclass_science_ship
 		exists = leader
-		leader = { leader_class = scientist }
 	}
 	visible = {
 		default_site_visible_trigger = yes
 	}
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = no_events }
+		}
+	}
 
 	# Set up camp
 	stage = {
-		difficulty = 1
+		difficulty = 2
 		event = gpm_dig_site.100
 		icon = GFX_archaeology_runes_A1
 	}
@@ -93,7 +103,7 @@ gpm_precursor_generic_digsite = {
 
 	# Secondary Expedition
 	stage = {
-		difficulty = 2
+		difficulty = 3
 		event = gpm_dig_site.130
 		icon = GFX_archaeology_runes_A1
 	}
@@ -110,14 +120,8 @@ gpm_precursor_generic_digsite = {
 		# ...
 		# RANDOM LIST MASTER EVENT
 	stage = {
-		difficulty = 3
+		difficulty = 4
 		event = gpm_dig_site.9000
 		icon = GFX_archaeology_runes_A1
-	}
-
-	on_roll_failed = {
-		from = {
-			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
-		}
 	}
 }

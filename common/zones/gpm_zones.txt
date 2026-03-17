@@ -1,7 +1,7 @@
 # Planet District Zones
 
 zone_gpm_precursor_science = {
-	icon = GFX_district_specialization_research
+	icon = GFX_district_specialization_gpm_precursor_science
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
 		exists = owner
@@ -11,6 +11,15 @@ zone_gpm_precursor_science = {
 	}
 	planet_limit = {
 		base = 1
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
 	}
 
 	resources = {
@@ -33,7 +42,7 @@ zone_gpm_precursor_science = {
 	
 	inline_script = {
 		script = jobs/zone_researchers_add
-		AMOUNT = $AMOUNT$
+		AMOUNT = @scaling_district_researchers_4_jobs
 	}
 	
 	planet_modifier = {
@@ -46,26 +55,15 @@ zone_gpm_precursor_science = {
 		}
 		modifier = {
 			planet_researchers_energy_upkeep_add = 0.5
-			planet_physicists_minor_artifacts_produces_add = 0.05
-			planet_biologists_minor_artifacts_produces_add = 0.05
-			planet_engineers_minor_artifacts_produces_add = 0.05
+			planet_physicists_minor_artifacts_produces_add = 0.01
+			planet_biologists_minor_artifacts_produces_add = 0.01
+			planet_engineers_minor_artifacts_produces_add = 0.01
 		}
 	}
 
 	inline_script = {
 		script = zones/shared_city_non_urban_zone_modifiers
 	}
-	
-	
-
-	# max_buildings = 3
-
-	# triggered_desc = {
-		# trigger = {
-			# always = yes
-		# }
-		# text = zone_trade_triggered_desc
-	# }
 	
 	ai_resource_production = {
 		physics_research = 5
@@ -83,7 +81,7 @@ zone_gpm_precursor_science = {
 }
 
 zone_gpm_precursor_manufactorium = {
-	icon = GFX_district_specialization_foundry
+	icon = GFX_district_specialization_gpm_precursor_manufactorium
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
 		exists = owner

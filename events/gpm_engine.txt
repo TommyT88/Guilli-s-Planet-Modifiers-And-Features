@@ -34,20 +34,23 @@ country_event = {
 		set_variable = { which = gpm_galaxy_setting_habitable_worlds_scale value = 1 }
 
 		# SOL system
-		random_system = {
-			limit = { has_star_flag = sol_system }
-			random_system_planet = {
-				limit = {
-					is_capital = no
-					is_planet_class = pc_barren
-					is_moon = no
-					OR = {
-						has_planet_flag = mars
-						planet_size = 13 # safety check
+		if = {
+			limit = { NOT = { has_global_flag = "star_trek_new_civilisations" } }
+			random_system = {
+				limit = { has_star_flag = sol_system }
+				random_system_planet = {
+					limit = {
+						is_capital = no
+						is_planet_class = pc_barren
+						is_moon = no
+						OR = {
+							has_planet_flag = mars
+							planet_size = 13 # safety check
+						}
+						NOT = { has_modifier = gpm_oppertunity }
 					}
-					NOT = { has_modifier = gpm_oppertunity }
+					add_modifier = { modifier = gpm_oppertunity days = -1 }
 				}
-				add_modifier = { modifier = gpm_oppertunity days = -1 }
 			}
 		}
 
@@ -62,7 +65,10 @@ country_event = {
 		# Planet Wonders
 		# Guaranteed wonders, one per planet class
 		if = {
-			limit = { gpm_are_wonders_enabled = yes	}
+			limit = { 
+				gpm_are_wonders_enabled = yes
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
+			}
 			random_galaxy_planet = {
 				set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
 				limit = {
@@ -372,7 +378,10 @@ country_event = {
 
 			# set precursor worlds
 			if = {
-				limit = { gpm_are_precursors_enabled = yes }
+				limit = { 
+					gpm_are_precursors_enabled = yes
+					NOT = { has_global_flag = "star_trek_new_civilisations" }
+				}
 				planet_event = { id = gpm_engine.2 }
 			}
 			# spawn engine MASTER EVENT
@@ -786,10 +795,10 @@ planet_event = {
 				gpm_has_required_terraform_modifier = no
 				OR = {
 					# has_modifier = gpm_unnatural_world
-					has_modifier = gpm_ultra_rich_2
-					has_modifier = gpm_spaceship_graveyard
+					# has_modifier = gpm_ultra_rich_2
+					# has_modifier = gpm_spaceship_graveyard
 					# has_modifier = gpm_old_world
-					has_modifier = gpm_artificial_core
+					# has_modifier = gpm_artificial_core
 					gpm_has_precursor_modifiers = yes
 				}
 			}
@@ -802,10 +811,10 @@ planet_event = {
 					NOT = { has_modifier = toxic_terraforming_candidate }
 					OR = {
 						# has_modifier = gpm_unnatural_world
-						has_modifier = gpm_ultra_rich_2
-						has_modifier = gpm_spaceship_graveyard
+						# has_modifier = gpm_ultra_rich_2
+						# has_modifier = gpm_spaceship_graveyard
 						# has_modifier = gpm_old_world
-						has_modifier = gpm_artificial_core
+						# has_modifier = gpm_artificial_core
 						gpm_has_precursor_modifiers = yes
 					}
 			}
@@ -820,6 +829,7 @@ planet_event = {
 			limit = {
 				gpm_is_planet_class_asteroid = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
 			}
 			random_list = {
 				993 = { }
@@ -853,6 +863,7 @@ planet_event = {
 			limit = {
 				gpm_is_planet_class_gas_giant = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
 			}
 			random_list = {
 				996 = { }
@@ -886,6 +897,7 @@ planet_event = {
 			limit = {
 				gpm_is_planet_class_normal_uninhabitable = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
 			}
 			random_list = {
 				998 = { }
@@ -919,6 +931,7 @@ planet_event = {
 			limit = {
 				gpm_is_planet_class_star = yes
 				NOT = { has_global_flag = gpm_mini_megas_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
 			}
 			random_list = {
 				995 = { }
@@ -1006,11 +1019,13 @@ planet_event = {
 			limit = {
 				NAND = {
 					has_global_flag = gpm_planetary_rings_disabled
+					has_global_flag = "star_trek_new_civilisations"
 					exists = space_owner
+					num_moons < 2
 				}
 			}
 			random_list = {
-				120 = {
+				85 = {
 					modifier = {
 						factor = 0
 						OR = {
@@ -1040,12 +1055,16 @@ planet_event = {
 						}
 					}
 				}
-				10 = {
+				15 = {
+					modifier = {
+						factor = 0.2
+						has_moon = yes
+					}
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
-					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
-					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 1.1 has_global_flag = gpm_galaxy_age_young }
+					modifier = { factor = 0.9 has_global_flag = gpm_galaxy_age_old }
 				}
 			}
 		}
@@ -1081,9 +1100,14 @@ planet_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
+			limit = { 
+				NOT = { has_global_flag = gpm_planetary_rings_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
+				NOT = { is_moon = yes }
+			}
 			random_list = {
-				290 = {
+				94 = {
+					# log = "RING RESOURCE SITE: UNINHABITABLE: NO SPAWN on [this.GetName]"
 					modifier = {
 						factor = 0
 						OR = {
@@ -1113,12 +1137,21 @@ planet_event = {
 						}
 					}
 				}
-				10 = {
+				6 = {
+					# log = "RING RESOURCE SITE: UNINHABITABLE: YES SPAWN on [this.GetName]"
+					modifier = {
+						factor = 0.2
+						has_moon = yes
+					}
+					modifier = {
+						factor = 0
+						num_moons > 1
+					}
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
-					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
-					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 1.1 has_global_flag = gpm_galaxy_age_young }
+					modifier = { factor = 0.9 has_global_flag = gpm_galaxy_age_old }
 				}
 			}
 		}
@@ -1176,9 +1209,13 @@ planet_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
+			limit = { 
+				NOT = { has_global_flag = gpm_planetary_rings_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
+				NOT = { is_moon = yes }
+			}
 			random_list = {
-				140 = {
+				75 = {
 					modifier = {
 						factor = 0
 						OR = {
@@ -1208,12 +1245,16 @@ planet_event = {
 						}
 					}
 				}
-				10 = {
+				25 = {
+					modifier = {
+						factor = 0.2
+						has_moon = yes
+					}
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
-					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
-					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 1.1 has_global_flag = gpm_galaxy_age_young }
+					modifier = { factor = 0.9 has_global_flag = gpm_galaxy_age_old }
 				}
 			}
 		}
@@ -1250,9 +1291,13 @@ planet_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
+			limit = { 
+				NOT = { has_global_flag = gpm_planetary_rings_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
+				NOT = { is_moon = yes }
+			}
 			random_list = {
-				120 = {
+				80 = {
 					modifier = {
 						factor = 0
 						OR = {
@@ -1282,12 +1327,16 @@ planet_event = {
 						}
 					}
 				}
-				10 = {
+				20 = {
+					modifier = {
+						factor = 0.2
+						has_moon = yes
+					}
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
-					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
-					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 1.1 has_global_flag = gpm_galaxy_age_young }
+					modifier = { factor = 0.9 has_global_flag = gpm_galaxy_age_old }
 				}
 			}
 		}
@@ -1446,9 +1495,13 @@ planet_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
+			limit = { 
+				NOT = { has_global_flag = gpm_planetary_rings_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
+				NOT = { is_moon = yes }
+			}
 			random_list = {
-				240 = {
+				90 = {
 					modifier = {
 						factor = 0
 						OR = {
@@ -1479,11 +1532,15 @@ planet_event = {
 					}
 				}
 				10 = {
+					modifier = {
+						factor = 0.2
+						has_moon = yes
+					}
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
-					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
-					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 1.1 has_global_flag = gpm_galaxy_age_young }
+					modifier = { factor = 0.9 has_global_flag = gpm_galaxy_age_old }
 				}
 			}
 		}
@@ -1577,9 +1634,13 @@ planet_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { NOT = { has_global_flag = gpm_planetary_rings_disabled } }
+			limit = { 
+				NOT = { has_global_flag = gpm_planetary_rings_disabled }
+				NOT = { has_global_flag = "star_trek_new_civilisations" }
+				NOT = { is_moon = yes }
+			}
 			random_list = {
-				140 = {
+				90 = {
 					modifier = {
 						factor = 0
 						OR = {
@@ -1610,11 +1671,15 @@ planet_event = {
 					}
 				}
 				10 = {
+					modifier = {
+						factor = 0.2
+						has_moon = yes
+					}
 					gpm_spawn_planet_ring_modifier = yes
 					gpm_spawn_RES = yes
 					# Galaxy age setting modifier
-					modifier = { factor = 1.2 has_global_flag = gpm_galaxy_age_young }
-					modifier = { factor = 0.8 has_global_flag = gpm_galaxy_age_old }
+					modifier = { factor = 1.1 has_global_flag = gpm_galaxy_age_young }
+					modifier = { factor = 0.9 has_global_flag = gpm_galaxy_age_old }
 				}
 			}
 		}
@@ -1644,7 +1709,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-
+		NOT = { has_global_flag = "star_trek_new_civilisations" }
 	}
 
 	immediate = {

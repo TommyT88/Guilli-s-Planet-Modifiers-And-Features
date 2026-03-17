@@ -174,13 +174,9 @@ leader_trait_gpm_fallen_heraldry = {
 	}
 	
 	leader_potential_add = {
-		always = no
+		from = { has_country_flag = gpm_fallen_heraldry_trait_rewarded }
 	}
-	
-	
-	# leader_potential_add = {
-	# 	from = { has_country_flag = gpm_fallen_heraldry_trait_rewarded }
-	# }
+
 	
 	triggered_fleet_modifier = {
 		potential = {
@@ -221,7 +217,7 @@ leader_trait_gpm_personal_mech = {
 	randomized = no
 	
 	leader_potential_add = {
-		always = no
+		from = { has_country_flag = gpm_personal_mech_trait_rewarded }
 	}
 
 	triggered_councilor_modifier = {
@@ -241,9 +237,6 @@ leader_trait_gpm_personal_mech = {
 		army_morale_damage_mult = 0.50
 		army_collateral_damage_mult = 0.50
 	}
-	# leader_potential_add = {
-	# 	from = { has_country_flag = gpm_personal_mech_trait_rewarded }
-	# }
 	leader_class = { commander }
 }
 
@@ -260,7 +253,7 @@ leader_trait_gpm_battle_standards = {
 	randomized = no
 	
 	leader_potential_add = {
-		always = no
+		from = { has_country_flag = gpm_battle_standards_trait_rewarded }
 	}
 
 	triggered_councilor_modifier = {
@@ -280,9 +273,7 @@ leader_trait_gpm_battle_standards = {
 		army_morale = 0.30
 		army_damage_mult = 0.30
 	}
-	# leader_potential_add = {
-	# 	from = { has_country_flag = gpm_battle_standards_trait_rewarded }
-	# }
+
 	leader_class = { commander }
 }
 

@@ -695,7 +695,6 @@ gpm_create_rogue_traders = {
 	save_event_target_as = planet_location
 	event_target:drone_country = {
 		random_list = {
-			0 = { }
 			10 = {
 				create_fleet = {
 					name = "NAME_Mining_Corps"
@@ -830,28 +829,6 @@ gpm_create_rogue_traders = {
 					effect = {
 						set_owner = event_target:drone_country
 						while = {
-							count = 1
-							create_ship = {
-								name = ""
-								design = "NAME_Pirate_Nest"
-								graphical_culture = "pirate_01"
-							}
-						}
-						set_location = {
-							target = event_target:planet_location
-							distance = 0
-							angle = 20
-						}
-						set_formation_scale = 2
-						set_aggro_range_measure_from = self
-						set_aggro_range = 200
-					}
-				}
-				create_fleet = {
-					name = "NAME_Mining_Corps"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
 							count = 3
 							create_ship = {
 								name = "NAME_Drone_1832-D"
@@ -871,28 +848,6 @@ gpm_create_rogue_traders = {
 				}
 			}
 			10 = {
-				create_fleet = {
-					name = "NAME_Mining_Corps"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
-							count = 1
-							create_ship = {
-								name = ""
-								design = "NAME_Marauder"
-							}
-						}
-						set_location = {
-							target = event_target:planet_location
-							distance = 0
-							angle = 20
-						}
-						set_formation_scale = 2
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = self
-						set_aggro_range = 200
-					}
-				}
 				create_fleet = {
 					name = "NAME_Mining_Corps"
 					effect = {
@@ -922,28 +877,6 @@ gpm_create_rogue_traders = {
 					effect = {
 						set_owner = event_target:drone_country
 						while = {
-							count = 1
-							create_ship = {
-								name = ""
-								design = "NAME_Corsair"
-							}
-						}
-						set_location = {
-							target = event_target:planet_location
-							distance = 0
-							angle = 20
-						}
-						set_formation_scale = 2
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = self
-						set_aggro_range = 200
-					}
-				}
-				create_fleet = {
-					name = "NAME_Mining_Corps"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
 							count = 4
 							create_ship = {
 								name = "NAME_Drone_1832-D"
@@ -962,7 +895,7 @@ gpm_create_rogue_traders = {
 					}
 				}
 			}
-			10 = {
+			40 = {
 				create_fleet = {
 					name = "NAME_Mining_Corps"
 					effect = {
@@ -985,28 +918,28 @@ gpm_create_rogue_traders = {
 						set_aggro_range = 200
 					}
 				}
-				create_fleet = {
-					name = "NAME_Mining_Corps"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
-							count = 6
-							create_ship = {
-								name = "NAME_Drone_1832-D"
-								design = "NAME_Ancient_Combat_Drone"
-							}
-						}
-						set_location = {
-							target = event_target:planet_location
-							distance = 0
-							angle = 20
-						}
-						set_formation_scale = 2
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = self
-						set_aggro_range = 200
-					}
-				}
+				# create_fleet = {
+				# 	name = "NAME_Mining_Corps"
+				# 	effect = {
+				# 		set_owner = event_target:drone_country
+				# 		while = {
+				# 			count = 6
+				# 			create_ship = {
+				# 				name = "NAME_Drone_1832-D"
+				# 				design = "NAME_Ancient_Combat_Drone"
+				# 			}
+				# 		}
+				# 		set_location = {
+				# 			target = event_target:planet_location
+				# 			distance = 0
+				# 			angle = 20
+				# 		}
+				# 		set_formation_scale = 2
+				# 		set_fleet_stance = aggressive
+				# 		set_aggro_range_measure_from = self
+				# 		set_aggro_range = 200
+				# 	}
+				# }
 			}
 		}
 	}
@@ -1020,7 +953,7 @@ gpm_random_ring_feature = {
 		limit = { has_global_flag = gpm_galaxy_age_young }
 		random_list = {
 			50 = {}
-			15 = { 
+			45 = { 
 				gpm_create_tiyanki_resident = yes
 				modifier = { factor = 0 solar_system = { exists = owner } }
 				modifier = { factor = 0 NOT = { exists = event_target:tiyanki_country } }
@@ -1038,13 +971,13 @@ gpm_random_ring_feature = {
 	if = { 
 		limit = { has_global_flag = gpm_galaxy_age_default }
 		random_list = {
-			50 = { }
-			10 = { 
+			60 = { }
+			20 = { 
 				gpm_create_tiyanki_resident = yes
 				modifier = { factor = 0 solar_system = { exists = owner } }
 				modifier = { factor = 0 NOT = { exists = event_target:tiyanki_country } }
 			}
-			15 = {
+			20 = {
 				gpm_create_rogue_traders = yes
 				modifier = { factor = 0 solar_system = { exists = owner } }
 				modifier = { factor = 0 NOT = { exists = event_target:drone_country } }
@@ -1058,7 +991,7 @@ gpm_random_ring_feature = {
 		limit = { has_global_flag = gpm_galaxy_age_old }
 		random_list = {
 			50 = {}
-			5 = {
+			15 = {
 				gpm_create_tiyanki_resident = yes
 				modifier = { factor = 0 solar_system = { exists = owner } }
 				modifier = { factor = 0 NOT = { exists = event_target:tiyanki_country } }

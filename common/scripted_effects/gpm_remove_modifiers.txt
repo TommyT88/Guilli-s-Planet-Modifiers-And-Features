@@ -735,8 +735,11 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_teleportation_systems
 	
 	# Planet Rings
-	remove_modifier = gpm_metallic_ring
-	remove_modifier = gpm_ice_ring
+	if = {
+		limit = { NOT = { is_planet_class = pc_machine } }
+		remove_modifier = gpm_metallic_ring
+		remove_modifier = gpm_ice_ring
+	}
 	
 	# Event Placed Modifiers
 	remove_modifier = gpm_compact_star
@@ -765,7 +768,10 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_v_type_asteroid
 
 	# Barren Worlds
-	remove_modifier = gpm_oppertunity
+	if = {
+		limit = { NOT = { is_planet_class = pc_machine } }
+		remove_modifier = gpm_oppertunity
+	}
 	remove_modifier = gpm_hydrogen_mist
 	remove_modifier = gpm_iron_planet
 	remove_modifier = gpm_carbon_planet
@@ -792,16 +798,19 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_viscous_gas_layer
 	remove_modifier = gpm_everlasting_tornadoes
 	remove_modifier = gpm_shrinking_giant
-	remove_modifier = gpm_charged_atmosphere
+	if = {
+		limit = { NOT = { is_planet_class = pc_machine } }
+		remove_modifier = gpm_charged_atmosphere
+		remove_modifier = gpm_weak_magnetic_field_gas_giant
+		remove_modifier = gpm_strong_magnetic_field_gas_giant
+	}
 	remove_modifier = gpm_aeroplankton_clouds
 	remove_modifier = gpm_radiation_storms
 	remove_modifier = gpm_beautiful_storms
 	remove_modifier = gpm_abandoned_refineries
 	remove_modifier = gpm_floating_kelp
 	remove_modifier = gpm_thin_atmospheres_gas_giant
-	remove_modifier = gpm_global_thunderstorms_gas_giant
-	remove_modifier = gpm_weak_magnetic_field_gas_giant
-	remove_modifier = gpm_strong_magnetic_field_gas_giant
+	remove_modifier = gpm_global_thunderstorms_gas_giant	
 	remove_modifier = gpm_super_heated_atmosphere
 	remove_modifier = gpm_floatig_behemothaurs
 
@@ -854,52 +863,72 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_toxic_flora_fauna
 
 	# Global Uninhabitable Worlds
-	remove_modifier = gpm_fast_rotation
-	remove_modifier = weak_magnetic_field
-	remove_modifier = strong_magnetic_field
+	if = {
+		limit = { NOT = { is_planet_class = pc_machine } }
+		remove_modifier = gpm_fast_rotation
+		remove_modifier = weak_magnetic_field
+		remove_modifier = strong_magnetic_field
+		remove_modifier = low_gravity
+		remove_modifier = high_gravity
+		remove_modifier = gpm_very_hot_core
+		remove_modifier = gpm_solidified_core
+		remove_modifier = gpm_lunar_dance
+	}
 	remove_modifier = asteroid_impacts
 	remove_modifier = mineral_rich
 	remove_modifier = ultra_rich
-	remove_modifier = low_gravity
-	remove_modifier = high_gravity
 	remove_modifier = gpm_flat_terrain
 	remove_modifier = gpm_rugged_terrain
 	remove_modifier = gpm_radioactive_mantle
 	remove_modifier = gpm_old_world
 	remove_modifier = gpm_hot_geysers
 	remove_modifier = gpm_cryogeysers
-	remove_modifier = gpm_very_hot_core
-	remove_modifier = gpm_solidified_core
 	remove_modifier = gpm_hiveworld
 	remove_modifier = gpm_periodic_meteor_showers
-	remove_modifier = gpm_lunar_dance
 	remove_modifier = gpm_subterranean_eco_system
 	remove_modifier = gpm_abundant_natural_radioactivity
 
 	# Global Habitable Worlds
+	if = {
+		limit = { NOT = { is_planet_class = pc_machine } }
+		remove_modifier = gpm_highly_charged_air_particles
+		remove_modifier = gpm_time_displaced_planet
+		remove_modifier = gpm_weak_magnetic_field_2
+		remove_modifier = gpm_strong_magnetic_field_2
+		remove_modifier = gpm_low_gravity_2
+		remove_modifier = gpm_high_gravity_2
+		remove_modifier = gpm_floating_islands
+		remove_modifier = gpm_unnatural_world
+		remove_modifier = gpm_android_pleasure_palace
+		remove_modifier = gpm_tilted_axis
+		remove_modifier = gpm_perpendicular_axis
+		remove_modifier = gpm_radioactive_mantle
+		remove_modifier = gpm_strange_voices
+		remove_modifier = gpm_artificial_core
+		remove_modifier = gpm_never_ending_aurora
+		remove_modifier = gpm_beautiful_planet_rings
+		remove_modifier = gpm_blood_moon
+		remove_modifier = gpm_solar_eclipse
+		remove_modifier = gpm_ethereal_clouds
+		remove_modifier = gpm_abandoned_shroud_extractor
+		remove_modifier = gpm_super_dry_atmosphere
+		
+	}
 	remove_modifier = gpm_frequent_thunderstorms
 	remove_modifier = gpm_global_thunderstorms
-	remove_modifier = gpm_highly_charged_air_particles
-	remove_modifier = gpm_time_displaced_planet
 	remove_modifier = gpm_single_biome
 	remove_modifier = gpm_hyper_complex_biome
 	remove_modifier = gpm_thin_atmospheres
 	remove_modifier = gpm_dense_atmospheres
 	remove_modifier = gpm_strong_volcanism
-	remove_modifier = gpm_weak_magnetic_field_2
-	remove_modifier = gpm_strong_magnetic_field_2
 	remove_modifier = gpm_unstable_tectonics_2
 	remove_modifier = gpm_asteroid_impacts_2
 	remove_modifier = gpm_mineral_rich_2
 	remove_modifier = gpm_ultra_rich_2
-	remove_modifier = gpm_low_gravity_2
-	remove_modifier = gpm_high_gravity_2
-	remove_modifier = gpm_floating_islands
 	remove_modifier = gpm_hostile_flora
 	remove_modifier = gpm_toxic_gas
 	remove_modifier = gpm_extensive_cavern_system
 	remove_modifier = gpm_titanic_predators
-	remove_modifier = gpm_unnatural_world
 	remove_modifier = gpm_atmospheric_stimulant
 	remove_modifier = gpm_unusual_seasons
 	remove_modifier = gpm_perfect_seasons
@@ -909,7 +938,6 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_endless_fish
 	remove_modifier = gpm_artificial_water
 	remove_modifier = gpm_clear_skies
-	remove_modifier = gpm_android_pleasure_palace
 	remove_modifier = gpm_melted_ice_caps
 	remove_modifier = gpm_small_islands
 	remove_modifier = gpm_windy
@@ -926,9 +954,6 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_gorgeous_sky
 	remove_modifier = gpm_ice_age
 	remove_modifier = gpm_ancient_temple
-	remove_modifier = gpm_tilted_axis
-	remove_modifier = gpm_perpendicular_axis
-	remove_modifier = gpm_radioactive_mantle
 	remove_modifier = gpm_locust_plagues
 	remove_modifier = gpm_acidic_seas
 	remove_modifier = gpm_empathic_life
@@ -946,7 +971,6 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_dunes
 	remove_modifier = gpm_extensive_reef_systems
 	remove_modifier = gpm_trubbles
-	remove_modifier = gpm_strange_voices
 	remove_modifier = gpm_temple_of_the_ancient_one
 	remove_modifier = gpm_beautiful_lakes
 	remove_modifier = gpm_proto_forests
@@ -957,12 +981,10 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_periodic_meteor_showers
 	remove_modifier = gpm_arachnophobia
 	remove_modifier = gpm_giant_worm
-	remove_modifier = gpm_artificial_core
 	remove_modifier = gpm_exotic_spices
 	remove_modifier = gpm_sandstorms
 	remove_modifier = gpm_sand_tornadoes
 	remove_modifier = gpm_quicksand
-	remove_modifier = gpm_never_ending_aurora
 	remove_modifier = gpm_spirals_of_ice
 	remove_modifier = gpm_furry_packs
 	remove_modifier = gpm_blizzards
@@ -983,9 +1005,6 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_massive_waves
 	remove_modifier = gpm_ghost_ships
 	remove_modifier = gpm_ominous_fog
-	remove_modifier = gpm_beautiful_planet_rings
-	remove_modifier = gpm_blood_moon
-	remove_modifier = gpm_solar_eclipse
 	remove_modifier = gpm_dark_skies
 	remove_modifier = gpm_musical_creatures
 	remove_modifier = gpm_odd_cloud_shapes
@@ -1008,12 +1027,10 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_crystal_cliffs
 	remove_modifier = gpm_white_world
 	remove_modifier = gpm_ash_barrens
-	remove_modifier = gpm_ethereal_clouds
 	remove_modifier = gpm_bacterial_dominance
 	remove_modifier = gpm_blighted_lands
 	remove_modifier = gpm_flesh_eating_swamp
 	remove_modifier = gpm_cooling_vistas
-	remove_modifier = gpm_abandoned_shroud_extractor
 	remove_modifier = gpm_calcification_pools
 	remove_modifier = gpm_atmospheric_roots
 	remove_modifier = gpm_fire_resistant_flora
@@ -1029,9 +1046,7 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = gpm_towering_cacti
 	remove_modifier = gpm_geometric_landscapes
 	remove_modifier = gpm_lonely_mountain
-	remove_modifier = gpm_super_dry_atmosphere
 	remove_modifier = gpm_mineral_rich_waters
-
 	
 	# special mangement modfifiers 
 	remove_modifier = planet_population_control

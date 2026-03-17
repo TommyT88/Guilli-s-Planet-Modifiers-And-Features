@@ -43,11 +43,11 @@ ship_event = {
 		
 		log = "Spawning precursor dig site on [from.GetName] in the [fromfrom.GetName] system"
 		locked_random_list = {
-			60 = {
+			20 = {
 				FROM = { set_planet_flag = gpm_already_rolled_for_prec_dig_site }
 				# modifier = { factor = 0 root.owner = { is_ai = yes } }
 			}
-			40 = {
+			80 = {
 				FROM = {
 					create_archaeological_site = gpm_precursor_generic_digsite
 					set_planet_flag = gpm_already_rolled_for_prec_dig_site

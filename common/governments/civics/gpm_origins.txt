@@ -6,6 +6,7 @@ origin_gpm_death_world = {
 	
 	possible = {
 		authority = { NOT = { value = auth_machine_intelligence } }
+		NOT = { has_global_flag = "star_trek_new_civilisations" }
 	}
 	
 	description = "origin_tooltip_gpm_death_world_effects"
@@ -33,9 +34,9 @@ origin_gpm_precursor_world = {
 	# 	always = no # Non-player origin
 	# }
 	
-	# possible = {
-	# 	authority = { NOT = { value = auth_machine_intelligence } }
-	# }
+	possible = {
+		NOT = { has_global_flag = "star_trek_new_civilisations" }
+	}
 	
 	description = "origin_tooltip_gpm_precursor_world_effects"
 	
@@ -65,13 +66,9 @@ origin_gpm_fallen_empire_colony = {
 	# 	always = no # Non-player origin
 	# }
 	
-	# possible = {
-    #     ethics = {
-    #         NOT = {
-    #             value = ethic_gestalt_consciousness
-    #         }
-    #     }
-    # }
+	possible = {
+		NOT = { has_global_flag = "star_trek_new_civilisations" }
+	}
 	
 	description = "origin_tooltip_gpm_fallen_empire_colony_effects"
 	

@@ -48,39 +48,71 @@ ship_event = {
 		}
 		FROM = {
 			OR = {
-				has_modifier = gpm_subterranean_eco_system
-				has_modifier = gpm_hiveworld
-				has_modifier = gpm_old_world
-				has_modifier = gpm_water_pockets
-				has_modifier = gpm_abandoned_mining_platforms
-				has_modifier = gpm_relic_lower_levels
-				has_modifier = gpm_floating_forest
-				has_modifier = gpm_aeroplankton_clouds
-				has_modifier = gpm_abandoned_refineries
-				has_modifier = gpm_floating_kelp
-				has_modifier = gpm_floatig_behemothaurs
-				has_modifier = gpm_precursor_star_filter
-				has_modifier = gpm_lingering_pollution
-				has_modifier = gpm_decaying_structures
-				has_modifier = gpm_decomposing_leviathan
-				has_modifier = gpm_giant_mold_blobs
-				has_modifier = gpm_toxic_garbage
-				has_modifier = gpm_garbage_dump
-				has_modifier = gpm_ruined_battlefield
-				has_modifier = gpm_spaceship_graveyard
-				has_modifier = gpm_artificial_water
+				has_modifier = gpm_single_biome
+				has_modifier = gpm_hyper_complex_biome
+				has_modifier = gpm_hostile_flora
+				has_modifier = gpm_titanic_predators
+				has_modifier = gpm_living_planet
+				has_modifier = gpm_ideal_for_life
+				has_modifier = gpm_endless_fish
 				has_modifier = gpm_android_pleasure_palace
+				has_modifier = gpm_simple_organisms
+				has_modifier = gpm_newly_evolved_complex_organisms
+				has_modifier = gpm_friendly_wildlife
+				has_modifier = gpm_many_extremophiles
 				has_modifier = gpm_ancient_temple
-				has_modifier = gpm_crystal_moon_palace
-				has_modifier = gpm_plasmoid_life
+				has_modifier = gpm_locust_plagues
+				has_modifier = gpm_empathic_life
+				has_modifier = gpm_symbiotic_life
+				has_modifier = gpm_resilent_parasites
+				has_modifier = gpm_ice_flora
+				has_modifier = gpm_juggernaut_manta_rays
+				has_modifier = gpm_cities_in_the_sky
+				has_modifier = gpm_old_world
+				has_modifier = gpm_extensive_reef_systems
+				has_modifier = gpm_trubbles
 				has_modifier = gpm_temple_of_the_ancient_one
 				has_modifier = gpm_proto_forests
+				has_modifier = gpm_dense_forests
+				has_modifier = gpm_planetwide_forest
+				has_modifier = gpm_hiveworld
 				has_modifier = gpm_arachnophobia
 				has_modifier = gpm_giant_worm
 				has_modifier = gpm_artificial_core
-				has_modifier = gpm_surface_of_bones
+				has_modifier = gpm_furry_packs
+				has_modifier = gpm_abominable_predators
+				has_modifier = gpm_ecological_nervous_system
+				has_modifier = gpm_carnivorous_flies
+				has_modifier = gpm_algae_boom
+				has_modifier = gpm_ocean_forests
+				has_modifier = gpm_giant_ocean_snakes
+				has_modifier = gpm_unique_marine_habitats
+				has_modifier = gpm_musical_creatures
 				has_modifier = gpm_strange_alien_eggs
 				has_modifier = gpm_mushroom_forest
+				has_modifier = gpm_sunken_cities
+				has_modifier = gpm_giant_scorpioids
+				has_modifier = gpm_invasive_stalks
+				has_modifier = gpm_machine_god
+				has_modifier = gpm_siren_song
+				has_modifier = gpm_heart_of_the_forest
+				has_modifier = gpm_feline_companions
+				has_modifier = gpm_springs_of_life
+				has_modifier = gpm_dead_forests
+				has_modifier = gpm_golden_fields
+				has_modifier = gpm_runic_carvings
+				has_modifier = gpm_white_world
+				has_modifier = gpm_bacterial_dominance
+				has_modifier = gpm_blighted_lands
+				has_modifier = gpm_flesh_eating_swamp
+				has_modifier = gpm_atmospheric_roots
+				has_modifier = gpm_crystaline_fauna
+				has_modifier = gpm_immortal_coral
+				has_modifier = gpm_gargantuan_canopies
+				has_modifier = gpm_jeweled_flowers
+				has_modifier = gpm_towering_cacti
+				has_modifier = gpm_relic_lower_levels
+				has_modifier = gpm_precursor_star_filter
 				has_modifier = gpm_precursor_remnants
 				has_modifier = gpm_precursor_energy_grid
 				has_modifier = gpm_precursor_satalite_grid
@@ -233,7 +265,14 @@ country_event = {
 		}
 	}
 	option = {
-		trigger = { root.owner = { NOT = { has_authority = auth_machine_intelligence } } }
+		trigger = {
+			root.owner = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_origin = origin_wilderness
+				}
+			}
+		}
 		allow = { root.owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } }
 		name =  gpm_survey.2.c
 		root.owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -350,7 +389,14 @@ country_event = {
 		}
 	}
 	option = {
-		trigger = { root.owner = { NOT = { has_authority = auth_machine_intelligence } } }
+		trigger = {
+			root.owner = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_origin = origin_wilderness
+				}
+			}
+		}
 		allow = { root.owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } }
 		name =  gpm_survey.2.c
 		root.owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -470,7 +516,14 @@ country_event = {
 		}
 	}
 	option = {
-		trigger = { root.owner = { NOT = { has_authority = auth_machine_intelligence } } }
+		trigger = {
+			root.owner = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_origin = origin_wilderness
+				}
+			}
+		}
 		allow = { root.owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } }
 		name =  gpm_survey.2.c
 		root.owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -779,10 +832,74 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.7
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.18.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_GAIA"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.5_WILD
+		owner = { add_resource = { biomass = -10 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -1076,6 +1193,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -1118,7 +1241,75 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.6_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				if = {
+					limit = { has_ancrel = yes }
+					gpm_random_minor_artifacts_5 = yes
+				}
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.19.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_HOLY_PLANET"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.6
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -1445,6 +1636,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -1507,7 +1704,95 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.2_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					30 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.20.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_FLOATING_ISLANDS"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.7
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -1874,6 +2159,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -1916,7 +2207,75 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.7_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				if = {
+					limit = { has_ancrel = yes }
+					gpm_random_minor_artifacts_5 = yes
+				}
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.21.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_BATTLEFIELD"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.8
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -2227,6 +2586,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -2269,7 +2634,75 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.1_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				if = {
+					limit = { has_ancrel = yes }
+					gpm_random_minor_artifacts_5 = yes
+				}
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.22.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_SHIP_GRAVEYARD"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.1
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -2580,6 +3013,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -2642,7 +3081,95 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.3_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					30 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.23.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_ARTIFICIAL_WATER"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.2
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -3015,6 +3542,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -3053,7 +3586,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.8_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.24.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_PLEASURE_PALACE"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.3
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -3476,6 +4073,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# ExploratiOn Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -3518,7 +4121,75 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.5_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# ExploratiOn Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				if = {
+					limit = { has_ancrel = yes }
+					gpm_random_minor_artifacts_5 = yes
+				}
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.25.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_ANCIENT_TEMPLE"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.4
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -3824,6 +4495,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -3862,7 +4539,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.4_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.26.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_CRYSTAL_MOON_PALACE"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.5
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -4230,7 +4971,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.2_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.27.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_PLASMOID_LIFE"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.6
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -4545,6 +5350,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -4635,7 +5446,123 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.1_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner ={
+				if = {
+					limit = { has_ancrel = yes }
+					gpm_random_minor_artifacts_5 = yes
+				}
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+					30 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.28.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_TEMPLE_ANCIENT_ONE"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.7
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -5085,6 +6012,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -5123,7 +6056,75 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.7_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			root.leader = { gpm_random_experience_big = yes }
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { owner = { NOT = { has_policy_flag = gpm_more_discovery_rewards } } }
+			root.leader = { gpm_random_experience_big = yes }
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.29.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_PROTO_FOREST"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.8
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -5308,6 +6309,10 @@ ship_event = {
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
 		owner = {
+			if = { 
+				limit = { has_origin = origin_wilderness }
+				add_resource = { biomass = 50 }
+			}
 			add_monthly_resource_mult = {
 				resource = society_research
 				value = @tier2researchreward
@@ -5452,6 +6457,12 @@ ship_event = {
 					min = @tier1researchmin
 					max = @tier1researchmax
 				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier2researchreward
+					min = @tier2researchmin
+					max = @tier2researchmax
+				}
 			}
 		}
 		else = {
@@ -5467,6 +6478,12 @@ ship_event = {
 					value = @tier4researchreward
 					min = @tier4researchmin
 					max = @tier4researchmax
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier2researchreward
+					min = @tier2researchmin
+					max = @tier2researchmax
 				}
 			}
 		}
@@ -5507,7 +6524,19 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.1
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -5615,6 +6644,58 @@ ship_event = {
 		allow = { root = { owner = { resource_stockpile_compare = { resource = energy value > 250 } } } }
 		name = gpm_survey.INVESTIGATE.1_MACH
 		owner = { add_resource = { energy = -250 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.30.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_HIVE_WORLD"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.1_WILD
+		owner = { add_resource = { biomass = -10 } }
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
 		if = {
@@ -5824,6 +6905,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -5862,7 +6949,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.6_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.31.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_ARACHNAPHOBIA"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.2
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -6240,6 +7391,12 @@ ship_event = {
 					min = @tier1researchmin
 					max = @tier1researchmax
 				}
+				add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 			}
 		}
 		else = {
@@ -6249,6 +7406,12 @@ ship_event = {
 					value = @tier4researchreward
 					min = @tier4researchmin
 					max = @tier4researchmax
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier2researchreward
+					min = @tier2researchmin
+					max = @tier2researchmax
 				}
 			}
 		}
@@ -6289,7 +7452,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.5_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.32.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_GIANT_WORM"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.3
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -6584,6 +7811,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -6622,7 +7855,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.6_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.33.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_ARTIFICIAL_CORE"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.4
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -6912,6 +8209,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -6950,7 +8253,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.3_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.34.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_SURFACE_OF_BONES"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.5
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -7293,7 +8660,75 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.8_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				if = {
+					limit = { has_ancrel = yes }
+					gpm_random_minor_artifacts_5 = yes
+				}
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.35.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_ALIEN_EGGS"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.6
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -7486,6 +8921,10 @@ ship_event = {
 		custom_tooltip = gpm_survey_reward_new_line
 		root.leader = { gpm_random_experience = yes }
 		owner = {
+			if = { 
+				limit = { has_origin = origin_wilderness }
+				add_resource = { biomass = 30 }
+			}
 			add_monthly_resource_mult = {
 				resource = society_research
 				value = @tier2researchreward
@@ -7647,6 +9086,12 @@ ship_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		# Exploration Policy Reward integration
 		root.leader = { gpm_random_experience = yes }
@@ -7685,7 +9130,71 @@ ship_event = {
 		}
 	}
 	option = {
-		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } NOT = { has_authority = auth_machine_intelligence } } } }
+		trigger = { root = { owner = { NOT = { has_policy_flag = gpm_no_discovery_rewards } has_origin = origin_wilderness } } }
+		allow = { root = { owner = { resource_stockpile_compare = { resource = biomass value >= 10 } } } }
+		name = gpm_survey.INVESTIGATE.6_WILD
+		owner = { add_resource = { biomass = -10 } }
+		# Exploration Policy Reward integration
+		root.leader = { gpm_random_experience = yes }
+		if = {
+			limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
+			custom_tooltip = gpm_survey_reward_bonus
+			## Additional Reward ##
+			owner = {
+				locked_random_list = {
+					30 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier1researchreward
+							min = @tier1researchmin
+							max = @tier1researchmax
+						}
+					}
+					20 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier2researchreward
+							min = @tier2researchmin
+							max = @tier2researchmax
+						}
+					}
+					10 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = gpm_survey.EXPEDITION
+		custom_tooltip = gpm_survey.36.spec_project
+		owner = {
+			hidden_effect = {
+				enable_special_project = {
+					name = "GPM_DISCOVERY_MUSHROOM_FORESTS"
+					location = FROM
+					owner = root
+				}
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			root = { 
+				owner = { 
+					AND = {
+						NOT = { has_policy_flag = gpm_no_discovery_rewards } 
+						NOR = {
+							has_authority = auth_machine_intelligence
+							has_origin = origin_wilderness
+						}
+					}
+				}
+			}
+		}
 		allow = { root = { owner = { resource_stockpile_compare = { resource = influence value > @lootboxInfluenceCost } } } }
 		name = gpm_survey.INVESTIGATE.7
 		owner = { add_resource = { influence = @lootboxInfluenceCost_Add } }
@@ -8146,14 +9655,17 @@ ship_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		FROM = { has_modifier = "terraforming_candidate" }
+		FROM = { 
+			has_modifier = "terraforming_candidate"
+			gpm_is_a_precursor_world = yes
+		}
 		owner = { is_ai = no }
 	}
 
 	immediate = {
 		
 		owner = {
-			log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+			# log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 			create_message = {
 				type = GPM_MESSAGE_VALUABLE_WORLD
 				localization = GPM_MESSAGE_VALUABLE_WORLD_DESC
