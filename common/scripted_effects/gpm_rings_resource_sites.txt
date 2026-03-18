@@ -1,5 +1,7 @@
 
-@RES_spawn_null_factor = 0.55
+@RES_spawn_null_factor = 0.75
+@RES_spawn_null_factor_real_space = 2.5
+@RES_spawn_null_factor_real_space_scale = 2.5
 
 @angle_1 = 45
 @angle_2 = 340
@@ -62,7 +64,10 @@ gpm_spawn_RES = {
 			set_planet_flag = gpm_has_RES
 			solar_system = {
 				random_list = {
-					35 = { modifier = { factor = @RES_spawn_null_factor } }
+					35 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					20 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -149,7 +154,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -208,7 +216,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					50 = { modifier = { factor = @RES_spawn_null_factor } }
+					50 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					15 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -298,7 +309,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -357,7 +371,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					65 = { modifier = { factor = @RES_spawn_null_factor } }
+					65 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					10 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -447,7 +464,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -506,7 +526,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					80 = { modifier = { factor = @RES_spawn_null_factor } }
+					80 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -596,7 +619,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -672,7 +698,10 @@ gpm_spawn_RES = {
 			set_planet_flag = gpm_has_RES
 			solar_system = {
 				random_list = {
-					35 = { modifier = { factor = @RES_spawn_null_factor } }
+					35 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					20 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -759,7 +788,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -818,7 +850,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					55 = { modifier = { factor = @RES_spawn_null_factor } }
+					55 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					13 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -908,7 +943,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -967,7 +1005,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					75 = { modifier = { factor = @RES_spawn_null_factor } }
+					75 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					7 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1057,7 +1098,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1116,7 +1160,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					90 = { modifier = { factor = @RES_spawn_null_factor } }
+					90 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					2 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1206,7 +1253,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1289,7 +1339,10 @@ gpm_spawn_RES = {
 			set_planet_flag = gpm_has_RES
 			solar_system = {
 				random_list = {
-					35 = { modifier = { factor = @RES_spawn_null_factor } }
+					35 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					20 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1373,7 +1426,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					55 = { modifier = { factor = @RES_spawn_null_factor } }
+					55 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					13 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1460,7 +1516,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					75 = { modifier = { factor = @RES_spawn_null_factor } }
+					75 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					7 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1547,7 +1606,10 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					90 = { modifier = { factor = @RES_spawn_null_factor } }
+					90 = { 
+						modifier = { factor = @RES_spawn_null_factor }
+						modifier = { has_global_flag = "has_real_space_mod" factor = @RES_spawn_null_factor_real_space }
+					}
 					2 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1665,7 +1727,7 @@ gpm_spawn_RES = {
 			set_planet_flag = gpm_has_RES
 			solar_system = {
 				random_list = {
-					35 = { modifier = { factor = @RES_spawn_null_factor } }
+					35 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					20 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1752,7 +1814,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1811,7 +1873,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					50 = { modifier = { factor = @RES_spawn_null_factor } }
+					50 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					15 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1901,7 +1963,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -1960,7 +2022,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					65 = { modifier = { factor = @RES_spawn_null_factor } }
+					65 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					10 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2050,7 +2112,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2109,7 +2171,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					80 = { modifier = { factor = @RES_spawn_null_factor } }
+					80 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2199,7 +2261,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2275,7 +2337,7 @@ gpm_spawn_RES = {
 			set_planet_flag = gpm_has_RES
 			solar_system = {
 				random_list = {
-					35 = { modifier = { factor = @RES_spawn_null_factor } }
+					35 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					20 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2362,7 +2424,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2421,7 +2483,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					55 = { modifier = { factor = @RES_spawn_null_factor } }
+					55 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					13 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2511,7 +2573,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2570,7 +2632,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					75 = { modifier = { factor = @RES_spawn_null_factor } }
+					75 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					7 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2660,7 +2722,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2719,7 +2781,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					90 = { modifier = { factor = @RES_spawn_null_factor } }
+					90 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					2 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2809,7 +2871,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					85 = { modifier = { factor = @RES_spawn_null_factor } }
+					85 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					5 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2892,7 +2954,7 @@ gpm_spawn_RES = {
 			set_planet_flag = gpm_has_RES
 			solar_system = {
 				random_list = {
-					35 = { modifier = { factor = @RES_spawn_null_factor } }
+					35 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					20 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -2976,7 +3038,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					55 = { modifier = { factor = @RES_spawn_null_factor } }
+					55 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					13 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -3063,7 +3125,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					75 = { modifier = { factor = @RES_spawn_null_factor } }
+					75 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					7 = {
 						spawn_planet = {
 							class = "pc_gpm_res"
@@ -3150,7 +3212,7 @@ gpm_spawn_RES = {
 					}
 				}
 				random_list = {
-					90 = { modifier = { factor = @RES_spawn_null_factor } }
+					90 = { modifier = { factor = @RES_spawn_null_factor_real_space_scale } }
 					2 = {
 						spawn_planet = {
 							class = "pc_gpm_res"

@@ -6812,6 +6812,10 @@ ship_event = {
 							distance = 5
 							angle = random
 						}
+						add_modifier = {
+							modifier = gpm_ship_balancer_daughterofthestars
+							days = -1
+						}
 					}
 					settings = {
 						can_upgrade = no

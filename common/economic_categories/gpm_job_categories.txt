@@ -459,7 +459,7 @@ planet_knights = {
 	}
 # Inherited Modifiers
 	triggered_produces_modifier = {
-		key = planet_researchers
+		key = planet_soldiers
 		modifier_types = {
 			mult
 			add
@@ -470,97 +470,9 @@ planet_knights = {
 		use_parent_icon = yes
 	}
 	triggered_upkeep_modifier = {
-		key = planet_researchers
+		key = planet_soldiers
 		modifier_types = {
-			mult
-			add
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_produces_modifier = {
-		key = planet_physicists
-		modifier_types = {
-			add
-			mult
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_upkeep_modifier = {
-		key = planet_physicists
-		modifier_types = {
-			add
-			mult
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_produces_modifier = {
-		key = planet_biologists
-		modifier_types = {
-			add
-			mult
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_upkeep_modifier = {
-		key = planet_biologists
-		modifier_types = {
-			add
-			mult
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_produces_modifier = {
-		key = planet_engineers
-		modifier_types = {
-			add
-			mult
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_upkeep_modifier = {
-		key = planet_engineers
-		modifier_types = {
-			add
-			mult
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_produces_modifier = {
-		key = planet_bureaucrats
-		modifier_types = {
-			mult
-			add
-		}
-		trigger = {
-			always = yes
-		}
-		use_parent_icon = yes
-	}
-	triggered_upkeep_modifier = {
-		key = planet_bureaucrats
-		modifier_types = {
-			mult
+#			mult
 			add
 		}
 		trigger = {
@@ -980,42 +892,105 @@ planet_maintenance_drones = {
 
 
 planet_physicists = {
+	modifier_category = pop_job
 	parent = planet_researchers
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	# triggered_produces_modifier = {
+	# 	key = planet_researchers
+	# 	modifier_types = {
+	# 		add
+	# 	}
+	# 	trigger = {
+	# 		always = yes
+	# 	}
+	# 	use_parent_icon = yes
+	# }
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
 }
 
 planet_biologists = {
+	modifier_category = pop_job
 	parent = planet_researchers
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	# triggered_produces_modifier = {
+	# 	key = planet_researchers
+	# 	modifier_types = {
+	# 		add
+	# 	}
+	# 	trigger = {
+	# 		always = yes
+	# 	}
+	# 	use_parent_icon = yes
+	# }
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
 }
 
 planet_engineers = {
+	modifier_category = pop_job
 	parent = planet_researchers
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	generate_mult_modifiers = {
+	#	produces
+		upkeep
+	}
+	# triggered_produces_modifier = {
+	# 	key = planet_researchers
+	# 	modifier_types = {
+	# 		add
+	# 	}
+	# 	trigger = {
+	# 		always = yes
+	# 	}
+	# 	use_parent_icon = yes
+	# }
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
 }
 
 #custom added -guilli
