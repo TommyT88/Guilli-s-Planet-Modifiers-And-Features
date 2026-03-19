@@ -1461,44 +1461,44 @@ special_project = {
 }
 
 # Crystal Beasts Research Project
-special_project = {
-	key = "GPM_CRYSTALINE_BEASTS_RESEARCH"
-	cost = 0
-	days_to_research = 270
-	tech_department = society_technology
-	picture = GFX_evt_gpm_mushroom_forest
+# special_project = {
+	# key = "GPM_CRYSTALINE_BEASTS_RESEARCH"
+	# cost = 0
+	# days_to_research = 270
+	# tech_department = society_technology
+	# picture = GFX_evt_gpm_mushroom_forest
 
-	event_scope = planet_event
+	# event_scope = planet_event
 
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-	}
+	# requirements = {
+		# shipclass_science_ship = 1
+		# leader = scientist
+	# }
 	
-	on_success = {
-		planet_event = { id = gpm_colony.361 }
-	}
-}
+	# on_success = {
+		# planet_event = { id = gpm_colony.361 }
+	# }
+# }
 
 # Plant Crystallization Research Project
-special_project = {
-	key = "GPM_CRYSTALIZATION_RESEARCH"
-	cost = 0
-	days_to_research = 270
-	tech_department = society_technology
-	picture = GFX_evt_gpm_mushroom_forest
+# special_project = {
+	# key = "GPM_CRYSTALIZATION_RESEARCH"
+	# cost = 0
+	# days_to_research = 270
+	# tech_department = society_technology
+	# picture = GFX_evt_gpm_mushroom_forest
 
-	event_scope = planet_event
+	# event_scope = planet_event
 
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-	}
+	# requirements = {
+		# shipclass_science_ship = 1
+		# leader = scientist
+	# }
 	
-	on_success = {
-		planet_event = { id = gpm_colony.363 }
-	}
-}
+	# on_success = {
+		# planet_event = { id = gpm_colony.363 }
+	# }
+# }
 
 special_project = {
 	key = "GPM_HUNT_KILL_BOTS"

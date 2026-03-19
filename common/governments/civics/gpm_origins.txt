@@ -4,9 +4,12 @@ origin_gpm_death_world = {
 	icon = "gfx/interface/icons/origins/origin_gpm_death_world.dds"
 	picture = GFX_origin_gpm_death_world
 	
+	# playable = {
+		# NOT = { has_global_flag = "star_trek_new_civilisations" }
+	# }
+	
 	possible = {
 		authority = { NOT = { value = auth_machine_intelligence } }
-		NOT = { has_global_flag = "star_trek_new_civilisations" }
 	}
 	
 	description = "origin_tooltip_gpm_death_world_effects"
@@ -33,9 +36,12 @@ origin_gpm_precursor_world = {
 	# playable = {
 	# 	always = no # Non-player origin
 	# }
+		
+	# playable = {
+		# NOT = { has_global_flag = "star_trek_new_civilisations" }
+	# }
 	
 	possible = {
-		NOT = { has_global_flag = "star_trek_new_civilisations" }
 	}
 	
 	description = "origin_tooltip_gpm_precursor_world_effects"
@@ -66,8 +72,11 @@ origin_gpm_fallen_empire_colony = {
 	# 	always = no # Non-player origin
 	# }
 	
+	# playable = {
+		# NOT = { has_global_flag = "star_trek_new_civilisations" }
+	# }
+	
 	possible = {
-		NOT = { has_global_flag = "star_trek_new_civilisations" }
 	}
 	
 	description = "origin_tooltip_gpm_fallen_empire_colony_effects"

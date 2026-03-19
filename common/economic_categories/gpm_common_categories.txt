@@ -369,6 +369,14 @@ ships = {
 	generate_mult_modifiers = {
 		upkeep
 		logistics
+		cost
+		produces
+	}
+	generate_add_modifiers = {
+		upkeep
+		logistics
+		cost
+		produces
 	}
 
 	ai_use_parent_for_resources_upkeep = {
@@ -776,6 +784,22 @@ ships = {
 			is_space_fauna = no
 		}
 	}
+	
+	# special to make shipsize_science_upkeep_mult work
+	triggered_upkeep_modifier = {
+		key = shipsize_science
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = science
+		}
+	}
+	
 }
 
 
