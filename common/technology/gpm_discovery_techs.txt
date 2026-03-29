@@ -67,8 +67,7 @@ tech_gpm_precursor_energy_grid_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_technician_energy_produces_add = 1
-		station_gatherers_energy_produces_mult = 0.2
+		ship_reactor_power_mult = 0.50
 	}
 	
 	weight_modifier = {
@@ -237,7 +236,7 @@ tech_gpm_precursor_bunker_grid_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_soldiers_unity_produces_add = 2
+		planet_soldiers_unity_produces_add = 1
 		army_health = 0.20
 	}
 	
@@ -275,7 +274,7 @@ tech_gpm_precursor_mechs_discovery = {
 	weight = 1
 
 	modifier = {
-		planet_miners_minerals_produces_add = 2
+		planet_miners_minerals_produces_add = 1
 	}
 	
 	weight_modifier = {
@@ -420,7 +419,9 @@ tech_gpm_precursor_communication_hub_discovery = {
 	weight = 1
 
 	modifier = {
-		all_technology_research_speed = 0.05
+		physics_tech_cost_mult = -0.05
+		society_tech_cost_mult = -0.05
+		engineering_tech_cost_mult = -0.05
 	}
 	
 	weight_modifier = {
@@ -610,7 +611,7 @@ tech_gpm_precursor_manufactorium_discovery = {
 
 	modifier = {
 		planet_metallurgists_alloys_produces_add = 1
-		planet_metallurgists_minerals_upkeep_add = -1
+		planet_metallurgists_minerals_upkeep_add = -2
 	}
 	
 	weight_modifier = {
@@ -629,7 +630,7 @@ tech_gpm_precursor_manufactorium_discovery_2 = {
 
 	modifier = {
 		planet_artisans_consumer_goods_produces_add = 1
-		planet_artisans_minerals_upkeep_add = -1
+		planet_artisans_minerals_upkeep_add = -2
 	}
 	
 	weight_modifier = {
@@ -1159,7 +1160,7 @@ tech_gpm_artificial_water_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_metallurgists_alloys_produces_add = 1.0
+		planet_metallurgists_alloys_produces_add = 0.5
 	}
 	
 	weight_modifier = {
@@ -1181,7 +1182,7 @@ tech_gpm_android_pleasure_palace_discovery = {
 	}
 
 	modifier = {
-		biological_pop_happiness = 0.10
+		biological_pop_happiness = 0.05
 	}
 	
 	weight_modifier = {
@@ -1199,7 +1200,7 @@ tech_gpm_android_pleasure_palace_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		pop_amenities_usage_mult = -0.20
+		pop_amenities_usage_mult = -0.10
 	}
 	
 	weight_modifier = {
@@ -1289,7 +1290,7 @@ tech_gpm_plasmoid_life_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_armor_penetration_mult = 0.20
+		ship_reactor_power_mult = 0.20
 	}
 	
 	weight_modifier = {
@@ -1365,7 +1366,7 @@ tech_gpm_proto_forests_discovery = {
 	}
 
 	modifier = {
-		planet_farmers_food_produces_add = 2
+		planet_farmers_food_produces_add = 1
 	}
 	
 	weight_modifier = {
@@ -1461,7 +1462,7 @@ tech_gpm_arachnophobia_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_biologists_society_research_produces_add = 2
+		planet_biologists_society_research_produces_add = 0.5
 	}
 	
 	weight_modifier = {

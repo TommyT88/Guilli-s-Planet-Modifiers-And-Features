@@ -4,7 +4,7 @@ gpm_tech_ringworld_parabolic_forcefield = {
 	tier = 5
 	category = { psionics }
 	is_rare = yes
-	prerequisites = { tech_psionic_theory tech_mega_engineering }
+	prerequisites = { "tech_psionic_theory" "tech_mega_engineering" }
 	weight = @tier5weight3
 
 	modifier = {
@@ -17,10 +17,10 @@ gpm_tech_ringworld_parabolic_forcefield = {
 			has_technology = tech_psionic_barrier
 		}
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 		is_gestalt = no
 		NOT = { has_civic = civic_machine_servitor }
@@ -31,6 +31,13 @@ gpm_tech_ringworld_parabolic_forcefield = {
 			modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 		modifier = {
 			factor = @federation_perk_factor
@@ -64,7 +71,7 @@ gpm_tech_ringworld_neural_nexus = {
 	area = physics
 	tier = 5
 	category = { computing }
-	prerequisites = { tech_mega_engineering }
+	prerequisites = { "tech_mega_engineering" }
 	is_rare = yes
 	weight = @tier5weight3
 
@@ -74,17 +81,17 @@ gpm_tech_ringworld_neural_nexus = {
 
 	potential = {
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 		is_hive_empire = no
-		OR = {
-			has_megastructure = think_tank_3
-			has_megastructure = think_tank_4
-			has_megastructure = think_tank_restored
-		}
+		# OR = {
+			# has_megastructure = think_tank_3
+			# has_megastructure = think_tank_4
+			# has_megastructure = think_tank_restored
+		# }
 		NOT = { has_policy_flag = robots_outlawed }
 	}
 
@@ -93,6 +100,13 @@ gpm_tech_ringworld_neural_nexus = {
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 		modifier = {
 			factor = 2
@@ -118,7 +132,7 @@ gpm_tech_ringworld_idyllic_gardens = {
 	area = society
 	tier = 5
 	category = { biology }
-	prerequisites = { tech_mega_engineering }
+	prerequisites = { "tech_mega_engineering" }
 	is_rare = yes
 	weight = @tier5weight3
 
@@ -128,10 +142,10 @@ gpm_tech_ringworld_idyllic_gardens = {
 
 	potential = {
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 		is_machine_empire = no
 	}
@@ -141,6 +155,13 @@ gpm_tech_ringworld_idyllic_gardens = {
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 	}
 
@@ -158,7 +179,7 @@ gpm_tech_ringworld_xeno_zoo = {
 	area = society
 	tier = 5
 	category = { new_worlds }
-	prerequisites = { tech_alien_life_studies tech_mega_engineering }
+	prerequisites = { "tech_alien_life_studies" "tech_mega_engineering" }
 	is_rare = yes
 	weight = @tier5weight3
 
@@ -168,10 +189,10 @@ gpm_tech_ringworld_xeno_zoo = {
 
 	potential = {
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 		is_hive_empire = no
 	}
@@ -181,6 +202,13 @@ gpm_tech_ringworld_xeno_zoo = {
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 	}
 
@@ -208,10 +236,10 @@ gpm_tech_ringworld_simulators = {
 
 	potential = {
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 		NOR = {
 			has_ethic = ethic_fanatic_pacifist
@@ -224,6 +252,13 @@ gpm_tech_ringworld_simulators = {
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 		modifier = {
 			factor = 2
@@ -249,7 +284,7 @@ gpm_tech_ringworld_endless_oceans = {
 	area = society
 	tier = 5
 	category = { new_worlds }
-	prerequisites = { tech_mega_engineering }
+	prerequisites = { "tech_mega_engineering" }
 	is_rare = yes
 	weight = @tier5weight3
 
@@ -259,10 +294,10 @@ gpm_tech_ringworld_endless_oceans = {
 
 	potential = {
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 		is_machine_empire = no
 	}
@@ -272,6 +307,13 @@ gpm_tech_ringworld_endless_oceans = {
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 	}
 
@@ -289,7 +331,7 @@ gpm_tech_ringworld_mass_transit = {
 	area = engineering
 	tier = 5
 	category = { materials }
-	prerequisites = { tech_mega_engineering }
+	prerequisites = { "tech_mega_engineering" }
 	is_rare = yes
 	weight = @tier5weight3
 
@@ -299,10 +341,10 @@ gpm_tech_ringworld_mass_transit = {
 
 	potential = {
 		# requires a colonized ringworld section
-		any_planet_within_border = {
-			gpm_is_planet_class_ringworld = yes
-			is_colony = yes
-		}
+		# any_planet_within_border = {
+			# gpm_is_planet_class_ringworld = yes
+			# is_colony = yes
+		# }
 		# has_country_flag = built_ringworld
 	}
 
@@ -311,6 +353,13 @@ gpm_tech_ringworld_mass_transit = {
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_country_flag = has_ring_world
+				has_origin = origin_shattered_ring
+			}
 		}
 	}
 

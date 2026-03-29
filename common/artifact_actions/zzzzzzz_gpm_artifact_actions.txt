@@ -8,8 +8,7 @@ artifact_arcane_deciphering = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 500
-			# multiplier = value:edict_size_effect
+			minor_artifacts = 1000
 		}
 	}
 	
@@ -17,7 +16,7 @@ artifact_arcane_deciphering = {
 		weight = 500
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 500 }
+			has_resource = { type = minor_artifacts amount < 1000 }
 		}
 		modifier = {
 			factor = 1.5
@@ -74,6 +73,7 @@ artifact_arcane_deciphering = {
 				}
 				5 = {
 					modifier = { factor = 2 has_ascension_perk = ap_archaeoengineers }
+					modifier = { factor = 0 has_ascension_perk = ap_cosmogenesis }
 					grant_random_fe_building = yes
 				}
 			}

@@ -93,3 +93,12 @@ weak_magnetic_field = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_weak_magnetic_field.dds"
 	icon_frame = 3
 }
+
+planet_population_control_gestalt = {
+	# icon = "gfx/interface/icons/planet_modifiers/pm_politics.dds"
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 11
+	custom_tooltip = STOPS_POPULATION_GROWTH
+	show_only_custom_tooltip = no
+	planet_pop_assemblers_upkeep_mult = -0.75
+}

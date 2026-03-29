@@ -50,15 +50,15 @@
 # 	important = yes			# if present on a planet, show the planet's nameplate
 # }
 gpm_precursor_remnants = {
-	planet_biologists_society_research_produces_mult = 1.0
-	planet_biologists_unity_produces_add = 3
-	planet_biologists_trade_produces_add = 3
+	planet_biologists_society_research_produces_mult = 0.5
+	planet_biologists_unity_produces_add = 0.5
+	planet_biologists_trade_produces_add = 0.5
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_remnants.dds"
 	icon_frame = 5
 }
 gpm_precursor_energy_grid = {
 	planet_structures_energy_upkeep_mult = -0.50
-	technician_jobs_bonus_workforce_mult = 0.5
+	technician_jobs_bonus_workforce_mult = 0.20
 	district_generator_max_add = 8
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_energy_grid.dds"
 	icon_frame = 5
@@ -70,7 +70,7 @@ gpm_precursor_satalite_grid = {
 	icon_frame = 5
 }
 gpm_precursor_city = {
-	planet_housing_add = 4000
+	planet_housing_add = 10000
 	planet_amenities_add = 4000
 	planet_max_districts_add = 6
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_city.dds"
@@ -89,14 +89,14 @@ gpm_precursor_shipyards_fed = {
 }
 gpm_precursor_planetary_gun = {
 	planet_orbital_bombardment_damage = -0.30
-	planet_physicists_volatile_motes_produces_add = 0.5
+	planet_physicists_volatile_motes_produces_add = 0.2
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_planet_gun.dds"
 	icon_frame = 5
 }
 gpm_precursor_bunker_grid = {
 	planet_orbital_bombardment_damage = -0.40
 	planet_defense_armies_add = 5
-	planet_soldiers_unity_produces_add = 2
+	planet_soldiers_unity_produces_add = 1
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_bunkers.dds"
 	icon_frame = 5
 }
@@ -104,15 +104,15 @@ gpm_precursor_mechs = {
 	show_only_custom_tooltip = no
 	custom_tooltip = gpm_precursor_mechsTT
 	job_soldier_stability_add = 1
-	planet_soldiers_engineering_research_produces_add = 1
-	planet_engineers_engineering_research_produces_add = 2
+	planet_soldiers_engineering_research_produces_add = 0.5
+	planet_engineers_engineering_research_produces_add = 1
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_mechs.dds"
 	icon_frame = 5
 }
 gpm_precursor_planetary_shield = {
 	planet_orbital_bombardment_damage = -0.50
 	pop_happiness = 0.10
-	planet_physicists_physics_research_produces_add = 0.1
+	planet_physicists_physics_research_produces_add = 0.2
 	planet_resettlement_unemployed_destination_mult = 0.40
 	# show_only_custom_tooltip = no
 	# custom_tooltip = gpm_precursor_planetary_shieldTT
@@ -122,7 +122,7 @@ gpm_precursor_planetary_shield = {
 gpm_precursor_planetary_shield_on = {
 	planet_orbital_bombardment_damage = -0.50
 	pop_happiness = 0.10
-	planet_physicists_physics_research_produces_add = 0.1
+	planet_physicists_physics_research_produces_add = 0.2
 	planet_resettlement_unemployed_destination_mult = 0.40
 	# custom_tooltip = gpm_precursor_planetary_shield_onTT
 	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_shield.dds"
@@ -155,8 +155,8 @@ gpm_precursor_singularity_drive = {
 	icon_frame = 5
 }
 gpm_precursor_eternal_fortress = {
-	planet_soldiers_unity_produces_add = 2
-	planet_soldiers_engineering_research_produces_add = 4
+	planet_soldiers_unity_produces_add = 1
+	planet_soldiers_engineering_research_produces_add = 1
 	planet_orbital_bombardment_damage = -0.40
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_eternal_fortress.dds"
 	icon_frame = 5
@@ -170,7 +170,7 @@ gpm_precursor_prison_planet = {
 	icon_frame = 5
 }
 gpm_precursor_mines = {
-	planet_miners_minerals_produces_add = 6
+	planet_miners_minerals_produces_add = 3
 	district_mining_max_add = 10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_mines.dds"
 	icon_frame = 5
@@ -214,7 +214,7 @@ gpm_precursor_battleground_ruins = {
 gpm_precursor_outpost_ruins = {	
 	planet_colony_development_speed_mult = 2
 	pop_environment_tolerance = 0.30
-	planet_physicists_physics_research_produces_add = 2
+	planet_physicists_physics_research_produces_add = 1.5
 	icon = "gfx/interface/icons/planet_modifiers/gpm_precursor_outpost_ruins.dds"
 	icon_frame = 5
 }
@@ -233,7 +233,7 @@ gpm_precursor_ruins = {
 }
 gpm_precursor_obelisks = {
 	terraforming_energy_cost_mult = -0.50
-	planet_engineers_engineering_research_produces_add = 3
+	planet_engineers_engineering_research_produces_add = 1.5
 	logistic_growth_mult = 0.10
 	planet_pop_assembly_mult = 0.10
 	# megastructure_build_speed_mult = -0.25

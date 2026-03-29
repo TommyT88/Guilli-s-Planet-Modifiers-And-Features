@@ -716,6 +716,7 @@ gpm_precursor_machine_system = {
 				limit = { gpm_are_precursors_enabled = yes }
 				set_planet_flag = gpm_is_precursor_world
 				add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" }
+				add_modifier = { days = -1 modifier = "gpm_ghost_in_the_machine" multiplier = 10 }
 				gpm_set_precursor_planetary_shields_machines = yes
 			}
 		}

@@ -14,12 +14,11 @@ fleet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -49,11 +48,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -83,11 +82,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -140,11 +139,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -174,11 +173,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -209,11 +208,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -247,11 +246,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -282,12 +281,12 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
-		fromfrom.planet = { set_planet_flag = gpm_has_precursor_digsite_progress }
+		from = { set_site_progress_locked = yes }
+		from.planet = { set_planet_flag = gpm_has_precursor_digsite_progress }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -321,7 +320,7 @@ fleet_event = {
 				fleet_event = { id = gpm_dig_site.150 }
 				# log = "Digsite 6 - spawn a default precursor dig site"
 				modifier = { factor = 0
-					fromfrom.planet = {
+					from.planet = {
 						NOR = {
 							has_modifier = gpm_precursor_remnants
 							has_modifier = gpm_precursor_satalite_grid
@@ -337,7 +336,7 @@ fleet_event = {
 				fleet_event = { id = gpm_dig_site.151 }
 				# log = "Digsite 6 - spawn a gpm_precursor_energy_grid or gpm_precursor_planetary_shieldprecursor dig site"
 				modifier = { factor = 0
-					fromfrom.planet = {
+					from.planet = {
 						NOR = {
 							has_modifier = gpm_precursor_energy_grid
 							has_modifier = gpm_precursor_planetary_shield
@@ -364,14 +363,14 @@ fleet_event = {
 				# orbital monitoring station
 				fleet_event = { id = gpm_dig_site.153 }
 				# log = "Digsite 6 - spawn a gpm_precursor_planetary_gun precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_gun } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_gun } } }
 			}
 			10 = {
 				# bunker
 				fleet_event = { id = gpm_dig_site.154 }
 				# log = "Digsite 6 - spawn a gpm_precursor_bunker_grid or gpm_precursor_battleground_ruins precursor dig site"
 				modifier = { factor = 0
-					fromfrom.planet = {
+					from.planet = {
 						NOR = {
 							has_modifier = gpm_precursor_bunker_grid
 							has_modifier = gpm_precursor_battleground_ruins
@@ -383,79 +382,79 @@ fleet_event = {
 				# command center
 				fleet_event = { id = gpm_dig_site.155 }
 				# log = "Digsite 6 - spawn a gpm_precursor_mechs precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_mechs } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mechs } } }
 			}
 			10 = {
 				# crashed floating city
 				fleet_event = { id = gpm_dig_site.156 }
 				# log = "Digsite 6 - spawn a gpm_precursor_floating_city precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_floating_city } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_floating_city } } }
 			}
 			10 = {
 				# adminstrative hub
 				fleet_event = { id = gpm_dig_site.157 }
 				# log = "Digsite 6 - spawn a gpm_precursor_capital_complex precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_capital_complex } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_capital_complex } } }
 			}
 			10 = {
 				# communication tower
 				fleet_event = { id = gpm_dig_site.158 }
 				# log = "Digsite 6 - spawn a gpm_precursor_communication_hub precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_communication_hub } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_communication_hub } } }
 			}
 			10 = {
 				# quantum databanks
 				fleet_event = { id = gpm_dig_site.159 }
 				# log = "Digsite 6 - spawn a gpm_precursor_singularity_drive precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_singularity_drive } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_singularity_drive } } }
 			}
 			10 = {
 				# abadonded fortress
 				fleet_event = { id = gpm_dig_site.160 }
 				# log = "Digsite 6 - spawn a gpm_precursor_eternal_fortress precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_eternal_fortress } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_eternal_fortress } } }
 			}
 			10 = {
 				# escapee hideout
 				fleet_event = { id = gpm_dig_site.161 }
 				# log = "Digsite 6 - spawn a gpm_precursor_prison_planet precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_prison_planet } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_prison_planet } } }
 			}
 			10 = {
 				# mining unit storage
 				fleet_event = { id = gpm_dig_site.162 }
 				# log = "Digsite 6 - spawn a gpm_precursor_mines precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_mines } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mines } } }
 			}
 			10 = {
 				# weapons manufactory
 				fleet_event = { id = gpm_dig_site.163 }
 				# log = "Digsite 6 - spawn a gpm_precursor_manufactorium precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_manufactorium } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_manufactorium } } }
 			}
 			10 = {
 				# vaults
 				fleet_event = { id = gpm_dig_site.164 }
 				# log = "Digsite 6 - spawn a gpm_precursor_vaults precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_vaults } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_vaults } } }
 			}
 			10 = {
 				# burried crashed orbital
 				fleet_event = { id = gpm_dig_site.165 }
 				# log = "Digsite 6 - spawn a gpm_precursor_crashed_spacestation precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_crashed_spacestation } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_crashed_spacestation } } }
 			}
 			10 = {
 				# outpost ruins
 				fleet_event = { id = gpm_dig_site.166 }
 				# log = "Digsite 6 - spawn a gpm_precursor_outpost_ruins precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_outpost_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_outpost_ruins } } }
 			}
 			10 = {
 				# harbor warehouse
 				fleet_event = { id = gpm_dig_site.167 }
 				# log = "Digsite 6 - spawn a gpm_precursor_harbor_ruins precursor dig site"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_harbor_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_harbor_ruins } } }
 			}
 		}
 	}
@@ -480,11 +479,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -731,7 +730,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_remnants_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_remnants_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
 			}
 			10 = {
 				owner = {
@@ -739,7 +738,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_remnants_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_remnants_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_remnants } } }
 			}
 			10 = {
 				owner = {
@@ -747,7 +746,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_satellite_grid_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_satellite_grid_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
 			}
 			10 = {
 				owner = {
@@ -755,7 +754,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_satellite_grid_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_satellite_grid_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_satalite_grid } } }
 			}
 			10 = {
 				owner = {
@@ -763,7 +762,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_city_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_city_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_city } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_city } } }
 			}
 			10 = {
 				owner = {
@@ -771,7 +770,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_city_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_city_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_city } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_city } } }
 			}
 			10 = {
 				owner = {
@@ -779,7 +778,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_supermaterials_precursor progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_supermaterials_precursor } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_city } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_city } } }
 			}
 			10 = {
 				owner = {
@@ -788,7 +787,7 @@ fleet_event = {
 
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_ruins_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
 			}
 			10 = {
 				owner = {
@@ -797,7 +796,7 @@ fleet_event = {
 
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_ruins_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_ruins } } }
 			}
 			10 = {
 				owner = {
@@ -805,7 +804,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_obelisks_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 			10 = {
 				owner = {
@@ -813,7 +812,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_obelisks_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_obelisks_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 			1 = {
 				gpm_random_precursor_building_reward = yes
@@ -839,7 +838,7 @@ fleet_event = {
 				modifier = { factor = 0 leader = { has_trait = leader_trait_psionic } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
 				# log = "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 		}
 	}
@@ -873,7 +872,7 @@ fleet_event = {
 				modifier = { factor = 0 leader = { has_trait = leader_trait_psionic } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
 				# log = "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 		}
 	}
@@ -893,11 +892,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -967,7 +966,7 @@ fleet_event = {
 				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
 			}
 			15 = {
 				owner = { add_relic = gpm_r_mysterious_shield_generator }
@@ -1013,7 +1012,7 @@ fleet_event = {
 				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1024,7 +1023,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_energy_grid_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_energy_grid_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
 			}
 			10 = {
 				owner = {
@@ -1032,7 +1031,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_energy_grid_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_energy_grid_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
 			}
 			10 = {
 				owner = {
@@ -1040,7 +1039,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_planetary_shield_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_shield_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			}
 			10 = {
 				owner = {
@@ -1048,7 +1047,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_planetary_shield_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_shield_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			}
 			10 = {
 				owner = {
@@ -1056,7 +1055,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_enigmatic_power_relays progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_enigmatic_power_relays } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			}
 			1 = {
 				gpm_random_precursor_building_reward = yes
@@ -1115,11 +1114,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1240,7 +1239,7 @@ fleet_event = {
 								prefix = no
 								upgradable = no
 							}
-							set_location = fromfrom.planet
+							set_location = from.planet
 						}
 					}
 				}
@@ -1298,11 +1297,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1461,11 +1460,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1532,7 +1531,7 @@ fleet_event = {
 				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			}
 			15 = {
 				owner = {
@@ -1581,7 +1580,7 @@ fleet_event = {
 				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 
 				#check for modifier
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1592,7 +1591,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_bunker_grid_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_bunker_grid_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			}
 			10 = {
 				owner = {
@@ -1600,7 +1599,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_bunker_grid_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_bunker_grid_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
 			}
 			10 = {
 				owner = {
@@ -1608,7 +1607,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_battleground_ruins_discovery progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_battleground_ruins_discovery } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 			}
 			10 = {
 				owner = {
@@ -1616,7 +1615,7 @@ fleet_event = {
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_precursor_battleground_ruins_discovery_2 progress = 0.33 } }
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_battleground_ruins_discovery_2 } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 			}
 			1 = {
 				gpm_random_precursor_building_reward = yes
@@ -1644,7 +1643,7 @@ fleet_event = {
 				}
 				custom_tooltip = gpm_fallen_heraldry_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_fallen_heraldry_trait_rewarded } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
@@ -1665,7 +1664,7 @@ fleet_event = {
 				}
 				custom_tooltip = gpm_battle_standards_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_battle_standards_trait_rewarded } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
@@ -1713,7 +1712,7 @@ fleet_event = {
 				}
 				custom_tooltip = gpm_fallen_heraldry_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_fallen_heraldry_trait_rewarded } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
@@ -1734,7 +1733,7 @@ fleet_event = {
 				}
 				custom_tooltip = gpm_battle_standards_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_battle_standards_trait_rewarded } }
-				modifier = { factor = 0 fromfrom.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
+				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
@@ -1766,11 +1765,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -1957,11 +1956,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2102,11 +2101,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2297,11 +2296,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2442,11 +2441,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2662,11 +2661,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2807,11 +2806,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -2972,11 +2971,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3117,11 +3116,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3260,7 +3259,7 @@ fleet_event = {
 			5 = { }
 			1 = {
 				custom_tooltip = gpm_reward_manufactorium_ship
-				fromfrom.planet = {
+				from.planet = {
 					create_fleet = {
 						name = "NAME_manufactorium_fleet"
 						settings = {
@@ -3277,7 +3276,7 @@ fleet_event = {
 								prefix = no
 								upgradable = no
 							}
-							set_location = fromfrom.planet
+							set_location = from.planet
 						}
 					}
 				}
@@ -3323,7 +3322,7 @@ fleet_event = {
 			5 = { }
 			1 = {
 				custom_tooltip = gpm_reward_manufactorium_ship
-				fromfrom.planet = {
+				from.planet = {
 					create_fleet = {
 						name = "NAME_manufactorium_fleet"
 						settings = {
@@ -3340,7 +3339,7 @@ fleet_event = {
 								prefix = no
 								upgradable = no
 							}
-							set_location = fromfrom.planet
+							set_location = from.planet
 							owner = { add_intel = { amount = 100 who = root.owner } }
 						}
 					}
@@ -3376,11 +3375,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3596,11 +3595,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3741,11 +3740,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
@@ -3889,11 +3888,11 @@ fleet_event = {
 
 	immediate = {
 		
-		fromfrom = { set_site_progress_locked = yes }
+		from = { set_site_progress_locked = yes }
 	}
 
 	after = {
-		fromfrom = { set_site_progress_locked = no }
+		from = { set_site_progress_locked = no }
 	}
 
 	option = {
