@@ -815,8 +815,9 @@ fleet_event = {
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1058,8 +1059,9 @@ fleet_event = {
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1202,8 +1204,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_shipyards_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1385,8 +1388,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_gun_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1405,8 +1409,9 @@ fleet_event = {
 		locked_random_list = {
 			5 = { owner = { gpm_random_reward_precursor_planetary_gun = yes } }
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1618,8 +1623,9 @@ fleet_event = {
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1853,8 +1859,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mechs_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2044,8 +2051,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_floating_city_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2189,8 +2197,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_capital_complex_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2384,8 +2393,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_communication_hub_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2536,8 +2546,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_singularity_matrix } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2749,8 +2760,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_eternal_fortress_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2914,8 +2926,9 @@ fleet_event = {
 				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3059,8 +3072,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mines_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3239,8 +3253,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3464,8 +3479,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_vaults_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3683,8 +3699,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_crashed_spacestation_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3831,8 +3848,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_outpost_ruins_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3976,8 +3994,9 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_harbor_ruins_discovery_2 } }
 			}
 			1 = {
-				gpm_random_precursor_building_reward = yes
-				# log = "gpm_random_precursor_building_reward"
+				grant_random_fe_building = yes
+				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
+				# log = "grant_random_fe_building = yes"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk

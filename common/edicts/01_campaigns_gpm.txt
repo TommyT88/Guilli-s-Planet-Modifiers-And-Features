@@ -30,15 +30,16 @@ gpm_edict_alloy_production  = {
 	potential = {
 		has_technology = tech_arcane_deciphering
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
-		planet_metallurgists_alloys_produces_add = 2
-		planet_metallurgists_minor_artifacts_upkeep_add = 0.5
+		planet_metallurgists_alloys_produces_add = 1
+		planet_metallurgists_minor_artifacts_upkeep_add = 0.1
 	}
 	
 	ai_weight = {
-		weight = 10
+		weight = 0
 	}
 }
 gpm_edict_consumer_goods_production  = {
@@ -60,15 +61,16 @@ gpm_edict_consumer_goods_production  = {
 			is_machine_empire = no
 			has_civic = civic_machine_servitor
 		}
+		is_ai = no
 	}
 
 	modifier = {
-		planet_artisans_consumer_goods_produces_add = 2
-		planet_artisans_minor_artifacts_upkeep_add = 0.5
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_minor_artifacts_upkeep_add = 0.1
 	}
 	
 	ai_weight = {
-		weight = 5
+		weight = 0
 	}
 }
 # gpm_edict_exotic_production  = {

@@ -1,0 +1,669 @@
+# #####################
+# # Normal Empires
+# #####################
+# # gpm_titanic_predators | Titanic Predators (Dynosaurs)
+# gpm_titanic_predators_army = {
+	# damage = 1.00
+	# health = 1.00
+	# morale = 1.00
+	# has_morale = yes
+	# morale_damage = 1.00
+	# collateral_damage = 1.00
+	# war_exhaustion = 1.00
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_machine_empire = no
+			# has_valid_civic = civic_machine_assimilator
+		# }
+		# is_wilderness_empire = no
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_titanic_predators
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_giant_worm | Colossal Wurm 
+# gpm_giant_worm_army = {
+	# damage = 1.00
+	# health = 1.00
+	# morale = 1.00
+	# has_morale = yes
+	# morale_damage = 1.00
+	# collateral_damage = 1.00
+	# war_exhaustion = 1.00
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_machine_empire = no
+			# has_valid_civic = civic_machine_assimilator
+		# }
+		# is_wilderness_empire = no
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_giant_worm
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_giant_scorpioids | Giant Scorpioids
+# gpm_giant_scorpioids_army = {
+	# damage = 1.00
+	# health = 1.00
+	# morale = 1.00
+	# has_morale = yes
+	# morale_damage = 1.00
+	# collateral_damage = 1.00
+	# war_exhaustion = 1.00
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_machine_empire = no
+			# has_valid_civic = civic_machine_assimilator
+		# }
+		# is_wilderness_empire = no
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_giant_scorpioids
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_crystaline_fauna | Crystaline Haunds
+# gpm_crystaline_fauna_army = {
+	# damage = 1.00
+	# health = 1.00
+	# morale = 1.00
+	# has_morale = yes
+	# morale_damage = 1.00
+	# collateral_damage = 1.00
+	# war_exhaustion = 1.00
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_machine_empire = no
+			# has_valid_civic = civic_machine_assimilator
+		# }
+		# is_wilderness_empire = no
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_crystaline_fauna
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# #####################
+# # Machine Empires
+# #####################
+# # gpm_titanic_predators | Titanic Predators (Dynosaurs)
+# gpm_titanic_predators_machine_army = {
+	# damage = 1.00
+	# health = 1.00
+	# has_morale = no
+	# morale_damage = 1.00
+	# collateral_damage = 2.0
+	# war_exhaustion = 0.5
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+
+	# icon = GFX_army_type_machine_assault
+	# prerequisites = { "tech_assault_armies" }
+
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+
+	# potential_country = {
+		# is_machine_empire = yes
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_titanic_predators
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_giant_worm | Mechanized Colossal Wurm 
+# gpm_giant_worm_machine_army = {
+	# damage = 1.00
+	# health = 1.00
+	# has_morale = no
+	# morale_damage = 1.00
+	# collateral_damage = 2.0
+	# war_exhaustion = 0.5
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+
+	# icon = GFX_army_type_machine_assault
+	# prerequisites = { "tech_assault_armies" }
+
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+
+	# potential_country = {
+		# is_machine_empire = yes
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_giant_worm
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_giant_scorpioids | Mechanized Giant Scorpioids
+# gpm_giant_scorpioids_machine_army = {
+	# damage = 1.00
+	# health = 1.00
+	# has_morale = no
+	# morale_damage = 1.00
+	# collateral_damage = 2.0
+	# war_exhaustion = 0.5
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+
+	# icon = GFX_army_type_machine_assault
+	# prerequisites = { "tech_assault_armies" }
+
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+
+	# potential_country = {
+		# is_machine_empire = yes
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_giant_scorpioids
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_crystaline_fauna | Mechanized Crystaline Haunds
+# gpm_crystaline_fauna_machine_army = {
+	# damage = 1.00
+	# health = 1.00
+	# has_morale = no
+	# morale_damage = 1.00
+	# collateral_damage = 2.0
+	# war_exhaustion = 0.5
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+
+	# icon = GFX_army_type_machine_assault
+	# prerequisites = { "tech_assault_armies" }
+
+	# resources = {
+		# category = armies
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = no
+				# }
+			# }
+			# minerals = 100
+		# }
+		# cost = {
+			# trigger = {
+				# from = {
+					# country_uses_bio_ships = yes
+				# }
+			# }
+			# food = 100
+			# mult = @mineral_to_food_cost_ratio
+		# }
+
+		# upkeep = {
+			# energy = 1
+		# }
+	# }
+
+	# potential_country = {
+		# is_machine_empire = yes
+	# }
+	
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_crystaline_fauna
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# #####################
+# # Bio Hive Empires
+# #####################
+# # gpm_titanic_predators | Titanic Predators (Dynosaurs)
+# gpm_titanic_predators_bio_army = {
+	# defensive = no
+	# is_pop_spawned = no
+	# health = 3.25
+	# damage = 1.50
+	# morale = 0.5
+	# morale_damage = 1.25
+	# has_morale = yes
+	# collateral_damage = 5.0
+	# war_exhaustion = 0.0
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_wilderness_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# food = 200
+		# }
+		# upkeep = {
+			# food = 1
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_hive_empire = yes
+			# is_wilderness_empire = yes
+		# }
+	# }
+
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_titanic_predators
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_giant_worm | Infected Colossal Wurm 
+# gpm_giant_worm_bio_army = {
+	# defensive = no
+	# is_pop_spawned = no
+	# health = 3.25
+	# damage = 1.50
+	# morale = 0.5
+	# morale_damage = 1.25
+	# has_morale = yes
+	# collateral_damage = 5.0
+	# war_exhaustion = 0.0
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_wilderness_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# food = 200
+		# }
+		# upkeep = {
+			# food = 1
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_hive_empire = yes
+			# is_wilderness_empire = yes
+		# }
+	# }
+
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_giant_worm
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_giant_scorpioids | Pheromoned Giant Scorpioids
+# gpm_giant_scorpioids_bio_army = {
+	# defensive = no
+	# is_pop_spawned = no
+	# health = 3.25
+	# damage = 1.50
+	# morale = 0.5
+	# morale_damage = 1.25
+	# has_morale = yes
+	# collateral_damage = 5.0
+	# war_exhaustion = 0.0
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_wilderness_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# food = 200
+		# }
+		# upkeep = {
+			# food = 1
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_hive_empire = yes
+			# is_wilderness_empire = yes
+		# }
+	# }
+
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_giant_scorpioids
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+
+# # gpm_crystaline_fauna | Droned Crystaline Haunds
+# gpm_crystaline_fauna_bio_army = {
+	# defensive = no
+	# is_pop_spawned = no
+	# health = 3.25
+	# damage = 1.50
+	# morale = 0.5
+	# morale_damage = 1.25
+	# has_morale = yes
+	# collateral_damage = 5.0
+	# war_exhaustion = 0.0
+	# time = 90
+	# has_species = no
+	# pop_limited = no
+	
+	# icon = GFX_wilderness_army_type_assault
+	# prerequisites = { "tech_assault_armies" }
+	
+	# resources = {
+		# category = armies
+		# cost = {
+			# food = 200
+		# }
+		# upkeep = {
+			# food = 1
+			# energy = 1
+		# }
+	# }
+	
+	# potential_country = {
+		# OR = {
+			# is_hive_empire = yes
+			# is_wilderness_empire = yes
+		# }
+	# }
+
+	# potential = {
+		# exists = owner
+		# planet = {
+			# has_modifier = gpm_crystaline_fauna
+		# }
+	# }
+
+	# ai_weight = {
+		# base = 100
+	# }
+# }
+

@@ -73,7 +73,7 @@ artifact_arcane_deciphering = {
 				}
 				5 = {
 					modifier = { factor = 2 has_ascension_perk = ap_archaeoengineers }
-					modifier = { factor = 0 has_ascension_perk = ap_cosmogenesis }
+					modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
 					grant_random_fe_building = yes
 				}
 			}

@@ -19,6 +19,27 @@ gpm_mega_shipyard_ruined_precursor = {
 			minor_artifacts = 1
 		}
 	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 2500
+		}
+	}
+	dismantle_time = 720
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 5000
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
 
 	potential = {
 		always = no
@@ -66,6 +87,27 @@ gpm_mega_shipyard_restored_precursor = {
 				from = { has_ancrel = yes }
 			}
 			minor_artifacts = 1
+		}
+	}
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 2500
+		}
+	}
+	dismantle_time = 720
+	dismantle_potential = {
+		always = yes
+	}
+	dismantle_possible = {
+		always = yes
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 5000
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
 		}
 	}
 

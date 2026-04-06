@@ -24,15 +24,16 @@ gpm_edict_tech_alternatives  = {
 	potential = {
 		has_technology = tech_arcane_deciphering
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
 		num_tech_alternatives_add = 3
-		planet_biologists_minor_artifacts_upkeep_add = 0.2
+		planet_biologists_minor_artifacts_upkeep_add = 0.05
 	}
 	
 	ai_weight = {
-		weight = 1
+		weight = 0
 	}
 }
 

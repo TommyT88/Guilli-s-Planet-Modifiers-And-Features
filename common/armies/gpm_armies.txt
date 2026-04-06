@@ -4,12 +4,13 @@
 
 # Relic army
 gpm_venerable_dreadnaught_army = {
-	damage = 5
-	morale_damage = 5.0
-	collateral_damage = 5.0
-	war_exhaustion = 0.25
-	health = 50
+	damage = 12.00
+	health = 20.00
+	morale_damage = 6.00
+	collateral_damage = 6.00
+	war_exhaustion = 1.00
 	has_morale = no
+
 	time = 360
 
 	has_species = no
@@ -36,13 +37,15 @@ gpm_venerable_dreadnaught_army = {
 		always = no
 	}
 }
+
 gpm_dreadnaught_army = {
-	damage = 2.5
-	morale_damage = 2.5
-	collateral_damage = 1.0
-	war_exhaustion = 3.0
-	health = 2.5
-	morale = 2.5
+	damage = 1.5
+	health = 2.0
+	morale = 2.0
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 2.0
+
 	time = 360
 
 	has_species = no
@@ -61,6 +64,7 @@ gpm_dreadnaught_army = {
 	
 
 	potential = {
+		exists = owner
 		owner = {
 			has_relic = gpm_r_venerable_dreadnaught
 		}
@@ -76,12 +80,12 @@ gpm_dreadnaught_army = {
 
 # Normal
 gpm_precursor_mech_army = {
-	damage = 3.0
-	morale_damage = 3.0
-	collateral_damage = 3.0
+	damage = 2.0
+	morale_damage = 2.5
+	collateral_damage = 2.0
 	war_exhaustion = 3.00
-	health = 3
-	morale = 3
+	health = 2
+	morale = 2
 	time = 360
 
 	has_species = no
@@ -100,6 +104,7 @@ gpm_precursor_mech_army = {
 	
 
 	potential = {
+		exists = owner
 		planet = {
 			has_modifier = "gpm_precursor_mechs"
 		}
@@ -118,12 +123,13 @@ gpm_precursor_mech_army = {
 		}
 	}
 }
+
 gpm_giant_arachnid_army = {
-	damage = 2.0
-	morale_damage = 4.0
+	damage = 1.20
+	morale_damage = 3.0
 	collateral_damage = 0.0
-	war_exhaustion = 3.00
-	health = 2.0
+	war_exhaustion = 1.25
+	health = 1.25
 	has_morale = no
 	time = 180
 
@@ -142,12 +148,14 @@ gpm_giant_arachnid_army = {
 	}
 	
 	potential = {
+		exists = owner
 		owner = {
 			NOT = { has_authority = auth_machine_intelligence }
 			has_technology = tech_gpm_arachnophobia_discovery
 		}
 	}
 }
+
 # arachnid defense armies (event)
 gpm_giant_arachnid_army_defensive = {
 	defensive = yes
@@ -162,14 +170,16 @@ gpm_giant_arachnid_army_defensive = {
 		always = no
 	}
 }
+
 # Machine Empires
 gpm_precursor_mech_army_machine = {
-	damage = 3.0
-	morale_damage = 3.0
-	collateral_damage = 3.0
+	damage = 2.0
+	morale_damage = 2.5
+	collateral_damage = 2.0
 	war_exhaustion = 3.00
-	health = 3
-	morale = 3
+	health = 2
+	morale = 2
+	
 	time = 360
 
 	has_species = no
@@ -187,6 +197,7 @@ gpm_precursor_mech_army_machine = {
 	}
 	
 	potential = {
+		exists = owner
 		planet = {
 			has_modifier = "gpm_precursor_mechs"
 		}
@@ -205,12 +216,13 @@ gpm_precursor_mech_army_machine = {
 		}
 	}
 }
+
 gpm_giant_arachnid_army_machine = {
-	damage = 2.0
-	morale_damage = 4.0
+	damage = 1.20
+	morale_damage = 3.0
 	collateral_damage = 0.0
-	war_exhaustion = 3.00
-	health = 2.0
+	war_exhaustion = 1.25
+	health = 1.25
 	has_morale = no
 	time = 180
 
@@ -229,6 +241,7 @@ gpm_giant_arachnid_army_machine = {
 	}
 	
 	potential = {
+		exists = owner
 		owner = {
 			has_authority = auth_machine_intelligence
 			has_technology = tech_gpm_arachnophobia_discovery
@@ -238,12 +251,13 @@ gpm_giant_arachnid_army_machine = {
 
 # Relic Armies
 gpm_relic_tank_battalion = {
-	damage = 6.0
-	health = 5.0
-	morale = 4.0
-	morale_damage = 2.5
-	collateral_damage = 2.5
-	war_exhaustion = 3.00
+	damage = 1.4
+	health = 1.5
+	morale = 1.0
+	morale_damage = 1.1
+	collateral_damage = 1.4
+	war_exhaustion = 1.00
+	
 	time = 120
 
 	icon = GFX_army_type_assault
@@ -263,19 +277,21 @@ gpm_relic_tank_battalion = {
 	}
 
 	potential = {
+		exists = owner
 		planet = {
 			has_deposit = gpm_d_relic_tank_factory
 		}
 		has_ancrel = yes
 	}
 }
+
 gpm_relic_mech_squadron = {
-	damage = 6.0
-	health = 6.0
-	morale = 2.5
-	morale_damage = 2.5
-	collateral_damage = 5.0
-	war_exhaustion = 3.00
+	damage = 1.4
+	health = 1.1
+	morale = 1.0
+	morale_damage = 1.4
+	collateral_damage = 2.0
+	war_exhaustion = 1.00
 	time = 120
 
 	icon = GFX_army_type_assault
@@ -295,19 +311,22 @@ gpm_relic_mech_squadron = {
 	}
 
 	potential = {
+		exists = owner
 		planet = {
 			has_deposit = gpm_d_relic_mech_factory
 		}
 		has_ancrel = yes
 	}
 }
+
 gpm_relic_fighter_squadron = {
-	damage = 7.0
-	health = 2.5
-	morale = 2.5
-	morale_damage = 4.0
-	collateral_damage = 2.5
-	war_exhaustion = 3.00
+	damage = 3.0
+	health = 0.5
+	morale = 1.0
+	morale_damage = 1.2
+	collateral_damage = 1.5
+	war_exhaustion = 1.00
+	
 	time = 120
 
 	icon = GFX_army_type_assault
@@ -327,19 +346,21 @@ gpm_relic_fighter_squadron = {
 	}
 
 	potential = {
+		exists = owner
 		planet = {
 			has_deposit = gpm_d_relic_ship_factory
 		}
 		has_ancrel = yes
 	}
 }
+
 gpm_relic_power_armoured_troops = {
-	damage = 4.00
-	health = 3.00
-	morale = 3.00
-	morale_damage = 1.20
-	collateral_damage = 0.50
-	war_exhaustion = 3.00
+	damage = 1.00
+	health = 1.40
+	morale = 1.00
+	morale_damage = 1.0
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
 	time = 120
 	icon = GFX_army_type_assault
 	prerequisites = { "tech_assault_armies" }
@@ -357,6 +378,7 @@ gpm_relic_power_armoured_troops = {
 	}
 
 	potential = {
+		exists = owner
 		planet = {
 			has_deposit = gpm_d_relic_power_armor_factory
 		}
@@ -382,9 +404,11 @@ gpm_xenomorph_army_defensive = {
 # xenomorph queen army (event)
 gpm_xenomorph_army_queen = {
 	defensive = yes
-	damage = 4
+	damage = 4.0
 	morale_damage = 2.0
-	health = 10
+	health = 10	
+	collateral_damage = 0.0
+	war_exhaustion = 1.00
 	has_morale = no
 	icon = GFX_army_type_xenomorph
 	has_species = no
@@ -393,13 +417,14 @@ gpm_xenomorph_army_queen = {
 		always = no
 	}
 }
+
 # dupe xenomorph army; no upkeep
 gpm_xenomorph_army_no_upkeep = {
-	damage = 2.0
+	damage = 1.75
 	morale_damage = 2.0
 	collateral_damage = 5.0
-	war_exhaustion = 0.25
-	health = 2.0
+	war_exhaustion = 1.0
+	health = 1.2
 	has_morale = no
 	time = 100
 	icon = GFX_army_type_xenomorph

@@ -79,36 +79,30 @@ gpm_contingency_em_shielding = {
 
 # science option
 gpm_living_knowledge_base = {
-	planet_jobs_physics_research_produces_mult = 0.30
-	planet_jobs_society_research_produces_mult = 0.30
-	planet_jobs_engineering_research_produces_mult = 0.30
+	researcher_jobs_bonus_workforce_mult = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_living_knowledge_base.dds"
 	icon_frame = 8
 }
 gpm_true_randomness_unit = {
-	planet_physicists_physics_research_produces_add = 4
-	planet_biologists_society_research_produces_add = 4
-	planet_engineers_engineering_research_produces_add = 4
+	researcher_jobs_bonus_workforce_mult = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_culture_of_games.dds"
 	icon_frame = 8
 }
 gpm_planetary_databases = {
-	planet_jobs_physics_research_produces_mult = 0.20
-	planet_jobs_society_research_produces_mult = 0.20
-	planet_jobs_engineering_research_produces_mult = 0.20
+	researcher_jobs_bonus_workforce_mult = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_galactic_databanks.dds"
 	icon_frame = 8
 }
 
 # energy option
 gpm_quantum_information_network = {
-	planet_technician_energy_produces_mult = 0.40
+	technician_jobs_bonus_workforce_mult = 0.10
 	planet_district_generator_uncapped_build_speed_mult = 0.40
 	icon = "gfx/interface/icons/planet_modifiers/gpm_quantum_information_network.dds"
 	icon_frame = 8
 }
 gpm_framework = {
-	planet_technician_energy_produces_add = 4
+	technician_jobs_bonus_workforce_mult = 0.10
 	planet_district_generator_uncapped_build_speed_mult = 0.40
 	icon = "gfx/interface/icons/planet_modifiers/gpm_framework.dds"
 	icon_frame = 8
@@ -116,13 +110,13 @@ gpm_framework = {
 
 # minerals option
 gpm_space_elevators_machine = {
-	planet_miners_minerals_produces_mult = 0.40
+	miner_jobs_bonus_workforce_mult = 0.10
 	planet_district_mining_uncapped_build_speed_mult = 0.40
 	icon = "gfx/interface/icons/planet_modifiers/gpm_space_elevators.dds"
 	icon_frame = 8
 }
 gpm_robotic_pests = {
-	planet_miners_minerals_produces_add = 4
+	miner_jobs_bonus_workforce_mult = 0.10
 	planet_district_mining_uncapped_build_speed_mult = 0.40
 	icon = "gfx/interface/icons/planet_modifiers/gpm_robotic_pests.dds"
 	icon_frame = 8
@@ -130,7 +124,7 @@ gpm_robotic_pests = {
 
 # alloy option
 gpm_planetwide_printing = {
-	planet_metallurgists_alloys_produces_mult = 0.30
+	foundry_jobs_bonus_workforce_mult = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_planetwide_printing.dds"
 	icon_frame = 8
 }
@@ -159,7 +153,7 @@ gpm_ghost_in_the_machine = {
 	icon_frame = 8
 }
 gpm_rogue_programming = {
-	planet_jobs_simple_drone_produces_mult = 0.05
+	pop_bonus_workforce_mult = 0.05
 	icon = "gfx/interface/icons/planet_modifiers/gpm_rogue_programming.dds"
 	icon_frame = 8
 }

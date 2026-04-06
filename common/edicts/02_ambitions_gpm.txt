@@ -32,15 +32,16 @@ gpm_edict_pop_assembly  = {
 			has_ethic = ethic_fanatic_materialist
 		}
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
-		planet_pop_assembly_mult = 0.33
-		planet_pop_assemblers_minor_artifacts_upkeep_add = 1.0
+		planet_pop_assembly_mult = 0.25
+		planet_pop_assemblers_minor_artifacts_upkeep_add = 0.5
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 0
 	}
 }
 gpm_edict_terraform_speed  = {
@@ -57,18 +58,15 @@ gpm_edict_terraform_speed  = {
 		has_technology = tech_arcane_deciphering
 		has_technology = tech_ascension_theory
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
-		terraform_speed_mult = 2.00
+		terraform_speed_mult = 1.00
 	}
 	
 	ai_weight = {
 		weight = 0
-		modifier = {
-			weight = 1
-			is_at_war = no
-		}
 	}
 }
 gpm_edict_armor_regen  = {
@@ -85,20 +83,17 @@ gpm_edict_armor_regen  = {
 		has_technology = tech_arcane_deciphering
 		has_technology = tech_ascension_theory
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
 		#ship_armor_regen_add_perc = 100.00
-		ship_hull_regen_add_perc = 1.0
-		ship_armor_regen_add_perc = 1.0
+		ship_hull_regen_add_perc = 0.50
+		ship_armor_regen_add_perc = 0.50
 	}
 	
 	ai_weight = {
 		weight = 0
-		modifier = {
-			weight = 10
-			is_at_war = yes
-		}
 	}
 }
 gpm_edict_shield_regen  = {
@@ -115,18 +110,15 @@ gpm_edict_shield_regen  = {
 		has_technology = tech_arcane_deciphering
 		has_technology = tech_ascension_theory
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
-		ship_shield_regen_add_perc = 1.0
+		ship_shield_regen_add_perc = 0.50
 	}
 	
 	ai_weight = {
 		weight = 0
-		modifier = {
-			weight = 10
-			is_at_war = yes
-		}
 	}
 }
 gpm_edict_ship_bombard_dmg  = {
@@ -143,18 +135,15 @@ gpm_edict_ship_bombard_dmg  = {
 		has_technology = tech_arcane_deciphering
 		has_technology = tech_ascension_theory
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
-		ship_orbital_bombardment_mult = 1.00
+		ship_orbital_bombardment_mult = 0.50
 	}
 	
 	ai_weight = {
 		weight = 0
-		modifier = {
-			weight = 5
-			is_at_war = yes
-		}
 	}
 }
 gpm_edict_army_boost  = {
@@ -171,18 +160,15 @@ gpm_edict_army_boost  = {
 		has_technology = tech_arcane_deciphering
 		has_technology = tech_ascension_theory
 		has_ancrel = yes
+		is_ai = no
 	}
 
 	modifier = {
-		army_defense_damage_mult = 1.00
-        army_attack_damage_mult = 1.00
+		army_defense_damage_mult = 0.50
+        army_attack_damage_mult = 0.50
 	}
 	
 	ai_weight = {
 		weight = 0
-		modifier = {
-			weight = 5
-			is_at_war = yes
-		}
 	}
 }

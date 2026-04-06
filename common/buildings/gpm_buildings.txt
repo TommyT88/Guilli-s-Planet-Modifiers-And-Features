@@ -240,8 +240,26 @@ gpm_building_ascension_tower = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2000
-		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.10
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+		}
+		planet_amenities_add = 4000
+		planet_housing_add = 8000
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_machine_servitor }
+		}
+		planet_amenities_add = 3000
+		planet_housing_add = 6000
+		job_bio_trophy_add = 6000
 	}
 
 	triggered_planet_modifier = {
@@ -252,7 +270,7 @@ gpm_building_ascension_tower = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 500
+			planet_housing_add = 2000
 		}
 	}
 
