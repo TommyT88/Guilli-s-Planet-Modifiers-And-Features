@@ -67,7 +67,8 @@ tech_gpm_precursor_energy_grid_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		ship_reactor_power_mult = 0.50
+		stations_energy_produces_mult = 0.50
+		country_resource_max_energy_add = 100000
 	}
 	
 	weight_modifier = {
@@ -1290,7 +1291,7 @@ tech_gpm_plasmoid_life_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_reactor_power_mult = 0.20
+		station_gatherers_energy_produces_mult = 0.20
 	}
 	
 	weight_modifier = {

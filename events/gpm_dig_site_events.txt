@@ -542,12 +542,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			10 = {
 				owner = { add_relic = gpm_r_quantum_sphere }
@@ -585,12 +592,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			10 = {
 				owner = { add_relic = gpm_r_ai_architect }
@@ -628,12 +642,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			10 = {
 				owner = { add_relic = gpm_r_soul_gem }
@@ -671,12 +692,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			10 = {
 				owner = { add_relic = gpm_r_self_repairing_obelisk }
@@ -714,12 +742,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -815,20 +850,28 @@ fleet_event = {
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -959,12 +1002,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 
 				#check for modifier
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_energy_grid } } }
@@ -1005,12 +1055,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 
 				#check for modifier
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
@@ -1059,20 +1116,28 @@ fleet_event = {
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_shield } } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1179,12 +1244,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1204,20 +1276,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_shipyards_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1252,12 +1332,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1363,12 +1450,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1388,20 +1482,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_planetary_gun_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1409,20 +1511,28 @@ fleet_event = {
 		locked_random_list = {
 			5 = { owner = { gpm_random_reward_precursor_planetary_gun = yes } }
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1528,12 +1638,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 
 				#check for modifier
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
@@ -1577,12 +1694,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 
 				#check for modifier
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_bunker_grid } } }
@@ -1623,20 +1747,28 @@ fleet_event = {
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1656,12 +1788,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			1 = {
 				hidden_effect = {
@@ -1677,12 +1816,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1725,12 +1871,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			1 = {
 				hidden_effect = {
@@ -1746,12 +1899,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1834,12 +1994,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -1859,20 +2026,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mechs_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -1891,12 +2066,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1938,12 +2120,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2026,12 +2215,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2051,20 +2247,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_floating_city_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2172,12 +2376,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2197,20 +2408,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_capital_complex_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2231,12 +2450,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2280,12 +2506,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2368,12 +2601,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2393,20 +2633,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_communication_hub_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2514,12 +2762,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2546,20 +2801,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_singularity_matrix } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2589,12 +2852,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2647,12 +2917,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2735,12 +3012,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2760,20 +3044,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_eternal_fortress_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -2881,12 +3173,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -2918,28 +3217,43 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3047,12 +3361,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3072,20 +3393,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_mines_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3193,12 +3522,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3231,12 +3567,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			10 = {
 				owner = {
@@ -3253,20 +3596,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3301,12 +3652,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3365,12 +3723,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3453,12 +3818,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3479,20 +3851,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_vaults_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3508,12 +3888,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			1 = {
 				leader = { add_trait = leader_trait_xeno_cataloger }
@@ -3525,12 +3912,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3569,12 +3963,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 			1 = {
 				leader = { add_trait = leader_trait_xeno_cataloger }
@@ -3586,12 +3987,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3674,12 +4082,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3699,20 +4114,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_crashed_spacestation_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3823,12 +4246,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3848,20 +4278,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_outpost_ruins_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##
@@ -3969,12 +4407,19 @@ fleet_event = {
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Guaranteed Rewards ##
@@ -3994,20 +4439,28 @@ fleet_event = {
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_precursor_harbor_ruins_discovery_2 } }
 			}
 			1 = {
-				grant_random_fe_building = yes
+				hidden_effect = { owner = { grant_random_fe_building = yes } }
+				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "grant_random_fe_building = yes"
+				# log = "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
 				modifier = { factor = 1.5 owner = { has_ascension_perk = ap_archaeoengineers } }
 				# boost if scientist has specific perks
-				modifier = { factor = 1.25 this.leader = { has_trait = leader_trait_archaeologist } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_archaeologist_2 } }
-				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_curator } }
-				modifier = { factor = 1.2 this.leader = { has_trait = gpm_leader_trait_collector } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_expertise_archaeostudies } }
-				modifier = { factor = 1.5 this.leader = { has_trait = leader_trait_gpm_precursor_expert } }
+				modifier = { factor = 1.2 this.leader = { has_trait = leader_trait_archaeologist_2 } }
+				modifier = {
+					factor = 1.1
+					this.leader = {
+						or = {
+							has_trait = leader_trait_archaeologist
+							has_trait = leader_trait_curator
+							has_trait = gpm_leader_trait_collector
+							has_trait = leader_trait_expertise_archaeostudies
+							has_trait = leader_trait_gpm_precursor_expert
+						}
+					}
+				}
 			}
 		}
 		## Bonus Possible Rewards ##

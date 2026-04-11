@@ -518,6 +518,8 @@ gpm_create_tiyanki_resident = {
 	save_event_target_as = planet_location
 	set_planet_flag = gpm_tiyanki_grounds
 	add_modifier = { days = -1 modifier = "gpm_tiyanki_feeding_grounds" }
+	remove_deposit = yes
+	gpm_d_random_food_gal_gen = yes
 	random_list = {
 		10 = {
 			create_fleet = {
