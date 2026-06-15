@@ -70,7 +70,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					OR = {
-						gpm_is_planet_class_normal_habitable = yes
+						gpm_is_planet_class_habitable_natural = yes
 						has_deposit = yes
 						has_planet_flag = gpm_has_been_deposit_explored_flag
 					}
@@ -131,7 +131,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -185,7 +185,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					OR = {
-						gpm_is_planet_class_normal_habitable = yes
+						gpm_is_planet_class_habitable_natural = yes
 						has_deposit = yes
 						has_planet_flag = gpm_has_been_deposit_explored_flag
 					}
@@ -245,7 +245,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					OR = {
-						gpm_is_planet_class_normal_habitable = yes
+						gpm_is_planet_class_habitable_natural = yes
 						has_deposit = yes
 						has_planet_flag = gpm_has_been_deposit_explored_flag
 					}
@@ -314,7 +314,7 @@ ship_event = {
 			if = {
 				limit = {
 					AND = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						OR = {
 							has_deposit = no
 							AND = {
@@ -359,7 +359,7 @@ ship_event = {
 			if = {
 				limit = {
 					AND = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						OR = {
 							has_deposit = no
 							AND = {
@@ -414,7 +414,7 @@ ship_event = {
 				limit = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					AND = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						OR = {
 							has_deposit = no
 							AND = {
@@ -546,7 +546,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -820,7 +820,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -1347,7 +1347,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -1540,7 +1540,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -1838,7 +1838,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -2432,7 +2432,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -2737,7 +2737,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -2898,7 +2898,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -3528,7 +3528,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -3778,7 +3778,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -3911,7 +3911,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -4060,7 +4060,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -4514,7 +4514,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -5041,7 +5041,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -5636,7 +5636,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -5791,7 +5791,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -6636,7 +6636,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -6849,7 +6849,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -7367,7 +7367,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -7879,7 +7879,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -8058,7 +8058,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -8137,7 +8137,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -8239,7 +8239,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -8324,7 +8324,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -8401,7 +8401,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -8491,7 +8491,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -8627,7 +8627,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -9000,7 +9000,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -9337,7 +9337,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -9476,7 +9476,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -9721,7 +9721,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -9900,7 +9900,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -9952,7 +9952,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -10164,7 +10164,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -10655,7 +10655,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -10910,7 +10910,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -11247,7 +11247,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -11299,7 +11299,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -11386,7 +11386,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -11484,7 +11484,7 @@ ship_event = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
 					OR = {
-						gpm_is_planet_class_normal_habitable = no
+						gpm_is_planet_class_habitable_natural = no
 						has_deposit = no
 						AND = {
 							has_deposit = yes
@@ -11580,7 +11580,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -11682,7 +11682,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {
@@ -11886,7 +11886,7 @@ ship_event = {
 			limit = {
 				FROM = {
 					NOT = { has_planet_flag = gpm_has_been_deposit_explored_flag }
-					NOT = { gpm_is_planet_class_normal_habitable = yes }
+					NOT = { gpm_is_planet_class_habitable_natural = yes }
 					OR = {
 						has_deposit = no
 						AND = {

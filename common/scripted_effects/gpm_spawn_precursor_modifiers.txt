@@ -18,7 +18,7 @@ gpm_spawn_precursor_modifier = {
 
 	random_list = {
 		140 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_remnants" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_remnants" multiplier = gpm_planet_size_multiplier }
 			
 			modifier = { factor = @rare }
 			# On these planets #
@@ -37,7 +37,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_remnants" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_energy_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_energy_grid" multiplier = gpm_planet_size_multiplier_inverse }
 			gpm_set_precursor_energy_grid = yes
 			modifier = { factor = @rare }
 			# On these planets #
@@ -57,7 +57,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_energy_grid" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_satalite_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_satalite_grid" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -75,7 +75,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_satalite_grid" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -157,7 +157,7 @@ gpm_spawn_precursor_modifier = {
 		# 	solar_system = { set_star_flag = gpm_precursor_shipyards_star }
 		# }
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -177,7 +177,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_gun" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_bunker_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_bunker_grid" multiplier = gpm_planet_size_multiplier_inverse }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
@@ -198,7 +198,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_bunker_grid" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_mechs" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_mechs" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
@@ -219,7 +219,7 @@ gpm_spawn_precursor_modifier = {
 		}
 		100 = {
 			modifier = { factor = @rare }
-			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" multiplier = gpm_planet_size_multiplier }
 			gpm_set_precursor_planetary_shields = yes	
 			# if = {
 				# limit = { NOT = {	is_capital =  yes } }
@@ -304,7 +304,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_shield" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_floating_city" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_floating_city" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -342,7 +342,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_capital_complex" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_communication_hub" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_communication_hub" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -361,7 +361,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_communication_hub" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_singularity_drive" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_singularity_drive" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 10 is_planet_class = pc_archive }
@@ -381,7 +381,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_singularity_drive" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_eternal_fortress" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_eternal_fortress" multiplier = gpm_planet_size_multiplier_inverse }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
@@ -402,7 +402,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_eternal_fortress" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_prison_planet" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_prison_planet" multiplier = gpm_planet_size_multiplier_inverse }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
@@ -421,7 +421,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_mines" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_mines" multiplier = gpm_planet_size_multiplier_inverse }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
@@ -440,7 +440,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_mines" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_manufactorium" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_manufactorium" multiplier = gpm_planet_size_multiplier_inverse }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
@@ -453,7 +453,7 @@ gpm_spawn_precursor_modifier = {
 				}
 			}
 			modifier = { factor = 1.5
-				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_habitable_natural = yes
 			}
 			# Galaxy age setting modifier
 			modifier = { factor = 0.75 has_global_flag = gpm_galaxy_age_young }
@@ -462,7 +462,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_manufactorium" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_vaults" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_vaults" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 3 is_planet_class = pc_archive }
@@ -482,7 +482,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_vaults" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_crashed_spacestation" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_crashed_spacestation" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -500,7 +500,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_crashed_spacestation" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_battleground_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_battleground_ruins" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -518,7 +518,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_battleground_ruins" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -530,11 +530,11 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_outpost_ruins" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_harbor_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_harbor_ruins" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			modifier = { factor = 0 is_planet_class = pc_archive }
-			modifier = { factor = 0 NOR = { gpm_is_planet_water = yes } }
+			modifier = { factor = 0 NOR = { gpm_is_planet_class_ocean = yes } }
 			# TWeaks #
 			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
 			# Galaxy age setting modifier
@@ -547,7 +547,7 @@ gpm_spawn_precursor_modifier = {
 			add_modifier = { days = -1 modifier = "gpm_precursor_ruins" }
 			modifier = { factor = @rare }
 			# On these planets #
-			modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_dry = yes } }
 			# TWeaks #
 			modifier = { factor = 0 NOT = { planet_size < 15 } }
 			modifier = { factor = 0.5
@@ -564,7 +564,7 @@ gpm_spawn_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_ruins" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_obelisks" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_obelisks" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @rare }
 			# On these planets #
 			# TWeaks #
@@ -594,14 +594,14 @@ gpm_random_precursor_modifier = {
 			NAND = {
 				# has_planet_flag = has_precursor_planet_modifier
 				gpm_has_precursor_modifiers = yes
-				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_habitable_natural = yes
 			}
 		}
 		# set_planet_flag = has_precursor_planet_modifier
 	}
 	random_list = {
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_remnants" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_remnants" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -609,7 +609,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_remnants" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_energy_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_energy_grid" multiplier = gpm_planet_size_multiplier }
 			gpm_set_precursor_energy_grid = yes
 			modifier = { factor = @default }
 			# On these planets #
@@ -618,7 +618,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_energy_grid" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_satalite_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_satalite_grid" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -626,7 +626,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_satalite_grid" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_city" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -647,7 +647,7 @@ gpm_random_precursor_modifier = {
 			}
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -655,7 +655,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_gun" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_bunker_grid" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_bunker_grid" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -663,7 +663,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_bunker_grid" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_mechs" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_mechs" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -671,7 +671,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_mechs" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_planetary_shield" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -687,7 +687,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_planetary_shield" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_floating_city" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_floating_city" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -704,7 +704,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_capital_complex" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_communication_hub" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_communication_hub" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -712,7 +712,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_communication_hub" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_singularity_drive" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_singularity_drive" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -720,7 +720,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_singularity_drive" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_eternal_fortress" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_eternal_fortress" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -728,7 +728,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_eternal_fortress" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_prison_planet" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_prison_planet" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -736,7 +736,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_prison_planet" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_mines" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_mines" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -744,7 +744,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_mines" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_manufactorium" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_manufactorium" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -752,7 +752,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_manufactorium" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_vaults" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_vaults" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -760,7 +760,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_vaults" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_crashed_spacestation" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_crashed_spacestation" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -768,7 +768,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_crashed_spacestation" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_battleground_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_battleground_ruins" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -776,7 +776,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_battleground_ruins" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_outpost_ruins" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -784,7 +784,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_outpost_ruins" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_harbor_ruins" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_harbor_ruins" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -800,7 +800,7 @@ gpm_random_precursor_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_precursor_ruins" }
 		}
 		100 = {
-			add_modifier = { days = -1 modifier = "gpm_precursor_obelisks" multiplier = gpm_planet_size_multiplier_precursor }
+			add_modifier = { days = -1 modifier = "gpm_precursor_obelisks" multiplier = gpm_planet_size_multiplier }
 			modifier = { factor = @default }
 			# On these planets #
 			# TWeaks #
@@ -826,7 +826,7 @@ gpm_roll_precursor_modifiers = {
 				95 = { }
 				5 = {
 					gpm_spawn_precursor_modifier = yes
-					modifier = { factor = 1.5 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 1.5 gpm_is_planet_class_habitable_natural = yes }
 					modifier = { factor = 2 gpm_is_planet_class_nuked = yes }
 				}
 			}
@@ -845,7 +845,7 @@ gpm_roll_precursor_modifiers = {
 				95 = { }
 				5 = {
 					gpm_spawn_precursor_modifier = yes
-					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 2 gpm_is_planet_class_habitable_natural = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
 				}
 			}
@@ -864,7 +864,7 @@ gpm_roll_precursor_modifiers = {
 				95 = { }
 				5 = {
 					gpm_spawn_precursor_modifier = yes
-					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 2 gpm_is_planet_class_habitable_natural = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
 				}
 			}
@@ -883,7 +883,7 @@ gpm_roll_precursor_modifiers = {
 				95 = { }
 				5 = {
 					gpm_spawn_precursor_modifier = yes
-					modifier = { factor = 2 gpm_is_planet_class_normal_habitable = yes }
+					modifier = { factor = 2 gpm_is_planet_class_habitable_natural = yes }
 					modifier = { factor = 3 gpm_is_planet_class_nuked = yes }
 				}
 			}

@@ -606,7 +606,7 @@ decision_gpm_upgrade_machine_world = {
 	effect = {
 		custom_tooltip = decision_gpm_upgrade_machine_world_TT
 		hidden_effect = {
-			planet_event = { id = gpm_terraform.1 }
+			carrier_event = { id = gpm_terraform.1 }
 		}
 	}
 	
@@ -921,7 +921,7 @@ decision_gpm_listen_to_the_voices  = {
 		remove_modifier = gpm_strange_voices
 		add_modifier = { modifier = gpm_maw_worship }
 		hidden_effect = {
-			planet_event = { id = gpm_decisions.2 }
+			carrier_event = { id = gpm_decisions.2 }
 		}
 	}
 	

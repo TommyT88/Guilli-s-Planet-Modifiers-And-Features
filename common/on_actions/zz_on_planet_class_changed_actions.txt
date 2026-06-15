@@ -1,0 +1,15 @@
+# Planet has changed planet class in whatever way. Note that this is also called during galaxy creation in some places.
+# This = Planet
+on_planet_class_changed = {
+	events = {
+		# gpm_pc_changed.1		# unsed
+		gpm_pc_changed.2		# Planet is turned into tomb world by special bombing stance
+		gpm_pc_changed.3		# Infested to Barren after Orbital Bombardment
+		gpm_pc_changed.4		# Planet is turned into infested planet
+		gpm_pc_changed.5		# Planet is turned into AI planet (contigency)
+		gpm_pc_changed.6		# Contigency planet is destroyed
+		gpm_pc_changed.7		# Planet is turned into city world
+		gpm_pc_changed.8		# Planet is turned into gaia world from lifeseeders
+		gpm_pc_changed.9		# Planet is turned into nanite world 
+	}
+}

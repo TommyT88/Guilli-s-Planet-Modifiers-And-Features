@@ -186,6 +186,60 @@
 
  gpm_james_web:0 "James Webb Telescope"
  gpm_james_web_desc:0 "The James Webb Telescope was considered one of humanity's greatest achievements. It gave an unprecedented look into the beginnings of the universe."
+
+ gpm_xenonion_billboard_1:0 "§EXenonion News Ticker§!"
+ gpm_xenonion_billboard_1_desc:0 "Democratic Crusaders State Orbital Bombardment Will Continue Until Voter Turnout Improves!"
+
+ gpm_xenonion_billboard_2:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_2_desc:0 "Newly Released Vassal Has The Ugliest Flag You've Ever Seen!"
+
+ gpm_xenonion_billboard_3:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_3_desc:0 "Galactic Council Vetoes Vote On Vetoing Vetoes!"
+
+ gpm_xenonion_billboard_4:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_4_desc:0 "Virtual Army Accused Of Illegality By Using Aimbots & Wallhacks!"
+
+ gpm_xenonion_billboard_5:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_5_desc:0 "Feline Empire Demands Border Access, Refuses To Use It Once Granted!"
+
+ gpm_xenonion_billboard_6:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_6_desc:0 "Frustration As Apocalypse Date Pushed Back Yet Again!"
+
+ gpm_xenonion_billboard_7:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_7_desc:0 "Jaded Economists Suggest Simply Giving Up, Starting Galaxy Over!"
+
+ gpm_xenonion_billboard_8:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_8_desc:0 "Pre-FTL Civilization Faces 'Once-In-A-Millennium' Asteroid Impact For Fifth Time This Month!"
+
+ gpm_xenonion_billboard_9:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_9_desc:0 "Wilderness MegaCorp Opens New Branch On Planet!"
+ 
+ gpm_xenonion_billboard_1:0 "§EXenonion News Ticker§!"
+ gpm_xenonion_billboard_1_desc:0 "Democratic Crusaders State Orbital Bombardment Will Continue Until Voter Turnout Improves!"
+
+ gpm_xenonion_billboard_2:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_2_desc:0 "Newly Released Vassal Has The Ugliest Flag You've Ever Seen!"
+
+ gpm_xenonion_billboard_3:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_3_desc:0 "Galactic Council Vetoes Vote On Vetoing Vetoes!"
+
+ gpm_xenonion_billboard_4:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_4_desc:0 "Virtual Army Accused Of Illegality By Using Aimbots & Wallhacks!"
+
+ gpm_xenonion_billboard_5:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_5_desc:0 "Feline Empire Demands Border Access, Refuses To Use It Once Granted!"
+
+ gpm_xenonion_billboard_6:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_6_desc:0 "Frustration As Apocalypse Date Pushed Back Yet Again!"
+
+ gpm_xenonion_billboard_7:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_7_desc:0 "Jaded Economists Suggest Simply Giving Up, Starting Galaxy Over!"
+
+ gpm_xenonion_billboard_8:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_8_desc:0 "Pre-FTL Civilization Faces 'Once-In-A-Millennium' Asteroid Impact For Fifth Time This Month!"
+
+ gpm_xenonion_billboard_9:0 "$gpm_xenonion_billboard_1$"
+ gpm_xenonion_billboard_9_desc:0 "Wilderness MegaCorp Opens New Branch On Planet!"
  
  #######################################
  #### Armies
@@ -407,7 +461,7 @@
  NAME_color_red:0 "£military_power_boss  §R [This.GetName] §!"
  
  # Change name to orange with something icon
- # NAME_color_planet_wonder:0 "£gpm_planet_wonder  §H[This.GetName]§!"
+ # NAME_color_planet_wonder:0 "§H[This.GetName]§!"
  NAME_color_planet_wonder:0 "§H[This.GetName]§!"
  
  # Change name to teal with something icon
@@ -700,6 +754,12 @@
  job_gpm_android_entertainer_effect_desc:0 "£job_gpm_android_entertainer£ $job_gpm_android_entertainer_plural$ produce £amenities£ §Y$AMENITIES$§! £trade_value£ §Y$trade_value$§! £unity£ §Y$unity$§!"
  
  #######################################
+ #### Messages
+ #######################################
+ GPM_MESSAGE_TERRAFORM_POLICY_UNLOCK_TITLE:0 "Unlocked Policy: Terraforming"
+ GPM_MESSAGE_TERRAFORM_POLICY_UNLOCK_DESC:0 "A new policy has been unlocked: Terraforming\n\n"
+
+ #######################################
  #### Modifier localisations
  #######################################
  mod_terraforming_energy_cost_mult:0 "Terraforming £energy£ Energy Cost"
@@ -714,9 +774,10 @@
  # mod_planet_districts_time_cost_mult:0 "Districts £time£ Buildtime"
  # mod_planet_districts_minerals_cost_mult: "District £minerals£ Mineral Cost"
 
- mod_planet_districts_cities_minerals_upkeep_add:0 "£minerals£ upkeep Per £district£District"
- mod_planet_districts_cities_food_upkeep_add:0 "£food£ upkeep Per £district£District"
- mod_planet_districts_cities_alloys_produces_add:0 "£alloys£ produced Per £district£District"
+ mod_planet_districts_cities_minerals_upkeep_add:0 "£minerals£ upkeep per £district£ City and Hive Districts"
+ mod_planet_districts_cities_food_upkeep_add:0 "£food£ upkeep per £district£ City and Hive Districts"
+ mod_planet_districts_cities_alloys_produces_add:0 "£alloys£ from £district£ City and Hive Districts"
+ mod_planet_districts_cities_influence_produces_add:0 "£influence£ from £district£ City and Hive Districts"
 
  mod_planet_districts_gpm_precursor_manufactorium:0 ""
 
@@ -850,7 +911,7 @@
  #######################################
  #### Policies
  #######################################
- policy_gpm_exploration_policy:0 "Surveying Policy"
+ policy_gpm_exploration_policy:0 "Surveying"
  policy_gpm_exploration_policy_desc:0 "This policy dictates the procedure that our science ships will use when exploring the galaxy.\n"
  gpm_scientific_curiosity:0 "Away Teams"
  gpm_scientific_curiosity_desc:0 "Several away teams are sent from our science ships to map and survey the surface of every world we encounter.\n\n§YExperience§! §Efrom survey discoveries increased by§! §Y100%§! §Eand gain§! §Y1§! §Eadditional§! §Yreward§! §Efrom survey discoveries§!\n\n"
@@ -879,6 +940,22 @@
 
  gpm_economy_tweaks_bio_empire:0 "Biological Civilisation"
  gpm_economy_tweaks_bio_empire_desc:0 "§LBioligical Civilisations:§!"
+
+ policy_gpm_terraforming_policy:0 "Terraforming"
+ policy_gpm_terraforming_policy_desc:0 "This policy dictates the terraforming procedure we wish to follow.\n"
+ 
+
+ gpm_terraforming_policy_prestine_modifiers:0 "Pristine terraforming"
+ gpm_terraforming_roll_prestine_modifiers_name:0 "$gpm_terraforming_policy_prestine_modifiers$"
+ gpm_terraforming_policy_prestine_modifiers_desc:0 "Our worlds will be prestine when ['concept_terraforming'].\n\n§YTerraformed§! worlds will have their ['concept_planet_modifiers'] cleaned up; they are removed when they no longer fit the newly terraformed ['concept_planet'] class. Special planet modifiers such as §HWondrous Worlds§! and §BPrecursors§! will always be kept.§!\n\n§YTerraformed§!§! worlds will get a ['concept_gpm_terraforming_world_engineering'] planet modifier and §Rno§! new planet modifiers.\n\n"
+
+ gpm_terraforming_policy_random_modifiers:0 "Guided Terraforming"
+ gpm_terraforming_roll_random_modifiers_name:0 "$gpm_terraforming_policy_random_modifiers$"
+ gpm_terraforming_policy_random_modifiers_desc:0 "We will guide the growth of our worlds when ['concept_terraforming'].\n\n§YTerraformed§! worlds will have their ['concept_planet_modifiers'] cleaned up; they are removed when they no longer fit the newly terraformed ['concept_planet'] class. Special planet modifiers such as §HWondrous Worlds§! and §BPrecursors§! will always be kept.§!\n\n§YTerraformed§!§! worlds will get §Gnew§! random §Hterraform-unique§! planet modifiers. The type of planet modifiers will depend on the planet's ['concept_designation'].\n\n"
+
+ concept_gpm_terraforming_world_engineering:0 "$gpm_terraforming_world_engineering$"
+ concept_gpm_terraforming_world_engineering_desc:0 "- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+50%§!\n- $mod_district_generator_max_add$: §G+2§!\n- $mod_district_mining_max_add$: §G+2§!\n- $mod_district_farming_max_add$: §G+2§!\n\n§L$gpm_terraforming_world_engineering_mod_desc$§!"
+
  
  #######################################
  #### R.E.S.

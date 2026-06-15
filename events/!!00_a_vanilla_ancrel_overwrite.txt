@@ -371,10 +371,9 @@ ship_event = {
 					if = {
 						limit = { has_global_flag = gpm_scaling_multiplier_disabled }
 						set_variable = { which = gpm_planet_size_multiplier value = 1 }
-						set_variable = { which = gpm_planet_size_multiplier_wonders value = 1 }
-						set_variable = { which = gpm_planet_size_multiplier_precursor value = 1 }
+						set_variable = { which = gpm_planet_size_multiplier_inverse value = 1 }
 					}
-					planet_event = {
+					carrier_event = {
 						id = gpm_engine.1
 					}
 				}

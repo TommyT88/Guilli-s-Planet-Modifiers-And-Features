@@ -10,7 +10,7 @@
 # l_japanese:
  
  #### In this file localisation for ####
- # UNUSED Modifiers
+ # NOMADS Modifiers
  # Event Modifiers
  # Special Modifiers
  # Terraform Unique Modifiers
@@ -28,10 +28,11 @@
  # Machine World Modifiers
  # Fallen Empire Modifiers
  # Sublimation Modifiers
+ # Planet Wonders Modifiers
  #######################################
  
  #######################################
- #### UNUSED Modifiers
+ #### NOMADS Modifiers
  #######################################
  gpm_rogue_traders_outpost:0 "Abandoned Rogue Trader Outposts"
  gpm_rogue_traders_outpost_desc:0 "Build into several clustered together asteroids are small outposts that were used by rogue traders. These outposts seem to have been used to hide or stash their goods and trophies. Some of them seem to be made into tiny homes for them to live in. Not much, if anything, is worth salvaging here."
@@ -132,10 +133,10 @@
  gpm_terraforming_candidateTT:0 "§GAllows terraforming of this world.§!"
  
  gpm_planet_wonder_discovered:0 "Wondrous Planet"
- gpm_planet_wonder_discovered_desc:0 "This world is home to an unparalleled planetary phenomenon that defies the known laws of existence.\n\n §EHas a unique £gpm_planet_wonder  planetary deposit.§!"
+ gpm_planet_wonder_discovered_desc:0 "This world is home to an unparalleled planetary phenomenon that defies the known laws of existence.\n\n §EHas a unique planetary deposit.§!"
  
  gpm_planet_wonder_ruined:0 "Wondrous Ruins"
- gpm_planet_wonder_ruined_desc:0 "A unique £gpm_planet_wonder  planetary wonder used to be found on this world. Sadly it has been destroyed by whatever event reshaped this planet."
+ gpm_planet_wonder_ruined_desc:0 "A unique planetary wonder used to be found on this world. Sadly it has been destroyed by whatever event reshaped this planet."
  
  gpm_oppertunity:0 "Forgotten Little Robot"
  gpm_oppertunity_desc:0 "Analysis of the databanks in this seemingly forgotten robot reveals it sent out a final message before dying. It reads:\n §W-- My battery is low and it's getting dark --§!\nThe engraving on the hull seems to indicate its name 'Opportunity'."
@@ -143,7 +144,7 @@
  gpm_holy_planet_redeemed:0 "Desecrated Holy Planet"
  gpm_holy_planet_redeemed_desc:0 "The strange beacons warning others to not set foot on this 'holy' world have been deactivated."
  
- gpm_terraforming_world_engineering:0 "World Terraforming"
+ gpm_terraforming_world_engineering:0 "Pristine World"
  gpm_terraforming_world_engineering_desc:0 "This world has been terraformed to perfection."
  gpm_terraforming_world_engineering_shaper:0 "Shaped Terraforming"
  gpm_terraforming_world_engineering_shaper_desc:0 "Our knowledge of world shaping has contributed immensely to the terraforming process of this world." 
@@ -170,7 +171,7 @@
  #### Terraform Unique Modifiers
  #######################################
  gpm_extinct_species:0 "Extinct Species"
- gpm_extinct_species_desc:0 "Thanks to our scientists this Terraformed planet is now home to previously extinct species from our homeworld."
+ gpm_extinct_species_desc:0 "Thanks to our scientists this Terraformed planet is now home to previously extinct species."
  
  #######################################
  #### Planet Rings Modifiers
@@ -211,6 +212,9 @@
  gpm_hyper_complex_biome:0 "Hyper Complex Biome"
  gpm_hyper_complex_biome_desc:0 "Extremely complex fauna and flora have evolved upon this world. The surface is teeming with all sorts of lifeforms waiting to be studied. Their biology offers extensive research opportunities."
 
+ gpm_hyper_complex_biome_terraform:0 "Engineered Complex Biome"
+ gpm_hyper_complex_biome_terraform_desc:0 "Compatible complex fauna and flora have been released on this world. The surface is teeming with all sorts of lifeforms. Their biology offers extensive research opportunities."
+
  gpm_single_biome:0 "Single Biome"
  gpm_single_biome_desc:0 "This world has a single, global biome within which very simple fauna and flora have evolved. The surface is teeming with all sorts of lifeforms waiting to be studied. Their biology offers significant research opportunities."
 
@@ -219,6 +223,9 @@
 
  gpm_strong_volcanism:0 "Strong Volcanism"
  gpm_strong_volcanism_desc:0 "This world has extremely unstable plate tectonics. Its surface is covered with enormous volcanic complexes that are prone to massive eruptions. Our scientists caution that our settlement locations must be carefully chosen to avoid potential disasters."
+
+ gpm_strong_volcanism_terraform:0 "Dormant Volcanism"
+ gpm_strong_volcanism_terraform_desc:0 "This world has extremely stable plate tectonics. Its surface is covered with enormous dorment volcanic complexes ready to be exploited for geothermal energy or mined for their rich mineral deposits."
 
  gpm_asteroid_impacts_2:0 "Asteroid Impacts"
  gpm_asteroid_impacts_2_desc:0 "The orbital path this world takes around its star is littered with small asteroids, meteors, and comet swarms. Large impacts on the surface occur at an alarming frequency. They have covered the surface of the planet with craters. However, our scientists have assured us that this world is still safe to colonize, so long as the atmosphere is breathable and the climate suitable."
@@ -231,6 +238,9 @@
 
  gpm_dense_atmospheres:0 "Unusual Dense Atmosphere"
  gpm_dense_atmospheres_desc:0 "This world has an unusually thick atmosphere. Life is good."
+
+ gpm_dense_atmospheres_terraform:0 "Dense Atmosphere"
+ gpm_dense_atmospheres_terraform_desc:0 "A thick atmosphere covers the surface of this world with a perfect ratio of lifesubstaining gasses."
 
  gpm_strong_magnetic_field_2:0 "Extreme Magnetic Field"
  gpm_strong_magnetic_field_2_desc:0 "This world has an abnormally high magnetic field. This will interfere with many of our instruments and computers but benefit our energy production."
@@ -246,6 +256,9 @@
 
  gpm_mineral_rich_2:0 "High Density Mineral Veins"
  gpm_mineral_rich_2_desc:0 "An abundance of high-quality minerals in this world's crust makes mining here a lucrative business."
+
+ gpm_mineral_rich_terraform:0 "Sprawling Mineral Veins"
+ gpm_mineral_rich_terraform_desc:0 "Mineral veins stretching from continent to continent offer an abundance of high-quality minerals to be extracted."
 
  gpm_ultra_rich_2:0 "Exceptional Dense Mineral Veins"
  gpm_ultra_rich_2_desc:0 "The exceptional density of the mineral veins in this world's crust provides a truly staggering opportunity for mining."
@@ -265,6 +278,9 @@
  gpm_extensive_cavern_system:0 "Extensive Cavern System"
  gpm_extensive_cavern_system_desc:0 "Resembling a Beehive, the crust of this planet has an incredibly high number of natural cave systems and ravines that stretch for miles. As far as we know, they were naturally formed by primordial plate tectonics, which makes them stable enough to be used as shelter in case of orbital bombardment or natural disasters."
 
+ gpm_extensive_cavern_system_terraform:0 "Artificial Cavern System"
+ gpm_extensive_cavern_system_terraform_desc:0 "With long and deep tunnels this world is engineered to have an incredibly high number of natural cave systems and ravines that stretch for miles."
+
  gpm_titanic_predators:0 "Titanic Predators"
  gpm_titanic_predators_desc:0 "This world is home to gigantic monstrous creatures that soar through the sky and eat nearly everything in sight."
 
@@ -279,6 +295,9 @@
 
  gpm_perfect_seasons:0 "Perfect Seasons"
  gpm_perfect_seasons_desc:0 "The weather is simply fabulous all year round, and hardly ever changes. This is truly paradise."
+
+ gpm_perfect_seasons_terraform:0 "Artificial Seasons"
+ gpm_perfect_seasons_terraform_desc:0 "Careful engineered weather patterns turn this world into a seasonal paradise."
 
  gpm_ruined_battlefield:0 "Titanic Battlefield"
  gpm_ruined_battlefield_desc:0 "A massive war of truly titanic scale was fought here. The surface is scarred by weapons which we have deemed too destructive to ever use in planetary combat, there are massive craters where we can only assume cities once stood. Among various ruins, weapons and the rusted wrecks of aircraft, tanks and mechs we have found untold millions of corpses. Across this entire world, billions must have lost their lives here."
@@ -295,8 +314,14 @@
  gpm_ideal_for_life:0 "Ideal for Life"
  gpm_ideal_for_life_desc:0 "It is hard to explain, but whatever is on this world just seems right for a growing population. People are healthier, more attractive, have greater life expectancy, and have stronger immune systems."
 
+ gpm_ideal_for_life_terraform:0 "Ideal Living Conditions"
+ gpm_ideal_for_life_terraform_desc:0 "A unique blend in this engineered enviroment of fauna and flora have made this world ideal for a growing population."
+
  gpm_endless_fish:0 "Endless Fish"
  gpm_endless_fish_desc:0 "No one knows how this world sustains these large amounts of fish populations, but it does mean we can fish forever!"
+
+ gpm_endless_fish_terraform:0 "Teeming With Fish"
+ gpm_endless_fish_terraform_desc:0 "Large amounts of rapid breeding fish have been introduced on this world resulting in a near infinite supply of food."
 
  gpm_artificial_water:0 "Artificial Water"
  gpm_artificial_water_desc:0 "Some of the water on this world doesn't consist of just hydrogen and oxygen molecules. Instead, the water is entirely made up from advanced nanites that behave a lot like normal water. Their swarm-like behaviour almost perfectly simulates the flows and splashes of water. Scientists aren't sure how it got there, or why it even exists, but they sure hope these nanites' only function is to behave like water."
@@ -311,7 +336,10 @@
  gpm_melted_ice_caps_desc:0 "The geological record of this world suggests it once had large polar ice caps at one point in its history, but somehow these have all but disappeared."
 
  gpm_small_islands:0 "Small Islands"
- gpm_small_islands_desc:0 "The islands of this oceanic world are unusually small, making it difficult to establish sizeable settlements and population centres."
+ gpm_small_islands_desc:0 "The islands of this oceanic world are unusually small making it harder to establish self-sustaining settlements."
+
+ gpm_small_islands_terraform:0 "Artificial Islands"
+ gpm_small_islands_terraform_desc:0 "Numerous islands have been artificially contstructed, many shaped in unsual patterns representing various plant life, animal life and geometric patterns."
 
  gpm_windy:0 "Windy"
  gpm_windy_desc:0 "Meteorological circumstances beyond our control focus harsh winds into our colony sites. It gets cold at night, and the wind howls through the mountains, but we could live here."
@@ -325,14 +353,23 @@
  gpm_delicious_ingredients:0 "Delicious Ingredients"
  gpm_delicious_ingredients_desc:0 "The fauna and flora of this world are unusually tasty."
 
+ gpm_delicious_ingredients_terraform:0 "Delicious Ingredient Gardens"
+ gpm_delicious_ingredients_terraform_desc:0 "Patches the size of forests made from various flora have been artificially grown to provide the ultimate mix of availible vegetables and spices."
+
  gpm_recent_mass_extinction:0 "Recent Mass Extinction"
  gpm_recent_mass_extinction_desc:0 "According to our scientists this world went through a great mass extinction event relatively recently."
 
  gpm_friendly_wildlife:0 "Friendly Wildlife"
  gpm_friendly_wildlife_desc:0 "The fauna on this world tend to be docile and of agreeable temperament."
 
+ gpm_friendly_wildlife_terraform:0 "Pacified Wildlife"
+ gpm_friendly_wildlife_terraform_desc:0 "The fauna on this world has been bred to be docile and passive."
+
  gpm_pleasant_weather:0 "Pleasant Weather"
  gpm_pleasant_weather_desc:0 "The atmospheric and geological systems of this world are unusually mild and agreeable to most sentient species."
+
+ gpm_pleasant_weather_terraform:0 "Mild Weather"
+ gpm_pleasant_weather_terraform_desc:0 "The atmospheric and geological systems of this world are unusually mild and agreeable to most sentient species."
 
  gpm_unusual_formations:0 "Unusual Formations"
  gpm_unusual_formations_desc:0 "On this planetary body are numerous amounts of odd but nevertheless natural geological shapes stretching for miles and miles."
@@ -349,9 +386,11 @@
  gpm_great_temperature_variation:0 "Great Temperature Variation"
  gpm_great_temperature_variation_desc:0 "This world suffers from extreme variations in temperatures. Unusual strong weather fronts shift seemingly in random patterns across this world resulting in sudden sub-zero temperature drops or excruciating boiling hot winds."
 
-
  gpm_gorgeous_sky:0 "Gorgeous Sky"
  gpm_gorgeous_sky_desc:0 "Due to the chemical composition of this world's atmosphere, this world's sky is a vivid, brilliant, dazzling display of various colours and lights."
+
+ gpm_gorgeous_sky_terraform:0 "Vivid Sky"
+ gpm_gorgeous_sky_terraform_desc:0 "The carefully designed chemical composition of this world's atmosphere have made the sky appear in vivid, brilliant colours during the day and dazzeling multi-coloured lights at night."
 
  gpm_ice_age:0 "Ice Age"
  gpm_ice_age_desc:0 "This world is currently in the midst of a major ice age."
@@ -398,11 +437,17 @@
  gpm_ice_flora:0 "Ice Flora"
  gpm_ice_flora_desc:0 "Our scientists are awestruck by the wondrous ice formations on the poles of this world. Even more so because it seems like these ice formations are actually similar to endryophyte life forms of other worlds with green vegetation, complete with their own form of reproduction and cryosynthesis!"
 
+ gpm_ice_flora_terraform:0 "Wondrous Ice Flora"
+ gpm_ice_flora_terraform_desc:0 "Wondrous ice formations similar to endryophyte life forms of other worlds with green vegetation spread across this world. Complete with their own form of reproduction and cryosynthesis!"
+
  gpm_strange_ice_river:0 "Strange Ice River"
  gpm_strange_ice_river_desc:0 "Amidst the eternal cold of the world, our scientists discovered something magnificent: A river of flowing ice with a multitude of strange physical properties that defies all logic and is sure making us re-evaluate several important theories about the laws of the universe."
 
- gpm_juggernaut_manta_rays:0 "Juggernaut Manta Rays"
- gpm_juggernaut_manta_rays_desc:0 "Our scientists discovered truly gigantic colonies of fish that resemble manta rays. They are humongous, have an extraordinarily thick skin and spot other features that make them impossible to harm unless one destroys the entire world along with them. They roam giant stretches of the ocean and react very aggressively towards intruders, yet our scientists believe we can gain valuable knowledge from them."
+ gpm_juggernaut_manta_rays:0 "Juggernaut Rayfish"
+ gpm_juggernaut_manta_rays_desc:0 "Our scientists discovered truly gigantic colonies of flat fish called Rayfish. They are humongous, have an extraordinarily thick skin and spot other features that make them impossible to harm unless one destroys the entire world along with them. They roam giant stretches of the ocean and react very aggressively towards intruders, yet our scientists believe we can gain valuable knowledge from them."
+
+ gpm_juggernaut_manta_rays_terraform:0 "Gigantic Rayfish"
+ gpm_juggernaut_manta_rays_terraform_desc:0 "Gigantic rayfish swim these waters feeding on smaller fish. They are humongous, have an extraordinarily thick skin and spot other features that make them impossible to harm unless one destroys the entire world along with them. They roam giant stretches of the ocean and react very passivly."
 
  gpm_black_oily_stone:0 "Black Oily Stone"
  gpm_black_oily_stone_desc:0 "The jungle seems to flee from a big glade at the heart of the continent, where tons of strange black & oily stones seem scattered in a curious pattern. There are no noises from the local fauna and even the grass amongst our scientists feet feels strangely other worldly, yet very lush. Probes we extracted from the stone seem to get heavier the further we take them away from the glade."
@@ -419,8 +464,14 @@
  gpm_dunes:0 "Dunes"
  gpm_dunes_desc:0 "The weather systems of this world have covered it in massive, shifting dunes. Though a challenge for settlements, the dunes also provide a rich mineral wealth."
 
+ gpm_dunes_terraform:0 "Shifting Dunes"
+ gpm_dunes_terraform_desc:0 "The weather systems of this world constantly shift the dunes around. Though a challenge for settlements, the dunes also provide a rich mineral wealth."
+
  gpm_extensive_reef_systems:0 "Extensive Reef Systems"
  gpm_extensive_reef_systems_desc:0 "The shallow seas of this world are dominated by massive reefs, harbouring impressive biodiversity. Not only do the fishing and tourism industries tremendously benefit, but researchers are also flocking to investigate the many forms of life that live here."
+
+ gpm_extensive_reef_systems_terraform:0 "Rich Reefs"
+ gpm_extensive_reef_systems_terraform_desc:0 "The seas of this world are dominated by rich reefs, harbouring impressive biodiversity and a cornucopious amount of resources."
 
  gpm_trubbles:0 "Trubbles"
  gpm_trubbles_desc:0 "They just sit there, looking cute, until they breed like crazy and overrun everything"
@@ -444,7 +495,10 @@
  gpm_temple_of_the_ancient_one_desc:0 "The breath taking, indescribable beauty of the ruined, mysterious rock-hewn temple, would be amazing to any that were to spend time looking at it if it was not for its dangerous allure. Stories are scribbled on the walls, warning almost, of previous explorers who spend days in darkness as they wandered around the temple. In the end, they were no longer able to resist the powerful visions and auditory hallucinations that appeared, nor the madness-inspired impulse to enter the inner sanctum of the temple. The inner sanctum, now appearing to you impossibly illuminated by what seems to be a flickering altar flame.."
 
  gpm_beautiful_lakes:0 "Beautiful Lakes"
- gpm_beautiful_lakes_desc:0 "This world is dotted with numerous small and large lakes of indescribable beauty. water, so clear and still you can see the bottom from any distance. Lush foliage and tiny sea creatures dot the landscape and lakes."
+ gpm_beautiful_lakes_desc:0 "This world is dotted with numerous small and large lakes of indescribable beauty with water so clear and still you can see the bottom from any distance. Tiny water creatures fill the lakes and lush foliage dot the landscape around them."
+
+ gpm_beautiful_lakes_terraform:0 "Silver Lakes"
+ gpm_beautiful_lakes_terraform_desc:0 "Numerous lakes of indescribable beauty with silvery water so still you can see the world's reflection perfectly. Tiny water creatures fill the lakes and lush foliage dot the landscape around them."
 
  gpm_proto_forests:0 "Proto Forests"
  gpm_proto_forests_desc:0 "With a diameter of up to 1 m, and a height reaching 8 m, these proto forest trees are fairly small. Viewed from afar, the trees take the form of tree-trunks, spreading slightly near their base in a fashion that suggests a connection to unpreserved root-like structures. Concentric growth rings, sometimes containing embedded plant material, suggest that the organism grows sporadically by the addition of external layers. It is probable that the "trunks" represent the fruiting body, or "sporophore", of a fungus, which would be fuelled by a mycelium, a net of dispersed hyphae filaments."
@@ -452,8 +506,14 @@
  gpm_dense_forests:0 "Dense Forests"
  gpm_dense_forests_desc:0 "Surprisingly dense forests can be found on this world. The trees crowd together to form a thick canopy and the canopy provides shelter to the vegetation and wildlife that live beneath it. "
 
+ gpm_dense_forests_terraform:0 "Thick Jungles"
+ gpm_dense_forests_terraform_desc:0 "Dense colourful jungles have been grown and populated full of brightly coloured wildlife."
+
  gpm_planetwide_forest:0 "Endless Forest"
  gpm_planetwide_forest_desc:0 "Massive forests as far as the eye can see cover this world. Sometimes a world like this would be called a forest world. these worlds provide habitats very suitable for complex life over much of the surface, resulting in life more diverse than there are on other worlds."
+
+ gpm_planetwide_forest_terraform:0 "Endless Woodlands"
+ gpm_planetwide_forest_terraform_desc:0 "Massive forests stretching across the surface make this world an ideal localtion for long outdoor adventures."
 
  gpm_inspirational:0 "Inspirational"
  gpm_inspirational_desc:0 "It is hard to think of practical applications of the black hole. Because practical applications are so remote, many people assume we should not be interested. But this quest to understand the world is what defines us as intelligent beings."
@@ -503,6 +563,9 @@
 
  gpm_musical_creatures:0 "Musical Creatures"
  gpm_musical_creatures_desc:0 "The creatures of this planet have evolved to communicate with each other using what we recognize as musical notes. It is not only a boon for researchers, but also lends the world a nice melodic quality to it, almost magical."
+
+ gpm_musical_creatures_terraform:0 "Musical Wildlife"
+ gpm_musical_creatures_terraform_desc:0 "The wildlife on this wold communicate with each other in complex musical notes making the world feel like a magical melodic fairy tale."
  
  gpm_odd_cloud_shapes:0 "Odd Cloud Shapes"
  gpm_odd_cloud_shapes_desc:0 "Perhaps due to this planet's atmospheric chemistry, it's clouds often take on unusually vivid, interesting shapes. Some say it's almost as if the clouds are alive."
@@ -510,11 +573,20 @@
  gpm_subterranean_eco_system:0 "Subterranean Eco Systems"
  gpm_subterranean_eco_system_desc:0 "Deep under the surface of this planetary body are miles of crisscrossing caverns with a near perfectly sealed environment. Who knows what else lives down there."
 
+ gpm_subterranean_eco_system_terraform:0 "Subterranean Biospheres"
+ gpm_subterranean_eco_system_terraform_desc:0 "Deep under the surface are miles of crisscrossing caverns filled with lush flora and a great variery of animal life."
+ 
  gpm_colossal_cliffs:0 "Colossal Cliffs"
  gpm_colossal_cliffs_desc:0 "These cliffs rise well over a mile into the sky and have clouds form around their bases. The geographical forces that formed them must have been cataclysmic. Just.. watch your step."
 
+ gpm_colossal_cliffs_terraform:0 "Mineral Cliffs"
+ gpm_colossal_cliffs_terraform_desc:0 "Steep, high-rising cliffs full of dense mineral veins engineered to be easily exploitable."
+
  gpm_massive_waterfalls:0 "Massive Waterfalls"
  gpm_massive_waterfalls_desc:0 "Waterfalls are a common site on this world, and can extend for miles pouring trillions of gallons of water over their precipices every single day. They are a breath taking site if impractical to go near."
+
+ gpm_massive_waterfalls_terraform:0 "Bubbly Waterfalls"
+ gpm_massive_waterfalls_terraform_desc:0 "A minor mistake when geoengineering this world has caused the riverbeds to release a constant stream of carbon gas. Mixing with the water these rivers are bubble and when they culminate into a waterfalls produce giant floating bubbles that pop with a thunderous boom."
 
  gpm_strange_alien_eggs:0 "Strange Eggs"
  gpm_strange_alien_eggs_desc:0 "Unsure what creature made these, they seem dormant. Perhaps we best not touch.."
@@ -522,8 +594,14 @@
  gpm_mushroom_forest:0 "Mushroom Forests"
  gpm_mushroom_forest_desc:0 "Massive mushrooms dot the landscape. These mushrooms forests are very strange looking and produce mists of spores every so often. They're very soft so they should be very easy to clear."
 
+ gpm_mushroom_forest_terraform:0 "Mushroom Forests"
+ gpm_mushroom_forest_terraform_desc:0 "Massive mushrooms dot the landscape in dense forest-like areas. These mushrooms are unique in that they can be consumed raw."
+
  gpm_exotic_spices:0 "Exotic Spice"
  gpm_exotic_spices_desc:0 "Small shrubberies and plants cover a lot of the surface. Despite the harsher conditions of this world the plant life grows very fast and in a great variety. More excitingly, the plant life is delicious as additives to food. The exotic flavours that these shrubs and plants produce make this world quite unique."
+
+ gpm_exotic_spices_terraform:0 "Spice Fields"
+ gpm_exotic_spices_terraform_desc:0 "Large fields of wild shrubberies and plants with the most desired spices in the galaxy can be found on this world. From mild to spicy exotic flavers, these wild spices have it all."
 
  gpm_sandstorms:0 "Sandstorms"
  gpm_sandstorms_desc:0 "On a windy day, giant, short lived walls of sand occasionally cover the surface with a thin layer of sand. Although these sandstorms happen quite frequently, they are more of an annoyance than a danger. A quick sweeping with a brush is enough to clean up any sand. With a bit of luck the next winds will just blow it all away again."
@@ -537,8 +615,14 @@
  gpm_never_ending_aurora:0 "Never Ending Aurora"
  gpm_never_ending_aurora_desc:0 "Because of this systems almost unique solar activity this world is blessed with a permanent display of auroras. These auroras are formed when the magnetosphere is sufficiently disturbed by the solar wind to form charged particles that are visible. The resulting ionization and excitation of atmospheric constituents emits light of varying colour and complexity."
 
+ gpm_never_ending_aurora_terraform:0 "Dazzeling Aurora"
+ gpm_never_ending_aurora_terraform_desc:0 "An artificial layer light particles in the stratosphere is ionized by the solar winds producing a dazzeling display of multi-coloured aurora's night and day."
+
  gpm_spirals_of_ice:0 "Spirals of Ice"
  gpm_spirals_of_ice_desc:0 "Very unusual features are found on this planet. The cold wind and moist air tend to form spirals of ice. Some of these spirals have grown so large they match our tallest buildings. It's remarkable how not a single crack can be found on them as well as no air bubbles which makes them crystal clear. During the night they reflect the galaxy's light in a beautiful display of colours."
+
+ gpm_spirals_of_ice_terraform:0 "Ice Mountains"
+ gpm_spirals_of_ice_terraform_desc:0 "Strong cold winds and moist air form spiraling mountains of ice rivaling the height of stone mountains. During the night they reflect the galaxy's light in a beautiful display of colours."
  
  gpm_furry_packs:0 "Furry Packs"
  gpm_furry_packs_desc:0 "This world is inhabited by huge roaming packs of giant, four legged creatures. These creatures have massive horns on their head and a long, and very nimble, extra arm as nose. They are covered in a thick, mostly brown fur to keep them warm during the nights. They seem to be a very social type of animal. It's not known how, but they seem to take the same route around the world looking for food every season. Perhaps they're just good at remembering the terrain they roam."
@@ -552,11 +636,17 @@
  gpm_rich_soil:0 "Rich Soil"
  gpm_rich_soil_desc:0 "The rich soil on this world has produced very healthy and dense local plant life. Producing food on this world should be very easy."
 
+ gpm_rich_soil_terraform:0 "Nutritious Soil"
+ gpm_rich_soil_terraform_desc:0 "The rich soil is extremely nutritious and produces very healthy and tall local plant life."
+
  gpm_otherworldly_colours:0 "Otherworldly Colours"
  gpm_otherworldly_colours_desc:0 "This world's vegetation comes in all sorts of colours. The most remarkable thing is, the vegetation colour depends on the latitude of the planet. From bright yellow flowers and trees on the equator to deep purple grass near the arctic. This world feels truly alien."
 
  gpm_misty:0 "Misty"
  gpm_misty_desc:0 "This world's surface is almost completely covered in mist. The combination of pressure and temperature cause the oceans and lakes to give off a lot of water vapour that hangs around the surface."
+
+ gpm_misty_terraform:0 "Morning Mist"
+ gpm_misty_terraform_desc:0 "Everyday like clockwork a combination of a cycling low pressure zone and the rising sunlight create a screen of low hanging sparkling mist across the landscape."
 
  gpm_ecological_nervous_system:0 "Ecological Nervous System"
  gpm_ecological_nervous_system_desc:0 "The plant life on this world seems to be connected to each other through a complex root system. The energetic pulses that run through it is very reminiscent of a nervous system. Observations have found that killing one plant has an effect on nearby plants as they seem to close their flowers or slowly grow in the opposite direction."
@@ -565,15 +655,25 @@
  gpm_carnivorous_flies_desc:0 "These tiny flies may seem like just an annoyance, they are the most dangerous creatures on this world. These tiny flies glow in the dark at night, but that's not when they're out feeding. During the night they glow as a means to attract other carnivorous flies as a part of their mating ritual, which seems to be quite complex. During the day they fly around looking for food.\nBeing carnivorous, they tend to swarm their prey and eat it alive in a matter of hours. Large, or small, all creatures are food for them. What makes it even worse is their colony like behaviour, allowing them to navigate complex tunnels.. or vents! The fact that they emit no noise to even warn their next meal is the worst part."
 
  gpm_algae_boom:0 "Algae Boom"
- gpm_algae_boom_desc:0 "This world is in the midst of a century long algae boom. Millions of tons of algae cover the planet's oceans and lakes. While it looks bad, it's actually very good for the wildlife and air quality."
+ gpm_algae_boom_desc:0 "This world is in the midst of a century long algae boom. Millions of tons of algae cover the planet's oceans and lakes providing nutritions for the wildlife and greatly improving air quality."
+
+ gpm_algae_boom_terraform:0 "Sweet Seaweed"
+ gpm_algae_boom_terraform_desc:0 "Vast ocean forests of sweet seaweed sustain themselves on a constant cycle of algae growth periods. Rich in flavour and sweet these seaweed are as much of a delicacy as they are a treat."
 
  gpm_ocean_forests:0 "Unique Ocean Forests"
- gpm_ocean_forests_desc:0 "Strange mineral rich trees are growing on this world's ocean floors. These trees look very similar to trees found on the surface of this world, yet are fully capable on surviving, and blooming, under water thanks to a protective layer of mineral bark."
+ gpm_ocean_forests_desc:0 "Strange mineral rich trees are growing on this world's ocean floors. These trees look very similar to trees found on the surface of this world, yet are fully capable of surviving, and blooming, under water thanks to a protective layer of mineral bark."
+
+ gpm_ocean_forests_terraform:0 "Submersed Jungles"
+ gpm_ocean_forests_terraform_desc:0 "Mineral rich trees grow on the ocean floors. These trees look very similar to jungle trees found on the surface of other worlds, yet are fully capable of surviving, and blooming, under water thanks to a protective layer of mineral bark."
+
  Clear_Water:0 "Clear Water"
  Clear_Water_desc:0 "This worlds lakes and oceans are remarkably clear and see through."
 
  gpm_warm_water_lakes:0 "Warm Water Lakes"
  gpm_warm_water_lakes_desc:0 "The water on this world is very warm. The unusual composition of the soil allows it to retain a fair amount of heat resulting in lukewarm to hot lakes. If the perfect holiday was a planet, this world would be it."
+
+ gpm_warm_water_lakes_terraform:0 "Hot Springs"
+ gpm_warm_water_lakes_terraform_desc:0 "Artificial lakes of very steamy hot water are dotted across the landscape. Heated by the natural geology, these hot springs provide a healthy way to relax and clean oneself."
 
  gpm_torrential_rainstorms:0 "Torrential Rainstorms"
  gpm_torrential_rainstorms_desc:0 "Massive torrential rainstorms are a frequent occurrence on this world. There's so much rain falling so fast that you'll be soaked in about three seconds."
@@ -589,6 +689,9 @@
 
  gpm_unique_marine_habitats:0 "Unique Marine Habitats"
  gpm_unique_marine_habitats_desc:0 "Living organisms in this deep, dark, ecosystem rely on chemicals and a process called chemosynthesis as the base of their food web and not on sunlight and photosynthesis."
+
+ gpm_unique_marine_habitats_terraform:0 "Shallow Marine Habitats"
+ gpm_unique_marine_habitats_terraform_desc:0 "Bright and colourful marine life thrives in the shallow waters of this world providing a unique look at a biodiverse world usually unseen by most."
 
  gpm_massive_waves:0 "Colossal Waves"
  gpm_massive_waves_desc:0 "The oceans on this world periodically produce massive waves that travel across the globe. Once they reach land they produce dangerous tsunamis."
@@ -623,8 +726,14 @@
  gpm_steam_vents:0 "High Pressure Steam Vents"
  gpm_steam_vents_desc:0 "Deep pressure systems caused by unstable tectonic shifts and a very dense aquifer are the source of these extreme pressure vents. Steam shoots out so fast and so hot it can strip flesh from bone instantly."
 
+ gpm_steam_vents_terraform:0 "Tooting Steam Vents"
+ gpm_steam_vents_terraform_desc:0 "Deep pressure systems cross with the aquafier to shoot steam through the ground. The rate at which steam is pushed through the ground creates a pleasent pitching sound."
+
  gpm_mineral_pools:0 "Healing Mineral Pools"
  gpm_mineral_pools_desc:0 "Unsure what the cause is but the deep red mineral pools on this world have remarkable healing properties. Capable of restoring small cuts in seconds, heal scars in minutes and cure some diseases and genetic defects after long term exposure."
+
+ gpm_mineral_pools_terraform:0 "Healing Springs"
+ gpm_mineral_pools_terraform_desc:0 "Bright blue fresh mineral springs with remarkable healing properties. Capable of restoring small cuts in seconds, heal scars in minutes and cure some diseases and genetic defects after a few days."
 
  gpm_rich_equator:0 "Rich Equator"
  gpm_rich_equator_desc:0 "Long ago, in the early life of this world it had a very rich asteroid belt. Over millions of years all the asteroids eventually deorbited causing the equator to become very rich in minerals and precious metals."
@@ -647,9 +756,15 @@
  gpm_fractal_formations:0 "Fractal Mountains"
  gpm_fractal_formations_desc:0 "Most geology on this world has formed into fractal formations resulting in large landscapes that appear similar but in varying size."
 
+ gpm_fractal_formations_terraform:0 "Fractal Mountain Ranges"
+ gpm_fractal_formations_terraform_desc:0 "Most mountainous regions have formed into fractal formations resulting in large landscapes that appear similar to eachother but in varying size."
+
  gpm_massive_world:0 "Super Massive World"
  gpm_massive_world_desc:0 "An impossibly rare world so large it defies all known theories of planet formation."
 
+ gpm_mineral_rich_waters_terraform:0 "Mineral Rich Sediment"
+ gpm_mineral_rich_waters_terraform_desc:0 "High concentrations of particles in the water are deposited across all the waterways and seafloor into a thick sediment of easily extractable minerals."
+
  gpm_dead_forests:0 "Ghost Forests"
  gpm_dead_forests_desc:0 "The forests on this planet are eerily silent, with millions of trees having died around the same time, leaving behind vast landscapes of lifeless trunks. The once vibrant greenery has been replaced by a haunting stillness, creating an atmosphere of dread and decay."
 
@@ -667,6 +782,9 @@
 
  gpm_crystal_cliffs:0 "Crystal Cliffs"
  gpm_crystal_cliffs_desc:0 "For thousands of years, enormous crystals have formed on the faces of cliffs. These crystals come in a variety of colours and are remarkably pure in their composition."
+
+ gpm_crystal_cliffs_terraform:0 "Shimmering Cliffs"
+ gpm_crystal_cliffs_terraform_desc:0 "Enormous shimmering crystals growing from cliffs break the sunlight into an array of different coloured lights."
 
  gpm_white_world:0 "Bright World"
  gpm_white_world_desc:0 "An unusual mutation in the early stages of evolution has causes most life on this world to photosynthesise a small band of frequencies and appearing very bright."
@@ -689,6 +807,9 @@
  gpm_cooling_vistas:0 "Cooling Vistas"
  gpm_cooling_vistas_desc:0 "Breathtakingly beautiful small hidden waterways are so lush with tall dense colourful plant life they form natural cooling areas in an otherwise hot and dry barren landscape."
 
+ gpm_cooling_vistas_terraform:0 "Chilling Oasis"
+ gpm_cooling_vistas_terraform_desc:0 "Breathtakingly beautiful small hidden waterways are so lush with tall dense colourful plant life they form natural cooling areas in an otherwise hot and dry landscape."
+
  gpm_abandoned_shroud_extractor:0 "Abandoned Shroud Extractor"
  gpm_abandoned_shroud_extractor_desc:0 "A large structure sits along the very tip of this worlds axis drawing shroud energy seemingly out of nothing. The purpose of this structure remains a mystery."
 
@@ -708,7 +829,10 @@
  gpm_oily_riverbeds_desc:0 "Large rivers of oil flow across the landscape. Bubbling up duo to pressure, these thick rich flows are all that remain of a geological time long ago."
 
  gpm_crystaline_fauna:0 "Crystaline Fauna"
- gpm_crystaline_fauna_desc:0 "Covered in mineral growths the plant life on this world is capable of concentrating sunlight and infrared radiation to increase growth efficiency."
+ gpm_crystaline_fauna_desc:0 "Covered in mineral scales the wildlife on this world is capable of concentrating sunlight and infrared radiation to keep themselves warm and conserve energy."
+
+ gpm_crystaline_fauna_terraform:0 "Crystaline Wildlife"
+ gpm_crystaline_fauna_terraform_desc:0 "Dull crystal scales grow on most of the wildlife on this world protecting their delicate skin from the harsh solar radiation."
 
  gpm_infernal_caverns:0 "Infernal Caverns"
  gpm_infernal_caverns_desc:0 "Deep subterranean caverns spread throughout the planet's surface all the way down and into the crust. Filled with mineral rich pools of lava and overflowing with lavafalls these caverns are as dangerous as they are rich of resources."
@@ -728,8 +852,14 @@
  gpm_jeweled_flowers:0 "Jewelled Flowers"
  gpm_jeweled_flowers_desc:0 "These unique flowers grow almost pure gemstones at their centre as part of the final stage op pollination. These gemstones come in a variety of colours and shapes."
 
+ gpm_jeweled_flowers_terraform:0 "Gemstone Flowers"
+ gpm_jeweled_flowers_terraform_desc:0 "Tall brightly coloured flowers grow almost pure gemstones at their centre as part of the final stage op pollination. These gemstones form in sharp geometric shapes making them ideal for jewelery and have practical scientific applications."
+
  gpm_towering_cacti:0 "Towering Cacti"
- gpm_towering_cacti_desc:0 "Huge towering cacti dot the landscape towering hundreds of feet in the air. Sucking so much moisture out of the air and ground they frequently burst open creating temporary waterfalls."
+ gpm_towering_cacti_desc:0 "Huge cacti dot the landscape towering hundreds of feet in the air. Sucking so much moisture out of the air and ground they frequently burst open creating temporary waterfalls."
+
+ gpm_towering_cacti_terraform:0 "Lumbering Cacti"
+ gpm_towering_cacti_terraform_desc:0 "Huge cacti dot the landscape towering hundreds of feet in the air. Filled with fresh cold water they frequently burst open creating temporary waterfalls before closing again to suck all the moisture out of the surrounding air."
 
  gpm_geometric_landscapes:0 "Geometric Landscapes"
  gpm_geometric_landscapes_desc:0 "Unique geological processes have sculpted this world's landscape into mesmerizing geometric patterns. Mountains rise with sharp, repeating angles, while rivers meander in perfect ratios, creating a strikingly beautiful and harmonious natural design."
@@ -742,6 +872,9 @@
 
  gpm_mineral_rich_waters:0 "Mineral Rich Waters"
  gpm_mineral_rich_waters_desc:0 "The high concentration of metals in the oceans are a viable opportunity to extract and process these elements into raw minerals."
+
+ gpm_mineral_rich_waters_terraform:0 "Mineral Rich Sediment"
+ gpm_mineral_rich_waters_terraform_desc:0 "High concentrations of particles in the water are deposited across all the waterways and seafloor into a thick sediment of easily extractable minerals."
 
  gpm_dead_forests:0 "Ghost Forests"
  gpm_dead_forests_desc:0 "The forests on this planet are eerily silent, with millions of trees having died around the same time, leaving behind vast landscapes of lifeless trunks. The once vibrant greenery has been replaced by a haunting stillness, creating an atmosphere of dread and decay."
@@ -760,6 +893,9 @@
 
  gpm_crystal_cliffs:0 "Crystal Cliffs"
  gpm_crystal_cliffs_desc:0 "For thousands of years, enormous crystals have formed on the faces of cliffs. These crystals come in a variety of colours and are remarkably pure in their composition."
+
+ gpm_crystal_cliffs_terraform:0 "Shimmering Cliffs"
+ gpm_crystal_cliffs_terraform_desc:0 "Enormous shimmering crystals growing from cliffs break the sunlight into an array of different coloured lights."
 
  gpm_white_world:0 "Bright World"
  gpm_white_world_desc:0 "An unusual mutation in the early stages of evolution has causes most life on this world to photosynthesise a small band of frequencies and appearing very bright."
@@ -782,6 +918,9 @@
  gpm_cooling_vistas:0 "Cooling Vistas"
  gpm_cooling_vistas_desc:0 "Breathtakingly beautiful small hidden waterways are so lush with tall dense colourful plant life they form natural cooling areas in an otherwise hot and dry barren landscape."
 
+ gpm_cooling_vistas_terraform:0 "Chilling Oasis"
+ gpm_cooling_vistas_terraform_desc:0 "Breathtakingly beautiful small hidden waterways are so lush with tall dense colourful plant life they form natural cooling areas in an otherwise hot and dry landscape."
+
  gpm_abandoned_shroud_extractor:0 "Abandoned Shroud Extractor"
  gpm_abandoned_shroud_extractor_desc:0 "A large structure sits along the very tip of this worlds axis drawing shroud energy seemingly out of nothing. The purpose of this structure remains a mystery."
 
@@ -801,7 +940,10 @@
  gpm_oily_riverbeds_desc:0 "Large rivers of oil flow across the landscape. Bubbling up duo to pressure, these thick rich flows are all that remain of a geological time long ago."
 
  gpm_crystaline_fauna:0 "Crystaline Fauna"
- gpm_crystaline_fauna_desc:0 "Covered in mineral growths the plant life on this world is capable of concentrating sunlight and infrared radiation to increase growth efficiency."
+ gpm_crystaline_fauna_desc:0 "Covered in mineral scales the wildlife on this world is capable of concentrating sunlight and infrared radiation to keep themselves warm and conserve energy."
+
+ gpm_crystaline_fauna_terraform:0 "Crystaline Wildlife"
+ gpm_crystaline_fauna_terraform_desc:0 "Dull crystal scales grow on most of the wildlife on this world protecting their delicate skin from the harsh solar radiation."
 
  gpm_infernal_caverns:0 "Infernal Caverns"
  gpm_infernal_caverns_desc:0 "Deep subterranean caverns spread throughout the planet's surface all the way down and into the crust. Filled with mineral rich pools of lava and overflowing with lavafalls these caverns are as dangerous as they are rich of resources."
@@ -821,8 +963,14 @@
  gpm_jeweled_flowers:0 "Jewelled Flowers"
  gpm_jeweled_flowers_desc:0 "These unique flowers grow almost pure gemstones at their centre as part of the final stage op pollination. These gemstones come in a variety of colours and shapes."
 
+ gpm_jeweled_flowers_terraform:0 "Gemstone Flowers"
+ gpm_jeweled_flowers_terraform_desc:0 "Tall brightly coloured flowers grow almost pure gemstones at their centre as part of the final stage op pollination. These gemstones form in sharp geometric shapes making them ideal for jewelery and have practical scientific applications."
+
  gpm_towering_cacti:0 "Towering Cacti"
- gpm_towering_cacti_desc:0 "Huge towering cacti dot the landscape towering hundreds of feet in the air. Sucking so much moisture out of the air and ground they frequently burst open creating temporary waterfalls."
+ gpm_towering_cacti_desc:0 "Huge cacti dot the landscape towering hundreds of feet in the air. Sucking so much moisture out of the air and ground they frequently burst open creating temporary waterfalls."
+
+ gpm_towering_cacti_terraform:0 "Lumbering Cacti"
+ gpm_towering_cacti_terraform_desc:0 "Huge cacti dot the landscape towering hundreds of feet in the air. Filled with fresh cold water they frequently burst open creating temporary waterfalls before closing again to suck all the moisture out of the surrounding air."
 
  gpm_geometric_landscapes:0 "Geometric Landscapes"
  gpm_geometric_landscapes_desc:0 "Unique geological processes have sculpted this world's landscape into mesmerizing geometric patterns. Mountains rise with sharp, repeating angles, while rivers meander in perfect ratios, creating a strikingly beautiful and harmonious natural design."
@@ -835,6 +983,42 @@
 
  gpm_mineral_rich_waters:0 "Mineral Rich Waters"
  gpm_mineral_rich_waters_desc:0 "The high concentration of metals in the oceans are a viable opportunity to extract and process these elements into raw minerals."
+
+ gpm_natural_beauty_terraform:0 "Ordered Beauty"
+ gpm_natural_beauty_terraform_desc:0 "Beautiful beyond comprehension this world's landscape has been designed to evoke a calming, almost spiritual, experience."
+
+ gpm_lush_planet_terraform:0 "Cornucopian World"
+ gpm_lush_planet_terraform_desc:0 "Overflowing with fruit trees containing the biggest most juicy fruits and berry bushes with sweet and extremely nutritious berries."
+
+ gpm_abundant_geothermal_activity_terraform:0 "Geothermal Hotspots"
+ gpm_abundant_geothermal_activity_terraform_desc:0 "Deep ravines streching down miles provide easy and abundant access to geothermal energy."
+
+ gpm_rich_mircoflora_terraform:0 "Exotic Microflora"
+ gpm_rich_mircoflora_terraform_desc:0 "Grown from imported microorganisms, the microflora on this world excretes vast amounts of mineral deposits as part of its digestive life cycle."
+
+ gpm_volcanic_crystal_lake_terraform:0 "Crystal Lakes"
+ gpm_volcanic_crystal_lake_terraform_desc:0 "Large crystals grow alongside the banks of these lakes fed by the mineral rich sediment deposited from vulcanic activities during the terraforming process."
+
+ gpm_volcanic_lavafall_terraform:0 "Basking Lavafalls"
+ gpm_volcanic_lavafall_terraform_desc:0 "Engineered tunnels in the mountain ranges release volcanic pressure and produce gentle flows of lava culminating into beautiful lavafalls."
+
+ gpm_volcanic_oasis_terraform:0 "Black Beaches"
+ gpm_volcanic_oasis_terraform_desc:0 "Across the harsher landscape gentle pockets of lush cool lakes can be found. The beaches of these lakes are almost pure black, dark sand and gravel deposits from volcanic activities contribute to a stark contract of beauty and nature."
+
+ gpm_ice_mined_planet_terraform:0 "Fresh Water Ice"
+ gpm_ice_mined_planet_terraform_desc:0 "Thick sheets of clear fresh water ice provide an ample source of ice for entertainment, industrial and scientific purposes."
+
+ gpm_ocean_paradise_terraform:0 "$ocean_paradise$"
+ gpm_ocean_paradise_terraform_desc:0 "$ocean_paradise_desc$"
+
+ gpm_docile_fauna_terraform:0 "Calm Wildlife"
+ gpm_docile_fauna_terraform_desc:0 "Genetically engineered wildlife that behaves very socially."
+
+ gpm_obsidian_lakes_terraform:0 "Obsidian Sheets"
+ gpm_obsidian_lakes_terraform_desc:0 "Tectonic activity during the terraforming process has caused magma lakes to cool into enormous sheets of obsidian, bringing valuable resources much closer to the surface."
+
+ gpm_wooden_planet_terraform:0 "Wood Grounds"
+ gpm_wooden_planet_terraform_desc:0 "Lacking most common organisms, dead trees on this world do not decay forming a hard ground of petrified wood."
 
 
  #######################################
@@ -886,8 +1070,8 @@
  gpm_mushroom_forest_toxic_world_desc:0 "$gpm_mushroom_forest_desc$"
  
  gpm_giant_mold_blobs:0 "Giant Mold Blobs"
- gpm_giant_mold_blobs_desc:0 "Massive slime molds inhabit this planet, roving the landscape for food. They do appear to have some semblance of sentience."
- 
+ gpm_giant_mold_blobs_desc:0 "Massive slime molds inhabit this planet, roving the landscape for food. Incorporating the mold as an additive in manufacturing results in a slight increased output and exciting byproducts."
+
  gpm_toxic_garbage:0 "Toxic Garbage"
  gpm_toxic_garbage_desc:0 "A civilisation once used this planet as a dumping ground for their toxic waste. It will probably take millions of years for this world to become habitable again."
  
@@ -912,11 +1096,17 @@
  gpm_toxic_flora_fauna:0 "Toxic Flora and Fauna"
  gpm_toxic_flora_fauna_desc:0 "Several unique species of flora and fauna can be found on this world. They appear to be extremely adaptable and have been able to sustain themselves despite their harsh, toxic environment."
  
+ gpm_toxic_flora_fauna_terraform:0 "Exotic Toxic Wildlife"
+ gpm_toxic_flora_fauna_terraform_desc:0 "A high variety of uniquely toxic flora and fauna thrive on this world."
+ 
  gpm_magma_ocean:0 "Magma Oceans"
  gpm_magma_ocean_desc:0 "Large bodies of lava lie upon the surface of this world. They are fed by large, molten rivers of rock which run from erupting volcanoes or a large section of the world's core that is exposed to the elements. Our scientists are uncertain how such damage to the planet's crust could have occurred. Some postulate that the planet's surface never fully cooled, leading to this unique and dangerous landscape. They have advised the colonists to use caution when building new outposts and towns."
  
  gpm_silicon_crystals:0 "Silicon Crystals"
  gpm_silicon_crystals_desc:0 "Large silicon crystals are seen growing on this world. They seem to form clusters of crystals starting at a point in the soil and growing outwards like a flower. Their colours depend on the composition of the soil, with bright soil resulting in fairly clear yellow and brown crystals and darker, iron rich soil resulting in bright red or purple crystals. Various other types can be found across the surface of this world."
+ 
+ gpm_silicon_crystals_terraform:0 "Crystal Moss"
+ gpm_silicon_crystals_terraform_desc:0 "Moss-like growth of crystals crack when walked on. These growths seem to form clusters of crystals starting at a point in the soil and growing outwards like a patch of moss. Their colours depend on the composition of the soil but come mostly in bright green colours."
  
  gpm_lava_geysers:0 "Lava Geysers"
  gpm_lava_geysers_desc:0 "Spread across the flatter areas of this planet are a large number of lava geysers. These geysers allow most of the subsurface pressure to vent, keeping part of the landscape predominantly flat and solid. It is advisable to maintain a distance, however, as these geysers can be dangerous."
@@ -947,6 +1137,9 @@
  
  gpm_abundant_natural_radioactivity:0 "Abundant Natural Radioactivity"
  gpm_abundant_natural_radioactivity_desc:0 "Extensive natural nuclear reactions within this planet's crust combine with vigorous tectonic activity to produce massive volcanoes spewing fissile materials. As a result, the atmosphere of this world is saturated with radioactive particles."
+ 
+ gpm_abundant_natural_radioactivity_terraform:0 "Radioactivity Minerals"
+ gpm_abundant_natural_radioactivity_terraform_desc:0 "Extensive natural nuclear reactions within this planet's crust combined with vigorous tectonic activity from our geoengineering project have condensed radioactive minerals into tight clumps allowing for easy and relatively safe extraction."
  
  #######################################
  #### Stars, Pulsars and Blackholes Modifiers
@@ -1103,6 +1296,9 @@
 
  gpm_relic_lower_levels:0 "Lower City Levels"
  gpm_relic_lower_levels_desc:0 "Part of the massive endless city has collapsed revealing that the top layer of the city planet is build on an much older city."
+
+ gpm_relic_xenonion:0 "Xenonion News Headquarters"
+ gpm_relic_xenonion_desc:0 "At the dead center of a forgotten trade route drifts the hollow headquarters of the once mighty Xenonion megacorporation, its shattered windows glowing whenever the ancient transmitters awaken. Though no editors remain, its automated systems still transmit headlines across the galaxy about wars already ended, empires already fallen, and weather reports for planets long turned to dust..."
  
  #######################################
  #### Precursor Modifiers
@@ -1453,4 +1649,63 @@
  #######################################
  #### Sublimation Modifiers
  #######################################
- 
+
+ #######################################
+ #### Planet Wonders Modifiers
+ #######################################
+ gpm_wonder_gargantuan_sinkhole:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_gargantuan_sinkhole$"
+ gpm_wonder_gargantuan_sinkhole_desc:0 "$gpm_d_gargantuan_sinkhole_desc$"
+
+ gpm_wonder_discharging_field:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_discharging_field$"
+ gpm_wonder_discharging_field_desc:0 "$gpm_d_discharging_field_desc$"
+
+ gpm_wonder_giant_trees:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_giant_trees$"
+ gpm_wonder_giant_trees_desc:0 "$gpm_d_giant_trees_desc$"
+
+ gpm_wonder_crystal_jungle:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_crystal_jungle$"
+ gpm_wonder_crystal_jungle_desc:0 "$gpm_d_crystal_jungle_desc$"
+
+ gpm_wonder_floating_islands:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_floating_islands$"
+ gpm_wonder_floating_islands_desc:0 "$gpm_d_floating_islands_desc$"
+
+ gpm_wonder_amoeba_sea:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_amoeba_sea$"
+ gpm_wonder_amoeba_sea_desc:0 "$gpm_d_amoeba_sea_desc$"
+
+ gpm_wonder_glass_towers:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_glass_towers$"
+ gpm_wonder_glass_towers_desc:0 "$gpm_d_glass_towers_desc$"
+
+ gpm_wonder_howling_peaks:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_howling_peaks$"
+ gpm_wonder_howling_peaks_desc:0 "$gpm_d_howling_peaks_desc$"
+
+ gpm_wonder_mega_fungi:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_mega_fungi$"
+ gpm_wonder_mega_fungi_desc:0 "$gpm_d_mega_fungi_desc$"
+
+ gpm_wonder_energy_storm:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_energy_storm$"
+ gpm_wonder_energy_storm_desc:0 "$gpm_d_energy_storm_desc$"
+
+ gpm_wonder_titanic_cave:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_titanic_cave$"
+ gpm_wonder_titanic_cave_desc:0 "$gpm_d_titanic_cave_desc$"
+
+ gpm_wonder_abandoned_stargate:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_abandoned_stargate$"
+ gpm_wonder_abandoned_stargate_desc:0 "$gpm_d_abandoned_stargate_desc$"
+
+ gpm_wonder_bioluminescent_forest:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_bioluminescent_forest$"
+ gpm_wonder_bioluminescent_forest_desc:0 "$gpm_d_bioluminescent_forest_desc$"
+
+ gpm_wonder_land_reefs:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_land_reefs$"
+ gpm_wonder_land_reefs_desc:0 "$gpm_d_land_reefs_desc$"
+
+ gpm_wonder_lava_lake:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_lava_lake$"
+ gpm_wonder_lava_lake_desc:0 "$gpm_d_lava_lake_desc$"
+
+ gpm_wonder_Collapsed_habitat:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_Collapsed_habitat$"
+ gpm_wonder_Collapsed_habitat_desc:0 "$gpm_d_Collapsed_habitat_desc$"
+
+ gpm_wonder_forgotten_deposit:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_forgotten_deposit$"
+ gpm_wonder_forgotten_deposit_desc:0 "$gpm_d_forgotten_deposit_desc$"
+
+ gpm_wonder_ruined_arcology:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_ruined_arcology$"
+ gpm_wonder_ruined_arcology_desc:0 "$gpm_d_ruined_arcology_desc$"
+
+ gpm_wonder_dangerous_hives:0 "£gpm_planet_wonder  §YWondrous World§! - $gpm_d_dangerous_hives$"
+ gpm_wonder_dangerous_hives_desc:0 "$gpm_d_dangerous_hives_desc$"

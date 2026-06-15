@@ -40,7 +40,7 @@ gpm_spawn_fallen_empire_world_modifier = {
 			limit = {
 				OR = {
 					gpm_is_planet_class_city = yes
-					gpm_is_planet_class_normal_habitable = yes
+					gpm_is_planet_class_habitable_natural = yes
 					gpm_is_planet_class_nuked = yes
 				}
 			}
@@ -70,7 +70,7 @@ gpm_spawn_fallen_empire_world_modifier = {
 				limit = {
 					OR = {
 						gpm_is_planet_class_city = yes
-						gpm_is_planet_class_normal_habitable = yes
+						gpm_is_planet_class_habitable_natural = yes
 						gpm_is_planet_class_nuked = yes
 					}
 				}

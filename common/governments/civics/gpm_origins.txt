@@ -4,12 +4,14 @@ origin_gpm_death_world = {
 	icon = "gfx/interface/icons/origins/origin_gpm_death_world.dds"
 	picture = GFX_origin_gpm_death_world
 	
-	# playable = {
-		# NOT = { has_global_flag = "star_trek_new_civilisations" }
-	# }
+	starting_colony = pc_tropical
 	
 	possible = {
-		authority = { NOT = { value = auth_machine_intelligence } }
+		OR = {
+			authority = { value = auth_machine_intelligence }
+			civics = { NOT = { value = civic_machine_servitor } }
+		}
+		is_nomadic = no
 	}
 	
 	description = "origin_tooltip_gpm_death_world_effects"
@@ -42,6 +44,7 @@ origin_gpm_precursor_world = {
 	# }
 	
 	possible = {
+		is_nomadic = no
 	}
 	
 	description = "origin_tooltip_gpm_precursor_world_effects"
@@ -77,6 +80,7 @@ origin_gpm_fallen_empire_colony = {
 	# }
 	
 	possible = {
+		is_nomadic = no
 	}
 	
 	description = "origin_tooltip_gpm_fallen_empire_colony_effects"

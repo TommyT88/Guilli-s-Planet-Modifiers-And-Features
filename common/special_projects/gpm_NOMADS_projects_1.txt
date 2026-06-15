@@ -1,0 +1,75 @@
+# Habitable World visit
+special_project = {
+	key = "GPM_VISIT_WORLD_ARKSHIP"
+	days_to_research = 60
+	location = yes
+	tech_department = society_technology
+	picture = GFX_evt_arkship_crisis
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = carrier_event
+
+	requirements = {
+		carries_colony = 1
+	}
+
+	#	THIS = project scope (matches setting in "event_scope" i.e. ship/planet/country)
+	#	FROM = carrier scope, if set (usually a planet)
+	#	FROMFROM = location scope, if set (usually a planet)
+	#	PREV = country
+	on_success = {
+		# log = "GPM_VISIT_WORLD_ARKSHIP | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- from.planet = [from.planet.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# this.fromfrom works also
+		root.fromfrom = {
+			save_event_target_as = gpm_arkship_visit_target
+			set_planet_flag = testrootfromfrom
+		}
+		
+		carrier_event = { id = gpm_NOMADS.10 }
+		
+	}
+
+	#	THIS = country
+	#	FROM = project scope (matches setting in "event_scope" i.e. ship/planet/country). Might not exist!
+	#	FROMFROM = location scope, if set (usually a planet)
+	on_fail = {
+	}
+}
+
+# Precursor World Visit (uninhabitable)
+special_project = {
+	key = "GPM_VISIT_PRECURSOR_WORLD_ARKSHIP"
+	days_to_research = 90
+	location = yes
+	tech_department = society_technology
+	picture = GFX_evt_arkship_crisis
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = carrier_event
+
+	requirements = {
+		carries_colony = 1
+	}
+
+	#	THIS = project scope (matches setting in "event_scope" i.e. ship/planet/country)
+	#	FROM = carrier scope, if set (usually a planet)
+	#	FROMFROM = location scope, if set (usually a planet)
+	#	PREV = country
+	on_success = {
+		# log = "GPM_VISIT_WORLD_ARKSHIP | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- from.planet = [from.planet.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# this.fromfrom works also
+		root.fromfrom = {
+			save_event_target_as = gpm_arkship_visit_target
+			set_planet_flag = testrootfromfrom
+		}
+		
+		carrier_event = { id = gpm_NOMADS.10 }
+		
+	}
+
+	#	THIS = country
+	#	FROM = project scope (matches setting in "event_scope" i.e. ship/planet/country). Might not exist!
+	#	FROMFROM = location scope, if set (usually a planet)
+	on_fail = {
+	}
+}

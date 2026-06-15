@@ -1,56 +1,56 @@
 # 4.0 compatible
 
-namespace = mega
+# namespace = mega
 # we overwrite this message event so mod compatibility is kept with other mods that might tweak the main Arcology Project decision
 
 # Ecumenopolis complete
-planet_event = {
-	id = mega.200
-	title = mega.200.name
-	desc = mega.200.desc
-	picture = GFX_evt_city_planet
-	show_sound = event_cityscape
-	location = root
+# carrier_event = {
+	# id = mega.200
+	# title = mega.200.name
+	# desc = mega.200.desc
+	# picture = GFX_evt_city_planet
+	# show_sound = event_cityscape
+	# location = root
 
-	is_triggered_only = yes
+	# is_triggered_only = yes
 
-	trigger = {
-		gpm_is_planet_class_city = yes
-	}
+	# trigger = {
+		# gpm_is_planet_class_city = yes
+	# }
 
-	immediate = {
+	# immediate = {
 		
-		set_planet_flag = gpm_is_new_ecumenopolis
-		planet_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
-	}
+		# set_planet_flag = gpm_is_new_ecumenopolis
+		# carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
+	# }
 
-	option = {
-		name = mega.200.a
-	}
-}
+	# option = {
+		# name = mega.200.a
+	# }
+# }
 
 # Ecumenopolis complete (Relic World)
-planet_event = {
-	id = mega.201
-	title = mega.200.name
-	desc = mega.201.desc
-	picture = GFX_evt_city_planet
-	show_sound = event_cityscape
-	location = root
+# carrier_event = {
+	# id = mega.201
+	# title = mega.200.name
+	# desc = mega.201.desc
+	# picture = GFX_evt_city_planet
+	# show_sound = event_cityscape
+	# location = root
 
-	is_triggered_only = yes
+	# is_triggered_only = yes
 
-	trigger = {
-		is_planet_class = pc_city
-	}
+	# trigger = {
+		# is_planet_class = pc_city
+	# }
 
-	immediate = {
+	# immediate = {
 		
-		set_planet_flag = gpm_is_new_ecumenopolis
-		planet_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
-	}
+		# set_planet_flag = gpm_is_new_ecumenopolis
+		# carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
+	# }
 
-	option = {
-		name = mega.200.a
-	}
-}
+	# option = {
+		# name = mega.200.a
+	# }
+# }

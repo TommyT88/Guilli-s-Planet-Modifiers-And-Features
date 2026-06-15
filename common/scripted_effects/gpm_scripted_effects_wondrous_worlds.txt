@@ -1,0 +1,355 @@
+gpm_designate_wonder_world = {
+	optimize_memory
+	set_planet_flag = gpm_is_wondrous_world
+	set_planet_flag = unique_world					# Real Space mod request
+}
+
+# desert
+gpm_spawn_planet_wonders_desert = {
+	optimize_memory
+	random_list = {
+		75 = {
+			add_deposit = "gpm_d_gargantuan_sinkhole"
+			add_modifier = { modifier = gpm_wonder_gargantuan_sinkhole }
+			set_planet_flag = is_gpm_d_gargantuan_sinkhole_world
+		}
+		25 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# arid
+gpm_spawn_planet_wonders_arid = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_discharging_field"
+			add_modifier = { modifier = gpm_wonder_discharging_field }
+			set_planet_flag = is_gpm_d_discharging_field_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# savannah
+gpm_spawn_planet_wonders_savannah = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_giant_trees"
+			add_modifier = { modifier = gpm_wonder_giant_trees }
+			set_planet_flag = is_gpm_d_giant_trees_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# tropical
+gpm_spawn_planet_wonders_tropical = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_crystal_jungle"
+			add_modifier = { modifier = gpm_wonder_crystal_jungle }
+			set_planet_flag = is_gpm_d_crystal_jungle_world
+		}
+		25 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# continental
+gpm_spawn_planet_wonders_continental = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_floating_islands"
+			add_modifier = { modifier = gpm_wonder_floating_islands }
+			set_planet_flag = is_gpm_d_floating_islands_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# ocean
+gpm_spawn_planet_wonders_ocean = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_amoeba_sea"
+			add_modifier = { modifier = gpm_wonder_amoeba_sea }
+			set_planet_flag = is_gpm_d_amoeba_sea_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# arctic
+gpm_spawn_planet_wonders_arctic = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_glass_towers"
+			add_modifier = { modifier = gpm_wonder_glass_towers }
+			set_planet_flag = is_gpm_d_glass_towers_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# alpine
+gpm_spawn_planet_wonders_alpine = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_howling_peaks"
+			add_modifier = { modifier = gpm_wonder_howling_peaks }
+			set_planet_flag = is_gpm_d_howling_peaks_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# tundra
+gpm_spawn_planet_wonders_tundra = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_mega_fungi"
+			add_modifier = { modifier = gpm_wonder_mega_fungi }
+			set_planet_flag = is_gpm_d_mega_fungi_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# gaia
+gpm_spawn_planet_wonders_gaia = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_energy_storm"
+			add_modifier = { modifier = gpm_wonder_energy_storm }
+			set_planet_flag = is_gpm_d_energy_storm_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# nuked
+gpm_spawn_planet_wonders_nuked = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_forgotten_deposit"
+			add_modifier = { modifier = gpm_wonder_forgotten_deposit }
+			set_planet_flag = is_gpm_d_forgotten_deposit_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# volcanic
+gpm_spawn_planet_wonders_volcanic = {
+	optimize_memory
+	random_list = {
+		10 = {
+			add_deposit = "gpm_d_lava_lake"
+			add_modifier = { modifier = gpm_wonder_lava_lake }
+			set_planet_flag = is_gpm_d_lava_lake_world
+		}
+		10 = {
+			modifier = { factor = 0 
+				AND = {
+					has_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+					has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+					has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+					has_global_flag = gpm_d_land_reefs_wondrous_world_generated
+					has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+					has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+				}
+			}
+			gpm_spawn_planet_wonders_any = yes
+		}
+	}
+}
+
+# any
+gpm_spawn_planet_wonders_any = {
+	optimize_memory
+	random_list = {
+		10 = {
+			modifier = { factor = 0 has_global_flag = gpm_d_titanic_cave_wondrous_world_generated }
+			add_deposit = "gpm_d_titanic_cave"
+			add_modifier = { modifier = gpm_wonder_titanic_cave }
+			set_planet_flag = is_gpm_d_titanic_cave_world
+			set_global_flag = gpm_d_titanic_cave_wondrous_world_generated
+		}
+		10 = {
+			modifier = { factor = 0 has_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated }
+			add_deposit = "gpm_d_abandoned_stargate"
+			add_modifier = { modifier = gpm_wonder_abandoned_stargate }
+			set_planet_flag = is_gpm_d_abandoned_stargate_world
+			set_global_flag = gpm_d_abandoned_stargate_wondrous_world_generated
+		}
+		10 = {
+			modifier = { factor = 0 has_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated }
+			add_deposit = "gpm_d_bioluminescent_forest"
+			add_modifier = { modifier = gpm_wonder_bioluminescent_forest }
+			set_planet_flag = is_gpm_d_bioluminescent_forest_world
+			set_global_flag = gpm_d_bioluminescent_forest_wondrous_world_generated
+		}
+		10 = {
+			modifier = { factor = 0 has_global_flag = gpm_d_land_reefs_wondrous_world_generated }
+			add_deposit = "gpm_d_land_reefs"
+			add_modifier = { modifier = gpm_wonder_land_reefs }
+			set_planet_flag = is_gpm_d_land_reefs_world
+			set_global_flag = gpm_d_land_reefs_wondrous_world_generated
+		}
+		10 = {
+			modifier = { factor = 0 has_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated }
+			add_deposit = "gpm_d_Collapsed_habitat"
+			add_modifier = { modifier = gpm_wonder_Collapsed_habitat }
+			set_planet_flag = is_gpm_d_Collapsed_habitat_world
+			set_global_flag = gpm_d_Collapsed_habitat_wondrous_world_generated
+		}
+		10 = {
+			modifier = { factor = 0 has_global_flag = gpm_d_ruined_arcology_wondrous_world_generated }
+			add_deposit = "gpm_d_ruined_arcology"
+			add_modifier = { modifier = gpm_wonder_ruined_arcology }
+			set_planet_flag = is_gpm_d_ruined_arcology_world
+			set_global_flag = gpm_d_ruined_arcology_wondrous_world_generated
+		}
+	}
+}
+

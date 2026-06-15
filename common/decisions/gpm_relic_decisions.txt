@@ -74,7 +74,7 @@ decision_gpm_shield_generator_arrays = {
 			has_modifier = gpm_precursor_planetary_shield
 		}
 		OR = {
-			gpm_is_planet_class_normal_habitable = yes
+			gpm_is_planet_class_habitable_natural = yes
 			gpm_is_planet_class_nuked = yes
 			gpm_is_planet_class_city = yes
 			gpm_is_planet_class_machine = yes
@@ -97,7 +97,10 @@ decision_gpm_shield_generator_arrays = {
 		}
 		add_deposit = gpm_d_planetary_shield_array
 		add_modifier = { modifier = gpm_precursor_planetary_shield_on }
-		hidden_effect = { gpm_set_precursor_planetary_shields = yes }
+		if = {
+			limit = { is_nomadic = no }
+			hidden_effect = { gpm_set_precursor_planetary_shields = yes }
+		}
 	}
 	
 	ai_weight = {
@@ -152,7 +155,7 @@ decision_gpm_Floating_Island_Housing = {
 		}
 		NOT = { has_deposit = gpm_d_floating_islands_housing }
 		OR = {
-			gpm_is_planet_class_normal_habitable = yes
+			gpm_is_planet_class_habitable_natural = yes
 			gpm_is_planet_class_nuked = yes
 			gpm_is_planet_class_city = yes
 			gpm_is_planet_class_machine = yes

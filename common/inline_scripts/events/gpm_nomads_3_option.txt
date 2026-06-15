@@ -1,0 +1,118 @@
+name = gpm_NOMADS.10.$MODIFIER$
+trigger = { owner = { is_nomadic = yes } event_target:gpm_arkship_visit_target = { has_modifier = $MODIFIER$ } }
+custom_tooltip = "gpm_ark_ship_visit_rewardsTT"
+# custom_tooltip = "   $$MODIFIER$$"
+custom_tooltip = t #blank line
+# Planet Modifier reward bonus
+# if = {
+# 	limit = { 
+# 		# always = $NOMAD_REWARD_PM_NORMAL$
+# 		# NOT = { has_modifier = $MODIFIER$ }
+# 		# num_modifiers <= 7
+# 	}
+	# locked_random_list = {
+	# 	20 = { custom_tooltip = "NO REWARD"	}
+	# 	80 = { 
+	# 		add_modifier = { modifier = $MODIFIER$ mult = $MULT_MODIFIER$ }
+	# 		modifier = { factor = 0.5 num_modifiers >= 5 }
+	# 		modifier = { factor = 0.6 num_modifiers = 4 }
+	# 		modifier = { factor = 0.7 num_modifiers = 3 }
+	# 		modifier = { factor = 0.8 num_modifiers = 2 }
+	# 		modifier = { factor = 0.9 num_modifiers = 1 }
+	# 		custom_tooltip = t #blank line
+	# 	}
+	# }
+# }
+# else_if = {
+# 	limit = { 
+# 		always = $NOMAD_REWARD_PM_NORMAL_GUARANTEED$
+# 		NOT = { has_modifier = $MODIFIER$ }
+# 		num_modifiers <= 7
+# 	}
+# 	add_modifier = { modifier = $MODIFIER$ mult = $MULT_MODIFIER$ }
+# 	custom_tooltip = t #blank line
+# }
+# else_if = {
+# 	limit = {
+# 		always = $NOMAD_REWARD_PM_TERRA$
+# 		NOT = { has_modifier = $MODIFIER$_terraform }
+# 		num_modifiers < 7
+# 	}
+# 	locked_random_list = {
+# 		20 = { }
+# 		80 = { 
+# 			add_modifier = { modifier = $MODIFIER$_terraform mult = $MULT_MODIFIER$ }
+# 			modifier = { factor = 0.5 num_modifiers >= 5 }
+# 			modifier = { factor = 0.6 num_modifiers = 4 }
+# 			modifier = { factor = 0.7 num_modifiers = 3 }
+# 			modifier = { factor = 0.8 num_modifiers = 2 }
+# 			modifier = { factor = 0.9 num_modifiers = 1 }
+# 			custom_tooltip = t #blank line
+# 		}
+# 	}
+# }
+# Resource reward
+if = {
+	limit = { always = $NOMAD_REWARD_MINERALS$ }
+	owner = {
+		locked_random_list = {
+			15 = { add_resource = { minerals = 250 mult = $MULT_RESOURCE$ } }
+			25 = { add_resource = { minerals = 300 mult = $MULT_RESOURCE$ } }
+			50 = { add_resource = { minerals = 400 mult = $MULT_RESOURCE$ } }
+			25 = { add_resource = { minerals = 500 mult = $MULT_RESOURCE$ } }
+			15 = { add_resource = { minerals = 750 mult = $MULT_RESOURCE$ } }
+			10 = { add_resource = { minerals = 1000 mult = $MULT_RESOURCE$ } }
+			5 = { add_resource = { minerals = 1500 mult = $MULT_RESOURCE$ } }
+			1 = { add_resource = { minerals = 2000 mult = $MULT_RESOURCE$ } }
+		}
+	}
+}
+if = {
+	limit = { always = $NOMAD_REWARD_ENERGY$ }
+	owner = {
+		locked_random_list = {
+			15 = { add_resource = { energy = 250 mult = $MULT_RESOURCE$ } }
+			25 = { add_resource = { energy = 300 mult = $MULT_RESOURCE$ } }
+			50 = { add_resource = { energy = 400 mult = $MULT_RESOURCE$ } }
+			25 = { add_resource = { energy = 500 mult = $MULT_RESOURCE$ } }
+			15 = { add_resource = { energy = 750 mult = $MULT_RESOURCE$ } }
+			10 = { add_resource = { energy = 1000 mult = $MULT_RESOURCE$ } }
+			5 = { add_resource = { energy = 1500 mult = $MULT_RESOURCE$ } }
+			1 = { add_resource = { energy = 2000 mult = $MULT_RESOURCE$ } }
+		}
+	}
+}
+if = {
+	limit = { always = $NOMAD_REWARD_FOOD$ }
+	if = {
+		limit = {
+			owner = { is_machine_empire = yes NOT = { has_valid_civic = civic_machine_servitor } }
+		}
+		owner = {
+			locked_random_list = {
+				15 = { add_resource = { energy = 250 mult = $MULT_RESOURCE$ } }
+				25 = { add_resource = { energy = 300 mult = $MULT_RESOURCE$ } }
+				50 = { add_resource = { energy = 400 mult = $MULT_RESOURCE$ } }
+				25 = { add_resource = { energy = 500 mult = $MULT_RESOURCE$ } }
+				15 = { add_resource = { energy = 750 mult = $MULT_RESOURCE$ } }
+				10 = { add_resource = { energy = 1000 mult = $MULT_RESOURCE$ } }
+				5 = { add_resource = { energy = 1500 mult = $MULT_RESOURCE$ } }
+				1 = { add_resource = { energy = 2000 mult = $MULT_RESOURCE$ } }
+			}
+		}
+	}
+	else = {
+		owner = {
+			locked_random_list = {
+				15 = { add_resource = { food = 250 mult = $MULT_RESOURCE$ } }
+				25 = { add_resource = { food = 300 mult = $MULT_RESOURCE$ } }
+				50 = { add_resource = { food = 400 mult = $MULT_RESOURCE$ } }
+				25 = { add_resource = { food = 500 mult = $MULT_RESOURCE$ } }
+				15 = { add_resource = { food = 750 mult = $MULT_RESOURCE$ } }
+				10 = { add_resource = { food = 1000 mult = $MULT_RESOURCE$ } }
+				5 = { add_resource = { food = 1500 mult = $MULT_RESOURCE$ } }
+				1 = { add_resource = { food = 2000 mult = $MULT_RESOURCE$ } }
+			}
+		}
+	}
+}

@@ -26,7 +26,12 @@ gpm_spawn_molten_world_modifier = {
 	optimize_memory
 	random_list = {
 		100 = {
-			add_modifier = { modifier = "gpm_magma_ocean" }
+			add_modifier = { modifier = "gpm_magma_ocean" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			if = { limit = { is_planet_class = pc_volcanic }
+				add_deposit = gpm_d_magma_ocean
+				add_deposit = gpm_d_toxic_vent
+			}
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -43,7 +48,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_lava_geysers" }
+			add_modifier = { modifier = "gpm_lava_geysers" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_lava_geysers" }
 			# Not on these planets
@@ -54,7 +59,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_thin_planetary_crust" }
+			add_modifier = { modifier = "gpm_thin_planetary_crust" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_thin_planetary_crust" }
 			# Not on these planets
@@ -65,7 +70,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_heavy_elements" }
+			add_modifier = { modifier = "gpm_heavy_elements" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_heavy_elements" }
 			# Not on these planets
@@ -77,7 +82,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @plenty }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_rare_metals" }
+			add_modifier = { modifier = "gpm_rare_metals" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_rare_metals" }
 			# Not on these planets
@@ -89,7 +94,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_crystaline_deposits" }
+			add_modifier = { modifier = "gpm_crystaline_deposits" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_crystaline_deposits" }
 			modifier = { factor = 0 has_modifier = "gpm_searing_fumes" }
@@ -103,7 +108,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_searing_fumes" }
+			add_modifier = { modifier = "gpm_searing_fumes" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_searing_fumes" }
 			modifier = { factor = 0 has_modifier = "gpm_crystaline_deposits" }
@@ -117,7 +122,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_stable_geodes" }
+			add_modifier = { modifier = "gpm_stable_geodes" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_stable_geodes" }
 			modifier = { factor = 0 has_modifier = "gpm_searing_fumes" }
@@ -131,7 +136,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_fast_rotation" }
+			add_modifier = { modifier = "gpm_fast_rotation" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_fast_rotation" }
 			# (Not) on these planets
@@ -144,7 +149,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_lava_geysers" }
+			add_modifier = { modifier = "gpm_lava_geysers" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_lava_geysers" }
 			# (Not) on these planets
@@ -155,7 +160,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @plenty }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_thin_planetary_crust" }
+			add_modifier = { modifier = "gpm_thin_planetary_crust" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_thin_planetary_crust" }
 			# (Not) on these planets
@@ -166,7 +171,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_mercury_atmosphere" }
+			add_modifier = { modifier = "gpm_mercury_atmosphere" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			# (Not) on these planets
 			# Never in these systems
@@ -176,7 +181,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_proto_planet" }
+			add_modifier = { modifier = "gpm_proto_planet" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_proto_planet" }
 			# (Not) on these planets
@@ -191,7 +196,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_very_hot_core" }
+			add_modifier = { modifier = "gpm_very_hot_core" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_very_hot_core" }
 			# (Not) on these planets
@@ -202,7 +207,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_blue_magma" }
+			add_modifier = { modifier = "gpm_blue_magma" multiplier = gpm_planet_size_multiplier }
 			set_planet_entity = { entity = "gpm_molten_planet_blue_2_entity" }
 			add_deposit = d_blue_lava
 			# Not with these modifiers
@@ -216,7 +221,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_fire_resistant_flora" }
+			add_modifier = { modifier = "gpm_fire_resistant_flora" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_fire_resistant_flora" }
 			# (Not) on these planets
@@ -228,7 +233,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_infernal_caverns" }
+			add_modifier = { modifier = "gpm_infernal_caverns" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_infernal_caverns" }
 			# (Not) on these planets
@@ -240,7 +245,7 @@ gpm_spawn_molten_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_magma_wyrms" }
+			add_modifier = { modifier = "gpm_magma_wyrms" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_magma_wyrms" }
 			# (Not) on these planets

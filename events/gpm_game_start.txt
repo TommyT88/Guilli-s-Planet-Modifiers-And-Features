@@ -28,48 +28,68 @@ event = {
 		country_event = { id = gpm_start_menu.1 }       # this is the actual start menu
 
 		# small mineral boost to all countries starting system
-		every_country =  {
-			if = {
-				limit = { gpm_is_country_type_default = yes	}
-				# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
+		# every_country =  {
+			# if = {
+			# 	limit = { gpm_is_country_type_default = yes	}
+			# 	# add_resource = { minerals = 150 } 		# we also give everyone a small mineral stash boost to help with first build
 
-				random_owned_planet = {
-					limit = { is_capital = yes }
-					solar_system = {
-						random_system_planet = {
-							limit = {
-								has_deposit = no
-								NOT = { has_modifier = terraforming_candidate }
-								OR = {
-									gpm_is_planet_class_normal_uninhabitable = yes
-									gpm_is_planet_class_asteroid = yes
-								}
-							}
-							add_deposit = d_minerals_5
-						}
-						random_system_planet = {
-							limit = {
-								has_deposit = no
-								NOT = { has_modifier = terraforming_candidate }
-								OR = {
-									gpm_is_planet_class_normal_uninhabitable = yes
-									gpm_is_planet_class_asteroid = yes
-								}
-							}
-							add_deposit = d_minerals_3
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						gpm_is_country_type_fallen_empire = yes
-						gpm_is_country_type_awakened_fallen_empire = yes
-					}
-				}
-				add_modifier = { modifier = gpm_fallen_empire_detection_tweak }
-			}
+			# 	capital_scope = {
+			# 		solar_system = {
+			# 			random_system_planet = {
+			# 				limit = {
+			# 					has_deposit = no
+			# 					NOT = { has_modifier = terraforming_candidate }
+			# 					OR = {
+			# 						gpm_is_planet_class_normal_uninhabitable = yes
+			# 						gpm_is_planet_class_asteroid = yes
+			# 					}
+			# 				}
+			# 				add_deposit = d_minerals_5
+			# 			}
+			# 			random_system_planet = {
+			# 				limit = {
+			# 					has_deposit = no
+			# 					NOT = { has_modifier = terraforming_candidate }
+			# 					OR = {
+			# 						gpm_is_planet_class_normal_uninhabitable = yes
+			# 						gpm_is_planet_class_asteroid = yes
+			# 					}
+			# 				}
+			# 				add_deposit = d_minerals_3
+			# 			}
+			# 		}
+			# 	}
+			# }
+			# if = {
+			# 	limit = {
+			# 		OR = {
+			# 			gpm_is_country_type_fallen_empire = yes
+			# 			gpm_is_country_type_awakened_fallen_empire = yes
+			# 		}
+			# 	}
+			# 	add_modifier = { modifier = gpm_fallen_empire_detection_tweak }
+			# }
+		# }
+
+		# Death World civic gamestart
+		every_playable_country = {
+			limit = { has_origin = origin_gpm_death_world }
+			country_event = { id = gpm_game_start.1 }
+		}
+		# Precursor civic gamestart
+		every_playable_country = {
+			limit = { has_origin = origin_gpm_precursor_world }
+			country_event = { id = gpm_game_start.2 }
+		}
+		# Fallen Empire Colony civic gamestart
+		every_playable_country = {
+			limit = { has_origin = origin_gpm_fallen_empire_colony }
+			country_event = { id = gpm_game_start.3 }
+		}
+		# scion civic gamestart
+		every_playable_country = {
+			limit = { has_origin = origin_scion }
+			country_event = { id = gpm_game_start.4 }
 		}
 
 		# James Webb initialisation
@@ -112,16 +132,14 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_gpm_death_world
+		# has_origin = origin_gpm_death_world
 	}
 
 	immediate = {
 		
-		random_owned_planet = {
-			limit = { is_capital = yes }
-			set_planet_size = 25
+		capital_scope = {
+			set_planet_size = 30
 			gpm_run_origin_death_world_planet_gen = yes
-
 		}
 		every_owned_pop_group = {
 			limit = {
@@ -147,13 +165,12 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_gpm_precursor_world
+		# has_origin = origin_gpm_precursor_world
 	}
 
 	immediate = {
 		
-		random_owned_planet ={
-			limit = { is_capital = yes }
+		capital_scope ={
 			gpm_run_origin_precursor_world_planet_gen = yes
 		}
 	}
@@ -166,13 +183,12 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_gpm_fallen_empire_colony
+		# has_origin = origin_gpm_fallen_empire_colony
 	}
 
 	immediate = {
 		
-		random_owned_planet ={
-			limit = { is_capital = yes }
+		capital_scope ={
 			gpm_run_origin_fallen_empire_planet_gen = yes
 		}
 	}
@@ -185,14 +201,104 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_scion
+		# has_origin = origin_scion
 	}
 
 	immediate = {
 		
-		random_owned_planet ={
-			limit = { is_capital = yes }
+		capital_scope = {
 			gpm_run_scion_planet_gen = yes
 		}
 	}
 }
+
+# SAVEGAME FIXER 
+# wondrous world replacer
+# event = {
+# 	id = gpm_game_start.5
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		NOT = {	has_global_flag = gpm_savegame_fixer_5 }
+# 	}
+# 	immediate = {
+		
+# 		set_global_flag = gpm_savegame_fixer_5       			# safety to prevent additional runs
+# 		every_galaxy_planet = {
+# 			limit = { has_planet_flag = gpm_is_wondrous_world }
+# 			if = { limit = { has_deposit = gpm_d_gargantuan_sinkhole }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_gargantuan_sinkhole }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_discharging_field }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_discharging_field }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_giant_trees }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_giant_trees }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_crystal_jungle }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_crystal_jungle }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_floating_islands }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_floating_islands }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_amoeba_sea }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_amoeba_sea }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_glass_towers }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_glass_towers }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_howling_peaks }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_howling_peaks }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_mega_fungi }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_mega_fungi }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_energy_storm }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_energy_storm }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_forgotten_deposit }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_forgotten_deposit }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_lava_lake }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_lava_lake }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_titanic_cave }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_titanic_cave }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_abandoned_stargate }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_abandoned_stargate }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_bioluminescent_forest }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_bioluminescent_forest }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_land_reefs }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_land_reefs }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_Collapsed_habitat }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_Collapsed_habitat }
+# 			}
+# 			if = { limit = { has_deposit = gpm_d_ruined_arcology }
+# 				remove_modifier = gpm_planet_wonder_discovered
+# 				add_modifier = { modifier = gpm_wonder_ruined_arcology }
+# 			}
+# 		}
+# 	}
+# }

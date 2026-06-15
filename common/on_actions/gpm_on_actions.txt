@@ -4,21 +4,27 @@ on_game_start = {
 		gpm_flag.1 						# sets global flags
 		gpm_flag.2 						# sets global flags
 	}
-	random_events = {
-		50 = 0
-		10 = gpm_colony.4000 			# Capital Event - ethos unique modifier spawning list
-	}
+	# random_events = {
+		# 50 = 0
+		# 10 = gpm_colony.4000 			# Capital Event - ethos unique modifier spawning list
+	# }
 }
 
 on_game_start_country = {
 	events = {
 		gpm_game_start.0				# Initialiser mod menu
-		gpm_game_start.1				# Death World origin Start
-		gpm_game_start.2				# Precursor origin Start
-		gpm_game_start.3				# Fallen Empire origin Start
-		gpm_game_start.4				# scion origin start
+		# gpm_game_start.1				# Death World origin Start
+		# gpm_game_start.2				# Precursor origin Start
+		# gpm_game_start.3				# Fallen Empire origin Start
+		# gpm_game_start.4				# scion origin start
 	}
 }
+
+# on_single_player_save_game_load = {
+# 	events = {
+# 		gpm_game_start.5				# wondrous world save game replacer 
+# 	}
+# }
 
 on_survey_planet = {
 	events = {
@@ -110,6 +116,9 @@ on_survey_planet = {
 		gpm_survey_minor.155
 		gpm_survey_minor.160
 		gpm_survey_minor.165
+		
+		gpm_NOMADS.2			# on survey habitable world apply ark ship visit special project
+		gpm_NOMADS.4			# on survey habitable world apply ark ship visit special project
 	}
 }
 
@@ -421,7 +430,8 @@ on_megastructure_built = {
 # From = Terraformer
 on_terraforming_complete = {
     events = {
-		gpm_terraform.78871
+		# gpm_terraform.78871		# global terraform event to clear planet modifiers and arange deposits.
+		gpm_terraform.10		# new experimental terraform event
     }
 }
 
@@ -430,8 +440,11 @@ on_terraforming_complete = {
 on_tech_increased = {
 	events = {
 		gpm_colony.9000			# spawn xenomorph army
+		gpm_com.3				# message to notify player the terraforming policy has been unlocked
 	}
 }
+
+
 
 on_colonized = {
 	events = {
@@ -467,6 +480,14 @@ on_fleet_destroyed_victim = {
 	}
 }
 
+
+on_fleet_enter_orbit = {
+	events = {
+		gpm_NOMADS.1			# Ark ship enters orbit of a world with planet modifiers
+		gpm_NOMADS.3			# Ark ship enters orbit of a world with planet modifiers
+
+	}
+}
 #Fired whenever a new owner is set for a planet,
 #be it after a war or through a trade
 #From = Country scope (new owner)

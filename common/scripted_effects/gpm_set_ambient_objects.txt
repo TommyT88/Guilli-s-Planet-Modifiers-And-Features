@@ -3239,6 +3239,7 @@ gpm_set_binary_asteroid = {
 # Ambient object flag = gpm_ambient_ring
 
 gpm_set_planetary_rings = {
+	optimize_memory
 	if = {
 		limit = { has_ring = yes }
 		set_ring = no

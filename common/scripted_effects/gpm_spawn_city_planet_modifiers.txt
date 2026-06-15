@@ -26,7 +26,7 @@ gpm_spawn_city_planet_modifier = {
 	optimize_memory
 	random_list = {
 		100 = {
-			add_modifier = { modifier = "gpm_relic_factories" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_relic_factories" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_relic_factories" }
 			# (Not) on these planets
@@ -37,7 +37,7 @@ gpm_spawn_city_planet_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_relic_generators" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_relic_generators" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_relic_generators" }
 			# (Not) on these planets
@@ -59,7 +59,7 @@ gpm_spawn_city_planet_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_relic_lower_levels" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_relic_lower_levels" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_relic_lower_levels" }
 			# (Not) on these planets
@@ -69,11 +69,130 @@ gpm_spawn_city_planet_modifier = {
 			# Weight Factor
 			modifier = { factor = @default }
 		}
+		100 = {
+			add_modifier = { modifier = "gpm_relic_xenonion" }
+			# set of 3 bilboards with messages
+			random_list = { 
+				10 = {
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_1"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 0
+						}
+					}
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_2"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 75
+						}
+					}
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_3"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 135
+						}
+					}
+				}
+				10 = {
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_4"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 0
+						}
+					}
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_5"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 75
+						}
+					}
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_6"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 135
+						}
+					}
+				}
+				10 = {
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_7"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 0
+						}
+					}
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_8"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 75
+						}
+					}
+					create_ambient_object = {
+						type = "gpm_xenonion_billboard_9"
+						location = this
+					}
+					last_created_ambient_object = {
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 135
+						}
+					}
+				}
+			}
+			# Not with these modifiers
+			modifier = { factor = 0 has_modifier = "gpm_relic_xenonion" }
+			# (Not) on these planets
+			modifier = { factor = 0 has_planet_flag = gpm_is_new_ecumenopolis }
+			# Never in these systems
+			# Tweaks
+			# Weight Factor
+			modifier = { factor = @rare }
+		}
 	}
 }
 
 gpm_roll_city_planet_modifiers = {
-	#optimize_memory
+	optimize_memory
 	# Planetary Diversity mod compatibility:
 	if = {
 		limit = { gpm_has_pd_planet_modifier = yes }

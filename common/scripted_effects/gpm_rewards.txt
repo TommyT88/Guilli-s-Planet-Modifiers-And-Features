@@ -11,7 +11,7 @@
 @tier1unitymax_half = 500
 
 gpm_random_minor_artifacts_5 = {
-	### 
+	optimize_memory
 	custom_tooltip = minor_artifacts_found
 
 	if =  {
@@ -56,9 +56,8 @@ gpm_random_minor_artifacts_5 = {
 		add_resource = { minor_artifacts = 200 }
 	}
 }
-
 gpm_random_minor_artifacts_precursor = {
-	### 
+	optimize_memory 
 	custom_tooltip = minor_artifacts_found
 
 	if =  {
@@ -107,9 +106,8 @@ gpm_random_minor_artifacts_precursor = {
 		add_resource = { minor_artifacts = 400 }
 	}
 }
-
 gpm_random_minor_artifacts_precursor_big = {
-	### 
+	optimize_memory 
 	custom_tooltip = minor_artifacts_found
 
 	if =  {
@@ -161,215 +159,8 @@ gpm_random_minor_artifacts_precursor_big = {
 		add_resource = { minor_artifacts = 800 }
 	}
 }
-
-gpm_d_random_minerals_gal_gen = {
-	### 
-	locked_random_list = {
-		80 = { add_deposit = d_minerals_2 }
-		40 = { add_deposit = d_minerals_3 }
-		20 = { add_deposit = d_minerals_4 }
-		10 = { add_deposit = d_minerals_5 }
-		5 = { add_deposit = d_minerals_6 }
-		5 = { add_deposit = d_minerals_7 }
-		4 = { add_deposit = d_minerals_8 }
-		4 = { add_deposit = d_minerals_9 }
-		3 = { add_deposit = d_minerals_10 }
-		3 = { add_deposit = gpm_d_minerals_11 }
-		2 = { add_deposit = gpm_d_minerals_12 }
-		2 = { add_deposit = gpm_d_minerals_13 }
-		1 = { add_deposit = gpm_d_minerals_14 }
-		1 = { add_deposit = gpm_d_minerals_15 }
-	}
-}
-
-gpm_d_random_minerals = {
-	### 
-	locked_random_list = {
-		# 2 = { add_deposit = d_minerals_1 }
-		10 = { add_deposit = d_minerals_2 }
-		6 = { add_deposit = d_minerals_3 }
-		2 = { add_deposit = d_minerals_4 }
-		1 = { add_deposit = d_minerals_5 }
-	}
-}
-
-gpm_d_random_minerals_med = {
-	### 
-	locked_random_list = {
-		16 = { add_deposit = d_minerals_6 }
-		8 = { add_deposit = d_minerals_7 }
-		4 = { add_deposit = d_minerals_8 }
-		2 = { add_deposit = d_minerals_9 }
-		1 = { add_deposit = d_minerals_10 }
-	}
-}
-
-gpm_d_random_minerals_big = {
-	### 
-	locked_random_list = {
-		16 = { add_deposit = gpm_d_minerals_11 }
-		8 = { add_deposit = gpm_d_minerals_12 }
-		4 = { add_deposit = gpm_d_minerals_13 }
-		2 = { add_deposit = gpm_d_minerals_14 }
-		1 = { add_deposit = gpm_d_minerals_15 }
-	}
-}
-
-gpm_d_random_energy_gal_gen = {
-	locked_random_list = {
-		80 = { add_deposit = d_energy_2 }
-		40 = { add_deposit = d_energy_3 }
-		20 = { add_deposit = d_energy_4 }
-		10 = { add_deposit = d_energy_5 }
-		5 = { add_deposit = d_energy_6 }
-		5 = { add_deposit = d_energy_7 }
-		4 = { add_deposit = d_energy_8 }
-		4 = { add_deposit = d_energy_9 }
-		3 = { add_deposit = d_energy_10 }
-		3 = { add_deposit = gpm_d_energy_11 }
-		2 = { add_deposit = gpm_d_energy_12 }
-		2 = { add_deposit = gpm_d_energy_13 }
-		1 = { add_deposit = gpm_d_energy_14 }
-		1 = { add_deposit = gpm_d_energy_15 }
-	}
-}
-
-gpm_d_random_energy_gal_gen_big = {
-	locked_random_list = {
-		11 = { add_deposit = d_energy_2 }
-		9 = { add_deposit = d_energy_3 }
-		7 = { add_deposit = d_energy_4 }
-		7 = { add_deposit = d_energy_5 }
-		5 = { add_deposit = d_energy_6 }
-		5 = { add_deposit = d_energy_7 }
-		4 = { add_deposit = d_energy_8 }
-		4 = { add_deposit = d_energy_9 }
-		3 = { add_deposit = d_energy_10 }
-		3 = { add_deposit = gpm_d_energy_11 }
-		2 = { add_deposit = gpm_d_energy_12 }
-		2 = { add_deposit = gpm_d_energy_13 }
-		1 = { add_deposit = gpm_d_energy_14 }
-		1 = { add_deposit = gpm_d_energy_15 }
-	}
-}
-
-gpm_d_random_energy = {
-	locked_random_list = {
-		8 = { add_deposit = d_energy_2 }
-		4 = { add_deposit = d_energy_3 }
-		2 = { add_deposit = d_energy_4 }
-		1 = { add_deposit = d_energy_5 }
-	}
-}
-
-gpm_d_random_energy_med = {
-	locked_random_list = {
-		16 = { add_deposit = d_energy_6 }
-		8 = { add_deposit = d_energy_7 }
-		4 = { add_deposit = d_energy_8 }
-		2 = { add_deposit = d_energy_9 }
-		1 = { add_deposit = d_energy_10 }
-	}
-}
-
-gpm_d_random_energy_big = {
-	locked_random_list = {
-		16 = { add_deposit = gpm_d_energy_11 }
-		8 = { add_deposit = gpm_d_energy_12 }
-		4 = { add_deposit = gpm_d_energy_13 }
-		2 = { add_deposit = gpm_d_energy_14 }
-		1 = { add_deposit = gpm_d_energy_15 }
-	}
-}
-
-gpm_d_random_food_gal_gen = {
-	### 
-	locked_random_list = {
-		30 = { add_deposit = gpm_d_food_4 }
-		25 = { add_deposit = gpm_d_food_5 }
-		20 = { add_deposit = gpm_d_food_6 }
-		15 = { add_deposit = gpm_d_food_7 }
-		10 = { add_deposit = gpm_d_food_8 }
-		5 = { add_deposit = gpm_d_food_9 }
-		4 = { add_deposit = gpm_d_food_10 }
-		3 = { add_deposit = gpm_d_food_15 }
-		2 = { add_deposit = gpm_d_food_20 }
-		1 = { add_deposit = gpm_d_food_25 }
-	}
-}
-
-gpm_d_random_food = {
-	### 
-	locked_random_list = {
-		2 = { add_deposit = gpm_d_food_4 }
-		4 = { add_deposit = gpm_d_food_5 }
-		8 = { add_deposit = gpm_d_food_6 }
-		16 = { add_deposit = gpm_d_food_7 }
-		32 = { add_deposit = gpm_d_food_8 }
-		16 = { add_deposit = gpm_d_food_9 }
-		8 = { add_deposit = gpm_d_food_10 }
-		4 = { add_deposit = gpm_d_food_15 }
-		2 = { add_deposit = gpm_d_food_20 }
-		1 = { add_deposit = gpm_d_food_25 }
-	}
-}
-
-gpm_d_random_food_big = {
-	### 
-	locked_random_list = {
-		8 = { add_deposit = gpm_d_food_10 }
-		4 = { add_deposit = gpm_d_food_15 }
-		2 = { add_deposit = gpm_d_food_20 }
-		1 = { add_deposit = gpm_d_food_25 }
-	}
-}
-
-gpm_d_random_alloys = {
-	### 
-	locked_random_list = {
-		64 = { add_deposit = d_alloys_1 }
-		128 = { add_deposit = d_alloys_2 }
-		64 = { add_deposit = d_alloys_3 }
-		32 = { add_deposit = d_alloys_4 }
-		16 = { add_deposit = d_alloys_5 }
-		8 = { add_deposit = gpm_d_alloys_6 }
-		4 = { add_deposit = gpm_d_alloys_7 }
-		2 = { add_deposit = gpm_d_alloys_8 }
-		1 = { add_deposit = gpm_d_alloys_9 }
-	}
-}
-
-gpm_d_random_alloys_gal_gen = {
-	### 
-	locked_random_list = {
-		300 = { add_deposit = d_alloys_1 }
-		240 = { add_deposit = d_alloys_2 }
-		120 = { add_deposit = d_alloys_3 }
-		60 = { add_deposit = d_alloys_4 }
-		30 = { add_deposit = d_alloys_5 }
-		15 = { add_deposit = gpm_d_alloys_6 }
-		8 = { add_deposit = gpm_d_alloys_7 }
-		4 = { add_deposit = gpm_d_alloys_8 }
-		1 = { add_deposit = gpm_d_alloys_9 }
-	}
-}
-
-gpm_d_random_trade_small = {
-	### 
-	locked_random_list = {
-		2 = { add_deposit = d_trade_value_1 }
-		4 = { add_deposit = d_trade_value_2 }
-		8 = { add_deposit = d_trade_value_3 }
-		16 = { add_deposit = d_trade_value_4 }
-		8 = { add_deposit = d_trade_value_5 }
-		4 = { add_deposit = d_trade_value_6 }
-		2 = { add_deposit = d_trade_value_7 }
-		1 = { add_deposit = d_trade_value_8 }
-	}
-}
-
-gpm_random_trade_small_lump_sum = {
-	### 
+gpm_random_trade_small = {
+	optimize_memory 
 	locked_random_list = {
 		15 = { add_resource = { trade = 50 } }
 		25 = { add_resource = { trade = 100 } }
@@ -381,25 +172,8 @@ gpm_random_trade_small_lump_sum = {
 		1 = { add_resource = { trade = 450 } }
 	}
 }
-
-gpm_d_random_trade = {
-	### 
-	locked_random_list = {
-		# 46 = { add_deposit = d_trade_value_1 }
-		# 37 = { add_deposit = d_trade_value_2 }
-		# 29 = { add_deposit = d_trade_value_3 }
-		# 22 = { add_deposit = d_trade_value_4 }
-		# 16 = { add_deposit = d_trade_value_5 }
-		16 = { add_deposit = d_trade_value_6 }
-		8 = { add_deposit = d_trade_value_7 }
-		4 = { add_deposit = d_trade_value_8 }
-		2 = { add_deposit = d_trade_value_9 }
-		1 = { add_deposit = d_trade_value_10 }
-	}
-}
-
-gpm_random_trade_lump_sum = {
-	### 
+gpm_random_trade_medium = {
+	optimize_memory 
 	locked_random_list = {
 		15 = { add_resource = { trade = 100 } }
 		25 = { add_resource = { trade = 200 } }
@@ -411,213 +185,171 @@ gpm_random_trade_lump_sum = {
 		1 = { add_resource = { trade = 900 } }
 	}
 }
-
-gpm_d_random_physics_gal_gen = {
-	### 
+gpm_random_trade_large = {
+	optimize_memory 
 	locked_random_list = {
-		46 = { add_deposit = d_physics_1 }
-		32 = { add_deposit = d_physics_2 }
-		16 = { add_deposit = d_physics_3 }
-		8 = { add_deposit = d_physics_4 }
-		2 = { add_deposit = d_physics_5 }
-		1 = { add_deposit = d_physics_6 }
+		15 = { add_resource = { trade = 600 } }
+		25 = { add_resource = { trade = 800 } }
+		50 = { add_resource = { trade = 1000 } }
+		25 = { add_resource = { trade = 1200 } }
+		15 = { add_resource = { trade = 1400 } }
+		10 = { add_resource = { trade = 1600 } }
+		5 = { add_resource = { trade = 1800 } }
+		1 = { add_resource = { trade = 2000 } }
 	}
 }
-
-
-gpm_d_random_society_gal_gen = {
-	### 
-	locked_random_list = {
-		46 = { add_deposit = d_society_1 }
-		32 = { add_deposit = d_society_2 }
-		16 = { add_deposit = d_society_3 }
-		8 = { add_deposit = d_society_4 }
-		2 = { add_deposit = d_society_5 }
-		1 = { add_deposit = d_society_6 }
-	}
-}
-
-gpm_d_random_engineering_gal_gen = {
-	### 
-	locked_random_list = {
-		46 = { add_deposit = d_engineering_1 }
-		32 = { add_deposit = d_engineering_2 }
-		16 = { add_deposit = d_engineering_3 }
-		8 = { add_deposit = d_engineering_4 }
-		2 = { add_deposit = d_engineering_5 }
-		1 = { add_deposit = d_engineering_6 }
-	}
-}
-
-gpm_d_random_physics = {
-	### 
-	locked_random_list = {
-		8 = { add_deposit = d_physics_1 }
-		16 = { add_deposit = d_physics_2 }
-		8 = { add_deposit = d_physics_3 }
-		4 = { add_deposit = d_physics_4 }
-		2 = { add_deposit = d_physics_5 }
-		1 = { add_deposit = d_physics_6 }
-	}
-}
-gpm_d_random_physics_big = {
-	### 
-	locked_random_list = {
-		6 = { add_deposit = d_physics_5 }
-		5 = { add_deposit = d_physics_6 }
-		4 = { add_deposit = d_physics_7 }
-		3 = { add_deposit = d_physics_8 }
-		2 = { add_deposit = d_physics_9 }
-		1 = { add_deposit = d_physics_10 }
-	}
-}
-
-gpm_d_random_society = {
-	### 
-	locked_random_list = {
-		8 = { add_deposit = d_society_1 }
-		16 = { add_deposit = d_society_2 }
-		8 = { add_deposit = d_society_3 }
-		4 = { add_deposit = d_society_4 }
-		2 = { add_deposit = d_society_5 }
-		1 = { add_deposit = d_society_6 }
-	}
-}
-gpm_d_random_society_big = {
-	### 
-	locked_random_list = {
-		6 = { add_deposit = d_society_5 }
-		5 = { add_deposit = d_society_6 }
-		4 = { add_deposit = d_society_7 }
-		3 = { add_deposit = d_society_8 }
-		2 = { add_deposit = d_society_9 }
-		1 = { add_deposit = d_society_10 }
-	}
-}
-
-gpm_d_random_engineering = {
-	### 
-	locked_random_list = {
-		8 = { add_deposit = d_engineering_1 }
-		16 = { add_deposit = d_engineering_2 }
-		8 = { add_deposit = d_engineering_3 }
-		4 = { add_deposit = d_engineering_4 }
-		2 = { add_deposit = d_engineering_5 }
-		1 = { add_deposit = d_engineering_6 }
-	}
-}
-gpm_d_random_engineering_big = {
-	### 
-	locked_random_list = {
-		6 = { add_deposit = d_engineering_5 }
-		5 = { add_deposit = d_engineering_6 }
-		4 = { add_deposit = d_engineering_7 }
-		3 = { add_deposit = d_engineering_8 }
-		2 = { add_deposit = d_engineering_9 }
-		1 = { add_deposit = d_engineering_10 }
-	}
-}
-
-gpm_d_random_research = {
-	### 
-	locked_random_list = {
-		10 = { add_deposit = gpm_d_double_science_phy_soc }
-		10 = { add_deposit = gpm_d_double_science_soc_phy }
-		10 = { add_deposit = gpm_d_double_science_phy_eng }
-		10 = { add_deposit = gpm_d_double_science_eng_phy }
-		10 = { add_deposit = gpm_d_double_science_soc_eng }
-		10 = { add_deposit = gpm_d_double_science_eng_soc }
-		10 = { add_deposit = gpm_d_triple_science }
-	}
-}
-
-gpm_d_random_crystals = {
-	### 
-	locked_random_list = {
-		4 = { add_deposit = d_rare_crystals_1 }
-		8 = { add_deposit = d_rare_crystals_2 }
-		4 = { add_deposit = d_rare_crystals_3 }
-		2 = { add_deposit = d_rare_crystals_4 }
-		1 = { add_deposit = d_rare_crystals_5 }
-	}
-}
-
-gpm_d_random_gasses = {
-	### 
-	locked_random_list = {
-		4 = { add_deposit = d_exotic_gases_1 }
-		8= { add_deposit = d_exotic_gases_2 }
-		4 = { add_deposit = d_exotic_gases_3 }
-		2 = { add_deposit = d_exotic_gases_4 }
-		1 = { add_deposit = d_exotic_gases_5 }
-	}
-}
-
-gpm_d_random_motes = {
-	### 
-	locked_random_list = {
-		4 = { add_deposit = d_volatile_motes_1 }
-		8 = { add_deposit = d_volatile_motes_2 }
-		4 = { add_deposit = d_volatile_motes_3 }
-		2 = { add_deposit = d_volatile_motes_4 }
-		1 = { add_deposit = d_volatile_motes_5 }
-	}
-}
-
-gpm_d_random_unity_deposit = {
-	### 
-	locked_random_list = {
-		16 = { add_deposit = gpm_d_unity_space_deposit_2 }
-		8 = { add_deposit = gpm_d_unity_space_deposit_3 }
-		4 = { add_deposit = gpm_d_unity_space_deposit_4 }
-		2 = { add_deposit = gpm_d_unity_space_deposit_5 }
-		1 = { add_deposit = gpm_d_unity_space_deposit_6 }
-	}
-}
-
-gpm_d_random_unity_deposit_big = {
-	### 
-	locked_random_list = {
-		16 = { add_deposit = gpm_d_unity_space_deposit_7 }
-		8 = { add_deposit = gpm_d_unity_space_deposit_8 }
-		4 = { add_deposit = gpm_d_unity_space_deposit_9 }
-		2 = { add_deposit = gpm_d_unity_space_deposit_10 }
-		1 = { add_deposit = gpm_d_unity_space_deposit_15 }
-	}
-}
-
 gpm_random_unity = {
-	### 
+	optimize_memory 
 	locked_random_list = {
-		10 = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 2
-				min = 20
-				max = 100
-			}
-		}
-		10 = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 4
-				min = 30
-				max = 150
-			}
-		}
-		10 = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 8
-				min = 40
-				max = 250
-			}
-		}
+		15 = { add_resource = { unity = 50 } }
+		25 = { add_resource = { unity = 75 } }
+		50 = { add_resource = { unity = 100 } }
+		25 = { add_resource = { unity = 125 } }
+		15 = { add_resource = { unity = 150 } }
+		10 = { add_resource = { unity = 175 } }
+		5 = { add_resource = { unity = 200 } }
+		1 = { add_resource = { unity = 250 } }
 	}
 }
+gpm_random_exotic_gases = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { exotic_gases = 25 } }
+		25 = { add_resource = { exotic_gases = 50 } }
+		50 = { add_resource = { exotic_gases = 75 } }
+		25 = { add_resource = { exotic_gases = 100 } }
+		15 = { add_resource = { exotic_gases = 125 } }
+		10 = { add_resource = { exotic_gases = 150 } }
+		5 = { add_resource = { exotic_gases = 175 } }
+		1 = { add_resource = { exotic_gases = 200 } }
+	}
+}
+gpm_random_rare_crystals = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { rare_crystals = 25 } }
+		25 = { add_resource = { rare_crystals = 50 } }
+		50 = { add_resource = { rare_crystals = 75 } }
+		25 = { add_resource = { rare_crystals = 100 } }
+		15 = { add_resource = { rare_crystals = 125 } }
+		10 = { add_resource = { rare_crystals = 150 } }
+		5 = { add_resource = { rare_crystals = 175 } }
+		1 = { add_resource = { rare_crystals = 200 } }
+	}
+}
+gpm_random_volatile_motes = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { volatile_motes = 25 } }
+		25 = { add_resource = { volatile_motes = 50 } }
+		50 = { add_resource = { volatile_motes = 75 } }
+		25 = { add_resource = { volatile_motes = 100 } }
+		15 = { add_resource = { volatile_motes = 125 } }
+		10 = { add_resource = { volatile_motes = 150 } }
+		5 = { add_resource = { volatile_motes = 175 } }
+		1 = { add_resource = { volatile_motes = 200 } }
+	}
+}
+gpm_random_sr_zro = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { sr_zro = 25 } }
+		25 = { add_resource = { sr_zro = 50 } }
+		50 = { add_resource = { sr_zro = 75 } }
+		25 = { add_resource = { sr_zro = 100 } }
+		15 = { add_resource = { sr_zro = 125 } }
+		10 = { add_resource = { sr_zro = 150 } }
+		5 = { add_resource = { sr_zro = 175 } }
+		1 = { add_resource = { sr_zro = 200 } }
+	}
+}
+gpm_random_sr_living_metal = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { sr_living_metal = 25 } }
+		25 = { add_resource = { sr_living_metal = 50 } }
+		50 = { add_resource = { sr_living_metal = 75 } }
+		25 = { add_resource = { sr_living_metal = 100 } }
+		15 = { add_resource = { sr_living_metal = 125 } }
+		10 = { add_resource = { sr_living_metal = 150 } }
+		5 = { add_resource = { sr_living_metal = 175 } }
+		1 = { add_resource = { sr_living_metal = 200 } }
+	}
+}
+gpm_random_sr_dark_matter = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { sr_dark_matter = 25 } }
+		25 = { add_resource = { sr_dark_matter = 50 } }
+		50 = { add_resource = { sr_dark_matter = 75 } }
+		25 = { add_resource = { sr_dark_matter = 100 } }
+		15 = { add_resource = { sr_dark_matter = 125 } }
+		10 = { add_resource = { sr_dark_matter = 150 } }
+		5 = { add_resource = { sr_dark_matter = 175 } }
+		1 = { add_resource = { sr_dark_matter = 200 } }
+	}
+}
+gpm_random_nanites = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { nanites = 25 } }
+		25 = { add_resource = { nanites = 50 } }
+		50 = { add_resource = { nanites = 75 } }
+		25 = { add_resource = { nanites = 100 } }
+		15 = { add_resource = { nanites = 125 } }
+		10 = { add_resource = { nanites = 150 } }
+		5 = { add_resource = { nanites = 175 } }
+		1 = { add_resource = { nanites = 200 } }
+	}
+}
+gpm_random_astral_threads = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { astral_threads = 25 } }
+		25 = { add_resource = { astral_threads = 50 } }
+		50 = { add_resource = { astral_threads = 75 } }
+		25 = { add_resource = { astral_threads = 100 } }
+		15 = { add_resource = { astral_threads = 125 } }
+		10 = { add_resource = { astral_threads = 150 } }
+		5 = { add_resource = { astral_threads = 175 } }
+		1 = { add_resource = { astral_threads = 200 } }
+	}
+}
+gpm_random_alloys = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { alloys = 100 } }
+		25 = { add_resource = { alloys = 200 } }
+		50 = { add_resource = { alloys = 300 } }
+		25 = { add_resource = { alloys = 400 } }
+		15 = { add_resource = { alloys = 500 } }
+		10 = { add_resource = { alloys = 600 } }
+		5 = { add_resource = { alloys = 700 } }
+		1 = { add_resource = { alloys = 800 } }
+	}
+}
+gpm_random_consumer_goods = {
+	optimize_memory 
+	locked_random_list = {
+		15 = { add_resource = { consumer_goods = 100 } }
+		25 = { add_resource = { consumer_goods = 200 } }
+		50 = { add_resource = { consumer_goods = 300 } }
+		25 = { add_resource = { consumer_goods = 400 } }
+		15 = { add_resource = { consumer_goods = 500 } }
+		10 = { add_resource = { consumer_goods = 600 } }
+		5 = { add_resource = { consumer_goods = 700 } }
+		1 = { add_resource = { consumer_goods = 800 } }
+	}
+}
+
+
+
+
+
+
 
 gpm_random_experience_big = {
-	### 
+	optimize_memory 
 	if = {
 		limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 		locked_random_list = {
@@ -644,7 +376,7 @@ gpm_random_experience_big = {
 
 # scope = leader
 gpm_random_experience = {
-	### 
+	optimize_memory 
 	if = {
 		limit = { owner = { has_policy_flag = gpm_more_discovery_rewards } }
 		locked_random_list = {
@@ -670,8 +402,8 @@ gpm_random_experience = {
 }
 
 gpm_exploration_policy_away_teams_reward = {
-	custom_tooltip = gpm_survey_reward_bonus
-	### 
+	optimize_memory
+	custom_tooltip = gpm_survey_reward_bonus 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = { root.leader = { gpm_random_experience_big = yes } }
@@ -767,7 +499,7 @@ gpm_exploration_policy_away_teams_reward = {
 }
 
 gpm_exploration_policy_extra_reward = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -843,7 +575,7 @@ gpm_exploration_policy_extra_reward = {
 }
 
 gpm_random_precursor_tech_reward = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -914,7 +646,7 @@ gpm_random_precursor_tech_reward = {
 
 # Random reward list for precursor remnants
 gpm_random_reward_precursor_remnants = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1002,7 +734,7 @@ gpm_random_reward_precursor_remnants = {
 }
 # Random reward list for precursor energy grid
 gpm_random_reward_precursor_energy_grid = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1090,7 +822,7 @@ gpm_random_reward_precursor_energy_grid = {
 }
 # Random reward list for precursor satellite grid
 gpm_random_reward_precursor_satalite_grid = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1178,7 +910,7 @@ gpm_random_reward_precursor_satalite_grid = {
 }
 # Random reward list for precursor city
 gpm_random_reward_precursor_city = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1277,7 +1009,7 @@ gpm_random_reward_precursor_city = {
 }
 # Random reward list for precursor shipyards
 gpm_random_reward_precursor_shipyards = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1390,7 +1122,7 @@ gpm_random_reward_precursor_shipyards = {
 }
 # Random reward list for precursor planetary gun
 gpm_random_reward_precursor_planetary_gun = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1478,7 +1210,7 @@ gpm_random_reward_precursor_planetary_gun = {
 }
 # Random reward list for precursor bunker grid
 gpm_random_reward_precursor_bunker_grid = {
-	###
+	optimize_memory
 	#Reroll_random = yes	
 	locked_random_list = {
 		10 = {
@@ -1566,7 +1298,7 @@ gpm_random_reward_precursor_bunker_grid = {
 }
 # Random reward list for precursor mechs
 gpm_random_reward_precursor_mechs = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1668,7 +1400,7 @@ gpm_random_reward_precursor_mechs = {
 }
 # Random reward list for precursor planetary shields
 gpm_random_reward_precursor_planetary_shield = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1767,7 +1499,7 @@ gpm_random_reward_precursor_planetary_shield = {
 }
 # Random reward list for precursor floating city
 gpm_random_reward_precursor_floating_city = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1855,7 +1587,7 @@ gpm_random_reward_precursor_floating_city = {
 }
 # Random reward list for precursor capital complex
 gpm_random_reward_precursor_capital_complex = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -1960,7 +1692,7 @@ gpm_random_reward_precursor_capital_complex = {
 }
 # Random reward list for precursor communication hub
 gpm_random_reward_precursor_communication_hub = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2048,7 +1780,7 @@ gpm_random_reward_precursor_communication_hub = {
 }
 # Random reward list for precursor singularity drive
 gpm_random_reward_precursor_singularity_drive = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2183,7 +1915,7 @@ gpm_random_reward_precursor_singularity_drive = {
 }
 # Random reward list for precursor eternal fortress
 gpm_random_reward_precursor_eternal_fortress = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2271,7 +2003,7 @@ gpm_random_reward_precursor_eternal_fortress = {
 }
 # Random reward list for precursor prison planet
 gpm_random_reward_precursor_prison_planet = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2372,7 +2104,7 @@ gpm_random_reward_precursor_prison_planet = {
 }
 # Random reward list for precursor mines
 gpm_random_reward_precursor_mines = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2460,7 +2192,7 @@ gpm_random_reward_precursor_mines = {
 }
 # Random reward list for precursor manufactorium
 gpm_random_reward_precursor_manufactorium = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2610,7 +2342,7 @@ gpm_random_reward_precursor_manufactorium = {
 }
 # Random reward list for precursor vaults
 gpm_random_reward_precursor_vaults = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2724,7 +2456,7 @@ gpm_random_reward_precursor_vaults = {
 }
 # Random reward list for precursor crashed spacestation
 gpm_random_reward_precursor_crashed_spacestation = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2812,7 +2544,7 @@ gpm_random_reward_precursor_crashed_spacestation = {
 }
 # Random reward list for precursor battleground ruins
 gpm_random_reward_precursor_battleground_ruins = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -2928,7 +2660,7 @@ gpm_random_reward_precursor_battleground_ruins = {
 }
 # Random reward list for precursor outpost ruins
 gpm_random_reward_precursor_outpost_ruins = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -3016,7 +2748,7 @@ gpm_random_reward_precursor_outpost_ruins = {
 }
 # Random reward list for precursor harbor ruins
 gpm_random_reward_precursor_harbor_ruins = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -3104,7 +2836,7 @@ gpm_random_reward_precursor_harbor_ruins = {
 }
 # Random reward list for precursor ruins
 gpm_random_reward_precursor_ruins = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -3192,7 +2924,7 @@ gpm_random_reward_precursor_ruins = {
 }
 # Random reward list for precursor obelisks
 gpm_random_reward_precursor_obelisks = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		10 = {
@@ -3294,7 +3026,7 @@ gpm_random_reward_precursor_obelisks = {
 
 
 gpm_random_precursor_empire_dig_site_bonus = {
-	### 
+	optimize_memory 
 	#Reroll_random = yes
 	locked_random_list = {
 		50 = {

@@ -18,7 +18,7 @@ ship_event = {
 
 	trigger = {
 		from = {
-			gpm_is_planet_class_normal_habitable = no
+			gpm_is_planet_class_habitable_natural = no
 			NOT = {
 				has_planet_flag = deposit_added
 			}
@@ -76,7 +76,7 @@ ship_event = {
 			NOT = {
 				has_planet_flag = deposit_added
 			}
-			gpm_is_planet_class_normal_habitable = no
+			gpm_is_planet_class_habitable_natural = no
 			is_colonizable = no
 			gpm_has_precursor_modifiers = no
 			has_deposit_for = shipclass_mining_station

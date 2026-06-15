@@ -2,7 +2,7 @@
 namespace = gpm_terraform
 
 # Machine World options
-planet_event = {
+carrier_event = {
 	id = gpm_terraform.1
 	title = "gpm_terraform.1.name"
 	desc = "gpm_terraform.1.desc"
@@ -52,13 +52,15 @@ planet_event = {
 	}
 }
 
-### Terraform Finish (NEW)
-planet_event = {
+### Terraform Finish
+carrier_event = {
 	id = gpm_terraform.78871
 	hide_window = yes
 
 	is_triggered_only = yes
 
+	trigger = {
+	}
 
 
 	immediate = {
@@ -66,6 +68,12 @@ planet_event = {
 		THIS = {
 			# set planet flag to tell scripts this planet is now a terraformed planet (used to limit removing vanilla features
 			set_planet_flag = gpm_is_terraformed_world
+			
+			############################################################################
+			### Temporary Flag to prevent on_planet_class_changed from triggering
+			### Removed at end of terraform script(s)
+			set_planet_flag = gpm_is_terraforming
+			############################################################################
 
 			# Set scaling variables
 			if = {
@@ -171,7 +179,7 @@ planet_event = {
 			# Roll planet modifiers based on planet class and amount based on starting choice
 			if = {
 				limit = {
-					gpm_is_planet_class_normal_habitable = yes
+					gpm_is_planet_class_habitable_natural = yes
 				}
 				gpm_roll_terraform_modifiers = yes
 			}
@@ -198,7 +206,7 @@ planet_event = {
 			if = {
 				limit = {
 					OR = {
-						gpm_is_planet_class_normal_habitable = yes
+						gpm_is_planet_class_habitable_natural = yes
 						gpm_is_planet_class_hive = yes
 					}
 					NOT = { gpm_is_planet_class_city = yes }
@@ -211,8 +219,6 @@ planet_event = {
 
 			# # Cleanup
 			# clear_variable = gpm_planet_size_multiplier
-			# clear_variable = gpm_planet_size_multiplier_wonders
-			# clear_variable = gpm_planet_size_multiplier_precursor
 			# clear_variable = gpm_galaxy_setting_habitable_worlds_scale
 
 			# We switch non-planet versions with planet versions
@@ -231,6 +237,313 @@ planet_event = {
 			# 	remove_deposit = d_artifacts_planet_3
 			# 	add_deposit = d_artifacts_planet_3
 			# }
+			
+			############################################################################
+			### Temporary Flag to prevent on_planet_class_changed from triggering
+			### Removed at end of terraform script(s)
+			remove_planet_flag = gpm_is_terraforming
+			############################################################################
+		}
+	}
+}
+
+### Terraform Finish
+carrier_event = {
+	id = gpm_terraform.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+
+	immediate = {
+		log = "Starting terraforming script gpm_terraform.10 on world << [THIS.GetName]>>"
+		
+		
+		THIS = {
+			############################################################################
+			### Temporary Flag to prevent on_planet_class_changed from triggering
+			### Temporary Flag to determine which modifiers are allowed to be added to planets from the scripted_effect spawn modifier files
+			### Removed at end of terraform script(s)
+			set_planet_flag = gpm_is_terraforming
+			############################################################################
+			
+			
+			############################################################################
+			### Set a permanent planet flag to tell scripts this planet has been terraformed
+			### Removed when planet class changes outside of terraforming
+			set_planet_flag = gpm_is_terraformed_world
+			############################################################################
+
+			
+			############################################################################
+			### (re)Set scaling planet flags incase planet size changed or they were removed
+			if = {
+				limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
+				gpm_scale_planet_modifiers = yes
+			}
+			############################################################################
+
+
+			############################################################################
+			### Planet Modifiers upgrade module
+			############################################################################
+			# switch "fixable" negative modifiers with their fixed variant
+			# this has to happen before the removal section!
+			gpm_switch_fixable_modifiers = yes
+
+
+			############################################################################
+			### Remove modifiers that dont make sense
+			############################################################################
+			# Remove valuable world/terraform candidate modifier
+			# This gets removed trough the terraform links, but in some edge cases it doesn't
+			if = {
+				limit = { has_modifier = terraforming_candidate }
+				remove_modifier = terraforming_candidate
+			}
+			if = {
+				limit = { has_modifier = frozen_terraforming_candidate }
+				remove_modifier = frozen_terraforming_candidate
+			}
+			if = {
+				limit = { has_modifier = toxic_terraforming_candidate }
+				remove_modifier = toxic_terraforming_candidate
+			}
+			# Remove bad modifiers from missmatching planet classes
+			gpm_remove_negative_modifiers = yes
+
+			# Remove neutral modifiers from missmatching planet classes
+			gpm_remove_neutral_modifiers = yes
+
+			# Remove good modifiers from missmatching planet classes
+			gpm_remove_positive_modifiers = yes
+
+			# removes all terraform modifiers
+			# used to avoid stacking them with repeat terraforming
+			gpm_remove_terraform_modifiers = yes
+			
+			
+			############################################################################
+			### City worlds
+			############################################################################
+			if = {
+				limit = { gpm_is_planet_class_city = yes }
+				
+				# incase an already terraformed world gets turned into a city world. We remove the terraforming tier modifier
+				remove_modifier = gpm_terraforming_world_engineering
+				remove_modifier = gpm_terraforming_world_engineering_shaper
+				remove_modifier = gpm_terraforming_world_engineering_mastery
+				remove_modifier = gpm_terraforming_world_engineering_shaper_mastery
+				
+				
+			}
+			
+			
+			############################################################################
+			### Machine worlds
+			############################################################################
+			if = {
+				limit = { gpm_is_planet_class_machine = yes	}
+				
+				# purge all modifiers (natural <TODO CHANGE naming>)
+				gpm_purge_all_planetary_modifiers = yes
+				
+				# purge ? modifiers (natural <TODO CHANGE naming>)
+				gpm_purge_all_core_modifiers = yes
+				
+				# roll a single random machine world modifier
+				gpm_roll_machine_world_modifiers = yes
+			}
+
+			if = {
+				limit = { gpm_is_planet_class_machine = no	}
+
+				# remove all machine modifiers if its not a machine world
+				gpm_remove_machine_world_modifiers = yes
+			}
+			
+			
+			############################################################################
+			### Hive worlds
+			############################################################################
+			
+			if = {
+				limit = { 
+					space_owner = { has_policy_flag = gpm_terraforming_roll_random_modifiers }
+					gpm_is_planet_class_hive = yes	
+				}
+				# add new modifiers limited by max modifier options
+				gpm_roll_terraform_modifiers = yes
+			}
+			# apply a Pristine terraforming modifier from the Pristine terraforming policy
+			# we do this last so the terraform modifier is ensured to be the most right modifier on the UI
+			if = {
+				limit = { 
+					space_owner = { has_policy_flag = gpm_terraforming_roll_prestine_modifiers }
+					NOT = { has_modifier = gpm_terraforming_world_engineering }
+					gpm_is_planet_class_hive = yes	
+				}
+				add_modifier = { modifier = gpm_terraforming_world_engineering }
+			}
+			
+			############################################################################
+			### Natural Habitable worlds
+			############################################################################
+			# Roll planet modifiers based on Terraforming policy and planet class and amount based on starting choice
+			if = {
+				limit = { 
+					space_owner = { has_policy_flag = gpm_terraforming_roll_random_modifiers }
+					gpm_is_planet_class_habitable_natural = yes	
+				}
+				
+				# add new modifiers limited by max modifier options
+				# gpm_roll_terraform_modifiers = yes
+				# gpm_roll_normal_habitable_modifiers = yes
+				### Hot Dry World ###
+				if = {
+					limit = { gpm_is_planet_class_hot_dry = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_hot_dry = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_hot_dry = yes
+					}
+				}
+				### Hot Wet World ###
+				if = {
+					limit = { gpm_is_planet_class_hot_wet = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_hot_wet = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_hot_wet = yes
+					}
+				}
+				### Cold Dry World ###
+				if = {
+					limit = { gpm_is_planet_class_cold_dry = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_cold_dry = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_cold_dry = yes
+					}
+				}
+				### Cold Wet World ###
+				if = {
+					limit = { gpm_is_planet_class_cold_wet = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_cold_wet = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_cold_wet = yes
+					}
+				}
+				### Ocean World ###
+				if = {
+					limit = { gpm_is_planet_class_ocean = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_ocean = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_ocean = yes
+					}
+				}
+				### Gaia World ###
+				if = {
+					limit = { gpm_is_planet_class_gaia = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_gaia = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_gaia = yes
+					}
+				}
+				### Volcanic World ###
+				if = {
+					limit = { gpm_is_planet_class_volcanic = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_volcanic = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_volcanic = yes
+					}
+				}
+				### Toxic Habitable World ###
+				if = {
+					limit = { gpm_is_planet_class_toxic_habitable = yes }
+					# Roll a terraforming modifier matching the planet class
+					gpm_roll_terraform_modifier_toxic_habitable = yes
+					# With AP World Shaper you get another modifier!
+					if = {
+						limit = { space_owner = { has_ascension_perk = ap_world_shaper } }
+						gpm_roll_terraform_modifier_toxic_habitable = yes
+					}
+				}
+			}
+			# apply a Pristine terraforming modifier from the Pristine terraforming policy
+			# we do this last so the terraform modifier is ensured to be the most right modifier on the UI
+			if = {
+				limit = { 
+					space_owner = { has_policy_flag = gpm_terraforming_roll_prestine_modifiers }
+					NOT = { has_modifier = gpm_terraforming_world_engineering }
+					gpm_is_planet_class_habitable_natural = yes	
+				}
+				add_modifier = { modifier = gpm_terraforming_world_engineering }
+			}
+			
+
+			############################################################################
+			### GFX and Effects catcher
+			############################################################################
+			# if this world has a specific modifier reapply matching planet graphics
+			if = {
+				limit = { has_modifier = gpm_precursor_energy_grid }
+				gpm_set_precursor_energy_grid = yes
+			}
+			
+			
+			############################################################################
+			### Planetary Deposits and Blockers
+			############################################################################
+			# reapply unique deposits if they are missing
+			gpm_reapply_deposits_on_planet_class_change = yes
+			
+			# Remove all blockers incase terraforming did not clear them. 
+			clear_blockers = yes
+			
+			# We check to see if we need to remove and add planetary features after the world was changed.
+			gpm_remove_planetary_features = yes
+			
+			# We roll new planetary features matching the planet modifiers on the world
+			gpm_roll_planetary_features = yes
+			
+			# spawn a random precursor deposit if there is a precursor planet modifier but no deposit
+			if = {
+				limit = {
+					gpm_has_precursor_modifiers = yes
+					NOT = { gpm_has_precursor_feature = yes }
+				}
+				gpm_spawn_precursor_features = yes
+			}
+			
+	
+			############################################################################
+			### Remove temporary Flag to prevent on_planet_class_changed from triggering
+			remove_planet_flag = gpm_is_terraforming
+			############################################################################
+			
+			log = "Ending terraforming script gpm_terraform.10 on world << [THIS.GetName]>>"
 		}
 	}
 }

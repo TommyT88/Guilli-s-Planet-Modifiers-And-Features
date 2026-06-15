@@ -1,0 +1,167 @@
+##########################################################################
+# Icon Frames
+##########################################################################
+# 1 = Good (green)
+# 2 = Mixed (yellow)
+# 3 = Bad (red)
+# 4 = Neutral/flavor (White)
+# 5 = Precursor (Light Blue special)
+# 6 = Event (Purple)
+# 7 = Terraforming (Leaves green)
+# 8 = Machine Worlds(Orange)
+# 9 = Fallen Empires (Pink-Purple)
+# 10= gold
+# 11= Habitats (cogwheel grey)
+# 12= pink 
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+
+
+
+gpm_wonder_gargantuan_sinkhole = {
+	district_mining_max_add = 15
+	planet_miners_minerals_produces_add = 2
+	planet_miners_engineering_research_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_discharging_field = {
+	district_generator_max_add = 15
+	planet_technician_energy_produces_add = 2
+	planet_technician_physics_research_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_giant_trees = {
+	district_farming_max_add = 15
+	planet_farmers_exotic_gases_produces_add = 2
+	planet_farmers_society_research_produces_add = 3
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_crystal_jungle = {
+	district_mining_max_add = 15
+	planet_miners_rare_crystals_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_floating_islands = {
+	planet_max_districts_add = 15
+	planet_soldiers_unity_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_amoeba_sea = {
+	planet_technician_society_research_produces_add = 4
+	planet_miners_society_research_produces_add = 4
+	planet_farmers_society_research_produces_add = 4
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_glass_towers = {
+	district_mining_max_add = 10
+	planet_miners_engineering_research_produces_add = 6
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_howling_peaks = {
+	district_mining_max_add = 15
+	planet_miners_alloys_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_mega_fungi = {
+	district_farming_max_add = 20
+	planet_farmers_energy_produces_add = 4
+	planet_farmers_volatile_motes_produces_add = 2
+	planet_farmers_food_produces_add = -2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_energy_storm = {
+	planet_districts_energy_upkeep_mult = -1
+	planet_structures_energy_upkeep_mult = -1
+	planet_jobs_energy_upkeep_mult = -1
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_titanic_cave = {
+	planet_max_districts_add = 20
+	planet_orbital_bombardment_damage = -0.90
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_abandoned_stargate = {
+	planet_physicists_sr_dark_matter_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_bioluminescent_forest = {
+	planet_farmers_volatile_motes_produces_add = 2
+	planet_farmers_sr_zro_produces_add = 1
+	district_farming_max_add = 10
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_land_reefs = {
+	district_mining_max_add = 10
+	planet_miners_energy_produces_add = 4
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_lava_lake = {
+	district_mining_max_add = 20
+	planet_miners_exotic_gases_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_Collapsed_habitat = {
+	planet_max_districts_add = 10
+	planet_miners_sr_living_metal_produces_add = 1
+	planet_technician_engineering_research_produces_add = 4
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_forgotten_deposit = {
+	planet_physicists_sr_dark_matter_produces_add = 1
+	planet_biologists_sr_zro_produces_add = 1
+	planet_engineers_sr_living_metal_produces_add = 1
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_ruined_arcology = {
+	planet_max_districts_add = 10
+	planet_engineers_minor_artifacts_produces_add = 1
+	planet_engineers_alloys_produces_add = 2
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}
+gpm_wonder_dangerous_hives = {
+	planet_max_districts_add = 10
+	district_mining_max_add = 10
+	planet_miners_volatile_motes_produces_add = 2
+	planet_miners_engineering_research_produces_add = 4
+	planet_resettlement_unemployed_destination_mult = 1.0
+	icon = "gfx/interface/icons/planet_modifiers/gpm_planet_wonder_discovered.dds"
+	icon_frame = 6
+}

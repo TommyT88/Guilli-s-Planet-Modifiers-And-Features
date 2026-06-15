@@ -194,7 +194,7 @@ decision_gpm_ringworld_idyllic_gardens = {
 	}
 	
 	allow = {
-		pop_amount > 5000
+		pop_amount >= 5000
 		NOT = { has_modifier = gpm_ringworld_badlands }
 	}
 
@@ -566,7 +566,7 @@ decision_gpm_ringworld_mass_transit = {
 	}
 	
 	allow = {
-		pop_amount > 10000
+		pop_amount >= 10000
 	}
 
 	effect = {

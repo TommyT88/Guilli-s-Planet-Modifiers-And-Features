@@ -38,7 +38,7 @@ special_project = {
 special_project = {
 	key = "GPM_COLONY_SHIP_3"
 	event_chain = "gpm_colony_ship_event_chain"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = engineering_technology
 	picture = GFX_evt_gpm_salvaged_spaceship
@@ -50,7 +50,7 @@ special_project = {
 	}
 	
 	on_success = {
-		planet_event = { id = gpm_colony.4 }
+		carrier_event = { id = gpm_colony.4 }
 	}
 	
 	on_fail = {
@@ -60,7 +60,7 @@ special_project = {
 special_project = {
 	key = "GPM_COLONY_SHIP_4"
 	event_chain = "gpm_colony_ship_event_chain"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = engineering_technology
 	picture = GFX_evt_gpm_salvaged_spaceship
@@ -101,7 +101,7 @@ special_project = {
 # Science Discovery Terraform 1
 special_project = {
 	key = "GPM_DISCOVERY_TERRAFORM_1"
-	cost = 0
+	# cost = 0
 	days_to_research = 220
 	tech_department = society_technology
 	picture = GFX_evt_gpm_hot_core
@@ -128,7 +128,7 @@ special_project = {
 # Science Discovery Terraform 2
 special_project = {
 	key = "GPM_DISCOVERY_TERRAFORM_2"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_hot_core
@@ -159,7 +159,7 @@ special_project = {
 # Science Discovery Terraform 3
 special_project = {
 	key = "GPM_DISCOVERY_TERRAFORM_3"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_hot_core
@@ -191,7 +191,7 @@ special_project = {
 # Science Discovery prec remnants
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_REMNANTS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_remnants
@@ -219,7 +219,7 @@ special_project = {
 # # Science Discovery prec energy grid
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_ENERGY_GRID"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_energy_grid
@@ -247,7 +247,7 @@ special_project = {
 # # Science Discovery prec sattelite grid
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_SATTELITE_GRID"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_satelite_grid
@@ -278,7 +278,7 @@ special_project = {
 # # Science Discovery prec city
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_CITY"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_city
@@ -306,7 +306,7 @@ special_project = {
 # # Science Discovery prec shipyard
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_SHIPYARD"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_shipyards
@@ -334,7 +334,7 @@ special_project = {
 # # Science Discovery prec planetary gun
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_PLANETARY_GUN"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_planetary_gun
@@ -362,7 +362,7 @@ special_project = {
 # # Science Discovery prec bunker grid
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_BUNKER_GRID"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_bunker_grid
@@ -390,7 +390,7 @@ special_project = {
 # # Science Discovery prec mechs
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_MECHS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_mechs
@@ -418,7 +418,7 @@ special_project = {
 # # Science Discovery prec planetary shield
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_PLANETARY_SHIELD"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_planetary_shield
@@ -446,7 +446,7 @@ special_project = {
 # # Science Discovery prec floating city
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_FLOATING_CITY"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_floating_city
@@ -474,7 +474,7 @@ special_project = {
 # # Science Discovery prec cap
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_CAPITAL"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_capital_complex
@@ -502,7 +502,7 @@ special_project = {
 # # Science Discovery prec communication hub
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_COM_HUB"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_communication_hub
@@ -530,7 +530,7 @@ special_project = {
 # # Science Discovery prec singularity
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_SINGULARITY"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_singularity_drive
@@ -558,7 +558,7 @@ special_project = {
 # # Science Discovery prec eternal fortress
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_ETERNAL_FORTRESS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_eternal_fortress
@@ -586,7 +586,7 @@ special_project = {
 # # Science Discovery prec prison planet
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_PRISON_PLANET"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_prison_planet
@@ -620,7 +620,7 @@ special_project = {
 # # Science Discovery prec mines
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_MINES"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_mines
@@ -648,7 +648,7 @@ special_project = {
 # # Science Discovery prec manufactorium
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_MANUFACTORIUM"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_manufactorium
@@ -676,7 +676,7 @@ special_project = {
 # # Science Discovery prec vaults
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_VAULTS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_vaults
@@ -704,7 +704,7 @@ special_project = {
 # # Science Discovery prec crashed spacestation
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_CRASHED_SPACESTATION"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_crashed_spacestation
@@ -732,7 +732,7 @@ special_project = {
 # # Science Discovery prec battleground ruins
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_BATTLEGROUND_RUINS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_battleground_ruins
@@ -760,7 +760,7 @@ special_project = {
 # # Science Discovery prec outpost ruins
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_OUTPOST_RUINS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_outpost_ruins
@@ -788,7 +788,7 @@ special_project = {
 # # Science Discovery prec harbor ruins
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_HARBOR_RUINS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_harbor_ruins
@@ -819,7 +819,7 @@ special_project = {
 # # Science Discovery prec ruins
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_RUINS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_ruins
@@ -847,7 +847,7 @@ special_project = {
 # # Science Discovery prec obelisks
 # special_project = {
 # 	key = "GPM_DISCOVERY_PRECURSOR_OBELISKS"
-# 	cost = 0
+# 	# cost = 0
 # 	days_to_research = 150
 # 	tech_department = society_technology
 # 	picture = GFX_evt_gpm_precursor_obelisks
@@ -875,7 +875,7 @@ special_project = {
 # Science Discovery gaia world
 special_project = {
 	key = "GPM_DISCOVERY_GAIA"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_gaia_world
@@ -916,7 +916,7 @@ special_project = {
 # Science Discovery holy planet
 special_project = {
 	key = "GPM_DISCOVERY_HOLY_PLANET"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_holy_world
@@ -944,7 +944,7 @@ special_project = {
 # Science Discovery floating islands
 special_project = {
 	key = "GPM_DISCOVERY_FLOATING_ISLANDS"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_floating_islands
@@ -972,7 +972,7 @@ special_project = {
 # Science Discovery battlefield
 special_project = {
 	key = "GPM_DISCOVERY_BATTLEFIELD"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_ruined_battlefield
@@ -1000,7 +1000,7 @@ special_project = {
 # Science Discovery ship graveyard
 special_project = {
 	key = "GPM_DISCOVERY_SHIP_GRAVEYARD"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_spaceship_graveyard2
@@ -1028,7 +1028,7 @@ special_project = {
 # Science Discovery artificial water
 special_project = {
 	key = "GPM_DISCOVERY_ARTIFICIAL_WATER"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_artificial_water
@@ -1056,7 +1056,7 @@ special_project = {
 # Science Discovery android pleasure palace
 special_project = {
 	key = "GPM_DISCOVERY_PLEASURE_PALACE"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_pleasure_palace
@@ -1093,7 +1093,7 @@ special_project = {
 # Science Discovery ancient temple
 special_project = {
 	key = "GPM_DISCOVERY_ANCIENT_TEMPLE"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_ancient_temple
@@ -1124,7 +1124,7 @@ special_project = {
 # Science Discovery crystal moon palace
 special_project = {
 	key = "GPM_DISCOVERY_CRYSTAL_MOON_PALACE"
-	cost = 0
+	# cost = 0
 	days_to_research = 26
 	tech_department = society_technology
 	picture = GFX_evt_gpm_moon_palace
@@ -1152,7 +1152,7 @@ special_project = {
 # Science Discovery plasmoid life
 special_project = {
 	key = "GPM_DISCOVERY_PLASMOID_LIFE"
-	cost = 0
+	# cost = 0
 	days_to_research = 220
 	tech_department = society_technology
 	picture = GFX_evt_gpm_plasmoid_life
@@ -1180,7 +1180,7 @@ special_project = {
 # Science Discovery temple of the ancient one
 special_project = {
 	key = "GPM_DISCOVERY_TEMPLE_ANCIENT_ONE"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_ancient_one
@@ -1211,7 +1211,7 @@ special_project = {
 # Science Discovery proto forest
 special_project = {
 	key = "GPM_DISCOVERY_PROTO_FOREST"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_proto_forest
@@ -1245,7 +1245,7 @@ special_project = {
 # Science Discovery hive world
 special_project = {
 	key = "GPM_DISCOVERY_HIVE_WORLD"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_hive_world
@@ -1273,7 +1273,7 @@ special_project = {
 # Science Discovery arachnaphobia
 special_project = {
 	key = "GPM_DISCOVERY_ARACHNAPHOBIA"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_spiders
@@ -1301,7 +1301,7 @@ special_project = {
 # Science Discovery giant worm
 special_project = {
 	key = "GPM_DISCOVERY_GIANT_WORM"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_giant_worm
@@ -1329,7 +1329,7 @@ special_project = {
 # Science Discovery artificial core
 special_project = {
 	key = "GPM_DISCOVERY_ARTIFICIAL_CORE"
-	cost = 0
+	# cost = 0
 	days_to_research = 180
 	tech_department = society_technology
 	picture = GFX_evt_gpm_artificial_core
@@ -1360,7 +1360,7 @@ special_project = {
 # Science Discovery surface of bones
 special_project = {
 	key = "GPM_DISCOVERY_SURFACE_OF_BONES"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_surface_of_bones
@@ -1391,7 +1391,7 @@ special_project = {
 # Science Discovery strange alien eggs
 special_project = {
 	key = "GPM_DISCOVERY_ALIEN_EGGS"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_alien_eggs
@@ -1427,7 +1427,7 @@ special_project = {
 # Science Discovery mushroom forests
 special_project = {
 	key = "GPM_DISCOVERY_MUSHROOM_FORESTS"
-	cost = 0
+	# cost = 0
 	days_to_research = 150
 	tech_department = society_technology
 	picture = GFX_evt_gpm_mushroom_forest
@@ -1463,7 +1463,7 @@ special_project = {
 # Crystal Beasts Research Project
 # special_project = {
 	# key = "GPM_CRYSTALINE_BEASTS_RESEARCH"
-	# cost = 0
+	# # cost = 0
 	# days_to_research = 270
 	# tech_department = society_technology
 	# picture = GFX_evt_gpm_mushroom_forest
@@ -1476,14 +1476,14 @@ special_project = {
 	# }
 	
 	# on_success = {
-		# planet_event = { id = gpm_colony.361 }
+		# carrier_event = { id = gpm_colony.361 }
 	# }
 # }
 
 # Plant Crystallization Research Project
 # special_project = {
 	# key = "GPM_CRYSTALIZATION_RESEARCH"
-	# cost = 0
+	# # cost = 0
 	# days_to_research = 270
 	# tech_department = society_technology
 	# picture = GFX_evt_gpm_mushroom_forest
@@ -1496,13 +1496,13 @@ special_project = {
 	# }
 	
 	# on_success = {
-		# planet_event = { id = gpm_colony.363 }
+		# carrier_event = { id = gpm_colony.363 }
 	# }
 # }
 
 special_project = {
 	key = "GPM_HUNT_KILL_BOTS"
-	cost = 0
+	# cost = 0
 	days_to_research = 360
 	tech_department = engineering_technology
 	picture = GFX_evt_gpm_salvaged_spaceship

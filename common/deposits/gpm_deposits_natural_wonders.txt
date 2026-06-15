@@ -6,9 +6,6 @@ gpm_d_gargantuan_sinkhole = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		district_mining_max_add = 15
-		planet_miners_minerals_produces_add = 2
-		planet_miners_engineering_research_produces_add = 2
 	}
 
 	# weight 0: event added
@@ -23,9 +20,6 @@ gpm_d_discharging_field = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		district_generator_max_add = 15
-		planet_technician_energy_produces_add = 2
-		planet_technician_physics_research_produces_add = 2
 	}
 
 	# weight 0: event added
@@ -39,40 +33,7 @@ gpm_d_giant_trees = {
 	category = deposit_cat_rare
 	should_swap_deposit_on_terraforming = no
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			district_farming_max_add = 15
-			planet_farmers_food_produces_add = 2
-			planet_farmers_society_research_produces_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			district_farming_max_add = 15
-			planet_farmers_food_produces_add = 2
-			planet_farmers_society_research_produces_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {	
-			district_farming_max_add = 15
-			planet_farmers_exotic_gases_produces_add = 1
-			planet_farmers_society_research_produces_add = 3
-		}
+	planet_modifier = {
 	}
 
 	# weight 0: event added
@@ -86,37 +47,7 @@ gpm_d_crystal_jungle = {
 	category = deposit_cat_rare
 	should_swap_deposit_on_terraforming = no
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			district_farming_max_add = 10
-			planet_farmers_rare_crystals_produces_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			district_farming_max_add = 10
-			planet_farmers_rare_crystals_produces_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			district_mining_max_add = 10
-			planet_miners_rare_crystals_produces_add = 1
-		}
+	planet_modifier = {
 	}
 
 	# weight 0: event added
@@ -131,9 +62,6 @@ gpm_d_floating_islands = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_max_districts_add = 10
-		planet_defense_armies_add = 20
-		planet_soldiers_unity_produces_add = 2
 	}
 
 	# weight 0: event added
@@ -148,9 +76,6 @@ gpm_d_amoeba_sea = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_technician_society_research_produces_add = 4
-		planet_miners_society_research_produces_add = 4
-		planet_farmers_society_research_produces_add = 4
 	}
 
 	# weight 0: event added
@@ -165,8 +90,6 @@ gpm_d_glass_towers = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		district_mining_max_add = 6
-		planet_miners_engineering_research_produces_add = 6
 	}
 
 	# weight 0: event added
@@ -181,8 +104,6 @@ gpm_d_howling_peaks = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		district_mining_max_add = 15
-		planet_miners_alloys_produces_add = 1
 	}
 
 	# weight 0: event added
@@ -197,38 +118,7 @@ gpm_d_mega_fungi = {
 	should_swap_deposit_on_terraforming = no
 
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			district_farming_max_add = 20
-			planet_farmers_food_produces_add = 6
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			district_farming_max_add = 20
-			planet_farmers_food_produces_add = 6
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {	
-			district_farming_max_add = 20
-			planet_farmers_energy_produces_add = 12
-			planet_farmers_food_produces_add = -4
-		}
+	planet_modifier = {
 	}
 
 	# weight 0: event added
@@ -243,16 +133,6 @@ gpm_d_energy_storm = {
 	should_swap_deposit_on_terraforming = no
 	
 	planet_modifier = {
-		planet_districts_energy_upkeep_mult = -1
-		planet_structures_energy_upkeep_mult = -1
-		planet_jobs_energy_upkeep_mult = -1
-	}
-
-	resources = {
-		category = planet_deposits
-		produces = {
-			energy = 40
-		}
 	}
 
 	# weight 0: event added
@@ -267,10 +147,6 @@ gpm_d_titanic_cave = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		country_resource_max_add = 30000
-		planet_orbital_bombardment_damage = -0.5		
-		planet_max_districts_add = 5
-		
 	}
 
 	# weight 0: event added
@@ -285,7 +161,6 @@ gpm_d_abandoned_stargate = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_physicists_sr_dark_matter_produces_add = 1
 	}
 
 	# weight 0: event added
@@ -300,9 +175,6 @@ gpm_d_bioluminescent_forest = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_farmers_volatile_motes_produces_add = 0.5
-		planet_farmers_sr_zro_produces_add = 0.1
-		district_farming_max_add = 5
 	}
 
 	# weight 0: event added
@@ -317,37 +189,7 @@ gpm_d_land_reefs = {
 	should_swap_deposit_on_terraforming = no
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			district_mining_max_add = 10
-			planet_miners_food_produces_add = 3
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			district_mining_max_add = 10
-			planet_miners_food_produces_add = 3
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {	
-			district_mining_max_add = 10
-			planet_miners_energy_produces_add = 3
-		}
+	planet_modifier = {
 	}
 
 	# weight 0: event added
@@ -362,9 +204,6 @@ gpm_d_lava_lake = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		district_mining_max_add = 20
-		district_farming_max_add = -10
-		planet_miners_exotic_gases_produces_add = 0.50
 	}
 
 	# weight 0: event added
@@ -379,9 +218,6 @@ gpm_d_Collapsed_habitat = {
 	should_swap_deposit_on_terraforming = no
 	
 	planet_modifier = {
-		district_mining_max_add = 5
-		planet_miners_sr_living_metal_produces_add = 0.2
-		planet_miners_engineering_research_produces_add = 3
 	}
 
 	# weight 0: event added
@@ -396,9 +232,6 @@ gpm_d_forgotten_deposit = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_engineers_sr_living_metal_produces_add = 0.5
-		planet_physicists_sr_dark_matter_produces_add = 0.5
-		planet_biologists_sr_zro_produces_add = 0.5
 	}
 
 	# weight 0: event added
@@ -413,7 +246,6 @@ gpm_d_ruined_arcology = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_max_districts_add = 12
 	}
 
 	# weight 0: event added
@@ -428,9 +260,6 @@ gpm_d_dangerous_hives = {
 	should_swap_deposit_on_terraforming = no
 
 	planet_modifier = {
-		planet_max_districts_add = 6
-		district_mining_max_add = 6
-		planet_miners_engineering_research_produces_add = 6
 	}
 
 	# weight 0: event added

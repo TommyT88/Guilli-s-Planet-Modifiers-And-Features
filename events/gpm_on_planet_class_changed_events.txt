@@ -1,0 +1,273 @@
+namespace = gpm_pc_changed
+
+#This = Planet
+
+# Generic event to trigger on all NON-TERRAFORMED planet class changes 
+carrier_event = {
+	id = gpm_pc_changed.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		# Temporary flag creating when terraforming to prevent this event from catching terraforming planets. We handle terraforming worlds in the terraforming script(s)
+		NOT = {	has_planet_flag = gpm_is_terraforming }
+	}
+
+	immediate = {
+		# Cleanup: remove terraformed flag
+		if = {
+			limit = { has_planet_flag = gpm_is_terraformed_world }
+			remove_planet_flag = gpm_is_terraformed_world
+		}
+	}
+}
+
+##############################################
+##############################################
+
+
+# Planet is turned into tomb world by special bombing stance
+carrier_event = {
+	id = gpm_pc_changed.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		# Temporary flag creating when terraforming to prevent this event from catching terraforming planets. We handle terraforming worlds in the terraforming script(s)
+		OR = {
+			has_planet_flag = armageddon_nuked
+			has_planet_flag = nuked_terraform
+		}
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.2 on --- [this.GetName]"
+
+		gpm_purge_all_planetary_modifiers = yes
+		gpm_random_modifier_crisis_purge = yes
+		gpm_remove_planetary_features = yes
+		gpm_roll_planetary_features = yes
+		remove_planet_flag = gpm_is_terraformed_world
+	}
+}
+
+
+# Scourge overwrites
+# Infested to Barren after Orbital Bombardment crisis.200
+carrier_event = {
+	id = gpm_pc_changed.3
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		# Temporary flag creating when terraforming to prevent this event from catching terraforming planets. We handle terraforming worlds in the terraforming script(s)
+		NOT = {	has_planet_flag = gpm_is_terraforming }
+		has_planet_flag = previously_infested
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.3 on --- [this.GetName]"
+
+		if = {
+			limit = { has_modifier = gpm_planet_wonder_discovered }
+			remove_modifier = gpm_planet_wonder_discovered
+		}
+		gpm_reset_planet_name = yes
+		# colour planet names unless this is disabled through game option
+		if = { 
+			limit = { 
+				NOT = { has_global_flag = gpm_coloured_names_disabled }
+			}
+			gpm_colour_planet_name = yes
+		}
+		gpm_purge_all_planetary_modifiers = yes
+		random_list = {
+			50 = { change_pc = pc_barren }
+			50 = { change_pc = pc_barren_cold }
+			25 = { change_pc = pc_molten }
+			25 = { change_pc = pc_frozen }
+			10 = { change_pc = pc_nuked }
+		}
+		random_list = {
+			35 = {
+				if = {
+					limit = { NOT = { has_modifier = gpm_hiveworld } }
+					add_modifier = { modifier = gpm_hiveworld days = -1 }
+				}
+			}
+			50 = { }
+		}
+		gpm_random_modifier_crisis_purge = yes
+		gpm_random_modifier_crisis_purge = yes
+		remove_planet_flag = previously_infested
+	}
+}
+
+# Planet is turned into infested planet
+carrier_event = {
+	id = gpm_pc_changed.4
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_planet_class = pc_infested
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.4 on --- [this.GetName]"
+
+		if = {
+			limit = {
+				OR = {
+					has_modifier = gpm_planet_wonder_discovered
+					has_planet_flag = gpm_is_wondrous_planet
+				}
+			}
+			remove_modifier = gpm_planet_wonder_discovered
+			set_name = {
+				key = "NAME_gpm_infested"
+				variable_string = "[This.GetName]"
+			}
+			set_planet_flag = gpm_is_infested_world
+			remove_planet_flag = gpm_is_wondrous_planet
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = gpm_is_precursor_world
+					has_planet_flag = gpm_is_wondrous_planet
+					has_planet_flag = gpm_is_infested_world
+				}
+			}
+			set_name = {
+				key = "NAME_color_red"
+				variable_string = "[This.GetName]"
+			}
+			set_planet_flag = gpm_is_infested_world
+		}
+		gpm_purge_all_planetary_modifiers = yes
+		gpm_random_modifier_crisis_purge = yes
+		gpm_random_modifier_crisis_purge = yes
+	}
+}
+
+# Planet is turned into AI planet (contigency)
+carrier_event = {
+	id = gpm_pc_changed.5
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_planet_class = pc_ai
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.5 on --- [this.GetName]"
+
+		gpm_purge_all_planetary_modifiers = yes			# -guilli
+		gpm_purge_all_core_modifiers = yes			# -guilli
+		gpm_roll_machine_world_modifiers = yes		# -guilli
+		gpm_remove_planetary_features = yes 		# -guilli
+		gpm_roll_planetary_features = yes 			# -guilli
+	}
+}
+
+# Contigency planet is destroyed
+carrier_event = {
+	id = gpm_pc_changed.6
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_planet_class = pc_broken
+		OR = {
+			has_planet_flag = machine_world_1
+			has_planet_flag = machine_world_2
+			has_planet_flag = machine_world_3
+			has_planet_flag = machine_world_4
+		}
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.6 on --- [this.GetName]"
+
+		gpm_purge_all_planetary_modifiers = yes		# -guilli
+		gpm_purge_all_core_modifiers = yes			# -guilli
+	}
+}
+
+# Planet is turned into city world
+carrier_event = {
+	id = gpm_pc_changed.7
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		# Temporary flag creating when terraforming to prevent this event from catching terraforming planets. We handle terraforming worlds in the terraforming script(s)
+		NOT = {	has_planet_flag = gpm_is_terraforming }
+		
+		gpm_is_planet_class_city = yes
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.7 on --- [this.GetName]"
+		
+		set_planet_flag = gpm_is_new_ecumenopolis
+		carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
+	}
+}
+
+# Planet is turned into gaia world from lifeseeders
+carrier_event = {
+	id = gpm_pc_changed.8
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		# Temporary flag creating when terraforming to prevent this event from catching terraforming planets. We handle terraforming worlds in the terraforming script(s)
+		NOT = {	has_planet_flag = gpm_is_terraforming }
+		
+		is_planet_class = pc_gaia
+		has_planet_flag = gaia_seeder_bloom
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.8 on --- [this.GetName]"
+
+		carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
+	}
+}
+
+# Planet is turned into nanite world 
+carrier_event = {
+	id = gpm_pc_changed.9
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_planet_class = pc_gray_goo
+	}
+
+	immediate = {
+		log = "Firing on_planet_class_changed event -- gpm_pc_changed.5 on --- [this.GetName]"
+
+		gpm_purge_all_planetary_modifiers = yes
+		gpm_purge_all_core_modifiers = yes
+		gpm_remove_precursor_modifiers = yes
+		gpm_remove_planetary_features = yes
+		remove_planet_flag = gpm_is_terraforming
+		remove_planet_flag = gpm_is_precursor_world
+		remove_planet_flag = gpm_is_precursor_world_colour
+		remove_planet_flag = gpm_is_terraforming
+		remove_planet_flag = gpm_is_wondrous_planet
+	}
+}

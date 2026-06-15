@@ -316,6 +316,24 @@ gpm_d_precursor_ruins_7_distr = {
 		weight = 0
 	}
 }
+gpm_d_precursor_excavation = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		planet_physicists_minor_artifacts_produces_add = 0.02
+		planet_biologists_minor_artifacts_produces_add = 0.02
+		planet_engineers_minor_artifacts_produces_add = 0.02
+	}
+
+	# weight 0: event added
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+
 # gpm_d_precursor_ruins_1_planet = {
 # 	is_for_colonizable = yes
 # 	category = gpm_deposit_cat_special

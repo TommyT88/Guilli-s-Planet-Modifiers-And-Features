@@ -8,7 +8,7 @@ gpm_roll_planetary_features = {
 	if = {
 		limit = {
 			OR = {
-				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_habitable_natural = yes
 				gpm_is_planet_class_nuked = yes
 				gpm_is_planet_class_city = yes
 				gpm_is_planet_class_machine = yes
@@ -21,7 +21,7 @@ gpm_roll_planetary_features = {
 	if = {
 		limit = {
 			OR = {
-				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_habitable_natural = yes
 				gpm_is_planet_class_nuked = yes
 			}
 			NOT = { gpm_is_planet_fallen_empire = yes }
@@ -154,15 +154,6 @@ gpm_roll_planetary_features_unique = {
 	if = {
 		limit = {
 			AND = {
-				has_modifier = gpm_android_pleasure_palace
-				NOT = { has_deposit = gpm_d_android_pleasure_palace }
-			}
-		}
-		add_deposit = "gpm_d_android_pleasure_palace"
-	}
-	if = {
-		limit = {
-			AND = {
 				has_modifier = gpm_precursor_planetary_shield
 				NOT = { has_deposit = gpm_d_precursor_planetary_shield }
 			}
@@ -178,611 +169,16 @@ gpm_roll_planetary_features_unique = {
 		}
 		add_deposit = "gpm_d_precursor_capital_complex"
 	}
-	if = {
-		limit = {
-			AND = {
-				has_modifier = gpm_temple_of_the_ancient_one
-				NOT = { has_deposit = gpm_d_temple_of_the_ancient_one }
-			}
-		}
-		add_deposit = "gpm_d_temple_of_the_ancient_one"
-	}
 }
 
 # roll normal habitable features
 gpm_roll_planetary_features_normal_habitable = {
-
-	if = {
-		limit = { has_modifier = gpm_ruined_battlefield }
-		add_deposit = gpm_d_ruined_battlefield
-	}
-	if = {
-		limit = { has_modifier = gpm_spaceship_graveyard }
-		add_deposit = gpm_d_spaceship_graveyard
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_spaceship_graveyard }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_unusual_formations }
-		add_deposit = gpm_d_unusual_formations
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_unusual_formations }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_ice_flora }
-		add_deposit = gpm_d_ice_flora
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_ice_flora }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_planetwide_forest }
-		add_deposit = gpm_d_planetwide_forest
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_planetwide_forest }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_dense_forests }
-		add_deposit = gpm_d_dense_forests
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_dense_forests }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_proto_forests }
-		add_deposit = gpm_d_proto_forests
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_proto_forests }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_temple_of_the_ancient_one }
-		add_deposit = gpm_d_temple_of_the_ancient_one
-	}
-	if = {
-		limit = { 
-			has_modifier = gpm_arachnophobia
-			NOT = { has_global_flag = "gpm_spider_features_disabled" }
-		}
-		add_deposit = gpm_d_arachnophobia
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_arachnophobia }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_dunes }
-		add_deposit = gpm_d_dunes
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_dunes }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_mushroom_forest }
-		add_deposit = gpm_d_mushroom_forest
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_mushroom_forest }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_floating_islands }
-		add_deposit = gpm_d_floating_rocks
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_floating_rocks }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_ancient_temple }
-		add_deposit = gpm_d_ancient_temple
-	}
-	if = {
-		limit = { has_modifier = gpm_friendly_wildlife }
-		random_list = {
-			10 = { add_deposit = gpm_d_small_wildlife }
-			10 = { add_deposit = gpm_d_massive_wildlife }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_small_wildlife }
-				10 = { add_deposit = gpm_d_massive_wildlife }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_strong_volcanism }
-		random_list = {
-			10 = { add_deposit = gpm_d_super_volcano }
-			10 = { add_deposit = gpm_d_obsidian_fields }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_super_volcano }
-				10 = { add_deposit = gpm_d_obsidian_fields }
-			}
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_modifier = strong_magnetic_field
-				has_modifier = gpm_strong_magnetic_field_2
-			}
-		}
-		random_list = {
-			10 = { add_deposit = gpm_d_magnetic_mountains }
-			10 = { add_deposit = gpm_d_magnetic_fields }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_magnetic_mountains }
-				10 = { add_deposit = gpm_d_magnetic_fields }
-			}
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_modifier = asteroid_impacts
-				has_modifier = gpm_asteroid_impacts_2
-			}
-		}
-		add_deposit = gpm_d_rich_crater
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_rich_crater }
-			}
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_modifier = mineral_rich
-				has_modifier = gpm_mineral_rich_2
-			}
-		}
-		add_deposit = gpm_d_surface_mineral_veins
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_surface_mineral_veins }
-			}
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_modifier = ultra_rich
-				has_modifier = gpm_ultra_rich_2
-			}
-		}
-		random_list = {
-			10 = { add_deposit = gpm_d_dense_metal_veins }
-			10 = { add_deposit = gpm_d_iron_mountain }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_dense_metal_veins }
-				10 = { add_deposit = gpm_d_iron_mountain }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_floating_islands }
-		random_list = {
-			10 = { add_deposit = gpm_d_floating_island }
-			10 = { add_deposit = gpm_d_floating_mountain }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_floating_island }
-				10 = { add_deposit = gpm_d_floating_mountain }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_hostile_flora }
-		random_list = {
-			10 = { add_deposit = gpm_d_carnivorous_jungle }
-			10 = { add_deposit = gpm_d_carnivorous_forest modifier = { factor = 0 gpm_is_planet_wet_hot = no } }
-			10 = { add_deposit = gpm_d_floating_mountain modifier = { factor = 0 gpm_is_planet_water = no } }
-		}
-		while = {
-			count = 2
-			random_list = {
-				30 = { }
-				10 = { add_deposit = gpm_d_carnivorous_jungle modifier = { factor = 0 gpm_is_planet_wet_hot = no } }
-				10 = { add_deposit = gpm_d_carnivorous_forest modifier = { factor = 0 gpm_is_planet_water = no } }
-				10 = { add_deposit = gpm_d_carnivorous_kelp modifier = { factor = 0 gpm_is_planet_water = no } }
-			}
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_modifier = gpm_magma_ocean
-				has_modifier = unstable_tectonics
-				has_modifier = gpm_unstable_tectonics_2
-			}
-		}
-		random_list = {
-			10 = { add_deposit = gpm_d_magma_ocean }
-			10 = { add_deposit = gpm_d_toxic_vent }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_magma_ocean }
-				10 = { add_deposit = gpm_d_toxic_vent }
-			}
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_modifier = gpm_toxic_gas
-				has_modifier = gpm_strong_volcanism
-			}
-		}
-		add_deposit = gpm_d_toxic_vent
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_toxic_vent }
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			OR = {
-				has_modifier = gpm_subterranean_eco_system
-				has_modifier = gpm_extensive_cavern_system
-			}
-		}
-		add_deposit = gpm_d_colossal_subterranean_cavern
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_colossal_subterranean_cavern }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_titanic_predators }
-		add_deposit = gpm_d_titanic_hunting_ground
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_titanic_hunting_ground }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_unnatural_world }
-		add_deposit = gpm_d_unnatural_crystals
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_unnatural_crystals }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_ruined_battlefield }
-		random_list = {
-			10 = { add_deposit = gpm_d_ancient_battlefield }
-			10 = { add_deposit = gpm_d_buried_remains }
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_spaceship_graveyard }
-		random_list = {
-			10 = { add_deposit = gpm_d_crashed_fighter }
-			10 = { add_deposit = gpm_d_crashed_destroyer }
-			10 = { add_deposit = gpm_d_crashed_battleship }
-			10 = { add_deposit = gpm_d_crashed_capital_ship }
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_gemstones }
-		add_deposit = gpm_d_crystal_hills
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_crystal_hills }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_endless_fish }
-		add_deposit = gpm_d_colossal_fish
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_colossal_fish }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_small_islands }
-		add_deposit = gpm_d_sprawling_archipelago
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_sprawling_archipelago }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_delicious_ingredients }
-		add_deposit = gpm_d_spice_fields
-	}
-	if = {
-		limit = { has_modifier = gpm_unusual_formations }
-		add_deposit = gpm_d_geometric_oddities
-	}
-	if = {
-		limit = { has_modifier = gpm_lingering_pollution }		
-		random_list = {
-			10 = { add_deposit = gpm_d_garbage_patch }
-			10 = { add_deposit = gpm_d_industrial_ruins }
-			10 = { add_deposit = gpm_d_radioactive_dump }
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_ice_flora }
-		random_list = {
-			10 = { add_deposit = gpm_d_ice_flower_field }
-			10 = { add_deposit = gpm_d_white_forest }
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_strange_ice_river }
-		add_deposit = gpm_d_strange_ice_river
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_strange_ice_river }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_juggernaut_manta_rays }
-		add_deposit = gpm_d_massive_ray_school
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_massive_ray_school }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_black_oily_stone }
-		add_deposit = gpm_d_the_black_stone
-	}
-	if = {
-		limit = { has_modifier = gpm_cities_in_the_sky }
-		random_list = {
-			10 = { add_deposit = gpm_d_sprawling_prestine_ruins }
-			10 = { add_deposit = gpm_d_skyscraper_village }
-		}
-		while = {
-			count = 2
-			random_list = {
-				20 = { }
-				10 = { add_deposit = gpm_d_sprawling_prestine_ruins }
-				10 = { add_deposit = gpm_d_skyscraper_village }
-			}
-		}
-	}
-	if = {
-		limit = { 
-			OR = {
-				has_modifier = gpm_dunes
-				has_modifier = gpm_giant_worm
-			}
-		}
-		add_deposit = gpm_d_sandworm_pit
-	}
-	if = {
-		limit = { has_modifier = gpm_extensive_reef_systems }
-		add_deposit = gpm_d_grand_reef
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_grand_reef }
-			}
-		}
-	}
-	if = {
-		limit = { 
-			OR = {
-				has_modifier = gpm_beautiful_lakes
-				has_modifier = gpm_warm_water_lakes
-			}
-		}
-		add_deposit = gpm_d_glistening_lake
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_glistening_lake }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_hiveworld }
-		random_list = {
-			10 = { add_deposit = gpm_d_fossilized_egg_sacks }
-			10 = { add_deposit = gpm_d_fossilized_structures }
-			10 = { add_deposit = gpm_d_fossilized_creep }
-		}
-		while = {
-			count = 2
-			random_list = {
-				30 = { }
-				10 = { add_deposit = gpm_d_fossilized_egg_sacks }
-				10 = { add_deposit = gpm_d_fossilized_structures }
-				10 = { add_deposit = gpm_d_fossilized_creep }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_giant_worm }
-		add_deposit = gpm_d_giant_skeleton
-	}
-	if = {
-		limit = { has_modifier = gpm_spirals_of_ice }
-		add_deposit = gpm_d_resonating_ice
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_resonating_ice }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_musical_creatures }
-		add_deposit = gpm_d_tiny_herds
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_tiny_herds }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_rich_soil }
-		add_deposit = gpm_d_fertile_field
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_fertile_field }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_ecological_nervous_system }
-		add_deposit = gpm_d_ecological_brain
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_ecological_brain }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_warm_water_lakes }
-		add_deposit = gpm_d_hot_springs
-	}
-	if = {
-		limit = { has_modifier = gpm_extensive_reef_systems }
-		add_deposit = gpm_d_colossal_coral_life
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_colossal_coral_life }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_salt_flats }
-		add_deposit = gpm_d_salt_flats
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_salt_flats }
-			}
-		}
-	}
-	if = {
-		limit = { has_modifier = gpm_dead_forests }
-		add_deposit = gpm_d_dead_forests
-		while = {
-			count = 2
-			random_list = {
-				10 = { }
-				10 = { add_deposit = gpm_d_dead_forests }
-			}
-		}
-	}
+	optimize_memory
 	random_list = {
-		90 = { }
-		10 = {
+		95 = { }
+		5 = {
 			add_deposit = gpm_d_oasis
-			modifier = { factor = 0 gpm_is_planet_dry_hot = no }
+			modifier = { factor = 0 gpm_is_planet_class_hot_dry = no }
 			modifier = { factor = 0 count_deposits = { type = gpm_d_oasis count >= 1 } }			# max 1
 			modifier = { factor = 0 has_deposit = d_marvelous_oasis }
 		}
@@ -830,7 +226,7 @@ gpm_roll_planetary_blockers_normal_habitable = {
 	}
 	if = {
 		limit = {
-			gpm_is_planet_wet_cold = yes
+			gpm_is_planet_class_cold_wet = yes
 			NOT = { is_planet_class = pc_ocean }
 			free_district_slots > 2
 		}
@@ -838,7 +234,7 @@ gpm_roll_planetary_blockers_normal_habitable = {
 	}
 	if = {
 		limit = {
-			gpm_is_planet_wet_hot = yes
+			gpm_is_planet_class_hot_wet = yes
 			NOT = { is_planet_class = pc_ocean }
 			free_district_slots > 2
 		}
@@ -846,14 +242,14 @@ gpm_roll_planetary_blockers_normal_habitable = {
 	}
 	if = {
 		limit = {
-			gpm_is_planet_dry_cold = yes
+			gpm_is_planet_class_cold_dry = yes
 			free_district_slots > 2
 		}
 		add_deposit = gpm_tb_crystal_growth_resources
 	}
 	if = {
 		limit = {
-			gpm_is_planet_dry_hot = yes
+			gpm_is_planet_class_hot_dry = yes
 			free_district_slots > 2
 		}
 		add_deposit = gpm_tb_lethal_overgrowth_resources
@@ -870,7 +266,7 @@ gpm_roll_planetary_blockers_normal_habitable = {
 		add_deposit = gpm_tb_automated_turrets
 	}
 	if = {
-		limit = { gpm_is_planet_water = yes free_district_slots > 2 }
+		limit = { gpm_is_planet_class_ocean = yes free_district_slots > 2 }
 		random_list = {
 			80 = { }
 			20 = { add_deposit = gpm_tb_ocean_resources }
@@ -900,27 +296,27 @@ gpm_roll_planetary_blockers_normal_habitable = {
 			}
 			5 = {
 				add_deposit =  d_dense_jungle
-				modifier = { factor = 0 gpm_is_planet_wet_hot = no }
+				modifier = { factor = 0 gpm_is_planet_class_hot_wet = no }
 			}
 			5 = {
 				add_deposit =  d_toxic_kelp
-				modifier = { factor = 0 gpm_is_planet_water = no }
+				modifier = { factor = 0 gpm_is_planet_class_ocean = no }
 			}
 			5 = {
 				add_deposit =  d_deep_sinkhole
-				modifier = { factor = 0 gpm_is_planet_dry_hot = no }
+				modifier = { factor = 0 gpm_is_planet_class_hot_dry = no }
 			}
 			10 = {
 				add_deposit =  d_quicksand_basin
-				modifier = { factor = 0 gpm_is_planet_dry_hot = no }
+				modifier = { factor = 0 gpm_is_planet_class_hot_dry = no }
 			}
 			5 = {
 				add_deposit =  d_noxious_swamp
-				modifier = { factor = 0 gpm_is_planet_wet_hot = no }
+				modifier = { factor = 0 gpm_is_planet_class_hot_wet = no }
 			}
 			5 = {
 				add_deposit =  d_massive_glacier
-				modifier = { factor = 0 gpm_is_planet_wet_cold = no }
+				modifier = { factor = 0 gpm_is_planet_class_cold_wet = no }
 			}
 			5 = {
 				add_deposit =  d_radioactive_wasteland
@@ -1114,7 +510,7 @@ gpm_spawn_precursor_features = {
 	if = {
 		limit = {
 			OR = {
-				gpm_is_planet_class_normal_habitable = yes
+				gpm_is_planet_class_habitable_natural = yes
 				gpm_is_planet_class_nuked = yes
 				gpm_is_planet_class_city = yes
 				gpm_is_planet_class_machine = yes
@@ -1201,159 +597,160 @@ gpm_spawn_precursor_features = {
 }
 
 
-# planet wonders
-gpm_spawn_planet_wonders_desert = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_gargantuan_sinkhole" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_arid = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_discharging_field" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_savannah = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_giant_trees" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_tropical = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_crystal_jungle" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_continental = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_floating_islands" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_ocean = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_amoeba_sea" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_arctic = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_glass_towers" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_alpine = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_howling_peaks" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_tundra = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_mega_fungi" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_gaia = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_energy_storm" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_nuked = {
-	optimize_memory
-	random_list = {
-		16 = { add_deposit = "gpm_d_forgotten_deposit" }
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		1 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		1 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
-gpm_spawn_planet_wonders_any = {
-	optimize_memory
-	random_list = {
-		2 = { add_deposit = "gpm_d_titanic_cave" }
-		2 = { add_deposit = "gpm_d_abandoned_stargate" }
-		2 = { add_deposit = "gpm_d_bioluminescent_forest" }
-		2 = { add_deposit = "gpm_d_land_reefs" }
-		2 = { add_deposit = "gpm_d_lava_lake" }
-		2 = { add_deposit = "gpm_d_Collapsed_habitat" }
-		2 = { add_deposit = "gpm_d_ruined_arcology" }
-	}
-}
+# # planet wonders
+# gpm_spawn_planet_wonders_desert = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_gargantuan_sinkhole" set_planet_flag = is_gpm_d_gargantuan_sinkhole_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_arid = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_discharging_field" set_planet_flag = is_gpm_d_discharging_field_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_savannah = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_giant_trees" set_planet_flag = is_gpm_d_giant_trees_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_tropical = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_crystal_jungle" set_planet_flag = is_gpm_d_crystal_jungle_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_continental = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_floating_islands" set_planet_flag = is_gpm_d_floating_islands_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_ocean = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_amoeba_sea" set_planet_flag = is_gpm_d_amoeba_sea_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_arctic = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_glass_towers" set_planet_flag = is_gpm_d_glass_towers_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_alpine = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_howling_peaks" set_planet_flag = is_gpm_d_howling_peaks_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_tundra = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_mega_fungi" set_planet_flag = is_gpm_d_mega_fungi_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_gaia = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_energy_storm" set_planet_flag = is_gpm_d_energy_storm_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_nuked = {
+	# optimize_memory
+	# random_list = {
+		# 16 = { add_deposit = "gpm_d_forgotten_deposit" set_planet_flag = is_gpm_d_forgotten_deposit_world }
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 1 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 1 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
+# gpm_spawn_planet_wonders_any = {
+	# optimize_memory
+	# random_list = {
+		# 2 = { add_deposit = "gpm_d_titanic_cave" set_planet_flag = is_gpm_d_titanic_cave_world }
+		# 2 = { add_deposit = "gpm_d_abandoned_stargate" set_planet_flag = is_gpm_d_abandoned_stargate_world }
+		# 2 = { add_deposit = "gpm_d_bioluminescent_forest" set_planet_flag = is_gpm_d_bioluminescent_forest_world }
+		# 2 = { add_deposit = "gpm_d_land_reefs" set_planet_flag = is_gpm_d_land_reefs_world }
+		# 2 = { add_deposit = "gpm_d_lava_lake" set_planet_flag = is_gpm_d_lava_lake_world }
+		# 2 = { add_deposit = "gpm_d_Collapsed_habitat" set_planet_flag = is_gpm_d_Collapsed_habitat_world }
+		# 2 = { add_deposit = "gpm_d_ruined_arcology" set_planet_flag = is_gpm_d_ruined_arcology_world }
+	# }
+# }
 
 gpm_spawn_planet_ring_modifier = {
+	optimize_memory
 	random_list = {
 		# 0 to catch exceptions
 		0 = { }

@@ -1,181 +1,65 @@
 
 gpm_remove_negative_modifiers = {
 	optimize_memory
-	if = {
-		limit = { has_modifier = gpm_frequent_thunderstorms }
-		remove_modifier = gpm_frequent_thunderstorms
-	}
-	if = {
-		limit = { has_modifier = gpm_global_thunderstorms }
-		remove_modifier = gpm_global_thunderstorms
-	}
-	if = {
-		limit = { has_modifier = gpm_thin_atmospheres }
-		remove_modifier = gpm_thin_atmospheres
-	}
-	if = {
-		limit = { has_modifier = gpm_strong_volcanism }
-		remove_modifier = gpm_strong_volcanism
-	}
-	if = {
-		limit = { has_modifier = gpm_weak_magnetic_field_2 }
-		remove_modifier = gpm_weak_magnetic_field_2
-	}
-	if = {
-		limit = { has_modifier = gpm_unstable_tectonics_2 }
-		remove_modifier = gpm_unstable_tectonics_2
-	}
-	if = {
-		limit = { has_modifier = gpm_asteroid_impacts_2 }
-		remove_modifier = gpm_asteroid_impacts_2
-	}
-	if = {
-		limit = { has_modifier = gpm_hostile_flora }
-		remove_modifier = gpm_hostile_flora
-	}
-	if = {
-		limit = { has_modifier = gpm_magma_ocean }
-		remove_modifier = gpm_magma_ocean
-	}
-	if = {
-		limit = { has_modifier = gpm_toxic_gas }
-		remove_modifier = gpm_toxic_gas
-	}
-	if = {
-		limit = { has_modifier = gpm_titanic_predators }
-		remove_modifier = gpm_titanic_predators
-	}
-	if = {
-		limit = { has_modifier = gpm_unusual_seasons }
-		remove_modifier = gpm_unusual_seasons
-	}
-	if = {
-		limit = { has_modifier = gpm_living_planet }
-		remove_modifier = gpm_living_planet
-	}
-	if = {
-		limit = { has_modifier = gpm_artificial_water }
-		remove_modifier = gpm_artificial_water
-	}
-	if = {
-		limit = { has_modifier = gpm_windy }
-		remove_modifier = gpm_windy
-	}
-	if = {
-		limit = { has_modifier = gpm_simple_organisms }
-		remove_modifier = gpm_simple_organisms
-	}
-	if = {
-		limit = { has_modifier = gpm_unusual_formations }
-		remove_modifier = gpm_unusual_formations
-	}
-	if = {
-		limit = { has_modifier = gpm_rugged_terrain }
-		remove_modifier = gpm_rugged_terrain
-	}
-	if = {
-		limit = { has_modifier = gpm_ice_age }
-		remove_modifier = gpm_ice_age
-	}
-	if = {
-		limit = { has_modifier = gpm_locust_plagues }
-		remove_modifier = gpm_locust_plagues
-	}
-	if = {
-		limit = { has_modifier = gpm_acidic_seas }
-		remove_modifier = gpm_acidic_seas
-	}
-	if = {
-		limit = { has_modifier = gpm_seasonal_flooding }
-		remove_modifier = gpm_seasonal_flooding
-	}
-	if = {
-		limit = { has_modifier = gpm_lingering_pollution }
-		remove_modifier = gpm_lingering_pollution
-	}
-	if = {
-		limit = { has_modifier = gpm_thin_ozone_layer }
-		remove_modifier = gpm_thin_ozone_layer
-	}
-	if = {
-		limit = { has_modifier = gpm_quicksand }
-		remove_modifier = gpm_quicksand
-	}
-	if = {
-		limit = { has_modifier = gpm_abominable_predators }
-		remove_modifier = gpm_abominable_predators
-	}
-	if = {
-		limit = { has_modifier = gpm_carnivorous_flies }
-		remove_modifier = gpm_carnivorous_flies
-	}
-	if = {
-		limit = { has_modifier = gpm_torrential_rainstorms }
-		remove_modifier = gpm_torrential_rainstorms
-	}
-	if = {
-		limit = { has_modifier = gpm_massive_waves }
-		remove_modifier = gpm_massive_waves
-	}
-	if = {
-		limit = { has_modifier = hazardous_weather }
-		remove_modifier = hazardous_weather
-	}
-	if = {
-		limit = { has_modifier = dangerous_wildlife }
-		remove_modifier = dangerous_wildlife
-	}
-	if = {
-		limit = { has_modifier = weak_magnetic_field }
-		remove_modifier = weak_magnetic_field
-	}
-	if = {
-		limit = { has_modifier = unstable_tectonics }
-		remove_modifier = unstable_tectonics
-	}
-	if = {
-		limit = { has_modifier = asteroid_impacts }
-		remove_modifier = asteroid_impacts
-	}
-	if = {
-		limit = { has_modifier = wild_storms }
-		remove_modifier = wild_storms
-	}
-	if = {
-		limit = { has_modifier = mineral_poor }
-		remove_modifier = mineral_poor
-	}
-	if = {
-		limit = { has_modifier = bleak_planet }
-		remove_modifier = bleak_planet
-	}
-	if = {
-		limit = { has_modifier = irradiated_planet }
-		remove_modifier = irradiated_planet
-	}
-	if = {
-		limit = { has_modifier = abandoned_terraforming }
-		remove_modifier = abandoned_terraforming
-	}
-	if = {
-		limit = { has_modifier = gpm_death_world }
-		remove_modifier = gpm_death_world
-	}
-	if = {
-		limit = { has_modifier = gpm_giant_scorpioids }
-		remove_modifier = gpm_giant_scorpioids
-	}
-	if = {
-		limit = { has_modifier = gpm_ash_barrens }
-		remove_modifier = gpm_ash_barrens
-	}
-	if = {
-		limit = { has_modifier = gpm_bacterial_dominance }
-		remove_modifier = gpm_bacterial_dominance
-	}
+	remove_modifier = gpm_frequent_thunderstorms
+	remove_modifier = gpm_global_thunderstorms
+	remove_modifier = gpm_thin_atmospheres
+	remove_modifier = gpm_strong_volcanism
+	remove_modifier = gpm_weak_magnetic_field_2
+	remove_modifier = gpm_unstable_tectonics_2
+	remove_modifier = gpm_asteroid_impacts_2
+	remove_modifier = gpm_hostile_flora
+	remove_modifier = gpm_magma_ocean
+	remove_modifier = gpm_toxic_gas
+	remove_modifier = gpm_titanic_predators
+	remove_modifier = gpm_unusual_seasons
+	remove_modifier = gpm_living_planet
+	remove_modifier = gpm_artificial_water
+	remove_modifier = gpm_windy
+	remove_modifier = gpm_simple_organisms
+	remove_modifier = gpm_unusual_formations
+	remove_modifier = gpm_rugged_terrain
+	remove_modifier = gpm_ice_age
+	remove_modifier = gpm_locust_plagues
+	remove_modifier = gpm_acidic_seas
+	remove_modifier = gpm_seasonal_flooding
+	remove_modifier = gpm_lingering_pollution
+	remove_modifier = gpm_thin_ozone_layer
+	remove_modifier = gpm_quicksand
+	remove_modifier = gpm_abominable_predators
+	remove_modifier = gpm_carnivorous_flies
+	remove_modifier = gpm_torrential_rainstorms
+	remove_modifier = gpm_massive_waves
+	remove_modifier = hazardous_weather
+	remove_modifier = dangerous_wildlife
+	remove_modifier = weak_magnetic_field
+	remove_modifier = unstable_tectonics
+	remove_modifier = asteroid_impacts
+	remove_modifier = wild_storms
+	remove_modifier = mineral_poor
+	remove_modifier = bleak_planet
+	remove_modifier = irradiated_planet
+	remove_modifier = abandoned_terraforming
+	remove_modifier = gpm_death_world
+	remove_modifier = gpm_giant_scorpioids
+	remove_modifier = gpm_ash_barrens
+	remove_modifier = gpm_bacterial_dominance
+	remove_modifier = gpm_dark_skies
 }
 gpm_remove_neutral_modifiers = {
 	optimize_memory
+	if = {
+		limit = {
+			OR = {
+				gpm_is_planet_class_ocean = yes
+				gpm_is_planet_class_gaia = yes
+				gpm_is_planet_class_hot_wet = no
+				gpm_is_planet_class_cold_wet = no
+			}
+		}
+		remove_modifier = gpm_super_dry_atmosphere
+	}
+
 	if = {
 		limit = { gpm_is_planet_class_molten = no }
 		remove_modifier = gpm_infernal_caverns
@@ -191,19 +75,34 @@ gpm_remove_neutral_modifiers = {
 	}
 	if = {
 		limit = {
-			gpm_is_planet_water = no
+			AND = {
+				gpm_is_planet_class_ocean = no
+				gpm_is_planet_class_gaia = no
+			}
 		}
 		if = {
 			limit = { has_modifier = gpm_small_islands }
 			remove_modifier = gpm_small_islands
 		}
 		if = {
+			limit = { has_modifier = gpm_small_islands_terraform }
+			remove_modifier = gpm_small_islands_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_ocean_forests }
 			remove_modifier = gpm_ocean_forests
 		}
 		if = {
+			limit = { has_modifier = gpm_ocean_forests_terraform }
+			remove_modifier = gpm_ocean_forests_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_unique_marine_habitats }
 			remove_modifier = gpm_unique_marine_habitats
+		}
+		if = {
+			limit = { has_modifier = gpm_unique_marine_habitats_terraform }
+			remove_modifier = gpm_unique_marine_habitats_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_giant_ocean_snakes }
@@ -217,8 +116,9 @@ gpm_remove_neutral_modifiers = {
 	if = {
 		limit = {
 			AND = {
-				gpm_is_planet_wet_hot = no
-				gpm_is_planet_wet_cold = no
+				gpm_is_planet_class_hot_wet = no
+				gpm_is_planet_class_cold_wet = no
+				gpm_is_planet_class_gaia = no
 			}
 		}
 		if = {
@@ -230,8 +130,16 @@ gpm_remove_neutral_modifiers = {
 			remove_modifier = gpm_dense_forests
 		}
 		if = {
+			limit = { has_modifier = gpm_dense_forests_terraform }
+			remove_modifier = gpm_dense_forests_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_planetwide_forest }
 			remove_modifier = gpm_planetwide_forest
+		}
+		if = {
+			limit = { has_modifier = gpm_planetwide_forest_terraform }
+			remove_modifier = gpm_planetwide_forest_terraform
 		}
 		#if = {
 		#	limit = { has_modifier = gpm_arachnophobia }
@@ -246,6 +154,10 @@ gpm_remove_neutral_modifiers = {
 			remove_modifier = gpm_misty
 		}
 		if = {
+			limit = { has_modifier = gpm_misty_terraform }
+			remove_modifier = gpm_misty_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_oily_riverbeds }
 			remove_modifier = gpm_oily_riverbeds
 		}
@@ -253,8 +165,9 @@ gpm_remove_neutral_modifiers = {
 	if = {
 		limit = {
 			AND = {
-				gpm_is_planet_wet_cold = no
-				gpm_is_planet_dry_cold = no
+				gpm_is_planet_class_cold_wet = no
+				gpm_is_planet_class_cold_dry = no
+				gpm_is_planet_class_gaia = no
 			}			
 		}
 		if = {
@@ -264,6 +177,10 @@ gpm_remove_neutral_modifiers = {
 		if = {
 			limit = { has_modifier = gpm_spirals_of_ice }
 			remove_modifier = gpm_spirals_of_ice
+		}
+		if = {
+			limit = { has_modifier = gpm_spirals_of_ice_terraform }
+			remove_modifier = gpm_spirals_of_ice_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_furry_packs }
@@ -277,13 +194,18 @@ gpm_remove_neutral_modifiers = {
 	if = {
 		limit = {
 			AND = {
-				gpm_is_planet_dry_hot = no
-				gpm_is_planet_dry_cold = no
+				gpm_is_planet_class_hot_dry = no
+				gpm_is_planet_class_cold_dry = no
+				gpm_is_planet_class_gaia = no
 			}	
 		}
 		if = {
 			limit = { has_modifier = gpm_dunes }
 			remove_modifier = gpm_dunes
+		}
+		if = {
+			limit = { has_modifier = gpm_dunes_terraform }
+			remove_modifier = gpm_dunes_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_giant_worm }
@@ -300,6 +222,10 @@ gpm_remove_neutral_modifiers = {
 		if = {
 			limit = { has_modifier = gpm_silicon_crystals }
 			remove_modifier = gpm_silicon_crystals
+		}
+		if = {
+			limit = { has_modifier = gpm_silicon_crystals_terraform }
+			remove_modifier = gpm_silicon_crystals_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_scoured_barrens }
@@ -322,6 +248,8 @@ gpm_remove_neutral_modifiers = {
 		limit = { has_modifier = gpm_solidified_core }
 		remove_modifier = gpm_solidified_core
 	}
+
+	# Always remove
 	remove_modifier = gpm_decaying_structures
 	remove_modifier = gpm_toxic_flora_fauna
 	remove_modifier = gpm_lava_geysers
@@ -338,9 +266,18 @@ gpm_remove_neutral_modifiers = {
 	remove_modifier = gpm_dead_forests
 	remove_modifier = gpm_blighted_lands
 	remove_modifier = gpm_flesh_eating_swamp
+	remove_modifier = gpm_acid_rain
+	remove_modifier = gpm_heavy_metal_coral
 }
 gpm_remove_positive_modifiers = {
 	optimize_memory
+	if = {
+		limit = {
+			space_owner = { NOT = { has_policy_flag = gpm_terraforming_roll_prestine_modifiers } }
+			has_modifier = gpm_terraforming_world_engineering
+		}
+		remove_modifier = gpm_terraforming_world_engineering
+	}
 	if = {
 		limit = { gpm_is_planet_class_molten = no }
 		remove_modifier = gpm_blue_magma
@@ -349,23 +286,42 @@ gpm_remove_positive_modifiers = {
 	}
 	if = {
 		limit = {
-			gpm_is_planet_water = no
+			AND = {
+				gpm_is_planet_class_ocean = no
+				gpm_is_planet_class_gaia = no
+			}
 		}
 		if = {
 			limit = { has_modifier = gpm_endless_fish }
 			remove_modifier = gpm_endless_fish
 		}
 		if = {
+			limit = { has_modifier = gpm_endless_fish_terraform }
+			remove_modifier = gpm_endless_fish_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_juggernaut_manta_rays }
 			remove_modifier = gpm_juggernaut_manta_rays
+		}
+		if = {
+			limit = { has_modifier = gpm_juggernaut_manta_rays_terraform }
+			remove_modifier = gpm_juggernaut_manta_rays_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_extensive_reef_systems }
 			remove_modifier = gpm_extensive_reef_systems
 		}
 		if = {
+			limit = { has_modifier = gpm_extensive_reef_systems_terraform }
+			remove_modifier = gpm_extensive_reef_systems_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_algae_boom }
 			remove_modifier = gpm_algae_boom
+		}
+		if = {
+			limit = { has_modifier = gpm_algae_boom_terraform }
+			remove_modifier = gpm_algae_boom_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_ocean_currents }
@@ -395,13 +351,18 @@ gpm_remove_positive_modifiers = {
 	if = {
 		limit = {
 			AND = {
-				gpm_is_planet_wet_hot = no
-				gpm_is_planet_dry_hot = no
+				gpm_is_planet_class_hot_wet = no
+				gpm_is_planet_class_hot_dry = no
+				gpm_is_planet_class_gaia = no
 			}
 		}
 		if = {
 			limit = { has_modifier = gpm_cooling_vistas }
 			remove_modifier = gpm_cooling_vistas
+		}
+		if = {
+			limit = { has_modifier = gpm_cooling_vistas_terraform }
+			remove_modifier = gpm_cooling_vistas_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_golden_fields }
@@ -411,12 +372,17 @@ gpm_remove_positive_modifiers = {
 			limit = { has_modifier = gpm_towering_cacti }
 			remove_modifier = gpm_towering_cacti
 		}
+		if = {
+			limit = { has_modifier = gpm_towering_cacti_terraform }
+			remove_modifier = gpm_towering_cacti_terraform
+		}
 	}
 	if = {
 		limit = {
 			AND = {
-				gpm_is_planet_wet_hot = no
-				gpm_is_planet_wet_cold = no
+				gpm_is_planet_class_hot_wet = no
+				gpm_is_planet_class_cold_wet = no
+				gpm_is_planet_class_gaia = no
 			}
 		}
 		if = {
@@ -435,9 +401,10 @@ gpm_remove_positive_modifiers = {
 	if = {
 		limit = {
 			AND = { 
-				gpm_is_planet_water = no
-				gpm_is_planet_wet_hot = no
-				gpm_is_planet_wet_cold = no
+				gpm_is_planet_class_ocean = no
+				gpm_is_planet_class_hot_wet = no
+				gpm_is_planet_class_cold_wet = no
+				gpm_is_planet_class_gaia = no
 			}
 		}
 		if = {
@@ -445,28 +412,49 @@ gpm_remove_positive_modifiers = {
 			remove_modifier = gpm_beautiful_lakes
 		}
 		if = {
+			limit = { has_modifier = gpm_beautiful_lakes_terraform }
+			remove_modifier = gpm_beautiful_lakes_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_warm_water_lakes }
 			remove_modifier = gpm_warm_water_lakes
+		}
+		if = {
+			limit = { has_modifier = gpm_warm_water_lakes_terraform }
+			remove_modifier = gpm_warm_water_lakes_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_steam_vents }
 			remove_modifier = gpm_steam_vents
 		}
 		if = {
+			limit = { has_modifier = gpm_steam_vents_terraform }
+			remove_modifier = gpm_steam_vents_terraform
+		}
+		if = {
 			limit = { has_modifier = gpm_mineral_pools }
 			remove_modifier = gpm_mineral_pools
+		}
+		if = {
+			limit = { has_modifier = gpm_mineral_pools_terraform }
+			remove_modifier = gpm_mineral_pools_terraform
 		}
 	}
 	if = {
 		limit = {
 			AND = {
-				gpm_is_planet_wet_cold = no
-				gpm_is_planet_dry_cold = no
+				gpm_is_planet_class_cold_wet = no
+				gpm_is_planet_class_cold_dry = no
+				gpm_is_planet_class_gaia = no
 			}	
 		}
 		if = {
 			limit = { has_modifier = gpm_ice_flora }
 			remove_modifier = gpm_ice_flora
+		}
+		if = {
+			limit = { has_modifier = gpm_ice_flora_terraform }
+			remove_modifier = gpm_ice_flora_terraform
 		}
 		if = {
 			limit = { has_modifier = gpm_strange_ice_river }
@@ -1079,7 +1067,10 @@ gpm_purge_all_planetary_modifiers = {
 	remove_modifier = corrupt_network_terminated
 	remove_modifier = unemployment_benefits
 	remove_modifier = activity_program
-	remove_modifier = standby_mode	
+	remove_modifier = standby_mode
+
+	# terraform modifiers
+	gpm_remove_terraform_modifiers = yes
 }
 gpm_purge_all_core_modifiers = {
 	optimize_memory

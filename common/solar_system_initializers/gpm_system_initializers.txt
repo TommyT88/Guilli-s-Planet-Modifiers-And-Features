@@ -315,7 +315,7 @@ gpm_guardians_init_ego = {
 				30 = { add_deposit = d_energy_7 }
 				10 = { add_deposit = d_energy_9 }
 			}
-			planet_event = {
+			carrier_event = {
 				id = gpm_guardian.1
 			}
 			# log = "GUARDIAN SYSTEM SPAWNED"
@@ -343,7 +343,7 @@ gpm_precursor_machine_system = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 100
+	spawn_chance = 50
 	max_instances = 1
 
 	flags = { gpm_precursor_machine_system hostile_system gpm_is_precursor_system }
@@ -699,6 +699,13 @@ gpm_precursor_machine_system = {
 			prevent_anomaly = yes
 			# log = "Machine System Spawned"
 			set_planet_flag = gpm_machine_system_machine_world
+			set_planet_flag = gpm_is_precursor_world_colour
+			set_planet_size = 25
+			set_name = "<<ERROR>>"
+			set_name = {
+				key = "NAME_color_red"
+				variable_string = "[This.GetName]"
+			}
 			clear_deposits = yes
 			create_ambient_object = {
 				type = "gpm_ME_space_storm_2"
@@ -719,143 +726,187 @@ gpm_precursor_machine_system = {
 				add_modifier = { days = -1 modifier = "gpm_ghost_in_the_machine" multiplier = 10 }
 				gpm_set_precursor_planetary_shields_machines = yes
 			}
+			while = {
+				count = 10
+				add_deposit = gpm_tb_automated_turrets_empty
+			}
 		}
 		
 		change_orbit = 15
 		
+		# moon order 1
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 0 max = 0 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0001"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 2
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 45 max = 45 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0010"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 4
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 90 max = 90 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0100"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 7
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 135 max = 135 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0111"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 3
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 180 max = 180 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0011"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 8
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 225 max = 225 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-1000"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 6
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 270 max = 270 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_broken"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0110"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 		
+		# moon order 5
 		moon = {
 			count = { min = 1 max = 1 }
 			size = { min = 7 max = 7 }
 			orbit_angle = { min = 315 max = 315 }
 			orbit_distance = 0
-			class = "pc_barren_cold"
+			class = "pc_ai"
 			init_effect = {
 				prevent_anomaly = yes
 				set_planet_flag = gpm_machine_system_moon
+				set_planet_flag = gpm_is_precursor_world_colour
+				set_planet_size = 10
+				set_name = "Containment-0101"
 				if = {
 					limit = { gpm_are_precursors_enabled = yes }
 					set_planet_flag = gpm_is_precursor_world
 					add_modifier = { days = -1 modifier = "gpm_precursor_planetary_gun" }
 				}
+				add_deposit = d_living_metal_deposit
 			}
 		}
 	}

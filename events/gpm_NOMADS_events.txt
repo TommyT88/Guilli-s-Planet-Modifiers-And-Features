@@ -1,0 +1,5518 @@
+
+namespace = gpm_NOMADS
+
+
+# Ark ship enters orbit of a HABITABLE world with planet modifiers
+# After planet is surveyed
+# While surveying: add effect in survey events
+
+# FROM = planet
+# This / controller = fleet
+fleet_event = {
+	id = gpm_NOMADS.1
+	location = FROM
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			is_scope_type = planet
+			gpm_is_planet_class_habitable = yes
+			gpm_has_precursor_modifiers = no
+			gpm_has_NOMADS_surveyable_planet_modifiers = yes
+			# Must be surveyed
+			is_surveyed = {
+				who = root.OWNER
+				status = yes
+			}
+			# NOT = { has_modifier = gpm_ark_ship_visited }
+			NOT = { has_planet_flag = gpm_nomad_visited@root.owner }
+		}
+		controller = {
+			is_country_type = default
+			is_nomadic = yes
+		}
+		is_arkship_fleet = yes
+	}
+	immediate = {
+		# log = "gpm_NOMADS.1 | root = [root.GetName] -- from = [from.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		enable_special_project = {
+			name = "GPM_VISIT_WORLD_ARKSHIP"
+			location = FROM
+			owner = root.owner
+		}
+		# <TODO> add message at top telling you to visit!
+	}
+}
+
+# Survey event on HABITABLE world - spawn special project
+ship_event = {
+	id = gpm_NOMADS.2
+	hide_window = yes
+	location = ROOT
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			is_scope_type = planet
+			gpm_is_planet_class_habitable = yes
+			gpm_has_precursor_modifiers = no
+			gpm_has_NOMADS_surveyable_planet_modifiers = yes
+			# NOT = { has_modifier = gpm_ark_ship_visited }
+			NOT = { has_planet_flag = gpm_nomad_visited@root.owner }
+		}
+		# is_ship_class = shipclass_science_ship
+		owner = { is_nomadic = yes }
+	}
+
+	immediate = {
+		# log = "gpm_NOMADS.2 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		enable_special_project = {
+			name = "GPM_VISIT_WORLD_ARKSHIP"
+			location = FROM
+			owner = root.owner
+		}
+		# <TODO> add message at top telling you to visit!
+	}
+}
+
+# Ark ship enters orbit of a PRECURSOR UNHABITABLE world with planet modifiers
+# After planet is surveyed
+# While surveying: add effect in survey events
+
+# FROM = planet
+# This / controller = fleet
+fleet_event = {
+	id = gpm_NOMADS.3
+	location = FROM
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			is_scope_type = planet
+			# gpm_is_planet_class_habitable = no
+			gpm_has_precursor_modifiers = yes
+			# Must be surveyed
+			is_surveyed = {
+				who = root.OWNER
+				status = yes
+			}
+			# NOT = { has_modifier = gpm_ark_ship_visited }
+			NOT = { has_planet_flag = gpm_nomad_visited@root.owner }
+		}
+		controller = {
+			is_country_type = default
+			is_nomadic = yes
+		}
+		is_arkship_fleet = yes
+	}
+	immediate = {
+		# log = "gpm_NOMADS.1 | root = [root.GetName] -- from = [from.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		enable_special_project = {
+			name = "GPM_VISIT_PRECURSOR_WORLD_ARKSHIP"
+			location = FROM
+			owner = root.owner
+		}
+		# <TODO> add message at top telling you to visit!
+	}
+}
+
+# Survey event on PRECURSOR UNHABITABLE world - spawn special project
+ship_event = {
+	id = gpm_NOMADS.4
+	hide_window = yes
+	location = ROOT
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			is_scope_type = planet
+			# gpm_is_planet_class_habitable = no
+			gpm_has_precursor_modifiers = yes
+			# NOT = { has_modifier = gpm_ark_ship_visited }
+			NOT = { has_planet_flag = gpm_nomad_visited@root.owner }
+		}
+		# is_ship_class = shipclass_science_ship
+		owner = { is_nomadic = yes }
+	}
+
+	immediate = {
+		# log = "gpm_NOMADS.2 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		enable_special_project = {
+			name = "GPM_VISIT_PRECURSOR_WORLD_ARKSHIP"
+			location = FROM
+			owner = root.owner
+		}
+		# <TODO> add message at top telling you to visit!
+	}
+}
+
+
+# visit event completes
+# give rewards based on planet modifiers
+carrier_event = {
+	id = gpm_NOMADS.10
+	title = "gpm_NOMADS.10.name"
+	desc = "gpm_NOMADS.10.desc"
+	picture = GFX_evt_resource_cache
+	show_sound = event_ship_thrusters
+	event_chain = an_old_container_chain
+	location = ROOT
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		reroll_random = yes
+		# log = "gpm_NOMADS.3 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		event_target:gpm_arkship_visit_target = { set_planet_flag = gpm_nomad_visited@root.owner }
+	}
+
+	
+#	gpm_frequent_thunderstorms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.75
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_frequent_thunderstorms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 5
+				min = 25
+				max = 150
+			}
+		}
+	}
+#	gpm_global_thunderstorms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_global_thunderstorms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_highly_charged_air_particles
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_highly_charged_air_particles
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_time_displaced_planet
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_time_displaced_planet
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			if = { 
+				limit = { has_astral_planes_dlc = yes }
+				gpm_random_astral_threads = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 20
+				min = 200
+				max = 600
+			}
+		}
+	}
+#	gpm_single_biome
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_single_biome
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 20
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_hyper_complex_biome
+#	gpm_hyper_complex_biome_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_hyper_complex_biome
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = 000000000000_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = 0000000000000_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 40
+				min = 100
+				max = 500
+			}
+		}
+	}
+#	gpm_thin_atmospheres
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_thin_atmospheres
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_dense_atmospheres
+#	gpm_dense_atmospheres_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.75
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_dense_atmospheres
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_dense_atmospheres_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_dense_atmospheres_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_strong_volcanism
+#	gpm_strong_volcanism_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.8
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_strong_volcanism
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		# locked_random_list = {
+		# 	20 = { }
+		# 	80 = { 
+		# 		add_modifier = { modifier = gpm_strong_volcanism_terraform mult = 1 }
+		# 		modifier = { factor = 0.0 num_modifiers >= 6 }
+		# 		modifier = { factor = 0.3 num_modifiers = 5 }
+		# 		modifier = { factor = 0.6 num_modifiers = 4 }
+		# 		modifier = { factor = 0.7 num_modifiers = 3 }
+		# 		modifier = { factor = 0.8 num_modifiers = 2 }
+		# 		modifier = { factor = 0.9 num_modifiers = 1 }
+		# 		modifier = { factor = 0 has_modifier = gpm_strong_volcanism_terraform }
+		# 		custom_tooltip = t #blank line
+		# 	}
+		# }
+		owner = { gpm_random_volatile_motes = yes }
+	}
+#	gpm_weak_magnetic_field_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_weak_magnetic_field_2
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	weak_magnetic_field
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = weak_magnetic_field
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_strong_magnetic_field_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_strong_magnetic_field_2
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 50
+				min = 200
+				max = 600
+			}
+		}
+	}
+#	strong_magnetic_field
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = strong_magnetic_field
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 50
+				min = 200
+				max = 600
+			}
+		}
+	}
+#	gpm_unstable_tectonics_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_unstable_tectonics_2
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_exotic_gases = yes }
+	}
+#	unstable_tectonics
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = unstable_tectonics
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_exotic_gases = yes }
+	}
+#	gpm_asteroid_impacts_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.6
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_asteroid_impacts_2
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	asteroid_impacts
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.5
+			# MULT_MODIFIER = 1
+			MODIFIER = asteroid_impacts
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_mineral_rich_2
+#	gpm_mineral_rich_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.85
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_mineral_rich_2
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_mineral_rich_2_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_mineral_rich_2_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	mineral_rich
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.75
+			# MULT_MODIFIER = 1
+			MODIFIER = mineral_rich
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_ultra_rich_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ultra_rich_2
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	ultra_rich
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.5
+			# MULT_MODIFIER = 1
+			MODIFIER = ultra_rich
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_low_gravity_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_low_gravity_2
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	low_gravity
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = low_gravity
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_high_gravity_2
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_high_gravity_2
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	high_gravity
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = high_gravity
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_floating_islands
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_floating_islands
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_floating_islands mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_floating_islands }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 20
+				min = 80
+				max = 400
+			}
+		}
+		owner = { gpm_random_sr_zro = yes }
+	}
+#	gpm_hostile_flora
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_hostile_flora
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 50
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_toxic_gas
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_toxic_gas
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_exotic_gases = yes }
+	}
+#	gpm_extensive_cavern_system
+#	gpm_extensive_cavern_system_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.4
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_extensive_cavern_system
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_extensive_cavern_system_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_extensive_cavern_system_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_titanic_predators
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			MULT_MODIFIER = 2
+			MODIFIER = gpm_titanic_predators
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 15
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_unnatural_world
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_unnatural_world
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 20
+				min = 80
+				max = 400
+			}
+		}
+	}
+#	gpm_atmospheric_stimulant
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_atmospheric_stimulant
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_atmospheric_stimulant mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_atmospheric_stimulant }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 15
+				min = 75
+				max = 300
+			}
+		}
+		owner = {
+			if = { 
+				limit = { is_machine_empire = no }
+				gpm_random_unity = yes
+			}
+		}
+	}
+#	gpm_unusual_seasons
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_unusual_seasons
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_perfect_seasons
+#	gpm_perfect_seasons_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_perfect_seasons
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_perfect_seasons_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_perfect_seasons_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+		owner = {
+			if = { 
+				limit = { is_machine_empire = no }
+				gpm_random_unity = yes
+			}
+		}
+	}
+#	gpm_living_planet
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_living_planet
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 18
+				min = 50
+				max = 350
+			}
+		}
+	}
+#	gpm_gemstones
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_gemstones
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+				gpm_random_rare_crystals = yes
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_trade_medium = yes
+			}
+		}
+	}
+#	gpm_ideal_for_life
+#	gpm_ideal_for_life_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ideal_for_life
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_ideal_for_life_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_ideal_for_life_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_unity = yes
+			}
+		}
+	}
+#	gpm_endless_fish
+#	gpm_endless_fish_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_endless_fish
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_endless_fish_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_endless_fish_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_artificial_water
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_artificial_water
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_nanites = yes }
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 50
+				min = 200
+				max = 1000
+			}
+		}
+	}
+#	gpm_clear_skies
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_clear_skies
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_android_pleasure_palace
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_android_pleasure_palace
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+				gpm_random_unity = yes
+			}
+		}
+		if = { 
+			limit = { 
+				owner = {
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			locked_random_list = {
+				10 = { 
+					add_modifier = { modifier = gpm_android_pleasure_palace }
+					modifier = { factor = 0 has_modifier = gpm_android_pleasure_palace }
+				}
+				90 = { owner = { gpm_random_unity = yes } }
+			}
+		}
+	}
+#	gpm_melted_ice_caps
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_melted_ice_caps
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_small_islands
+#	gpm_small_islands_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.4
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_small_islands
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_small_islands_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_small_islands_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_windy
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_windy
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 40
+				max = 200
+			}
+		}
+	}
+#	gpm_simple_organisms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_simple_organisms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 5
+				min = 40
+				max = 200
+			}
+		}
+	}
+#	gpm_newly_evolved_complex_organisms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_newly_evolved_complex_organisms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 15
+				min = 100
+				max = 400
+			}
+		}
+	}
+#	gpm_delicious_ingredients
+#	gpm_delicious_ingredients_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_delicious_ingredients
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_delicious_ingredients_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_delicious_ingredients_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+				gpm_random_rare_crystals = yes
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_trade_medium = yes
+			}
+		}
+	}
+#	gpm_friendly_wildlife
+#	gpm_friendly_wildlife_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_friendly_wildlife
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_friendly_wildlife_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_friendly_wildlife_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_unity = yes
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_pleasant_weather
+#	gpm_pleasant_weather_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_pleasant_weather
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_pleasant_weather_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_pleasant_weather_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 150
+			}
+		}
+	}
+#	gpm_unusual_formations
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.6
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_unusual_formations
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_flat_terrain
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_flat_terrain
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_rugged_terrain
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_rugged_terrain
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_many_extremophiles
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_many_extremophiles
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 200
+			}
+		}
+	}
+#	gpm_great_temperature_variation
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_great_temperature_variation
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_gorgeous_sky
+#	gpm_gorgeous_sky_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_gorgeous_sky
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_gorgeous_sky_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_gorgeous_sky_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 10
+					min = 50
+					max = 300
+				}
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_unity = yes
+			}
+		}
+	}
+#	gpm_ice_age
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ice_age
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 30
+				max = 150
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 30
+				max = 150
+			}
+		}
+	}
+#	gpm_ancient_temple
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ancient_temple
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_sr_zro = yes }
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_tilted_axis
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_tilted_axis
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_perpendicular_axis
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_perpendicular_axis
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_radioactive_mantle
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.8
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_radioactive_mantle
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			10 = { owner = { gpm_random_alloys = yes } }
+		}
+	}
+#	gpm_locust_plagues
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_locust_plagues
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_acidic_seas
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_acidic_seas
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_exotic_gases = yes }
+	}
+#	gpm_empathic_life
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_empathic_life
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_seasonal_flooding
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.9
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_seasonal_flooding
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_thin_ozone_layer
+#	gpm_thin_ozone_layer_fixed
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_thin_ozone_layer
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 10
+				min = 30
+				max = 300
+			}
+		}
+	}
+#	gpm_symbiotic_life
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_symbiotic_life
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 350
+			}
+		}
+	}
+#	gpm_resilent_parasites
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_resilent_parasites
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 400
+			}
+		}
+	}
+#	gpm_ice_flora
+#	gpm_ice_flora_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ice_flora
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_ice_flora_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_ice_flora_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 25
+				min = 75
+				max = 400
+			}
+		}
+	}
+#	gpm_strange_ice_river
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_strange_ice_river
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 12
+				min = 50
+				max = 300
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 12
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_juggernaut_manta_rays
+#	gpm_juggernaut_manta_rays_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.75
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_juggernaut_manta_rays
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_juggernaut_manta_rays_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_juggernaut_manta_rays_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_black_oily_stone
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_black_oily_stone
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_sr_dark_matter = yes }
+	}
+#	gpm_crystal_moon_palace
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_crystal_moon_palace
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_rare_crystals = yes }
+	}
+#	gpm_cities_in_the_sky
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_cities_in_the_sky
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 150
+			}
+		}
+		owner = { gpm_random_minor_artifacts_5 = yes }
+	}
+#	gpm_old_world
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_old_world
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 150
+			}
+		}
+		owner = { gpm_random_minor_artifacts_5 = yes }
+	}
+#	gpm_dunes
+#	gpm_dunes_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_dunes
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_dunes_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_dunes_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_extensive_reef_systems
+#	gpm_extensive_reef_systems_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_extensive_reef_systems
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_extensive_reef_systems_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_extensive_reef_systems_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_trubbles
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_trubbles
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_strange_voices
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_strange_voices
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_temple_of_the_ancient_one
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_temple_of_the_ancient_one
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+		owner = { gpm_random_sr_zro = yes }
+	}
+#	gpm_beautiful_lakes
+#	gpm_beautiful_lakes_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_beautiful_lakes
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_beautiful_lakes_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_beautiful_lakes_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_proto_forests
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_proto_forests
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_dense_forests
+#	gpm_dense_forests_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_dense_forests
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_dense_forests_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_dense_forests_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_planetwide_forest
+#	gpm_planetwide_forest_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_planetwide_forest
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_planetwide_forest_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_planetwide_forest_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_inspirational
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_inspirational
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_hiveworld
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_hiveworld
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_periodic_meteor_showers
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_periodic_meteor_showers
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_arachnophobia
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_arachnophobia
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 35
+				min = 75
+				max = 500
+			}
+		}
+		if = { 
+			limit = { 
+				owner = {
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			locked_random_list = {
+				90 = { }
+				10 = {
+					add_modifier = { modifier = gpm_placated_arachnids }
+					modifier = { factor = 0 has_modifier = gpm_placated_arachnids }
+				}
+			}
+		}
+	}
+#	gpm_giant_worm
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_giant_worm
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_artificial_core
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_artificial_core
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_sr_living_metal = yes }
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_exotic_spices
+#	gpm_exotic_spices_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_exotic_spices
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_exotic_spices_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_exotic_spices_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+				gpm_random_volatile_motes = yes
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_trade_small = yes
+			}
+		}
+	}
+#	gpm_sandstorms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_sandstorms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_sand_tornadoes
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_sand_tornadoes
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 15
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_quicksand
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_quicksand
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 12
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_never_ending_aurora
+#	gpm_never_ending_aurora_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_never_ending_aurora
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_never_ending_aurora_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_never_ending_aurora_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_spirals_of_ice
+#	gpm_spirals_of_ice_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_spirals_of_ice
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_spirals_of_ice_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_spirals_of_ice_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_furry_packs
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_furry_packs
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_furry_packs mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_furry_packs }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 20
+				min = 50
+				max = 400
+			}
+		}
+	}
+#	gpm_blizzards
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_blizzards
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_abominable_predators
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_abominable_predators
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 8
+				min = 125
+				max = 400
+			}
+		}
+	}
+#	gpm_rich_soil
+#	gpm_rich_soil_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.6
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_rich_soil
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_rich_soil_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_rich_soil_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_otherworldly_colours
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_otherworldly_colours
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_otherworldly_colours mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_otherworldly_colours }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_misty
+#	gpm_misty_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_misty
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_misty_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_misty_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_ecological_nervous_system
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ecological_nervous_system
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_carnivorous_flies
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_carnivorous_flies
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_algae_boom
+#	gpm_algae_boom_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.25
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_algae_boom
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_algae_boom_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_algae_boom_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_ocean_forests
+#	gpm_ocean_forests_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.7
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ocean_forests
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_ocean_forests_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_ocean_forests_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_warm_water_lakes
+#	gpm_warm_water_lakes_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_warm_water_lakes
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_warm_water_lakes_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_warm_water_lakes_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_torrential_rainstorms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_torrential_rainstorms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 14
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_ocean_currents
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ocean_currents
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 35
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_giant_ocean_snakes
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_giant_ocean_snakes
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_ocean_trenches
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ocean_trenches
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_unique_marine_habitats
+#	gpm_unique_marine_habitats_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.8
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_unique_marine_habitats
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_unique_marine_habitats_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_unique_marine_habitats_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_massive_waves
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_massive_waves
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 5
+				min = 25
+				max = 150
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 5
+				min = 25
+				max = 150
+			}
+		}
+	}
+#	gpm_ghost_ships
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ghost_ships
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_ominous_fog
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ominous_fog
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_beautiful_planet_rings
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.4
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_beautiful_planet_rings
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_blood_moon
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_blood_moon
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_solar_eclipse
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_solar_eclipse
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_dark_skies
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_dark_skies
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 15
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_musical_creatures
+#	gpm_musical_creatures_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_musical_creatures
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_musical_creatures_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_musical_creatures_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 20
+				min = 60
+				max = 360
+			}
+		}
+	}
+#	gpm_odd_cloud_shapes
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_odd_cloud_shapes
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_colossal_cliffs
+#	gpm_colossal_cliffs_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.8
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_colossal_cliffs
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_colossal_cliffs_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_colossal_cliffs_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_massive_waterfalls
+#	gpm_massive_waterfalls_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_massive_waterfalls
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_massive_waterfalls_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_massive_waterfalls_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_strange_alien_eggs
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_strange_alien_eggs
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 50
+				min = 50
+				max = 800
+			}
+		}
+		locked_random_list = {
+			95 = { }
+			5 = {
+				owner = { add_relic = gpm_r_alien_eggs }
+				hidden_effect = {
+					owner = {
+						every_relation = {
+							limit = {
+								gpm_is_country_type_default = yes
+								has_communications = root.owner
+							}
+							log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+							create_message = {
+								type = GPM_MESSAGE_RELIC_POSSESSION
+								localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
+								days = 30
+								target = root.owner.capital_scope
+								variable = {
+									type = name
+									localization = COUNTRY
+									scope = root.owner
+								}
+							}
+						}
+					}
+					set_global_flag = gpm_r_alien_eggs_found
+				}
+				modifier = { factor = 0 has_global_flag = gpm_r_alien_eggs_found }
+			}
+		}
+	}
+#	gpm_mushroom_forest
+#	gpm_mushroom_forest_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 3
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_mushroom_forest
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_mushroom_forest_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_mushroom_forest_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_cursed_world
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_cursed_world
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_sunken_cities
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_sunken_cities
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+		owner = { gpm_random_minor_artifacts_5 = yes }
+	}
+#	gpm_titanic_geo_form
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.6
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_titanic_geo_form
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_tidally_active
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.7
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_tidally_active
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_giant_scorpioids
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_giant_scorpioids
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 50
+				max = 500
+			}
+		}
+	}
+#	gpm_invasive_stalks
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.4
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_invasive_stalks
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_machine_god
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_machine_god
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 25
+				min = 50
+				max = 400
+			}
+		}
+	}
+#	gpm_siren_song
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_siren_song
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_siren_song mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_siren_song }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 200
+			}
+		}
+	}
+#	gpm_heart_of_the_forest
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_heart_of_the_forest
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_heart_of_the_forest mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_heart_of_the_forest }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_steam_vents
+#	gpm_steam_vents_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.8
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_steam_vents
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_steam_vents_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_steam_vents_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_mineral_pools
+#	gpm_mineral_pools_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.85
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_mineral_pools
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_mineral_pools_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_mineral_pools_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_rich_equator
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_rich_equator
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_feline_companions
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_feline_companions
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = yes
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_feline_companions mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_feline_companions }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_iron_oceans
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_iron_oceans
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_foul_stench
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_foul_stench
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_volatile_motes = yes }
+	}
+#	gpm_maw_worship
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_maw_worship
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_saphire_rains
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_saphire_rains
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+				gpm_random_rare_crystals = yes
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_trade_small = yes
+			}
+		}
+	}
+#	gpm_manifest_dreams
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_manifest_dreams
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_springs_of_life
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_springs_of_life
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_springs_of_life mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_springs_of_life }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_aeromatic_attraction
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_aeromatic_attraction
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_aeromatic_attraction mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_aeromatic_attraction }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_fractal_formations
+#	gpm_fractal_formations_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_fractal_formations
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_fractal_formations_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_fractal_formations_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 12
+				min = 50
+				max = 200
+			}
+		}
+	}
+#	gpm_silicon_crystals
+#	gpm_silicon_crystals_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_silicon_crystals
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_silicon_crystals_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_silicon_crystals_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_rare_crystals = yes }
+	}
+#	gpm_dead_forests
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.6
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_dead_forests
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_golden_fields
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_golden_fields
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_golden_fields mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_golden_fields }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_runic_carvings
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_runic_carvings
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 15
+				min = 45
+				max = 220
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 15
+				min = 45
+				max = 220
+			}
+		}
+	}
+#	gpm_scoured_barrens
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_scoured_barrens
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_crystal_cliffs
+#	gpm_crystal_cliffs_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_crystal_cliffs
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_crystal_cliffs_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_crystal_cliffs_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_rare_crystals = yes }
+	}
+#	gpm_white_world
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_white_world
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 10
+				min = 40
+				max = 100
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 40
+				max = 100
+			}
+		}
+	}
+#	gpm_ash_barrens
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.9
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ash_barrens
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_ethereal_clouds
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_ethereal_clouds
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_ethereal_clouds mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_ethereal_clouds }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_unity = yes }
+	}
+#	gpm_bacterial_dominance
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_bacterial_dominance
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 300
+			}
+		}
+	}
+#	gpm_blighted_lands
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_blighted_lands
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 200
+			}
+		}
+	}
+#	gpm_flesh_eating_swamp
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_flesh_eating_swamp
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 10
+				min = 50
+				max = 150
+			}
+		}
+	}
+#	gpm_cooling_vistas
+#	gpm_cooling_vistas_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.85
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_cooling_vistas
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_cooling_vistas_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_cooling_vistas_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_calcification_pools
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.75
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_calcification_pools
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_atmospheric_roots
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.8
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_atmospheric_roots
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_atmospheric_roots mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_atmospheric_roots }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_oily_riverbeds
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_oily_riverbeds
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_volatile_motes = yes }
+	}
+#	gpm_crystaline_fauna
+#	gpm_crystaline_fauna_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_crystaline_fauna
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_crystaline_fauna_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_crystaline_fauna_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = { gpm_random_rare_crystals = yes }
+	}
+#	gpm_immortal_coral
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_immortal_coral
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_immortal_coral mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_immortal_coral }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_shroud_storms
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_shroud_storms
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = { gpm_random_sr_zro = yes }
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 35
+				min = 35
+				max = 550
+			}
+		}
+	}
+#	gpm_gargantuan_canopies
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_gargantuan_canopies
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = yes
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_gargantuan_canopies mult = 0.5 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_gargantuan_canopies }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_jeweled_flowers
+#	gpm_jeweled_flowers_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_jeweled_flowers
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_jeweled_flowers_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_jeweled_flowers_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+		owner = {
+			if = { 
+				limit = {
+					is_machine_empire = yes
+					NOT = { has_civic = civic_machine_servitor }
+				}
+					add_monthly_resource_mult = {
+					resource = engineering_research
+					value = 50
+					min = 50
+					max = 600
+				}
+			}
+		}
+		owner = {
+			if = { 
+				limit = { 
+					OR = {
+						is_machine_empire = no
+						has_civic = civic_machine_servitor
+					}
+				}
+				gpm_random_consumer_goods = yes
+			}
+		}
+	}
+#	gpm_towering_cacti
+#	gpm_towering_cacti_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_towering_cacti
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_towering_cacti_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_towering_cacti_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_geometric_landscapes
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 0.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_geometric_landscapes
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 10
+				min = 50
+				max = 150
+			}
+		}
+	}
+#	gpm_lonely_mountain
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_lonely_mountain
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 20
+				min = 50
+				max = 250
+			}
+		}
+	}
+#	gpm_super_dry_atmosphere
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1.25
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_super_dry_atmosphere
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+	}
+#	gpm_mineral_rich_waters
+#	gpm_mineral_rich_waters_terraform
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 2.2
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_mineral_rich_waters
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = yes
+		}
+		locked_random_list = {
+			20 = { }
+			80 = { 
+				add_modifier = { modifier = gpm_mineral_rich_waters_terraform mult = 1 }
+				modifier = { factor = 0.0 num_modifiers >= 6 }
+				modifier = { factor = 0.3 num_modifiers = 5 }
+				modifier = { factor = 0.6 num_modifiers = 4 }
+				modifier = { factor = 0.7 num_modifiers = 3 }
+				modifier = { factor = 0.8 num_modifiers = 2 }
+				modifier = { factor = 0.9 num_modifiers = 1 }
+				modifier = { factor = 0 has_modifier = gpm_mineral_rich_waters_terraform }
+				custom_tooltip = t #blank line
+			}
+		}
+	}
+#	gpm_precursor_remnants
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_remnants
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_remnants_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_remnants_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_energy_grid
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_energy_grid
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_energy_grid_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_energy_grid_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_satalite_grid
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_satalite_grid
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_satellite_grid_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_satellite_grid_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_city
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_city
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_city_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_city_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_shipyards
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_shipyards
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_shipyards_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_shipyards_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_planetary_gun
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_planetary_gun
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_planetary_gun_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_planetary_gun_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_bunker_grid
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_bunker_grid
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_bunker_grid_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_bunker_grid_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_mechs
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_mechs
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_mechs_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_mechs_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_planetary_shield
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_planetary_shield
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_planetary_shield_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_planetary_shield_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_floating_city
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_floating_city
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_floating_city_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_floating_city_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { owner = { gpm_random_sr_dark_matter = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_capital_complex
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_capital_complex
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_capital_complex_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_capital_complex_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { owner = { gpm_random_unity = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_communication_hub
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_communication_hub
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_communication_hub_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_communication_hub_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_singularity_drive
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_singularity_drive
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_singularity_drive_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_singularity_drive_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_eternal_fortress
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_eternal_fortress
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_eternal_fortress_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_eternal_fortress_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_prison_planet
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_prison_planet
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_prison_planet_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_prison_planet_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_mines
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_mines
+			NOMAD_REWARD_MINERALS = yes
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_mines_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_mines_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_manufactorium
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_manufactorium
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_manufactorium_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_manufactorium_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { owner = { gpm_random_alloys = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_vaults
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_vaults
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_vaults_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_vaults_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { owner = { gpm_random_sr_dark_matter = yes } }
+			10 = { owner = { gpm_random_sr_zro = yes } }
+			10 = { owner = { gpm_random_sr_living_metal = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_crashed_spacestation
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 4.5
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_crashed_spacestation
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = yes
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_crashed_spacestation_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_crashed_spacestation_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { owner = { gpm_random_alloys = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_battleground_ruins
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_battleground_ruins
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_battleground_ruins_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_battleground_ruins_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_outpost_ruins
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_outpost_ruins
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_outpost_ruins_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_outpost_ruins_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_harbor_ruins
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 4
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_harbor_ruins
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = yes
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_harbor_ruins_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_harbor_ruins_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_ruins
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_ruins
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_ruins_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_ruins_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+#	gpm_precursor_obelisks
+	option = {
+		inline_script = {
+			script = events/gpm_nomads_3_option
+			MULT_RESOURCE = 1
+			# MULT_MODIFIER = 1
+			MODIFIER = gpm_precursor_obelisks
+			NOMAD_REWARD_MINERALS = no
+			NOMAD_REWARD_ENERGY = no
+			NOMAD_REWARD_FOOD = no
+			# NOMAD_REWARD_PM_NORMAL = no
+			# NOMAD_REWARD_PM_NORMAL_GUARANTEED = no
+			# NOMAD_REWARD_PM_TERRA = no
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 30
+				min = 90
+				max = 600
+			}
+		}
+		locked_random_list = {
+			50 = {
+				owner = { give_specimen = { key = gpm_precursor_obelisks_discovery_specimen } }
+				modifier = { factor = 0 has_grand_archive_dlc = no }
+				modifier = { factor = 0 has_specimen = { gpm_precursor_obelisks_discovery_specimen } }
+			}
+			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
+			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
+			10 = { owner = { gpm_random_sr_dark_matter = yes } }
+			10 = { add_deposit = gpm_d_precursor_excavation }
+		}
+	}
+	# default option
+	option = {
+		name = gpm_NOMADS.10.awayteam
+		OWNER = {
+			gpm_random_unity = yes
+			if = {
+				limit = { has_policy_flag = gpm_more_discovery_rewards }
+				gpm_exploration_policy_away_teams_reward = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# fleet_event = {
+	# id = gpm_NOMADS.1
+	# title = gpm_NOMADS.1.name
+	# desc = gpm_NOMADS.1.desc
+	# picture = GFX_evt_nomad_default
+	# location = FROM
+
+	# is_triggered_only = yes
+	
+	# trigger = {
+		# FROM = {
+			# is_scope_type = planet
+			# # Must be surveyed
+			# is_surveyed = {
+				# who = root.OWNER
+				# status = yes
+			# }
+			# NOT = { has_modifier = gpm_ark_ship_visited }
+		# }
+		# controller = {
+			# is_country_type = default
+			# is_nomadic = yes
+		# }
+		# is_arkship_fleet = yes
+	# }
+	# immediate = {
+		# log = "gpm_NOMADS.1 this = [this.GetName] -- from = [from.GetName] -- owner = [owner.GetName] -- fromfrom = [fromfrom.GetName]"
+		# FROM = { 
+			# add_modifier = { modifier = gpm_ark_ship_visited days = 1800 }
+		# }
+		
+		# # Save planet scoped location
+		# every_owned_ship = {
+			# save_event_target_as = gpm_arkship_eventtarget
+		# }
+		# if = { 
+			# limit = {
+				# FROM = { has_modifier = gpm_feline_companions } 
+				# event_target:gpm_arkship_eventtarget = { NOT = { has_modifier = gpm_feline_companions } }
+			# }
+			# event_target:gpm_arkship_eventtarget = { add_modifier = { modifier = gpm_feline_companions mult = 0.25 } }
+		# }
+	# }
+	# option = {
+		# name = gpm_NOMADS.1.gpm_feline_companions
+		# trigger = {
+			# controller = { is_nomadic = yes }
+			# event_target:gpm_arkship_eventtarget = { NOT = { has_modifier = gpm_feline_companions } }
+		# }
+		# event_target:gpm_arkship_eventtarget = { add_modifier = { modifier = gpm_feline_companions mult = 0.25 } }
+	# }
+# }
+
+# fleet_event = {
+	# id = gpm_NOMADS.1
+	# hide_window = yes
+	# fire_only_once = yes
+	# location = FROM
+
+	# is_triggered_only = yes
+	
+	# trigger = {
+		# FROM = {
+			# is_scope_type = planet
+			# is_surveyed = {
+				# who = root.OWNER
+				# status = yes
+			# }
+			# NOT = { has_planet_flag = gpm_nomad_visited@root.owner }
+		# }
+		# controller = {
+			# is_country_type = default
+			# is_nomadic = yes
+		# }
+		# is_arkship_fleet = yes
+	# }
+	# immediate = {
+		# log = "gpm_NOMADS.1 this = [this.GetName] -- from = [from.GetName] -- owner = [owner.GetName] -- fromfrom = [fromfrom.GetName]"
+		# FROM = { 
+			# set_timed_planet_flag = {
+				# flag = gpm_nomad_visited@root.owner
+				# days = 360
+			# }
+		# }
+		
+		# # DO THING
+		# every_owned_ship = {
+			# save_event_target_as = gpm_arkship_eventtarget
+		# }
+		# if = { 
+			# limit = { 
+				# FROM = { has_modifier = gpm_feline_companions } 
+				# event_target:gpm_arkship_eventtarget = { NOT = { has_modifier = gpm_feline_companions } }
+			# }
+			# event_target:gpm_arkship_eventtarget = { add_modifier = { modifier = gpm_feline_companions mult = 0.25 } }
+		# }
+	# }
+# }

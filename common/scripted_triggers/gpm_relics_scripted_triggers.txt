@@ -1,4 +1,5 @@
 gpm_has_vanilla_precursor_relic = {
+	optimize_memory
 	OR = {
 		has_relic = r_dragon_trophy
 		has_relic = r_khans_throne
@@ -62,6 +63,7 @@ gpm_has_vanilla_precursor_relic = {
 }
 
 gpm_has_modded_precursor_relic = {
+	optimize_memory
 	OR = {
 		has_relic = gpm_r_ai_architect
 		has_relic = gpm_r_banner_of_the_fallen
@@ -91,6 +93,7 @@ gpm_has_modded_precursor_relic = {
 }
 
 gpm_has_modded_non_precursor_relic = {
+	optimize_memory
 	OR = {
 		has_relic = gpm_r_time_displacer
 		has_relic = gpm_r_alien_eggs
@@ -100,6 +103,7 @@ gpm_has_modded_non_precursor_relic = {
 }
 
 gpm_has_other_mod_relic = {
+	optimize_memory
 	OR = {
 		# Ancient Empire
 		has_relic = ag_gamma_crisis_relic

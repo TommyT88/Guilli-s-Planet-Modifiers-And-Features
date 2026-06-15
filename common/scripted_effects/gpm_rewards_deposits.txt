@@ -1,0 +1,414 @@
+@tier1researchreward_half= 15
+@tier1researchmin_half = 90
+@tier1researchmax_half = 900
+
+@tier1researchreward_qrt = 7
+@tier1researchmin_qrt = 30
+@tier1researchmax_qrt = 300
+
+@tier1unityreward_half = 50
+@tier1unitymin_half = 50
+@tier1unitymax_half = 500
+
+
+
+gpm_d_random_minerals_gal_gen = {
+	optimize_memory 
+	locked_random_list = {
+		80 = { add_deposit = d_minerals_2 }
+		40 = { add_deposit = d_minerals_3 }
+		20 = { add_deposit = d_minerals_4 }
+		10 = { add_deposit = d_minerals_5 }
+		5 = { add_deposit = d_minerals_6 }
+		5 = { add_deposit = d_minerals_7 }
+		4 = { add_deposit = d_minerals_8 }
+		4 = { add_deposit = d_minerals_9 }
+		3 = { add_deposit = d_minerals_10 }
+		3 = { add_deposit = gpm_d_minerals_11 }
+		2 = { add_deposit = gpm_d_minerals_12 }
+		2 = { add_deposit = gpm_d_minerals_13 }
+		1 = { add_deposit = gpm_d_minerals_14 }
+		1 = { add_deposit = gpm_d_minerals_15 }
+	}
+}
+
+gpm_d_random_minerals = {
+	optimize_memory 
+	locked_random_list = {
+		# 2 = { add_deposit = d_minerals_1 }
+		10 = { add_deposit = d_minerals_2 }
+		6 = { add_deposit = d_minerals_3 }
+		2 = { add_deposit = d_minerals_4 }
+		1 = { add_deposit = d_minerals_5 }
+	}
+}
+
+gpm_d_random_minerals_med = {
+	optimize_memory 
+	locked_random_list = {
+		16 = { add_deposit = d_minerals_6 }
+		8 = { add_deposit = d_minerals_7 }
+		4 = { add_deposit = d_minerals_8 }
+		2 = { add_deposit = d_minerals_9 }
+		1 = { add_deposit = d_minerals_10 }
+	}
+}
+
+gpm_d_random_minerals_big = {
+	optimize_memory 
+	locked_random_list = {
+		16 = { add_deposit = gpm_d_minerals_11 }
+		8 = { add_deposit = gpm_d_minerals_12 }
+		4 = { add_deposit = gpm_d_minerals_13 }
+		2 = { add_deposit = gpm_d_minerals_14 }
+		1 = { add_deposit = gpm_d_minerals_15 }
+	}
+}
+
+gpm_d_random_energy_gal_gen = {
+	optimize_memory
+	locked_random_list = {
+		80 = { add_deposit = d_energy_2 }
+		40 = { add_deposit = d_energy_3 }
+		20 = { add_deposit = d_energy_4 }
+		10 = { add_deposit = d_energy_5 }
+		5 = { add_deposit = d_energy_6 }
+		5 = { add_deposit = d_energy_7 }
+		4 = { add_deposit = d_energy_8 }
+		4 = { add_deposit = d_energy_9 }
+		3 = { add_deposit = d_energy_10 }
+		3 = { add_deposit = gpm_d_energy_11 }
+		2 = { add_deposit = gpm_d_energy_12 }
+		2 = { add_deposit = gpm_d_energy_13 }
+		1 = { add_deposit = gpm_d_energy_14 }
+		1 = { add_deposit = gpm_d_energy_15 }
+	}
+}
+
+gpm_d_random_energy_gal_gen_big = {
+	optimize_memory
+	locked_random_list = {
+		11 = { add_deposit = d_energy_2 }
+		9 = { add_deposit = d_energy_3 }
+		7 = { add_deposit = d_energy_4 }
+		7 = { add_deposit = d_energy_5 }
+		5 = { add_deposit = d_energy_6 }
+		5 = { add_deposit = d_energy_7 }
+		4 = { add_deposit = d_energy_8 }
+		4 = { add_deposit = d_energy_9 }
+		3 = { add_deposit = d_energy_10 }
+		3 = { add_deposit = gpm_d_energy_11 }
+		2 = { add_deposit = gpm_d_energy_12 }
+		2 = { add_deposit = gpm_d_energy_13 }
+		1 = { add_deposit = gpm_d_energy_14 }
+		1 = { add_deposit = gpm_d_energy_15 }
+	}
+}
+
+gpm_d_random_energy = {
+	optimize_memory
+	locked_random_list = {
+		8 = { add_deposit = d_energy_2 }
+		4 = { add_deposit = d_energy_3 }
+		2 = { add_deposit = d_energy_4 }
+		1 = { add_deposit = d_energy_5 }
+	}
+}
+
+gpm_d_random_energy_med = {
+	optimize_memory
+	locked_random_list = {
+		16 = { add_deposit = d_energy_6 }
+		8 = { add_deposit = d_energy_7 }
+		4 = { add_deposit = d_energy_8 }
+		2 = { add_deposit = d_energy_9 }
+		1 = { add_deposit = d_energy_10 }
+	}
+}
+
+gpm_d_random_energy_big = {
+	optimize_memory
+	locked_random_list = {
+		16 = { add_deposit = gpm_d_energy_11 }
+		8 = { add_deposit = gpm_d_energy_12 }
+		4 = { add_deposit = gpm_d_energy_13 }
+		2 = { add_deposit = gpm_d_energy_14 }
+		1 = { add_deposit = gpm_d_energy_15 }
+	}
+}
+
+gpm_d_random_food_gal_gen = {
+	optimize_memory 
+	locked_random_list = {
+		30 = { add_deposit = gpm_d_food_4 }
+		25 = { add_deposit = gpm_d_food_5 }
+		20 = { add_deposit = gpm_d_food_6 }
+		15 = { add_deposit = gpm_d_food_7 }
+		10 = { add_deposit = gpm_d_food_8 }
+		5 = { add_deposit = gpm_d_food_9 }
+		4 = { add_deposit = gpm_d_food_10 }
+		3 = { add_deposit = gpm_d_food_15 }
+		2 = { add_deposit = gpm_d_food_20 }
+		1 = { add_deposit = gpm_d_food_25 }
+	}
+}
+
+gpm_d_random_food = {
+	optimize_memory 
+	locked_random_list = {
+		2 = { add_deposit = gpm_d_food_4 }
+		4 = { add_deposit = gpm_d_food_5 }
+		8 = { add_deposit = gpm_d_food_6 }
+		16 = { add_deposit = gpm_d_food_7 }
+		32 = { add_deposit = gpm_d_food_8 }
+		16 = { add_deposit = gpm_d_food_9 }
+		8 = { add_deposit = gpm_d_food_10 }
+		4 = { add_deposit = gpm_d_food_15 }
+		2 = { add_deposit = gpm_d_food_20 }
+		1 = { add_deposit = gpm_d_food_25 }
+	}
+}
+
+gpm_d_random_food_big = {
+	optimize_memory 
+	locked_random_list = {
+		8 = { add_deposit = gpm_d_food_10 }
+		4 = { add_deposit = gpm_d_food_15 }
+		2 = { add_deposit = gpm_d_food_20 }
+		1 = { add_deposit = gpm_d_food_25 }
+	}
+}
+
+gpm_d_random_alloys = {
+	optimize_memory 
+	locked_random_list = {
+		64 = { add_deposit = d_alloys_1 }
+		128 = { add_deposit = d_alloys_2 }
+		64 = { add_deposit = d_alloys_3 }
+		32 = { add_deposit = d_alloys_4 }
+		16 = { add_deposit = d_alloys_5 }
+		8 = { add_deposit = gpm_d_alloys_6 }
+		4 = { add_deposit = gpm_d_alloys_7 }
+		2 = { add_deposit = gpm_d_alloys_8 }
+		1 = { add_deposit = gpm_d_alloys_9 }
+	}
+}
+
+gpm_d_random_alloys_gal_gen = {
+	optimize_memory 
+	locked_random_list = {
+		300 = { add_deposit = d_alloys_1 }
+		240 = { add_deposit = d_alloys_2 }
+		120 = { add_deposit = d_alloys_3 }
+		60 = { add_deposit = d_alloys_4 }
+		30 = { add_deposit = d_alloys_5 }
+		15 = { add_deposit = gpm_d_alloys_6 }
+		8 = { add_deposit = gpm_d_alloys_7 }
+		4 = { add_deposit = gpm_d_alloys_8 }
+		1 = { add_deposit = gpm_d_alloys_9 }
+	}
+}
+
+gpm_d_random_trade_small = {
+	optimize_memory 
+	locked_random_list = {
+		2 = { add_deposit = d_trade_value_1 }
+		4 = { add_deposit = d_trade_value_2 }
+		8 = { add_deposit = d_trade_value_3 }
+		16 = { add_deposit = d_trade_value_4 }
+		8 = { add_deposit = d_trade_value_5 }
+		4 = { add_deposit = d_trade_value_6 }
+		2 = { add_deposit = d_trade_value_7 }
+		1 = { add_deposit = d_trade_value_8 }
+	}
+}
+
+gpm_d_random_trade = {
+	optimize_memory 
+	locked_random_list = {
+		# 46 = { add_deposit = d_trade_value_1 }
+		# 37 = { add_deposit = d_trade_value_2 }
+		# 29 = { add_deposit = d_trade_value_3 }
+		# 22 = { add_deposit = d_trade_value_4 }
+		# 16 = { add_deposit = d_trade_value_5 }
+		16 = { add_deposit = d_trade_value_6 }
+		8 = { add_deposit = d_trade_value_7 }
+		4 = { add_deposit = d_trade_value_8 }
+		2 = { add_deposit = d_trade_value_9 }
+		1 = { add_deposit = d_trade_value_10 }
+	}
+}
+
+gpm_d_random_physics_gal_gen = {
+	optimize_memory 
+	locked_random_list = {
+		46 = { add_deposit = d_physics_1 }
+		32 = { add_deposit = d_physics_2 }
+		16 = { add_deposit = d_physics_3 }
+		8 = { add_deposit = d_physics_4 }
+		2 = { add_deposit = d_physics_5 }
+		1 = { add_deposit = d_physics_6 }
+	}
+}
+
+
+gpm_d_random_society_gal_gen = {
+	optimize_memory 
+	locked_random_list = {
+		46 = { add_deposit = d_society_1 }
+		32 = { add_deposit = d_society_2 }
+		16 = { add_deposit = d_society_3 }
+		8 = { add_deposit = d_society_4 }
+		2 = { add_deposit = d_society_5 }
+		1 = { add_deposit = d_society_6 }
+	}
+}
+
+gpm_d_random_engineering_gal_gen = {
+	optimize_memory 
+	locked_random_list = {
+		46 = { add_deposit = d_engineering_1 }
+		32 = { add_deposit = d_engineering_2 }
+		16 = { add_deposit = d_engineering_3 }
+		8 = { add_deposit = d_engineering_4 }
+		2 = { add_deposit = d_engineering_5 }
+		1 = { add_deposit = d_engineering_6 }
+	}
+}
+
+gpm_d_random_physics = {
+	optimize_memory 
+	locked_random_list = {
+		8 = { add_deposit = d_physics_1 }
+		16 = { add_deposit = d_physics_2 }
+		8 = { add_deposit = d_physics_3 }
+		4 = { add_deposit = d_physics_4 }
+		2 = { add_deposit = d_physics_5 }
+		1 = { add_deposit = d_physics_6 }
+	}
+}
+gpm_d_random_physics_big = {
+	optimize_memory 
+	locked_random_list = {
+		6 = { add_deposit = d_physics_5 }
+		5 = { add_deposit = d_physics_6 }
+		4 = { add_deposit = d_physics_7 }
+		3 = { add_deposit = d_physics_8 }
+		2 = { add_deposit = d_physics_9 }
+		1 = { add_deposit = d_physics_10 }
+	}
+}
+
+gpm_d_random_society = {
+	optimize_memory 
+	locked_random_list = {
+		8 = { add_deposit = d_society_1 }
+		16 = { add_deposit = d_society_2 }
+		8 = { add_deposit = d_society_3 }
+		4 = { add_deposit = d_society_4 }
+		2 = { add_deposit = d_society_5 }
+		1 = { add_deposit = d_society_6 }
+	}
+}
+gpm_d_random_society_big = {
+	optimize_memory 
+	locked_random_list = {
+		6 = { add_deposit = d_society_5 }
+		5 = { add_deposit = d_society_6 }
+		4 = { add_deposit = d_society_7 }
+		3 = { add_deposit = d_society_8 }
+		2 = { add_deposit = d_society_9 }
+		1 = { add_deposit = d_society_10 }
+	}
+}
+
+gpm_d_random_engineering = {
+	optimize_memory 
+	locked_random_list = {
+		8 = { add_deposit = d_engineering_1 }
+		16 = { add_deposit = d_engineering_2 }
+		8 = { add_deposit = d_engineering_3 }
+		4 = { add_deposit = d_engineering_4 }
+		2 = { add_deposit = d_engineering_5 }
+		1 = { add_deposit = d_engineering_6 }
+	}
+}
+gpm_d_random_engineering_big = {
+	optimize_memory 
+	locked_random_list = {
+		6 = { add_deposit = d_engineering_5 }
+		5 = { add_deposit = d_engineering_6 }
+		4 = { add_deposit = d_engineering_7 }
+		3 = { add_deposit = d_engineering_8 }
+		2 = { add_deposit = d_engineering_9 }
+		1 = { add_deposit = d_engineering_10 }
+	}
+}
+
+gpm_d_random_research = {
+	optimize_memory 
+	locked_random_list = {
+		10 = { add_deposit = gpm_d_double_science_phy_soc }
+		10 = { add_deposit = gpm_d_double_science_soc_phy }
+		10 = { add_deposit = gpm_d_double_science_phy_eng }
+		10 = { add_deposit = gpm_d_double_science_eng_phy }
+		10 = { add_deposit = gpm_d_double_science_soc_eng }
+		10 = { add_deposit = gpm_d_double_science_eng_soc }
+		10 = { add_deposit = gpm_d_triple_science }
+	}
+}
+
+gpm_d_random_crystals = {
+	optimize_memory 
+	locked_random_list = {
+		4 = { add_deposit = d_rare_crystals_1 }
+		8 = { add_deposit = d_rare_crystals_2 }
+		4 = { add_deposit = d_rare_crystals_3 }
+		2 = { add_deposit = d_rare_crystals_4 }
+		1 = { add_deposit = d_rare_crystals_5 }
+	}
+}
+
+gpm_d_random_gasses = {
+	optimize_memory 
+	locked_random_list = {
+		4 = { add_deposit = d_exotic_gases_1 }
+		8= { add_deposit = d_exotic_gases_2 }
+		4 = { add_deposit = d_exotic_gases_3 }
+		2 = { add_deposit = d_exotic_gases_4 }
+		1 = { add_deposit = d_exotic_gases_5 }
+	}
+}
+
+gpm_d_random_motes = {
+	optimize_memory 
+	locked_random_list = {
+		4 = { add_deposit = d_volatile_motes_1 }
+		8 = { add_deposit = d_volatile_motes_2 }
+		4 = { add_deposit = d_volatile_motes_3 }
+		2 = { add_deposit = d_volatile_motes_4 }
+		1 = { add_deposit = d_volatile_motes_5 }
+	}
+}
+
+gpm_d_random_unity_deposit = {
+	optimize_memory 
+	locked_random_list = {
+		16 = { add_deposit = gpm_d_unity_space_deposit_2 }
+		8 = { add_deposit = gpm_d_unity_space_deposit_3 }
+		4 = { add_deposit = gpm_d_unity_space_deposit_4 }
+		2 = { add_deposit = gpm_d_unity_space_deposit_5 }
+		1 = { add_deposit = gpm_d_unity_space_deposit_6 }
+	}
+}
+
+gpm_d_random_unity_deposit_big = {
+	optimize_memory 
+	locked_random_list = {
+		16 = { add_deposit = gpm_d_unity_space_deposit_7 }
+		8 = { add_deposit = gpm_d_unity_space_deposit_8 }
+		4 = { add_deposit = gpm_d_unity_space_deposit_9 }
+		2 = { add_deposit = gpm_d_unity_space_deposit_10 }
+		1 = { add_deposit = gpm_d_unity_space_deposit_15 }
+	}
+}

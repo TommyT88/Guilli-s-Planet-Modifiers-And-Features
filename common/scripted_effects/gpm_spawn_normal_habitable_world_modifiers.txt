@@ -60,6 +60,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_low_gravity_2" multiplier = gpm_planet_size_multiplier }
@@ -92,9 +94,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "high_gravity" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "high_gravity" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -125,9 +129,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_high_gravity_2" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_high_gravity_2" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -158,6 +164,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_thin_atmospheres" multiplier = gpm_planet_size_multiplier }
@@ -180,9 +188,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_dense_atmospheres" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_dense_atmospheres" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -219,9 +229,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_global_thunderstorms" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_global_thunderstorms" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -237,6 +249,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_highly_charged_air_particles" multiplier = gpm_planet_size_multiplier }
@@ -273,6 +287,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_hyper_complex_biome" multiplier = gpm_planet_size_multiplier }
@@ -298,7 +314,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_strong_volcanism" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_strong_volcanism" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_super_volcano
+			add_deposit = gpm_d_obsidian_fields
+			add_deposit = gpm_d_toxic_vent
 			# Not with these modifiers			
 			modifier = { factor = 0
 				OR = {
@@ -316,9 +336,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_unstable_tectonics_2" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_magma_ocean
+			add_deposit = gpm_d_toxic_vent
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -336,6 +361,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_weak_magnetic_field_2" multiplier = gpm_planet_size_multiplier }
@@ -364,9 +391,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_strong_magnetic_field_2" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_strong_magnetic_field_2" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_magnetic_mountains
+			add_deposit = gpm_d_magnetic_fields
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -391,9 +423,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_asteroid_impacts_2" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_rich_crater
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -413,6 +449,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "mineral_rich" multiplier = gpm_planet_size_multiplier }
@@ -442,6 +480,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_mineral_rich_2" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_surface_mineral_veins
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -504,6 +544,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ultra_rich_2" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_dense_metal_veins
+			add_deposit = gpm_d_iron_mountain
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -563,6 +606,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "bleak_planet" multiplier = gpm_planet_size_multiplier }
@@ -588,9 +633,15 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_young }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_floating_islands" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_floating_rocks
+			add_deposit = gpm_d_floating_island
+			add_deposit = gpm_d_floating_mountain
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -619,9 +670,27 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_hostile_flora" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			if = {
+				limit = { gpm_is_planet_class_hot_wet = yes }
+				add_deposit = gpm_d_carnivorous_jungle
+			}
+			if = {
+				limit = { 
+					gpm_is_planet_class_hot_wet = no
+					gpm_is_planet_class_water = no 
+				}
+				add_deposit = gpm_d_carnivorous_forest
+			}
+			if = {
+				limit = { gpm_is_planet_class_water = yes }
+				add_deposit = gpm_d_carnivorous_kelp
+			}
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -641,9 +710,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_titanic_predators" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_titanic_hunting_ground
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -662,6 +735,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_unusual_seasons" multiplier = gpm_planet_size_multiplier }
@@ -687,6 +762,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_perfect_seasons" multiplier = gpm_planet_size_multiplier }
@@ -736,6 +813,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ideal_for_life" multiplier = gpm_planet_size_multiplier }
@@ -780,8 +859,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -801,9 +880,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_endless_fish" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_colossal_fish
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -814,8 +897,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -842,9 +925,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_unnatural_world" }
+			# Unique deposit
+			add_deposit = gpm_d_unnatural_crystals
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_unnatural_world" }
 			# (Not) on these planets
@@ -867,9 +954,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_extensive_cavern_system" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_extensive_cavern_system" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_extensive_cavern_system" }
 			# (Not) on these planets
@@ -882,6 +971,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_toxic_gas" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_toxic_vent
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_toxic_gas" }
 			# (Not) on these planets
@@ -898,9 +989,15 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ruined_battlefield" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_ruined_battlefield
+			add_deposit = gpm_d_ancient_battlefield
+			add_deposit = gpm_d_buried_remains
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_ruined_battlefield" }
 			# (Not) on these planets
@@ -918,9 +1015,19 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_spaceship_graveyard" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_spaceship_graveyard
+			random_list = {
+				10 = { add_deposit = gpm_d_crashed_fighter }
+				10 = { add_deposit = gpm_d_crashed_destroyer }
+				10 = { add_deposit = gpm_d_crashed_battleship }
+				10 = { add_deposit = gpm_d_crashed_capital_ship }
+			}
 			gpm_set_space_ship_graveyard_ambient_objects = yes
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_spaceship_graveyard" }
@@ -940,9 +1047,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_gemstones" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_crystal_hills
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_gemstones" }
 			# (Not) on these planets
@@ -960,6 +1071,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_clear_skies" }
@@ -983,6 +1096,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_android_pleasure_palace" }
+			# Unique deposit
+			add_deposit = "gpm_d_android_pleasure_palace"
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_android_pleasure_palace" }
 			# (Not) on these planets
@@ -1002,6 +1117,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_melted_ice_caps" multiplier = gpm_planet_size_multiplier }
@@ -1010,8 +1127,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_wet_hot = yes
+					gpm_is_planet_class_hot_dry = yes
+					gpm_is_planet_class_hot_wet = yes
 				}
 			}
 			# Never in these systems
@@ -1021,9 +1138,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_small_islands" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_sprawling_archipelago
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_small_islands" }
 			# (Not) on these planets
@@ -1045,6 +1166,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_simple_organisms" multiplier = gpm_planet_size_multiplier }
@@ -1073,6 +1196,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_newly_evolved_complex_organisms" multiplier = gpm_planet_size_multiplier }
@@ -1098,9 +1223,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_delicious_ingredients" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_spice_fields
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_delicious_ingredients" }
 			# (Not) on these planets
@@ -1116,7 +1245,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_recent_mass_extinction" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_recent_mass_extinction" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_recent_mass_extinction" }
 			# (Not) on these planets
@@ -1129,9 +1258,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_friendly_wildlife" }
+			# Unique deposit
+			add_deposit = gpm_d_small_wildlife
+			add_deposit = gpm_d_massive_wildlife
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1166,6 +1300,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_unusual_formations" }
+			# Unique deposit
+			add_deposit = gpm_d_unusual_formations
+			add_deposit = gpm_d_geometric_oddities
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_unusual_formations" }
 			# (Not) on these planets
@@ -1182,6 +1319,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_flat_terrain" multiplier = gpm_planet_size_multiplier }
@@ -1231,6 +1370,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_rugged_terrain" multiplier = gpm_planet_size_multiplier }
@@ -1250,6 +1391,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_many_extremophiles" multiplier = gpm_planet_size_multiplier }
@@ -1258,8 +1401,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			### like this to make sure it does spawn on primite worlds
@@ -1276,9 +1419,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_great_temperature_variation" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_great_temperature_variation" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1301,6 +1446,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_gorgeous_sky" multiplier = gpm_planet_size_multiplier }
@@ -1322,8 +1469,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -1332,9 +1479,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ancient_temple" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_ancient_temple
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_ancient_temple" }
 			# (Not) on these planets
@@ -1358,6 +1509,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_tilted_axis" multiplier = gpm_planet_size_multiplier }
@@ -1391,6 +1544,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_perpendicular_axis" multiplier = gpm_planet_size_multiplier }
@@ -1424,9 +1579,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_radioactive_mantle" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_radioactive_mantle" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_radioactive_mantle" }
 			# (Not) on these planets
@@ -1437,6 +1594,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_locust_plagues" multiplier = gpm_planet_size_multiplier }
@@ -1451,8 +1610,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_wet_hot = yes
+					gpm_is_planet_class_hot_dry = yes
+					gpm_is_planet_class_hot_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_gaia }
@@ -1462,16 +1621,18 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_acidic_seas" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_acidic_seas" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_acidic_seas" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -1481,6 +1642,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_empathic_life" }
@@ -1500,6 +1663,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_seasonal_flooding" multiplier = gpm_planet_size_multiplier }
@@ -1519,9 +1684,17 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_lingering_pollution" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			random_list = {
+				10 = { add_deposit = gpm_d_garbage_patch }
+				10 = { add_deposit = gpm_d_industrial_ruins }
+				10 = { add_deposit = gpm_d_radioactive_dump }
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_lingering_pollution" }
 			# (Not) on these planets
@@ -1534,6 +1707,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_thin_ozone_layer" multiplier = gpm_planet_size_multiplier }
@@ -1546,6 +1721,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_symbiotic_life" }
@@ -1566,6 +1743,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_resilent_parasites" }
@@ -1586,16 +1765,24 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ice_flora" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_ice_flora
+				random_list = {
+				10 = { add_deposit = gpm_d_ice_flower_field }
+				10 = { add_deposit = gpm_d_white_forest }
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_ice_flora" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -1611,13 +1798,15 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_strange_ice_river" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_strange_ice_river
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_strange_ice_river" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -1626,16 +1815,20 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_juggernaut_manta_rays" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_juggernaut_manta_rays" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_massive_ray_school
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_juggernaut_manta_rays" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -1646,13 +1839,17 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_black_oily_stone" }
+			# Unique deposit
+			add_deposit = gpm_d_the_black_stone
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_black_oily_stone" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			### like this to make sure it does spawn on primite worlds
 			modifier = { factor = 0
 				has_owner = yes
@@ -1665,13 +1862,15 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_crystal_moon_palace" }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_crystal_moon_palace" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_cold = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_cold_wet = yes } }
 			modifier = { factor = 0 is_moon = no }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }	
@@ -1686,9 +1885,16 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_cities_in_the_sky" }
+			# Unique deposit
+			random_list = {
+				10 = { add_deposit = gpm_d_sprawling_prestine_ruins }
+				10 = { add_deposit = gpm_d_skyscraper_village }
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_cities_in_the_sky" }
 			# (Not) on these planets
@@ -1706,6 +1912,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_old_world" multiplier = gpm_planet_size_multiplier }
@@ -1727,25 +1935,38 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_dunes" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_dunes" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_dunes
+			random_list = {
+				80 = { }
+				20 = { add_deposit = gpm_d_sandworm_pit }
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_dunes" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_dry = yes } }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @everywhere }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_extensive_reef_systems" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_extensive_reef_systems" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_grand_reef
+			add_deposit = gpm_d_colossal_coral_life
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_extensive_reef_systems" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -1759,7 +1980,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_trubbles" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			### like this to make sure it does spawn on primite worlds
 			modifier = { factor = 0
 				has_owner = yes
@@ -1772,6 +1993,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_strange_voices" }
@@ -1790,6 +2013,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_hot_geysers" multiplier = gpm_planet_size_multiplier }
@@ -1804,7 +2029,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_very_hot_core" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_very_hot_core" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1815,8 +2040,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_wet_hot = yes
+					gpm_is_planet_class_hot_dry = yes
+					gpm_is_planet_class_hot_wet = yes
 				}
 			}
 			### like this to make sure it does spawn on primite worlds
@@ -1833,9 +2058,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_temple_of_the_ancient_one" }
+			# Unique deposit
+			add_deposit = "gpm_d_temple_of_the_ancient_one"
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_temple_of_the_ancient_one" }
 			# (Not) on these planets
@@ -1855,13 +2084,17 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_beautiful_lakes" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_glistening_lake
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_beautiful_lakes" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -1870,6 +2103,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_proto_forests" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_proto_forests
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1891,7 +2126,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_desertislands
 					is_planet_class = pc_arid
 					is_planet_class = pc_desert
-					gpm_is_planet_dry_cold = yes
+					gpm_is_planet_class_cold_dry = yes
 				}
 			}
 			### like this to make sure it does spawn on primite worlds
@@ -1907,9 +2142,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_dense_forests" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_dense_forests
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1931,7 +2170,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_desertislands
 					is_planet_class = pc_arid
 					is_planet_class = pc_desert
-					gpm_is_planet_dry_cold = yes
+					gpm_is_planet_class_cold_dry = yes
 				}
 			}
 			# Never in these systems
@@ -1941,7 +2180,16 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_planetwide_forest" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_planetwide_forest" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			if = {
+				limit = { gpm_is_planet_class_hot_wet = yes }
+				add_deposit = gpm_d_planetwide_jungles
+			}
+			if = {
+				limit = { gpm_is_planet_class_hot_wet = no }
+				add_deposit = gpm_d_planetwide_forest
+			}
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -1963,7 +2211,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 					is_planet_class = pc_desertislands
 					is_planet_class = pc_arid
 					is_planet_class = pc_desert
-					gpm_is_planet_dry_cold = yes
+					gpm_is_planet_class_cold_dry = yes
 				}
 			}
 			# Never in these systems
@@ -1976,6 +2224,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_hiveworld" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			random_list = {
+				10 = { add_deposit = gpm_d_fossilized_egg_sacks }
+				10 = { add_deposit = gpm_d_fossilized_structures }
+				10 = { add_deposit = gpm_d_fossilized_creep }
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_hiveworld" }
 			# (Not) on these planets
@@ -1995,6 +2249,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_periodic_meteor_showers" multiplier = gpm_planet_size_multiplier }
@@ -2007,9 +2263,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_arachnophobia" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_arachnophobia
+			# Unique blockers
 			random_list = {
 				10 = {
 					add_deposit = gpm_d_webbing
@@ -2024,7 +2285,6 @@ gpm_spawn_normal_habitable_world_modifier = {
 					add_deposit = gpm_d_webbing
 				}
 			}
-			
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_arachnophobia" }
 			# (Not) on these planets
@@ -2045,13 +2305,21 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_giant_worm" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_giant_worm" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_sandworm_pit
+			random_list = {
+				80 = { }
+				20 = { add_deposit = gpm_d_giant_skeleton }
+			}
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_giant_worm" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_dry_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_dry = yes } }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
@@ -2060,6 +2328,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_artificial_core" multiplier = gpm_planet_size_multiplier }
@@ -2081,6 +2351,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_fast_rotation" multiplier = gpm_planet_size_multiplier }
@@ -2105,6 +2377,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_exotic_spices" multiplier = gpm_planet_size_multiplier }
@@ -2117,32 +2391,38 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_sandstorms" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_sandstorms" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
+			modifier = { factor = 0 NOT = {	gpm_is_planet_class_hot_dry = yes } }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_sand_tornadoes" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_sand_tornadoes" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
+			modifier = { factor = 0 NOT = {	gpm_is_planet_class_hot_dry = yes } }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_silicon_crystals" multiplier = gpm_planet_size_multiplier }
@@ -2151,8 +2431,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_dry_cold = yes
+					gpm_is_planet_class_hot_dry = yes
+					gpm_is_planet_class_cold_dry = yes
 				}
 			}
 			# Never in these systems
@@ -2160,19 +2440,23 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_quicksand" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_quicksand" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = {	gpm_is_planet_dry_hot = yes } }
+			modifier = { factor = 0 NOT = {	gpm_is_planet_class_hot_dry = yes } }
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0.1 has_planet_flag = prescripted_ideal } # habitable worlds from the guaranteed habitable game setting
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_never_ending_aurora" multiplier = gpm_planet_size_multiplier }
@@ -2193,13 +2477,15 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_spirals_of_ice" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_resonating_ice
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_spirals_of_ice" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_continental }
@@ -2208,6 +2494,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_furry_packs" multiplier = gpm_planet_size_multiplier }
@@ -2216,8 +2504,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -2228,6 +2516,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_blizzards" multiplier = gpm_planet_size_multiplier }
@@ -2241,8 +2531,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -2251,6 +2541,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_abominable_predators" multiplier = gpm_planet_size_multiplier }
@@ -2259,8 +2551,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_cold = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_cold_dry = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -2271,9 +2563,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_rich_soil" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_rich_soil" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_fertile_field
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -2309,6 +2605,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_misty" multiplier = gpm_planet_size_multiplier }
@@ -2320,9 +2618,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ecological_nervous_system" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_ecological_brain
 			# Not with these modifiers
 			modifier = { factor = 0 
 				OR = {
@@ -2345,6 +2647,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_carnivorous_flies" multiplier = gpm_planet_size_multiplier }
@@ -2357,18 +2661,22 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_algae_boom" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_algae_boom" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ocean_forests" multiplier = gpm_planet_size_multiplier }
@@ -2377,8 +2685,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -2390,14 +2698,17 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_warm_water_lakes" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_hot_springs
+			add_deposit = gpm_d_glistening_lake
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_warm_water_lakes" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_dry_hot = yes
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_dry = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -2411,7 +2722,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_torrential_rainstorms" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			modifier = { factor = 0 is_planet_class = pc_gaia }
 			# Never in these systems
 			# Tweaks
@@ -2419,6 +2730,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ocean_currents" multiplier = gpm_planet_size_multiplier }
@@ -2427,8 +2740,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}			
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -2438,16 +2751,18 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_giant_ocean_snakes" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_giant_ocean_snakes" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_giant_ocean_snakes" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			### like this to make sure it does spawn on primite worlds
@@ -2465,6 +2780,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_unique_marine_habitats" multiplier = gpm_planet_size_multiplier }
@@ -2473,8 +2790,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}			
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -2486,14 +2803,14 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_massive_waves" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_massive_waves" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_massive_waves" }
 			# (Not) on these planets
 			modifier = { factor = 0
 				NOR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			modifier = { factor = 0 is_planet_class = pc_alpine }
@@ -2505,6 +2822,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_surface_of_bones" multiplier = gpm_planet_size_multiplier }
@@ -2525,6 +2844,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		# 100 = {
 		# 	add_modifier = { modifier = "gpm_ghost_ships" }
@@ -2533,8 +2854,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 		# 	# (Not) on these planets
 		# 	modifier = { factor = 0
 		# 		NOR = {
-		# 			gpm_is_planet_wet_hot = yes
-		# 			gpm_is_planet_wet_cold = yes
+		# 			gpm_is_planet_class_hot_wet = yes
+		# 			gpm_is_planet_class_cold_wet = yes
 		# 		}
 		# 	}
 		# 	### like this to make sure it does spawn on primite worlds
@@ -2564,9 +2885,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_beautiful_planet_rings" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_beautiful_planet_rings" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_beautiful_planet_rings" }
 			# (Not) on these planets
@@ -2591,6 +2914,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_blood_moon" }
@@ -2609,6 +2934,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_solar_eclipse" }
@@ -2627,6 +2954,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_lunar_dance" }
@@ -2642,6 +2971,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_dark_skies" }
@@ -2660,9 +2991,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_musical_creatures" }
+			# Unique deposit
+			add_deposit = gpm_d_tiny_herds
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_musical_creatures" }
 			# (Not) on these planets
@@ -2679,6 +3014,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_odd_cloud_shapes" }
@@ -2697,6 +3034,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_giant_mold_blobs" multiplier = gpm_planet_size_multiplier }
@@ -2715,9 +3054,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_subterranean_eco_system" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_colossal_subterranean_cavern
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_subterranean_eco_system" }
 			# (Not) on these planets
@@ -2732,9 +3075,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_colossal_cliffs" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_colossal_cliffs" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_colossal_cliffs" }
 			# (Not) on these planets
@@ -2746,11 +3091,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_massive_waterfalls" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_massive_waterfalls" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_massive_waterfalls" }
 			# (Not) on these planets			
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }
 			modifier = { factor = 0 is_planet_class = pc_ocean }
 			# Never in these systems
 			# Tweaks
@@ -2779,9 +3124,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_mushroom_forest" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_mushroom_forest
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -2810,9 +3159,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @galaxyfoodtweak }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_salt_flats" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_salt_flats
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -2832,6 +3185,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		# 100 = {
 		# 	add_modifier = { modifier = "gpm_cursed_world" }
@@ -2856,7 +3211,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_sunken_cities" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_wet_hot = yes } }			
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_hot_wet = yes } }			
 			### like this to make sure it does spawn on primite worlds
 			modifier = { factor = 0
 				has_owner = yes
@@ -2870,9 +3225,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_titanic_geo_form" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_titanic_geo_form" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_titanic_geo_form" }
 			# (Not) on these planets
@@ -2887,6 +3244,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_tidally_active" multiplier = gpm_planet_size_multiplier }
@@ -2917,6 +3276,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_giant_scorpioids" multiplier = gpm_planet_size_multiplier }
@@ -2925,9 +3286,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0 
 				NOR = { 
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
-					gpm_is_planet_dry_hot = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
+					gpm_is_planet_class_hot_dry = yes
 				}
 			}
 			# Never in these systems
@@ -2946,13 +3307,15 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_invasive_stalks" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_invasive_stalks" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_water = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_ocean = yes } }
 			### like this to make sure it does spawn on primite worlds
 			modifier = { factor = 0
 				has_owner = yes
@@ -2967,6 +3330,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_machine_god" }
@@ -2988,6 +3353,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_heart_of_the_forest" multiplier = gpm_planet_size_multiplier }
@@ -3002,8 +3369,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0 
 				NOR = { 
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
 				}
 			}
 			# Never in these systems
@@ -3013,6 +3380,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_steam_vents" multiplier = gpm_planet_size_multiplier }
@@ -3021,8 +3390,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# (Not) on these planets
 			modifier = { factor = 0 
 				NOR = {
-					gpm_is_planet_wet_cold = yes
-					gpm_is_planet_dry_cold = yes
+					gpm_is_planet_class_cold_wet = yes
+					gpm_is_planet_class_cold_dry = yes
 				}
 			}
 			# Never in these systems
@@ -3036,7 +3405,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_mineral_pools" }
 			# (Not) on these planets
-			modifier = { factor = 0 gpm_is_planet_water = yes }
+			modifier = { factor = 0 gpm_is_planet_class_ocean = yes }
 			# Never in these systems
 			# Tweaks
 			# Galaxy age setting modifier
@@ -3044,7 +3413,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_rich_equator" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_rich_equator" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_rich_equator" }
 			# (Not) on these planets
@@ -3062,6 +3431,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @plenty }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_feline_companions" }
@@ -3077,17 +3448,19 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_iron_oceans" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_iron_oceans" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_iron_oceans" }
 			# (Not) on these planets
-			modifier = { factor = 0 NOT = { gpm_is_planet_water = yes } }
+			modifier = { factor = 0 NOT = { gpm_is_planet_class_ocean = yes } }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @plenty }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_foul_stench" multiplier = gpm_planet_size_multiplier }
@@ -3100,6 +3473,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_maw_worship" }
@@ -3115,6 +3490,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_saphire_rains" multiplier = gpm_planet_size_multiplier }
@@ -3127,19 +3504,23 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_fractal_formations" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_fractal_formations" }
 			# (Not) on these planets
-			modifier = { factor = 0 gpm_is_planet_water = yes }
+			modifier = { factor = 0 gpm_is_planet_class_ocean = yes }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_massive_world" }
@@ -3180,9 +3561,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_dead_forests" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_dead_forests
 			# Not with these modifiers
 			modifier = { factor = 0 
 				OR = {
@@ -3205,6 +3590,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_golden_fields" multiplier = gpm_planet_size_multiplier }
@@ -3239,6 +3626,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_scoured_barrens" multiplier = gpm_planet_size_multiplier }
@@ -3309,9 +3698,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_gaia }
 			modifier = { factor = 0
 				OR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
-					gpm_is_planet_water = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
+					gpm_is_planet_class_ocean = yes
 				}
 			}
 			# Never in these systems
@@ -3322,9 +3711,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_crystal_cliffs" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_crystal_hills
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_crystal_cliffs" }
 			# (Not) on these planets
@@ -3337,9 +3730,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_white_world" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_white_forest
 			# Not with these modifiers
 			modifier = { factor = 0 
 				OR = {
@@ -3355,9 +3752,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ash_barrens" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_fertile_field
 			while = {
 				count = 3
 				if = {
@@ -3416,9 +3817,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 is_planet_class = pc_gaia }
 			modifier = { factor = 0
 				OR = {
-					gpm_is_planet_wet_hot = yes
-					gpm_is_planet_wet_cold = yes
-					gpm_is_planet_water = yes
+					gpm_is_planet_class_hot_wet = yes
+					gpm_is_planet_class_cold_wet = yes
+					gpm_is_planet_class_ocean = yes
 				}
 			}
 			# Never in these systems
@@ -3436,6 +3837,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_ethereal_clouds" }
@@ -3479,6 +3882,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_blighted_lands" multiplier = gpm_planet_size_multiplier }
@@ -3553,6 +3958,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_flesh_eating_swamp" multiplier = gpm_planet_size_multiplier }
@@ -3567,9 +3974,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @default }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_cooling_vistas" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_oasis
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_cooling_vistas" }
 			# (Not) on these planets
@@ -3583,6 +3994,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_calcification_pools" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_hot_springs
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_calcification_pools" }
 			# (Not) on these planets
@@ -3593,9 +4006,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_atmospheric_roots" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_atmospheric_roots" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_dense_forests
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_atmospheric_roots" }
 			# (Not) on these planets
@@ -3608,6 +4025,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_oily_riverbeds" multiplier = gpm_planet_size_multiplier }
@@ -3622,9 +4041,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_crystaline_fauna" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_crystalized_hives
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_crystaline_fauna" }
 			# (Not) on these planets
@@ -3634,13 +4057,17 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_immortal_coral" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			add_deposit = gpm_d_colossal_coral_life
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_immortal_coral" }
 			# (Not) on these planets
-			modifier = { factor = 0	gpm_is_planet_water = no }
+			modifier = { factor = 0	gpm_is_planet_class_ocean = no }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -3649,9 +4076,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_shroud_storms" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_shroud_storms" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_shroud_storms" }
 			# (Not) on these planets
@@ -3663,9 +4092,13 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_gargantuan_canopies" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_gargantuan_canopies" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_dense_forests
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_gargantuan_canopies" }
 			# (Not) on these planets
@@ -3678,6 +4111,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0.66 has_global_flag = gpm_galaxy_age_old }
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_jeweled_flowers" multiplier = gpm_planet_size_multiplier }
@@ -3692,9 +4127,11 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_towering_cacti" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_towering_cacti" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_towering_cacti" }
 			# (Not) on these planets
@@ -3708,7 +4145,9 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_geometric_landscapes" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_geometric_landscapes" multiplier = gpm_planet_size_multiplier_inverse }
+			# Unique deposit
+			add_deposit = gpm_d_geometric_oddities
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_geometric_landscapes" }
 			# (Not) on these planets
@@ -3718,9 +4157,31 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_lonely_mountain" multiplier = gpm_planet_size_multiplier }
+			# Unique deposit
+			# Remove all mountains
+			remove_deposit = d_tempestous_mountain
+			remove_deposit = d_tempestous_mountain
+			remove_deposit = d_tempestous_mountain
+			remove_deposit = d_rich_mountain
+			remove_deposit = d_rich_mountain
+			remove_deposit = d_rich_mountain
+			remove_deposit d_mountain_range
+			remove_deposit d_mountain_range
+			remove_deposit d_mountain_range
+			remove_deposit d_mountain_range
+			remove_deposit d_active_volcano
+			remove_deposit d_active_volcano
+			remove_deposit d_active_volcano
+			remove_deposit d_active_volcano
+			# Add a single mountain and two extra other blockers
+			add_deposit = d_rich_mountain
+			add_deposit = d_geothermal_vent
+			add_deposit = d_mineral_fields
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_lonely_mountain" }
 			# (Not) on these planets
@@ -3730,6 +4191,8 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @very_rare }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_super_dry_atmosphere" multiplier = gpm_planet_size_multiplier }
@@ -3737,20 +4200,22 @@ gpm_spawn_normal_habitable_world_modifier = {
 			modifier = { factor = 0 has_modifier = "gpm_super_dry_atmosphere" }
 			# (Not) on these planets
 			modifier = { factor = 0 is_planet_class = pc_gaia }
-			modifier = { factor = 0	gpm_is_planet_water = yes }
+			modifier = { factor = 0	gpm_is_planet_class_ocean = yes }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
 			# Galaxy age setting modifier
 			# Weight Factor
 			modifier = { factor = @uncommon }
+			# Forbid on terraforming
+			modifier = { factor = 0 gpm_world_is_terraforming = yes }
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_mineral_rich_waters" multiplier = gpm_planet_size_multiplier }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_mineral_rich_waters" }
 			# (Not) on these planets
-			modifier = { factor = 0	 gpm_is_planet_water = no }
+			modifier = { factor = 0	 gpm_is_planet_class_ocean = no }
 			# Never in these systems
 			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
 			# Tweaks
@@ -3762,7 +4227,7 @@ gpm_spawn_normal_habitable_world_modifier = {
 }
 
 gpm_roll_normal_habitable_modifiers = {
-	#optimize_memory
+	optimize_memory
 	# Planetary Diversity mod compatibility:
 	if = {
 		limit = { gpm_has_pd_planet_modifier = yes }

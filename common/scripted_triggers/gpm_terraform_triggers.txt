@@ -1,0 +1,5 @@
+# checks if world has just been terraformed. This is a temporary modifier within the terraform scripts 
+gpm_world_is_terraforming = {
+	optimize_memory
+	has_planet_flag = gpm_is_terraforming
+}

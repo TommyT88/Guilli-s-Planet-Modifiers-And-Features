@@ -74,7 +74,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "high_gravity" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "high_gravity" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -98,7 +98,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_high_gravity_2" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_high_gravity_2" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -142,7 +142,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_dense_atmospheres" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_dense_atmospheres" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -179,7 +179,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_global_thunderstorms" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_global_thunderstorms" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -271,7 +271,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @uncommon }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_strong_magnetic_field_2" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_strong_magnetic_field_2" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -440,7 +440,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @default }
 		}
 		100 = {
-			add_modifier = { modifier = "bleak_planet" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "bleak_planet" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {
@@ -493,7 +493,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_extensive_cavern_system" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_extensive_cavern_system" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_extensive_cavern_system" }
 			# (Not) on these planets
@@ -633,7 +633,7 @@ gpm_spawn_tomb_world_modifier = {
 			modifier = { factor = @rare }
 		}
 		100 = {
-			add_modifier = { modifier = "gpm_radioactive_mantle" multiplier = gpm_planet_size_multiplier }
+			add_modifier = { modifier = "gpm_radioactive_mantle" multiplier = gpm_planet_size_multiplier_inverse }
 			# Not with these modifiers
 			modifier = { factor = 0 has_modifier = "gpm_radioactive_mantle" }
 			# (Not) on these planets
@@ -971,7 +971,7 @@ gpm_spawn_tomb_world_modifier = {
 
 
 gpm_roll_tomb_world_modifiers = {
-	#optimize_memory
+	optimize_memory
 	# Planetary Diversity mod compatibility:
 	if = {
 		limit = { gpm_has_pd_planet_modifier = yes }

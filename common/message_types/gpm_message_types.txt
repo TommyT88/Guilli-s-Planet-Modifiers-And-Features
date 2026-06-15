@@ -173,4 +173,18 @@ message_type = {
  ## RELIC SPECIFIC NOTIFICATIONS
 
 
+######################
+### Policy unlock  ###
+######################
+ 
+## Terraforming policy unlocked notification
+message_type = {
+	key = "GPM_MESSAGE_TERRAFORM_POLICY_UNLOCK"
+	icon = "GFX_message_terraforming"
+	icon_frame = 1
 
+	name = "GPM_MESSAGE_TERRAFORM_POLICY_UNLOCK_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+	default_toast = yes
+}

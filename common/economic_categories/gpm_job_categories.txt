@@ -9,7 +9,7 @@ planet_jobs = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_productive = { #this should contain all categories that primarily produce resources (rather than e.g. amenities, trade, stability)
@@ -22,7 +22,7 @@ planet_jobs_productive = { #this should contain all categories that primarily pr
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_worker = {
@@ -35,7 +35,7 @@ planet_jobs_worker = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 
 	triggered_produces_modifier = {
 		key = planet_jobs_simple_drone
@@ -62,7 +62,7 @@ planet_jobs_specialist = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 
 	triggered_produces_modifier = {
 		key = planet_jobs_complex_drone
@@ -89,7 +89,7 @@ planet_jobs_ruler = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_pop_assemblers = {
@@ -102,7 +102,7 @@ planet_pop_assemblers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_farmers = {
@@ -116,7 +116,7 @@ planet_farmers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_miners = {
@@ -130,20 +130,7 @@ planet_miners = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
-}
-
-planet_sr_miners = { #added because we don't want miners_minerals_produces_add to apply to these
-	parent = planet_miners
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_livestock_farmers = {
@@ -156,7 +143,7 @@ planet_livestock_farmers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_technician = {
@@ -170,12 +157,12 @@ planet_technician = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_organic_batteries = {
 	parent = planet_jobs_productive
-	modifier_category = pop_job
+	modifier_category = colony
 #	 Inherited Modifiers
 	triggered_produces_modifier = {
 		key = planet_technician
@@ -192,19 +179,48 @@ planet_organic_batteries = {
 
 planet_politicians = {
 	parent = planet_jobs_ruler
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
-	generate_add_modifiers = {
-		produces
-		upkeep
+	triggered_produces_modifier = {
+		key = planet_sacred_path_elites
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				politician_is_sacred_path_elite = yes
+			}
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_sacred_path_elites
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				politician_is_sacred_path_elite = yes
+			}
+		}
+		use_parent_icon = yes
 	}
 }
 
 planet_bureaucrats = {
 	icon = "job_bureaucrat"
 	parent = planet_jobs_specialist
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -213,7 +229,35 @@ planet_bureaucrats = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_sacred_path_specialists
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				bureaucrat_is_sacred_path_specialist = yes
+			}
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_sacred_path_specialists
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				bureaucrat_is_sacred_path_specialist = yes
+			}
+		}
+		use_parent_icon = yes
+	}
 }
 
 planet_executives = {
@@ -226,12 +270,12 @@ planet_executives = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_managers = {
 	parent = planet_bureaucrats
-	modifier_category = pop_job
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -265,7 +309,7 @@ planet_researchers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_rangers = {
@@ -279,21 +323,7 @@ planet_rangers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
-}
-
-planet_zoo_keepers = {
-	icon = "job_researcher"
-	parent = planet_researchers
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_metallurgists = {
@@ -307,7 +337,7 @@ planet_metallurgists = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_laborer = {
@@ -321,7 +351,7 @@ planet_laborer = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_culture_workers = {
@@ -346,7 +376,19 @@ planet_bio_trophies = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
+}
+
+planet_cruise_passengers = {
+	parent = planet_culture_workers
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 planet_evaluators = {
@@ -431,7 +473,7 @@ planet_soldiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_squires = {
@@ -448,7 +490,7 @@ planet_squires = {
 
 planet_knights = {
 	parent = planet_jobs_specialist
-	modifier_category = pop_job
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -472,7 +514,7 @@ planet_knights = {
 	triggered_upkeep_modifier = {
 		key = planet_soldiers
 		modifier_types = {
-#			mult
+			mult
 			add
 		}
 		trigger = {
@@ -493,7 +535,42 @@ planet_enforcers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
+}
+
+planet_telepaths = {
+	parent = planet_enforcers
+	modifier_category = colony
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	triggered_produces_modifier = {
+		key = planet_enforcers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_enforcers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
 }
 
 planet_clerks = {
@@ -506,12 +583,12 @@ planet_clerks = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_traders = {
 	parent = planet_jobs_specialist
-	modifier_category = pop_job
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -524,7 +601,7 @@ planet_traders = {
 
 planet_transference_volunteers = {
 	parent = planet_jobs
-	modifier_category = pop_job
+	modifier_category = colony
 	# Inherited Modifiers
 	triggered_produces_modifier = {
 		key = planet_bureaucrats
@@ -549,7 +626,7 @@ planet_doctors = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_augmentors = {
@@ -562,7 +639,7 @@ planet_augmentors = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_refiners = {
@@ -575,7 +652,7 @@ planet_refiners = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_translucers = {
@@ -588,7 +665,7 @@ planet_translucers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_chemists = {
@@ -601,7 +678,7 @@ planet_chemists = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_artisans = {
@@ -615,7 +692,7 @@ planet_artisans = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_bath_attendants = {
@@ -681,7 +758,7 @@ planet_neural_chips = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_primal_jobs = {
@@ -708,22 +785,9 @@ planet_treasure_gatherers = {
 	}
 }
 
-planet_astrometeorologists = {
-	parent = planet_researchers
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-	modifier_category = pop_job
-}
-
 planet_jobs_slave = {
 	parent = planet_jobs
-	modifier_category = pop_job
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -744,7 +808,7 @@ planet_worker_ownership_jobs = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_cyborg_worker = {
@@ -757,7 +821,7 @@ planet_jobs_cyborg_worker = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_robot_worker = {
@@ -770,7 +834,7 @@ planet_jobs_robot_worker = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_worker_only = {
@@ -783,7 +847,7 @@ planet_jobs_worker_only = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_specialist_only = {
@@ -796,7 +860,7 @@ planet_jobs_specialist_only = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_simple_drone = {
@@ -809,7 +873,7 @@ planet_jobs_simple_drone = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_complex_drone = {
@@ -822,7 +886,7 @@ planet_jobs_complex_drone = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_complex_and_simple_drone = {
@@ -835,7 +899,7 @@ planet_jobs_complex_and_simple_drone = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_robotic = {
@@ -848,7 +912,7 @@ planet_jobs_robotic = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_livestock_miners = {
@@ -861,25 +925,63 @@ planet_livestock_miners = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
-planet_civilians = {
-	parent = planet_jobs
-	modifier_category = pop_job
+planet_livestock_metallurgists = {
+	parent = planet_jobs_worker
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
+	modifier_category = colony
+}
+
+planet_civilians = {
+	parent = planet_jobs
+	modifier_category = colony
 	generate_add_modifiers = {
 		produces
 		upkeep
+	}
+	triggered_produces_modifier = {
+		key = planet_sacred_path_civilians
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				civilian_is_sacred_path_civilian = yes
+			}
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_sacred_path_civilians
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				civilian_is_sacred_path_civilian = yes
+			}
+		}
+		use_parent_icon = yes
 	}
 }
 
 planet_maintenance_drones = {
 	parent = planet_jobs
-	modifier_category = pop_job
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -892,7 +994,7 @@ planet_maintenance_drones = {
 
 
 planet_physicists = {
-	modifier_category = pop_job
+	modifier_category = colony
 	parent = planet_researchers
 	generate_add_modifiers = {
 		produces
@@ -926,7 +1028,7 @@ planet_physicists = {
 }
 
 planet_biologists = {
-	modifier_category = pop_job
+	modifier_category = colony
 	parent = planet_researchers
 	generate_add_modifiers = {
 		produces
@@ -960,7 +1062,7 @@ planet_biologists = {
 }
 
 planet_engineers = {
-	modifier_category = pop_job
+	modifier_category = colony
 	parent = planet_researchers
 	generate_add_modifiers = {
 		produces
@@ -993,6 +1095,59 @@ planet_engineers = {
 	}
 }
 
+planet_mentors = {
+	icon = "job_polytechnic_mentor"
+	parent = planet_researchers
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+
+planet_ark_harvester = {
+	modifier_category = colony
+	parent = planet_jobs_specialist
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_xeno_zoo_animals = {
+	modifier_category = colony
+	parent = planet_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_ark_deep_sleep = {
+	modifier_category = colony
+	parent = planet_jobs
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
 #custom added -guilli
 planet_telepath = {
 	parent = planet_jobs_specialist
@@ -1004,7 +1159,7 @@ planet_telepath = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 planet_necromancers = {
 	parent = planet_jobs_specialist
@@ -1016,7 +1171,7 @@ planet_necromancers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 planet_priests = {
 	parent = planet_jobs_specialist
@@ -1028,5 +1183,5 @@ planet_priests = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }

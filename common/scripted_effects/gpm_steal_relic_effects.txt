@@ -378,6 +378,7 @@ gpm_steal_random_relic = {
 }
 
 gpm_steal_relic_event_notifaction_tooltips = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = r_dragon_trophy_relic_stolen }
 		remove_country_flag = r_dragon_trophy_relic_stolen

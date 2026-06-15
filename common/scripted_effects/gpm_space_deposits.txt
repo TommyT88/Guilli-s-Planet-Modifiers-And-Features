@@ -36,6 +36,7 @@
 
 
 gpm_random_res_metallic_ring_deposit = {
+	optimize_memory
 	# 100% deposit amounts (default)
 	random_list = {
 		90 = {
@@ -85,6 +86,7 @@ gpm_random_res_metallic_ring_deposit = {
 }
 
 gpm_random_res_ice_ring_deposit = {
+	optimize_memory
 	random_list = {
 		85 = {
 			clear_deposits = yes
@@ -112,6 +114,7 @@ gpm_random_res_ice_ring_deposit = {
 }
 
 gpm_remove_galaxy_generation_deposits = {
+	optimize_memory
 	if = {
 		limit = {
 			solar_system = {
@@ -201,6 +204,7 @@ gpm_remove_galaxy_generation_deposits = {
 }
 
 gpm_add_galaxy_generation_deposits = {
+	optimize_memory
 	if = {
 		limit = {
 			solar_system = {

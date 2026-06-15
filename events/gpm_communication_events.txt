@@ -188,3 +188,31 @@ country_event = {
 		}
 	}
 }
+
+### Notifcation terraforming policy unlock
+country_event = {
+	id = gpm_com.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		has_technology = tech_terrestrial_sculpting
+		NOT = { has_country_flag = gpm_terraforming_policy_message }
+	}
+
+	immediate = {
+		create_message = {
+			type = GPM_MESSAGE_TERRAFORM_POLICY_UNLOCK
+			localization = GPM_MESSAGE_TERRAFORM_POLICY_UNLOCK_DESC
+			days = 60
+			target = ROOT.capital_scope
+			variable = {
+				type = name
+				localization = COUNTRY
+				scope = ROOT
+			}
+		}
+		set_country_flag = gpm_terraforming_policy_message
+	}
+}

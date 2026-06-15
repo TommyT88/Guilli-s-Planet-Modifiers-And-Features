@@ -231,7 +231,7 @@ ship_event = {
 		FROM = {
 			if = {
 				limit = {
-					gpm_is_planet_class_normal_habitable = no
+					gpm_is_planet_class_habitable_natural = no
 					has_deposit = yes
 				}
 				clear_deposits = yes
@@ -253,7 +253,7 @@ ship_event = {
 					limit = {
 						NOR = {
 							has_modifier = terraforming_candidate
-							gpm_is_planet_class_normal_habitable = yes
+							gpm_is_planet_class_habitable_natural = yes
 						}
 					}
 					add_modifier = { modifier = terraforming_candidate }
@@ -288,7 +288,7 @@ ship_event = {
 					limit = {
 						NOR = {
 							has_modifier = terraforming_candidate
-							gpm_is_planet_class_normal_habitable = yes
+							gpm_is_planet_class_habitable_natural = yes
 						}
 					}
 					add_modifier = { modifier = terraforming_candidate }
@@ -323,7 +323,7 @@ ship_event = {
 					limit = {
 						NOR = {
 							has_modifier = terraforming_candidate
-							gpm_is_planet_class_normal_habitable = yes
+							gpm_is_planet_class_habitable_natural = yes
 						}
 					}
 					add_modifier = { modifier = terraforming_candidate }

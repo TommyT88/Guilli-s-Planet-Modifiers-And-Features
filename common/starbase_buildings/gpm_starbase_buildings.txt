@@ -3,13 +3,17 @@ gpm_precursor_shipyards_uplink = {
 	construction_days = 360
 	
 	potential = {
-		solar_system = {
-			OR = {
-				has_star_flag = gpm_precursor_shipyards_star
+		OR = {
+			star = { has_star_flag = gpm_precursor_shipyards_star }
+			solar_system = {
 				any_system_planet = {
 					has_modifier = gpm_precursor_shipyards
 				}
 			}
+		}
+		OR = {
+			is_normal_starbase = yes
+			is_orbital_ring = yes
 		}
 	}
 	

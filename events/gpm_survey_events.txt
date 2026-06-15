@@ -3903,7 +3903,7 @@ ship_event = {
 	}
 	# machine servitor option
 	option = {
-		trigger = { root = { owner = { has_authority = auth_machine_intelligence has_civic = civic_machine_servitor } } }
+		trigger = { root = { owner = { has_authority = auth_machine_intelligence has_civic = civic_machine_servitor is_nomadic = no } } }
 		name = gpm_survey.24.servitor
 		# duplicate modifier on capital
 		owner = {
@@ -9663,7 +9663,10 @@ ship_event = {
 			has_modifier = "terraforming_candidate"
 			gpm_is_a_precursor_world = yes
 		}
-		owner = { is_ai = no }
+		owner = {
+			is_ai = no
+			is_nomadic = no
+		}
 	}
 
 	immediate = {
