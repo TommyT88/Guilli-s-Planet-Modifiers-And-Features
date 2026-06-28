@@ -11426,13 +11426,13 @@ ship_event = {
 			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
-					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+					# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -11519,13 +11519,13 @@ ship_event = {
 			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
-					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+					# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -11625,13 +11625,13 @@ ship_event = {
 			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
-					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+					# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -11723,13 +11723,13 @@ ship_event = {
 			}
 			root.owner = {
 				add_relic = gpm_r_machine_world_core
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
-					log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+					# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_POSSESSION
 						localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -11828,13 +11828,13 @@ ship_event = {
 			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
-					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+					# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -11925,13 +11925,13 @@ ship_event = {
 			10 = {
 				root.owner = {
 					add_relic = gpm_r_machine_world_core
-					log = "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+					# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_machine_world_core >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC

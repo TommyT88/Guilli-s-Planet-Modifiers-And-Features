@@ -29,21 +29,21 @@ trade_action_gpm_r_encyclopedia_galactica = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_encyclopedia_galactica
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_encyclopedia_galactica >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_encyclopedia_galactica >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_encyclopedia_galactica
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encyclopedia_galactica >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_encyclopedia_galactica >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -203,21 +203,21 @@ trade_action_gpm_r_zero_energy_generator = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_zero_energy_generator
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_zero_energy_generator >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_zero_energy_generator >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_zero_energy_generator
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_zero_energy_generator >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_zero_energy_generator >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -357,21 +357,21 @@ trade_action_gpm_r_quantum_sphere = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_quantum_sphere
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_quantum_sphere >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_quantum_sphere >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_quantum_sphere
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_quantum_sphere >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_quantum_sphere >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -523,21 +523,21 @@ trade_action_gpm_r_ai_architect = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_ai_architect
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_ai_architect >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_ai_architect >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_ai_architect
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_ai_architect >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_ai_architect >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -685,21 +685,21 @@ trade_action_gpm_r_encrypted_sct = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_encrypted_sct
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_encrypted_sct >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_encrypted_sct >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_encrypted_sct
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encrypted_sct >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_encrypted_sct >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -855,21 +855,21 @@ trade_action_gpm_r_experimental_weapon = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_experimental_weapon
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_experimental_weapon >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_experimental_weapon >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_experimental_weapon
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_experimental_weapon >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_experimental_weapon >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -1027,21 +1027,21 @@ trade_action_gpm_r_fallout_emergency_replicator = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_fallout_emergency_replicator
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_fallout_emergency_replicator >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_fallout_emergency_replicator >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_fallout_emergency_replicator
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_fallout_emergency_replicator >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_fallout_emergency_replicator >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -1189,21 +1189,21 @@ trade_action_gpm_r_power_core = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_power_core
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_power_core >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_power_core >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_power_core
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_power_core >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_power_core >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -1351,21 +1351,21 @@ trade_action_gpm_r_mysterious_shield_generator = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_mysterious_shield_generator
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_mysterious_shield_generator >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_mysterious_shield_generator >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_mysterious_shield_generator
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_mysterious_shield_generator >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_mysterious_shield_generator >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -1517,21 +1517,21 @@ trade_action_gpm_r_gravity_engine = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_gravity_engine
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_gravity_engine >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_gravity_engine >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_gravity_engine
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_gravity_engine >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_gravity_engine >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -1675,21 +1675,21 @@ trade_action_gpm_r_codex_administratum = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_codex_administratum
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_codex_administratum >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_codex_administratum >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_codex_administratum
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_codex_administratum >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_codex_administratum >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -1841,21 +1841,21 @@ trade_action_gpm_r_enigmatic_advisor = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_enigmatic_advisor
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_enigmatic_advisor >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_enigmatic_advisor >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_enigmatic_advisor
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_enigmatic_advisor >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_enigmatic_advisor >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -2023,21 +2023,21 @@ trade_action_gpm_r_positronic_microchip = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_positronic_microchip
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_positronic_microchip >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_positronic_microchip >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_positronic_microchip
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_positronic_microchip >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_positronic_microchip >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -2189,21 +2189,21 @@ trade_action_gpm_r_venerable_dreadnaught = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_venerable_dreadnaught
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_venerable_dreadnaught >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_venerable_dreadnaught >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_venerable_dreadnaught
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_venerable_dreadnaught >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_venerable_dreadnaught >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -2355,21 +2355,21 @@ trade_action_gpm_r_sentinel_queen = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_sentinel_queen
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_sentinel_queen >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_sentinel_queen >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_sentinel_queen
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_sentinel_queen >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_sentinel_queen >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -2529,21 +2529,21 @@ trade_action_gpm_r_earthquake_engine = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_earthquake_engine
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_earthquake_engine >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_earthquake_engine >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_earthquake_engine
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_earthquake_engine >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_earthquake_engine >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -2683,21 +2683,21 @@ trade_action_gpm_r_manufactorium_ship = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_manufactorium_ship
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_manufactorium_ship >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_manufactorium_ship >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_manufactorium_ship
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_manufactorium_ship >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_manufactorium_ship >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -2857,21 +2857,21 @@ trade_action_gpm_r_datacube = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_datacube
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_datacube >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_datacube >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_datacube
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_datacube >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_datacube >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -3007,21 +3007,21 @@ trade_action_gpm_r_self_assembly_hub = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_self_assembly_hub
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_self_assembly_hub >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_self_assembly_hub >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_self_assembly_hub
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_assembly_hub >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_self_assembly_hub >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -3157,10 +3157,10 @@ trade_action_gpm_r_banner_of_the_fallen = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_banner_of_the_fallen
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_banner_of_the_fallen >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_banner_of_the_fallen >>> from ROOT = [root.GetName]"
 		hidden_effect = {
 			remove_country_flag = gpm_r_banner_of_the_fallen_loot_flag
 		}
@@ -3168,7 +3168,7 @@ trade_action_gpm_r_banner_of_the_fallen = {
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_banner_of_the_fallen
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_banner_of_the_fallen >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_banner_of_the_fallen >>> to FROM = [from.GetName]"
 			hidden_effect = {
 				set_country_flag = gpm_r_banner_of_the_fallen_loot_flag
 				country_event = { id = gpm_relics.20 }
@@ -3178,7 +3178,7 @@ trade_action_gpm_r_banner_of_the_fallen = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -3342,10 +3342,10 @@ trade_action_gpm_r_cloaking_device = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_cloaking_device
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_cloaking_device >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_cloaking_device >>> from ROOT = [root.GetName]"
 		hidden_effect = {
 			remove_country_flag = gpm_r_cloaking_device_loot_flag
 		}
@@ -3353,7 +3353,7 @@ trade_action_gpm_r_cloaking_device = {
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_cloaking_device
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_cloaking_device >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_cloaking_device >>> to FROM = [from.GetName]"
 			hidden_effect = {
 				set_country_flag = gpm_r_cloaking_device_loot_flag
 				country_event = { id = gpm_relics.1 }
@@ -3363,7 +3363,7 @@ trade_action_gpm_r_cloaking_device = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -3535,21 +3535,21 @@ trade_action_gpm_r_q_storage_compressor = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_q_storage_compressor
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_q_storage_compressor >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_q_storage_compressor >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_q_storage_compressor
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_q_storage_compressor >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_q_storage_compressor >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -3685,21 +3685,21 @@ trade_action_gpm_r_soul_gem = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_soul_gem		
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_soul_gem >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_soul_gem >>> from ROOT = [root.GetName]"
 
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_soul_gem
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_soul_gem >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_soul_gem >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC
@@ -3859,21 +3859,21 @@ trade_action_gpm_r_self_repairing_obelisk = {
 	}
 
 	on_traded_effect = {
-		log = "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC TRADED <<< ROOT = [root.GetName] traded relic to FROM = [from.GetName] >>>"
 		# actions on the selling country
 		remove_relic = gpm_r_self_repairing_obelisk
-		log = "<< RELICS >> | REMOVE_RELIC <<< gpm_r_self_repairing_obelisk >>> from ROOT = [root.GetName]"
+		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_self_repairing_obelisk >>> from ROOT = [root.GetName]"
 		
 		# actions on the buying country
 		from = {
 			add_relic = gpm_r_self_repairing_obelisk
-			log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_repairing_obelisk >>> to FROM = [from.GetName]"
+			# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_self_repairing_obelisk >>> to FROM = [from.GetName]"
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = prev
 				}
-				log = "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
+				# log =  "<< RELICS >> | RELIC TRADED <<< create message on FROM = [from.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_TRADE
 					localization = GPM_MESSAGE_RELIC_TRADE_DESC

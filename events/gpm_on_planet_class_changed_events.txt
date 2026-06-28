@@ -43,7 +43,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.2 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.2 on --- [this.GetName]"
 
 		gpm_purge_all_planetary_modifiers = yes
 		gpm_random_modifier_crisis_purge = yes
@@ -69,7 +69,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.3 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.3 on --- [this.GetName]"
 
 		if = {
 			limit = { has_modifier = gpm_planet_wonder_discovered }
@@ -118,7 +118,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.4 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.4 on --- [this.GetName]"
 
 		if = {
 			limit = {
@@ -167,7 +167,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.5 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.5 on --- [this.GetName]"
 
 		gpm_purge_all_planetary_modifiers = yes			# -guilli
 		gpm_purge_all_core_modifiers = yes			# -guilli
@@ -195,7 +195,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.6 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.6 on --- [this.GetName]"
 
 		gpm_purge_all_planetary_modifiers = yes		# -guilli
 		gpm_purge_all_core_modifiers = yes			# -guilli
@@ -217,7 +217,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.7 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.7 on --- [this.GetName]"
 		
 		set_planet_flag = gpm_is_new_ecumenopolis
 		carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
@@ -240,7 +240,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.8 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.8 on --- [this.GetName]"
 
 		carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
 	}
@@ -258,7 +258,7 @@ carrier_event = {
 	}
 
 	immediate = {
-		log = "Firing on_planet_class_changed event -- gpm_pc_changed.5 on --- [this.GetName]"
+		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.5 on --- [this.GetName]"
 
 		gpm_purge_all_planetary_modifiers = yes
 		gpm_purge_all_core_modifiers = yes

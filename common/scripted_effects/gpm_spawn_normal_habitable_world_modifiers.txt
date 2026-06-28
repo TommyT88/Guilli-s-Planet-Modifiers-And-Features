@@ -683,12 +683,12 @@ gpm_spawn_normal_habitable_world_modifier = {
 			if = {
 				limit = { 
 					gpm_is_planet_class_hot_wet = no
-					gpm_is_planet_class_water = no 
+					gpm_is_planet_class_ocean = no 
 				}
 				add_deposit = gpm_d_carnivorous_forest
 			}
 			if = {
-				limit = { gpm_is_planet_class_water = yes }
+				limit = { gpm_is_planet_class_ocean = yes }
 				add_deposit = gpm_d_carnivorous_kelp
 			}
 			# Not with these modifiers

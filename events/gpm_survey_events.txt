@@ -8996,13 +8996,13 @@ ship_event = {
 			if = { limit = { has_country_flag = "gpm_discovery_reward_7" }
 				custom_tooltip = gpm_r_alien_eggs_recoveryTT
 				add_relic = gpm_r_alien_eggs
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_alien_eggs >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_alien_eggs >>> to ROOT.OWNER = [root.owner.GetName] ; survey event reward"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
 						has_communications = root.owner
 					}
-					log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+					# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_POSSESSION
 						localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -9532,7 +9532,7 @@ ship_event = {
 			}
 		}
 		owner = {
-			log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+			# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 			create_message = {
 				type = GPM_MESSAGE_WONDROUS_WORLD
 				localization = GPM_MESSAGE_WONDROUS_WORLD_DESC
@@ -9634,7 +9634,7 @@ ship_event = {
 			}
 		}
 		owner = {
-			log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+			# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 			create_message = {
 				type = GPM_MESSAGE_WONDROUS_WORLD
 				localization = GPM_MESSAGE_WONDROUS_WORLD_DESC
@@ -9672,7 +9672,7 @@ ship_event = {
 	immediate = {
 		
 		owner = {
-			# log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+			# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 			create_message = {
 				type = GPM_MESSAGE_VALUABLE_WORLD
 				localization = GPM_MESSAGE_VALUABLE_WORLD_DESC

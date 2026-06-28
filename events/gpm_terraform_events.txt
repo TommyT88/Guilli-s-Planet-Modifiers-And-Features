@@ -259,7 +259,7 @@ carrier_event = {
 
 
 	immediate = {
-		log = "Starting terraforming script gpm_terraform.10 on world << [THIS.GetName]>>"
+		# log =  "Starting terraforming script gpm_terraform.10 on world << [THIS.GetName]>>"
 		
 		
 		THIS = {
@@ -543,7 +543,7 @@ carrier_event = {
 			remove_planet_flag = gpm_is_terraforming
 			############################################################################
 			
-			log = "Ending terraforming script gpm_terraform.10 on world << [THIS.GetName]>>"
+			# log =  "Ending terraforming script gpm_terraform.10 on world << [THIS.GetName]>>"
 		}
 	}
 }

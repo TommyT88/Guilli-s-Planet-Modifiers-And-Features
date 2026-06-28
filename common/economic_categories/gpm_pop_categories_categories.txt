@@ -55,6 +55,17 @@ planet_pops = {
 		}
 	}
 
+	triggered_upkeep_modifier = {
+		key = planet_pops_enslaved
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_enslaved = yes
+		}
+	}
+
 	triggered_produces_modifier = {
 		key = planet_pops_psionic
 		modifier_types = {
@@ -158,19 +169,6 @@ pop_category_bio_trophy = {
 }
 
 pop_category_cruise_passenger = {
-	parent = planet_pops
-	generate_add_modifiers = {
-		upkeep
-		produces
-	}
-	generate_mult_modifiers = {
-		upkeep
-		produces
-	}
-	modifier_category = pop_group
-}
-
-pop_category_slave = {
 	parent = planet_pops
 	generate_add_modifiers = {
 		upkeep

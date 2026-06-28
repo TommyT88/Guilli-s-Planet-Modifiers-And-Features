@@ -261,7 +261,7 @@ ship_event = {
 			if = {
 				limit = { has_ancrel = yes }
 				add_relic = r_reality_perforator
-				log = "<< RELICS >> | ADD_RELIC <<< r_reality_perforator >>> to OWNER = [owner.GetName] ; precursor homeworld event"
+				# log =  "<< RELICS >> | ADD_RELIC <<< r_reality_perforator >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
@@ -368,7 +368,7 @@ ship_event = {
 			if = {
 				limit = { has_ancrel = yes }
 				add_relic = r_cryo_core
-				log = "<< RELICS >> | ADD_RELIC <<< r_cryo_core >>> to OWNER = [owner.GetName] ; precursor homeworld event"
+				# log =  "<< RELICS >> | ADD_RELIC <<< r_cryo_core >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
@@ -568,7 +568,7 @@ ship_event = {
 			if = {
 				limit = { has_ancrel = yes }
 				add_relic = r_pox_sample
-				log = "<< RELICS >> | ADD_RELIC <<< r_pox_sample >>> to OWNER = [owner.GetName] ; precursor homeworld event"
+				# log =  "<< RELICS >> | ADD_RELIC <<< r_pox_sample >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
@@ -697,7 +697,7 @@ ship_event = {
 						}
 					}
 				}
-				log = "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
+				# log =  "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
@@ -766,7 +766,7 @@ ship_event = {
 						}
 					}
 				}
-				log = "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
+				# log =  "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes
@@ -838,7 +838,7 @@ ship_event = {
 						}
 					}
 				}
-				log = "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
+				# log =  "<< RELICS >> | ADD_RELIC <<< r_war_forge >>> to OWNER = [owner.GetName] ; precursor homeworld event"
 				every_relation = {
 					limit = {
 						gpm_is_country_type_default = yes

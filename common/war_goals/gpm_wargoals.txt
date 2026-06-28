@@ -79,7 +79,7 @@ wg_gpm_r_dragon_trophy = {
 				target = FROM
 				relic = r_dragon_trophy
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_dragon_trophy >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_dragon_trophy >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -95,7 +95,7 @@ wg_gpm_r_dragon_trophy = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -115,7 +115,7 @@ wg_gpm_r_dragon_trophy = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -278,7 +278,7 @@ wg_gpm_r_khans_throne = {
 				target = FROM
 				relic = r_khans_throne
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_khans_throne >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_khans_throne >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -294,7 +294,7 @@ wg_gpm_r_khans_throne = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -314,7 +314,7 @@ wg_gpm_r_khans_throne = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -478,7 +478,7 @@ wg_gpm_r_worm_scales = {
 				relic = r_worm_scales
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_worm_scales >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_worm_scales >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -494,7 +494,7 @@ wg_gpm_r_worm_scales = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -514,7 +514,7 @@ wg_gpm_r_worm_scales = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -666,7 +666,7 @@ wg_gpm_r_rubricator = {
 				relic = r_rubricator
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_rubricator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_rubricator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -682,7 +682,7 @@ wg_gpm_r_rubricator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -702,7 +702,7 @@ wg_gpm_r_rubricator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -854,7 +854,7 @@ wg_gpm_r_galaxy = {
 				relic = r_galaxy
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_galaxy >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_galaxy >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -870,7 +870,7 @@ wg_gpm_r_galaxy = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -890,7 +890,7 @@ wg_gpm_r_galaxy = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1042,7 +1042,7 @@ wg_gpm_r_omnicodex = {
 				relic = r_omnicodex
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_omnicodex >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_omnicodex >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -1058,7 +1058,7 @@ wg_gpm_r_omnicodex = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -1078,7 +1078,7 @@ wg_gpm_r_omnicodex = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1222,7 +1222,7 @@ wg_gpm_r_surveyor = {
 				relic = r_surveyor
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_surveyor >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_surveyor >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -1238,7 +1238,7 @@ wg_gpm_r_surveyor = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -1259,7 +1259,7 @@ wg_gpm_r_surveyor = {
 	}
 
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1411,7 +1411,7 @@ wg_gpm_r_ancient_sword = {
 				relic = r_ancient_sword
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_ancient_sword >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_ancient_sword >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -1427,7 +1427,7 @@ wg_gpm_r_ancient_sword = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -1447,7 +1447,7 @@ wg_gpm_r_ancient_sword = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1611,7 +1611,7 @@ wg_gpm_r_severed_head = {
 				relic = r_severed_head
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_severed_head >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_severed_head >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -1627,7 +1627,7 @@ wg_gpm_r_severed_head = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -1647,7 +1647,7 @@ wg_gpm_r_severed_head = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -1815,7 +1815,7 @@ wg_gpm_r_prethoryn_queen = {
 				relic = r_prethoryn_queen
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_prethoryn_queen >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_prethoryn_queen >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -1831,7 +1831,7 @@ wg_gpm_r_prethoryn_queen = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -1851,7 +1851,7 @@ wg_gpm_r_prethoryn_queen = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2027,7 +2027,7 @@ wg_gpm_r_unbidden_warlock = {
 				relic = r_unbidden_warlock
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_unbidden_warlock >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_unbidden_warlock >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -2043,7 +2043,7 @@ wg_gpm_r_unbidden_warlock = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -2063,7 +2063,7 @@ wg_gpm_r_unbidden_warlock = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2231,7 +2231,7 @@ wg_gpm_r_contingency_core = {
 				relic = r_contingency_core
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_contingency_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_contingency_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -2247,7 +2247,7 @@ wg_gpm_r_contingency_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -2267,7 +2267,7 @@ wg_gpm_r_contingency_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2423,7 +2423,7 @@ wg_gpm_r_zro_crystal = {
 				relic = r_zro_crystal
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_zro_crystal >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_zro_crystal >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -2439,7 +2439,7 @@ wg_gpm_r_zro_crystal = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -2459,7 +2459,7 @@ wg_gpm_r_zro_crystal = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2611,7 +2611,7 @@ wg_gpm_r_the_last_baol = {
 				relic = r_the_last_baol
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_last_baol >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_last_baol >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -2627,7 +2627,7 @@ wg_gpm_r_the_last_baol = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -2647,7 +2647,7 @@ wg_gpm_r_the_last_baol = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -2823,7 +2823,7 @@ wg_gpm_r_the_defragmentor = {
 				relic = r_the_defragmentor
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_defragmentor >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_defragmentor >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -2839,7 +2839,7 @@ wg_gpm_r_the_defragmentor = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -2860,7 +2860,7 @@ wg_gpm_r_the_defragmentor = {
 	}
 
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3016,7 +3016,7 @@ wg_gpm_r_reality_perforator = {
 				relic = r_reality_perforator
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_reality_perforator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_reality_perforator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -3032,7 +3032,7 @@ wg_gpm_r_reality_perforator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -3052,7 +3052,7 @@ wg_gpm_r_reality_perforator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3220,7 +3220,7 @@ wg_gpm_r_pox_sample = {
 				relic = r_pox_sample
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_pox_sample >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_pox_sample >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -3236,7 +3236,7 @@ wg_gpm_r_pox_sample = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -3256,7 +3256,7 @@ wg_gpm_r_pox_sample = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3444,7 +3444,7 @@ wg_gpm_r_cryo_core = {
 				relic = r_cryo_core
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_cryo_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_cryo_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -3460,7 +3460,7 @@ wg_gpm_r_cryo_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -3480,7 +3480,7 @@ wg_gpm_r_cryo_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3628,7 +3628,7 @@ wg_gpm_r_war_forge = {
 				relic = r_war_forge
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_war_forge >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_war_forge >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -3644,7 +3644,7 @@ wg_gpm_r_war_forge = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -3664,7 +3664,7 @@ wg_gpm_r_war_forge = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -3852,7 +3852,7 @@ wg_gpm_r_vacuum_flower = {
 				target = FROM
 				relic = r_vacuum_flower
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_vacuum_flower >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_vacuum_flower >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -3868,7 +3868,7 @@ wg_gpm_r_vacuum_flower = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -3888,7 +3888,7 @@ wg_gpm_r_vacuum_flower = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4052,7 +4052,7 @@ wg_gpm_r_toxic_god = {
 				target = FROM
 				relic = r_toxic_god
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_toxic_god >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_toxic_god >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -4068,7 +4068,7 @@ wg_gpm_r_toxic_god = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -4088,7 +4088,7 @@ wg_gpm_r_toxic_god = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4252,7 +4252,7 @@ wg_gpm_r_odryskan_crystal = {
 				target = FROM
 				relic = r_odryskan_crystal
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_odryskan_crystal >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_odryskan_crystal >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -4268,7 +4268,7 @@ wg_gpm_r_odryskan_crystal = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -4288,7 +4288,7 @@ wg_gpm_r_odryskan_crystal = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4452,7 +4452,7 @@ wg_gpm_r_wormhole_key = {
 				target = FROM
 				relic = r_wormhole_key
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_wormhole_key >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_wormhole_key >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -4468,7 +4468,7 @@ wg_gpm_r_wormhole_key = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -4488,7 +4488,7 @@ wg_gpm_r_wormhole_key = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4652,7 +4652,7 @@ wg_gpm_r_ever_spinning_top = {
 				target = FROM
 				relic = r_ever_spinning_top
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_ever_spinning_top >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_ever_spinning_top >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -4668,7 +4668,7 @@ wg_gpm_r_ever_spinning_top = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -4688,7 +4688,7 @@ wg_gpm_r_ever_spinning_top = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -4852,7 +4852,7 @@ wg_gpm_r_celestial_tear = {
 				target = FROM
 				relic = r_celestial_tear
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_celestial_tear >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_celestial_tear >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -4868,7 +4868,7 @@ wg_gpm_r_celestial_tear = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -4888,7 +4888,7 @@ wg_gpm_r_celestial_tear = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5052,7 +5052,7 @@ wg_gpm_r_plasmic_core = {
 				target = FROM
 				relic = r_plasmic_core
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_plasmic_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_plasmic_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -5068,7 +5068,7 @@ wg_gpm_r_plasmic_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -5088,7 +5088,7 @@ wg_gpm_r_plasmic_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5252,7 +5252,7 @@ wg_gpm_r_infinity_root = {
 				target = FROM
 				relic = r_infinity_root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_infinity_root >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_infinity_root >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -5268,7 +5268,7 @@ wg_gpm_r_infinity_root = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -5288,7 +5288,7 @@ wg_gpm_r_infinity_root = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5452,7 +5452,7 @@ wg_gpm_r_time_crystal = {
 				target = FROM
 				relic = r_time_crystal
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_time_crystal >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_time_crystal >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -5468,7 +5468,7 @@ wg_gpm_r_time_crystal = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -5488,7 +5488,7 @@ wg_gpm_r_time_crystal = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5652,7 +5652,7 @@ wg_gpm_r_daedalus_seal = {
 				target = FROM
 				relic = r_daedalus_seal
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_daedalus_seal >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_daedalus_seal >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -5668,7 +5668,7 @@ wg_gpm_r_daedalus_seal = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -5688,7 +5688,7 @@ wg_gpm_r_daedalus_seal = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -5852,7 +5852,7 @@ wg_gpm_r_continuum = {
 				target = FROM
 				relic = r_continuum
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_continuum >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_continuum >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -5868,7 +5868,7 @@ wg_gpm_r_continuum = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -5888,7 +5888,7 @@ wg_gpm_r_continuum = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -6052,7 +6052,7 @@ wg_gpm_r_eternal_throne = {
 				target = FROM
 				relic = r_eternal_throne
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_eternal_throne >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_eternal_throne >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -6068,7 +6068,7 @@ wg_gpm_r_eternal_throne = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -6088,7 +6088,7 @@ wg_gpm_r_eternal_throne = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -6253,7 +6253,7 @@ wg_gpm_r_the_modularium = {
 				target = FROM
 				relic = r_the_modularium
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_modularium >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_modularium >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -6269,7 +6269,7 @@ wg_gpm_r_the_modularium = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -6289,7 +6289,7 @@ wg_gpm_r_the_modularium = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -6453,7 +6453,7 @@ wg_gpm_r_flowmetal_alloy = {
 				target = FROM
 				relic = r_flowmetal_alloy
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_flowmetal_alloy >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_flowmetal_alloy >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -6469,7 +6469,7 @@ wg_gpm_r_flowmetal_alloy = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -6489,7 +6489,7 @@ wg_gpm_r_flowmetal_alloy = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -6653,7 +6653,7 @@ wg_gpm_r_crystallinus_diffuser = {
 				target = FROM
 				relic = r_crystallinus_diffuser
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_crystallinus_diffuser >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_crystallinus_diffuser >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -6669,7 +6669,7 @@ wg_gpm_r_crystallinus_diffuser = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -6689,7 +6689,7 @@ wg_gpm_r_crystallinus_diffuser = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -6853,7 +6853,7 @@ wg_gpm_r_everchanging_stone = {
 				target = FROM
 				relic = r_everchanging_stone
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_everchanging_stone >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_everchanging_stone >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -6869,7 +6869,7 @@ wg_gpm_r_everchanging_stone = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -6889,7 +6889,7 @@ wg_gpm_r_everchanging_stone = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -7053,7 +7053,7 @@ wg_gpm_r_pulsestone = {
 				target = FROM
 				relic = r_pulsestone
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_pulsestone >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_pulsestone >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -7069,7 +7069,7 @@ wg_gpm_r_pulsestone = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -7089,7 +7089,7 @@ wg_gpm_r_pulsestone = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -7253,7 +7253,7 @@ wg_gpm_r_gavel_of_the_tribunal = {
 				target = FROM
 				relic = r_gavel_of_the_tribunal
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_gavel_of_the_tribunal >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_gavel_of_the_tribunal >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -7269,7 +7269,7 @@ wg_gpm_r_gavel_of_the_tribunal = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -7289,7 +7289,7 @@ wg_gpm_r_gavel_of_the_tribunal = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -7453,7 +7453,7 @@ wg_gpm_r_entangled_relay = {
 				target = FROM
 				relic = r_entangled_relay
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_entangled_relay >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_entangled_relay >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -7469,7 +7469,7 @@ wg_gpm_r_entangled_relay = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -7489,7 +7489,7 @@ wg_gpm_r_entangled_relay = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -7653,7 +7653,7 @@ wg_gpm_r_prototype_vir_core = {
 				target = FROM
 				relic = r_prototype_vir_core
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_prototype_vir_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_prototype_vir_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -7669,7 +7669,7 @@ wg_gpm_r_prototype_vir_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -7689,7 +7689,7 @@ wg_gpm_r_prototype_vir_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -7853,7 +7853,7 @@ wg_gpm_r_propagandosphere = {
 				target = FROM
 				relic = r_propagandosphere
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_propagandosphere >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_propagandosphere >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -7869,7 +7869,7 @@ wg_gpm_r_propagandosphere = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -7889,7 +7889,7 @@ wg_gpm_r_propagandosphere = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -8053,7 +8053,7 @@ wg_gpm_r_executus_compendium = {
 				target = FROM
 				relic = r_executus_compendium
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_executus_compendium >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_executus_compendium >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -8069,7 +8069,7 @@ wg_gpm_r_executus_compendium = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -8089,7 +8089,7 @@ wg_gpm_r_executus_compendium = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -8253,7 +8253,7 @@ wg_gpm_r_the_pattern_maker = {
 				target = FROM
 				relic = r_the_pattern_maker
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_pattern_maker >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_pattern_maker >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -8269,7 +8269,7 @@ wg_gpm_r_the_pattern_maker = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -8289,7 +8289,7 @@ wg_gpm_r_the_pattern_maker = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -8453,7 +8453,7 @@ wg_gpm_r_vaporous_mega_orchid = {
 				target = FROM
 				relic = r_vaporous_mega_orchid
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_vaporous_mega_orchid >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_vaporous_mega_orchid >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -8469,7 +8469,7 @@ wg_gpm_r_vaporous_mega_orchid = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -8489,7 +8489,7 @@ wg_gpm_r_vaporous_mega_orchid = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -8653,7 +8653,7 @@ wg_gpm_r_tiyanki_matriarch_nerve_core = {
 				target = FROM
 				relic = r_tiyanki_matriarch_nerve_core
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_tiyanki_matriarch_nerve_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_tiyanki_matriarch_nerve_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -8669,7 +8669,7 @@ wg_gpm_r_tiyanki_matriarch_nerve_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -8689,7 +8689,7 @@ wg_gpm_r_tiyanki_matriarch_nerve_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -8853,7 +8853,7 @@ wg_gpm_r_preservation_chamber = {
 				target = FROM
 				relic = r_preservation_chamber
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_preservation_chamber >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_preservation_chamber >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -8869,7 +8869,7 @@ wg_gpm_r_preservation_chamber = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -8889,7 +8889,7 @@ wg_gpm_r_preservation_chamber = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -9053,7 +9053,7 @@ wg_gpm_r_celestial_resonator = {
 				target = FROM
 				relic = r_celestial_resonator
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_celestial_resonator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_celestial_resonator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -9069,7 +9069,7 @@ wg_gpm_r_celestial_resonator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -9089,7 +9089,7 @@ wg_gpm_r_celestial_resonator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -9253,7 +9253,7 @@ wg_gpm_r_mutated_voidworm_nest = {
 				target = FROM
 				relic = r_mutated_voidworm_nest
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_mutated_voidworm_nest >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_mutated_voidworm_nest >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -9269,7 +9269,7 @@ wg_gpm_r_mutated_voidworm_nest = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -9289,7 +9289,7 @@ wg_gpm_r_mutated_voidworm_nest = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -9453,7 +9453,7 @@ wg_gpm_r_the_rulerchip = {
 				target = FROM
 				relic = r_the_rulerchip
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_rulerchip >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_rulerchip >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -9469,7 +9469,7 @@ wg_gpm_r_the_rulerchip = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -9489,7 +9489,7 @@ wg_gpm_r_the_rulerchip = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -9653,7 +9653,7 @@ wg_gpm_r_voidspawn_myocardium = {
 				target = FROM
 				relic = r_voidspawn_myocardium
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_voidspawn_myocardium >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_voidspawn_myocardium >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -9669,7 +9669,7 @@ wg_gpm_r_voidspawn_myocardium = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -9689,7 +9689,7 @@ wg_gpm_r_voidspawn_myocardium = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -9853,7 +9853,7 @@ wg_gpm_r_cetanas_heart = {
 				target = FROM
 				relic = r_cetanas_heart
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_cetanas_heart >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_cetanas_heart >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -9869,7 +9869,7 @@ wg_gpm_r_cetanas_heart = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -9889,7 +9889,7 @@ wg_gpm_r_cetanas_heart = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -10053,7 +10053,7 @@ wg_gpm_r_core_of_the_reckoning = {
 				target = FROM
 				relic = r_core_of_the_reckoning
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_core_of_the_reckoning >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_core_of_the_reckoning >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -10069,7 +10069,7 @@ wg_gpm_r_core_of_the_reckoning = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -10089,7 +10089,7 @@ wg_gpm_r_core_of_the_reckoning = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -10253,7 +10253,7 @@ wg_gpm_r_the_lost_patron = {
 				target = FROM
 				relic = r_the_lost_patron
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_lost_patron >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_lost_patron >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -10269,7 +10269,7 @@ wg_gpm_r_the_lost_patron = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -10289,7 +10289,7 @@ wg_gpm_r_the_lost_patron = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -10453,7 +10453,7 @@ wg_gpm_r_weather_manipulator = {
 				target = FROM
 				relic = r_weather_manipulator
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_weather_manipulator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_weather_manipulator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -10469,7 +10469,7 @@ wg_gpm_r_weather_manipulator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -10489,7 +10489,7 @@ wg_gpm_r_weather_manipulator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -10653,7 +10653,7 @@ wg_gpm_r_the_tempest_invocator = {
 				target = FROM
 				relic = r_the_tempest_invocator
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_tempest_invocator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_the_tempest_invocator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -10669,7 +10669,7 @@ wg_gpm_r_the_tempest_invocator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -10689,7 +10689,7 @@ wg_gpm_r_the_tempest_invocator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -10853,7 +10853,7 @@ wg_gpm_r_pyroglyphic_codex = {
 				target = FROM
 				relic = r_pyroglyphic_codex
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_pyroglyphic_codex >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_pyroglyphic_codex >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -10869,7 +10869,7 @@ wg_gpm_r_pyroglyphic_codex = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -10889,7 +10889,7 @@ wg_gpm_r_pyroglyphic_codex = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -11053,7 +11053,7 @@ wg_gpm_r_crystallized_singularity = {
 				target = FROM
 				relic = r_crystallized_singularity
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_crystallized_singularity >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< r_crystallized_singularity >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = {
@@ -11069,7 +11069,7 @@ wg_gpm_r_crystallized_singularity = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -11089,7 +11089,7 @@ wg_gpm_r_crystallized_singularity = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -11257,7 +11257,7 @@ wg_gpm_r_time_displacer = {
 				relic = gpm_r_time_displacer
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_time_displacer >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_time_displacer >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -11273,7 +11273,7 @@ wg_gpm_r_time_displacer = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -11295,7 +11295,7 @@ wg_gpm_r_time_displacer = {
 
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -11451,7 +11451,7 @@ wg_gpm_r_alien_eggs = {
 				relic = gpm_r_alien_eggs
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_alien_eggs >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_alien_eggs >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -11467,7 +11467,7 @@ wg_gpm_r_alien_eggs = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -11487,7 +11487,7 @@ wg_gpm_r_alien_eggs = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -11655,7 +11655,7 @@ wg_gpm_r_machine_world_core = {
 				relic = gpm_r_machine_world_core
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_machine_world_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_machine_world_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -11671,7 +11671,7 @@ wg_gpm_r_machine_world_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -11691,7 +11691,7 @@ wg_gpm_r_machine_world_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -11855,7 +11855,7 @@ wg_gpm_r_encyclopedia_galactica = {
 				relic = gpm_r_encyclopedia_galactica
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_encyclopedia_galactica >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_encyclopedia_galactica >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -11871,7 +11871,7 @@ wg_gpm_r_encyclopedia_galactica = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -11891,7 +11891,7 @@ wg_gpm_r_encyclopedia_galactica = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -12063,7 +12063,7 @@ wg_gpm_r_zero_energy_generator = {
 				relic = gpm_r_zero_energy_generator
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_zero_energy_generator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_zero_energy_generator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -12079,7 +12079,7 @@ wg_gpm_r_zero_energy_generator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -12099,7 +12099,7 @@ wg_gpm_r_zero_energy_generator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -12251,7 +12251,7 @@ wg_gpm_r_quantum_sphere = {
 				relic = gpm_r_quantum_sphere
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_quantum_sphere >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_quantum_sphere >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -12267,7 +12267,7 @@ wg_gpm_r_quantum_sphere = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -12287,7 +12287,7 @@ wg_gpm_r_quantum_sphere = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -12451,7 +12451,7 @@ wg_gpm_r_ai_architect = {
 				relic = gpm_r_ai_architect
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_ai_architect >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_ai_architect >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -12467,7 +12467,7 @@ wg_gpm_r_ai_architect = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -12487,7 +12487,7 @@ wg_gpm_r_ai_architect = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -12647,7 +12647,7 @@ wg_gpm_r_encrypted_sct = {
 				relic = gpm_r_encrypted_sct
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_encrypted_sct >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_encrypted_sct >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -12663,7 +12663,7 @@ wg_gpm_r_encrypted_sct = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -12683,7 +12683,7 @@ wg_gpm_r_encrypted_sct = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -12851,7 +12851,7 @@ wg_gpm_r_experimental_weapon = {
 				relic = gpm_r_experimental_weapon
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_experimental_weapon >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_experimental_weapon >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -12867,7 +12867,7 @@ wg_gpm_r_experimental_weapon = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -12887,7 +12887,7 @@ wg_gpm_r_experimental_weapon = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -13059,7 +13059,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 				relic = gpm_r_fallout_emergency_replicator
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_fallout_emergency_replicator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_fallout_emergency_replicator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -13075,7 +13075,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -13095,7 +13095,7 @@ wg_gpm_r_fallout_emergency_replicator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -13255,7 +13255,7 @@ wg_gpm_r_power_core = {
 				relic = gpm_r_power_core
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_power_core >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_power_core >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -13271,7 +13271,7 @@ wg_gpm_r_power_core = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -13291,7 +13291,7 @@ wg_gpm_r_power_core = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -13451,7 +13451,7 @@ wg_gpm_r_mysterious_shield_generator = {
 				relic = gpm_r_mysterious_shield_generator
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_mysterious_shield_generator >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_mysterious_shield_generator >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -13467,7 +13467,7 @@ wg_gpm_r_mysterious_shield_generator = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -13487,7 +13487,7 @@ wg_gpm_r_mysterious_shield_generator = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -13651,7 +13651,7 @@ wg_gpm_r_gravity_engine = {
 				relic = gpm_r_gravity_engine
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_gravity_engine >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_gravity_engine >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -13667,7 +13667,7 @@ wg_gpm_r_gravity_engine = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -13687,7 +13687,7 @@ wg_gpm_r_gravity_engine = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -13843,7 +13843,7 @@ wg_gpm_r_codex_administratum = {
 				relic = gpm_r_codex_administratum
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_codex_administratum >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_codex_administratum >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -13859,7 +13859,7 @@ wg_gpm_r_codex_administratum = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -13879,7 +13879,7 @@ wg_gpm_r_codex_administratum = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -14043,7 +14043,7 @@ wg_gpm_r_enigmatic_advisor = {
 				relic = gpm_r_enigmatic_advisor
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_enigmatic_advisor >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_enigmatic_advisor >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -14059,7 +14059,7 @@ wg_gpm_r_enigmatic_advisor = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -14079,7 +14079,7 @@ wg_gpm_r_enigmatic_advisor = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -14259,7 +14259,7 @@ wg_gpm_r_positronic_microchip = {
 				relic = gpm_r_positronic_microchip
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_positronic_microchip >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_positronic_microchip >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -14275,7 +14275,7 @@ wg_gpm_r_positronic_microchip = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -14295,7 +14295,7 @@ wg_gpm_r_positronic_microchip = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -14459,7 +14459,7 @@ wg_gpm_r_venerable_dreadnaught = {
 				relic = gpm_r_venerable_dreadnaught
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_venerable_dreadnaught >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_venerable_dreadnaught >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -14475,7 +14475,7 @@ wg_gpm_r_venerable_dreadnaught = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -14495,7 +14495,7 @@ wg_gpm_r_venerable_dreadnaught = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -14659,7 +14659,7 @@ wg_gpm_r_sentinel_queen = {
 				relic = gpm_r_sentinel_queen
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_sentinel_queen >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_sentinel_queen >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -14675,7 +14675,7 @@ wg_gpm_r_sentinel_queen = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -14695,7 +14695,7 @@ wg_gpm_r_sentinel_queen = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -14867,7 +14867,7 @@ wg_gpm_r_earthquake_engine = {
 				relic = gpm_r_earthquake_engine
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_earthquake_engine >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_earthquake_engine >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -14883,7 +14883,7 @@ wg_gpm_r_earthquake_engine = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -14903,7 +14903,7 @@ wg_gpm_r_earthquake_engine = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -15055,7 +15055,7 @@ wg_gpm_r_manufactorium_ship = {
 				relic = gpm_r_manufactorium_ship
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_manufactorium_ship >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_manufactorium_ship >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -15071,7 +15071,7 @@ wg_gpm_r_manufactorium_ship = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -15091,7 +15091,7 @@ wg_gpm_r_manufactorium_ship = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -15263,7 +15263,7 @@ wg_gpm_r_datacube = {
 				relic = gpm_r_datacube
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_datacube >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_datacube >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -15279,7 +15279,7 @@ wg_gpm_r_datacube = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -15299,7 +15299,7 @@ wg_gpm_r_datacube = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -15447,7 +15447,7 @@ wg_gpm_r_self_assembly_hub = {
 				relic = gpm_r_self_assembly_hub
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_self_assembly_hub >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_self_assembly_hub >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -15463,7 +15463,7 @@ wg_gpm_r_self_assembly_hub = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -15483,7 +15483,7 @@ wg_gpm_r_self_assembly_hub = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -15635,7 +15635,7 @@ wg_gpm_r_banner_of_the_fallen = {
 				country_event = { id = gpm_relics.20 } # adds trait to admirals
 				set_country_flag = gpm_r_banner_of_the_fallen_loot_flag
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_banner_of_the_fallen >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_banner_of_the_fallen >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -15651,7 +15651,7 @@ wg_gpm_r_banner_of_the_fallen = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -15671,7 +15671,7 @@ wg_gpm_r_banner_of_the_fallen = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -15852,7 +15852,7 @@ wg_gpm_r_cloaking_device = {
 				country_event = { id = gpm_relics.1 } # adds trait to admirals
 				set_country_flag = gpm_r_cloaking_device_loot_flag
 			}
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_cloaking_device >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_cloaking_device >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -15868,7 +15868,7 @@ wg_gpm_r_cloaking_device = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -15888,7 +15888,7 @@ wg_gpm_r_cloaking_device = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -16072,7 +16072,7 @@ wg_gpm_r_q_storage_compressor = {
 				relic = gpm_r_q_storage_compressor
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_q_storage_compressor >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_q_storage_compressor >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -16088,7 +16088,7 @@ wg_gpm_r_q_storage_compressor = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -16108,7 +16108,7 @@ wg_gpm_r_q_storage_compressor = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -16256,7 +16256,7 @@ wg_gpm_r_soul_gem = {
 				relic = gpm_r_soul_gem
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_soul_gem >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_soul_gem >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -16272,7 +16272,7 @@ wg_gpm_r_soul_gem = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -16292,7 +16292,7 @@ wg_gpm_r_soul_gem = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev
@@ -16464,7 +16464,7 @@ wg_gpm_r_self_repairing_obelisk = {
 				relic = gpm_r_self_repairing_obelisk
 			}
 			
-			log = "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_self_repairing_obelisk >>> from FROM = [from.GetName] >>>"
+			# log =  "<< RELICS >> | RELIC WAR <<< ROOT = [root.GetName] claimed <<< gpm_r_self_repairing_obelisk >>> from FROM = [from.GetName] >>>"
 		}
 		# Defender is humiliated
 		from = { 
@@ -16480,7 +16480,7 @@ wg_gpm_r_self_repairing_obelisk = {
 				gpm_is_country_type_default = yes
 				has_communications = root
 			}
-			log = "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
+			# log =  "<< RELICS >> | RELIC WAR <<< create message on THIS = [THIS.GetName]"
 			create_message = {
 				type = GPM_MESSAGE_RELIC_WAR
 				localization = GPM_MESSAGE_RELIC_WAR_DESC
@@ -16500,7 +16500,7 @@ wg_gpm_r_self_repairing_obelisk = {
 		}
 	}
 	on_status_quo = {
-		log = "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC WAR <<< attacker ROOT = [root.GetName] status quoed with defender FROM = [from.GetName] >>>"
 		from = {
 			set_closed_borders = {
 				who = prev

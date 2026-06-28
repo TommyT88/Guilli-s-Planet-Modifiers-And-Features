@@ -29,9 +29,11 @@
 
 
 gpm_fast_rotation = {
-	planet_jobs_unity_produces_mult = 0.05
+	pop_environment_tolerance = -0.05
+	logistic_growth_mult = 0.10
+	planet_jobs_produces_mult = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/gpm_fast_rotation.dds"
-	icon_frame = 1
+	icon_frame = 2
 }
 gpm_hot_geysers = {
 	icon = "gfx/interface/icons/planet_modifiers/gpm_hot_geysers.dds"

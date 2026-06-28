@@ -76,7 +76,7 @@
 			# }
 		# }
 		### DEBUG LOGGING ####
-		# log = ";OP - GATHER; operation_gpm_gather_information_relic launched by [this.owner.GetName] on [target.GetName]"
+		# log =  ";OP - GATHER; operation_gpm_gather_information_relic launched by [this.owner.GetName] on [target.GetName]"
 		### ##################
 	# }
 # }
@@ -199,7 +199,7 @@ operation_gpm_steal_relic = {
 			}
 		}
 		#### DEBUG LOGGING ####
-		log = "<< RELICS >> | STEAL_RELIC operation_gpm_steal_relic launched by THIS.OWNER = [this.owner.GetName] on TARGET = [target.GetName]"
+		# log =  "<< RELICS >> | STEAL_RELIC operation_gpm_steal_relic launched by THIS.OWNER = [this.owner.GetName] on TARGET = [target.GetName]"
 		#### ##################
 	}
 }

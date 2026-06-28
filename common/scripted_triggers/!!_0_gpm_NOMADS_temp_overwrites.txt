@@ -1,0 +1,215 @@
+# These are overwritten because they are used in waystation potential checking and are not mod friendly
+# delete if waystation deposit checking gets recoded differently to make them more mod friendly
+
+has_orbital_trade_deposit = {
+	OR = {
+		has_deposit = d_trade_value_1
+		has_deposit = d_trade_value_2
+		has_deposit = d_trade_value_3
+		has_deposit = d_trade_value_4
+		has_deposit = d_trade_value_5
+		has_deposit = d_trade_value_6
+		has_deposit = d_trade_value_7
+		has_deposit = d_trade_value_8
+		has_deposit = d_trade_value_9
+		has_deposit = d_trade_value_10
+		has_deposit = gpm_d_trade_deposit
+		has_deposit = gpm_d_trade_value_1
+		has_deposit = gpm_d_trade_value_2
+		has_deposit = gpm_d_trade_value_3
+		has_deposit = gpm_d_trade_value_4
+		has_deposit = gpm_d_trade_value_5
+		has_deposit = gpm_d_trade_value_6
+		has_deposit = gpm_d_trade_value_7
+		has_deposit = gpm_d_trade_value_8
+		has_deposit = gpm_d_trade_value_9
+		has_deposit = gpm_d_trade_value_10
+	}
+}
+
+has_orbital_energy_deposit = {
+	OR = {
+		has_deposit = d_energy_1
+		has_deposit = d_energy_2
+		has_deposit = d_energy_3
+		has_deposit = d_energy_4
+		has_deposit = d_energy_5
+		has_deposit = d_energy_6
+		has_deposit = d_energy_7
+		has_deposit = d_energy_8
+		has_deposit = d_energy_9
+		has_deposit = d_energy_10
+		has_deposit = d_guardian_dragon_hoard
+		has_deposit = gpm_d_sun_energy_deposit
+	}
+}
+
+has_orbital_mining_deposit = {
+	OR = {
+		has_deposit = d_minerals_1
+		has_deposit = d_minerals_2
+		has_deposit = d_minerals_3
+		has_deposit = d_minerals_4
+		has_deposit = d_minerals_5
+		has_deposit = d_minerals_6
+		has_deposit = d_minerals_7
+		has_deposit = d_minerals_8
+		has_deposit = d_minerals_9
+		has_deposit = d_minerals_10
+		has_deposit = d_alloys_1
+		has_deposit = d_alloys_2
+		has_deposit = d_alloys_3
+		has_deposit = d_alloys_4
+		has_deposit = d_alloys_5
+		has_deposit = d_alloys_10
+		has_deposit = d_alloys_25
+		has_deposit = d_guardian_dragon_hoard
+		has_deposit = d_consumer_goods_obsessional_directive
+		has_deposit = d_arc_furnace_1
+		has_deposit = d_arc_furnace_2
+		has_deposit = d_arc_furnace_3
+		has_deposit = d_arc_furnace_4
+		has_deposit = gpm_d_inspirational
+		has_deposit = gpm_d_food_4
+		has_deposit = gpm_d_food_5
+		has_deposit = gpm_d_food_6
+		has_deposit = gpm_d_food_7
+		has_deposit = gpm_d_food_8
+		has_deposit = gpm_d_food_9
+		has_deposit = gpm_d_food_10
+		has_deposit = gpm_d_food_15
+		has_deposit = gpm_d_food_20
+		has_deposit = gpm_d_food_25
+		has_deposit = gpm_d_alloys_6
+		has_deposit = gpm_d_alloys_7
+		has_deposit = gpm_d_alloys_8
+		has_deposit = gpm_d_alloys_9
+		has_deposit = gpm_d_consumer_goods_5
+		has_deposit = gpm_d_consumer_goods_6
+		has_deposit = gpm_d_consumer_goods_7
+		has_deposit = gpm_d_consumer_goods_8
+		has_deposit = gpm_d_consumer_goods_9
+		has_deposit = gpm_d_consumer_goods_10
+	}
+}
+
+has_orbital_mineral_deposit = {
+	OR = {
+		has_deposit = d_minerals_1
+		has_deposit = d_minerals_2
+		has_deposit = d_minerals_3
+		has_deposit = d_minerals_4
+		has_deposit = d_minerals_5
+		has_deposit = d_minerals_6
+		has_deposit = d_minerals_7
+		has_deposit = d_minerals_8
+		has_deposit = d_minerals_9
+		has_deposit = d_minerals_10
+		has_deposit = d_guardian_dragon_hoard
+		has_deposit = d_arc_furnace_1
+		has_deposit = d_arc_furnace_2
+		has_deposit = d_arc_furnace_3
+		has_deposit = d_arc_furnace_4
+		has_deposit = gpm_d_minerals_11
+		has_deposit = gpm_d_minerals_12
+		has_deposit = gpm_d_minerals_13
+		has_deposit = gpm_d_minerals_14
+		has_deposit = gpm_d_minerals_15
+	}
+}
+
+has_orbital_physics_deposit = {
+	OR = {
+		has_deposit = d_physics_1
+		has_deposit = d_physics_2
+		has_deposit = d_physics_3
+		has_deposit = d_physics_4
+		has_deposit = d_physics_5
+		has_deposit = d_physics_6
+		has_deposit = d_physics_7
+		has_deposit = d_physics_8
+		has_deposit = d_physics_9
+		has_deposit = d_physics_10
+		has_deposit = d_physics_25
+		has_deposit = gpm_d_pulsar_clock
+	}
+}
+
+has_orbital_society_deposit = {
+	OR = {
+		has_deposit = d_society_1
+		has_deposit = d_society_2
+		has_deposit = d_society_3
+		has_deposit = d_society_4
+		has_deposit = d_society_5
+		has_deposit = d_society_6
+		has_deposit = d_society_7
+		has_deposit = d_society_8
+		has_deposit = d_society_9
+		has_deposit = d_society_10
+		has_deposit = d_society_15
+		has_deposit = d_society_25
+		has_deposit = gpm_d_proto_molecule_deposit
+	}
+}
+
+has_orbital_engineering_deposit = {
+	OR = {
+		has_deposit = d_engineering_1
+		has_deposit = d_engineering_2
+		has_deposit = d_engineering_3
+		has_deposit = d_engineering_4
+		has_deposit = d_engineering_5
+		has_deposit = d_engineering_6
+		has_deposit = d_engineering_7
+		has_deposit = d_engineering_8
+		has_deposit = d_engineering_9
+		has_deposit = d_engineering_10
+		has_deposit = d_engineering_25
+	}
+}
+
+has_orbital_research_deposit = {
+	OR = {
+		has_orbital_physics_deposit = yes
+		has_orbital_society_deposit = yes
+		has_orbital_engineering_deposit = yes
+		has_deposit = gpm_d_time_displaced_planet
+		has_deposit = gpm_d_triple_science
+		has_deposit = gpm_d_double_science_phy_soc
+		has_deposit = gpm_d_double_science_soc_phy
+		has_deposit = gpm_d_double_science_phy_eng
+		has_deposit = gpm_d_double_science_eng_phy
+		has_deposit = gpm_d_double_science_soc_eng
+		has_deposit = gpm_d_double_science_eng_soc
+		has_deposit = gpm_d_unity_deposit
+		has_deposit = gpm_d_unity_space_deposit_2
+		has_deposit = gpm_d_unity_space_deposit_3
+		has_deposit = gpm_d_unity_space_deposit_4
+		has_deposit = gpm_d_unity_space_deposit_5
+		has_deposit = gpm_d_unity_space_deposit_6
+		has_deposit = gpm_d_unity_space_deposit_7
+		has_deposit = gpm_d_unity_space_deposit_8
+		has_deposit = gpm_d_unity_space_deposit_9
+		has_deposit = gpm_d_unity_space_deposit_10
+		has_deposit = gpm_d_unity_space_deposit_15
+	}
+}
+
+has_orbital_alloys_deposit = {
+	OR = {
+		has_deposit = d_alloys_1
+		has_deposit = d_alloys_2
+		has_deposit = d_alloys_3
+		has_deposit = d_alloys_4
+		has_deposit = d_alloys_5
+		has_deposit = d_alloys_10
+		has_deposit = d_alloys_25
+		has_deposit = d_arc_furnace_3
+		has_deposit = d_arc_furnace_4
+		has_deposit = gpm_d_alloys_6
+		has_deposit = gpm_d_alloys_7
+		has_deposit = gpm_d_alloys_8
+		has_deposit = gpm_d_alloys_9
+	}
+}

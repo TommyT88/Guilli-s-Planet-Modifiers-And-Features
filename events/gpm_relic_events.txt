@@ -436,7 +436,7 @@ country_event = {
 
 	immediate = {
 		
-		log = "<< RELICS >> | RELIC CONQUEST <<< ROOT = [root.GetName] destroyed FROM = [from.GetName] >>>"
+		# log =  "<< RELICS >> | RELIC CONQUEST <<< ROOT = [root.GetName] destroyed FROM = [from.GetName] >>>"
 		if = {
 			limit = {
 				from = {
@@ -452,7 +452,7 @@ country_event = {
 				target = from
 				relic = all
 			}
-			log = "<< RELICS >> | RELIC CONQUEST <<< stealing ALL RELICS >>> from FROM = [from.GetName] giving it to ROOT = [root.GetName]"
+			# log =  "<< RELICS >> | RELIC CONQUEST <<< stealing ALL RELICS >>> from FROM = [from.GetName] giving it to ROOT = [root.GetName]"
 			set_country_flag = gpm_relics_looted_conquest
 			every_relation = {
 				if = {
@@ -466,7 +466,7 @@ country_event = {
 						}
 						num_owned_relics = 1
 					}
-					log = "<< RELICS >> | RELIC CONQUEST <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+					# log =  "<< RELICS >> | RELIC CONQUEST <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_POSSESSION
 						localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -490,7 +490,7 @@ country_event = {
 						}
 						num_owned_relics > 1
 					}
-					log = "<< RELICS >> | RELIC CONQUEST <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+					# log =  "<< RELICS >> | RELIC CONQUEST <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_POSSESSION_MULTI
 						localization = GPM_MESSAGE_RELIC_POSSESSION_MULTI_DESC
@@ -513,7 +513,7 @@ country_event = {
 							level >= 2
 						}
 					}
-					log = "<< RELICS >> | RELIC CONQUEST <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+					# log =  "<< RELICS >> | RELIC CONQUEST <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 					create_message = {
 						type = GPM_MESSAGE_RELIC_STOLEN
 						localization = GPM_MESSAGE_RELIC_STOLEN_DESC

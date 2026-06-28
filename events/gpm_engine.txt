@@ -406,7 +406,7 @@ carrier_event = {
 
 	immediate = {
 		
-		log = "ENGINE.2 EVENT STARTED"
+		# log =  "ENGINE.2 EVENT STARTED"
 		if = {
 			limit = { gpm_is_planet_class_star = yes }
 			random_list = {
@@ -1047,7 +1047,7 @@ carrier_event = {
 			}
 			random_list = {
 				94 = {
-					# log = "RING RESOURCE SITE: UNINHABITABLE: NO SPAWN on [this.GetName]"
+					# log =  "RING RESOURCE SITE: UNINHABITABLE: NO SPAWN on [this.GetName]"
 					modifier = {
 						factor = 0
 						OR = {
@@ -1078,7 +1078,7 @@ carrier_event = {
 					}
 				}
 				6 = {
-					# log = "RING RESOURCE SITE: UNINHABITABLE: YES SPAWN on [this.GetName]"
+					# log =  "RING RESOURCE SITE: UNINHABITABLE: YES SPAWN on [this.GetName]"
 					modifier = {
 						factor = 0.2
 						has_moon = yes

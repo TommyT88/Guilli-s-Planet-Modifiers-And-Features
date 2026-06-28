@@ -447,7 +447,7 @@ decision_gpm_restore_oppertunity = {
     effect = {
 		remove_modifier = gpm_oppertunity
 		owner = { add_relic = gpm_r_mars_rover }
-		log = "<< RELICS >> | ADD_RELIC <<< gpm_r_mars_rover >>> to OWNER = [owner.GetName] ; planet decision"
+		# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_mars_rover >>> to OWNER = [owner.GetName] ; planet decision"
 		set_global_flag = gpm_r_mars_rover_found
 	}
 	
@@ -987,7 +987,7 @@ decision_gpm_clear_alien_eggs  = {
 								gpm_is_country_type_default = yes
 								has_communications = root.owner
 							}
-							log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+							# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 							create_message = {
 								type = GPM_MESSAGE_RELIC_POSSESSION
 								localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1218,6 +1218,39 @@ decision_gpm_dark_skies = {
 				10 = { add_modifier = { modifier = gpm_odd_cloud_shapes } }
 			}
 		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_gpm_blighted_lands = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = wilderness_planet_expand
+	enactment_time = 720
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			food = 1000
+		}
+	}
+
+    potential = {
+		# owner = { is_regular_empire = yes }
+		has_modifier = gpm_blighted_lands
+	}
+	
+	allow = {
+		has_modifier = gpm_blighted_lands
+	}
+
+    effect = {
+		remove_modifier = gpm_blighted_lands
+		add_deposit = d_savage_wildlands
 	}
 	
 	ai_weight = {

@@ -28,7 +28,7 @@ country_event = {
 
 	immediate = {
 		
-		# log = "000000000 run event gpm_habitat.2 in 1 day"
+		# log =  "000000000 run event gpm_habitat.2 in 1 day"
 		country_event = { id = gpm_habitat.2 days = 1 }
 	}
 }
@@ -46,7 +46,7 @@ country_event = {
 
 	immediate = {
 		
-		# log = "000000000 from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
+		# log =  "000000000 from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
 		fromfrom.solar_system = {
 			every_system_planet = {
 				limit = {
@@ -56,7 +56,7 @@ country_event = {
 					}
 					gpm_is_planet_class_habitat = yes
 				}
-				# log = "000000000 SAVING event_target_as = gpm_new_constructed_habitat"
+				# log =  "000000000 SAVING event_target_as = gpm_new_constructed_habitat"
 				save_event_target_as = gpm_new_constructed_habitat
 				# Set new_habitat_flag and lock out this event in the future for this habitat.
 				set_planet_flag = gpm_constructed_habitat_event_complete
@@ -125,8 +125,8 @@ country_event = {
 		# 	}
 		# }
 		event_target:gpm_new_constructed_habitat = {
-			# log = "000000000 RUNNING event_target_as = gpm_new_constructed_habitat code"
-			# log = "000000000 gpm_new_constructed_habitat scopes from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
+			# log =  "000000000 RUNNING event_target_as = gpm_new_constructed_habitat code"
+			# log =  "000000000 gpm_new_constructed_habitat scopes from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
 			# set special flag if orbiting precursor worlds
 			fromfrom.planet = {
 				if = {

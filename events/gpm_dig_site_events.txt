@@ -100,14 +100,14 @@ fleet_event = {
 			}
 		}
 		owner = { add_relic = gpm_r_time_displacer }
-		log = "<< RELICS >> | ADD_RELIC <<< gpm_r_time_displacer >>> to OWNER = [owner.GetName] ; dig site reward"
+		# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_time_displacer >>> to OWNER = [owner.GetName] ; dig site reward"
 		owner = {
 			every_relation = {
 				limit = {
 					gpm_is_country_type_default = yes
 					has_communications = root.owner
 				}
-				log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+				# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 				create_message = {
 					type = GPM_MESSAGE_RELIC_POSSESSION
 					localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -318,7 +318,7 @@ fleet_event = {
 			10 = {
 				# default
 				fleet_event = { id = gpm_dig_site.150 }
-				# log = "Digsite 6 - spawn a default precursor dig site"
+				# log =  "Digsite 6 - spawn a default precursor dig site"
 				modifier = { factor = 0
 					from.planet = {
 						NOR = {
@@ -334,7 +334,7 @@ fleet_event = {
 			10 = {
 				# power array
 				fleet_event = { id = gpm_dig_site.151 }
-				# log = "Digsite 6 - spawn a gpm_precursor_energy_grid or gpm_precursor_planetary_shieldprecursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_energy_grid or gpm_precursor_planetary_shieldprecursor dig site"
 				modifier = { factor = 0
 					from.planet = {
 						NOR = {
@@ -347,7 +347,7 @@ fleet_event = {
 			0 = {
 				# ship design facility
 				fleet_event = { id = gpm_dig_site.152 }
-				# log = "Digsite 6 - spawn a gpm_precursor_shipyards precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_shipyards precursor dig site"
 				modifier = {
 					add = 10
 					fromfrom = {
@@ -362,13 +362,13 @@ fleet_event = {
 			10 = {
 				# orbital monitoring station
 				fleet_event = { id = gpm_dig_site.153 }
-				# log = "Digsite 6 - spawn a gpm_precursor_planetary_gun precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_planetary_gun precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_planetary_gun } } }
 			}
 			10 = {
 				# bunker
 				fleet_event = { id = gpm_dig_site.154 }
-				# log = "Digsite 6 - spawn a gpm_precursor_bunker_grid or gpm_precursor_battleground_ruins precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_bunker_grid or gpm_precursor_battleground_ruins precursor dig site"
 				modifier = { factor = 0
 					from.planet = {
 						NOR = {
@@ -381,79 +381,79 @@ fleet_event = {
 			10 = {
 				# command center
 				fleet_event = { id = gpm_dig_site.155 }
-				# log = "Digsite 6 - spawn a gpm_precursor_mechs precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_mechs precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mechs } } }
 			}
 			10 = {
 				# crashed floating city
 				fleet_event = { id = gpm_dig_site.156 }
-				# log = "Digsite 6 - spawn a gpm_precursor_floating_city precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_floating_city precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_floating_city } } }
 			}
 			10 = {
 				# adminstrative hub
 				fleet_event = { id = gpm_dig_site.157 }
-				# log = "Digsite 6 - spawn a gpm_precursor_capital_complex precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_capital_complex precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_capital_complex } } }
 			}
 			10 = {
 				# communication tower
 				fleet_event = { id = gpm_dig_site.158 }
-				# log = "Digsite 6 - spawn a gpm_precursor_communication_hub precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_communication_hub precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_communication_hub } } }
 			}
 			10 = {
 				# quantum databanks
 				fleet_event = { id = gpm_dig_site.159 }
-				# log = "Digsite 6 - spawn a gpm_precursor_singularity_drive precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_singularity_drive precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_singularity_drive } } }
 			}
 			10 = {
 				# abadonded fortress
 				fleet_event = { id = gpm_dig_site.160 }
-				# log = "Digsite 6 - spawn a gpm_precursor_eternal_fortress precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_eternal_fortress precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_eternal_fortress } } }
 			}
 			10 = {
 				# escapee hideout
 				fleet_event = { id = gpm_dig_site.161 }
-				# log = "Digsite 6 - spawn a gpm_precursor_prison_planet precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_prison_planet precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_prison_planet } } }
 			}
 			10 = {
 				# mining unit storage
 				fleet_event = { id = gpm_dig_site.162 }
-				# log = "Digsite 6 - spawn a gpm_precursor_mines precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_mines precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_mines } } }
 			}
 			10 = {
 				# weapons manufactory
 				fleet_event = { id = gpm_dig_site.163 }
-				# log = "Digsite 6 - spawn a gpm_precursor_manufactorium precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_manufactorium precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_manufactorium } } }
 			}
 			10 = {
 				# vaults
 				fleet_event = { id = gpm_dig_site.164 }
-				# log = "Digsite 6 - spawn a gpm_precursor_vaults precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_vaults precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_vaults } } }
 			}
 			10 = {
 				# burried crashed orbital
 				fleet_event = { id = gpm_dig_site.165 }
-				# log = "Digsite 6 - spawn a gpm_precursor_crashed_spacestation precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_crashed_spacestation precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_crashed_spacestation } } }
 			}
 			10 = {
 				# outpost ruins
 				fleet_event = { id = gpm_dig_site.166 }
-				# log = "Digsite 6 - spawn a gpm_precursor_outpost_ruins precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_outpost_ruins precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_outpost_ruins } } }
 			}
 			10 = {
 				# harbor warehouse
 				fleet_event = { id = gpm_dig_site.167 }
-				# log = "Digsite 6 - spawn a gpm_precursor_harbor_ruins precursor dig site"
+				# log =  "Digsite 6 - spawn a gpm_precursor_harbor_ruins precursor dig site"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_harbor_ruins } } }
 			}
 		}
@@ -504,18 +504,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			20 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			10 = {
 				owner = { add_relic = gpm_r_encyclopedia_galactica }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encyclopedia_galactica >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_encyclopedia_galactica >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -558,14 +558,14 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_quantum_sphere }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_quantum_sphere >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_quantum_sphere >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -608,14 +608,14 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_ai_architect }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_ai_architect >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_ai_architect >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -658,14 +658,14 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_soul_gem }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_soul_gem >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_soul_gem >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -708,14 +708,14 @@ fleet_event = {
 			}
 			10 = {
 				owner = { add_relic = gpm_r_self_repairing_obelisk }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_repairing_obelisk >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_self_repairing_obelisk >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -853,7 +853,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -881,7 +881,7 @@ fleet_event = {
 				leader = { add_trait = leader_trait_psionic }
 				modifier = { factor = 0 leader = { has_trait = leader_trait_psionic } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
-				# log = "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
+				# log =  "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 		}
@@ -915,7 +915,7 @@ fleet_event = {
 				leader = { add_trait = leader_trait_psionic }
 				modifier = { factor = 0 leader = { has_trait = leader_trait_psionic } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
-				# log = "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
+				# log =  "gpm_random_reward_precursor_obelisks : leader_trait_psionic"
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_obelisks } } }
 			}
 		}
@@ -964,18 +964,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			10 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_zero_energy_generator }
-				log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1021,14 +1021,14 @@ fleet_event = {
 			}
 			15 = {
 				owner = { add_relic = gpm_r_mysterious_shield_generator }
-				log = "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< 000000 >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1119,7 +1119,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1206,18 +1206,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_encrypted_sct }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_encrypted_sct >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_encrypted_sct >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1279,7 +1279,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1326,7 +1326,7 @@ fleet_event = {
 						}
 					}
 				}
-				# log = "gpm_random_reward_precursor_shipyards : gpm_reward_precursor_ship"
+				# log =  "gpm_random_reward_precursor_shipyards : gpm_reward_precursor_ship"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1412,18 +1412,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_experimental_weapon }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_experimental_weapon >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_experimental_weapon >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1485,7 +1485,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1514,7 +1514,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1600,18 +1600,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			10 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_fallout_emergency_replicator }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_fallout_emergency_replicator >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_fallout_emergency_replicator >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1660,14 +1660,14 @@ fleet_event = {
 					add_relic = gpm_r_banner_of_the_fallen
 					hidden_effect = { country_event = { id = gpm_relics.20 } } # adds trait to admirals
 				}
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_banner_of_the_fallen >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_banner_of_the_fallen >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -1750,7 +1750,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1782,7 +1782,7 @@ fleet_event = {
 				custom_tooltip = gpm_fallen_heraldry_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_fallen_heraldry_trait_rewarded } }
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
-				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
+				# log =  "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1810,7 +1810,7 @@ fleet_event = {
 				custom_tooltip = gpm_battle_standards_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_battle_standards_trait_rewarded } }
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
-				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
+				# log =  "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1865,7 +1865,7 @@ fleet_event = {
 				custom_tooltip = gpm_fallen_heraldry_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_fallen_heraldry_trait_rewarded } }
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
-				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
+				# log =  "gpm_random_reward_precursor_battleground_ruins : gpm_fallen_heraldry_trait_rewarded_tooltip"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1893,7 +1893,7 @@ fleet_event = {
 				custom_tooltip = gpm_battle_standards_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_battle_standards_trait_rewarded } }
 				modifier = { factor = 0 from.planet = { NOT = { has_modifier = gpm_precursor_battleground_ruins } } }
-				# log = "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
+				# log =  "gpm_random_reward_precursor_battleground_ruins : gpm_battle_standards_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -1956,18 +1956,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_power_core }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_power_core >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_power_core >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -2029,7 +2029,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2060,7 +2060,7 @@ fleet_event = {
 				}
 				custom_tooltip = gpm_personal_mech_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_personal_mech_trait_rewarded } }
-				# log = "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
+				# log =  "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2114,7 +2114,7 @@ fleet_event = {
 				}
 				custom_tooltip = gpm_personal_mech_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_personal_mech_trait_rewarded } }
-				# log = "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
+				# log =  "gpm_random_reward_precursor_mechs : gpm_personal_mech_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2177,18 +2177,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_gravity_engine }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_gravity_engine >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_gravity_engine >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -2250,7 +2250,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2338,18 +2338,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_codex_administratum }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_codex_administratum >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_codex_administratum >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -2411,7 +2411,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2444,7 +2444,7 @@ fleet_event = {
 				custom_tooltip = gpm_historian_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_historian_trait_rewarded } }
 				modifier = { factor = 0 owner = { is_hive_empire = yes } }
-				# log = "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
+				# log =  "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2500,7 +2500,7 @@ fleet_event = {
 				custom_tooltip = gpm_historian_trait_rewarded_tooltip
 				modifier = { factor = 0 owner = { has_country_flag = gpm_historian_trait_rewarded } }
 				modifier = { factor = 0 owner = { is_hive_empire = yes } }
-				# log = "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
+				# log =  "gpm_random_reward_precursor_capital_complex : gpm_historian_trait_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2563,18 +2563,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_enigmatic_advisor }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_enigmatic_advisor >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_enigmatic_advisor >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -2636,7 +2636,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2724,18 +2724,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_positronic_microchip }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_positronic_microchip >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_positronic_microchip >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -2804,7 +2804,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2846,7 +2846,7 @@ fleet_event = {
 				custom_tooltip = gpm_enigmatic_update_rewarded
 				modifier = { factor = 0 has_global_flag = gpm_enigmatic_hack_happened }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
-				# log = "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
+				# log =  "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2911,7 +2911,7 @@ fleet_event = {
 				custom_tooltip = gpm_enigmatic_update_rewarded
 				modifier = { factor = 0 has_global_flag = gpm_enigmatic_hack_happened }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
-				# log = "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
+				# log =  "gpm_random_reward_precursor_singularity_drive : trait_gpm_enigmatic_update"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -2974,18 +2974,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_venerable_dreadnaught }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_venerable_dreadnaught >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_venerable_dreadnaught >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -3047,7 +3047,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3135,18 +3135,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_sentinel_queen }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_sentinel_queen >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_sentinel_queen >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -3211,7 +3211,7 @@ fleet_event = {
 					custom_tooltip = gpm_core_prison_rewarded_tt
 				}
 				modifier = { factor = 0 owner = { has_country_flag = gpm_core_prison_rewarded } }
-				# log = "gpm_random_reward_precursor_prison_planet : gpm_core_prison_rewarded"
+				# log =  "gpm_random_reward_precursor_prison_planet : gpm_core_prison_rewarded"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3235,7 +3235,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3323,18 +3323,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_earthquake_engine }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_earthquake_engine >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_earthquake_engine >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -3396,7 +3396,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3484,18 +3484,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_manufactorium_ship }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_manufactorium_ship >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_manufactorium_ship >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -3558,7 +3558,7 @@ fleet_event = {
 				owner = {
 					add_research_option = tech_gpm_manufactory_hub
 					hidden_effect = { add_tech_progress = { tech = tech_gpm_manufactory_hub progress = 0.33 } }
-					# log = "gpm_random_reward_precursor_manufactorium : tech_gpm_manufactory_hub"
+					# log =  "gpm_random_reward_precursor_manufactorium : tech_gpm_manufactory_hub"
 				}
 				modifier = { factor = 0 owner = { has_technology = tech_gpm_manufactory_hub } }
 				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
@@ -3591,7 +3591,7 @@ fleet_event = {
 						10 = { add_resource = { consumer_goods = 4500 } }
 						10 = { add_resource = { consumer_goods = 5000 } }
 					}
-					# log = "gpm_random_reward_precursor_manufactorium : consumer_goods"
+					# log =  "gpm_random_reward_precursor_manufactorium : consumer_goods"
 				}
 				modifier = { factor = 0 owner = { is_gestalt = yes NOT = { has_valid_civic = civic_machine_servitor } } }
 			}
@@ -3599,7 +3599,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3646,7 +3646,7 @@ fleet_event = {
 						}
 					}
 				}
-				# log = "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
+				# log =  "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3717,7 +3717,7 @@ fleet_event = {
 						}
 					}
 				}
-				# log = "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
+				# log =  "gpm_random_reward_precursor_manufactorium : gpm_reward_manufactorium_ship"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3780,18 +3780,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_datacube }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_datacube >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_datacube >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -3854,7 +3854,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3882,7 +3882,7 @@ fleet_event = {
 				leader = { add_trait = leader_trait_brainslug }
 				modifier = { factor = 0 leader = { has_trait = leader_trait_brainslug } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
-				# log = "gpm_random_reward_precursor_vaults : leader_trait_brainslug"
+				# log =  "gpm_random_reward_precursor_vaults : leader_trait_brainslug"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3906,7 +3906,7 @@ fleet_event = {
 				leader = { add_trait = leader_trait_xeno_cataloger }
 				modifier = { factor = 0 leader = { has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
-				# log = "gpm_random_reward_precursor_vaults : leader_trait_xeno_cataloger"
+				# log =  "gpm_random_reward_precursor_vaults : leader_trait_xeno_cataloger"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3957,7 +3957,7 @@ fleet_event = {
 				leader = { add_trait = leader_trait_brainslug }
 				modifier = { factor = 0 leader = { has_trait = leader_trait_brainslug } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = yes } }
-				# log = "gpm_random_reward_precursor_vaults : leader_trait_brainslug"
+				# log =  "gpm_random_reward_precursor_vaults : leader_trait_brainslug"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -3981,7 +3981,7 @@ fleet_event = {
 				leader = { add_trait = leader_trait_xeno_cataloger }
 				modifier = { factor = 0 leader = { has_trait = leader_trait_xeno_cataloger } }
 				modifier = { factor = 0 root.owner = { is_machine_empire = no } }
-				# log = "gpm_random_reward_precursor_vaults : leader_trait_xeno_cataloger"
+				# log =  "gpm_random_reward_precursor_vaults : leader_trait_xeno_cataloger"
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -4044,18 +4044,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_self_assembly_hub }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_self_assembly_hub >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_self_assembly_hub >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -4117,7 +4117,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -4205,21 +4205,21 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = {
 					add_relic = gpm_r_cloaking_device
 					hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
 				}
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_cloaking_device >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_cloaking_device >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -4281,7 +4281,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk
@@ -4369,18 +4369,18 @@ fleet_event = {
 		## Relic Drop Chance ##
 		locked_random_list = {
 			5 = {
-				# log = "dig site relic no reward"
+				# log =  "dig site relic no reward"
 			}
 			15 = {
 				owner = { add_relic = gpm_r_q_storage_compressor }
-				log = "<< RELICS >> | ADD_RELIC <<< gpm_r_q_storage_compressor >>> to OWNER = [owner.GetName] ; dig site reward"
+				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_q_storage_compressor >>> to OWNER = [owner.GetName] ; dig site reward"
 				owner = {
 					every_relation = {
 						limit = {
 							gpm_is_country_type_default = yes
 							has_communications = root.owner
 						}
-						log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
+						# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]"
 						create_message = {
 							type = GPM_MESSAGE_RELIC_POSSESSION
 							localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -4442,7 +4442,7 @@ fleet_event = {
 				hidden_effect = { owner = { grant_random_fe_building = yes } }
 				custom_tooltip = gpm_precursor_digsite_FE_building_tooltip
 				modifier = { factor = 0 owner = { has_ascension_perk = ap_cosmogenesis } }
-				# log = "FE Building unlocked from digsite
+				# log =  "FE Building unlocked from digsite
 				# set by the "extra fun" game option. Mostly for multiplayer by request
 				modifier = { factor = 20 has_global_flag = gpm_multiplayer_fun_enabled }
 				# boost if you got the archaeo perk

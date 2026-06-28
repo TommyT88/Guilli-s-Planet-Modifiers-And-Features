@@ -2,7 +2,7 @@
 namespace = gpm_NOMADS
 
 
-# Ark ship enters orbit of a HABITABLE world with planet modifiers
+# Ark ship enters orbit of a HABITABLE world with regular planet modifiers
 # After planet is surveyed
 # While surveying: add effect in survey events
 
@@ -35,7 +35,11 @@ fleet_event = {
 		is_arkship_fleet = yes
 	}
 	immediate = {
-		# log = "gpm_NOMADS.1 | root = [root.GetName] -- from = [from.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "gpm_NOMADS.1 | root = [root.GetName] -- from = [from.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		begin_event_chain = {
+			event_chain = "gpm_nomad_visit_chain"
+			target = root.owner
+		}
 		enable_special_project = {
 			name = "GPM_VISIT_WORLD_ARKSHIP"
 			location = FROM
@@ -45,7 +49,7 @@ fleet_event = {
 	}
 }
 
-# Survey event on HABITABLE world - spawn special project
+# Survey event on HABITABLE world with regular planet modifiers - spawn special project
 ship_event = {
 	id = gpm_NOMADS.2
 	hide_window = yes
@@ -67,7 +71,11 @@ ship_event = {
 	}
 
 	immediate = {
-		# log = "gpm_NOMADS.2 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "gpm_NOMADS.2 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		begin_event_chain = {
+			event_chain = "gpm_nomad_visit_chain"
+			target = root.owner
+		}
 		enable_special_project = {
 			name = "GPM_VISIT_WORLD_ARKSHIP"
 			location = FROM
@@ -77,7 +85,7 @@ ship_event = {
 	}
 }
 
-# Ark ship enters orbit of a PRECURSOR UNHABITABLE world with planet modifiers
+# Ark ship enters orbit of a PRECURSOR HABITABLE world with planet modifiers
 # After planet is surveyed
 # While surveying: add effect in survey events
 
@@ -92,7 +100,7 @@ fleet_event = {
 	trigger = {
 		FROM = {
 			is_scope_type = planet
-			# gpm_is_planet_class_habitable = no
+			gpm_is_planet_class_habitable = yes
 			gpm_has_precursor_modifiers = yes
 			# Must be surveyed
 			is_surveyed = {
@@ -109,7 +117,11 @@ fleet_event = {
 		is_arkship_fleet = yes
 	}
 	immediate = {
-		# log = "gpm_NOMADS.1 | root = [root.GetName] -- from = [from.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "gpm_NOMADS.1 | root = [root.GetName] -- from = [from.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		begin_event_chain = {
+			event_chain = "gpm_nomad_visit_precursor_chain"
+			target = root.owner
+		}
 		enable_special_project = {
 			name = "GPM_VISIT_PRECURSOR_WORLD_ARKSHIP"
 			location = FROM
@@ -119,7 +131,7 @@ fleet_event = {
 	}
 }
 
-# Survey event on PRECURSOR UNHABITABLE world - spawn special project
+# Survey event on PRECURSOR HABITABLE world with planet modifiers - spawn special project
 ship_event = {
 	id = gpm_NOMADS.4
 	hide_window = yes
@@ -130,7 +142,7 @@ ship_event = {
 	trigger = {
 		FROM = { 
 			is_scope_type = planet
-			# gpm_is_planet_class_habitable = no
+			gpm_is_planet_class_habitable = yes
 			gpm_has_precursor_modifiers = yes
 			# NOT = { has_modifier = gpm_ark_ship_visited }
 			NOT = { has_planet_flag = gpm_nomad_visited@root.owner }
@@ -140,7 +152,11 @@ ship_event = {
 	}
 
 	immediate = {
-		# log = "gpm_NOMADS.2 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "gpm_NOMADS.2 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		begin_event_chain = {
+			event_chain = "gpm_nomad_visit_precursor_chain"
+			target = root.owner
+		}
 		enable_special_project = {
 			name = "GPM_VISIT_PRECURSOR_WORLD_ARKSHIP"
 			location = FROM
@@ -157,7 +173,7 @@ carrier_event = {
 	id = gpm_NOMADS.10
 	title = "gpm_NOMADS.10.name"
 	desc = "gpm_NOMADS.10.desc"
-	picture = GFX_evt_resource_cache
+	picture = GFX_evt_nomad_default
 	show_sound = event_ship_thrusters
 	event_chain = an_old_container_chain
 	location = ROOT
@@ -170,7 +186,7 @@ carrier_event = {
 
 	immediate = {
 		reroll_random = yes
-		# log = "gpm_NOMADS.3 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "gpm_NOMADS.3 | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
 		event_target:gpm_arkship_visit_target = { set_planet_flag = gpm_nomad_visited@root.owner }
 	}
 
@@ -320,8 +336,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = 000000000000_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -381,8 +397,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_dense_atmospheres_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -419,8 +435,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		# locked_random_list = {
-		# 	20 = { }
-		# 	80 = { 
+		# 	75 = { }
+		# 	25 = { 
 		# 		add_modifier = { modifier = gpm_strong_volcanism_terraform mult = 1 }
 		# 		modifier = { factor = 0.0 num_modifiers >= 6 }
 		# 		modifier = { factor = 0.3 num_modifiers = 5 }
@@ -604,8 +620,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_mineral_rich_2_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -770,8 +786,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_floating_islands mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -848,8 +864,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_extensive_cavern_system_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -923,8 +939,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_atmospheric_stimulant mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -990,8 +1006,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_perfect_seasons_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1092,8 +1108,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_ideal_for_life_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1141,8 +1157,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_endless_fish_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1290,8 +1306,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_small_islands_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1389,8 +1405,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_delicious_ingredients_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1439,8 +1455,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_friendly_wildlife_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1488,8 +1504,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_pleasant_weather_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1617,8 +1633,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_gorgeous_sky_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -1772,7 +1788,7 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
+			75 = { }
 			10 = { owner = { gpm_random_alloys = yes } }
 		}
 	}
@@ -1932,8 +1948,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_ice_flora_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2001,8 +2017,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_juggernaut_manta_rays_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2111,8 +2127,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_dunes_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2141,8 +2157,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_extensive_reef_systems_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2235,8 +2251,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_beautiful_lakes_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2288,8 +2304,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_dense_forests_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2318,8 +2334,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_planetwide_forest_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2473,8 +2489,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_exotic_spices_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2592,8 +2608,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_never_ending_aurora_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2623,8 +2639,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_spirals_of_ice_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2652,8 +2668,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_furry_packs mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2736,8 +2752,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_rich_soil_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2765,8 +2781,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_otherworldly_colours mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2796,8 +2812,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_misty_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2873,8 +2889,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_algae_boom_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2903,8 +2919,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_ocean_forests_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -2933,8 +2949,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_warm_water_lakes_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3039,8 +3055,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_unique_marine_habitats_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3211,8 +3227,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_musical_creatures_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3272,8 +3288,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_colossal_cliffs_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3302,8 +3318,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_massive_waterfalls_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3349,7 +3365,7 @@ carrier_event = {
 								gpm_is_country_type_default = yes
 								has_communications = root.owner
 							}
-							log = "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
+							# log =  "<< RELICS >> | RELIC LOOTED <<< create message on THIS = [THIS.GetName]; every relation notifcation"
 							create_message = {
 								type = GPM_MESSAGE_RELIC_POSSESSION
 								localization = GPM_MESSAGE_RELIC_POSSESSION_DESC
@@ -3385,8 +3401,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_mushroom_forest_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3545,8 +3561,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_siren_song mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3582,8 +3598,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_heart_of_the_forest mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3613,8 +3629,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_steam_vents_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3643,8 +3659,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_mineral_pools_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3687,8 +3703,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_feline_companions mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3815,8 +3831,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_springs_of_life mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3845,8 +3861,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_aeromatic_attraction mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3883,8 +3899,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_fractal_formations_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3921,8 +3937,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_silicon_crystals_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -3966,8 +3982,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_golden_fields mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4042,8 +4058,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_crystal_cliffs_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4118,8 +4134,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_ethereal_clouds mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4218,8 +4234,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_cooling_vistas_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4262,8 +4278,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_atmospheric_roots mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4308,8 +4324,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_crystaline_fauna_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4338,8 +4354,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_immortal_coral mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4391,8 +4407,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = no
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_gargantuan_canopies mult = 0.5 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4421,8 +4437,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_jeweled_flowers_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4476,8 +4492,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_towering_cacti_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4567,8 +4583,8 @@ carrier_event = {
 			# NOMAD_REWARD_PM_TERRA = yes
 		}
 		locked_random_list = {
-			20 = { }
-			80 = { 
+			75 = { }
+			25 = { 
 				add_modifier = { modifier = gpm_mineral_rich_waters_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
@@ -4607,7 +4623,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_remnants_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_remnants_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_remnants_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4640,7 +4656,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_energy_grid_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_energy_grid_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_energy_grid_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4673,7 +4689,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_satellite_grid_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_satellite_grid_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_satellite_grid_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4706,7 +4722,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_city_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_city_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_city_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4739,7 +4755,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_shipyards_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_shipyards_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_shipyards_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4772,7 +4788,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_planetary_gun_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_planetary_gun_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_planetary_gun_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4805,7 +4821,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_bunker_grid_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_bunker_grid_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_bunker_grid_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4838,7 +4854,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_mechs_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_mechs_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_mechs_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4871,7 +4887,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_planetary_shield_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_planetary_shield_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_planetary_shield_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4904,7 +4920,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_floating_city_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_floating_city_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_floating_city_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4938,7 +4954,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_capital_complex_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_capital_complex_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_capital_complex_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -4972,7 +4988,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_communication_hub_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_communication_hub_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_communication_hub_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5005,7 +5021,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_singularity_drive_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_singularity_drive_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_singularity_drive_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5038,7 +5054,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_eternal_fortress_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_eternal_fortress_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_eternal_fortress_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5071,7 +5087,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_prison_planet_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_prison_planet_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_prison_planet_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5104,7 +5120,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_mines_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_mines_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_mines_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5137,7 +5153,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_manufactorium_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_manufactorium_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_manufactorium_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5171,7 +5187,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_vaults_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_vaults_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_vaults_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5207,7 +5223,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_crashed_spacestation_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_crashed_spacestation_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_crashed_spacestation_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5241,7 +5257,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_battleground_ruins_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_battleground_ruins_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_battleground_ruins_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5274,7 +5290,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_outpost_ruins_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_outpost_ruins_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_outpost_ruins_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5307,7 +5323,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_harbor_ruins_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_harbor_ruins_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_harbor_ruins_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5340,7 +5356,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_ruins_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_ruins_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_ruins_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5373,7 +5389,7 @@ carrier_event = {
 			50 = {
 				owner = { give_specimen = { key = gpm_precursor_obelisks_discovery_specimen } }
 				modifier = { factor = 0 has_grand_archive_dlc = no }
-				modifier = { factor = 0 has_specimen = { gpm_precursor_obelisks_discovery_specimen } }
+				modifier = { factor = 0 owner = { has_specimen = gpm_precursor_obelisks_discovery_specimen } }
 			}
 			25 = { owner = { gpm_random_minor_artifacts_precursor = yes } }
 			10 = { owner = { gpm_random_minor_artifacts_precursor_big = yes } }
@@ -5444,7 +5460,7 @@ carrier_event = {
 		# is_arkship_fleet = yes
 	# }
 	# immediate = {
-		# log = "gpm_NOMADS.1 this = [this.GetName] -- from = [from.GetName] -- owner = [owner.GetName] -- fromfrom = [fromfrom.GetName]"
+		# log =  "gpm_NOMADS.1 this = [this.GetName] -- from = [from.GetName] -- owner = [owner.GetName] -- fromfrom = [fromfrom.GetName]"
 		# FROM = { 
 			# add_modifier = { modifier = gpm_ark_ship_visited days = 1800 }
 		# }
@@ -5495,7 +5511,7 @@ carrier_event = {
 		# is_arkship_fleet = yes
 	# }
 	# immediate = {
-		# log = "gpm_NOMADS.1 this = [this.GetName] -- from = [from.GetName] -- owner = [owner.GetName] -- fromfrom = [fromfrom.GetName]"
+		# log =  "gpm_NOMADS.1 this = [this.GetName] -- from = [from.GetName] -- owner = [owner.GetName] -- fromfrom = [fromfrom.GetName]"
 		# FROM = { 
 			# set_timed_planet_flag = {
 				# flag = gpm_nomad_visited@root.owner

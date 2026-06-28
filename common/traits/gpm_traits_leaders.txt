@@ -125,27 +125,24 @@ leader_trait_gpm_precursor_expert = {
 	leader_potential_add = {
 		from = { has_country_flag = gpm_precursor_expert_trait_rewarded }
 	}
-	
 
-	triggered_fleet_modifier = {
-		potential = {
-			is_ruler = no
-			leader_class = scientist
-			exists = owner
-		}
-		ship_archaeological_site_excavation_speed_mult = 0.35
+	modifier = {
+		ship_archaeological_site_clues_add = 2
+	}
+
+	planet_modifier = {
+		planet_biologists_minor_artifacts_produces_add = 0.15
+	}
+
+	sector_modifier = {
+		planet_biologists_minor_artifacts_produces_add = 0.05
+	}
+
+	councilor_modifier = {
+		category_archaeostudies_research_speed_mult = @expertise_tier_1_mult
+		category_archaeostudies_draw_chance_mult = 0.10
 		ship_archaeological_site_clues_add = 1
 	}
-
-	triggered_councilor_modifier = {
-		potential = {
-			is_ruler = yes
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		ship_archaeological_site_excavation_speed_mult = 0.70
-	}
-
 
 	leader_class = { scientist }
 
@@ -291,25 +288,29 @@ gpm_leader_trait_collector = {
 	leader_potential_add = {
 		from = { has_ancrel = yes }
 	}
-	triggered_modifier = {
-		potential = {
-			is_ruler = no
-			leader_class = scientist
-		}
-		ship_archaeological_site_excavation_speed_mult = -0.35
-		ship_archaeological_site_clues_add = 3
+
+	custom_subtitle = gpm_leader_trait_collectorTT
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = -0.25
+		ship_archaeological_site_clues_add = 2
 	}
-	triggered_councilor_modifier = {
-		potential = {
-			is_ruler = yes
-			exists = owner
-			owner = { is_gestalt = no }
-		}
+
+	planet_modifier = {
+		planet_physicists_minor_artifacts_produces_add = 0.10
+		planet_biologists_minor_artifacts_produces_add = 0.10
+		planet_engineers_minor_artifacts_produces_add = 0.10
+	}
+
+	sector_modifier = {
+		planet_physicists_minor_artifacts_produces_add = 0.02
+		planet_biologists_minor_artifacts_produces_add = 0.02
+		planet_engineers_minor_artifacts_produces_add = 0.02
+	}
+
+	councilor_modifier = {
+		ship_archaeological_site_clues_add = 1
 		specimens_produces_mult = 0.15
 	}
-	
-	custom_tooltip_with_modifiers = gpm_leader_trait_collectorTT
-	# show_only_custom_tooltip = no
 	
 	leader_class = { scientist }
 	# higher chance to generate techs in category archaeostudies (done in tech-script)

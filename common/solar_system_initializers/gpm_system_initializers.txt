@@ -318,7 +318,7 @@ gpm_guardians_init_ego = {
 			carrier_event = {
 				id = gpm_guardian.1
 			}
-			# log = "GUARDIAN SYSTEM SPAWNED"
+			# log =  "GUARDIAN SYSTEM SPAWNED"
 		}
 	}
 }
@@ -343,7 +343,7 @@ gpm_precursor_machine_system = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 50
+	spawn_chance = 0 #50 TODO events
 	max_instances = 1
 
 	flags = { gpm_precursor_machine_system hostile_system gpm_is_precursor_system }
@@ -697,7 +697,7 @@ gpm_precursor_machine_system = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			# log = "Machine System Spawned"
+			# log =  "Machine System Spawned"
 			set_planet_flag = gpm_machine_system_machine_world
 			set_planet_flag = gpm_is_precursor_world_colour
 			set_planet_size = 25
@@ -949,7 +949,7 @@ gpm_precursor_gaia_system = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			# log = "Gaia System Spawned"
+			# log =  "Gaia System Spawned"
 			set_planet_flag = gpm_gaia_system_gaia_world
 			clear_deposits = yes
 			

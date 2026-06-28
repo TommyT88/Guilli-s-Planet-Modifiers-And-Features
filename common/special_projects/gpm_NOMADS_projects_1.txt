@@ -4,8 +4,10 @@ special_project = {
 	days_to_research = 60
 	location = yes
 	tech_department = society_technology
+	event_chain = "gpm_nomad_visit_chain"
 	picture = GFX_evt_arkship_crisis
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	remove_when_completed = yes
 
 	event_scope = carrier_event
 
@@ -18,7 +20,7 @@ special_project = {
 	#	FROMFROM = location scope, if set (usually a planet)
 	#	PREV = country
 	on_success = {
-		# log = "GPM_VISIT_WORLD_ARKSHIP | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- from.planet = [from.planet.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "GPM_VISIT_WORLD_ARKSHIP | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- from.planet = [from.planet.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
 		# this.fromfrom works also
 		root.fromfrom = {
 			save_event_target_as = gpm_arkship_visit_target
@@ -42,8 +44,10 @@ special_project = {
 	days_to_research = 90
 	location = yes
 	tech_department = society_technology
+	event_chain = "gpm_nomad_visit_precursor_chain"
 	picture = GFX_evt_arkship_crisis
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	remove_when_completed = yes
 
 	event_scope = carrier_event
 
@@ -56,7 +60,7 @@ special_project = {
 	#	FROMFROM = location scope, if set (usually a planet)
 	#	PREV = country
 	on_success = {
-		# log = "GPM_VISIT_WORLD_ARKSHIP | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- from.planet = [from.planet.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
+		# log =  "GPM_VISIT_WORLD_ARKSHIP | root = [root.GetName] -- from = [from.GetName] -- fromfrom = [fromfrom.GetName] -- from.planet = [from.planet.GetName] -- PREV = [prev.GetName] -- this = [this.GetName]"
 		# this.fromfrom works also
 		root.fromfrom = {
 			save_event_target_as = gpm_arkship_visit_target

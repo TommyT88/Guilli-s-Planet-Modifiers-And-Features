@@ -1,12 +1,17 @@
 decision_gpm_machine_world_core_relic = {
+	important = yes
     owned_planets_only = no
 	sound = event_administrative_work
 	icon = gpm_decision_machine_world_core_relic
 	#enactment_time = 0
 
     potential = {
+		exists = from
+		from = {
+			has_country_flag = relic_machine_world_core_activated
+		}
 		exists = space_owner
-		space_owner = { has_country_flag = relic_machine_world_core_activated }
+		space_owner = { is_same_value = from }
 		OR = {
 			gpm_is_planet_class_normal_uninhabitable = yes
 			gpm_is_planet_class_gas_giant = yes
@@ -27,6 +32,7 @@ decision_gpm_machine_world_core_relic = {
 			clear_deposits = yes
 			gpm_purge_all_planetary_modifiers = yes
 			gpm_switch_fixable_modifiers = yes
+			remove_modifier = terraforming_candidate
 			random_list = {
 				10 = { add_modifier = { modifier = gpm_smooth_architecture } }
 				10 = { add_modifier = { modifier = gpm_sharp_architecture } }
@@ -48,6 +54,7 @@ decision_gpm_machine_world_core_relic = {
 }
 
 decision_gpm_shield_generator_arrays = {
+	important = yes
     owned_planets_only = yes
 	sound = event_administrative_work
 	icon = gpm_decision_gpm_shield_generator_arrays
@@ -62,13 +69,15 @@ decision_gpm_shield_generator_arrays = {
 	}
 
     potential = {
-		exists = owner
-		owner = {
+		exists = from
+		from = {
 			check_variable = {
 				which = "gpm_shield_generator_decision_count"
 				value > 0
 			}
 		}
+		exists = space_owner
+		space_owner = { is_same_value = from }
 		NOR = { 
 			has_deposit = gpm_d_planetary_shield_array
 			has_modifier = gpm_precursor_planetary_shield
@@ -98,7 +107,7 @@ decision_gpm_shield_generator_arrays = {
 		add_deposit = gpm_d_planetary_shield_array
 		add_modifier = { modifier = gpm_precursor_planetary_shield_on }
 		if = {
-			limit = { is_nomadic = no }
+			limit = { space_owner = { is_nomadic = no } }
 			hidden_effect = { gpm_set_precursor_planetary_shields = yes }
 		}
 	}
@@ -133,6 +142,7 @@ decision_gpm_shield_generator_arrays = {
 }
 
 decision_gpm_Floating_Island_Housing = {
+	important = yes
     owned_planets_only = yes
 	sound = event_administrative_work
 	icon = gpm_decision_floating_islands
@@ -146,13 +156,15 @@ decision_gpm_Floating_Island_Housing = {
 	# }
 
     potential = {
-		exists = owner
-		owner = {
+		exists = from
+		from = {
 			check_variable = {
 				which = "gpm_r_gravity_engine_decision_count"
 				value > 0
 			}
 		}
+		exists = space_owner
+		space_owner = { is_same_value = from }
 		NOT = { has_deposit = gpm_d_floating_islands_housing }
 		OR = {
 			gpm_is_planet_class_habitable_natural = yes

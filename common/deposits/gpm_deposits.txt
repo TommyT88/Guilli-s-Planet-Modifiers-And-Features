@@ -11,6 +11,7 @@
 ##################################
 
 gpm_d_sun_energy_deposit = {
+	icon = d_binary_stars
 	resources = { 
 		category = orbital_mining_deposits
 		produces = {
@@ -19,6 +20,12 @@ gpm_d_sun_energy_deposit = {
 	}
 	station = shipclass_mining_station
 	is_for_colonizable = no
+
+	habitat_modifier = {
+		district_hab_energy_max_add = 4
+	}
+
+	potential = { always = no }
 	
 	drop_weight = {
 		weight = 0
@@ -26,6 +33,7 @@ gpm_d_sun_energy_deposit = {
 }
 
 gpm_d_proto_molecule_deposit = {
+	icon = "unused/d_microscopic_life"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -35,12 +43,19 @@ gpm_d_proto_molecule_deposit = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 4
+	}
+
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_time_displaced_planet = {
+	icon = "unused/d_atmospheric_entry"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -51,12 +66,20 @@ gpm_d_time_displaced_planet = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 5
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_triple_science = {
+	icon = "unused/d_atmospheric_entry"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -67,12 +90,20 @@ gpm_d_triple_science = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 4
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_double_science_phy_soc = {
+	icon = "unused/d_atmospheric_entry"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -82,12 +113,20 @@ gpm_d_double_science_phy_soc = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 2
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_double_science_soc_phy = {
+	icon = "unused/d_microscopic_life"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -97,12 +136,20 @@ gpm_d_double_science_soc_phy = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 2
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_double_science_phy_eng = {
+	icon = "unused/d_atmospheric_entry"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -112,12 +159,20 @@ gpm_d_double_science_phy_eng = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 2
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_double_science_eng_phy = {
+	icon = d_engineering_research
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -127,12 +182,20 @@ gpm_d_double_science_eng_phy = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 2
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_double_science_soc_eng = {
+	icon = "unused/d_microscopic_life"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -142,12 +205,20 @@ gpm_d_double_science_soc_eng = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 2
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_double_science_eng_soc = {
+	icon = d_engineering_research
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -157,12 +228,20 @@ gpm_d_double_science_eng_soc = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 2
+	}
+	
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_inspirational = {
+	icon = "unused/d_atmospheric_entry"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -171,6 +250,12 @@ gpm_d_inspirational = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 4
+	}
 	
 	drop_weight = {
 		weight = 0
@@ -178,6 +263,7 @@ gpm_d_inspirational = {
 }
 
 gpm_d_pulsar_clock = {
+	icon = "unused/d_atmospheric_entry"
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -186,6 +272,12 @@ gpm_d_pulsar_clock = {
 	}
 	station = shipclass_research_station
 	is_for_colonizable = no
+
+	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_science_max_add = 3
+	}
 	
 	drop_weight = {
 		weight = 0
@@ -193,6 +285,7 @@ gpm_d_pulsar_clock = {
 }
 
 gpm_d_unity_deposit = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -240,6 +333,7 @@ gpm_d_unity_deposit = {
 }
 
 gpm_d_unity_space_deposit_2 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -257,6 +351,7 @@ gpm_d_unity_space_deposit_2 = {
 }
 
 gpm_d_unity_space_deposit_3 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -274,6 +369,7 @@ gpm_d_unity_space_deposit_3 = {
 }
 
 gpm_d_unity_space_deposit_4 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -291,6 +387,7 @@ gpm_d_unity_space_deposit_4 = {
 }
 
 gpm_d_unity_space_deposit_5 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -308,6 +405,7 @@ gpm_d_unity_space_deposit_5 = {
 }
 
 gpm_d_unity_space_deposit_6 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -325,6 +423,7 @@ gpm_d_unity_space_deposit_6 = {
 }
 
 gpm_d_unity_space_deposit_7 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -342,6 +441,7 @@ gpm_d_unity_space_deposit_7 = {
 }
 
 gpm_d_unity_space_deposit_8 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -359,6 +459,7 @@ gpm_d_unity_space_deposit_8 = {
 }
 
 gpm_d_unity_space_deposit_9 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -376,6 +477,7 @@ gpm_d_unity_space_deposit_9 = {
 }
 
 gpm_d_unity_space_deposit_10 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -393,6 +495,7 @@ gpm_d_unity_space_deposit_10 = {
 }
 
 gpm_d_unity_space_deposit_15 = {
+	icon = "unused/d_strategic_resources"
 	station = shipclass_research_station
 	is_for_colonizable = no
 		
@@ -410,6 +513,7 @@ gpm_d_unity_space_deposit_15 = {
 }
 
 gpm_d_trade_deposit = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -426,6 +530,7 @@ gpm_d_trade_deposit = {
 }
 
 gpm_d_food_4 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -443,6 +548,7 @@ gpm_d_food_4 = {
 }
 
 gpm_d_food_5 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -460,6 +566,7 @@ gpm_d_food_5 = {
 }
 
 gpm_d_food_6 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -477,6 +584,7 @@ gpm_d_food_6 = {
 }
 
 gpm_d_food_7 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -494,6 +602,7 @@ gpm_d_food_7 = {
 }
 
 gpm_d_food_8 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -511,6 +620,7 @@ gpm_d_food_8 = {
 }
 
 gpm_d_food_9 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -528,6 +638,7 @@ gpm_d_food_9 = {
 }
 
 gpm_d_food_10 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -545,6 +656,7 @@ gpm_d_food_10 = {
 }
 
 gpm_d_food_15 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -562,6 +674,7 @@ gpm_d_food_15 = {
 }
 
 gpm_d_food_20 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -579,6 +692,7 @@ gpm_d_food_20 = {
 }
 
 gpm_d_food_25 = {
+	icon = "unused/d_strategic_resources"
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -596,6 +710,7 @@ gpm_d_food_25 = {
 }
 
 gpm_d_minerals_11 = {
+	icon = d_mining_station
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -607,12 +722,17 @@ gpm_d_minerals_11 = {
 
 	potential = { always = no }
 
+	habitat_modifier = {
+		district_hab_mining_max_add = 2
+	}
+
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_minerals_12 = {
+	icon = d_mining_station
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -624,12 +744,17 @@ gpm_d_minerals_12 = {
 
 	potential = { always = no }
 
+	habitat_modifier = {
+		district_hab_mining_max_add = 2
+	}
+
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_minerals_13 = {
+	icon = d_mining_station
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -641,12 +766,17 @@ gpm_d_minerals_13 = {
 
 	potential = { always = no }
 
+	habitat_modifier = {
+		district_hab_mining_max_add = 3
+	}
+
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_minerals_14 = {
+	icon = d_mining_station
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -658,12 +788,17 @@ gpm_d_minerals_14 = {
 
 	potential = { always = no }
 
+	habitat_modifier = {
+		district_hab_mining_max_add = 3
+	}
+
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_minerals_15 = {
+	icon = d_mining_station
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -675,12 +810,18 @@ gpm_d_minerals_15 = {
 
 	potential = { always = no }
 
+	habitat_modifier = {
+		district_hab_mining_max_add = 3
+	}
+
+
 	drop_weight = {
 		weight = 0
 	}
 }
 
 gpm_d_energy_11 = {
+	icon = d_binary_stars
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -691,10 +832,15 @@ gpm_d_energy_11 = {
 	is_for_colonizable = no
 
 	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_energy_max_add = 2
+	}
 	drop_weight = { weight = 0 }
 }
 
 gpm_d_energy_12 = {
+	icon = d_binary_stars
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -705,10 +851,15 @@ gpm_d_energy_12 = {
 	is_for_colonizable = no
 
 	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_energy_max_add = 2
+	}
 	drop_weight = { weight = 0 }
 }
 
 gpm_d_energy_13 = {
+	icon = d_binary_stars
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -719,10 +870,15 @@ gpm_d_energy_13 = {
 	is_for_colonizable = no
 
 	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_energy_max_add = 3
+	}
 	drop_weight = { weight = 0 }
 }
 
 gpm_d_energy_14 = {
+	icon = d_binary_stars
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -733,10 +889,15 @@ gpm_d_energy_14 = {
 	is_for_colonizable = no
 
 	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_energy_max_add = 3
+	}
 	drop_weight = { weight = 0 }
 }
 
 gpm_d_energy_15 = {
+	icon = d_binary_stars
 	resources = {
 		category = orbital_mining_deposits
 		produces = {
@@ -747,10 +908,15 @@ gpm_d_energy_15 = {
 	is_for_colonizable = no
 
 	potential = { always = no }
+
+	habitat_modifier = {
+		district_hab_energy_max_add = 3
+	}
 	drop_weight = { weight = 0 }
 }
 
 gpm_d_alloys_6 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -766,6 +932,7 @@ gpm_d_alloys_6 = {
 }
 
 gpm_d_alloys_7 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -781,6 +948,7 @@ gpm_d_alloys_7 = {
 }
 
 gpm_d_alloys_8 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -796,6 +964,7 @@ gpm_d_alloys_8 = {
 }
 
 gpm_d_alloys_9 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -811,6 +980,7 @@ gpm_d_alloys_9 = {
 }
 
 gpm_d_consumer_goods_5 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -826,6 +996,7 @@ gpm_d_consumer_goods_5 = {
 }
 
 gpm_d_consumer_goods_6 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -841,6 +1012,7 @@ gpm_d_consumer_goods_6 = {
 }
 
 gpm_d_consumer_goods_7 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -856,6 +1028,7 @@ gpm_d_consumer_goods_7 = {
 }
 
 gpm_d_consumer_goods_8 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -871,6 +1044,7 @@ gpm_d_consumer_goods_8 = {
 }
 
 gpm_d_consumer_goods_9 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
@@ -886,6 +1060,7 @@ gpm_d_consumer_goods_9 = {
 }
 
 gpm_d_consumer_goods_10 = {
+	icon = "unused/d_ruined_system"
 	station = shipclass_mining_station
 	is_for_colonizable = no
 

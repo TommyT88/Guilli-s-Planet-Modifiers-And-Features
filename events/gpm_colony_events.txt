@@ -29,9 +29,9 @@ carrier_event = { id = gpm_colony.1 hide_window = yes is_triggered_only = yes
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.1 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- set planet color on colonization(AI) ----"
+		# log =  "---- Fired Event gpm_colony.1 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- set planet color on colonization(AI) ----"
 	# gpm_reset_planet_name = yes
 	# gpm_colour_planet_name = yes
 		if = {
@@ -90,9 +90,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.3 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- Ship graveyard event start ----"
+		# log =  "---- Fired Event gpm_colony.3 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- Ship graveyard event start ----"
 		owner = { set_country_flag = gpm_colony_country_ship_event }
 		begin_event_chain = {
 			event_chain = "gpm_colony_ship_event_chain"
@@ -149,9 +149,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- Ship graveyard event pre-reward ----"
+		# log =  "---- Fired Event gpm_colony.4 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- Ship graveyard event pre-reward ----"
 		save_event_target_as = gpm_ship_event_target
 	}
 
@@ -197,9 +197,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.5 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 1 ----"
+		# log =  "---- Fired Event gpm_colony.5 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 1 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -260,9 +260,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.6 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 2 ----"
+		# log =  "---- Fired Event gpm_colony.6 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 2 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -378,9 +378,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.7 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 3 ----"
+		# log =  "---- Fired Event gpm_colony.7 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 3 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -460,9 +460,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.8 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 4 ----"
+		# log =  "---- Fired Event gpm_colony.8 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 4 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -692,9 +692,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.9 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 5 ----"
+		# log =  "---- Fired Event gpm_colony.9 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 5 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -762,9 +762,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.10 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 6 ----"
+		# log =  "---- Fired Event gpm_colony.10 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 6 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -900,9 +900,9 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.11 ----"
-		# log = "---- On Planet: [PREV.GetName] ----"
-		# log = "---- Ship graveyard event reward 7 ----"
+		# log =  "---- Fired Event gpm_colony.11 ----"
+		# log =  "---- On Planet: [PREV.GetName] ----"
+		# log =  "---- Ship graveyard event reward 7 ----"
 		event_target:gpm_ship_event_target = {
 			create_fleet = { }
 			last_created_fleet = {
@@ -1115,9 +1115,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.30 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- poor to good mineral upgrade ----"
+		# log =  "---- Fired Event gpm_colony.30 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- poor to good mineral upgrade ----"
 		owner = { set_country_flag  = gpm_colony_mineral_upgrade_event }
 		# Planet Modifier Scaling
 		if = {
@@ -1205,9 +1205,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.40 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- good to better mineral upgrade ----"
+		# log =  "---- Fired Event gpm_colony.40 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- good to better mineral upgrade ----"
 		owner = { set_country_flag  = gpm_colony_mineral_upgrade_event }
 
 		# Planet Modifier Scaling
@@ -1299,9 +1299,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_seasonal_flooding_dmg_event }
-		# log = "---- Fired Event gpm_colony.50 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- seasonal flooding to lakes ----"
+		# log =  "---- Fired Event gpm_colony.50 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- seasonal flooding to lakes ----"
 	}
 
 	option = {
@@ -1405,9 +1405,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_seasonal_flooding_upg_event }
-		# log = "---- Fired Event gpm_colony.50 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- seasonal flooding to lakes ----"
+		# log =  "---- Fired Event gpm_colony.50 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- seasonal flooding to lakes ----"
 		# Planet Modifier Scaling
 		if = {
 			limit = { NOT = { has_global_flag = gpm_scaling_multiplier_disabled } }
@@ -1491,9 +1491,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_locust_plagues_event }
-		# log = "---- Fired Event gpm_colony.60 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- remove locust plagues ----"
+		# log =  "---- Fired Event gpm_colony.60 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- remove locust plagues ----"
 	}
 
 	option = {
@@ -1566,9 +1566,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_acidic_seas_event }
-		# log = "---- Fired Event gpm_colony.70 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- remove acidic seas ----"
+		# log =  "---- Fired Event gpm_colony.70 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- remove acidic seas ----"
 	}
 
 	option = {
@@ -1641,9 +1641,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_carnivorous_flies_event }
-		# log = "---- Fired Event gpm_colony.80 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- remove carnivorous flies ----"
+		# log =  "---- Fired Event gpm_colony.80 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- remove carnivorous flies ----"
 	}
 
 	option = {
@@ -1716,9 +1716,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_lingering_pollution_event }
-		# log = "---- Fired Event gpm_colony.90 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- remove lingering pollutation ----"
+		# log =  "---- Fired Event gpm_colony.90 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- remove lingering pollutation ----"
 	}
 
 	option = {
@@ -1791,9 +1791,9 @@ carrier_event = {
 	immediate = {
 		
 		owner = { set_country_flag = gpm_resilent_parasites_event }
-		# log = "---- Fired Event gpm_colony.100 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- remove resilient parasites ----"
+		# log =  "---- Fired Event gpm_colony.100 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- remove resilient parasites ----"
 	}
 
 	option = {
@@ -1851,9 +1851,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.110 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- thunderstorm energy bonus ----"
+		# log =  "---- Fired Event gpm_colony.110 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- thunderstorm energy bonus ----"
 		owner = { set_country_flag = gpm_colony_thunderstorm_event }
 	}
 
@@ -1914,9 +1914,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.120 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- highly charged air particles bonus ----"
+		# log =  "---- Fired Event gpm_colony.120 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- highly charged air particles bonus ----"
 		owner = { set_country_flag = gpm_colony_charged_event }
 	}
 
@@ -2014,9 +2014,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.130 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- unstable tectonics earthquake ----"
+		# log =  "---- Fired Event gpm_colony.130 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- unstable tectonics earthquake ----"
 		owner = { set_country_flag = gpm_colony_earthquake_event }
 	}
 
@@ -2099,9 +2099,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.140 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- asteroid impact ----"
+		# log =  "---- Fired Event gpm_colony.140 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- asteroid impact ----"
 		owner = { set_country_flag = gpm_colony_asteroid_impact_event }
 	}
 
@@ -2185,9 +2185,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.150 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- mineral mineral bonus ----"
+		# log =  "---- Fired Event gpm_colony.150 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- mineral mineral bonus ----"
 		owner = { set_country_flag = gpm_colony_mineral_haul_event }
 	}
 
@@ -2282,9 +2282,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.160 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- hostile flora pop killed ----"
+		# log =  "---- Fired Event gpm_colony.160 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- hostile flora pop killed ----"
 		owner = { set_country_flag = gpm_colony_hostile_flora_event }
 	}
 
@@ -2373,9 +2373,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.170 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- predators raid ----"
+		# log =  "---- Fired Event gpm_colony.170 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- predators raid ----"
 		owner = { set_country_flag = gpm_colony_predator_attack_event }
 	}
 
@@ -2454,9 +2454,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.180 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- endless fish food bonus ----"
+		# log =  "---- Fired Event gpm_colony.180 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- endless fish food bonus ----"
 		owner = { set_country_flag = gpm_colony_endless_fish_event }
 	}
 
@@ -2599,9 +2599,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.190 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- gemstone sale ----"
+		# log =  "---- Fired Event gpm_colony.190 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- gemstone sale ----"
 		owner = { set_country_flag = gpm_colony_gemstones_event }
 	}
 
@@ -2724,9 +2724,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.200 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- robot in love ----"
+		# log =  "---- Fired Event gpm_colony.200 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- robot in love ----"
 		owner = { set_country_flag = gpm_colony_droid_love_event }
 	}
 
@@ -2835,9 +2835,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.210 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- windy energy bonus ----"
+		# log =  "---- Fired Event gpm_colony.210 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- windy energy bonus ----"
 		owner = { set_country_flag = gpm_colony_windy_event }
 	}
 
@@ -2893,9 +2893,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.220 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- radioactive mantle betharian bonus ----"
+		# log =  "---- Fired Event gpm_colony.220 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- radioactive mantle betharian bonus ----"
 		owner = { set_country_flag = gpm_colony_betharian_stone_event }
 	}
 
@@ -2968,9 +2968,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.230 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- locust plagues farms ----"
+		# log =  "---- Fired Event gpm_colony.230 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- locust plagues farms ----"
 		owner = { set_country_flag = gpm_colony_locust_farm_event }
 	}
 
@@ -3046,9 +3046,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.240 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- trubbles food problem ----"
+		# log =  "---- Fired Event gpm_colony.240 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- trubbles food problem ----"
 		owner = { set_country_flag = gpm_colony_hungry_trubbles_event }
 	}
 
@@ -3101,9 +3101,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.250 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- strange voices attacks ----"
+		# log =  "---- Fired Event gpm_colony.250 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- strange voices attacks ----"
 		owner = { set_country_flag = gpm_colony_cultist_event }
 		create_country = {
 			name = "Followers of the Ancient One"
@@ -3286,9 +3286,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.260 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- planetwide forest growth ----"
+		# log =  "---- Fired Event gpm_colony.260 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- planetwide forest growth ----"
 		owner = { set_country_flag = gpm_colony_forest_growth_event }
 	}
 
@@ -3363,9 +3363,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.270 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- hiveworld queen ----"
+		# log =  "---- Fired Event gpm_colony.270 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- hiveworld queen ----"
 		owner = { set_country_flag = gpm_hive_event }
 		create_fleet = {
 			name = "NAME_Domesticated_Prethoryn"
@@ -3454,9 +3454,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.280 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- spider attacks ----"
+		# log =  "---- Fired Event gpm_colony.280 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- spider attacks ----"
 		owner = { set_country_flag = gpm_colony_loose_arachnids_event }
 		create_country = {
 			name = "Arachnids"
@@ -3530,9 +3530,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.290 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- giant worm attack ----"
+		# log =  "---- Fired Event gpm_colony.290 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- giant worm attack ----"
 		owner = { set_country_flag = gpm_colony_worm_attack_event }
 	}
 
@@ -3639,9 +3639,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.300 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- carnivorous flies eating people ----"
+		# log =  "---- Fired Event gpm_colony.300 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- carnivorous flies eating people ----"
 		owner = { set_country_flag = gpm_colony_carnivorous_flies_event }
 	}
 
@@ -3698,9 +3698,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.310 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- mushroom forest tile growth ----"
+		# log =  "---- Fired Event gpm_colony.310 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- mushroom forest tile growth ----"
 		owner = { set_country_flag = gpm_colony_mushroom_forest_event }
 	}
 
@@ -3749,9 +3749,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.320 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- proto/dense forest tile growth ----"
+		# log =  "---- Fired Event gpm_colony.320 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- proto/dense forest tile growth ----"
 		owner = { set_country_flag = gpm_colony_forest_fire_event }
 	}
 
@@ -3943,9 +3943,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.330 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- planet wide forest fire ----"
+		# log =  "---- Fired Event gpm_colony.330 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- planet wide forest fire ----"
 		owner = { set_country_flag = gpm_colony_planet_forest_fire_event }
 	}
 
@@ -4168,9 +4168,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.340 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- ancient one faction TO DO----"
+		# log =  "---- Fired Event gpm_colony.340 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- ancient one faction TO DO----"
 		owner = { set_country_flag = gpm_colony_ancient_one_event }
 	}
 
@@ -4205,9 +4205,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.350 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- Artificial Core TO DO ----"
+		# log =  "---- Fired Event gpm_colony.350 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- Artificial Core TO DO ----"
 		owner = { set_country_flag = gpm_colony_artificial_core_event }
 	}
 
@@ -4457,8 +4457,8 @@ event = {
 	immediate = {
 		
 
-		# log = "---- Fired Event gpm_colony.4000 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4000 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		every_galaxy_planet = {
 			limit = {
 				has_owner = yes
@@ -4596,8 +4596,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4100 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4100 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 	}
 
 	option = {
@@ -4639,8 +4639,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4110 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4110 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 	}
 
 	option = {
@@ -4682,8 +4682,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4120 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4120 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 	}
 
 	option = {
@@ -4724,8 +4724,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4130 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4130 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 	}
 
 	option = {
@@ -4766,8 +4766,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4140 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4140 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -4817,8 +4817,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4200 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4200 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -4861,8 +4861,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4210 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4210 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -4904,8 +4904,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4220 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4220 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -4953,8 +4953,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4230 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4230 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -5004,8 +5004,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4300 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4300 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5048,8 +5048,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4310 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4310 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5092,8 +5092,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4320 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4320 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5135,8 +5135,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4330 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4330 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5178,8 +5178,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4340 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4340 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5221,8 +5221,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4350 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4350 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -5272,8 +5272,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4400 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4400 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5316,8 +5316,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4410 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4410 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5360,8 +5360,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4420 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4420 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5403,8 +5403,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4430 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4430 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -5454,8 +5454,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4500 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4500 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5497,8 +5497,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4510 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4510 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5540,8 +5540,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4520 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4520 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5584,8 +5584,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4530 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4530 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5628,8 +5628,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4540 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4540 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -5679,8 +5679,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4600 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4600 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5723,8 +5723,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4610 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4610 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5766,8 +5766,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4620 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4620 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5809,8 +5809,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4630 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4630 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5852,8 +5852,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4640 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4640 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -5903,8 +5903,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4700 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4700 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5946,8 +5946,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4710 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4710 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -5989,8 +5989,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4720 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4720 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6032,8 +6032,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4730 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4730 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6076,8 +6076,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4740 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4740 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6120,8 +6120,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4750 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4750 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6163,8 +6163,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4760 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4760 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -6214,8 +6214,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4800 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4800 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6252,9 +6252,9 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4801 ----"
-		# log = "---- On Planet: [This.GetName] ----"
-		# log = "---- Repeatable Holiday Event 360 days ----"
+		# log =  "---- Fired Event gpm_colony.4801 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
+		# log =  "---- Repeatable Holiday Event 360 days ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 		add_modifier = { modifier = gpm_diversity_holiday days = 59 }
 		carrier_event = { id = gpm_colony.4801 days = 1360 }
@@ -6292,8 +6292,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4810 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4810 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6335,8 +6335,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4820 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4820 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6378,8 +6378,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4830 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4830 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -6429,8 +6429,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4900 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4900 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6473,8 +6473,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4910 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4910 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6517,8 +6517,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4920 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4920 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6560,8 +6560,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4930 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4930 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6603,8 +6603,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.4940 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.4940 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -6654,8 +6654,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.5000 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.5000 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6698,8 +6698,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.5010 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.5010 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6742,8 +6742,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.5020 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.5020 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6785,8 +6785,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.5030 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.5030 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		#set_planet_flag = gpm_capital_unique_modifiers
 	}
 
@@ -6828,8 +6828,8 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.5040 ----"
-		# log = "---- On Planet: [This.GetName] ----"
+		# log =  "---- Fired Event gpm_colony.5040 ----"
+		# log =  "---- On Planet: [This.GetName] ----"
 		owner = { set_country_flag = gpm_capital_unique_modifiers }
 	}
 
@@ -6868,7 +6868,7 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.7000 ----"
+		# log =  "---- Fired Event gpm_colony.7000 ----"
 		carrier_event = { id = gpm_colony.7100 days = 720 }
 	}
 }
@@ -6889,7 +6889,7 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.7100 ----"
+		# log =  "---- Fired Event gpm_colony.7100 ----"
 
 		gpm_remove_negative_modifiers = yes
 		gpm_remove_neutral_modifiers = yes
@@ -6926,7 +6926,7 @@ carrier_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.8000 ----"
+		# log =  "---- Fired Event gpm_colony.8000 ----"
 		if = {
 			limit = { owner = { has_authority = auth_ancient_machine_intelligence } }
 			random_list = {
@@ -6967,7 +6967,7 @@ country_event = {
 
 	immediate = {
 		
-		# log = "---- Fired Event gpm_colony.8100 ----"
+		# log =  "---- Fired Event gpm_colony.8100 ----"
 		if = {
 			limit = {
 				This = { has_authority = auth_ancient_machine_intelligence }

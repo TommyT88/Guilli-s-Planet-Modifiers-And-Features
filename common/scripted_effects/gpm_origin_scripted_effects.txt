@@ -80,7 +80,7 @@ gpm_run_origin_precursor_world_planet_gen = {
 	owner = { add_modifier = { modifier = gpm_origin_precursor_world_mod } }
 	clear_blockers = yes
 
-	set_planet_flag = gpm_is_precursor_world
+	set_carrier_flag = gpm_is_precursor_world
 	solar_system = { set_star_flag = gpm_is_precursor_system }
 
 	# Cryotube deposit

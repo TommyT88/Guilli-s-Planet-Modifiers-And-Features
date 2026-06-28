@@ -1,11 +1,12 @@
 gpm_precursor_shipyards_uplink = {
 	icon = "GFX_gpm_spaceport_module_precursor_shipyard_uplink" #sb_precursor_shipyard_uplink
 	construction_days = 360
+	category = sm_naval_support_cat
 	
 	potential = {
-		OR = {
-			star = { has_star_flag = gpm_precursor_shipyards_star }
-			solar_system = {
+		solar_system = {
+			OR = {
+				has_star_flag = gpm_precursor_shipyards_star
 				any_system_planet = {
 					has_modifier = gpm_precursor_shipyards
 				}

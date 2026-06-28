@@ -32,6 +32,7 @@ gpm_refinery_ruined = {
 		}
 	}
 
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	entity_offset = { x = @entity_x y = @entity_y }
@@ -47,6 +48,7 @@ gpm_refinery_restored = {
 	entity = "gpm_refinery_entity"
 	construction_entity = "gpm_refinery_damaged_entity"
 	portrait = "GFX_gpm_repaired_refinery_background"
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	show_in_outliner = no
@@ -144,17 +146,18 @@ gpm_refinery_restored = {
 	}
 
 	possible = {
-		# OR = {
-			# from = {
-				# has_ancrel = yes
-				# resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				# resource_stockpile_compare = { resource = alloys value >= 500 }
-			# }
-			# from = {
-				# has_ancrel = no
-				# resource_stockpile_compare = { resource = alloys value >= 500 }
-			# }
-		# }
+		inline_script = megastructures/system_ownership_or_waystation_check
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
 	}
 
 	on_build_start = {
@@ -279,6 +282,7 @@ gpm_mining_facility_ruined = {
 		}
 	}
 
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = yes
 	show_galactic_map_icon = yes
 	entity_offset = { x = @entity_x y = @entity_y }
@@ -294,6 +298,7 @@ gpm_mining_facility_restored = {
 	entity = "gpm_mining_facility_entity"
 	construction_entity = "gpm_mining_facility_damaged_entity"
 	portrait = "GFX_gpm_repaired_mining_station_background"
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = yes
 	show_galactic_map_icon = yes
 	show_in_outliner = no
@@ -445,7 +450,18 @@ gpm_mining_facility_restored = {
 	}
 
 	possible = {
-		exists = owner
+		inline_script = megastructures/system_ownership_or_waystation_check
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
 	}
 	
 	country_modifier = {
@@ -568,6 +584,7 @@ gpm_observation_station_ruined = {
 	}
 	show_galactic_map_icon = yes
 
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = no
 	entity_offset = { x = @entity_x y = @entity_y }
 	
@@ -582,6 +599,7 @@ gpm_observation_station_restored = {
 	entity = "gpm_observation_station_entity"
 	construction_entity = "gpm_observation_station_damaged_entity"
 	portrait = "GFX_gpm_repaired_station_background"
+	construction_blocks_and_blocked_by = none
 	show_galactic_map_icon = yes
 	place_entity_on_planet_plane = no
 	show_in_outliner = no
@@ -801,17 +819,18 @@ gpm_observation_station_restored = {
 	}
 
 	possible = {
-		# OR = {
-			# from = {
-				# has_ancrel = yes
-				# resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				# resource_stockpile_compare = { resource = alloys value >= 500 }
-			# }
-			# from = {
-				# has_ancrel = no
-				# resource_stockpile_compare = { resource = alloys value >= 500 }
-			# }
-		# }
+		inline_script = megastructures/system_ownership_or_waystation_check
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
 	}
 
 	on_build_start = {
@@ -974,6 +993,7 @@ gpm_silo_ruined = {
 			}
 		}
 	}
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = no
 	show_galactic_map_icon = yes
 	build_outside_gravity_well = yes
@@ -988,23 +1008,25 @@ gpm_silo_restored = {
 	entity = "gpm_silo_entity"
 	construction_entity = "gpm_silo_damaged_entity"
 	portrait = "GFX_gpm_repaired_silo_background"
+	construction_blocks_and_blocked_by = none
 	place_entity_on_planet_plane = no
 	show_in_outliner = no
 	# build_outside_gravity_well = yes
 	show_galactic_map_icon = yes
 
 	possible = {
-		# OR = {
-			# from = {
-				# has_ancrel = yes
-				# resource_stockpile_compare = { resource = minor_artifacts value >= 250 }
-				# resource_stockpile_compare = { resource = alloys value >= 1000 }
-			# }
-			# from = {
-				# has_ancrel = no
-				# resource_stockpile_compare = { resource = alloys value >= 1000 }
-			# }
-		# }
+		inline_script = megastructures/system_ownership_or_waystation_check
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
 	}
 
 	upgrade_from = {

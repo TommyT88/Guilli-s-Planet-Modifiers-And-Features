@@ -11,4 +11,19 @@
 gpm_colony_ship_event_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_gpm_spaceship_graveyard
+	situation_log_category = empire_concerns
+}
+
+# Nomad Visit events
+gpm_nomad_visit_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_arkship.dds"
+	picture = GFX_evt_gpm_spaceship_graveyard
+	situation_log_category = developments
+}
+
+# Nomad Visit events
+gpm_nomad_visit_precursor_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_arkship.dds"
+	picture = GFX_evt_gpm_spaceship_graveyard
+	situation_log_category = precursors
 }

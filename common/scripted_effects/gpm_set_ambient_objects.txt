@@ -1084,7 +1084,7 @@ gpm_set_precursor_planetary_shields = {
 					gpm_is_planet_class_ringworld = yes
 					gpm_is_planet_class_habitat = yes
 				}
-				NOT = { has_planet_flag = gpm_precursor_shield_ambient }
+				NOT = { has_carrier_flag = gpm_precursor_shield_ambient }
 			}
 			save_event_target_as = gpm_precursor_shield_location
 			
@@ -1581,7 +1581,7 @@ gpm_set_precursor_planetary_shields = {
 					set_ambient_object_flag = gpm_precursor_shield_flag
 				}
 			}
-			set_planet_flag = gpm_precursor_shield_ambient
+			set_carrier_flag = gpm_precursor_shield_ambient
 		}
 	}
 	if = {
@@ -1601,7 +1601,7 @@ gpm_set_precursor_planetary_shields = {
 					gpm_is_planet_class_ringworld = yes
 					gpm_is_planet_class_habitat = yes
 				}
-				NOT = { has_planet_flag = gpm_precursor_shipyards_ambient }
+				NOT = { has_carrier_flag = gpm_precursor_shipyards_ambient }
 			}
 			save_event_target_as = gpm_precursor_shield_location
 			
@@ -2098,7 +2098,7 @@ gpm_set_precursor_planetary_shields = {
 					set_ambient_object_flag = gpm_precursor_shield_flag
 				}
 			}
-			set_planet_flag = gpm_precursor_shield_ambient
+			set_carrier_flag = gpm_precursor_shield_ambient
 		}
 	}
 }
@@ -2116,7 +2116,7 @@ gpm_set_fallen_empire_planetary_shields = {
 					gpm_is_planet_class_ringworld = yes
 					gpm_is_planet_class_habitat = yes
 				}
-				NOT = { has_planet_flag = gpm_fallen_empire_shield_ambient }
+				NOT = { has_carrier_flag = gpm_fallen_empire_shield_ambient }
 			}
 			save_event_target_as = gpm_FE_shield_location
 			
@@ -2613,7 +2613,7 @@ gpm_set_fallen_empire_planetary_shields = {
 					set_ambient_object_flag = gpm_fallen_empire_shield_flag
 				}
 			}
-			set_planet_flag = gpm_fallen_empire_shield_ambient
+			set_carrier_flag = gpm_fallen_empire_shield_ambient
 		}
 	}
 	if = {
@@ -2630,7 +2630,7 @@ gpm_set_fallen_empire_planetary_shields = {
 					gpm_is_planet_class_ringworld = yes
 					gpm_is_planet_class_habitat = yes
 				}
-				NOT = { has_planet_flag = gpm_fallen_empire_shield_ambient }
+				NOT = { has_carrier_flag = gpm_fallen_empire_shield_ambient }
 			}
 			save_event_target_as = gpm_FE_shield_location
 			
@@ -3127,7 +3127,7 @@ gpm_set_fallen_empire_planetary_shields = {
 					set_ambient_object_flag = gpm_fallen_empire_shield_flag
 				}
 			}
-			set_planet_flag = gpm_fallen_empire_shield_ambient
+			set_carrier_flag = gpm_fallen_empire_shield_ambient
 		}
 	}
 }
