@@ -2322,8 +2322,12 @@ gpm_random_reward_precursor_manufactorium = {
 					}
 					effect = {
 						set_owner = root.owner
-						create_ship_design = {
-							design = "NAME_gpm_manufactorium_ship"
+						if = { 
+							limit = { root.owner ={ is_nomadic = yes } }
+							create_ship_design = { design = "NAME_gpm_manufactorium_ship_nomads" }
+						}
+						else = {
+							create_ship_design = { design = "NAME_gpm_manufactorium_ship" }
 						}
 						create_ship = {
 							name = "NAME_manufactorium_ship_name"

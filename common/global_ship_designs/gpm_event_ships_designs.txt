@@ -46,6 +46,54 @@ ship_design = {
 	required_component = "SHIP_THRUSTER_1"
 	required_component = "CORVETTE_FISSION_REACTOR"
 }
+# manufactorium ship
+ship_design = {
+	name = "NAME_gpm_manufactorium_ship_nomads"
+	ship_size = gpm_manufactorium_ship_nomads
+	is_event_design = yes
+	
+	section = {
+		template = "gpm_manufactorium_ship_nomads_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_ARMOR_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_ARMOR_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}	
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}	
+		component = {
+			slot = "AUX_UTILITY_5"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_6"
+			template = "GPM_ORBITAL_FABRICATOR"
+		}	
+		
+	}
+	required_component = "JUMP_DRIVE_1"
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "CORVETTE_FISSION_REACTOR"
+}
 # precursor ship
 ship_design = {
 	name = "NAME_gpm_precursor_ship"

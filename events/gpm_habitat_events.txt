@@ -33,7 +33,7 @@ country_event = {
 	}
 }
 
-# Runs seperate delayed event to account for issues issues
+# Runs seperate delayed event to account for issues
 country_event = {
 	id = gpm_habitat.2
 	hide_window = yes
@@ -48,7 +48,7 @@ country_event = {
 		
 		# log =  "000000000 from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
 		fromfrom.solar_system = {
-			every_system_planet = {
+			random_system_planet = {
 				limit = {
 					NOR = {
 						has_planet_flag = gpm_constructed_habitat_event_complete

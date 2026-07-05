@@ -478,7 +478,7 @@ fleet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		
+	log =  "gpm_dig_site.150 scopes from = [From.GetName] -- root = [root.GetName] -- fromfrom = [FromFrom.GetName] -- from.planet = [From.Planet.GetName] -- fromfrom.planet = [FromFrom.Planet.GetName]"
 		from = { set_site_progress_locked = yes }
 	}
 
@@ -1386,7 +1386,6 @@ fleet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		
 		from = { set_site_progress_locked = yes }
 	}
 
@@ -3633,8 +3632,12 @@ fleet_event = {
 						}
 						effect = {
 							set_owner = root.owner
-							create_ship_design = {
-								design = "NAME_gpm_manufactorium_ship"
+							if = {
+								limit = { root.owner ={ is_nomadic = yes } }
+								create_ship_design = { design = "NAME_gpm_manufactorium_ship_nomads" }
+							}
+							else = {
+								create_ship_design = { design = "NAME_gpm_manufactorium_ship" }
 							}
 							create_ship = {
 								name = "NAME_manufactorium_ship_name"
@@ -3703,8 +3706,12 @@ fleet_event = {
 						}
 						effect = {
 							set_owner = root.owner
-							create_ship_design = {
-								design = "NAME_gpm_manufactorium_ship"
+							if = {
+								limit = { root.owner ={ is_nomadic = yes } }
+								create_ship_design = { design = "NAME_gpm_manufactorium_ship_nomads" }
+							}
+							else = {
+								create_ship_design = { design = "NAME_gpm_manufactorium_ship" }
 							}
 							create_ship = {
 								name = "NAME_manufactorium_ship_name"

@@ -135,7 +135,7 @@ ship_event = {
 						has_deposit = no
 						AND = {
 							has_deposit = yes
-							has_deposit_for = shipclass_mining_station
+							has_deposit_for = shipclass_research_station
 						}
 					}
 				}
@@ -5712,6 +5712,7 @@ ship_event = {
 		trigger = { }
 		name = ASTOUNDING
 		# leader experience
+		root.leader = { gpm_random_experience = yes }
 		# deposit
 		if = {
 			limit = {

@@ -764,6 +764,27 @@ l_polish:
  mod_shipclass_science_ship_build_cost_mult:0 "Science Ship Build Cost"
  mod_shipclass_science_ship_build_speed_mult:0 "Science Ship £time£ Construction Speed"
 
+ mod_shipsize_mining_station_shield_add:0 "$mining_station$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_research_station_shield_add:0 "$research_station$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_observation_station_shield_add:0 "$observation_station$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_military_station_small_shield_add:0 "$military_station_small$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_ion_cannon_shield_add:0 "$ion_cannon$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_outpost_shield_add:0 "$starbase_outpost$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_starport_shield_add:0 "$starbase_starport$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_starhold_shield_add:0 "$starbase_starhold$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_starfortress_shield_add:0 "$starbase_starfortress$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_citadel_shield_add:0 "$starbase_citadel$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_deep_space_citadel_1_shield_add:0 "$starbase_deep_space_citadel_1$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_deep_space_citadel_2_shield_add:0 "$starbase_deep_space_citadel_2$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_deep_space_citadel_3_shield_add:0 "$starbase_deep_space_citadel_3$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_orbital_ring_tier_1_shield_add:0 "$orbital_ring_tier_1$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_orbital_ring_tier_2_shield_add:0 "$orbital_ring_tier_2$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_orbital_ring_tier_3_shield_add:0 "$orbital_ring_tier_3$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_waystation_1_shield_add:0 "$starbase_waystation_1$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_waystation_2_shield_add:0 "$starbase_waystation_2$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_starbase_waystation_3_shield_add:0 "$starbase_waystation_3$ $MOD_SHIP_SHIELD_ADD$"
+ mod_shipsize_space_ark_shield_add:0 "Ark Ship $MOD_SHIP_SHIELD_ADD$"
+
  mod_ship_sections_alloys_cost_mult:0 "Ship Section £alloys£ Alloy Cost"
 
  # mod_ship_components_alloys_cost_add:0 "Ship Components £alloys£ Alloy Cost"
@@ -853,6 +874,8 @@ l_polish:
  # mod_pop_ethic_fanatic_spiritualist_attraction_mult:0 "Fanatic Spiritualist Ethic Attraction"
  # mod_pop_technician_workforce_mult:0 "[technician.GetIcon] [GetTechnicianPlural] Efficiency"
  
+ mod_megastructures_energy_upkeep_mult:0 "Megastructures £energy£ Energy Upkeep:"
+ 
 
  #######################################
  #### Opinions
@@ -902,8 +925,19 @@ l_polish:
  gpm_economy_tweaks_bio_empire:0 "Biological Civilisation"
  gpm_economy_tweaks_bio_empire_desc:0 "§LBioligical Civilisations:§!"
 
- policy_gpm_terraforming_policy:0 "Terraforming"
+ policy_gpm_terraforming_policy:0 "Terraforming Focus"
  policy_gpm_terraforming_policy_desc:0 "This policy dictates the terraforming procedure we wish to follow.\n"
+ 
+ gpm_terraforming_policy_prestine_modifiers:0 "Pristine Terraforming"
+ gpm_terraforming_roll_prestine_modifiers_name:0 "$gpm_terraforming_policy_prestine_modifiers$"
+ gpm_terraforming_policy_prestine_modifiers_desc:0 "Our worlds will be prestine when ['concept_terraforming'].\n\n§YTerraformed§! worlds will have their ['concept_planet_modifiers'] cleaned up; they are removed when they no longer fit the newly terraformed ['concept_planet'] class. Special planet modifiers such as §HWondrous Worlds§! and §BPrecursors§! will always be kept.§!\n\n§YTerraformed§!§! worlds will get a ['concept_gpm_terraforming_world_engineering'] planet modifier and §Rno§! new planet modifiers.\n\n"
+
+ gpm_terraforming_policy_random_modifiers:0 "Guided Terraforming"
+ gpm_terraforming_roll_random_modifiers_name:0 "$gpm_terraforming_policy_random_modifiers$"
+ gpm_terraforming_policy_random_modifiers_desc:0 "We will guide the growth of our worlds when ['concept_terraforming'].\n\n§YTerraformed§! worlds will have their ['concept_planet_modifiers'] cleaned up; they are removed when they no longer fit the newly terraformed ['concept_planet'] class. Special planet modifiers such as §HWondrous Worlds§! and §BPrecursors§! will always be kept.§!\n\n§YTerraformed§!§! worlds will get §Gnew§! random §Hterraform-unique§! planet modifiers. The type of planet modifiers will depend on the planet's ['concept_designation'].\n\n"
+
+ concept_gpm_terraforming_world_engineering:0 "$gpm_terraforming_world_engineering$"
+ concept_gpm_terraforming_world_engineering_desc:0 "- $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+50%§!\n- $mod_district_generator_max_add$: §G+2§!\n- $mod_district_mining_max_add$: §G+2§!\n- $mod_district_farming_max_add$: §G+2§!\n\n§L$gpm_terraforming_world_engineering_mod_desc$§!"
  
  #######################################
  #### R.E.S.
@@ -921,6 +955,10 @@ l_polish:
  gpm_manufactorium_ship:0 "Manufactorium Ship"
  gpm_manufactorium_ship_plural:0 "Manufactorium Ships"
  gpm_manufactorium_ship_cap:0 "$gpm_manufactorium_ship$"
+
+ gpm_manufactorium_ship_nomads:0 "$gpm_manufactorium_ship$"
+ gpm_manufactorium_ship_nomads_plural:0 "$gpm_manufactorium_ship_plural$"
+ gpm_manufactorium_ship_nomads_cap:0 "$gpm_manufactorium_ship$"
  
  gpm_precursor_destroyer:0 "Precursor Ship"
  gpm_precursor_destroyer_plural:0 "Precursor Ships"

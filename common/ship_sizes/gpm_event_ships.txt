@@ -12,36 +12,107 @@
 @speed_fast = 140
 @speed_very_fast = 160
 
-# manufactorium ship
+# manufactorium ship normal empires
 gpm_manufactorium_ship = {
-	max_speed = @speed_very_slow
+	max_speed = @speed_fast
 	entity = eventship_03_entity
 	rotation_speed = 0.15
 	acceleration = 0.3
+	max_hitpoints = 10000
 	ship_modifier = {		
 		ship_jumpdrive_cooldown_mult = -5
 		ship_ftl_jumpdrive_range_mult = 5
 	}
-	fleet_slot_size = 4
-	max_hitpoints = 2200
-	size_multiplier = 4
+	size_multiplier = 1
+	map_counter_icon = ship_counter_4
+	icon = ship_size_military_1
+	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "root" } }
 	num_target_locators = 0
-	icon = ship_size_military_1
 	is_space_station = no
-	is_civilian = yes
-	components_add_to_cost = no
-	class = shipclass_constructor
 	
 	resources = {
 		category = ships
 		upkeep = {
-			energy = 2
+			energy = 4
 		}
 	}
+
+	combat_disengage_chance = 1.0
 	
+	is_civilian = yes
 	is_designable = no
+	components_add_to_cost = no
+	class = shipclass_constructor
+	construction_type = { starbase_shipyard starbase_beastport }
+	valid_target_aggressive_stance = no
+	auto_upgrade = no
 	
+	construction_capabilities = {
+		starbase
+		mining_station
+		research_station
+		observation_station
+		automated_construction
+		megastructure
+	}
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+}
+
+# manufactorium ship nomads
+gpm_manufactorium_ship_nomads = {
+	# Logistic Ship handling
+	scripted_action = {
+		logistic_harvest_resources
+		collect_waystation_stockpile
+		logistic_drop_off_stockpile
+	}
+	automation_icon = GFX_fleet_order_auto_construct
+	collects_stockpile_from = { shipclass_starbase }
+	ship_stockpile_capacity = 10000.0
+	
+	construction_capabilities = {
+		automated_collection
+		megastructure
+	}
+	
+	max_speed = @speed_fast
+	entity = eventship_03_entity
+	rotation_speed = 0.15
+	acceleration = 0.3
+	max_hitpoints = 10000
+	ship_modifier = {		
+		ship_jumpdrive_cooldown_mult = -5
+		ship_ftl_jumpdrive_range_mult = 5
+	}
+	size_multiplier = 1
+	map_counter_icon = ship_counter_4
+	icon = ship_size_military_1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "root" } }
+	num_target_locators = 0
+	is_space_station = no
+	
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	combat_disengage_chance = 1.0
+	
+	is_civilian = yes
+	is_designable = no
+	components_add_to_cost = no
+	class = shipclass_constructor
+	construction_type = { starbase_shipyard starbase_beastport }
+	valid_target_aggressive_stance = no
+	auto_upgrade = no
+
 	required_component_set = "power_core"
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"

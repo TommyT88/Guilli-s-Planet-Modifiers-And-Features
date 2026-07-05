@@ -6,12 +6,12 @@ decision_gpm_machine_world_core_relic = {
 	#enactment_time = 0
 
     potential = {
-		exists = from
+		# exists = from
 		from = {
 			has_country_flag = relic_machine_world_core_activated
 		}
-		exists = space_owner
-		space_owner = { is_same_value = from }
+		# exists = space_owner
+		# space_owner = { is_same_value = from }
 		OR = {
 			gpm_is_planet_class_normal_uninhabitable = yes
 			gpm_is_planet_class_gas_giant = yes
@@ -63,24 +63,22 @@ decision_gpm_shield_generator_arrays = {
 	resources = {
 		category = decisions
 		cost = {
-			unity = 300
-			minerals = 2000
+			alloys = 1000
+			exotic_gases = 500
 		}
 	}
 
     potential = {
-		exists = from
 		from = {
 			check_variable = {
 				which = "gpm_shield_generator_decision_count"
 				value > 0
 			}
 		}
-		exists = space_owner
-		space_owner = { is_same_value = from }
 		NOR = { 
 			has_deposit = gpm_d_planetary_shield_array
 			has_modifier = gpm_precursor_planetary_shield
+			has_modifier = gpm_precursor_planetary_shield_on_nomads
 		}
 		OR = {
 			gpm_is_planet_class_habitable_natural = yes
@@ -88,6 +86,7 @@ decision_gpm_shield_generator_arrays = {
 			gpm_is_planet_class_city = yes
 			gpm_is_planet_class_machine = yes
 			gpm_is_planet_class_hive = yes
+			is_planet_class = pc_ark
 		}
 	}
 	
@@ -105,9 +104,14 @@ decision_gpm_shield_generator_arrays = {
 			}
 		}
 		add_deposit = gpm_d_planetary_shield_array
-		add_modifier = { modifier = gpm_precursor_planetary_shield_on }
 		if = {
-			limit = { space_owner = { is_nomadic = no } }
+			limit = { from = { is_nomadic = yes } }
+			add_modifier = { modifier = gpm_precursor_planetary_shield_on_nomads }
+		}
+		
+		if = {
+			limit = { from = { is_nomadic = no } }
+			add_modifier = { modifier = gpm_precursor_planetary_shield_on }
 			hidden_effect = { gpm_set_precursor_planetary_shields = yes }
 		}
 	}

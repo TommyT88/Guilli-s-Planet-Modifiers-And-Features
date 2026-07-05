@@ -267,8 +267,12 @@ event = {
 				}
 				effect = {
 					set_owner = root
-					create_ship_design = {
-						design = "NAME_gpm_manufactorium_ship"
+					if = {
+						limit = { root = { is_nomadic = yes } }
+						create_ship_design = { design = "NAME_gpm_manufactorium_ship_nomads" }
+					}
+					else = {
+						create_ship_design = { design = "NAME_gpm_manufactorium_ship" }
 					}
 					create_ship = {
 						name = "NAME_manufactorium_ship_name"

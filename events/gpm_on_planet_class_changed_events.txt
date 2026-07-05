@@ -220,7 +220,7 @@ carrier_event = {
 		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.7 on --- [this.GetName]"
 		
 		set_planet_flag = gpm_is_new_ecumenopolis
-		carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
+		carrier_event = { id = gpm_terraform.10 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
 	}
 }
 
@@ -242,7 +242,7 @@ carrier_event = {
 	immediate = {
 		# log =  "Firing on_planet_class_changed event -- gpm_pc_changed.8 on --- [this.GetName]"
 
-		carrier_event = { id = gpm_terraform.78871 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
+		carrier_event = { id = gpm_terraform.10 }			# trigger the global terraform event to clear planet modifiers and arange deposits.
 	}
 }
 

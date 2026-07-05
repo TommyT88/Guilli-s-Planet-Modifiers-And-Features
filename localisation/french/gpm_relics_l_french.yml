@@ -31,7 +31,7 @@
  
  gpm_r_machine_world_core:0 "Machine World Core"
  gpm_r_machine_world_core_desc:0 "A dormant machine world core waiting to be recharged.."
- gpm_r_machine_world_core_active_tooltip:0 "Supercharge the §HMachine World Core§! allowing it to assimilate a single §Yuninhabitable world§!, §YGas Giant§! or §YBroken World§! into a §HMachine World§!\n\nUnlocks the §YAssimilate World§! planet decision for uninhabitable worlds in our borders.\n\n§RThis will remove the Relic§!\n"
+ gpm_r_machine_world_core_active_tooltip:0 "Supercharge the Machine World Core allowing it to assimilate a single §YUninhabitable World§!, §YGas Giant§! or §YBroken World§! into a §HMachine World§! using the §YPlanetary Decision§!:\n\n§YDecision:§! §H$decision_gpm_machine_world_core_relic$§!\n  Increase Planet Size: §G+5§!\n  Add Planet Modifier: §Y$gpm_smooth_architecture$§! §L(50% chance)§!\n  Add Planet Modifier: §Y$gpm_sharp_architecture$§! §L(50% chance)§!\n\n§RThis destroys the§! §H$gpm_r_machine_world_core$§! §R!§!\n"
 
  gpm_r_mars_rover:0 "Restored Opportunity"
  gpm_r_mars_rover_desc:0 "Opportunity has been fully restored and is happily driving around Mars."
@@ -73,7 +73,11 @@
  
  gpm_r_mysterious_shield_generator:0 "Archo Shield Generator"
  gpm_r_mysterious_shield_generator_desc:0 "This relatively small shield generator was capable of producing a small energy field to block energy attacks. It could form the basis for a large network of shield generators, potentially covering an entire world!"
- gpm_r_mysterious_shield_generator_active_effect_tooltip:0 "Allows you to build a series of shield arrays on a single habited world covering it in a powerful planetary shield using the planetary decision §H$decision_gpm_shield_generator_arrays$§!"
+ gpm_r_mysterious_shield_generator_active_effect_tooltip:0 "Allows you to build a series of shield arrays on a single habited world or Ark ship covering it in a powerful planetary shield using the §YPlanetary Decision§!:\n\n§YDecision:§! §H$decision_gpm_shield_generator_arrays$§!\n  Add deposit: §Y$gpm_d_planetary_shield_array$§!\n    £physics_research£ Physics Research: §G+10§!\n\n  Add Planet Modifier: §Y$gpm_precursor_planetary_shield_on$§!\n    $MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$: §G-50%§!\n    Pop Happiness: §G+5%§!\n    $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+40%§!"
+
+ gpm_r_mysterious_shield_generator_active_effect_tooltip_nomads:0 "Allows you to build a series of shield arrays on a single habited world or Ark ship covering it in a powerful planetary shield using the §YPlanetary Decision§!:\n\n§YDecision:§! §H$decision_gpm_shield_generator_arrays$§!\n  Add deposit: §Y$gpm_d_planetary_shield_array$§!\n    £physics_research£ Physics Research: §G+10§!\n\n  Add Planet Modifier: §Y$gpm_precursor_planetary_shield_on_nomads$§!\n    Ark Ship Shield HP: §G+20000§!\n    Pop Happiness: §G+5%§!\n    $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+40%§!"
+
+ gpm_r_mysterious_shield_generatorTT_normal:0 "§YCivilian Space Station§! £ship_stats_shield£ $MOD_SHIP_SHIELD_ADD$: §G+1000§!\n§YMilitary Station§! £ship_stats_shield£ $MOD_SHIP_SHIELD_ADD$: §G+1500§!\n§YStarbase§! £ship_stats_shield£ $MOD_SHIP_SHIELD_ADD$: §G+2000§!\n§YDeep Space Citadel§! £ship_stats_shield£ $MOD_SHIP_SHIELD_ADD$: §G+5000§!\n§YOrbital Ring§! £ship_stats_shield£ $MOD_SHIP_SHIELD_ADD$: §G+10000§!"
  
  gpm_r_gravity_engine:0 "Gravity Manipulator" 
  gpm_r_gravity_engine_desc:0 "This device is capable of manipulating the gravity field in a very local area, either expanding the field or reducing it. This enables the device to increase or decrease gravity around a central point."

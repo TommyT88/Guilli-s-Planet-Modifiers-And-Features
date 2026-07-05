@@ -388,6 +388,11 @@ gpm_r_machine_world_core = {
 		category = relics
 		# Activation cost
 		cost = {
+			trigger = { is_nomadic = yes }
+			influence = 100
+		}
+		cost = {
+			trigger = { is_nomadic = no }
 			energy = 20000
 		}
 	}
@@ -400,33 +405,51 @@ gpm_r_machine_world_core = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_robotic_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.20
 	}
 
 	score = 1000
 
 	active_effect = {
-		custom_tooltip = gpm_r_machine_world_core_active_tooltip
-		remove_relic = gpm_r_machine_world_core
-		# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_machine_world_core >>> from ROOT = [root.GetName] ; relic activation self destruct"
-		# custom_tooltip = relic_triumph_cooldown
-		hidden_effect = {
-			set_country_flag = relic_machine_world_core_activated
-			# add_modifier = {
-				# modifier = "relic_activation_cooldown" 
-				# days = @triumph_duration
-			# }			
+		if = {
+			limit = { is_nomadic = no }
+			custom_tooltip = gpm_r_machine_world_core_active_tooltip
+			hidden_effect = { remove_relic = gpm_r_machine_world_core }
+			# log =  "<< RELICS >> | REMOVE_RELIC <<< gpm_r_machine_world_core >>> from ROOT = [root.GetName] ; relic activation self destruct"
+			hidden_effect = { set_country_flag = relic_machine_world_core_activated }
 		}
-		
+		else = {
+			custom_tooltip = gpm_machine_world_core_ark_bonusTT
+			hidden_effect = { 
+				every_owned_fleet = {
+					limit = { is_arkship_fleet = yes }
+					random_owned_ship = {
+						limit = { is_arkship_ship = yes }
+						colony = {
+							add_modifier = {
+								modifier = "gpm_machine_world_core_ark_bonus"
+								days = 1800
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration_veryshort
+			}
+		}
 	}
 
 	# Possible check for activation
 	possible = {
-		is_nomadic = no
-		# custom_tooltip = {
-			# fail_text = "requires_relic_no_cooldown"
-			# NOT = { has_modifier = relic_activation_cooldown }
-		# }
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
 	}
 }
 # mars rover

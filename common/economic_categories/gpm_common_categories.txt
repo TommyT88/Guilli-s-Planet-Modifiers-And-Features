@@ -95,6 +95,7 @@ stations = {
 	}
 
 	parent = country
+	modifier_category = ship
 }
 
 planets = {
@@ -298,6 +299,7 @@ station_observer_missions = {
 
 starbases = {
 	parent = country
+	modifier_category = ship
 	use_for_ai_budget = yes
 
 	generate_mult_modifiers = {
@@ -875,6 +877,5 @@ ships = {
 			is_ship_size = science
 		}
 	}
-	
 }
 

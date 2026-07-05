@@ -338,14 +338,14 @@ carrier_event = {
 		locked_random_list = {
 			75 = { }
 			25 = { 
-				add_modifier = { modifier = 000000000000_terraform mult = 1 }
+				add_modifier = { modifier = gpm_hyper_complex_biome_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
 				modifier = { factor = 0.6 num_modifiers = 4 }
 				modifier = { factor = 0.7 num_modifiers = 3 }
 				modifier = { factor = 0.8 num_modifiers = 2 }
 				modifier = { factor = 0.9 num_modifiers = 1 }
-				modifier = { factor = 0 has_modifier = 0000000000000_terraform }
+				modifier = { factor = 0 has_modifier = gpm_hyper_complex_biome_terraform }
 				custom_tooltip = t #blank line
 			}
 		}
@@ -622,14 +622,14 @@ carrier_event = {
 		locked_random_list = {
 			75 = { }
 			25 = { 
-				add_modifier = { modifier = gpm_mineral_rich_2_terraform mult = 1 }
+				add_modifier = { modifier = gpm_mineral_rich_terraform mult = 1 }
 				modifier = { factor = 0.0 num_modifiers >= 6 }
 				modifier = { factor = 0.3 num_modifiers = 5 }
 				modifier = { factor = 0.6 num_modifiers = 4 }
 				modifier = { factor = 0.7 num_modifiers = 3 }
 				modifier = { factor = 0.8 num_modifiers = 2 }
 				modifier = { factor = 0.9 num_modifiers = 1 }
-				modifier = { factor = 0 has_modifier = gpm_mineral_rich_2_terraform }
+				modifier = { factor = 0 has_modifier = gpm_mineral_rich_terraform }
 				custom_tooltip = t #blank line
 			}
 		}
