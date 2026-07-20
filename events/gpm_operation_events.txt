@@ -137,6 +137,18 @@ country_event = {
 						modifier = { factor = 0 has_global_flag = debugg_spawned_flag_gpm_r_cloaking_device }
 						set_global_flag = debugg_spawned_flag_gpm_r_cloaking_device
 						add_relic = gpm_r_cloaking_device
+						if = {
+							limit = { has_technology = tech_cloaking_2 }
+							give_technology = { tech = tech_cloaking_3 }
+						}
+						else_if = {
+							limit = { has_technology = tech_cloaking_1 }
+							give_technology = { tech = tech_cloaking_2 }
+						}
+						else_if = {
+							limit = { NOT = { has_technology = tech_cloaking_1 } }
+							give_technology = { tech = tech_cloaking_1 }
+						}
 						# log =  ";DEBUG; [root.GetName] received relic gpm_r_cloaking_device"
 					}
 					10 = {

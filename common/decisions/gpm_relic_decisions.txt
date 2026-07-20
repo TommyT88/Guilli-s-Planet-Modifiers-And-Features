@@ -80,14 +80,18 @@ decision_gpm_shield_generator_arrays = {
 			has_modifier = gpm_precursor_planetary_shield
 			has_modifier = gpm_precursor_planetary_shield_on_nomads
 		}
-		OR = {
-			gpm_is_planet_class_habitable_natural = yes
-			gpm_is_planet_class_nuked = yes
-			gpm_is_planet_class_city = yes
-			gpm_is_planet_class_machine = yes
-			gpm_is_planet_class_hive = yes
-			is_planet_class = pc_ark
-		}
+		# OR = {
+		# 	gpm_is_planet_class_habitable_natural = yes
+		# 	gpm_is_planet_class_nuked = yes
+		# 	gpm_is_planet_class_city = yes
+		# 	gpm_is_planet_class_machine = yes
+		# 	gpm_is_planet_class_hive = yes
+		# 	is_planet_class = pc_ark
+		# }
+		gpm_is_planet_class_normal_uninhabitable = no
+		gpm_is_planet_class_star = no
+		gpm_is_planet_class_asteroid = no
+		gpm_is_planet_class_gas_giant = no
 	}
 	
 	allow = {
@@ -112,7 +116,19 @@ decision_gpm_shield_generator_arrays = {
 		if = {
 			limit = { from = { is_nomadic = no } }
 			add_modifier = { modifier = gpm_precursor_planetary_shield_on }
-			hidden_effect = { gpm_set_precursor_planetary_shields = yes }
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							gpm_is_planet_class_habitable_natural = yes
+							gpm_is_planet_class_habitable_unnatural = yes
+							gpm_is_planet_class_city = yes
+							gpm_is_planet_class_machine = yes
+						}
+					}
+					gpm_set_precursor_planetary_shields = yes
+				}
+			}
 		}
 	}
 	

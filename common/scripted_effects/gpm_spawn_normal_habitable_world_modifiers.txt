@@ -2896,18 +2896,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 			# Never in these systems
 			# Tweaks
 			modifier = { factor = 0 is_moon = yes }
+			modifier = { factor = 0 has_ring = no }
 			modifier = { factor = 0
-				NOR = {
-					has_ring = yes
-					has_modifier = "gpm_metallic_ring"
-					has_modifier = "gpm_ice_ring"
-				}
-			}
-			modifier = { factor = 2
-				OR = {
-					has_modifier = "gpm_metallic_ring"
-					has_modifier = "gpm_ice_ring"
-				}
+				has_modifier = "gpm_metallic_ring"
+				has_modifier = "gpm_ice_ring"
 			}
 			# Galaxy age setting modifier
 			modifier = { factor = 1.33 has_global_flag = gpm_galaxy_age_young }
@@ -2919,6 +2911,10 @@ gpm_spawn_normal_habitable_world_modifier = {
 		}
 		100 = {
 			add_modifier = { modifier = "gpm_blood_moon" }
+			random_moon = {
+				clear_deposits = yes
+				add_deposit = d_nanites_deposit
+			}
 			# Not with these modifiers
 			modifier = { factor = 0
 				OR = {

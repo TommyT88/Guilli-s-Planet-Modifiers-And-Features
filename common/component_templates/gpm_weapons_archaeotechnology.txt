@@ -1,0 +1,346 @@
+# ####################
+# Kinetic Artillery
+# ####################
+
+# ## Kinetic Artillery Archaeotech
+# weapon_component_template = {
+	# type = instant
+
+	# key = "GPM_ARCHAEO_KINETIC_ARTILLERY"
+	# size = large
+	
+	# power = -91
+	# damage = { min = 210 max = 630 }
+	# hull_damage = 1.0
+	# shield_damage = 2.00
+	# shield_penetration = 0
+	# armor_damage = 0.50
+	# armor_penetration = 0
+	# windup = { min = 9 max = 34 }
+	# total_fire_time = 50
+	# range = 120.0
+	# accuracy = 0.85
+	# tracking = 0.0
+	# size_damage_factor = 0
+	# military_power_multiplier = 1.00
+
+	# icon = "GFX_ship_part_gpm_archaeo_kinetic_artillery"
+	# icon_frame = 1
+
+	# min_range = 45.0
+
+	# prerequisites = { "tech_archaeo_mass_accelerator" }
+	# potential = {
+		# OR = {
+			# from = {
+				# country_uses_bio_ships = no
+			# }
+			# is_arkship_ship = yes
+		# }
+	# }
+
+	# show_tech_unlock_if = {
+		# country_uses_bio_ships = no
+	# }
+	# component_set = "GPM_ARCHAEO_KINETIC_ARTILLERY"
+	# projectile_gfx = "adv_kinetic_artillery"
+	# tags = { weapon_type_kinetic l_slot weapon_archaeotech }
+	# ai_tags = { weapon_role_artillery artillery artillery_stealth }
+	# ai_tag_weight = 0
+	# resources = {
+		# category = ship_components
+		# cost = {
+			# alloys = @l_t6_cost
+			# minor_artifacts = @minor_artifacts_cost_l
+		# }
+		# upkeep = {
+			# energy = @l_t6_upkeep_energy
+			# alloys = @l_t6_upkeep_alloys
+		# }
+	# }
+
+	# ai_weight = {
+		# weight = 0
+		# modifier = {
+			# add = 2.5
+			# owner = { has_ascension_perk = ap_archaeoengineers }
+		# }
+		# modifier = {
+			# factor = 0.0
+			# owner = {
+				# has_monthly_income = {
+					# resource = minor_artifacts
+					# value < 3
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 1.3
+			# owner = {
+				# resource_stockpile_compare = {
+					# resource = minor_artifacts
+					# value > 250
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = @cosmic_storm_shroud_ai_weight_factor
+			# has_country_flag = affected_by_shroud_storm
+		# }
+	# }
+# }
+
+
+# ####################
+# Autocannons
+# ####################
+
+# ## Autocannons Archaeotech
+# weapon_component_template = {
+	# type = instant
+
+	# key = "GPM_ARCHAEO_SMALL_AUTOCANNON"
+	# size = small
+	
+	# power = -30
+	# damage = { min = 17 max = 35 }
+	# hull_damage = 1.25
+	# shield_damage = 1.50
+	# shield_penetration = 0
+	# armor_damage = 0.25
+	# armor_penetration = 0
+	# windup = { min = 1 max = 4 }
+	# total_fire_time = 6
+	# range = 30.0
+	# accuracy = 0.85
+	# tracking = 0.75
+	# size_damage_factor = 0
+	# military_power_multiplier = 0.35
+
+	# icon = "GFX_ship_part_gpm_archaeo_autocannon"
+	# icon_frame = 1
+
+	# potential = {
+		# from = {
+			# country_uses_bio_ships = no
+		# }
+		# is_arkship_ship = no
+	# }
+
+	# show_tech_unlock_if = {
+		# country_uses_bio_ships = no
+	# }
+
+	# prerequisites = { "tech_archaeo_mass_drivers" }
+	# component_set = "GPM_ARCHAEO_AUTOCANNON"
+	# projectile_gfx = "stormfire_auto_cannons_s"
+	# tags = { weapon_type_kinetic s_slot weapon_archaeotech }
+	# ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	# resources = {
+		# category = ship_components
+		# cost = {
+			# alloys = @s_t5_cost
+			# minor_artifacts = @minor_artifacts_cost_s
+		# }
+		# upkeep = {
+			# energy = @s_t5_upkeep_energy
+			# alloys = @s_t5_upkeep_alloys
+		# }
+	# }
+
+	# ai_weight = {
+		# weight = 0
+		# modifier = {
+			# add = 2.5
+			# owner = { has_ascension_perk = ap_archaeoengineers }
+		# }
+		# modifier = {
+			# factor = 0.0
+			# owner = {
+				# has_monthly_income = {
+					# resource = minor_artifacts
+					# value < 3
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 1.3
+			# owner = {
+				# resource_stockpile_compare = {
+					# resource = minor_artifacts
+					# value > 250
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = @cosmic_storm_shroud_ai_weight_factor
+			# has_country_flag = affected_by_shroud_storm
+		# }
+	# }
+# }
+
+# weapon_component_template = {
+	# type = instant
+
+	# key = "GPM_ARCHAEO_MEDIUM_AUTOCANNON"
+	# size = medium
+	
+	# power = -64
+	# damage = { min = 43 max = 88 }
+	# hull_damage = 1.25
+	# shield_damage = 1.50
+	# shield_penetration = 0
+	# armor_damage = 0.25
+	# armor_penetration = 0
+	# windup = { min = 2 max = 6 }
+	# total_fire_time = 9
+	# range = 35.0
+	# accuracy = 0.85
+	# tracking = 0.50
+	# size_damage_factor = 0
+	# military_power_multiplier = 0.35
+
+	# icon = "GFX_ship_part_gpm_archaeo_autocannon"
+	# icon_frame = 1
+
+	# potential = {
+		# from = {
+			# country_uses_bio_ships = no
+		# }
+		# is_arkship_ship = no
+	# }
+
+	# show_tech_unlock_if = {
+		# country_uses_bio_ships = no
+	# }
+
+	# prerequisites = { "tech_archaeo_mass_drivers" }
+	# component_set = "GPM_ARCHAEO_AUTOCANNON"
+	# projectile_gfx = "stormfire_auto_cannons_m"
+	# tags = { weapon_type_kinetic m_slot weapon_archaeotech }
+	# ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	# resources = {
+		# category = ship_components
+		# cost = {
+			# alloys = @m_t5_cost
+			# minor_artifacts = @minor_artifacts_cost_m
+		# }
+		# upkeep = {
+			# energy = @m_t5_upkeep_energy
+			# alloys = @m_t5_upkeep_alloys
+		# }
+	# }
+
+	# ai_weight = {
+		# weight = 0
+		# modifier = {
+			# add = 2.5
+			# owner = { has_ascension_perk = ap_archaeoengineers }
+		# }
+		# modifier = {
+			# factor = 0.0
+			# owner = {
+				# has_monthly_income = {
+					# resource = minor_artifacts
+					# value < 3
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 1.3
+			# owner = {
+				# resource_stockpile_compare = {
+					# resource = minor_artifacts
+					# value > 250
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = @cosmic_storm_shroud_ai_weight_factor
+			# has_country_flag = affected_by_shroud_storm
+		# }
+	# }
+# }
+
+# weapon_component_template = {
+	# type = instant
+
+	# key = "GPM_ARCHAEO_LARGE_AUTOCANNON"
+	# size = large
+	
+	# power = -146
+	# damage = { min = 102 max = 210 }
+	# hull_damage = 1.25
+	# shield_damage = 1.50
+	# shield_penetration = 0
+	# armor_damage = 0.25
+	# armor_penetration = 0
+	# windup = { min = 2 max = 8 }
+	# total_fire_time = 12
+	# range = 40.0
+	# accuracy = 0.85
+	# tracking = 0.25
+	# size_damage_factor = 0
+	# military_power_multiplier = 0.35
+
+	# icon = "GFX_ship_part_gpm_archaeo_autocannon"
+	# icon_frame = 1
+
+	# potential = {
+		# from = {
+			# country_uses_bio_ships = no
+		# }
+		# is_arkship_ship = no
+	# }
+
+	# show_tech_unlock_if = {
+		# country_uses_bio_ships = no
+	# }
+
+	# prerequisites = { "tech_archaeo_mass_drivers" }
+	# component_set = "GPM_ARCHAEO_AUTOCANNON"
+	# projectile_gfx = "stormfire_auto_cannons_l"
+	# tags = { weapon_type_kinetic l_slot weapon_archaeotech }
+	# ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	# resources = {
+		# category = ship_components
+		# cost = {
+			# alloys = @l_t5_cost
+			# minor_artifacts = @minor_artifacts_cost_l
+		# }
+		# upkeep = {
+			# energy = @l_t5_upkeep_energy
+			# alloys = @l_t5_upkeep_alloys
+		# }
+	# }
+
+	# ai_weight = {
+		# weight = 0
+		# modifier = {
+			# add = 2.5
+			# owner = { has_ascension_perk = ap_archaeoengineers }
+		# }
+		# modifier = {
+			# factor = 0.0
+			# owner = {
+				# has_monthly_income = {
+					# resource = minor_artifacts
+					# value < 3
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 1.3
+			# owner = {
+				# resource_stockpile_compare = {
+					# resource = minor_artifacts
+					# value > 250
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = @cosmic_storm_shroud_ai_weight_factor
+			# has_country_flag = affected_by_shroud_storm
+		# }
+	# }
+# }

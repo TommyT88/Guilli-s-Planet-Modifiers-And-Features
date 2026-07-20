@@ -957,15 +957,17 @@ carrier_event = {
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = gpm_planetary_rings_disabled
 					has_global_flag = "star_trek_new_civilisations"
-					exists = space_owner
-					num_moons < 2
+					solar_system = { exists = space_owner }
+					num_moons > 2
+					is_moon = yes
+					solar_system = { starting_system = yes }
 				}
 			}
 			random_list = {
-				85 = {
+				80 = {
 					modifier = {
 						factor = 0
 						OR = {
@@ -995,7 +997,7 @@ carrier_event = {
 						}
 					}
 				}
-				15 = {
+				20 = {
 					modifier = {
 						factor = 0.2
 						has_moon = yes
@@ -1040,13 +1042,18 @@ carrier_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { 
-				NOT = { has_global_flag = gpm_planetary_rings_disabled }
-				NOT = { has_global_flag = "star_trek_new_civilisations" }
-				NOT = { is_moon = yes }
+			limit = {
+				NOR = {
+					has_global_flag = gpm_planetary_rings_disabled
+					has_global_flag = "star_trek_new_civilisations"
+					solar_system = { exists = space_owner }
+					num_moons > 2
+					is_moon = yes
+					solar_system = { starting_system = yes }
+				}
 			}
 			random_list = {
-				94 = {
+				90 = {
 					# log =  "RING RESOURCE SITE: UNINHABITABLE: NO SPAWN on [this.GetName]"
 					modifier = {
 						factor = 0
@@ -1077,7 +1084,7 @@ carrier_event = {
 						}
 					}
 				}
-				6 = {
+				10 = {
 					# log =  "RING RESOURCE SITE: UNINHABITABLE: YES SPAWN on [this.GetName]"
 					modifier = {
 						factor = 0.2
@@ -1149,10 +1156,15 @@ carrier_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { 
-				NOT = { has_global_flag = gpm_planetary_rings_disabled }
-				NOT = { has_global_flag = "star_trek_new_civilisations" }
-				NOT = { is_moon = yes }
+			limit = {
+				NOR = {
+					has_global_flag = gpm_planetary_rings_disabled
+					has_global_flag = "star_trek_new_civilisations"
+					solar_system = { exists = space_owner }
+					num_moons > 2
+					is_moon = yes
+					solar_system = { starting_system = yes }
+				}
 			}
 			random_list = {
 				75 = {
@@ -1231,10 +1243,15 @@ carrier_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { 
-				NOT = { has_global_flag = gpm_planetary_rings_disabled }
-				NOT = { has_global_flag = "star_trek_new_civilisations" }
-				NOT = { is_moon = yes }
+			limit = {
+				NOR = {
+					has_global_flag = gpm_planetary_rings_disabled
+					has_global_flag = "star_trek_new_civilisations"
+					solar_system = { exists = space_owner }
+					num_moons > 2
+					is_moon = yes
+					solar_system = { starting_system = yes }
+				}
 			}
 			random_list = {
 				80 = {
@@ -1435,10 +1452,15 @@ carrier_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { 
-				NOT = { has_global_flag = gpm_planetary_rings_disabled }
-				NOT = { has_global_flag = "star_trek_new_civilisations" }
-				NOT = { is_moon = yes }
+			limit = {
+				NOR = {
+					has_global_flag = gpm_planetary_rings_disabled
+					has_global_flag = "star_trek_new_civilisations"
+					# solar_system = { exists = space_owner }
+					num_moons > 2
+					is_moon = yes
+					solar_system = { starting_system = yes }
+				}
 			}
 			random_list = {
 				90 = {
@@ -1574,10 +1596,15 @@ carrier_event = {
 		
 		# planet ring spawning, doing it here for scope creep issue as well as finetuning capability. Not as elegant as I would like
 		if = {
-			limit = { 
-				NOT = { has_global_flag = gpm_planetary_rings_disabled }
-				NOT = { has_global_flag = "star_trek_new_civilisations" }
-				NOT = { is_moon = yes }
+			limit = {
+				NOR = {
+					has_global_flag = gpm_planetary_rings_disabled
+					has_global_flag = "star_trek_new_civilisations"
+					solar_system = { exists = space_owner }
+					num_moons > 2
+					is_moon = yes
+					solar_system = { starting_system = yes }
+				}
 			}
 			random_list = {
 				90 = {

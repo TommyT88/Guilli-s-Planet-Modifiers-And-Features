@@ -7287,10 +7287,9 @@ ship_event = {
 						}
 					}
 					settings = {
-						can_upgrade = no
-						can_change_composition = no
-						can_change_leader = no
+						can_change_leader = yes
 						uses_naval_capacity = no
+						spawn_debris = no
 					}
 				}
 				remove_country_flag = "gpm_discovery_reward_5"
@@ -8972,10 +8971,9 @@ ship_event = {
 						}
 					}
 					settings = {
-						can_upgrade = no
-						can_change_composition = no
-						can_change_leader = no
+						can_change_leader = yes
 						uses_naval_capacity = no
+						spawn_debris = no
 					}
 				}
 				remove_country_flag = "gpm_discovery_reward_5"

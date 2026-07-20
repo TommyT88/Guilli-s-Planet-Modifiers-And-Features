@@ -26,6 +26,7 @@ country_event = {
 					10 = {
 						add_research_option = tech_repeatable_improved_military_station_damage
 						add_tech_progress = { tech = tech_repeatable_improved_military_station_damage progress = 0.80 }
+						modifier = { factor = 0 is_nomadic = yes }
 					}
 					10 = {
 						add_research_option = tech_repeatable_weapon_type_explosive_damage
@@ -90,6 +91,7 @@ country_event = {
 					10 = {
 						add_research_option = tech_repeatable_improved_military_station_health
 						add_tech_progress = { tech = tech_repeatable_improved_military_station_health progress = 0.90 }
+						modifier = { factor = 0 is_nomadic = yes }
 					}
 				}
 			}

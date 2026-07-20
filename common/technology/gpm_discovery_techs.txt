@@ -47,9 +47,21 @@ tech_gpm_precursor_energy_grid_discovery = {
 	weight = 1
 
 	modifier = {
-		starbases_upkeep_mult = -0.20
+		# starbases_upkeep_mult = -0.20
 		stations_upkeep_mult = -0.20
 		ship_military_station_small_upkeep_mult = -0.20
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_energy_grid_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			stations_upkeep_mult = -0.30
+		}
 	}
 	
 	weight_modifier = {
@@ -67,8 +79,21 @@ tech_gpm_precursor_energy_grid_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		stations_energy_produces_mult = 0.50
-		country_resource_max_energy_add = 100000
+		stations_energy_produces_mult = 0.30
+		country_resource_max_energy_add = 50000
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_energy_grid_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_collected_system_energy_mult = 0.30
+			arkship_harvest_resources_energy_produces_mult = 0.30
+		}
 	}
 	
 	weight_modifier = {
@@ -90,6 +115,19 @@ tech_gpm_precursor_satellite_grid_discovery = {
 		station_observers_produces_mult = 2
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_satellite_grid_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			add_base_country_intel = 10
+			ship_sensor_range_add = 1
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -106,7 +144,20 @@ tech_gpm_precursor_satellite_grid_discovery_2 = {
 
 	modifier = {
 		starbase_outpost_influence_cost_add = -5
-		fleet_mia_time_mult = -0.5
+		fleet_mia_time_mult = -0.25
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_satellite_grid_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			country_starbase_capacity_mult = 0.15
+			fleet_mia_time_mult = -0.30
+		}
 	}
 	
 	weight_modifier = {
@@ -166,6 +217,19 @@ tech_gpm_precursor_shipyards_discovery = {
 		ship_components_minor_artifacts_cost_mult = -0.20
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_shipyards_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			megastructures_arkships_cost_mult = -0.10
+			starbase_arkship_upgrades_cost_mult = -0.20
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -183,6 +247,18 @@ tech_gpm_precursor_shipyards_discovery_2 = {
 	modifier = {
 		ship_upgrades_cost_mult = -0.20
 		ship_orbit_upkeep_mult = -0.20
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_shipyards_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_shipyard_capacity_add = 2
+		}
 	}
 	
 	weight_modifier = {
@@ -278,6 +354,19 @@ tech_gpm_precursor_mechs_discovery = {
 		planet_miners_minerals_produces_add = 1
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_mechs_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_collected_system_minerals_mult = 0.30
+			arkship_harvest_resources_minerals_produces_mult = 0.30
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -311,8 +400,8 @@ tech_gpm_precursor_planetary_shield_discovery = {
 	weight = 1
 
 	modifier = {
-		ship_shield_mult = 0.20
-		ship_shield_hardening_add = 0.20
+		ship_shield_mult = 0.15
+		ship_shield_hardening_add = 0.15
 	}
 	
 	weight_modifier = {
@@ -351,6 +440,18 @@ tech_gpm_precursor_floating_city_discovery = {
 		planet_non_artificial_max_districts_add = 2
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_floating_city_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			planet_artificial_max_districts_add = 1
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -366,7 +467,7 @@ tech_gpm_precursor_floating_city_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_housing_mult = 0.15
+		planet_housing_mult = 0.12
 	}
 	
 	weight_modifier = {
@@ -387,6 +488,18 @@ tech_gpm_precursor_capital_complex_discovery = {
 		planet_decision_enact_speed_mult = 1.00
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_capital_complex_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			envoys_add = 2
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -403,6 +516,18 @@ tech_gpm_precursor_capital_complex_discovery_2 = {
 
 	modifier = {
 		country_border_friction_mult = -0.15
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_capital_complex_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			envoy_improve_relations_mult = 0.30
+		}
 	}
 	
 	weight_modifier = {
@@ -442,6 +567,18 @@ tech_gpm_precursor_communication_hub_discovery_2 = {
 	modifier = {
 		planet_colony_development_speed_mult = 1
 		fleet_mia_time_mult = -0.5
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_communication_hub_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			country_starbase_capacity_add = 5
+		}
 	}
 	
 	weight_modifier = {
@@ -577,6 +714,18 @@ tech_gpm_precursor_mines_discovery = {
 		planet_miners_minerals_produces_mult = 0.30
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_mines_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_collected_system_minerals_mult = 0.50
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -596,6 +745,18 @@ tech_gpm_precursor_mines_discovery_2 = {
 		#    district_mining_max_add = 5
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_mines_discovery_2
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			arkship_harvest_resources_minerals_produces_mult = 0.50
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -613,6 +774,18 @@ tech_gpm_precursor_manufactorium_discovery = {
 	modifier = {
 		planet_metallurgists_alloys_produces_add = 1
 		planet_metallurgists_minerals_upkeep_add = 2
+	}
+	technology_swap = {
+		name = tech_gpm_precursor_manufactorium_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_catalytic_empire = yes
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 1
+			planet_metallurgists_food_upkeep_add = 2
+		}
 	}
 	
 	weight_modifier = {
@@ -688,9 +861,22 @@ tech_gpm_precursor_crashed_spacestation_discovery = {
 	weight = 1
 
 	modifier = {
-		starbase_modules_cost_mult = -0.30
-		starbase_buildings_cost_mult = -0.30
-		ship_military_station_small_cost_mult = -0.15
+		starbase_modules_cost_mult = -0.20
+		starbase_buildings_cost_mult = -0.20
+		ship_military_station_small_cost_mult = -0.20
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_crashed_spacestation_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_modules_cost_mult = -0.30
+			starbase_buildings_cost_mult = -0.30
+		}
 	}
 	
 	weight_modifier = {
@@ -711,6 +897,20 @@ tech_gpm_precursor_crashed_spacestation_discovery_2 = {
 		starbase_constructions_food_produces_mult = 1.00
 		starbase_constructions_energy_produces_mult = 1.00
 		starbase_constructions_minerals_produces_mult = 1.00
+	}
+	
+	technology_swap = {
+		name = tech_gpm_precursor_crashed_spacestation_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_collected_system_energy_mult = 0.25
+			starbase_collected_system_minerals_mult = 0.25
+			starbase_collected_system_food_mult = 0.25
+		}
 	}
 	
 	weight_modifier = {
@@ -809,6 +1009,18 @@ tech_gpm_precursor_harbor_ruins_discovery = {
 		pc_continental_habitability = 0.10
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_crashed_spacestation_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			pc_ark_habitability = 0.10
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -883,6 +1095,18 @@ tech_gpm_precursor_obelisks_discovery = {
 		terraforming_cost_mult = -0.30
 	}
 	
+	technology_swap = {
+		name = tech_gpm_precursor_obelisks_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			planet_biologists_food_produces_add = 0.5
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -920,6 +1144,18 @@ tech_gpm_very_hot_core_discovery = {
 		terraform_speed_mult = 0.50
 	}
 	
+	technology_swap = {
+		name = tech_gpm_very_hot_core_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			ship_stockpile_capacity_mult = 0.30
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -938,6 +1174,18 @@ tech_gpm_very_hot_core_discovery_2 = {
 		terraforming_cost_mult = -0.20
 	}
 	
+	technology_swap = {
+		name = tech_gpm_very_hot_core_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_stockpile_capacity_mult = 0.30
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -954,6 +1202,18 @@ tech_gpm_gaia_world_discovery = {
 
 	modifier = {
 		pop_environment_tolerance = 0.05
+	}
+	
+	technology_swap = {
+		name = tech_gpm_gaia_world_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			pc_ark_habitability = 0.10
+		}
 	}
 	
 	weight_modifier = {
@@ -1036,6 +1296,28 @@ tech_gpm_floating_islands_discovery = {
 		planet_housing_add = 1000
 		# show_only_custom_tooltip = yes
 		# custom_tooltip = tech_gpm_floating_islands_discovery_tt
+	}
+	
+	technology_swap = {
+		name = tech_gpm_floating_islands_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			show_only_custom_tooltip = yes
+			custom_tooltip = tech_gpm_floating_islands_discovery_nomadsTT
+			shipsize_civilian_arkship_tier_1_armor_mult = 0.20
+			shipsize_civilian_arkship_tier_2_armor_mult = 0.20
+			shipsize_civilian_arkship_tier_3_armor_mult = 0.20
+			shipsize_science_arkship_tier_1_armor_mult = 0.20
+			shipsize_science_arkship_tier_2_armor_mult = 0.20
+			shipsize_science_arkship_tier_3_armor_mult = 0.20
+			shipsize_military_arkship_tier_1_armor_mult = 0.20
+			shipsize_military_arkship_tier_2_armor_mult = 0.20
+			shipsize_military_arkship_tier_3_armor_mult = 0.20
+		}
 	}
 	
 	weight_modifier = {
@@ -1125,7 +1407,7 @@ tech_gpm_spaceship_graveyard_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		ship_hull_mult = 0.33
+		ship_hull_mult = 0.30
 	}
 	
 	weight_modifier = {
@@ -1143,7 +1425,7 @@ tech_gpm_artificial_water_discovery = {
 	weight = 1
 
 	modifier = {
-		country_base_nanites_produces_add = 2
+		planet_engineers_nanites_produces_add = 0.02
 	}
 	
 	weight_modifier = {
@@ -1161,7 +1443,7 @@ tech_gpm_artificial_water_discovery_2 = {
 	weight = 1
 
 	modifier = {
-		planet_metallurgists_alloys_produces_add = 0.5
+		foundry_jobs_bonus_workforce_mult = 0.10
 	}
 	
 	weight_modifier = {
@@ -1291,7 +1573,19 @@ tech_gpm_plasmoid_life_discovery = {
 	weight = 1
 
 	modifier = {
-		station_gatherers_energy_produces_mult = 0.20
+		starbase_constructions_energy_produces_mult = 0.50
+	}
+	
+	technology_swap = {
+		name = tech_gpm_plasmoid_life_discovery
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_collected_system_energy_mult = 0.40
+		}
 	}
 	
 	weight_modifier = {
@@ -1503,6 +1797,18 @@ tech_gpm_giant_worm_discovery_2 = {
 		planet_miners_minerals_produces_add = 0.75
 	}
 	
+	technology_swap = {
+		name = tech_gpm_giant_worm_discovery_2
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			arkship_harvest_resources_produces_mult = 0.30
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -1680,6 +1986,20 @@ tech_gpm_supermaterials_precursor = {
 		ship_military_station_small_cost_mult = -0.2
 	}
 	
+	technology_swap = {
+		name = tech_gpm_supermaterials_precursor
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			shipsize_starbase_waystation_1_armor_add = 500
+			shipsize_starbase_waystation_2_armor_add = 1000
+			shipsize_starbase_waystation_3_armor_add = 2000
+		}
+	}
+	
 	weight_modifier = {
 		factor = 0
 	}
@@ -1714,6 +2034,19 @@ tech_gpm_enigmatic_power_relays = {
 
 	modifier = {
 		ship_military_station_small_upkeep_mult = -0.2
+	}
+	
+	technology_swap = {
+		name = tech_gpm_enigmatic_power_relays
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_nomadic = yes
+		}
+		modifier = {
+			starbase_waystations_upkeep_mult = -0.15
+			starbase_waystations_modules_upkeep_mult = -0.15
+		}
 	}
 	
 	weight_modifier = {

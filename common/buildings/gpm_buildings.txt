@@ -12,7 +12,9 @@ gpm_building_mining_nanite_nexus = {
 	}
 	
 	potential = {
+		exists = owner
 		owner = { is_wilderness_empire = no }
+		owner = { is_nomadic = no }
 		NOT = { has_modifier = resort_colony }
 		NOT = { # Ringworlds don't have mines
 			is_planet_class = pc_ringworld_habitable
@@ -22,10 +24,8 @@ gpm_building_mining_nanite_nexus = {
 		}
 		has_any_mining_district_or_building = yes
 	}
-		
-	planet_modifier = {
-		planet_miners_minerals_produces_add = 2
-		planet_miners_energy_upkeep_add = 2
+
+	allow = {
 	}
 
 	triggered_planet_modifier = {
@@ -33,14 +33,20 @@ gpm_building_mining_nanite_nexus = {
 			exists = owner
 		}
 		modifier = {
+			planet_miners_minerals_produces_add = 2
+			planet_miners_energy_upkeep_add = 2
 			district_mining_max_add = 4
 		}
 	}
 	
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 600
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 800
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		upkeep = {
 			energy = 2
@@ -59,13 +65,62 @@ gpm_building_mining_nanite_nexus = {
 		# 	buildings_build_building = no
 		# }
 	}
+}
 
-	ai_resource_production = {
-   		minerals = 10
+gpm_building_mining_nanite_nexus_nomads = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+	category = resource
+	
+	building_sets = {
+		government
+		nomad
+		urban
+		industrial
+		foundry
+	}
+	
+	potential = {
+		exists = owner
+		owner = { is_nomadic = yes }
+	}
 
-		trigger = {
-			has_any_mining_zone = yes
+	allow = {
+	}
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 		}
+		planet_engineers_minerals_produces_add = 4
+		planet_engineers_energy_upkeep_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 800
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	prerequisites = {
+		tech_gpm_precursor_mines_discovery_2
+	}
+	
+	ai_weight = {
+		weight = 5000
+		# modifier = {
+		# 	factor = 0
+		# 	NOT = { free_district_slots = 0 }
+		# 	buildings_build_building = no
+		# }
 	}
 }
 
@@ -225,6 +280,8 @@ gpm_building_ascension_tower = {
 	
 	building_sets = {
 		unity
+		nomad
+		government
 	}
 
 	category = amenity
@@ -281,8 +338,12 @@ gpm_building_ascension_tower = {
 			unity = 1
 			multiplier = owner.trigger:num_ascension_perks
 		}
-		cost = {
-			minerals = 1200
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1200
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		upkeep = {
 			energy = 2
@@ -313,6 +374,7 @@ gpm_building_exotic_park = {
 	
 	building_sets = {
 		unity
+		nomad
 	}
 
 	category = amenity
@@ -336,11 +398,10 @@ gpm_building_exotic_park = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 400
-			food = 200
+			food = 800
 		}
 		upkeep = {
-			energy = 1
+			food = 2
 		}
 	}
 
@@ -360,6 +421,7 @@ gpm_building_manufactory_hub = {
 	building_sets = {
 		industrial
 		foundry
+		nomad
 	}
 
 	category = manufacturing
@@ -376,6 +438,8 @@ gpm_building_manufactory_hub = {
 			# has_any_industry_district = yes
 		}
 	}
+
+	allow = { }
 
 	destroy_trigger = {
 		OR = {
@@ -458,8 +522,13 @@ gpm_building_manufactory_hub = {
 	
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 600
+		
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 600
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		upkeep = {
 			energy = 2
@@ -478,6 +547,7 @@ gpm_building_core_prison = {
 	building_sets = {
 		urban
 		government
+		nomad
 	}
 
 	category = government
@@ -487,6 +557,8 @@ gpm_building_core_prison = {
 		NOT = { gpm_is_planet_class_habitat = yes }
 	}
 
+	allow = { }
+
 	planet_modifier = {
 		planet_crime_add = -40
 		planet_stability_add = 5
@@ -494,8 +566,13 @@ gpm_building_core_prison = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
+		
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 600
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		upkeep = {
 			energy = 2

@@ -752,8 +752,6 @@ gpm_spawn_precursor_features = {
 gpm_spawn_planet_ring_modifier = {
 	optimize_memory
 	random_list = {
-		# 0 to catch exceptions
-		0 = { }
 		12 = {
 			add_modifier = { modifier = "gpm_metallic_ring" }
 			gpm_set_planetary_rings = yes
@@ -762,15 +760,12 @@ gpm_spawn_planet_ring_modifier = {
 				OR = {
 					has_modifier = "gpm_metallic_ring"
 					has_modifier = "gpm_ice_ring"
-					# has_modifier = "gpm_massive_world"
-					# has_modifier = "gpm_tidally_active"
 				}
 			}
 			# (Not) on these planets
 			# Never in these systems
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
-			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
 			# Tweaks
+			modifier = { factor = 0 gpm_is_planet_class_gas_giant = yes }
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			# modifier = { factor = 0
 			# 	distance = {
@@ -793,16 +788,12 @@ gpm_spawn_planet_ring_modifier = {
 				OR = {
 					has_modifier = "gpm_metallic_ring"
 					has_modifier = "gpm_ice_ring"
-					# has_modifier = "gpm_massive_world"
-					# has_modifier = "gpm_tidally_active"
 				}
 			}
 			# (Not) on these planets
 			# Never in these systems
-			modifier = { factor = 0	solar_system = { has_star_flag = sol_system } }
-			# modifier = { factor = 0 exists = space_owner space_owner = { is_ai = no } }
 			# Tweaks
-			modifier = { factor = 10 gpm_is_planet_class_gas_giant = yes }
+			modifier = { factor = 0 gpm_is_planet_class_gas_giant = no }
 			modifier = { factor = 0 has_global_flag = gpm_planetary_rings_disabled }
 			# modifier = { factor = 0
 			# 	distance = {

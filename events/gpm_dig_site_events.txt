@@ -4217,6 +4217,18 @@ fleet_event = {
 			15 = {
 				owner = {
 					add_relic = gpm_r_cloaking_device
+					if = {
+						limit = { has_technology = tech_cloaking_2 }
+						give_technology = { tech = tech_cloaking_3 }
+					}
+					else_if = {
+						limit = { has_technology = tech_cloaking_1 }
+						give_technology = { tech = tech_cloaking_2 }
+					}
+					else_if = {
+						limit = { NOT = { has_technology = tech_cloaking_1 } }
+						give_technology = { tech = tech_cloaking_1 }
+					}
 					hidden_effect = { country_event = { id = gpm_relics.1 } } # adds trait to admirals
 				}
 				# log =  "<< RELICS >> | ADD_RELIC <<< gpm_r_cloaking_device >>> to OWNER = [owner.GetName] ; dig site reward"

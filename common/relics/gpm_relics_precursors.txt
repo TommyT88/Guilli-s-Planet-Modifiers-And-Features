@@ -62,7 +62,7 @@ gpm_r_encyclopedia_galactica = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
 	}
 	
 	triggered_country_modifier = {
@@ -122,7 +122,11 @@ gpm_r_zero_energy_generator = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 10
+			has_deficit = energy
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -185,7 +189,11 @@ gpm_r_quantum_sphere = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 0
+			has_spynetwork = no
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -240,7 +248,7 @@ gpm_r_ai_architect = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
 	}
 	
 	triggered_country_modifier = {
@@ -289,7 +297,11 @@ gpm_r_encrypted_sct = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -346,7 +358,11 @@ gpm_r_experimental_weapon = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 3
+			is_at_war = yes
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -403,24 +419,28 @@ gpm_r_fallout_emergency_replicator = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 1.2
+			is_at_war = no
+		}
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			is_nomadic = no
 		}
-		country_base_energy_produces_add = 20
-		country_base_minerals_produces_add = 20
-		country_base_food_produces_add = 20
+		country_base_energy_produces_add = 10
+		country_base_minerals_produces_add = 10
+		country_base_food_produces_add = 10
 		mult = trigger:num_owned_planets
 	}
 	triggered_country_modifier = {
 		potential = {
 			is_nomadic = yes
 		}
-		country_base_minerals_produces_add = 50
-		country_base_food_produces_add = 50
+		country_base_minerals_produces_add = 30
+		country_base_food_produces_add = 30
 		country_base_volatile_motes_produces_add = 2
 		country_base_exotic_gases_produces_add = 2
 		country_base_rare_crystals_produces_add = 2
@@ -479,6 +499,7 @@ gpm_r_power_core = {
 	ai_weight = {
 		weight = 0
 	}
+
 	triggered_country_modifier = {
 		potential = {
 			always = yes
@@ -536,7 +557,14 @@ gpm_r_mysterious_shield_generator = {
 	}
 	
 	ai_weight = {
-		weight = 1000
+		weight = 50
+		modifier = {
+			factor = 4
+			check_variable = {
+				which = gpm_shield_generator_decision_count
+				value < 1
+			}
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -614,16 +642,31 @@ gpm_r_gravity_engine = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 4
+			check_variable = {
+				which = gpm_r_gravity_engine_decision_count
+				value < 1
+			}
+		}
 	}
 	
 	triggered_country_modifier = {
 		potential = {
-			always = yes
+			is_nomadic = no
 		}
-		planet_max_districts_add = 2
+		planet_max_districts_add = 1
 		catapult_range_mult = 1.00
-		catapult_spread_mult = 0.33
+		catapult_spread_mult = 0.25
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_nomadic = yes
+		}
+		planet_max_districts_add = 1
+		ship_interstellar_speed_mult = 3.00
 	}
 
 	score = 1000
@@ -663,15 +706,15 @@ gpm_r_codex_administratum = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
-		country_government_civic_points_add = 1
-		country_leader_cap_add = 2
+		council_agenda_finishing_effect_duration_mult = 0.30
+		councilor_skill_add = 1
 	}
 
 	score = 1000
@@ -723,7 +766,11 @@ gpm_r_enigmatic_advisor = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 4
+			is_galactic_community_member = yes
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -731,7 +778,7 @@ gpm_r_enigmatic_advisor = {
 			always = yes
 		}
 		envoys_add = 3
-		council_agenda_progress_speed = 0.30
+		diplo_action_acceptance_add = 50
 	}
 
 	score = 1000
@@ -780,17 +827,15 @@ gpm_r_positronic_microchip = {
 		potential = {
 			is_machine_empire = yes
 		}
-		MACHINE_species_trait_points_add = 2
-		MACHINE_species_trait_picks_add = 4
+		MACHINE_species_trait_points_add = 4
+		MACHINE_species_trait_picks_add = 1
 	}
 	triggered_country_modifier = {
 		potential = {
 			is_hive_empire = yes
 		}
-		BIOLOGICAL_species_trait_points_add = 2
-		BIOLOGICAL_species_trait_picks_add = 4
-		# LITHOID_species_trait_points_add = 2
-		# LITHOID_species_trait_picks_add = 1
+		BIOLOGICAL_species_trait_points_add = 4
+		BIOLOGICAL_species_trait_picks_add = 1
 		# ROBOT_species_trait_points_add = 3
 		# ROBOT_species_trait_picks_add = 3
 	}
@@ -799,12 +844,10 @@ gpm_r_positronic_microchip = {
 			is_machine_empire = no
 			is_hive_empire = no
 		}
-		BIOLOGICAL_species_trait_points_add = 2
-		BIOLOGICAL_species_trait_picks_add = 4
-		# LITHOID_species_trait_points_add = 2
-		# LITHOID_species_trait_picks_add = 1
-		ROBOT_species_trait_points_add = 2
-		ROBOT_species_trait_picks_add = 4
+		BIOLOGICAL_species_trait_points_add = 4
+		BIOLOGICAL_species_trait_picks_add = 1
+		ROBOT_species_trait_points_add = 4
+		ROBOT_species_trait_picks_add = 1
 	}
 
 	score = 1000
@@ -846,14 +889,19 @@ gpm_r_venerable_dreadnaught = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 25
+		modifier = {
+			factor = 4
+			is_at_war = yes
+		}
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
-		army_defense_health_mult = 0.50		
+		t_slot_weapon_damage_mult = 0.50
+		army_defense_health_mult = 0.50
 		show_only_custom_tooltip = no
 		custom_tooltip = "gpm_r_venerable_dreadnaught_passive_effect_tooltip"
 	}
@@ -919,15 +967,19 @@ gpm_r_sentinel_queen = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_crime_mult = -0.25
-		country_counter_espionage_mult = 0.25
+		planet_crime_mult = -0.20
+		country_counter_espionage_mult = 0.20
 	}
 
 	score = 1000
@@ -935,13 +987,13 @@ gpm_r_sentinel_queen = {
 	active_effect = {
 		add_modifier = {
 			modifier = "gpm_r_sentinel_queen_active_effect" 
-			days = @triumph_duration
+			days = @triumph_duration_veryshort
 		}
-		custom_tooltip = relic_triumph_cooldown
+		custom_tooltip = relic_triumph_cooldown_veryshort
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown" 
-				days = @triumph_duration
+				days = @triumph_duration_veryshort
 			}		
 		}
 	}
@@ -969,15 +1021,26 @@ gpm_r_earthquake_engine = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 10
+			has_deficit = minerals
+		}
 	}
 	
 	triggered_country_modifier = {
 		potential = {
-			always = yes
+			is_nomadic = no
 		}
-		planet_non_artificial_max_districts_add = 2
-		district_mining_max_add = 4
+		planet_non_artificial_max_districts_add = 1
+		district_mining_max_mult = 0.20
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_nomadic = yes
+		}
+		arkship_harvest_resources_produces_mult = 0.30
 	}
 
 	score = 1000
@@ -1025,21 +1088,33 @@ gpm_r_manufactorium_ship = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 4
+			has_deficit = rare_crystals
+		}
+		modifier = {
+			factor = 4
+			has_deficit = volatile_motes
+		}
+		modifier = {
+			factor = 4
+			has_deficit = exotic_gases
+		}
 	}
-	
+
 	triggered_country_modifier = {
 		potential = {
-			is_gestalt = no
+			is_nomadic = no
 		}
-		country_base_consumer_goods_produces_add = 20
-		country_base_alloys_produces_add = 20
+		planet_metallurgists_engineering_research_produces_add = 1
 	}
+
 	triggered_country_modifier = {
 		potential = {
-			is_gestalt = yes
+			is_nomadic = yes
 		}
-		country_base_alloys_produces_add = 20
+		nomadic_constructor_limit_add = 2
 	}
 
 	score = 1000
@@ -1048,11 +1123,11 @@ gpm_r_manufactorium_ship = {
 		add_resource = { rare_crystals = 1000 }
 		add_resource = { volatile_motes = 1000 }
 		add_resource = { exotic_gases = 1000 }
-		custom_tooltip = relic_triumph_cooldown
+		custom_tooltip = relic_triumph_cooldown_short
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown" 
-				days = @triumph_duration
+				days = @triumph_duration_short
 			}		
 		}
 	}
@@ -1089,14 +1164,14 @@ gpm_r_datacube = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
-		all_technology_research_speed = 0.10
+		all_technology_research_speed = 0.15
 	}
 
 	score = 1000
@@ -1195,7 +1270,7 @@ gpm_r_self_assembly_hub = {
 		potential = {
 			always = yes
 		}
-		megastructure_build_speed_mult = 0.33
+		megastructure_build_cost_mult = -0.20
 		country_megastructure_build_cap_add = 1
 	}
 
@@ -1238,7 +1313,11 @@ gpm_r_banner_of_the_fallen = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 4
+			is_at_war = yes
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -1253,13 +1332,13 @@ gpm_r_banner_of_the_fallen = {
 	active_effect = {
 		add_modifier = {
 			modifier = "gpm_r_banner_of_the_fallen_active_effect" 
-			days = @triumph_duration
+			days = @triumph_duration_veryshort
 		}
-		custom_tooltip = relic_triumph_cooldown
+		custom_tooltip = relic_triumph_cooldown_veryshort
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown" 
-				days = @triumph_duration
+				days = @triumph_duration_veryshort
 			}		
 		}
 	}
@@ -1287,14 +1366,18 @@ gpm_r_cloaking_device = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
+		modifier = {
+			factor = 0
+			has_spynetwork = no
+		}
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			has_first_contact_dlc = yes
 		}
-		ship_cloaking_strength_add = 5
+		ship_cloaking_strength_add = 3
 		show_only_custom_tooltip = no
 		custom_tooltip = "gpm_r_cloaking_device_passive_effect_tooltip"
 	}
@@ -1346,15 +1429,22 @@ gpm_r_q_storage_compressor = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
 	}
 	
 	triggered_country_modifier = {
 		potential = {
-			always = yes
+			is_nomadic = no
 		}
 		country_resource_max_add = 100000
 		country_resource_max_minor_artifacts_add = 10000
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_nomadic = yes
+		}
+		starbase_stockpile_capacity_mult = 1.00
+		ship_starbase_stockpile_collection_rate_mult = 1.00
 	}
 
 	score = 1000
@@ -1379,11 +1469,11 @@ gpm_r_q_storage_compressor = {
 				modifier = { factor = 0 has_ancrel = no }
 			}
 		}
-		custom_tooltip = relic_triumph_cooldown
+		custom_tooltip = relic_triumph_cooldown_veryshort
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown" 
-				days = @triumph_duration
+				days = @triumph_duration_veryshort
 			}		
 		}
 	}
@@ -1411,14 +1501,14 @@ gpm_r_soul_gem = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
 	}
 	
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
-		leader_lifespan_add = 50
+		leader_initial_skill = 5
 	}
 
 	score = 1000
@@ -1438,45 +1528,55 @@ gpm_r_soul_gem = {
 				random_list = {
 					10 = {
 						create_leader = {
-							class = admiral
-							species = owner_main_species
-							skill = 5
 							name = random
-							traits = {
-								trait = leader_trait_gpm_shared_soul
-							}
-						}
-					}
-					10 = {
-						create_leader = {
-							class = general
 							species = owner_main_species
-							skill = 5
-							name = random
-							traits = {
-								trait = leader_trait_gpm_shared_soul
-							}
-						}
-					}
-					10 = {
-						create_leader = {
-							class = governor
-							species = owner_main_species
-							skill = 5
-							name = random
-							traits = {
-								trait = leader_trait_gpm_shared_soul
-							}
-						}
-					}
-					10 = {
-						create_leader = {
 							class = scientist
-							species = owner_main_species
-							skill = 5
-							name = random
+							tier = leader_tier_renowned
+							immortal = yes
+							set_age = 21
+							randomize_traits = no
 							traits = {
-								trait = leader_trait_gpm_shared_soul
+								1 = leader_trait_gpm_shared_soul
+							}
+							effect = {
+								set_skill = 7
+								set_leader_flag = should_not_have_upkeep
+							}
+						}
+					}
+					10 = {
+						create_leader = {
+							name = random
+							species = owner_main_species
+							class = official
+							tier = leader_tier_renowned
+							immortal = yes
+							set_age = 21
+							randomize_traits = no
+							traits = {
+								1 = leader_trait_gpm_shared_soul
+							}
+							effect = {
+								set_skill = 7
+								set_leader_flag = should_not_have_upkeep
+							}
+						}
+					}
+					10 = {
+						create_leader = {
+							name = random
+							species = owner_main_species
+							class = commander
+							tier = leader_tier_renowned
+							immortal = yes
+							set_age = 21
+							randomize_traits = no
+							traits = {
+								1 = leader_trait_gpm_shared_soul
+							}
+							effect = {
+								set_skill = 7
+								set_leader_flag = should_not_have_upkeep
 							}
 						}
 					}
@@ -1514,7 +1614,11 @@ gpm_r_self_repairing_obelisk = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 50
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
 	}
 	
 	triggered_country_modifier = {
@@ -1530,13 +1634,13 @@ gpm_r_self_repairing_obelisk = {
 	active_effect = {
 		add_modifier = {
 			modifier = "gpm_r_self_repairing_obelisk_active_effect" 
-			days = @triumph_duration
+			days = @triumph_duration_short
 		}
-		custom_tooltip = relic_triumph_cooldown
+		custom_tooltip = relic_triumph_cooldown_short
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown" 
-				days = @triumph_duration
+				days = @triumph_duration_short
 			}		
 		}
 	}

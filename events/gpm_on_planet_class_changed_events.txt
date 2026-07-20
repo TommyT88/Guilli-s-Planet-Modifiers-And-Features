@@ -271,3 +271,33 @@ carrier_event = {
 		remove_planet_flag = gpm_is_wondrous_planet
 	}
 }
+
+# Planet is turned into a habitable world - cleanup toxic modifiers as some events force pc change
+carrier_event = {
+	id = gpm_pc_changed.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_planet_flag = gpm_is_terraforming } # active terraforming handles it cleaner
+		gpm_is_planet_class_habitable_natural = yes
+	}
+
+	immediate = {
+		remove_modifier = gpm_heavy_metal_coral
+		remove_modifier = gpm_diamond_rain
+		remove_modifier = gpm_radioactive_biome
+		remove_modifier = gpm_decomposing_leviathan
+		remove_modifier = gpm_mushroom_forest_toxic_world
+		remove_modifier = gpm_giant_mold_blobs
+		remove_modifier = gpm_toxic_garbage
+		remove_modifier = gpm_corrosive_atmosphere
+		remove_modifier = gpm_chlorine_planet
+		remove_modifier = gpm_phosphorus_planet
+		remove_modifier = gpm_sulfur_planet
+		remove_modifier = gpm_acid_rain
+		remove_modifier = gpm_garbage_dump
+		remove_modifier = gpm_toxic_flora_fauna
+	}
+}
